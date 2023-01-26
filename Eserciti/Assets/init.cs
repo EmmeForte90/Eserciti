@@ -50,6 +50,7 @@ public class init : MonoBehaviour
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
         i=0;
+        /*
         foreach (Transform child in lista_abilita.transform) {
             i++;
             lista_abilita_GO.Add(i,child.gameObject);
@@ -65,6 +66,7 @@ public class init : MonoBehaviour
             }
         }
         abilita_totali=i;
+        */
 
         setta_game_da_file();
 
@@ -301,7 +303,9 @@ public class init : MonoBehaviour
     }
 
     private void setta_game_da_file(){
+        string string_temp="";
         path=Application.persistentDataPath + "/game_c.xml";
+        File.Delete(path);
         if (!System.IO.File.Exists(path)){//se NON esiste questo file, vuol dire che stà iniziando una partita da 0
             if (!PlayerPrefs.HasKey("new_game_id_hero")){
                 PlayerPrefs.SetString("new_game_id_hero","formica_nera");
@@ -313,25 +317,43 @@ public class init : MonoBehaviour
             xml_content="<game id_hero='"+id_hero+"' num_ondata='1'>";
             xml_content+="\n\t<lista_abilita>";
             switch (id_hero){
-                case "formica_nera":{xml_content+="\n\t\t<a id='ragnatele' liv='1' />";break;}
+                case "formica_nera":{xml_content+="\n\t\t<a liv='1'>ragnatele</a>";break;}
             }
             xml_content+="\n\t</lista_abilita>";
             xml_content+="\n\t<lista_pupetti>";
             switch (id_hero){
                 case "formica_nera":{
-                    xml_content+="\n\t\t<p id='formica_nera_melee' num='4' />";
-                    xml_content+="\n\t\t<p id='formica_nera_distance' num='2' />";
+                    xml_content+="\n\t\t<p num='4'>formica_nera_melee</p>";
+                    xml_content+="\n\t\t<p num='2'>formica_nera_distance</p>";
                     break;
                 }
             }
             xml_content+="\n\t</lista_pupetti>";
             xml_content+="\n</game>";
 
-            /*
             StreamWriter writer = new StreamWriter(path, false);
             writer.Write(xml_content);
             writer.Close();
-            */
+        }
+        //arrivati a questo punto, il file deve esistere per forza ed andiamo a prendere tutte el cose che serviranno al giocatore.
+
+        XmlDocument xml_game = new XmlDocument ();
+        string_temp=System.IO.File.ReadAllText(path);
+        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        xml_game.LoadXml(string_temp);
+
+        int num_pupi_temp;
+        string tipo_pupo_temp;
+        foreach(XmlElement node in xml_game.SelectNodes("game")){
+            id_hero=node.GetAttribute("id_hero");
+            num_ondata=int.Parse(node.GetAttribute("num_ondata"));
+            foreach(XmlElement node_2 in node.SelectNodes("lista_pupetti")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("p")){
+                    num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
+                    tipo_pupo_temp=node_3.InnerText;
+                    print ("dovrei avere "+num_pupi_temp+" del tipo "+tipo_pupo_temp);
+                }
+            }
         }
     }
 }
