@@ -74,17 +74,8 @@ public class init : MonoBehaviour
         lista_abilita_cooldown_secondi[1]=4;
 
         switch (num_ondata){
-            default:{//da quì generiamo i nemici che ci interessano...
-                genera_pupo("pupetto_standard");
-                genera_pupo("pupetto_standard_distanza");
-                genera_pupo("pupetto_standard_distanza");
-                genera_pupo("pupetto_standard");
-                //genera_pupo("pupetto_standard");
-                //genera_pupo("pupetto_standard");
-
-                genera_pupo("pupetto_standard_nemico");
-                genera_pupo("pupetto_standard_nemico");
-                genera_pupo("pupetto_standard_nemico");
+            default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file
+                genera_pupo("formicaRossa_warrior");
                 //genera_pupo("pupetto_standard_nemico");
                 break;
             }
@@ -272,6 +263,8 @@ public class init : MonoBehaviour
         float valore_danno=lp_totali_basic_rule[id_attaccante].danno;
         if (lp_totali_basic_rule[id_attaccante].velocita_proiettile==0){
             valore_danno-=lp_totali_basic_rule[id_difensore].armatura_melee;
+        } else {
+            valore_danno-=lp_totali_basic_rule[id_difensore].armatura_distanza;
         }
         if (valore_danno<0.1f){valore_danno=0.1f;}  //farà sempre un minimo di danno.
         lp_totali_basic_rule[id_difensore].danneggia(valore_danno);
@@ -323,8 +316,8 @@ public class init : MonoBehaviour
             xml_content+="\n\t<lista_pupetti>";
             switch (id_hero){
                 case "formica_nera":{
-                    xml_content+="\n\t\t<p num='4'>formica_nera_melee</p>";
-                    xml_content+="\n\t\t<p num='2'>formica_nera_distance</p>";
+                    xml_content+="\n\t\t<p num='4'>formica_warrior</p>";
+                    xml_content+="\n\t\t<p num='2'>formica_Arcer</p>";
                     break;
                 }
             }
@@ -352,6 +345,10 @@ public class init : MonoBehaviour
                     num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
                     tipo_pupo_temp=node_3.InnerText;
                     print ("dovrei avere "+num_pupi_temp+" del tipo "+tipo_pupo_temp);
+
+                    for (i=1;i<=num_pupi_temp;i++){
+                        genera_pupo(tipo_pupo_temp);
+                    }
                 }
             }
         }

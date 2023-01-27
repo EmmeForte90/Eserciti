@@ -15244,7 +15244,7 @@ GameObject:
   - component: {fileID: 2056305371}
   - component: {fileID: 2056305370}
   m_Layer: 0
-  m_Name: 'formicaRossa_warrior '
+  m_Name: formicaRossa_warrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15326,7 +15326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
