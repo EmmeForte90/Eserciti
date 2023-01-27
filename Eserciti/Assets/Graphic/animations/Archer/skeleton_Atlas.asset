@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: Bow_Atlas
+  m_Name: skeleton_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 78fdc3e48e5cd3546894cac187f669e6, type: 3}
+  atlasFile: {fileID: 4900000, guid: b8da5b9029d53fa42ba5b23e2829bf5f, type: 3}
   materials:
-  - {fileID: 2100000, guid: 7c7b0ff8bc8ca6e44afd3cb934108db4, type: 2}
+  - {fileID: 2100000, guid: c3099b2ecf11da54e9907d4db349fef7, type: 2}

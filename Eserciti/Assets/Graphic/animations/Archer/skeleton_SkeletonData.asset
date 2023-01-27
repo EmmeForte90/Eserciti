@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Bow_SkeletonData
+  m_Name: skeleton_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 2f408cd9e9223964fb13bcb51ff7963f, type: 2}
+  - {fileID: 11400000, guid: fc6e54a437de84d42806517c3ef7534e, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 76b1932f6a91b2445aa7d5a27238102d, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: f07d4dcde17ed1f4da584ab37a523cc2, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0
