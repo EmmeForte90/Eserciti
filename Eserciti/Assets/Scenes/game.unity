@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 35814507}
   - component: {fileID: 35814506}
   m_Layer: 0
-  m_Name: calabrone_Wizard
+  m_Name: calabrone_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -558,7 +558,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 81318001}
   - component: {fileID: 81318000}
   m_Layer: 0
-  m_Name: coccinella_Wizard
+  m_Name: coccinella_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 85049065}
   - component: {fileID: 85049064}
   m_Layer: 0
-  m_Name: formica_Arcer
+  m_Name: formica_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 54148875}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 133128183}
   - component: {fileID: 133128182}
   m_Layer: 0
-  m_Name: formicaRossa_Wizard
+  m_Name: formica_rossa_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 171855131}
   - component: {fileID: 171855130}
   m_Layer: 0
-  m_Name: formica_Wizard
+  m_Name: formica_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1863,7 +1863,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1940,7 +1940,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2030,7 +2030,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2107,7 +2107,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2346,7 +2346,7 @@ GameObject:
   - component: {fileID: 361666351}
   - component: {fileID: 361666350}
   m_Layer: 0
-  m_Name: formicaRossa_Arcer
+  m_Name: formica_rossa_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2438,7 +2438,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 1351305178}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -2726,7 +2726,7 @@ GameObject:
   - component: {fileID: 383621182}
   - component: {fileID: 383621181}
   m_Layer: 0
-  m_Name: vespa_Wizard
+  m_Name: vespa_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 392449833}
   - component: {fileID: 392449832}
   m_Layer: 0
-  m_Name: ape_Arcer
+  m_Name: ape_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3031,7 +3031,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 992582808}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -8032,7 +8032,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8109,7 +8109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8303,7 +8303,7 @@ GameObject:
   - component: {fileID: 503132568}
   - component: {fileID: 503132567}
   m_Layer: 0
-  m_Name: ragnetto_Wizard
+  m_Name: ragnetto_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9109,7 +9109,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9186,7 +9186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9610,7 +9610,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9687,7 +9687,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9777,7 +9777,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9854,7 +9854,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10424,7 +10424,7 @@ GameObject:
   - component: {fileID: 1263569997}
   - component: {fileID: 1263569996}
   m_Layer: 0
-  m_Name: scarafaggio_Arcer
+  m_Name: scarafaggio_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10516,7 +10516,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 2031273492}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -10637,7 +10637,7 @@ GameObject:
   - component: {fileID: 1290974566}
   - component: {fileID: 1290974565}
   m_Layer: 0
-  m_Name: mosca_Wizard
+  m_Name: mosca_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10913,7 +10913,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10990,7 +10990,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11441,7 +11441,7 @@ GameObject:
   - component: {fileID: 1506575378}
   - component: {fileID: 1506575377}
   m_Layer: 0
-  m_Name: ape_Wizard
+  m_Name: ape_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12096,7 +12096,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12173,7 +12173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12200,7 +12200,7 @@ GameObject:
   - component: {fileID: 1590915712}
   - component: {fileID: 1590915711}
   m_Layer: 0
-  m_Name: calabrone_Arcer
+  m_Name: calabrone_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12292,7 +12292,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 238625314}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -12413,7 +12413,7 @@ GameObject:
   - component: {fileID: 1603622145}
   - component: {fileID: 1603622144}
   m_Layer: 0
-  m_Name: ragnetto_Arcer
+  m_Name: ragnetto_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12505,7 +12505,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 994701984}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -12626,7 +12626,7 @@ GameObject:
   - component: {fileID: 1696263516}
   - component: {fileID: 1696263515}
   m_Layer: 0
-  m_Name: zanzara_Arcer
+  m_Name: zanzara_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12718,7 +12718,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 1563028247}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -13006,7 +13006,7 @@ GameObject:
   - component: {fileID: 1802631489}
   - component: {fileID: 1802631488}
   m_Layer: 0
-  m_Name: vespa_Arcer
+  m_Name: vespa_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13098,7 +13098,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 463306382}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -13287,7 +13287,7 @@ GameObject:
   - component: {fileID: 1885765368}
   - component: {fileID: 1885765367}
   m_Layer: 0
-  m_Name: zanzara_Wizard
+  m_Name: zanzara_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13879,7 +13879,7 @@ GameObject:
   - component: {fileID: 1994346073}
   - component: {fileID: 1994346072}
   m_Layer: 0
-  m_Name: scarafaggio_Wizard
+  m_Name: scarafaggio_wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14367,7 +14367,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.65}
+    oldSize: {x: 0.63, y: 0.65}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14444,7 +14444,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d426ae7e2be5a5469afe8f86773a767, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b9e56e08d41d664489c0609fe9e287a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14683,7 +14683,7 @@ GameObject:
   - component: {fileID: 2127189377}
   - component: {fileID: 2127189376}
   m_Layer: 0
-  m_Name: coccinella_Arcer
+  m_Name: coccinella_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14775,7 +14775,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 193839701}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
@@ -14896,7 +14896,7 @@ GameObject:
   - component: {fileID: 2141582326}
   - component: {fileID: 2141582325}
   m_Layer: 0
-  m_Name: mosca_Arcer
+  m_Name: mosca_arcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14988,7 +14988,7 @@ MonoBehaviour:
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 819465086}
   ritardo_morte: 0.4
   bool_morto: 0
   stato: idle
