@@ -290,7 +290,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -298,7 +297,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1033,7 +1033,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -1041,7 +1040,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1242,19 +1242,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 4
+  vitalita_max: 8
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 10
+  ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 1.6
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 8
   proiettile_pf: {fileID: 54148875}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1459,7 +1459,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -1467,7 +1466,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1672,7 +1672,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 0
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -1680,7 +1679,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2214,19 +2214,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
+  velocita_movimento: 7.5
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
-  armatura_distanza: 0
+  danno: 2
+  armatura_melee: 1
+  armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2427,19 +2427,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 4
+  vitalita_max: 8
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 10
+  ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 1.6
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 8
   proiettile_pf: {fileID: 1351305178}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2811,7 +2811,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -2819,7 +2818,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -3020,19 +3020,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 8
+  vitalita_max: 6.5
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 9
+  ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 1.2
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 7
   proiettile_pf: {fileID: 992582808}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8388,7 +8388,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 0
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -8396,7 +8395,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8914,19 +8914,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
+  velocita_movimento: 4.6
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
-  armatura_distanza: 0
+  danno: 2
+  armatura_melee: 1
+  armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10204,18 +10204,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocita_movimento: 5
-  vitalita_max: 10
+  vitalita_max: 8
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
-  raggio_sfera_attacco: 0.7
-  danno: 1
+  distanza_attacco: 1.3
+  ritardo_attacco: 0.8
+  raggio_sfera_attacco: 1.2
+  danno: 0.8
   armatura_melee: 0
-  armatura_distanza: 0
+  armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10505,19 +10505,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 4
+  vitalita_max: 8
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 10
+  ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 1.6
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 8
   proiettile_pf: {fileID: 2031273492}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10722,7 +10722,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 0
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -10730,7 +10729,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11097,19 +11097,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 7.5
+  vitalita_max: 6
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 0.8
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11309,19 +11309,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 6.5
+  vitalita_max: 9
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
-  armatura_distanza: 0
+  danno: 1.4
+  armatura_melee: 0.6
+  armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11526,7 +11526,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 0
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -11534,7 +11533,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11734,19 +11734,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 8.5
+  vitalita_max: 8
   bool_fazione_nemica: 0
   distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
+  danno: 1.5
+  armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12281,19 +12281,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 7
+  vitalita_max: 8
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 8
+  ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
-  armatura_distanza: 0
-  velocita_proiettile: 0
+  danno: 1.2
+  armatura_melee: 0.6
+  armatura_distanza: 0.2
+  velocita_proiettile: 6.5
   proiettile_pf: {fileID: 238625314}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12494,19 +12494,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 4.5
+  vitalita_max: 6
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 6.5
+  ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
+  danno: 1.2
+  armatura_melee: 0.4
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 994701984}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12707,19 +12707,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 7.5
+  vitalita_max: 5
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 8
+  ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 0.6
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 8
   proiettile_pf: {fileID: 1563028247}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13087,19 +13087,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 6
+  vitalita_max: 7
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 7
+  ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
-  armatura_melee: 0
+  armatura_melee: 0.2
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 6
   proiettile_pf: {fileID: 463306382}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13372,7 +13372,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -13380,7 +13379,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13748,18 +13748,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocita_movimento: 5
-  vitalita_max: 10
+  vitalita_max: 6
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 0.8
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13964,7 +13964,6 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
@@ -13972,7 +13971,8 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14172,19 +14172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 8
+  vitalita_max: 6
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  velocita_attacco: 0.5
+  distanza_attacco: 0.8
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 0.8
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14555,15 +14555,15 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 1
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
-  armatura_distanza: 0
+  danno: 2
+  armatura_melee: 1
+  armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14765,18 +14765,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocita_movimento: 5
-  vitalita_max: 10
+  vitalita_max: 5
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 8
+  ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 0.6
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 9
   proiettile_pf: {fileID: 193839701}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14977,19 +14977,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 7.2
+  vitalita_max: 5
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  velocita_attacco: 0.5
-  ritardo_attacco: 1
+  distanza_attacco: 8
+  ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 0.6
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 9
   proiettile_pf: {fileID: 819465086}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -15193,15 +15193,15 @@ MonoBehaviour:
   vitalita_max: 10
   bool_fazione_nemica: 0
   distanza_attacco: 1
-  velocita_attacco: 0.5
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
-  danno: 1
-  armatura_melee: 0
-  armatura_distanza: 0
+  danno: 2
+  armatura_melee: 1
+  armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
-  ritardo_morte: 0.4
+  anim_velocita_attacco: 1
+  anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
