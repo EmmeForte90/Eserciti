@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -2216,7 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -2809,7 +2809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -8916,7 +8916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -10507,7 +10507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -11099,7 +11099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -11311,7 +11311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -12283,7 +12283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -12709,7 +12709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -13089,7 +13089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -13370,7 +13370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -13749,7 +13749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -13962,7 +13962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1
@@ -14766,7 +14766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocita_movimento: 5
   vitalita_max: 10
-  bool_fazione_nemica: 0
+  bool_fazione_nemica: 1
   distanza_attacco: 1
   velocita_attacco: 0.5
   ritardo_attacco: 1

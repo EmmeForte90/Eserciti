@@ -75,7 +75,9 @@ public class init : MonoBehaviour
 
         switch (num_ondata){
             default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file
-                genera_pupo("formicaRossa_warrior");
+                for (i=1;i<=10;i++){genera_pupo("coccinella_warrior");}
+                //genera_pupo("ape_warrior");
+                //genera_pupo("ape_arcer");
                 //genera_pupo("pupetto_standard_nemico");
                 break;
             }
@@ -316,8 +318,8 @@ public class init : MonoBehaviour
             xml_content+="\n\t<lista_pupetti>";
             switch (id_hero){
                 case "formica_nera":{
-                    xml_content+="\n\t\t<p num='4'>formica_warrior</p>";
-                    xml_content+="\n\t\t<p num='2'>formica_Arcer</p>";
+                    xml_content+="\n\t\t<p num='6'>formica_warrior</p>";
+                    xml_content+="\n\t\t<p num='2'>formica_arcer</p>";
                     break;
                 }
             }
