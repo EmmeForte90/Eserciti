@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: pupi
+    uniqueID: 3914036763
+    locked: 0
+  - name: particles
+    uniqueID: 2430762165
+    locked: 0

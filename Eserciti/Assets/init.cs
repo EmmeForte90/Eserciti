@@ -55,7 +55,7 @@ public class init : MonoBehaviour
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
         i=0;
-        /*
+
         foreach (Transform child in lista_abilita.transform) {
             i++;
             lista_abilita_GO.Add(i,child.gameObject);
@@ -71,7 +71,6 @@ public class init : MonoBehaviour
             }
         }
         abilita_totali=i;
-        */
 
         setta_game_da_file();
 

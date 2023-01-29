@@ -81,7 +81,6 @@ public class basic_rule : MonoBehaviour
             valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
         }
         old_x=transform.position.x;
-
         bool_attivo=true;
     }
 
