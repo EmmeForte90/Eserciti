@@ -10,7 +10,6 @@ public class basic_rule : MonoBehaviour
     public float vitalita_max=10f;              //la sua energia
     public bool bool_fazione_nemica=false;      //
     public float distanza_attacco=1f;            //indica la distanza dalla quale può iniziare ad attaccare un bersaglio (se è a distanza, allora questa distanza sarà più elevata)
-    public float velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float ritardo_attacco=1f;            //dopo quanto tempo può ricominciare ad attaccare
     public float raggio_sfera_attacco=0.7f;     //indica la sfera dal punto in cui colpisce; Se qualcuno ha una sfera più grande, potrebbe colpire più pupetti.
     public float danno=1f;                      //indica il danno che fà un pupetto ogni volta che attacca.
@@ -18,7 +17,9 @@ public class basic_rule : MonoBehaviour
     public float armatura_distanza=0f;          //indica il valore di danno sottratto quando si viene attaccati a distanza
     public float velocita_proiettile=0f;        //la velocità del proiettile in caso attacca a distanza (0 vuol dire che attacca melee)
     public GameObject proiettile_pf;            //indica la tipologia di proiettile che genera quando attacca a distanza
-    public float ritardo_morte=1f;
+
+    public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
+    public float anim_ritardo_morte=1f;
 
     //NON TOCCARE
     public bool bool_morto=false;               //se prenderlo in considerazione o meno negli script; Non toccare
@@ -43,7 +44,12 @@ public class basic_rule : MonoBehaviour
     private float old_x;
 
     // Start is called before the first frame update
-    void Start(){
+    void Awake(){
+        //settaggi globali per non cambiare tutti i pupi
+        if (velocita_proiettile!=0){
+            velocita_proiettile*=1.5f;
+            distanza_attacco*=1.5f;
+        }
     }
 
     public void attiva_pupo(){//perchè ogni pupo che si rispetti, deve essere attivato!
@@ -111,16 +117,18 @@ public class basic_rule : MonoBehaviour
 
     private void morte_personaggio(){
         barra_energia.SetActive(false);
+        barra_energia_vuota.SetActive(false);
         stato="die";
-        skeletonAnimation.AnimationName="die";
         skeletonAnimation.loop=false;
+        skeletonAnimation.AnimationName="die";
         bool_morto=true;
-        StartCoroutine(disattiva_pupo());
+        GetComponent<MeshRenderer>().sortingOrder-=2000;
+        //StartCoroutine(disattiva_pupo());
     }
 
     public IEnumerator disattiva_pupo() {
-        yield return new WaitForSeconds(ritardo_morte);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(anim_ritardo_morte);
+        //gameObject.SetActive(false);
     }
 
     private void aggiorna_barra_energia(){
@@ -146,7 +154,7 @@ public class basic_rule : MonoBehaviour
 
     /*
     public IEnumerator fine_mov_attacco() {
-        yield return new WaitForSeconds(velocita_attacco);
+        yield return new WaitForSeconds(anim_velocita_attacco);
         //print ("ho finito di sferrare l'attacco alle coordinate "+x_att+" - "+y_att);
         if (!bool_attacco_distanza){
             RaycastHit hit;

@@ -39,11 +39,16 @@ public class init : MonoBehaviour
     private string xml_content;
 
     public string id_hero="";
-
+    private int i,j,k;
+    private float xa=-30,ya=16;
+    private float xb=-30,yb=-20;
+    private float xc=30,yc=16;
+    private float xd=30,yd=-20;
+    private bool bool_fine_partita=false;
 
     //da quì in poi le andremo a prendere dalle opzioni della partita in corso
     private int num_ondata=1;
-    private int i,j,k;
+    private string id_arena;
 
     void Awake(){
         foreach (Transform child in lista_pupi.transform) {
@@ -94,16 +99,18 @@ public class init : MonoBehaviour
             }
         }
         foreach(KeyValuePair<int,int> attachStat in lp_buoni){
-            lp_totali[attachStat.Value].transform.localPosition = new Vector3(-30, (attachStat.Key*2)-5, 1f);
+            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xa, (attachStat.Key*2)-5, 1f);
         }
         foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
             //lp_totali[attachStat.Value].transform.localPosition = new Vector3(15, (attachStat.Key*-2)+5, 1f);
-            lp_totali[attachStat.Value].transform.localPosition = new Vector3(30, (attachStat.Key*-2)+5, 1f);
+            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xc, (attachStat.Key*-2)+5, 1f);
         }
     }
 
     // Update is called once per frame
     void Update(){
+        if (bool_fine_partita){return;}
+
         //andiamo a prendere i cooldown e li abbassiamo se c'è ne sono...
         for (int i=1;i<=abilita_totali;i++){
             if (lista_abilita_cooldown_secondi_attuale[i]>0){
@@ -114,17 +121,37 @@ public class init : MonoBehaviour
             }
         }
 
+        bool_fine_partita=true;
         foreach(KeyValuePair<int,int> attachStat in lp_buoni){
             if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                bool_fine_partita=false;
                 cerca_prossimo_bersaglio(attachStat.Value);
             }
         }
+        if (bool_fine_partita){
+            fine_partita("sconfitta");
+            return;
+        }
 
         //decommenta il blocco per far muovere anche i nemici
+        bool_fine_partita=true;
         foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
             if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                bool_fine_partita=false;
                 cerca_prossimo_bersaglio(attachStat.Value);
             }
+        }
+        if (bool_fine_partita){
+            fine_partita("vince il giocatore");
+            return;
+        }
+    }
+
+    public void fine_partita(string esito){
+        if (esito=="vittoria"){
+            print ("vincono il giocatore");
+        } else {
+            print ("vincono i nemici");
         }
     }
 
@@ -239,7 +266,7 @@ public class init : MonoBehaviour
     }
 
     public IEnumerator fine_mov_attacco(int id_attaccante, int id_difensore, float x_att, float y_att) {
-        yield return new WaitForSeconds(lp_totali_basic_rule[id_attaccante].velocita_attacco);
+        yield return new WaitForSeconds(lp_totali_basic_rule[id_attaccante].anim_velocita_attacco);
         if (!lp_totali_basic_rule[id_attaccante].bool_morto){//beh potrebbe capitare che è stato colpito prima che sferrasse l'attaccp finale...
             if (!lp_totali_basic_rule[id_difensore].bool_morto){//beh potrebbe capitare che è stato colpito il suo bersaglio...
                 lp_totali_basic_rule[id_attaccante].stato="wait";
@@ -287,6 +314,7 @@ public class init : MonoBehaviour
         go_temp.name=id_pupo;
         lp_totali.Add(num_pupi_generati_totali,go_temp);
         lp_totali_basic_rule.Add(num_pupi_generati_totali,go_temp.GetComponent<basic_rule>());
+        go_temp.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2000);
     }
 
     public float calcola_distanza(float xor, float yor, float xar, float yar){
