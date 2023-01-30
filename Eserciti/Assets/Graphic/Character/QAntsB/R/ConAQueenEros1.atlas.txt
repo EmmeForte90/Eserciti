@@ -1,0 +1,15 @@
+ConAQueenEros1.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Livello 21
+bounds:2,2,343,603
+Livello 22
+bounds:1063,461,703,1377
+Livello 23
+bounds:2,607,1059,1231
+Livello 24
+bounds:347,202,382,403
+Livello 25
+bounds:1768,1474,364,256
+rotate:90
