@@ -1,0 +1,15 @@
+ConCQueenEros1.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Livello 10
+bounds:1316,846,410,458
+Livello 11
+bounds:2,731,1312,1155
+Livello 12
+bounds:1316,1306,363,580
+Livello 18
+bounds:1681,1531,342,355
+Livello 8
+bounds:2,2,727,1395
+rotate:90
