@@ -106,6 +106,11 @@ public class init : MonoBehaviour
         }
     }
 
+    private void OnMouseDown()
+    {
+        print("Mouse Click Detected");
+    }
+
     // Update is called once per frame
     void Update(){
         if (bool_fine_partita){return;}
@@ -171,7 +176,8 @@ public class init : MonoBehaviour
     public void mouse_click(GameObject obj, string tipo){
         print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
         print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
-        if (obj.name=="area_cliccabile"){
+        if (obj.name.Contains("abilita_")){click_abilita(obj);}
+        else if (obj.name=="area_cliccabile"){
             if (int_abilita_scelta!=0){
                 attiva_abilita_coordinate(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
             }
