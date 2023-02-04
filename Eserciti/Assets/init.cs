@@ -46,6 +46,8 @@ public class init : MonoBehaviour
     private float xd=30,yd=-20;
     private bool bool_fine_partita=false;
 
+    public Dictionary<string, int> lista_upgrade = new Dictionary<string, int>();
+
     //da quì in poi le andremo a prendere dalle opzioni della partita in corso
     private int num_ondata=1;
     private string id_arena;
@@ -55,6 +57,13 @@ public class init : MonoBehaviour
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
         i=0;
+
+        lista_upgrade.Add("melee_damage",0);
+        lista_upgrade.Add("distance_damage",0);
+        lista_upgrade.Add("spell_damage",0);
+        lista_upgrade.Add("health",0);
+        lista_upgrade.Add("hero_damage",0);
+        lista_upgrade.Add("hero_cooldown",0);
 
         foreach (Transform child in lista_abilita.transform) {
             i++;
