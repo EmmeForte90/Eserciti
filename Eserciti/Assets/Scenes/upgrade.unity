@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 30040390}
   - component: {fileID: 30040389}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: txt_next_stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4865,7 +4865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go to next stage
+  m_text: FIGHT!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4892,8 +4892,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8792,6 +8792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e169f6071f225d4d8df8d7678a16122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt_next_stage: {fileID: 30040389}
   txt_denaro: {fileID: 1470856476}
   txt_u_c_melee_damage: {fileID: 351314154}
   txt_u_c_distance_damage: {fileID: 770781412}

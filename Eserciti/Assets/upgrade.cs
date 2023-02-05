@@ -10,6 +10,7 @@ using System.IO;
 
 public class upgrade : MonoBehaviour
 {   
+    public TMPro.TextMeshProUGUI txt_next_stage;
     public TMPro.TextMeshProUGUI txt_denaro;
     private int denaro;
     private string path_xml;
@@ -102,6 +103,9 @@ public class upgrade : MonoBehaviour
 
         //da quì, andremo a prendere da dove si trovano, tutte le altre informazioni
         carica_info_xml();  //effettivamente e da quì che carichiamo le info importanti...
+
+        num_ondata++;
+        txt_next_stage.SetText("Next: "+num_ondata);
 
         //settaggi iniziali
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
