@@ -4,10 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+using System.Text;
+using System.Xml; //Needed for XML functionality
+using System.IO;
+
 public class upgrade : MonoBehaviour
 {   
     public TMPro.TextMeshProUGUI txt_denaro;
     private int denaro;
+    private string path_xml;
+    private string xml_content;
+    private string id_hero;
+    private int num_ondata;
+    private int i;
 
     //lista_dei costi delle varie abilità
     public TMPro.TextMeshProUGUI txt_u_c_melee_damage;
@@ -42,15 +51,19 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_d_random_spell;
     public TMPro.TextMeshProUGUI txt_u_d_food;
 
+    private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>(); 
+    private Dictionary<string, int> lista_abilita = new Dictionary<string, int>(); 
 
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_upgrade_costi = new Dictionary<string, TMPro.TextMeshProUGUI>();
     private Dictionary<string, Button> lista_B_upgrade_bottoni = new Dictionary<string, Button>();
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_upgrade_descrizione = new Dictionary<string, TMPro.TextMeshProUGUI>();
 
-    private Dictionary<string, int> livelli_attuali_abilita = new Dictionary<string, int>();
+    private Dictionary<string, int> livelli_attuali_upgrade = new Dictionary<string, int>();
 
     // Start is called before the first frame update
     void Start(){
+        path_xml=Application.persistentDataPath + "/game_c.xml";
+
         lista_txt_upgrade_costi.Add("melee_damage",txt_u_c_melee_damage);
         lista_txt_upgrade_costi.Add("distance_damage",txt_u_c_distance_damage);
         lista_txt_upgrade_costi.Add("spell_damage",txt_u_c_spell_damage);
@@ -82,11 +95,13 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_descrizione.Add("food",txt_u_d_food);
 
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
-            livelli_attuali_abilita.Add(attachStat.Key,0);
+            livelli_attuali_upgrade.Add(attachStat.Key,0);
         }
 
+        denaro=10000;   //è un fake perchè tanto andrà a prenderlo da xml...puoi cancellare quando vuoi
+
         //da quì, andremo a prendere da dove si trovano, tutte le altre informazioni
-        denaro=20800;    //in verità lo andremo a prendere dove si trova...
+        carica_info_xml();  //effettivamente e da quì che carichiamo le info importanti...
 
         //settaggi iniziali
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
@@ -96,7 +111,7 @@ public class upgrade : MonoBehaviour
     }
 
     public void check_abilita(string abilita){
-        int livello=livelli_attuali_abilita[abilita];
+        int livello=livelli_attuali_upgrade[abilita];
         string testo="";
         int costo=ritorna_costo_abilita(abilita);   //perchè è stato aggiornato al nuovo costo
         switch (abilita){
@@ -141,7 +156,7 @@ public class upgrade : MonoBehaviour
         int costo=ritorna_costo_abilita(abilita);
         if (denaro>=costo){
             denaro-=costo;
-            livelli_attuali_abilita[abilita]++;
+            livelli_attuali_upgrade[abilita]++;
             check_abilita(abilita);
             txt_denaro.SetText(denaro.ToString());
 
@@ -160,7 +175,7 @@ public class upgrade : MonoBehaviour
 
     public int ritorna_costo_abilita(string abilita){
         int costo=0;
-        int livello=livelli_attuali_abilita[abilita];
+        int livello=livelli_attuali_upgrade[abilita];
         switch (abilita){
             case "melee_damage":
             case "distance_damage":
@@ -187,7 +202,78 @@ public class upgrade : MonoBehaviour
         
     }
 
+    public void carica_info_xml(){
+        string string_temp;
+        path_xml=Application.persistentDataPath + "/game_c.xml";
+        XmlDocument xml_game = new XmlDocument ();
+        string_temp=System.IO.File.ReadAllText(path_xml);
+        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        xml_game.LoadXml(string_temp);
+
+        //negli upgrade, non si può entrare se il file game_c non è stato ancora creato; E come detto, in verità verrà automaticamente creato al primo combattimento.
+        int num_pupi_temp, liv_abilita_temp;
+        string tipo_pupo_temp, abilita_temp;
+
+        foreach(XmlElement node in xml_game.SelectNodes("game")){
+            id_hero=node.GetAttribute("id_hero");
+            num_ondata=int.Parse(node.GetAttribute("num_ondata"));
+            denaro=int.Parse(node.GetAttribute("denaro"));
+            foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("a")){
+                    liv_abilita_temp=int.Parse(node_3.GetAttribute("liv"));
+                    abilita_temp=node_3.InnerText;
+                    print ("dovrei avere "+abilita_temp+" di livello "+liv_abilita_temp);
+
+                    lista_abilita.Add(abilita_temp,liv_abilita_temp);
+                }
+            }
+            foreach(XmlElement node_2 in node.SelectNodes("lista_pupetti")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("p")){
+                    num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
+                    tipo_pupo_temp=node_3.InnerText;
+                    print ("dovrei avere "+num_pupi_temp+" del tipo "+tipo_pupo_temp);
+
+                    lista_pupetti.Add(tipo_pupo_temp,num_pupi_temp);
+                }
+            }
+            foreach(XmlElement node_2 in node.SelectNodes("lista_upgrade")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("u")){
+                    livelli_attuali_upgrade[node_3.InnerText]=int.Parse(node_3.GetAttribute("liv"));
+                }
+            }
+        }
+    }
+
     public void salva_e_continua(){
+        string string_temp="";
+        path_xml=Application.persistentDataPath + "/game_c.xml";
+        File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
+
+        xml_content="";
+        xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' denaro='"+denaro+"'>";
+        xml_content+="\n\t<lista_abilita>";
+        foreach(KeyValuePair<string,int> attachStat in lista_abilita){
+            xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";
+        }
+        xml_content+="\n\t</lista_abilita>";
+        xml_content+="\n\t<lista_pupetti>";
+        foreach(KeyValuePair<string,int> attachStat in lista_pupetti){
+            xml_content+="\n\t\t<p num='"+attachStat.Value+"'>"+attachStat.Key+"</p>";
+        }
+        xml_content+="\n\t</lista_pupetti>";
+        xml_content+="\n\t<lista_upgrade>";
+        foreach(KeyValuePair<string,int> attachStat in livelli_attuali_upgrade){
+            xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
+        }
+        xml_content+="\n\t</lista_upgrade>";
+        xml_content+="\n</game>";
+
+        StreamWriter writer = new StreamWriter(path_xml, false);
+        writer.Write(xml_content);
+        writer.Close();
+
+        //print (xml_content);
+
         SceneManager.LoadScene("game");
     }
 }

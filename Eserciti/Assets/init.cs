@@ -342,8 +342,9 @@ public class init : MonoBehaviour
     private void setta_game_da_file(){
         string string_temp="";
         path=Application.persistentDataPath + "/game_c.xml";
-        File.Delete(path);
+        //File.Delete(path);
         if (!System.IO.File.Exists(path)){//se NON esiste questo file, vuol dire che stà iniziando una partita da 0
+            int denaro;
             if (!PlayerPrefs.HasKey("new_game_id_hero")){
                 PlayerPrefs.SetString("new_game_id_hero","formica_nera");
             }
@@ -351,10 +352,20 @@ public class init : MonoBehaviour
                 PlayerPrefs.SetString("new_game_id_hero","formica_nera");
             }
             id_hero=PlayerPrefs.GetString("new_game_id_hero");
-            xml_content="<game id_hero='"+id_hero+"' num_ondata='1'>";
+            xml_content="<game id_hero='"+id_hero+"' num_ondata='1'";
+            switch (id_hero){
+                default:{
+                    denaro=2000;
+                    break;
+                }
+            }
+            xml_content+=" denaro='"+denaro+"'>";
             xml_content+="\n\t<lista_abilita>";
             switch (id_hero){
-                case "formica_nera":{xml_content+="\n\t\t<a liv='1'>ragnatele</a>";break;}
+                case "formica_nera":{
+                    xml_content+="\n\t\t<a liv='1'>ragnatele</a>";
+                    break;
+                }
             }
             xml_content+="\n\t</lista_abilita>";
             xml_content+="\n\t<lista_pupetti>";
@@ -366,6 +377,11 @@ public class init : MonoBehaviour
                 }
             }
             xml_content+="\n\t</lista_pupetti>";
+            xml_content+="\n\t<lista_upgrade>";
+            foreach(KeyValuePair<string,int> attachStat in lista_upgrade){
+                xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
+            }
+            xml_content+="\n\t</lista_upgrade>";
             xml_content+="\n</game>";
 
             StreamWriter writer = new StreamWriter(path, false);
@@ -393,6 +409,11 @@ public class init : MonoBehaviour
                     for (i=1;i<=num_pupi_temp;i++){
                         genera_pupo(tipo_pupo_temp);
                     }
+                }
+            }
+            foreach(XmlElement node_2 in node.SelectNodes("lista_upgrade")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("u")){
+                    lista_upgrade[node_3.InnerText]=int.Parse(node_3.GetAttribute("liv"));
                 }
             }
         }

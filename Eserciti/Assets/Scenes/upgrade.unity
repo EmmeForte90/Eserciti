@@ -460,7 +460,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -478,7 +478,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 145079759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: melee_damage
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &145079759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +594,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2417,7 +2429,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2435,7 +2447,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504631709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: spell_damage
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &504631709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,7 +2563,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2557,7 +2581,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512661974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hero_cooldown
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &512661974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2661,7 +2697,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3105,7 +3141,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3123,7 +3159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 587169480}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: distance_damage
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &587169480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3739,7 +3787,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3757,7 +3805,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731954722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: random_spell
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &731954722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5357,7 +5417,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5375,7 +5435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1088667838}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hero_damage
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1088667838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6232,7 +6304,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6250,7 +6322,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1244989456}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: health
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1244989456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7003,7 +7087,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7021,7 +7105,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1407607662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: random_unity
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1407607662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7205,7 +7301,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8696,6 +8792,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e169f6071f225d4d8df8d7678a16122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt_denaro: {fileID: 1470856476}
+  txt_u_c_melee_damage: {fileID: 351314154}
+  txt_u_c_distance_damage: {fileID: 770781412}
+  txt_u_c_spell_damage: {fileID: 2145586947}
+  txt_u_c_health: {fileID: 403577347}
+  txt_u_c_hero_damage: {fileID: 908104912}
+  txt_u_c_hero_cooldown: {fileID: 738756311}
+  txt_u_c_random_unity: {fileID: 346405152}
+  txt_u_c_random_spell: {fileID: 1365159625}
+  txt_u_c_food: {fileID: 487639605}
+  B_u_b_melee_damage: {fileID: 145079758}
+  B_u_b_distance_damage: {fileID: 587169479}
+  B_u_b_spell_damage: {fileID: 504631708}
+  B_u_b_health: {fileID: 1244989455}
+  B_u_b_hero_damage: {fileID: 1088667837}
+  B_u_b_hero_cooldown: {fileID: 512661973}
+  B_u_b_random_unity: {fileID: 1407607661}
+  B_u_b_random_spell: {fileID: 731954721}
+  B_u_b_food: {fileID: 2114295603}
+  txt_u_d_melee_damage: {fileID: 868596978}
+  txt_u_d_distance_damage: {fileID: 565019438}
+  txt_u_d_spell_damage: {fileID: 1077507736}
+  txt_u_d_health: {fileID: 1536583753}
+  txt_u_d_hero_damage: {fileID: 408389010}
+  txt_u_d_hero_cooldown: {fileID: 329844421}
+  txt_u_d_random_unity: {fileID: 313506760}
+  txt_u_d_random_spell: {fileID: 1612648543}
+  txt_u_d_food: {fileID: 871197183}
 --- !u!4 &1746812232
 Transform:
   m_ObjectHideFlags: 0
@@ -9760,7 +9884,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6509434, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9778,7 +9902,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2114295604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746812231}
+        m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
+        m_MethodName: btn_compra
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: food
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2114295604
 MonoBehaviour:
   m_ObjectHideFlags: 0
