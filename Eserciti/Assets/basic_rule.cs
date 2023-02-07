@@ -44,7 +44,7 @@ public class basic_rule : MonoBehaviour
     //blocco relativo alla direzione del personaggio
     private bool bool_dir_dx=true;
     private float horizontal;
-    private float old_x;
+    public float old_x;
 
     // Start is called before the first frame update
     void Awake(){
@@ -213,9 +213,9 @@ public class basic_rule : MonoBehaviour
 
     private void Flip(){
         if (transform.position.x==old_x){return;}
-        if (transform.position.x<old_x){horizontal=-1;}
-        else {horizontal=1;}
-        old_x=transform.position.x;
+        if (transform.position.x<old_x){horizontal=1;}
+        else {horizontal=-1;}
+        //old_x=transform.position.x;
         if (bool_dir_dx && horizontal < 0f || !bool_dir_dx && horizontal > 0f){
             bool_dir_dx = !bool_dir_dx;
             Vector3 localScale = transform.localScale;

@@ -297,6 +297,7 @@ public class init : MonoBehaviour
         if (!lp_totali_basic_rule[id_attaccante].bool_morto){
             if (!lp_totali_basic_rule[id_difensore].bool_morto){
                 float distanza=calcola_distanza_due_pupi(id_attaccante,id_difensore);
+                lp_totali_basic_rule[id_attaccante].old_x=lp_totali[id_difensore].transform.position.x;
                 if (distanza>lp_totali_basic_rule[id_attaccante].distanza_attacco){
                     lp_totali_basic_rule[id_attaccante].stato="move";
                     spostamento_pupo_random(id_attaccante, id_difensore);
