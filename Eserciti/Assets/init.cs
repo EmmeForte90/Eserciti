@@ -47,7 +47,7 @@ public class init : MonoBehaviour
     private float xc=30,yc=16;
     private float xd=30,yd=-20;
     private bool bool_fine_partita=false;
-    public int max_pupi_battaglione=15;
+    private int max_pupi_battaglione=5;
 
     public Dictionary<string, int> lista_upgrade = new Dictionary<string, int>();
 
@@ -93,7 +93,7 @@ public class init : MonoBehaviour
 
         switch (num_ondata){
             default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file
-                for (i=1;i<=5;i++){genera_pupo("coccinella_warrior");}
+                for (i=1;i<=10;i++){genera_pupo("coccinella_warrior");}
                 //genera_pupo("ape_warrior");
                 //genera_pupo("ape_arcer");
                 //genera_pupo("pupetto_standard_nemico");
@@ -110,24 +110,24 @@ public class init : MonoBehaviour
                 lp_cattivi.Add(num_pupi_generati_cattivi,attachStat.Key);
 
                 j++;
-                lp_totali[attachStat.Key].transform.localPosition = new Vector3(xc, (j*-2)+15, 1f);
-                if (j==max_pupi_battaglione){//dobbiamo attivare il secondo battaglione
-                    j=0;
+                //lp_totali[attachStat.Key].transform.localPosition = new Vector3(xc, (j*-2)+15, 1f);
+                if (j>max_pupi_battaglione){//dobbiamo attivare il prossimo battaglione
+                    j=1;
                     num_battaglione_nemico++;
                 }
-                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico);
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,(j*-2)+15);
 
             } else {
                 num_pupi_generati_buoni++;
                 lp_buoni.Add(num_pupi_generati_buoni,attachStat.Key);
 
                 i++;
-                lp_totali[attachStat.Key].transform.localPosition = new Vector3(xa, (i*-2)+15, 1f);
-                if (i==max_pupi_battaglione){//dobbiamo attivare il secondo battaglione
-                    i=0;
+                //lp_totali[attachStat.Key].transform.localPosition = new Vector3(xa, (i*-2)+15, 1f);
+                if (i>max_pupi_battaglione){//dobbiamo attivare il prossimo battaglione
+                    i=1;
                     num_battaglione_amico++;
                 }
-                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico);
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico,xa,(i*-2)+15);
             }
         }
 
