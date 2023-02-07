@@ -22,7 +22,7 @@ public class basic_rule : MonoBehaviour
     public float anim_ritardo_morte=1f;
 
     //NON TOCCARE
-    public bool bool_morto=false;               //se prenderlo in considerazione o meno negli script; Non toccare
+    public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
     private float x_att, y_att;                 //le sue coordinate quando ha attaccato qualcuno; In verità saranno deprecate, credo.
     public GameObject barra_energia_pf;
@@ -45,14 +45,18 @@ public class basic_rule : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake(){
+        bool_morto=true;    //è importante che si capisca che inizia da morto; Poi appena si attiva diventa bool_morto=false
         //settaggi globali per non cambiare tutti i pupi
         if (velocita_proiettile!=0){
             velocita_proiettile*=1.5f;
             distanza_attacco*=1.5f;
         }
+        ritardo_attacco+=0.5f;          //in linea generale, bisogna sempre evitare che l'attacco sia più veloce o uguale alla velocità dell'animazione...
     }
 
-    public void attiva_pupo(){//perchè ogni pupo che si rispetti, deve essere attivato!
+    private IEnumerator attiva_pupo_coroutine(int battaglione){
+        //yield return new WaitForSeconds((battaglione-1)*3);
+        yield return new WaitForSeconds(0);
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         barra_energia_vuota=Instantiate(barra_energia_vuota_pf);
         barra_energia_vuota.transform.SetParent(gameObject.transform);
@@ -70,8 +74,11 @@ public class basic_rule : MonoBehaviour
             //proiettile=Instantiate(proiettile_pf);
             proiettile=proiettile_pf;
 
-            x_iniziale_freccia=proiettile.transform.position.x;
-            y_iniziale_freccia=proiettile.transform.position.y;
+           //x_iniziale_freccia=proiettile.transform.position.x;
+            //y_iniziale_freccia=proiettile.transform.position.y;
+
+            y_iniziale_freccia=0.5f;
+            //x_iniziale_freccia=-0.3f;
 
             proiettile.transform.SetParent(mappa.transform);
             proiettile.transform.localPosition = new Vector3(0f, 0f, 1f);
@@ -82,6 +89,49 @@ public class basic_rule : MonoBehaviour
         }
         old_x=transform.position.x;
         bool_attivo=true;
+        gameObject.SetActive(true);
+        bool_morto=false;
+    }
+
+    public void attiva_pupo(int battaglione){//perchè ogni pupo che si rispetti, deve essere attivato!
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
+        barra_energia_vuota=Instantiate(barra_energia_vuota_pf);
+        barra_energia_vuota.transform.SetParent(gameObject.transform);
+        //barra_energia_vuota.transform.localPosition = new Vector3(0f, 0.6f, -0.5f);
+        barra_energia_vuota.transform.localPosition = new Vector3(0f, -0.3f, -0.5f);
+
+        barra_energia=Instantiate(barra_energia_pf);
+        barra_energia.transform.SetParent(gameObject.transform);
+        //barra_energia.transform.localPosition = new Vector3(0f, 0.6f, -0.6f);
+        barra_energia.transform.localPosition = new Vector3(0f, -0.3f, -0.6f);
+        vitalita=vitalita_max;
+
+        if (proiettile_pf!=null){
+            valori_proiettile=proiettile_pf.GetComponent<bullet_rule>();
+            //proiettile=Instantiate(proiettile_pf);
+            proiettile=proiettile_pf;
+
+            //x_iniziale_freccia=proiettile.transform.position.x;
+            //y_iniziale_freccia=proiettile.transform.position.y;
+
+            y_iniziale_freccia=0.5f;
+            //x_iniziale_freccia=-0.3f;
+
+            proiettile.transform.SetParent(mappa.transform);
+            proiettile.transform.localPosition = new Vector3(0f, 0f, 1f);
+
+            valori_proiettile.velocita=velocita_proiettile;
+            valori_proiettile.danno=danno;
+            valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
+        }
+        old_x=transform.position.x;
+        bool_attivo=true;
+        gameObject.SetActive(true);
+        bool_morto=false;
+        /*
+        gameObject.SetActive(true);
+        StartCoroutine(attiva_pupo_coroutine(battaglione));
+        */
     }
 
     // Update is called once per frame
@@ -100,6 +150,7 @@ public class basic_rule : MonoBehaviour
 
     public void attiva_proiettile(float xar, float yar, int id_attaccante){
         proiettile.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
+        //proiettile.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
         valori_proiettile.setta_e_vai(xar,yar,id_attaccante);
     }
 

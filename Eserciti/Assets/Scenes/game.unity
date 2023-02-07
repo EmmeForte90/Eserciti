@@ -1254,7 +1254,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 54148875}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -2439,7 +2439,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1351305178}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 992582808}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -8536,6 +8536,7 @@ MonoBehaviour:
   int_abilita_scelta: 0
   abilita_totali: 0
   id_hero: 
+  max_pupi_battaglione: 15
 --- !u!4 &556219734
 Transform:
   m_ObjectHideFlags: 0
@@ -10617,7 +10618,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 2031273492}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -12827,7 +12828,7 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 238625314}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -13040,7 +13041,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 994701984}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -13253,7 +13254,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1563028247}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -13633,7 +13634,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 463306382}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -15392,7 +15393,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 193839701}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -15605,7 +15606,7 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 819465086}
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle

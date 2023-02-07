@@ -26,6 +26,7 @@ public class init : MonoBehaviour
     public int int_abilita_scelta=0;
     public int abilita_totali=0;
 
+
     private int num_pupi_generati_totali=0;
     private int num_pupi_generati_buoni=0;
     private int num_pupi_generati_cattivi=0;
@@ -40,16 +41,20 @@ public class init : MonoBehaviour
 
     public string id_hero="";
     private int i,j,k;
-    private float xa=-30,ya=16;
+    private bool bool_inizio_partita;
+    private float xa=-30,ya=16,y_temp;
     private float xb=-30,yb=-20;
     private float xc=30,yc=16;
     private float xd=30,yd=-20;
     private bool bool_fine_partita=false;
+    public int max_pupi_battaglione=15;
 
     public Dictionary<string, int> lista_upgrade = new Dictionary<string, int>();
 
     //da quì in poi le andremo a prendere dalle opzioni della partita in corso
     private int num_ondata=1;
+    private int num_battaglione_amico=1;
+    private int num_battaglione_nemico=1;
     private string id_arena;
 
     void Awake(){
@@ -88,42 +93,65 @@ public class init : MonoBehaviour
 
         switch (num_ondata){
             default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file
-                for (i=1;i<=10;i++){genera_pupo("coccinella_warrior");}
+                for (i=1;i<=5;i++){genera_pupo("coccinella_warrior");}
                 //genera_pupo("ape_warrior");
                 //genera_pupo("ape_arcer");
                 //genera_pupo("pupetto_standard_nemico");
                 break;
             }
         }
+        //a questo punto abbiamo tutti i pupi creati che sono basicamente invisibili...
+        i=0;j=0;
         foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
             lp_totali_basic_rule[attachStat.Key].int_key_pupo=attachStat.Key;
-            lp_totali_basic_rule[attachStat.Key].attiva_pupo();
+            //lp_totali_basic_rule[attachStat.Key].attiva_pupo();             //il tutto basicamente dipenderebbe da quì...
             if (lp_totali_basic_rule[attachStat.Key].bool_fazione_nemica){
                 num_pupi_generati_cattivi++;
                 lp_cattivi.Add(num_pupi_generati_cattivi,attachStat.Key);
+
+                j++;
+                lp_totali[attachStat.Key].transform.localPosition = new Vector3(xc, (j*-2)+15, 1f);
+                if (j==max_pupi_battaglione){//dobbiamo attivare il secondo battaglione
+                    j=0;
+                    num_battaglione_nemico++;
+                }
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico);
+
             } else {
                 num_pupi_generati_buoni++;
                 lp_buoni.Add(num_pupi_generati_buoni,attachStat.Key);
+
+                i++;
+                lp_totali[attachStat.Key].transform.localPosition = new Vector3(xa, (i*-2)+15, 1f);
+                if (i==max_pupi_battaglione){//dobbiamo attivare il secondo battaglione
+                    i=0;
+                    num_battaglione_amico++;
+                }
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico);
             }
         }
+
+        /*
         foreach(KeyValuePair<int,int> attachStat in lp_buoni){
-            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xa, (attachStat.Key*2)-5, 1f);
+            i++;
+            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xa, (i*2)-5, 1f);
+            lp_totali_basic_rule[attachStat.Key].attiva_pupo();
+            
         }
         foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
             //lp_totali[attachStat.Value].transform.localPosition = new Vector3(15, (attachStat.Key*-2)+5, 1f);
-            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xc, (attachStat.Key*-2)+5, 1f);
+            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xc, (attachStat.Key*2)+5, 1f);
         }
-    }
-
-    private void OnMouseDown()
-    {
-        print("Mouse Click Detected");
+        */
+        bool_inizio_partita=true;
+        StartCoroutine(start_partita());
     }
 
     // Update is called once per frame
     void Update(){
-        if (bool_fine_partita){return;}
-
+        if (!bool_inizio_partita){
+            if (bool_fine_partita){return;}
+        }
         //andiamo a prendere i cooldown e li abbassiamo se c'è ne sono...
         for (int i=1;i<=abilita_totali;i++){
             if (lista_abilita_cooldown_secondi_attuale[i]>0){
@@ -141,9 +169,11 @@ public class init : MonoBehaviour
                 cerca_prossimo_bersaglio(attachStat.Value);
             }
         }
-        if (bool_fine_partita){
-            fine_partita("sconfitta");
-            return;
+        if (!bool_inizio_partita){
+            if (bool_fine_partita){
+                fine_partita("sconfitta");
+                return;
+            }
         }
 
         //decommenta il blocco per far muovere anche i nemici
@@ -154,15 +184,22 @@ public class init : MonoBehaviour
                 cerca_prossimo_bersaglio(attachStat.Value);
             }
         }
-        if (bool_fine_partita){
-            fine_partita("vince il giocatore");
-            return;
+        if (!bool_inizio_partita){
+            if (bool_fine_partita){
+                fine_partita("vittoria");
+                return;
+            }
         }
+    }
+
+    private IEnumerator start_partita(){
+        yield return new WaitForSeconds(3);
+        bool_inizio_partita=false;
     }
 
     public void fine_partita(string esito){
         if (esito=="vittoria"){
-            print ("vincono il giocatore");
+            print ("vince il giocatore");
         } else {
             print ("vincono i nemici");
         }
@@ -295,7 +332,7 @@ public class init : MonoBehaviour
                         }
                     }
                 } else {
-                    y_att++;    //sembrerebbe essere un allegro standard per quanto riguarda il colpire al petto
+                    //y_att++;    //sembrerebbe essere un allegro standard per quanto riguarda il colpire al petto
                     lp_totali_basic_rule[id_attaccante].attiva_proiettile(x_att, y_att, id_attaccante);
                 }
             }
@@ -329,6 +366,7 @@ public class init : MonoBehaviour
         lp_totali.Add(num_pupi_generati_totali,go_temp);
         lp_totali_basic_rule.Add(num_pupi_generati_totali,go_temp.GetComponent<basic_rule>());
         go_temp.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2000);
+        go_temp.SetActive(false);
     }
 
     public float calcola_distanza(float xor, float yor, float xar, float yar){
