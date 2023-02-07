@@ -235,14 +235,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35814504}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -299,6 +299,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -310,8 +311,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &35814509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,14 +979,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81317998}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1043,6 +1043,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1054,8 +1055,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &81318003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,14 +1192,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85049062}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1256,6 +1256,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 54148875}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1267,8 +1268,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &85049067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1405,14 +1405,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133128180}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1469,6 +1469,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1480,8 +1481,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &133128185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,14 +1618,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171855128}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1682,6 +1682,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1693,8 +1694,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &171855133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,14 +2164,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355094485}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2228,6 +2228,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2239,8 +2240,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &355094490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,14 +2377,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361666348}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2441,6 +2441,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 1351305178}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2452,8 +2453,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &361666353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2757,14 +2757,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383621179}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2821,6 +2821,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2832,8 +2833,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &383621184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,14 +2970,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392449830}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3034,6 +3034,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 992582808}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -3045,8 +3046,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &392449835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8334,14 +8334,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503132565}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -8398,6 +8398,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8409,8 +8410,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &503132570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8536,7 +8536,6 @@ MonoBehaviour:
   int_abilita_scelta: 0
   abilita_totali: 0
   id_hero: 
-  max_pupi_battaglione: 15
 --- !u!4 &556219734
 Transform:
   m_ObjectHideFlags: 0
@@ -8927,14 +8926,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792326677}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -8991,6 +8990,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -9002,8 +9002,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &792326682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10164,7 +10163,6 @@ RectTransform:
   m_Children:
   - {fileID: 1185654803}
   - {fileID: 399678370}
-  - {fileID: 1548109173}
   - {fileID: 2054358107}
   m_Father: {fileID: 77474520}
   m_RootOrder: 1
@@ -10231,14 +10229,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159813349}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -10295,6 +10293,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10306,8 +10305,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1159813354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10556,14 +10554,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263569994}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -10620,6 +10618,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 2031273492}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10631,8 +10630,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1263569999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10839,14 +10837,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290974563}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -10903,6 +10901,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10914,8 +10913,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1290974568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11218,14 +11216,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361864885}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11282,6 +11280,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11293,8 +11292,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1361864890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11430,14 +11428,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412093475}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11494,6 +11492,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11505,8 +11504,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1412093480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11643,14 +11641,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506575375}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11707,6 +11705,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11718,8 +11717,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1506575380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11855,14 +11853,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518590949}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11919,6 +11917,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11930,8 +11929,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1518590954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12189,218 +12187,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1548109172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1548109173}
-  - component: {fileID: 1548109179}
-  - component: {fileID: 1548109178}
-  - component: {fileID: 1548109177}
-  - component: {fileID: 1548109176}
-  - component: {fileID: 1548109175}
-  - component: {fileID: 1548109174}
-  m_Layer: 0
-  m_Name: formica_warrior
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1548109173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.2, y: 10.6, z: 10}
-  m_LocalScale: {x: -1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1097027041}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1548109174
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &1548109175
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.085308075, y: 0.5435691}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9231949, y: 1.4818225}
-  m_EdgeRadius: 0
---- !u!114 &1548109176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
-  bool_fazione_nemica: 0
-  distanza_attacco: 1
-  ritardo_attacco: 1
-  raggio_sfera_attacco: 0.7
-  danno: 2
-  armatura_melee: 1
-  armatura_distanza: 0.4
-  velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
-  anim_velocita_attacco: 2
-  anim_ritardo_morte: 1
-  bool_morto: 0
-  stato: idle
-  barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
-  barra_energia_vuota_pf: {fileID: 7065005741080694263, guid: 43b556a8dcce8a448a30a62b797497c0, type: 3}
-  barra_energia: {fileID: 0}
-  barra_energia_vuota: {fileID: 0}
-  proiettile: {fileID: 0}
-  vitalita: 0
-  valori_proiettile: {fileID: 0}
-  mappa: {fileID: 1097027040}
-  int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
---- !u!114 &1548109177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 708c43c3de6b0a3469befe2a50a49c93, type: 2}
-  initialSkinName: FormicaB
-  fixPrefabOverrideViaMeshFilter: 2
-  initialFlipX: 0
-  initialFlipY: 0
-  updateWhenInvisible: 3
-  separatorSlotNames: []
-  zSpacing: 0
-  useClipping: 1
-  immutableTriangles: 0
-  pmaVertexColors: 1
-  clearStateOnDisable: 0
-  tintBlack: 0
-  singleSubmesh: 0
-  fixDrawOrder: 0
-  addNormals: 0
-  calculateTangents: 0
-  maskInteraction: 0
-  maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
-    materialsOutsideMask: []
-  disableRenderingOnOverride: 1
-  updateTiming: 1
-  unscaledTime: 0
-  _animationName: idle
-  loop: 1
-  timeScale: 1
---- !u!23 &1548109178
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a20bfa87aa004994fb1c08889e7adac6, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1548109179
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548109172}
-  m_Mesh: {fileID: 0}
 --- !u!1 &1551197241
 GameObject:
   m_ObjectHideFlags: 0
@@ -12766,14 +12552,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590915709}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -12830,6 +12616,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 238625314}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12841,8 +12628,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1590915714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12979,14 +12765,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603622142}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -13043,6 +12829,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 994701984}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13054,8 +12841,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1603622147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13192,14 +12978,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696263513}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -13256,6 +13042,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 1563028247}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13267,8 +13054,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1696263518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13572,14 +13358,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802631486}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -13636,6 +13422,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 463306382}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13647,8 +13434,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1802631491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13853,14 +13639,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885765365}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -13917,6 +13703,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -13928,8 +13715,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1885765370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14232,14 +14018,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977856550}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -14296,6 +14082,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14307,8 +14094,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1977856555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14445,14 +14231,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994346070}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -14509,6 +14295,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14520,8 +14307,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &1994346075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14657,14 +14443,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012936500}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -14721,6 +14507,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -14732,8 +14519,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &2012936505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15023,7 +14809,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1097027041}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15118,14 +14904,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056305368}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -15182,6 +14968,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -15193,8 +14980,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &2056305373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15331,14 +15117,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127189374}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -15395,6 +15181,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 193839701}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -15406,8 +15193,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &2127189379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15544,14 +15330,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141582323}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -15608,6 +15394,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 819465086}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -15619,8 +15406,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &2141582328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15756,14 +15542,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143487770}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 15
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -15820,6 +15606,7 @@ MonoBehaviour:
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
+  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -15831,8 +15618,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  x_iniziale_freccia: 0
-  y_iniziale_freccia: 0
+  movimento_tipo: 
 --- !u!114 &2143487775
 MonoBehaviour:
   m_ObjectHideFlags: 0

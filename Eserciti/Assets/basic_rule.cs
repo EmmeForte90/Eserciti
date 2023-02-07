@@ -22,6 +22,8 @@ public class basic_rule : MonoBehaviour
     public float anim_ritardo_morte=1f;
 
     //NON TOCCARE
+    private Rigidbody2D rb2D;
+    public float thrust=1f;                    //la potenza del bump...
     public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
     private float x_att, y_att;                 //le sue coordinate quando ha attaccato qualcuno; In verità saranno deprecate, credo.
@@ -36,7 +38,8 @@ public class basic_rule : MonoBehaviour
     public int int_key_pupo=0;
     private SkeletonAnimation skeletonAnimation;
     private bool bool_attivo=false;
-    public float x_iniziale_freccia, y_iniziale_freccia;
+    private float x_iniziale_freccia, y_iniziale_freccia;
+    public string movimento_tipo;
 
     //blocco relativo alla direzione del personaggio
     private bool bool_dir_dx=true;
@@ -45,17 +48,22 @@ public class basic_rule : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake(){
+        thrust=10;
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
+        movimento_tipo="";
         bool_morto=true;    //è importante che si capisca che inizia da morto; Poi appena si attiva diventa bool_morto=false
+        
         //settaggi globali per non cambiare tutti i pupi
         if (velocita_proiettile!=0){
             velocita_proiettile*=1.5f;
             distanza_attacco*=1.5f;
         }
         ritardo_attacco+=0.5f;          //in linea generale, bisogna sempre evitare che l'attacco sia più veloce o uguale alla velocità dell'animazione...
+        velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
     }
 
     private IEnumerator attiva_pupo_coroutine(int battaglione, float x, float y){
-        yield return new WaitForSeconds((battaglione-1)*2);
+        yield return new WaitForSeconds((battaglione-1)*1);
         gameObject.transform.localPosition=new Vector3(x, y, 1f);
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         barra_energia_vuota=Instantiate(barra_energia_vuota_pf);
@@ -110,6 +118,12 @@ public class basic_rule : MonoBehaviour
             case "idle":{skeletonAnimation.AnimationName="idle";break;}
             case "move":{skeletonAnimation.AnimationName="walk";break;}
             case "attack":{skeletonAnimation.AnimationName="attack";break;}
+        }
+
+        //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
+        if (Input.GetKeyDown("space")){
+            //rb2D.AddForce(transform.down * thrust*50, ForceMode2D.Force);
+            rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
     }
 

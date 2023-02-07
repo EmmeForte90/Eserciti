@@ -299,12 +299,16 @@ public class init : MonoBehaviour
                 float distanza=calcola_distanza_due_pupi(id_attaccante,id_difensore);
                 if (distanza>lp_totali_basic_rule[id_attaccante].distanza_attacco){
                     lp_totali_basic_rule[id_attaccante].stato="move";
-                    lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * Time.deltaTime);
+                    spostamento_pupo_random(id_attaccante, id_difensore);
                 } else {
                     pupo_attacca_bersaglio(id_attaccante, id_difensore);
                 }
             }
         }
+    }
+
+    public void spostamento_pupo_random(int id_attaccante, int id_difensore){
+        lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * Time.deltaTime);
     }
 
     public void pupo_attacca_bersaglio(int id_attaccante, int id_difensore){
