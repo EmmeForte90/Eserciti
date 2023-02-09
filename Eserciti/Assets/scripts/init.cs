@@ -310,6 +310,12 @@ public class init : MonoBehaviour
 
     public void spostamento_pupo_random(int id_attaccante, int id_difensore){
         lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * Time.deltaTime);
+        if (!lp_totali_basic_rule[id_attaccante].bool_movimento_cerchio){
+            int random=Random.Range(0, 10);
+            if (random<4){
+                lp_totali_basic_rule[id_attaccante].inizia_percorso_arco();
+            }
+        }
     }
 
     public void pupo_attacca_bersaglio(int id_attaccante, int id_difensore){

@@ -23,6 +23,8 @@ public class basic_rule : MonoBehaviour
 
     //NON TOCCARE
     private Rigidbody2D rb2D;
+    private BoxCollider2D col2D;
+    public bool bool_movimento_cerchio=false;
     public float thrust=1f;                    //la potenza del bump...
     public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
@@ -48,8 +50,10 @@ public class basic_rule : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake(){
+        bool_movimento_cerchio=false;
         thrust=10;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        col2D = gameObject.GetComponent<BoxCollider2D>();
         movimento_tipo="";
         bool_morto=true;    //è importante che si capisca che inizia da morto; Poi appena si attiva diventa bool_morto=false
         
@@ -182,32 +186,30 @@ public class basic_rule : MonoBehaviour
     }
 
     /*
-    public IEnumerator fine_mov_attacco() {
-        yield return new WaitForSeconds(anim_velocita_attacco);
-        //print ("ho finito di sferrare l'attacco alle coordinate "+x_att+" - "+y_att);
-        if (!bool_attacco_distanza){
-            RaycastHit hit;
-            Debug.DrawLine(new Vector3(x_att,y_att,10), new Vector3(x_att,y_att,-10), Color.white, 20.5f);
-            Ray ray = new Ray(new Vector3(x_att,y_att,10), new Vector3(x_att,y_att,-10));
-            if (Physics.Raycast(ray, out hit)) {
-                print ("ho colpito qualcosa...");
-            }
-            if (hit.collider != null){
-                print ("ho colpito qualcosa 2");
-            }
-
-            if (Physics.Raycast(ray, out hit, 100)){
-                print ("ho colpito qualcosa 3");
-            }
+    void OnCollisionEnter(Collision collision){
+        if (collision.gameObject.tag == "pupi"){
+            Physics.IgnoreCollision(theobjectToIgnore.collider, GetComponent<Collider>());
         }
     }
     */
+
+    public void inizia_percorso_arco(){
+        print ("inizia il percorso ad arco per "+int_key_pupo);
+        bool_movimento_cerchio=true;
+        col2D.isTrigger=false;
+        StartCoroutine(termina_movimento_cerchio());
+    }
+    private IEnumerator termina_movimento_cerchio(){
+        print ("termino il percorso ad arco per "+int_key_pupo);
+        yield return new WaitForSeconds(2);
+        col2D.isTrigger=true;
+        bool_movimento_cerchio=false;
+    }
 
     public void anim_attacco(float x, float y){
         stato="attack";
         x_att=x;
         y_att=y;
-        //StartCoroutine(fine_mov_attacco());
         StartCoroutine(coroutine_ready());
     }
 
