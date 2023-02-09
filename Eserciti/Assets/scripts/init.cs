@@ -47,7 +47,7 @@ public class init : MonoBehaviour
     private float xc=30,yc=16;
     private float xd=30,yd=-20;
     private bool bool_fine_partita=false;
-    private int max_pupi_battaglione=5;
+    private int max_pupi_battaglione=20;
 
     public Dictionary<string, int> lista_upgrade = new Dictionary<string, int>();
 
