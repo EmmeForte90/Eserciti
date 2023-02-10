@@ -187,7 +187,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -19.2, y: -30.2}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 1597.8496, y: 891.4141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &35814504
 GameObject:
@@ -16108,8 +16108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1143, y: 6.8554}
-  m_SizeDelta: {x: 96.3658, y: 43.9279}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054358108
 MonoBehaviour:
@@ -16152,8 +16152,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 44.85, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 90, y: 44.85, z: 1}
+  m_Center: {x: 0, y: 2.4, z: 0}
 --- !u!1 &2056305368
 GameObject:
   m_ObjectHideFlags: 0
@@ -17188,10 +17188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: c_mov_arco_medio
       objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069553, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_TagString
-      value: cerchio_percorso
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
 --- !u!224 &5836361729208665672 stripped
@@ -17209,10 +17205,6 @@ PrefabInstance:
     - target: {fileID: 4659893647302422086, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
       propertyPath: m_Name
       value: c_mov_arco_grande
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422086, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_TagString
-      value: cerchio_percorso
       objectReference: {fileID: 0}
     - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
       propertyPath: m_Pivot.x
@@ -17394,10 +17386,6 @@ PrefabInstance:
     - target: {fileID: 6520193002747411525, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
       propertyPath: m_Name
       value: c_mov_arco_piccolo
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411525, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_TagString
-      value: cerchio_percorso
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
