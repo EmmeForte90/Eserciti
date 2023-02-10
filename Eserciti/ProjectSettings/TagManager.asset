@@ -6,6 +6,7 @@ TagManager:
   tags:
   - proiettile
   - pupo
+  - cerchio_percorso
   layers:
   - Default
   - TransparentFX

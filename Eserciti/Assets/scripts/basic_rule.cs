@@ -33,7 +33,16 @@ public class basic_rule : MonoBehaviour
     public GameObject barra_energia_vuota_pf;
     public GameObject barra_energia;
     public GameObject barra_energia_vuota;
+
     public GameObject proiettile;
+
+    public GameObject GO_c_mov_piccolo_pf;
+    public GameObject GO_c_mov_medio_pf;
+    public GameObject GO_c_mov_grande_pf;
+    public GameObject GO_c_mov_piccolo;
+    public GameObject GO_c_mov_medio;
+    public GameObject GO_c_mov_grande;
+
     public float vitalita;
     public bullet_rule valori_proiettile;
     public GameObject mappa;
@@ -72,13 +81,25 @@ public class basic_rule : MonoBehaviour
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         barra_energia_vuota=Instantiate(barra_energia_vuota_pf);
         barra_energia_vuota.transform.SetParent(gameObject.transform);
-        //barra_energia_vuota.transform.localPosition = new Vector3(0f, 0.6f, -0.5f);
         barra_energia_vuota.transform.localPosition = new Vector3(0f, -0.3f, -0.5f);
 
         barra_energia=Instantiate(barra_energia_pf);
         barra_energia.transform.SetParent(gameObject.transform);
-        //barra_energia.transform.localPosition = new Vector3(0f, 0.6f, -0.6f);
         barra_energia.transform.localPosition = new Vector3(0f, -0.3f, -0.6f);
+
+        GO_c_mov_piccolo=Instantiate(GO_c_mov_piccolo_pf);
+        GO_c_mov_piccolo.transform.SetParent(mappa.transform);
+        GO_c_mov_piccolo.name="cm_"+int_key_pupo;
+        GO_c_mov_piccolo.SetActive(false);
+        GO_c_mov_medio=Instantiate(GO_c_mov_medio_pf);
+        GO_c_mov_medio.transform.SetParent(mappa.transform);
+        GO_c_mov_medio.name="cm_"+int_key_pupo;
+        GO_c_mov_medio.SetActive(false);
+        GO_c_mov_grande=Instantiate(GO_c_mov_grande_pf);
+        GO_c_mov_grande.transform.SetParent(mappa.transform);
+        GO_c_mov_grande.name="cm_"+int_key_pupo;
+        GO_c_mov_grande.SetActive(false);
+
         vitalita=vitalita_max;
 
         if (proiettile_pf!=null){
@@ -185,22 +206,20 @@ public class basic_rule : MonoBehaviour
         }
     }
 
-    /*
-    void OnCollisionEnter(Collision collision){
-        if (collision.gameObject.tag == "pupi"){
-            Physics.IgnoreCollision(theobjectToIgnore.collider, GetComponent<Collider>());
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.name != "cm_"+int_key_pupo ){
+            Physics2D.IgnoreCollision(collision.collider, col2D);
         }
     }
-    */
 
     public void inizia_percorso_arco(){
-        print ("inizia il percorso ad arco per "+int_key_pupo);
+        //print ("inizia il percorso ad arco per "+int_key_pupo);
         bool_movimento_cerchio=true;
         col2D.isTrigger=false;
         StartCoroutine(termina_movimento_cerchio());
     }
     private IEnumerator termina_movimento_cerchio(){
-        print ("termino il percorso ad arco per "+int_key_pupo);
+        //print ("termino il percorso ad arco per "+int_key_pupo);
         yield return new WaitForSeconds(2);
         col2D.isTrigger=true;
         bool_movimento_cerchio=false;
