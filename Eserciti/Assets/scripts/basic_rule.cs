@@ -36,13 +36,6 @@ public class basic_rule : MonoBehaviour
 
     public GameObject proiettile;
 
-    public GameObject GO_c_mov_piccolo_pf;
-    public GameObject GO_c_mov_medio_pf;
-    public GameObject GO_c_mov_grande_pf;
-    public GameObject GO_c_mov_piccolo;
-    public GameObject GO_c_mov_medio;
-    public GameObject GO_c_mov_grande;
-
     public float vitalita;
     public bullet_rule valori_proiettile;
     public GameObject mappa;
@@ -56,6 +49,7 @@ public class basic_rule : MonoBehaviour
     private bool bool_dir_dx=true;
     private float horizontal;
     public float old_x;
+    public Vector3 waypoints;
 
     // Start is called before the first frame update
     void Awake(){
@@ -86,19 +80,6 @@ public class basic_rule : MonoBehaviour
         barra_energia=Instantiate(barra_energia_pf);
         barra_energia.transform.SetParent(gameObject.transform);
         barra_energia.transform.localPosition = new Vector3(0f, -0.3f, -0.6f);
-
-        GO_c_mov_piccolo=Instantiate(GO_c_mov_piccolo_pf);
-        GO_c_mov_piccolo.transform.SetParent(mappa.transform);
-        GO_c_mov_piccolo.name="cm_"+int_key_pupo;
-        GO_c_mov_piccolo.SetActive(false);
-        GO_c_mov_medio=Instantiate(GO_c_mov_medio_pf);
-        GO_c_mov_medio.transform.SetParent(mappa.transform);
-        GO_c_mov_medio.name="cm_"+int_key_pupo;
-        GO_c_mov_medio.SetActive(false);
-        GO_c_mov_grande=Instantiate(GO_c_mov_grande_pf);
-        GO_c_mov_grande.transform.SetParent(mappa.transform);
-        GO_c_mov_grande.name="cm_"+int_key_pupo;
-        GO_c_mov_grande.SetActive(false);
 
         vitalita=vitalita_max;
 
@@ -147,8 +128,9 @@ public class basic_rule : MonoBehaviour
 
         //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
         if (Input.GetKeyDown("space")){
+            inizia_percorso_arco();
             //rb2D.AddForce(transform.down * thrust*50, ForceMode2D.Force);
-            rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
+            //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
     }
 
@@ -213,15 +195,20 @@ public class basic_rule : MonoBehaviour
     }
 
     public void inizia_percorso_arco(){
-        //print ("inizia il percorso ad arco per "+int_key_pupo);
+        if (bool_movimento_cerchio){return;}
+        float x=transform.position.x;
+        float y=transform.position.y;
+        float z=transform.position.z;
+        Vector3[] waypoints=new Vector3[]{new Vector3(x+0.5f,y-1,z), new Vector3(x+1,y-1.5f,z), new Vector3(x+2,y-2,z)};
+        iTween.MoveTo(gameObject, iTween.Hash("path", waypoints, "time", 1f, "easetype", iTween.EaseType.linear)); 
         bool_movimento_cerchio=true;
-        col2D.isTrigger=false;
+        //col2D.isTrigger=false;
         StartCoroutine(termina_movimento_cerchio());
     }
     private IEnumerator termina_movimento_cerchio(){
         //print ("termino il percorso ad arco per "+int_key_pupo);
         yield return new WaitForSeconds(2);
-        col2D.isTrigger=true;
+        //col2D.isTrigger=true;
         bool_movimento_cerchio=false;
     }
 

@@ -702,6 +702,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -917,6 +923,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -1799,6 +1811,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -2546,6 +2564,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -2663,7 +2687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &84224086
 Transform:
   m_ObjectHideFlags: 0
@@ -2760,6 +2784,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -2975,6 +3005,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -3190,6 +3226,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -3641,7 +3683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &98523914
 Transform:
   m_ObjectHideFlags: 0
@@ -3739,6 +3781,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -3954,6 +4002,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -4169,6 +4223,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -4384,6 +4444,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -4599,6 +4665,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -4981,6 +5053,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -5098,7 +5176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &157384380
 Transform:
   m_ObjectHideFlags: 0
@@ -5196,6 +5274,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -5411,6 +5495,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -5625,6 +5715,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -5840,6 +5936,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -6221,6 +6323,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -6436,6 +6544,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -6818,6 +6932,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -7200,6 +7320,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -7582,6 +7708,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -8033,7 +8165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &271845608
 Transform:
   m_ObjectHideFlags: 0
@@ -8131,6 +8263,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -8248,7 +8386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &280022114
 Transform:
   m_ObjectHideFlags: 0
@@ -8346,6 +8484,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -8463,7 +8607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &290945109
 Transform:
   m_ObjectHideFlags: 0
@@ -8560,6 +8704,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -8775,6 +8925,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -8990,6 +9146,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -9205,6 +9367,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -9420,6 +9588,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -9634,6 +9808,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -10016,6 +10196,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -10231,6 +10417,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -10445,6 +10637,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -11160,6 +11358,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -11375,6 +11579,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -11590,6 +11800,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -11874,7 +12090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &380902655
 Transform:
   m_ObjectHideFlags: 0
@@ -11972,6 +12188,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -12354,6 +12576,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -12569,6 +12797,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -17670,7 +17904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &405347964
 Transform:
   m_ObjectHideFlags: 0
@@ -17768,6 +18002,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -17982,6 +18222,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -18364,6 +18610,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -18746,6 +18998,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -19538,6 +19796,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -19753,6 +20017,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -19968,6 +20238,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -20182,6 +20458,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -20627,7 +20909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &538197616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21580,6 +21862,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -21961,6 +22249,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -22342,6 +22636,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -22793,7 +23093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665875458
 Transform:
   m_ObjectHideFlags: 0
@@ -22891,6 +23191,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -23175,7 +23481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &676800896
 Transform:
   m_ObjectHideFlags: 0
@@ -23272,6 +23578,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -23723,7 +24035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &683014513
 Transform:
   m_ObjectHideFlags: 0
@@ -23821,6 +24133,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -24035,6 +24353,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -24617,6 +24941,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -24932,6 +25262,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -26116,6 +26452,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -26497,6 +26839,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -27046,6 +27394,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -27261,6 +27615,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -27475,6 +27835,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -27592,7 +27958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &834490940
 Transform:
   m_ObjectHideFlags: 0
@@ -27690,6 +28056,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -27974,7 +28346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &846078452
 Transform:
   m_ObjectHideFlags: 0
@@ -28072,6 +28444,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -28189,7 +28567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &861058761
 Transform:
   m_ObjectHideFlags: 0
@@ -28287,6 +28665,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -28404,7 +28788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &869465788
 Transform:
   m_ObjectHideFlags: 0
@@ -28501,6 +28885,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -28785,7 +29175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &896712074
 Transform:
   m_ObjectHideFlags: 0
@@ -28882,6 +29272,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -29430,6 +29826,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -29645,6 +30047,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -29833,7 +30241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &910451693
 Transform:
   m_ObjectHideFlags: 0
@@ -29931,6 +30339,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -30145,6 +30559,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -30527,6 +30947,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -30811,7 +31237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &936005565
 Transform:
   m_ObjectHideFlags: 0
@@ -30909,6 +31335,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -31458,6 +31890,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -31840,6 +32278,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -32055,6 +32499,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -32269,6 +32719,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -32720,7 +33176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &998570554
 Transform:
   m_ObjectHideFlags: 0
@@ -32818,6 +33274,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -33102,7 +33564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1010158866
 Transform:
   m_ObjectHideFlags: 0
@@ -33199,6 +33661,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -33490,6 +33958,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -33774,7 +34248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1035352992
 Transform:
   m_ObjectHideFlags: 0
@@ -33872,6 +34346,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -34087,6 +34567,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -35577,7 +36063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1082951974
 Transform:
   m_ObjectHideFlags: 0
@@ -35675,6 +36161,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -35918,7 +36410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1141642893
 Transform:
   m_ObjectHideFlags: 0
@@ -36016,6 +36508,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -36532,6 +37030,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -36746,6 +37250,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -37277,7 +37787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1213653809
 Transform:
   m_ObjectHideFlags: 0
@@ -37374,6 +37884,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -37755,6 +38271,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -38137,6 +38659,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -38254,7 +38782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1262105690
 Transform:
   m_ObjectHideFlags: 0
@@ -38352,6 +38880,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -38567,6 +39101,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -38755,7 +39295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1265445459
 Transform:
   m_ObjectHideFlags: 0
@@ -38852,6 +39392,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -39067,6 +39613,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -39281,6 +39833,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -39398,7 +39956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1289929875
 Transform:
   m_ObjectHideFlags: 0
@@ -39495,6 +40053,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -39710,6 +40274,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -39827,7 +40397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1293807651
 Transform:
   m_ObjectHideFlags: 0
@@ -39925,6 +40495,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -40474,6 +41050,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -40688,6 +41270,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -40903,6 +41491,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -41118,6 +41712,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -41235,7 +41835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1331193078
 Transform:
   m_ObjectHideFlags: 0
@@ -41333,6 +41933,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -42118,7 +42724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1361079940
 Transform:
   m_ObjectHideFlags: 0
@@ -42216,6 +42822,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -42430,6 +43042,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -42623,7 +43241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1372686345
 Transform:
   m_ObjectHideFlags: 0
@@ -42720,6 +43338,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -42837,7 +43461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1380919389
 Transform:
   m_ObjectHideFlags: 0
@@ -42935,6 +43559,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -43322,6 +43952,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -43536,6 +44172,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -43750,6 +44392,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -43867,7 +44515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1431430537
 Transform:
   m_ObjectHideFlags: 0
@@ -43965,6 +44613,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -44347,6 +45001,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -44729,6 +45389,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -45013,7 +45679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1456962501
 Transform:
   m_ObjectHideFlags: 0
@@ -45110,6 +45776,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -45492,6 +46164,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -45707,6 +46385,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -45991,7 +46675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1485414372
 Transform:
   m_ObjectHideFlags: 0
@@ -46088,6 +46772,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -46303,6 +46993,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -46684,6 +47380,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -46975,6 +47677,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -47190,6 +47898,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -47405,6 +48119,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -47786,6 +48506,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -48334,6 +49060,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -49034,6 +49766,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -49318,7 +50056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1582338308
 Transform:
   m_ObjectHideFlags: 0
@@ -49416,6 +50154,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -49533,7 +50277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1585465077
 Transform:
   m_ObjectHideFlags: 0
@@ -49631,6 +50375,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -49845,6 +50595,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -50060,6 +50816,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -50275,6 +51037,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -50490,6 +51258,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -50705,6 +51479,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -50920,6 +51700,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -51037,7 +51823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1609751425
 Transform:
   m_ObjectHideFlags: 0
@@ -51134,6 +51920,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -51251,7 +52043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1610889821
 Transform:
   m_ObjectHideFlags: 0
@@ -51349,6 +52141,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -51564,6 +52362,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -51779,6 +52583,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -52063,7 +52873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1644346062
 Transform:
   m_ObjectHideFlags: 0
@@ -52161,6 +52971,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -52612,7 +53428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1657729844
 Transform:
   m_ObjectHideFlags: 0
@@ -52710,6 +53526,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -52827,7 +53649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1695171189
 Transform:
   m_ObjectHideFlags: 0
@@ -52924,6 +53746,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -53139,6 +53967,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -53353,6 +54187,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -54069,6 +54909,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -54186,7 +55032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1751318414
 Transform:
   m_ObjectHideFlags: 0
@@ -54284,6 +55130,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -54832,6 +55684,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -55116,7 +55974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1777137546
 Transform:
   m_ObjectHideFlags: 0
@@ -55213,6 +56071,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -55428,6 +56292,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -56018,7 +56888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1834726775
 Transform:
   m_ObjectHideFlags: 0
@@ -56116,6 +56986,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -56331,6 +57207,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -56615,7 +57497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1864858002
 Transform:
   m_ObjectHideFlags: 0
@@ -56712,6 +57594,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -56829,7 +57717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1869492899
 Transform:
   m_ObjectHideFlags: 0
@@ -56926,6 +57814,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -57043,7 +57937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1877618258
 Transform:
   m_ObjectHideFlags: 0
@@ -57141,6 +58035,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -57356,6 +58256,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -57473,7 +58379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1893260925
 Transform:
   m_ObjectHideFlags: 0
@@ -57571,6 +58477,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -58022,7 +58934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1917806317
 Transform:
   m_ObjectHideFlags: 0
@@ -58120,6 +59032,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -58237,7 +59155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1918995955
 Transform:
   m_ObjectHideFlags: 0
@@ -58335,6 +59253,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -58550,6 +59474,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -59265,6 +60195,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -59382,7 +60318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1980439720
 Transform:
   m_ObjectHideFlags: 0
@@ -59480,6 +60416,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -59695,6 +60637,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -59909,6 +60857,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -60123,6 +61077,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -60338,6 +61298,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -60553,6 +61519,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -60767,6 +61739,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -61051,7 +62029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2023098706
 Transform:
   m_ObjectHideFlags: 0
@@ -61148,6 +62126,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -61599,7 +62583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2032378462
 Transform:
   m_ObjectHideFlags: 0
@@ -61697,6 +62681,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -61814,7 +62804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2037144337
 Transform:
   m_ObjectHideFlags: 0
@@ -61912,6 +62902,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -62127,6 +63123,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -62423,6 +63425,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -62638,6 +63646,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -63089,7 +64103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2068233220
 Transform:
   m_ObjectHideFlags: 0
@@ -63186,6 +64200,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -63568,6 +64588,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -63761,7 +64787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2087206035
 Transform:
   m_ObjectHideFlags: 0
@@ -63858,6 +64884,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -64073,6 +65105,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -64357,7 +65395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2104320559
 Transform:
   m_ObjectHideFlags: 0
@@ -64455,6 +65493,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -64572,7 +65616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2106677428
 Transform:
   m_ObjectHideFlags: 0
@@ -64670,6 +65714,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -65219,6 +66269,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -65434,6 +66490,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -65649,6 +66711,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -65863,6 +66931,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
@@ -65980,7 +67054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2146126949
 Transform:
   m_ObjectHideFlags: 0
@@ -66078,6 +67152,12 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
+  GO_c_mov_piccolo_pf: {fileID: 0}
+  GO_c_mov_medio_pf: {fileID: 0}
+  GO_c_mov_grande_pf: {fileID: 0}
+  GO_c_mov_piccolo: {fileID: 0}
+  GO_c_mov_medio: {fileID: 0}
+  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
