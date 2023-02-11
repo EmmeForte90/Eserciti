@@ -687,13 +687,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -702,18 +704,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &27019985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,13 +905,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -923,18 +922,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &35814509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,13 +1790,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -1811,18 +1807,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &55178701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,13 +2540,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -2564,18 +2557,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &81318003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2769,13 +2757,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -2784,18 +2774,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &84224090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,13 +2975,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 40825106}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -3005,18 +2992,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &84359216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3211,13 +3193,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 54148875}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -3226,18 +3210,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &85049067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3766,13 +3745,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 635516105}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -3781,18 +3762,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &98523918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,13 +3963,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 677357813}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -4002,18 +3980,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &110116824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4208,13 +4181,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -4223,18 +4198,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &122093177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4429,13 +4399,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -4444,18 +4416,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &133128185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4650,13 +4617,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -4665,18 +4634,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &135200442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,13 +5002,15 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 1517576833}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -5053,18 +5019,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &148227450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5259,13 +5220,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -5274,18 +5237,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &157384384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5480,13 +5438,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -5495,18 +5455,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &158736491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5700,13 +5655,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -5715,18 +5672,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &168974449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,13 +5873,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -5936,18 +5890,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &171855133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6308,13 +6257,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -6323,18 +6274,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &191050436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6529,13 +6475,15 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 1059940041}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -6544,18 +6492,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &193118680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6917,13 +6860,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -6932,18 +6877,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &194451461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7305,13 +7245,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -7320,18 +7262,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &201338115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7693,13 +7630,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 366140588}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -7708,18 +7647,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &219887431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8248,13 +8182,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -8263,18 +8199,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &271845612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8469,13 +8400,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -8484,18 +8417,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &280022118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8689,13 +8617,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -8704,18 +8634,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &290945113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8910,13 +8835,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 44094833}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -8925,18 +8852,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &301589557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9131,13 +9053,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -9146,18 +9070,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &310289199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9352,13 +9271,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -9367,18 +9288,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &331986050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9573,13 +9489,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1253518603}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -9588,18 +9506,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &347179022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9793,13 +9706,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -9808,18 +9723,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &355094490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10181,13 +10091,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 2058244412}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -10196,18 +10108,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &360381108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10402,13 +10309,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1351305178}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -10417,18 +10326,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &361666353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10622,13 +10526,15 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -10637,18 +10543,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &362240856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11343,13 +11244,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -11358,18 +11261,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &371938773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11564,13 +11462,15 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 623460487}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -11579,18 +11479,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &372270297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11785,13 +11680,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 2123487617}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -11800,18 +11697,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &374591189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12173,13 +12065,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -12188,18 +12082,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &380902659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12561,13 +12450,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -12576,18 +12467,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &383621184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12782,13 +12668,15 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 992582808}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -12797,18 +12685,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &392449835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17987,13 +17870,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1733367435}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -18002,18 +17887,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &405347968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18207,13 +18087,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -18222,18 +18104,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &412271475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18595,13 +18472,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -18610,18 +18489,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &432367168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18983,13 +18857,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -18998,18 +18874,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &454240809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19781,13 +19652,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1564380462}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -19796,18 +19669,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &474291145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20002,13 +19870,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 98019327}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -20017,18 +19887,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &499025553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20223,13 +20088,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -20238,18 +20105,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &503132570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20443,13 +20305,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -20458,18 +20322,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &524056895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21847,13 +21706,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -21862,18 +21723,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &599887377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22234,13 +22090,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -22249,18 +22107,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &623239331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22621,13 +22474,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -22636,18 +22491,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &629590464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23176,13 +23026,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -23191,18 +23043,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &665875462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23563,13 +23410,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -23578,18 +23427,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &676800900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24118,13 +23962,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -24133,18 +23979,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &683014517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24338,13 +24179,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -24353,18 +24196,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &689391954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24926,13 +24764,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -24941,18 +24781,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &714900835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25061,7 +24896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &716123325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25247,13 +25082,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -25262,18 +25099,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &729194345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26437,13 +26269,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -26452,18 +26286,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &792326682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26824,13 +26653,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -26839,18 +26670,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &806347878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27379,13 +27205,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1458242069}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -27394,18 +27222,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &828840185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27600,13 +27423,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 1066117050}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -27615,18 +27440,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &830159414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27820,13 +27640,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -27835,18 +27657,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &833292852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28041,13 +27858,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 612330220}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -28056,18 +27875,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &834490944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28429,13 +28243,15 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 1864529367}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -28444,18 +28260,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &846078456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28650,13 +28461,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1451271179}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -28665,18 +28478,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &861058765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28870,13 +28678,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -28885,18 +28695,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &869465792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29257,13 +29062,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -29272,18 +29079,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &896712078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29811,13 +29613,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -29826,18 +29630,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &902621178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30032,13 +29831,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -30047,18 +29848,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &908337833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30185,10 +29981,10 @@ RectTransform:
   m_Father: {fileID: 707799654}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -75}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &910379973
 MonoBehaviour:
@@ -30324,13 +30120,15 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 770382234}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -30339,18 +30137,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &910451697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30544,13 +30337,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -30559,18 +30354,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &912882519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30932,13 +30722,15 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 587464097}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -30947,18 +30739,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &918608463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31320,13 +31107,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 359936464}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -31335,18 +31124,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &936005569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31875,13 +31659,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -31890,18 +31676,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &963740578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32263,13 +32044,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -32278,18 +32061,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &974274613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32484,13 +32262,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 667747231}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -32499,18 +32279,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &979161841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32704,13 +32479,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -32719,18 +32496,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &991239171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33259,13 +33031,15 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 421100786}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -33274,18 +33048,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &998570558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33646,13 +33415,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -33661,18 +33432,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1010158870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33943,13 +33709,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -33958,18 +33726,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1022183260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34331,13 +34094,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -34346,18 +34111,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1035352996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34552,13 +34312,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -34567,18 +34329,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1042470196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36146,13 +35903,15 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 469449963}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -36161,18 +35920,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1082951978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36299,10 +36053,10 @@ RectTransform:
   m_Father: {fileID: 707799654}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 375, y: -75}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086722296
 MonoBehaviour:
@@ -36366,9 +36120,6 @@ RectTransform:
   - {fileID: 1185654803}
   - {fileID: 399678370}
   - {fileID: 2054358107}
-  - {fileID: 1390047511}
-  - {fileID: 5836361729208665672}
-  - {fileID: 1685032003466696455}
   m_Father: {fileID: 77474520}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36493,13 +36244,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1649285371}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -36508,18 +36261,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1141642897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37015,13 +36763,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -37030,18 +36780,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1159813354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37235,13 +36980,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -37250,18 +36997,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1185549394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37869,13 +37611,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -37884,18 +37628,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1213653813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38256,13 +37995,15 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -38271,18 +38012,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1245462096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38644,13 +38380,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -38659,18 +38397,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1256423960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38865,13 +38598,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1475565996}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -38880,18 +38615,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1262105694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39086,13 +38816,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 2031273492}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -39101,18 +38833,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1263569999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39239,10 +38966,10 @@ RectTransform:
   m_Father: {fileID: 707799654}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -75}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1264589076
 CanvasRenderer:
@@ -39377,13 +39104,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -39392,18 +39121,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1265445463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39598,13 +39322,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -39613,18 +39339,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1281734840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39818,13 +39539,15 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -39833,18 +39556,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1288946449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40038,13 +39756,15 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -40053,18 +39773,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1289929879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40259,13 +39974,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -40274,18 +39991,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1290974568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40480,13 +40192,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1534559600}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -40495,18 +40209,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1293807655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41035,13 +40744,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1759571172}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -41050,18 +40761,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1312322277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41255,13 +40961,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -41270,18 +40978,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1312532721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41476,13 +41179,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 241977528}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -41491,18 +41196,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1317136255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41697,13 +41397,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 913101132}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -41712,18 +41414,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1328669585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41918,13 +41615,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1440353003}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -41933,18 +41632,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1331193082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42807,13 +42501,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -42822,18 +42518,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1361079944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43027,13 +42718,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -43042,18 +42735,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1361864890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43323,13 +43011,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -43338,18 +43028,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1372686349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43544,13 +43229,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -43559,18 +43246,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1380919393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43828,11 +43510,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &1390047511 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-  m_PrefabInstance: {fileID: 6520193003513269587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1404340539
 GameObject:
   m_ObjectHideFlags: 0
@@ -43937,13 +43614,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -43952,18 +43631,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1404340544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44157,13 +43831,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -44172,18 +43848,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1405221812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44377,13 +44048,15 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -44392,18 +44065,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1412093480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44598,13 +44266,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -44613,18 +44283,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1431430541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44986,13 +44651,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -45001,18 +44668,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1444257350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45374,13 +45036,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -45389,18 +45053,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1449933026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45761,13 +45420,15 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -45776,18 +45437,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1456962505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46149,13 +45805,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 1044420769}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -46164,18 +45822,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1461969672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46370,13 +46023,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 17747846}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -46385,18 +46040,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1475297889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46757,13 +46407,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -46772,18 +46424,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1485414376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46978,13 +46625,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -46993,18 +46642,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1500095092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47365,13 +47009,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -47380,18 +47026,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1501136387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47662,13 +47303,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 999639424}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -47677,18 +47320,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1505059975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47883,13 +47521,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -47898,18 +47538,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1505132334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48104,13 +47739,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -48119,18 +47756,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1506575380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48491,13 +48123,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -48506,18 +48140,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1518590954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49045,13 +48674,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -49060,18 +48691,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1542760394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49751,13 +49377,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -49766,18 +49394,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1564920543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50139,13 +49762,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -50154,18 +49779,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1582338312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50360,13 +49980,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -50375,18 +49997,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1585465081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50580,13 +50197,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -50595,18 +50214,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1589110504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50801,13 +50415,15 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 238625314}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -50816,18 +50432,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1590915714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51022,13 +50633,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 7221938}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -51037,18 +50650,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1591350435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51243,13 +50851,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -51258,18 +50868,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1592064034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51464,13 +51069,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -51479,18 +51086,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1596548727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51685,13 +51287,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 994701984}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -51700,18 +51304,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1603622147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51905,13 +51504,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -51920,18 +51521,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1609751429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52126,13 +51722,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -52141,18 +51739,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1610889825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52347,13 +51940,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -52362,18 +51957,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1625900835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52568,13 +52158,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 896812930}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -52583,18 +52175,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1627506510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52956,13 +52543,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -52971,18 +52560,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1644346066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53511,13 +53095,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1807716526}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -53526,18 +53112,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1657729848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53731,13 +53312,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -53746,18 +53329,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1695171193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53952,13 +53530,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1563028247}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -53967,18 +53547,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1696263518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54172,13 +53747,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -54187,18 +53764,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1700666479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54894,13 +54466,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -54909,18 +54483,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1748975327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55115,13 +54684,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 213357836}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -55130,18 +54701,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1751318418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55669,13 +55235,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -55684,18 +55252,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1770815077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56056,13 +55619,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -56071,18 +55636,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1777137550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56277,13 +55837,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 463306382}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -56292,18 +55854,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1802631491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56832,10 +56389,10 @@ RectTransform:
   m_Father: {fileID: 707799654}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 525, y: -75}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825379971
 MonoBehaviour:
@@ -56971,13 +56528,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -56986,18 +56545,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1834726779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57192,13 +56746,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 1574158397}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -57207,18 +56763,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1836139340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57579,13 +57130,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -57594,18 +57147,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1864858006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57799,13 +57347,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -57814,18 +57364,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1869492903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58020,13 +57565,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -58035,18 +57582,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1877618262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58241,13 +57783,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -58256,18 +57800,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1885765370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58462,13 +58001,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 550684379}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -58477,18 +58018,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1893260929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59017,13 +58553,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 837658779}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -59032,18 +58570,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1917806321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59238,13 +58771,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -59253,18 +58788,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1918995959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59459,13 +58989,15 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 2066697459}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -59474,18 +59006,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1937913869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60180,13 +59707,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -60195,18 +59724,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1977856555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60401,13 +59925,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -60416,18 +59942,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1980439724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60622,13 +60143,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 2069479863}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -60637,18 +60160,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1987777363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60842,13 +60360,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -60857,18 +60377,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1989875138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61062,13 +60577,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -61077,18 +60594,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1991241655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61283,13 +60795,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -61298,18 +60812,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &1994346075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61504,13 +61013,15 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 1060646330}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -61519,18 +61030,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2001468074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61724,13 +61230,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -61739,18 +61247,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2012936505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62111,13 +61614,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -62126,18 +61631,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2023098710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62666,13 +62166,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1976573918}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -62681,18 +62183,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2032378466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62887,13 +62384,15 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 1332823996}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -62902,18 +62401,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2037144341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63108,13 +62602,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -63123,18 +62619,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2041024012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63410,13 +62901,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -63425,18 +62918,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2056305373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63631,13 +63119,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -63646,18 +63136,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2057775783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64185,13 +63670,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -64200,18 +63687,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2068233224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64573,13 +64055,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 969447509}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -64588,18 +64072,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2074456646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64869,13 +64348,15 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -64884,18 +64365,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2087206039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65090,13 +64566,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1968241802}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -65105,18 +64583,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2088368753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65478,13 +64951,15 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1818272268}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -65493,18 +64968,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2104320563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65699,13 +65169,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -65714,18 +65186,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2106677432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66254,13 +65721,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 193839701}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -66269,18 +65738,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2127189379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66475,13 +65939,15 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 819465086}
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -66490,18 +65956,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2141582328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66696,13 +66157,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -66711,18 +66174,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2142110417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66916,13 +66374,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -66931,18 +66391,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2143487775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67137,13 +66592,15 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
+  ritardo_mov_random_min: 1
+  ritardo_mov_random_max: 4
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_cerchio: 0
+  bool_movimento_random: 0
   thrust: 0.01
   bool_morto: 0
   stato: idle
@@ -67152,18 +66609,13 @@ MonoBehaviour:
   barra_energia: {fileID: 0}
   barra_energia_vuota: {fileID: 0}
   proiettile: {fileID: 0}
-  GO_c_mov_piccolo_pf: {fileID: 0}
-  GO_c_mov_medio_pf: {fileID: 0}
-  GO_c_mov_grande_pf: {fileID: 0}
-  GO_c_mov_piccolo: {fileID: 0}
-  GO_c_mov_medio: {fileID: 0}
-  GO_c_mov_grande: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   movimento_tipo: 
   old_x: 0
+  waypoints: []
 --- !u!114 &2146126953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67254,304 +66706,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146126948}
   m_Mesh: {fileID: 0}
---- !u!224 &1685032003466696455 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-  m_PrefabInstance: {fileID: 6325634674144278848}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2163313575524288632
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1097027041}
-    m_Modifications:
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -14.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 6.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691228514474069553, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-      propertyPath: m_Name
-      value: c_mov_arco_medio
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
---- !u!224 &5836361729208665672 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5691228514474069552, guid: f398d45b9411b63439cd399ca9cc7552, type: 3}
-  m_PrefabInstance: {fileID: 2163313575524288632}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6325634674144278848
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1097027041}
-    m_Modifications:
-    - target: {fileID: 4659893647302422086, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_Name
-      value: c_mov_arco_grande
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 11.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 5.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659893647302422087, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fc9e06b9e0377fc4abffd751474c1623, type: 3}
---- !u!1001 &6520193003513269587
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1097027041}
-    m_Modifications:
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 7.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411524, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520193002747411525, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}
-      propertyPath: m_Name
-      value: c_mov_arco_piccolo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e86785d6e3a43124cb252cd14aa33d45, type: 3}

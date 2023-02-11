@@ -300,25 +300,11 @@ public class init : MonoBehaviour
                 lp_totali_basic_rule[id_attaccante].old_x=lp_totali[id_difensore].transform.position.x;
                 if (distanza>lp_totali_basic_rule[id_attaccante].distanza_attacco){
                     lp_totali_basic_rule[id_attaccante].stato="move";
-                    spostamento_pupo_random(id_attaccante, id_difensore);
+                    lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * Time.deltaTime);
+        
                 } else {
                     pupo_attacca_bersaglio(id_attaccante, id_difensore);
                 }
-            }
-        }
-    }
-
-    public void spostamento_pupo_random(int id_attaccante, int id_difensore){
-        lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * Time.deltaTime);
-        if (!lp_totali_basic_rule[id_attaccante].bool_movimento_cerchio){
-            int random=Random.Range(0, 10);
-            if (random<1){
-                /*
-                print ("vado da quì ad iniziare...");
-                lp_totali_basic_rule[id_attaccante].inizia_percorso_arco();
-                //iTween.MoveTo(lp_totali_basic_rule[id_attaccante].gameObject, iTween.Hash("y", lp_totali[id_attaccante].transform.position.y-1, "time", 1.5f, "easetype", iTween.EaseType.easeOutElastic)); 
-                //iTween.MoveTo(lp_totali_basic_rule[id_attaccante].gameObject, iTween.Hash("x", lp_totali[id_attaccante].transform.position.x+1, "time", 1.5f, "easetype", iTween.EaseType.easeOutElastic)); 
-                */
             }
         }
     }

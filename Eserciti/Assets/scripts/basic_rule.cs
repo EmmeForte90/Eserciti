@@ -13,6 +13,8 @@ public class basic_rule : MonoBehaviour
     public float ritardo_attacco=1f;            //dopo quanto tempo può ricominciare ad attaccare
     public float raggio_sfera_attacco=0.7f;     //indica la sfera dal punto in cui colpisce; Se qualcuno ha una sfera più grande, potrebbe colpire più pupetti.
     public float danno=1f;                      //indica il danno che fà un pupetto ogni volta che attacca.
+    public int ritardo_mov_random_min=1;       //indica il numero di secondi minimo che può passare tra un movimento random ed un altro.
+    public int ritardo_mov_random_max=4;       //indica il numero di secondi massimo che può passare tra un movimento random ed un altro.
     public float armatura_melee=0f;             //indica il valore di danno sottratto quando si viene attaccati corpo a corpo
     public float armatura_distanza=0f;          //indica il valore di danno sottratto quando si viene attaccati a distanza
     public float velocita_proiettile=0f;        //la velocità del proiettile in caso attacca a distanza (0 vuol dire che attacca melee)
@@ -24,7 +26,7 @@ public class basic_rule : MonoBehaviour
     //NON TOCCARE
     private Rigidbody2D rb2D;
     private BoxCollider2D col2D;
-    public bool bool_movimento_cerchio=false;
+    public bool bool_movimento_random=false;
     public float thrust=1f;                    //la potenza del bump...
     public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
@@ -49,11 +51,11 @@ public class basic_rule : MonoBehaviour
     private bool bool_dir_dx=true;
     private float horizontal;
     public float old_x;
-    public Vector3 waypoints;
+    public Vector3[] waypoints;
 
     // Start is called before the first frame update
     void Awake(){
-        bool_movimento_cerchio=false;
+        bool_movimento_random=false;
         thrust=10;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         col2D = gameObject.GetComponent<BoxCollider2D>();
@@ -67,6 +69,14 @@ public class basic_rule : MonoBehaviour
         }
         ritardo_attacco+=0.5f;          //in linea generale, bisogna sempre evitare che l'attacco sia più veloce o uguale alla velocità dell'animazione...
         velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
+    }
+    void Start(){
+        StartCoroutine(inizia_percorso_random_coroutine());
+    }
+    private IEnumerator inizia_percorso_random_coroutine(){
+        int random=Random.Range(ritardo_mov_random_min,ritardo_mov_random_max);
+        yield return new WaitForSeconds(random);
+        inizia_percorso_random();
     }
 
     private IEnumerator attiva_pupo_coroutine(int battaglione, float x, float y){
@@ -125,10 +135,15 @@ public class basic_rule : MonoBehaviour
             case "move":{skeletonAnimation.AnimationName="walk";break;}
             case "attack":{skeletonAnimation.AnimationName="attack";break;}
         }
+        /*
+        if (stato!="move"){
+            iTween.Stop();
+        }
+        */
 
         //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
         if (Input.GetKeyDown("space")){
-            inizia_percorso_arco();
+            inizia_percorso_random();
             //rb2D.AddForce(transform.down * thrust*50, ForceMode2D.Force);
             //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
@@ -194,22 +209,49 @@ public class basic_rule : MonoBehaviour
         }
     }
 
-    public void inizia_percorso_arco(){
-        if (bool_movimento_cerchio){return;}
+    private void inizia_percorso_random(){
+        if (bool_morto){return;}
+        if (bool_movimento_random){return;}
         float x=transform.position.x;
         float y=transform.position.y;
         float z=transform.position.z;
-        Vector3[] waypoints=new Vector3[]{new Vector3(x+0.5f,y-1,z), new Vector3(x+1,y-1.5f,z), new Vector3(x+2,y-2,z)};
-        iTween.MoveTo(gameObject, iTween.Hash("path", waypoints, "time", 1f, "easetype", iTween.EaseType.linear)); 
-        bool_movimento_cerchio=true;
-        //col2D.isTrigger=false;
-        StartCoroutine(termina_movimento_cerchio());
+        float velocita_movimento_fattore=5/velocita_movimento;
+
+        string tipo="";
+        string direzione="dx";
+        int random=Random.Range(1,3);
+        switch (random){
+            case 1:{tipo="cerchio_basso";break;}
+            case 2:{tipo="cerchio_alto";break;}
+        }
+        if (bool_fazione_nemica){direzione="sx";}
+        tipo+="_"+direzione;
+        print (tipo);
+
+        switch (tipo){
+            case "cerchio_basso_dx":{
+                waypoints=new Vector3[]{new Vector3(x+0.5f,y-1,z), new Vector3(x+1,y-1.5f,z), new Vector3(x+2,y-2,z)};  //cerchio basso DX
+                break;
+            }
+            case "cerchio_alto_dx":{
+                waypoints=new Vector3[]{new Vector3(x+0.5f,y+1,z), new Vector3(x+1,y+1.5f,z), new Vector3(x+2,y+2,z)};  //cerchio basso DX
+                break;
+            }
+            case "cerchio_basso_sx":{
+                waypoints=new Vector3[]{new Vector3(x-0.5f,y-1,z), new Vector3(x-1,y-1.5f,z), new Vector3(x-2,y-2,z)};  //cerchio basso SX
+                break;
+            }
+            case "cerchio_alto_sx":{
+                waypoints=new Vector3[]{new Vector3(x-0.5f,y+1,z), new Vector3(x-1,y+1.5f,z), new Vector3(x-2,y+2,z)};  //cerchio basso SX
+                break;
+            }
+        }
+        iTween.MoveTo(gameObject, iTween.Hash("path", waypoints, "time", velocita_movimento_fattore, "easetype", iTween.EaseType.linear,"oncomplete", "termina_movimento_random")); 
+        bool_movimento_random=true;
     }
-    private IEnumerator termina_movimento_cerchio(){
-        //print ("termino il percorso ad arco per "+int_key_pupo);
-        yield return new WaitForSeconds(2);
-        //col2D.isTrigger=true;
-        bool_movimento_cerchio=false;
+    private void termina_movimento_random(){
+        bool_movimento_random=false;
+        StartCoroutine(inizia_percorso_random_coroutine());
     }
 
     public void anim_attacco(float x, float y){
