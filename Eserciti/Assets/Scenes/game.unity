@@ -706,6 +706,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -898,22 +899,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 6
+  vitalita_max: 6
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 10
+  ritardo_attacco: 3
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 2
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 7.5
   proiettile_pf: {fileID: 1528992706}
   bool_mago: 1
   razza: calabrone
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -924,6 +925,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -1809,6 +1811,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -1993,12 +1996,11 @@ GameObject:
   - component: {fileID: 66213093}
   - component: {fileID: 66213098}
   - component: {fileID: 66213097}
-  - component: {fileID: 66213096}
   - component: {fileID: 66213095}
   - component: {fileID: 66213094}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2070,25 +2072,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &66213096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66213092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &66213097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2534,21 +2517,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocita_movimento: 5
-  vitalita_max: 10
+  vitalita_max: 4
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 10
+  ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 1
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 11
   proiettile_pf: {fileID: 1893541497}
   bool_mago: 1
   razza: coccinella
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -2559,6 +2542,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -2776,6 +2760,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -2994,6 +2979,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -3212,6 +3198,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -3764,6 +3751,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -3982,6 +3970,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -4200,6 +4189,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -4403,7 +4393,7 @@ MonoBehaviour:
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 381657207}
   bool_mago: 1
   razza: formica
@@ -4418,6 +4408,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -4636,6 +4627,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -5021,6 +5013,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -5239,6 +5232,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -5457,6 +5451,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -5674,6 +5669,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -5877,7 +5873,7 @@ MonoBehaviour:
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 930040582}
   bool_mago: 1
   razza: formica
@@ -5892,6 +5888,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -6276,6 +6273,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -6494,6 +6492,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -6879,6 +6878,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -7264,6 +7264,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -7649,6 +7650,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -8201,6 +8203,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -8419,6 +8422,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -8636,6 +8640,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -8854,6 +8859,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -9072,6 +9078,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -9290,6 +9297,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -9508,6 +9516,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -9725,6 +9734,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -10110,6 +10120,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -10328,6 +10339,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -10545,6 +10557,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -11263,6 +11276,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -11481,6 +11495,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -11699,6 +11714,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -12084,6 +12100,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -12190,12 +12207,11 @@ GameObject:
   - component: {fileID: 381657208}
   - component: {fileID: 381657213}
   - component: {fileID: 381657212}
-  - component: {fileID: 381657211}
   - component: {fileID: 381657210}
   - component: {fileID: 381657209}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12267,25 +12283,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &381657211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381657207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &381657212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12444,21 +12441,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocita_movimento: 5
-  vitalita_max: 10
+  vitalita_max: 5
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 8
+  ritardo_attacco: 2.6
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 2
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 8
   proiettile_pf: {fileID: 66213092}
   bool_mago: 1
   razza: vespa
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -12469,6 +12466,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -12687,6 +12685,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -17889,6 +17888,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -18106,6 +18106,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -18491,6 +18492,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -18876,6 +18878,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -19149,12 +19152,11 @@ GameObject:
   - component: {fileID: 466971836}
   - component: {fileID: 466971841}
   - component: {fileID: 466971840}
-  - component: {fileID: 466971839}
   - component: {fileID: 466971838}
   - component: {fileID: 466971837}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19226,25 +19228,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &466971839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466971835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &466971840
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19671,6 +19654,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -19889,6 +19873,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -20081,22 +20066,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 3
+  vitalita_max: 5
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 7
+  ritardo_attacco: 1.8
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 1.6
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 14
   proiettile_pf: {fileID: 1738240285}
   bool_mago: 1
   razza: ragno
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -20107,6 +20092,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -20324,6 +20310,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -21725,6 +21712,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -22109,6 +22097,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -22493,6 +22482,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -23045,6 +23035,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -23429,6 +23420,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -23981,6 +23973,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -24198,6 +24191,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -24783,6 +24777,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -25101,6 +25096,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -25509,12 +25505,11 @@ GameObject:
   - component: {fileID: 750904915}
   - component: {fileID: 750904920}
   - component: {fileID: 750904919}
-  - component: {fileID: 750904918}
   - component: {fileID: 750904917}
   - component: {fileID: 750904916}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25586,25 +25581,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &750904918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750904914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &750904919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26288,6 +26264,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -26672,6 +26649,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -27224,6 +27202,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -27442,6 +27421,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -27659,6 +27639,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -27877,6 +27858,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -28262,6 +28244,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -28480,6 +28463,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -28697,6 +28681,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -29081,6 +29066,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -29354,12 +29340,11 @@ GameObject:
   - component: {fileID: 898437061}
   - component: {fileID: 898437066}
   - component: {fileID: 898437065}
-  - component: {fileID: 898437064}
   - component: {fileID: 898437063}
   - component: {fileID: 898437062}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29431,25 +29416,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &898437064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898437060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &898437065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29632,6 +29598,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -29850,6 +29817,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -30139,6 +30107,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -30356,6 +30325,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -30741,6 +30711,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -30847,12 +30818,11 @@ GameObject:
   - component: {fileID: 930040583}
   - component: {fileID: 930040588}
   - component: {fileID: 930040587}
-  - component: {fileID: 930040586}
   - component: {fileID: 930040585}
   - component: {fileID: 930040584}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30924,25 +30894,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &930040586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930040582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &930040587
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31126,6 +31077,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -31678,6 +31630,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -32063,6 +32016,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -32281,6 +32235,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -32498,6 +32453,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -33050,6 +33006,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -33434,6 +33391,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -33728,6 +33686,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -34113,6 +34072,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -34331,6 +34291,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -35643,12 +35604,11 @@ GameObject:
   - component: {fileID: 1079246530}
   - component: {fileID: 1079246535}
   - component: {fileID: 1079246534}
-  - component: {fileID: 1079246533}
   - component: {fileID: 1079246532}
   - component: {fileID: 1079246531}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35720,25 +35680,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &1079246533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079246529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &1079246534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35922,6 +35863,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -36263,6 +36205,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -36782,6 +36725,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -36999,6 +36943,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -37630,6 +37575,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -38014,6 +37960,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -38399,6 +38346,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -38617,6 +38565,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -38835,6 +38784,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -39123,6 +39073,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -39341,6 +39292,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -39558,6 +39510,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -39775,6 +39728,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -39967,22 +39921,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 7
+  vitalita_max: 4
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 0
+  ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 1079246529}
   bool_mago: 1
   razza: mosca
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -39993,6 +39947,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -40211,6 +40166,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -40763,6 +40719,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -40980,6 +40937,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -41198,6 +41156,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -41416,6 +41375,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -41634,6 +41594,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -42520,6 +42481,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -42737,6 +42699,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -43030,6 +42993,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -43248,6 +43212,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -43633,6 +43598,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -43850,6 +43816,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -44067,6 +44034,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -44285,6 +44253,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -44670,6 +44639,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -45055,6 +45025,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -45439,6 +45410,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -45824,6 +45796,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -46042,6 +46015,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -46426,6 +46400,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -46644,6 +46619,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -47028,6 +47004,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -47322,6 +47299,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -47540,6 +47518,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -47732,22 +47711,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 7
+  vitalita_max: 6
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 11
+  ritardo_attacco: 2.7
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 1.6
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 466971835}
   bool_mago: 1
   razza: ape
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -47758,6 +47737,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -48142,6 +48122,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -48248,12 +48229,11 @@ GameObject:
   - component: {fileID: 1528992707}
   - component: {fileID: 1528992712}
   - component: {fileID: 1528992711}
-  - component: {fileID: 1528992710}
   - component: {fileID: 1528992709}
   - component: {fileID: 1528992708}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48325,25 +48305,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &1528992710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528992706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &1528992711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48693,6 +48654,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -49396,6 +49358,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -49781,6 +49744,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -49999,6 +49963,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -50216,6 +50181,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -50434,6 +50400,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -50652,6 +50619,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -50870,6 +50838,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -51088,6 +51057,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -51306,6 +51276,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -51523,6 +51494,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -51741,6 +51713,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -51959,6 +51932,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -52177,6 +52151,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -52562,6 +52537,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -53114,6 +53090,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -53331,6 +53308,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -53549,6 +53527,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -53766,6 +53745,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -54206,12 +54186,11 @@ GameObject:
   - component: {fileID: 1738240286}
   - component: {fileID: 1738240291}
   - component: {fileID: 1738240290}
-  - component: {fileID: 1738240289}
   - component: {fileID: 1738240288}
   - component: {fileID: 1738240287}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54283,25 +54262,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &1738240289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738240285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &1738240290
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54485,6 +54445,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -54703,6 +54664,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -55254,6 +55216,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -55638,6 +55601,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -55856,6 +55820,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -56547,6 +56512,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -56765,6 +56731,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -57149,6 +57116,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -57366,6 +57334,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -57584,6 +57553,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -57776,22 +57746,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 6
+  vitalita_max: 3
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 10
+  ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 750904914}
   bool_mago: 1
   razza: zanzara
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -57802,6 +57772,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -58020,6 +57991,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -58126,12 +58098,11 @@ GameObject:
   - component: {fileID: 1893541498}
   - component: {fileID: 1893541503}
   - component: {fileID: 1893541502}
-  - component: {fileID: 1893541501}
   - component: {fileID: 1893541500}
   - component: {fileID: 1893541499}
   m_Layer: 0
   m_Name: freccia_comune
-  m_TagString: proiettile
+  m_TagString: proiettile_mago
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58203,25 +58174,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23089644, y: 0.6170124}
   m_EdgeRadius: 0
---- !u!114 &1893541501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893541497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b183e4ce6b014418a271c77709971c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocita: 10
-  danno: 1
-  bool_fazione_nemica: 0
-  bool_attivo: 1
-  xar: 0.0002
-  yar: 3.0496
-  id_attaccante: 1
 --- !u!222 &1893541502
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58572,6 +58524,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -58790,6 +58743,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -59008,6 +58962,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -59726,6 +59681,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -59944,6 +59900,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -60162,6 +60119,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -60379,6 +60337,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -60596,6 +60555,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -60788,22 +60748,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 3
+  vitalita_max: 6
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 12
+  ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
-  danno: 1
+  danno: 2
   ritardo_mov_random_min: 2
   ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
-  velocita_proiettile: 0
+  velocita_proiettile: 10
   proiettile_pf: {fileID: 898437060}
   bool_mago: 1
   razza: scarafaggio
-  anim_velocita_attacco: 1
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
   bool_morto: 0
   stato: idle
@@ -60814,6 +60774,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -61032,6 +60993,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -61249,6 +61211,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -61633,6 +61596,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -62185,6 +62149,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -62403,6 +62368,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -62621,6 +62587,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -62920,6 +62887,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -63138,6 +63106,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -63689,6 +63658,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -64074,6 +64044,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -64367,6 +64338,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -64585,6 +64557,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -64970,6 +64943,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -65188,6 +65162,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -65740,6 +65715,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -65958,6 +65934,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -66176,6 +66153,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -66393,6 +66371,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01
@@ -66611,6 +66590,7 @@ MonoBehaviour:
   proiettile: {fileID: 0}
   vitalita: 0
   valori_proiettile: {fileID: 0}
+  id_difensore_mago: 0
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
   thrust: 0.01

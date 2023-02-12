@@ -6,6 +6,7 @@ TagManager:
   tags:
   - proiettile
   - pupo
+  - proiettile_mago
   layers:
   - Default
   - TransparentFX
