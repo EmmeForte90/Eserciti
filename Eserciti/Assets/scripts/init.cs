@@ -61,7 +61,7 @@ public class init : MonoBehaviour
         foreach (Transform child in lista_pupi.transform) {
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
-        i=0;
+        int i=0,j=0,k=0;
 
         lista_upgrade.Add("melee_damage",0);
         lista_upgrade.Add("distance_damage",0);
@@ -102,6 +102,7 @@ public class init : MonoBehaviour
         }
         //a questo punto abbiamo tutti i pupi creati che sono basicamente invisibili...
         i=0;j=0;
+        float per_10;
         foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
             lp_totali_basic_rule[attachStat.Key].int_key_pupo=attachStat.Key;
             //lp_totali_basic_rule[attachStat.Key].attiva_pupo();             //il tutto basicamente dipenderebbe da quì...
@@ -128,6 +129,22 @@ public class init : MonoBehaviour
                     num_battaglione_amico++;
                 }
                 lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico,xa,(i*-2)+15);
+
+                if (lp_totali_basic_rule[attachStat.Key].velocita_proiettile==0){
+                    lp_totali_basic_rule[attachStat.Key].danno+=lista_upgrade["melee_damage"];
+                }
+                else {
+                    if (!lp_totali_basic_rule[attachStat.Key].bool_mago){
+                        lp_totali_basic_rule[attachStat.Key].danno+=lista_upgrade["distance_damage"];
+                    }
+                    else {
+                        lp_totali_basic_rule[attachStat.Key].danno+=lista_upgrade["spell_damage"];
+                    }
+                }
+                if (lista_upgrade["health"]>0){
+                    per_10=lp_totali_basic_rule[attachStat.Key].vitalita_max*lista_upgrade["health"]/10;
+                    lp_totali_basic_rule[attachStat.Key].vitalita_max+=per_10;
+                }
             }
         }
 
@@ -260,6 +277,16 @@ public class init : MonoBehaviour
         float distanza_difensore=10000;
         float distanza=0;
         int id_pupo_difensore=0;
+        if (lp_totali_basic_rule[id_attaccante].id_difensore_mago!=0){
+            int id_difensore_mago=lp_totali_basic_rule[id_attaccante].id_difensore_mago;
+            lp_totali_basic_rule[id_attaccante].proiettile.transform.position=Vector3.MoveTowards(lp_totali_basic_rule[id_attaccante].proiettile.transform.position, lp_totali_basic_rule[id_difensore_mago].transform.position,lp_totali_basic_rule[id_attaccante].velocita_proiettile * Time.deltaTime);
+            if(Vector3.Distance(lp_totali_basic_rule[id_attaccante].proiettile.transform.position, lp_totali_basic_rule[id_difensore_mago].transform.position) < 0.1f){
+                calcola_danno_combattimento(id_attaccante,id_difensore_mago);
+                lp_totali_basic_rule[id_attaccante].id_difensore_mago=0;
+                lp_totali_basic_rule[id_attaccante].proiettile.SetActive(false);
+            }
+        }
+
         if (!lp_totali_basic_rule[id_attaccante].bool_fazione_nemica){
             foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
                 if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
@@ -334,8 +361,12 @@ public class init : MonoBehaviour
                         }
                     }
                 } else {
-                    //y_att++;    //sembrerebbe essere un allegro standard per quanto riguarda il colpire al petto
-                    lp_totali_basic_rule[id_attaccante].attiva_proiettile(x_att, y_att, id_attaccante);
+                    if (!lp_totali_basic_rule[id_attaccante].bool_mago){
+                        //y_att++;    //sembrerebbe essere un allegro standard per quanto riguarda il colpire al petto
+                        lp_totali_basic_rule[id_attaccante].attiva_proiettile(x_att, y_att, id_attaccante, id_difensore);
+                    } else {
+                        lp_totali_basic_rule[id_attaccante].attiva_proiettile_mago(id_difensore);
+                    }
                 }
             }
         }

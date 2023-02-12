@@ -13,21 +13,19 @@ public class basic_rule : MonoBehaviour
     public float ritardo_attacco=1f;            //dopo quanto tempo può ricominciare ad attaccare
     public float raggio_sfera_attacco=0.7f;     //indica la sfera dal punto in cui colpisce; Se qualcuno ha una sfera più grande, potrebbe colpire più pupetti.
     public float danno=1f;                      //indica il danno che fà un pupetto ogni volta che attacca.
-    public int ritardo_mov_random_min=1;       //indica il numero di secondi minimo che può passare tra un movimento random ed un altro.
-    public int ritardo_mov_random_max=4;       //indica il numero di secondi massimo che può passare tra un movimento random ed un altro.
+    public int ritardo_mov_random_min=2;       //indica il numero di secondi minimo che può passare tra un movimento random ed un altro.
+    public int ritardo_mov_random_max=14;       //indica il numero di secondi massimo che può passare tra un movimento random ed un altro.
     public float armatura_melee=0f;             //indica il valore di danno sottratto quando si viene attaccati corpo a corpo
     public float armatura_distanza=0f;          //indica il valore di danno sottratto quando si viene attaccati a distanza
     public float velocita_proiettile=0f;        //la velocità del proiettile in caso attacca a distanza (0 vuol dire che attacca melee)
     public GameObject proiettile_pf;            //indica la tipologia di proiettile che genera quando attacca a distanza
+    public bool bool_mago=false;
+    public string razza;                        //la razza del pupetto
 
     public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float anim_ritardo_morte=1f;
 
-    //NON TOCCARE
-    private Rigidbody2D rb2D;
-    private BoxCollider2D col2D;
-    public bool bool_movimento_random=false;
-    public float thrust=1f;                    //la potenza del bump...
+    //NON TOCCARE                  //la potenza del bump...
     public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
     private float x_att, y_att;                 //le sue coordinate quando ha attaccato qualcuno; In verità saranno deprecate, credo.
@@ -40,12 +38,20 @@ public class basic_rule : MonoBehaviour
 
     public float vitalita;
     public bullet_rule valori_proiettile;
+    public int id_difensore_mago=0;
     public GameObject mappa;
     public int int_key_pupo=0;
     private SkeletonAnimation skeletonAnimation;
     private bool bool_attivo=false;
     private float x_iniziale_freccia, y_iniziale_freccia;
-    public string movimento_tipo;
+    private string an_movimento_tipo="walk";
+    private string an_vittoria_tipo="win";
+    private string an_attacco_tipo="attack";
+
+    private Rigidbody2D rb2D;
+    private BoxCollider2D col2D;
+    private bool bool_movimento_random=false;
+    public float thrust=1f;  
 
     //blocco relativo alla direzione del personaggio
     private bool bool_dir_dx=true;
@@ -59,7 +65,6 @@ public class basic_rule : MonoBehaviour
         thrust=10;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         col2D = gameObject.GetComponent<BoxCollider2D>();
-        movimento_tipo="";
         bool_morto=true;    //è importante che si capisca che inizia da morto; Poi appena si attiva diventa bool_morto=false
         
         //settaggi globali per non cambiare tutti i pupi
@@ -71,6 +76,18 @@ public class basic_rule : MonoBehaviour
         velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
     }
     void Start(){
+        switch (razza){
+            case "ape":
+            case "calabrone":
+            case "mosca":
+            case "vespa":
+            case "zanzara":{
+                an_movimento_tipo="fly";
+                an_vittoria_tipo="win_fly";
+                an_attacco_tipo="attack_fly";
+                break;
+            }
+        }
         StartCoroutine(inizia_percorso_random_coroutine());
     }
     private IEnumerator inizia_percorso_random_coroutine(){
@@ -94,7 +111,6 @@ public class basic_rule : MonoBehaviour
         vitalita=vitalita_max;
 
         if (proiettile_pf!=null){
-            valori_proiettile=proiettile_pf.GetComponent<bullet_rule>();
             //proiettile=Instantiate(proiettile_pf);
             proiettile=proiettile_pf;
 
@@ -106,10 +122,14 @@ public class basic_rule : MonoBehaviour
 
             proiettile.transform.SetParent(mappa.transform);
             proiettile.transform.localPosition = new Vector3(0f, 0f, 1f);
-
-            valori_proiettile.velocita=velocita_proiettile;
-            valori_proiettile.danno=danno;
-            valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
+            if (!bool_mago){
+                valori_proiettile=proiettile_pf.GetComponent<bullet_rule>();
+                valori_proiettile.velocita=velocita_proiettile;
+                valori_proiettile.danno=danno;
+                valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
+            } else {
+                proiettile.SetActive(false);
+            }
         }
         old_x=transform.position.x;
         bool_attivo=true;
@@ -132,8 +152,8 @@ public class basic_rule : MonoBehaviour
         switch (stato){
             case "wait":
             case "idle":{skeletonAnimation.AnimationName="idle";break;}
-            case "move":{skeletonAnimation.AnimationName="walk";break;}
-            case "attack":{skeletonAnimation.AnimationName="attack";break;}
+            case "move":{skeletonAnimation.AnimationName=an_movimento_tipo;break;}
+            case "attack":{skeletonAnimation.AnimationName=an_attacco_tipo;break;}
         }
         /*
         if (stato!="move"){
@@ -149,7 +169,13 @@ public class basic_rule : MonoBehaviour
         }
     }
 
-    public void attiva_proiettile(float xar, float yar, int id_attaccante){
+    public void attiva_proiettile_mago(int id_difensore){
+        proiettile.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
+        proiettile.SetActive(true);
+        id_difensore_mago=id_difensore; //sarà questo che permetterà dall'altra parte (INIT) di proseguire
+    }
+
+    public void attiva_proiettile(float xar, float yar, int id_attaccante, int id_difensore){
         proiettile.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
         //proiettile.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
         valori_proiettile.setta_e_vai(xar,yar,id_attaccante);
@@ -210,6 +236,7 @@ public class basic_rule : MonoBehaviour
     }
 
     private void inizia_percorso_random(){
+        //if (stato=="attack"){StartCoroutine(inizia_percorso_random_coroutine());return;}        //in verità è più figo commentato
         if (bool_morto){return;}
         if (bool_movimento_random){return;}
         float x=transform.position.x;
@@ -223,10 +250,11 @@ public class basic_rule : MonoBehaviour
         switch (random){
             case 1:{tipo="cerchio_basso";break;}
             case 2:{tipo="cerchio_alto";break;}
+            case 3:{tipo="cerchio_basso_lungo";break;}
+            case 4:{tipo="cerchio_alto_lungo";break;}
         }
         if (bool_fazione_nemica){direzione="sx";}
         tipo+="_"+direzione;
-        print (tipo);
 
         switch (tipo){
             case "cerchio_basso_dx":{

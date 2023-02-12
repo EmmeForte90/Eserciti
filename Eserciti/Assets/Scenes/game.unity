@@ -693,10 +693,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -708,7 +708,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &27019985
@@ -905,16 +905,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 1528992706}
+  bool_mago: 1
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -926,7 +926,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &35814509
@@ -1796,10 +1796,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &55178701
@@ -2020,7 +2020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &66213094
@@ -2540,16 +2540,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 1893541497}
+  bool_mago: 1
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2561,7 +2561,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &81318003
@@ -2763,10 +2763,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2778,7 +2778,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &84224090
@@ -2981,10 +2981,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 40825106}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -2996,7 +2996,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &84359216
@@ -3193,16 +3193,16 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 54148875}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &85049067
@@ -3751,10 +3751,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 635516105}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -3766,7 +3766,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &98523918
@@ -3969,10 +3969,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 677357813}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &110116824
@@ -4187,10 +4187,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -4202,7 +4202,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &122093177
@@ -4392,23 +4392,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 3.5
+  vitalita_max: 7
   bool_fazione_nemica: 1
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 12
+  ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
-  danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  danno: 2.4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
-  anim_velocita_attacco: 1
+  proiettile_pf: {fileID: 381657207}
+  bool_mago: 1
+  razza: formica
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &133128185
@@ -4623,10 +4623,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -4638,7 +4638,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &135200442
@@ -5008,10 +5008,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 1517576833}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -5023,7 +5023,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &148227450
@@ -5226,10 +5226,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -5241,7 +5241,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &157384384
@@ -5444,10 +5444,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -5459,7 +5459,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &158736491
@@ -5661,10 +5661,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -5676,7 +5676,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &168974449
@@ -5866,23 +5866,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85dc1aefd026f4db7e57be21cacf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocita_movimento: 5
-  vitalita_max: 10
+  velocita_movimento: 3.5
+  vitalita_max: 7
   bool_fazione_nemica: 0
-  distanza_attacco: 1
-  ritardo_attacco: 1
+  distanza_attacco: 12
+  ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
-  danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  danno: 2.4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
-  anim_velocita_attacco: 1
+  proiettile_pf: {fileID: 930040582}
+  bool_mago: 1
+  razza: formica
+  anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -5894,7 +5894,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &171855133
@@ -6263,10 +6263,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -6278,7 +6278,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &191050436
@@ -6481,10 +6481,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 1059940041}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -6496,7 +6496,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &193118680
@@ -6866,10 +6866,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -6881,7 +6881,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &194451461
@@ -7251,10 +7251,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -7266,7 +7266,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &201338115
@@ -7636,10 +7636,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 366140588}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -7651,7 +7651,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &219887431
@@ -8188,10 +8188,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8203,7 +8203,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &271845612
@@ -8406,10 +8406,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8421,7 +8421,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &280022118
@@ -8623,10 +8623,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8638,7 +8638,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &290945113
@@ -8841,10 +8841,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 44094833}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -8856,7 +8856,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &301589557
@@ -9059,10 +9059,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -9074,7 +9074,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &310289199
@@ -9277,10 +9277,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -9292,7 +9292,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &331986050
@@ -9495,10 +9495,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1253518603}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -9510,7 +9510,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &347179022
@@ -9706,16 +9706,16 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 1
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -9727,7 +9727,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &355094490
@@ -10097,10 +10097,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 2058244412}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10112,7 +10112,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &360381108
@@ -10309,16 +10309,16 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1351305178}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10330,7 +10330,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &361666353
@@ -10532,10 +10532,10 @@ MonoBehaviour:
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -10547,7 +10547,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &362240856
@@ -11250,10 +11250,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11265,7 +11265,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &371938773
@@ -11468,10 +11468,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 623460487}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11483,7 +11483,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &372270297
@@ -11686,10 +11686,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 2123487617}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -11701,7 +11701,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &374591189
@@ -12071,10 +12071,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12086,7 +12086,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &380902659
@@ -12217,7 +12217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &381657209
@@ -12450,16 +12450,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 66213092}
+  bool_mago: 1
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12471,7 +12471,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &383621184
@@ -12668,16 +12668,16 @@ MonoBehaviour:
   ritardo_attacco: 2.2
   raggio_sfera_attacco: 0.7
   danno: 1.2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 992582808}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -12689,7 +12689,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &392449835
@@ -17876,10 +17876,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1733367435}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -17891,7 +17891,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &405347968
@@ -18093,10 +18093,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -18108,7 +18108,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &412271475
@@ -18478,10 +18478,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -18493,7 +18493,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &432367168
@@ -18863,10 +18863,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -18878,7 +18878,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &454240809
@@ -19176,7 +19176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &466971837
@@ -19658,10 +19658,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1564380462}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -19673,7 +19673,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &474291145
@@ -19876,10 +19876,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 98019327}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -19891,7 +19891,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &499025553
@@ -20088,16 +20088,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 1738240285}
+  bool_mago: 1
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -20109,7 +20109,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &503132570
@@ -20311,10 +20311,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -20326,7 +20326,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &524056895
@@ -21712,10 +21712,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -21727,7 +21727,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &599887377
@@ -22096,10 +22096,10 @@ MonoBehaviour:
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -22111,7 +22111,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &623239331
@@ -22480,10 +22480,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -22495,7 +22495,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &629590464
@@ -23032,10 +23032,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -23047,7 +23047,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &665875462
@@ -23416,10 +23416,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -23431,7 +23431,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &676800900
@@ -23968,10 +23968,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -23983,7 +23983,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &683014517
@@ -24185,10 +24185,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -24200,7 +24200,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &689391954
@@ -24770,10 +24770,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -24785,7 +24785,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &714900835
@@ -25088,10 +25088,10 @@ MonoBehaviour:
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -25103,7 +25103,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &729194345
@@ -25536,7 +25536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &750904916
@@ -26269,16 +26269,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -26290,7 +26290,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &792326682
@@ -26659,10 +26659,10 @@ MonoBehaviour:
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -26674,7 +26674,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &806347878
@@ -27211,10 +27211,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1458242069}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -27226,7 +27226,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &828840185
@@ -27429,10 +27429,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 1066117050}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -27444,7 +27444,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &830159414
@@ -27646,10 +27646,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -27661,7 +27661,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &833292852
@@ -27864,10 +27864,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 612330220}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -27879,7 +27879,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &834490944
@@ -28249,10 +28249,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 1864529367}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -28264,7 +28264,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &846078456
@@ -28467,10 +28467,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1451271179}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -28482,7 +28482,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &861058765
@@ -28684,10 +28684,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -28699,7 +28699,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &869465792
@@ -29068,10 +29068,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -29083,7 +29083,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &896712078
@@ -29381,7 +29381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &898437062
@@ -29619,10 +29619,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -29634,7 +29634,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &902621178
@@ -29837,10 +29837,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -29852,7 +29852,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &908337833
@@ -30126,10 +30126,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 770382234}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -30141,7 +30141,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &910451697
@@ -30343,10 +30343,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -30358,7 +30358,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &912882519
@@ -30728,10 +30728,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 587464097}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -30743,7 +30743,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &918608463
@@ -30874,7 +30874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &930040584
@@ -31113,10 +31113,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 359936464}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -31128,7 +31128,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &936005569
@@ -31665,10 +31665,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -31680,7 +31680,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &963740578
@@ -32050,10 +32050,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -32065,7 +32065,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &974274613
@@ -32268,10 +32268,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 667747231}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -32283,7 +32283,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &979161841
@@ -32485,10 +32485,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -32500,7 +32500,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &991239171
@@ -33037,10 +33037,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 421100786}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -33052,7 +33052,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &998570558
@@ -33421,10 +33421,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -33436,7 +33436,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1010158870
@@ -33715,10 +33715,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -33730,7 +33730,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1022183260
@@ -34100,10 +34100,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -34115,7 +34115,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1035352996
@@ -34318,10 +34318,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -34333,7 +34333,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1042470196
@@ -35670,7 +35670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1079246531
@@ -35909,10 +35909,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 469449963}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -35924,7 +35924,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1082951978
@@ -36250,10 +36250,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1649285371}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -36265,7 +36265,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1141642897
@@ -36763,16 +36763,16 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 1.2
   danno: 0.8
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -36784,7 +36784,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1159813354
@@ -36986,10 +36986,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -37001,7 +37001,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1185549394
@@ -37617,10 +37617,10 @@ MonoBehaviour:
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -37632,7 +37632,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1213653813
@@ -38001,10 +38001,10 @@ MonoBehaviour:
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -38016,7 +38016,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1245462096
@@ -38386,10 +38386,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -38401,7 +38401,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1256423960
@@ -38604,10 +38604,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1475565996}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -38619,7 +38619,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1262105694
@@ -38816,16 +38816,16 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1.6
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 2031273492}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -38837,7 +38837,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1263569999
@@ -39110,10 +39110,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -39125,7 +39125,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1265445463
@@ -39328,10 +39328,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -39343,7 +39343,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1281734840
@@ -39545,10 +39545,10 @@ MonoBehaviour:
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -39560,7 +39560,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1288946449
@@ -39762,10 +39762,10 @@ MonoBehaviour:
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -39777,7 +39777,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1289929879
@@ -39974,16 +39974,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 1079246529}
+  bool_mago: 1
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -39995,7 +39995,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1290974568
@@ -40198,10 +40198,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1534559600}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -40213,7 +40213,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1293807655
@@ -40750,10 +40750,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1759571172}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -40765,7 +40765,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1312322277
@@ -40967,10 +40967,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -40982,7 +40982,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1312532721
@@ -41185,10 +41185,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 241977528}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -41200,7 +41200,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1317136255
@@ -41403,10 +41403,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 913101132}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -41418,7 +41418,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1328669585
@@ -41621,10 +41621,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1440353003}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -41636,7 +41636,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1331193082
@@ -42507,10 +42507,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -42522,7 +42522,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1361079944
@@ -42718,16 +42718,16 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 0.8
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -42739,7 +42739,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1361864890
@@ -43017,10 +43017,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -43032,7 +43032,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1372686349
@@ -43235,10 +43235,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -43250,7 +43250,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1380919393
@@ -43620,10 +43620,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -43635,7 +43635,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1404340544
@@ -43837,10 +43837,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -43852,7 +43852,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1405221812
@@ -44048,16 +44048,16 @@ MonoBehaviour:
   ritardo_attacco: 1.1
   raggio_sfera_attacco: 0.7
   danno: 1.4
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0.6
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -44069,7 +44069,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1412093480
@@ -44272,10 +44272,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -44287,7 +44287,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1431430541
@@ -44657,10 +44657,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -44672,7 +44672,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1444257350
@@ -45042,10 +45042,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -45057,7 +45057,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1449933026
@@ -45426,10 +45426,10 @@ MonoBehaviour:
   armatura_distanza: 0.6
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -45441,7 +45441,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1456962505
@@ -45811,10 +45811,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 1044420769}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -45826,7 +45826,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1461969672
@@ -46029,10 +46029,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 17747846}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -46044,7 +46044,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1475297889
@@ -46413,10 +46413,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -46428,7 +46428,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1485414376
@@ -46631,10 +46631,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -46646,7 +46646,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1500095092
@@ -47015,10 +47015,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -47030,7 +47030,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1501136387
@@ -47309,10 +47309,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 999639424}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -47324,7 +47324,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1505059975
@@ -47527,10 +47527,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -47542,7 +47542,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1505132334
@@ -47739,16 +47739,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 466971835}
+  bool_mago: 1
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -47760,7 +47760,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1506575380
@@ -48123,16 +48123,16 @@ MonoBehaviour:
   ritardo_attacco: 0.8
   raggio_sfera_attacco: 0.7
   danno: 1.5
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -48144,7 +48144,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1518590954
@@ -48275,7 +48275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.27, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1528992708
@@ -48680,10 +48680,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -48695,7 +48695,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1542760394
@@ -49383,10 +49383,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -49398,7 +49398,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1564920543
@@ -49768,10 +49768,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -49783,7 +49783,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1582338312
@@ -49986,10 +49986,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -50001,7 +50001,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1585465081
@@ -50203,10 +50203,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -50218,7 +50218,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1589110504
@@ -50415,16 +50415,16 @@ MonoBehaviour:
   ritardo_attacco: 2.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0.6
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 238625314}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -50436,7 +50436,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1590915714
@@ -50639,10 +50639,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 7221938}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -50654,7 +50654,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1591350435
@@ -50857,10 +50857,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -50872,7 +50872,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1592064034
@@ -51075,10 +51075,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -51090,7 +51090,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1596548727
@@ -51287,16 +51287,16 @@ MonoBehaviour:
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1.2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0.4
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 994701984}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -51308,7 +51308,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1603622147
@@ -51510,10 +51510,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -51525,7 +51525,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1609751429
@@ -51728,10 +51728,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -51743,7 +51743,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1610889825
@@ -51946,10 +51946,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -51961,7 +51961,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1625900835
@@ -52164,10 +52164,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 896812930}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -52179,7 +52179,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1627506510
@@ -52549,10 +52549,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -52564,7 +52564,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1644346066
@@ -53101,10 +53101,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1807716526}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -53116,7 +53116,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1657729848
@@ -53318,10 +53318,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -53333,7 +53333,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1695171193
@@ -53530,16 +53530,16 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 0.6
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1563028247}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -53551,7 +53551,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1696263518
@@ -53753,10 +53753,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -53768,7 +53768,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1700666479
@@ -54233,7 +54233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1738240287
@@ -54472,10 +54472,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -54487,7 +54487,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1748975327
@@ -54690,10 +54690,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 213357836}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -54705,7 +54705,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1751318418
@@ -55241,10 +55241,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -55256,7 +55256,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1770815077
@@ -55625,10 +55625,10 @@ MonoBehaviour:
   armatura_distanza: 1
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -55640,7 +55640,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1777137550
@@ -55837,16 +55837,16 @@ MonoBehaviour:
   ritardo_attacco: 2
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0.2
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 463306382}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -55858,7 +55858,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1802631491
@@ -56534,10 +56534,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -56549,7 +56549,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1834726779
@@ -56752,10 +56752,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 1574158397}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -56767,7 +56767,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1836139340
@@ -57136,10 +57136,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -57151,7 +57151,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1864858006
@@ -57353,10 +57353,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -57368,7 +57368,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1869492903
@@ -57571,10 +57571,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -57586,7 +57586,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1877618262
@@ -57783,16 +57783,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 750904914}
+  bool_mago: 1
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -57804,7 +57804,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1885765370
@@ -58007,10 +58007,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 550684379}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -58022,7 +58022,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1893260929
@@ -58153,7 +58153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.02, y: 0.44}
+  m_AnchoredPosition: {x: -0.26999998, y: 0.44}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1893541499
@@ -58559,10 +58559,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 6
   proiettile_pf: {fileID: 837658779}
+  bool_mago: 0
+  razza: vespa
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -58574,7 +58574,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1917806321
@@ -58777,10 +58777,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -58792,7 +58792,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1918995959
@@ -58995,10 +58995,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 7
   proiettile_pf: {fileID: 2066697459}
+  bool_mago: 0
+  razza: ape
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -59010,7 +59010,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1937913869
@@ -59707,16 +59707,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -59728,7 +59728,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1977856555
@@ -59931,10 +59931,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: zanzara
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -59946,7 +59946,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1980439724
@@ -60149,10 +60149,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 2069479863}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -60164,7 +60164,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1987777363
@@ -60366,10 +60366,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -60381,7 +60381,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1989875138
@@ -60583,10 +60583,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -60598,7 +60598,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1991241655
@@ -60795,16 +60795,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 1
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
-  proiettile_pf: {fileID: 0}
+  proiettile_pf: {fileID: 898437060}
+  bool_mago: 1
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -60816,7 +60816,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &1994346075
@@ -61019,10 +61019,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 6.5
   proiettile_pf: {fileID: 1060646330}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -61034,7 +61034,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2001468074
@@ -61230,16 +61230,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 0.8
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -61251,7 +61251,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2012936505
@@ -61620,10 +61620,10 @@ MonoBehaviour:
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -61635,7 +61635,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2023098710
@@ -62172,10 +62172,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1976573918}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -62187,7 +62187,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2032378466
@@ -62390,10 +62390,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 10
   proiettile_pf: {fileID: 1332823996}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -62405,7 +62405,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2037144341
@@ -62608,10 +62608,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -62623,7 +62623,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2041024012
@@ -62901,16 +62901,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -62922,7 +62922,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2056305373
@@ -63125,10 +63125,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -63140,7 +63140,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2057775783
@@ -63676,10 +63676,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -63691,7 +63691,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2068233224
@@ -64061,10 +64061,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 969447509}
+  bool_mago: 0
+  razza: scarafaggio
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -64076,7 +64076,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2074456646
@@ -64354,10 +64354,10 @@ MonoBehaviour:
   armatura_distanza: 0.2
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: ragno
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -64369,7 +64369,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2087206039
@@ -64572,10 +64572,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1968241802}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -64587,7 +64587,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2088368753
@@ -64957,10 +64957,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 8
   proiettile_pf: {fileID: 1818272268}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -64972,7 +64972,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2104320563
@@ -65175,10 +65175,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -65190,7 +65190,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2106677432
@@ -65721,16 +65721,16 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 193839701}
+  bool_mago: 0
+  razza: coccinella
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -65742,7 +65742,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2127189379
@@ -65939,16 +65939,16 @@ MonoBehaviour:
   ritardo_attacco: 1.2
   raggio_sfera_attacco: 0.7
   danno: 0.6
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 0
   armatura_distanza: 0
   velocita_proiettile: 9
   proiettile_pf: {fileID: 819465086}
+  bool_mago: 0
+  razza: mosca
   anim_velocita_attacco: 0.5
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -65960,7 +65960,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2141582328
@@ -66163,10 +66163,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -66178,7 +66178,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2142110417
@@ -66374,16 +66374,16 @@ MonoBehaviour:
   ritardo_attacco: 1
   raggio_sfera_attacco: 0.7
   danno: 2
-  ritardo_mov_random_min: 1
-  ritardo_mov_random_max: 4
+  ritardo_mov_random_min: 2
+  ritardo_mov_random_max: 14
   armatura_melee: 1
   armatura_distanza: 0.4
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -66395,7 +66395,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2143487775
@@ -66598,10 +66598,10 @@ MonoBehaviour:
   armatura_distanza: 0
   velocita_proiettile: 0
   proiettile_pf: {fileID: 0}
+  bool_mago: 0
+  razza: formica
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
-  bool_movimento_random: 0
-  thrust: 0.01
   bool_morto: 0
   stato: idle
   barra_energia_pf: {fileID: 4983527365895017705, guid: 0e0111669173ea249aec5824f3aec6c3, type: 3}
@@ -66613,7 +66613,7 @@ MonoBehaviour:
   valori_proiettile: {fileID: 0}
   mappa: {fileID: 1097027040}
   int_key_pupo: 0
-  movimento_tipo: 
+  thrust: 0.01
   old_x: 0
   waypoints: []
 --- !u!114 &2146126953
