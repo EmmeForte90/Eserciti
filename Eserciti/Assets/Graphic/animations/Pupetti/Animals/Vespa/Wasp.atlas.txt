@@ -1,0 +1,25 @@
+Wasp.png
+size:1024,128
+filter:Linear,Linear
+pma:true
+Blood
+bounds:110,2,100,100
+Body
+bounds:567,19,83,97
+rotate:90
+Coda
+bounds:339,50,52,116
+rotate:90
+Coda copia
+bounds:212,43,59,125
+rotate:90
+Shadow
+bounds:457,58,108,44
+ala
+bounds:2,6,106,96
+head
+bounds:666,37,65,85
+rotate:90
+zampa
+bounds:212,7,34,52
+rotate:90

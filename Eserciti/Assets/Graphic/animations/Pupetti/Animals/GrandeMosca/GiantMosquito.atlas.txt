@@ -1,0 +1,17 @@
+GiantMosquito.png
+size:512,256
+filter:Linear,Linear
+pma:true
+Blood
+bounds:196,152,100,100
+Body
+bounds:2,111,192,141
+Shadow
+bounds:2,2,108,44
+Wing
+bounds:298,168,81,84
+fang
+bounds:381,195,45,57
+tongue
+bounds:2,48,61,150
+rotate:90
