@@ -1,0 +1,29 @@
+GiantSpider.png
+size:2048,512
+filter:Linear,Linear
+pma:true
+Blood
+bounds:881,110,100,100
+Claw
+bounds:1398,220,252,264
+Head
+bounds:1095,203,301,281
+Shadow
+bounds:2,2,108,44
+armor
+bounds:1879,358,133,126
+beard
+bounds:1652,293,225,191
+body
+bounds:2,48,579,436
+coda
+bounds:983,114,104,96
+coda1
+bounds:1199,128,73,86
+rotate:90
+fang copia
+bounds:1089,123,108,78
+velo
+bounds:583,212,510,272
+zampa copia 5
+bounds:583,109,296,101
