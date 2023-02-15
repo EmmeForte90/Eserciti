@@ -42,10 +42,10 @@ public class init : MonoBehaviour
     public string id_hero="";
     private int i,j,k;
     private bool bool_inizio_partita;
-    private float xa=-30,ya=16,y_temp;
-    private float xb=-30,yb=-20;
-    private float xc=30,yc=16;
-    private float xd=30,yd=-20;
+    private float xa=-40,ya=16,y_temp;
+    private float xb=-40,yb=-20;
+    private float xc=40,yc=16;
+    private float xd=40,yd=-20;
     private bool bool_fine_partita=false;
     private int max_pupi_battaglione=20;
 
