@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
+using System.Text;
+using System.Xml; //Needed for XML functionality
+using System.IO;
 
 public class mainmenu : MonoBehaviour
 {
@@ -13,9 +17,14 @@ public class mainmenu : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_descrizione_abilita;
     public GameObject lista_eroi;
     public Dictionary<string, GameObject> lista_obj_eroi = new Dictionary<string, GameObject>();
+    private string id_eroe_scelto="";
+    private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>();
+    private Dictionary<string, int> lista_abilita = new Dictionary<string, int>();
+    private Dictionary<string, int> livelli_upgrade = new Dictionary<string, int>();
 
     public GameObject sch_sel_personaggio;
     public GameObject sch_mainmenu;
+    private int denaro=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,15 +48,30 @@ public class mainmenu : MonoBehaviour
         }
     }
 
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.Z)){
+            click_eroe("formica_nera");
+            inizia_nuova_partita();
+        }
+    }
+
     public void click_eroe(string id_eroe){
         string nome="";
         string descrizione="";
         string id_abilita="";
+
+        id_eroe_scelto=id_eroe;
+        lista_pupetti.Clear();
+        lista_abilita.Clear();
         switch (id_eroe){
             case "formica_nera":{
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
+                lista_pupetti.Add("formica_warrior",6);
+                lista_pupetti.Add("formica_arcer",2);
+                lista_abilita.Add("evoca_formiche",1);
+                denaro=30;
                 break;
             }
             case "formica_rossa":{
@@ -67,5 +91,51 @@ public class mainmenu : MonoBehaviour
 
         nascondi_eroi();
         lista_obj_eroi[id_eroe].SetActive(true);
+    }
+
+    public void inizia_nuova_partita(){
+        denaro=30;
+        livelli_upgrade.Add("melee_damage",0);
+        livelli_upgrade.Add("distance_damage",0);
+        livelli_upgrade.Add("spell_damage",0);
+        livelli_upgrade.Add("health",0);
+        livelli_upgrade.Add("hero_damage",0);
+        livelli_upgrade.Add("hero_cooldown",0);
+        livelli_upgrade.Add("random_unity",0);
+        livelli_upgrade.Add("random_spell",0);
+        livelli_upgrade.Add("food",0);
+
+        //magari fare uno switch a seconda dell'eroe scelto cosicchè da poter scegliere in santa pace poi i vari livelli di upgrade ed anche per il denaro scelto.
+
+        string xml_content="";
+        string path_xml=Application.persistentDataPath + "/game_c.xml";
+        File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
+
+        xml_content="";
+        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"'>";
+        xml_content+="\n\t<lista_abilita>";
+        foreach(KeyValuePair<string,int> attachStat in lista_abilita){
+            xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";
+        }
+        xml_content+="\n\t</lista_abilita>";
+        xml_content+="\n\t<lista_pupetti>";
+        foreach(KeyValuePair<string,int> attachStat in lista_pupetti){
+            xml_content+="\n\t\t<p num='"+attachStat.Value+"'>"+attachStat.Key+"</p>";
+        }
+        xml_content+="\n\t</lista_pupetti>";
+        xml_content+="\n\t<lista_upgrade>";
+        foreach(KeyValuePair<string,int> attachStat in livelli_upgrade){
+            xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
+        }
+        xml_content+="\n\t</lista_upgrade>";
+        xml_content+="\n</game>";
+
+        StreamWriter writer = new StreamWriter(path_xml, false);
+        writer.Write(xml_content);
+        writer.Close();
+
+        //print (xml_content);
+
+        SceneManager.LoadScene("game");
     }
 }
