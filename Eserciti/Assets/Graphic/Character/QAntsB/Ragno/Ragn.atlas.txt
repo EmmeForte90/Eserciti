@@ -1,0 +1,27 @@
+Ragn.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+Body
+bounds:1046,325,149,315
+Braccio
+bounds:749,128,142,156
+rotate:90
+Coda
+bounds:749,272,295,358
+Head
+bounds:2,2,67,120
+Livello 2
+bounds:1197,432,192,208
+ZZ
+bounds:2,632,929,372
+Zampa
+bounds:1403,738,266,534
+rotate:90
+Zampa1
+bounds:418,144,329,486
+Zampa2
+bounds:2,124,414,506
+Zampa3
+bounds:933,642,362,468
+rotate:90

@@ -1,0 +1,24 @@
+Scar.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Body
+bounds:987,988,553,1001
+Braccio
+bounds:2,274,461,637
+Braccio1
+bounds:1542,1624,493,365
+Claw
+bounds:987,918,68,163
+rotate:90
+Claw copia
+bounds:388,103,58,169
+Head
+bounds:2,2,270,384
+rotate:90
+Mantello
+bounds:2,913,983,1076
+Spallaccio
+bounds:1542,1419,243,203
+Spallaccio1
+bounds:465,632,246,279
