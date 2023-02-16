@@ -10,12 +10,13 @@ public class info_comuni : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        print ("inizio info_comuni");
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
-        lista_abilita_descrizione.Add("evoca_formiche","Summon 5 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
+        lista_abilita_descrizione.Add("evoca_formiche","Summon 3 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
         lista_abilita_cooldown.Add("evoca_formiche",new Dictionary<int, int>());
-        lista_abilita_cooldown["evoca_formice"].Add(1,30);
-        lista_abilita_cooldown["evoca_formice"].Add(2,30);
-        lista_abilita_cooldown["evoca_formice"].Add(3,30);
+        lista_abilita_cooldown["evoca_formiche"].Add(1,30);
+        lista_abilita_cooldown["evoca_formiche"].Add(2,30);
+        lista_abilita_cooldown["evoca_formiche"].Add(3,30);
     }
 
     // Update is called once per frame
