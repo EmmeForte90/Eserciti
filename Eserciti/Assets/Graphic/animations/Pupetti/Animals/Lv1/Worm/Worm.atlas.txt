@@ -1,0 +1,17 @@
+Worm.png
+size:1024,256
+filter:Linear,Linear
+pma:true
+Blood
+bounds:2,2,100,100
+Shadow
+bounds:104,58,108,44
+Zanna
+bounds:935,81,104,83
+rotate:90
+busto
+bounds:2,104,81,703
+rotate:90
+testa
+bounds:707,7,178,226
+rotate:90
