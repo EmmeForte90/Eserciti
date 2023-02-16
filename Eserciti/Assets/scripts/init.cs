@@ -8,6 +8,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public info_comuni info_comuni;
     public GameObject lista_pupi;
     public GameObject mappa;
     public Dictionary<string, GameObject> lista_obj_pupetti = new Dictionary<string, GameObject>();
@@ -23,6 +24,8 @@ public class init : MonoBehaviour
     public Dictionary<int, Image> lista_abilita_cooldown_img = new Dictionary<int, Image>();
     public Dictionary<int, float> lista_abilita_cooldown_secondi = new Dictionary<int, float>();
     public Dictionary<int, float> lista_abilita_cooldown_secondi_attuale = new Dictionary<int, float>();
+    public Dictionary<int, string> lista_abilita_id = new Dictionary<int, string>();
+    public Dictionary<int, int> lista_abilita_livello = new Dictionary<int, int>();
     public int int_abilita_scelta=0;
     public int abilita_totali=0;
 
@@ -83,13 +86,20 @@ public class init : MonoBehaviour
                     lista_abilita_img.Add(i,child_2.gameObject.GetComponent<Image>());
                 }
             }
+            lista_abilita_id.Add(i,"");
         }
         abilita_totali=i;
 
         setta_game_da_file();
 
         //poi andiamo a prendere i settaggi per ogni cooldown che ha salvato da qualche parte nella partita
-        lista_abilita_cooldown_secondi[1]=4;
+        foreach(KeyValuePair<int,string> attachStat in lista_abilita_id){
+            if (attachStat.Value!=""){
+                lista_abilita_cooldown_secondi[attachStat.Key]=info_comuni.lista_abilita_cooldown[attachStat.Value][lista_abilita_livello[attachStat.Key]];
+            } else {
+                lista_abilita_GO[attachStat.Key].SetActive(false);
+            }
+        }
 
         switch (num_ondata){
             default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file
@@ -434,7 +444,7 @@ public class init : MonoBehaviour
             xml_content+="\n\t<lista_abilita>";
             switch (id_hero){
                 case "formica_nera":{
-                    xml_content+="\n\t\t<a liv='1'>ragnatele</a>";
+                    xml_content+="\n\t\t<a liv='1'>evoca_formiche</a>";
                     break;
                 }
             }
@@ -459,7 +469,7 @@ public class init : MonoBehaviour
             writer.Write(xml_content);
             writer.Close();
         }
-        //arrivati a questo punto, il file deve esistere per forza ed andiamo a prendere tutte el cose che serviranno al giocatore.
+        //arrivati a questo punto, il file deve esistere per forza ed andiamo a prendere tutte le cose che serviranno al giocatore.
 
         XmlDocument xml_game = new XmlDocument ();
         string_temp=System.IO.File.ReadAllText(path);
@@ -468,9 +478,17 @@ public class init : MonoBehaviour
 
         int num_pupi_temp;
         string tipo_pupo_temp;
+        int num_abilita=0;
         foreach(XmlElement node in xml_game.SelectNodes("game")){
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
+            foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("a")){
+                    num_abilita++;
+                    lista_abilita_id[num_abilita]=node_3.InnerText;
+                    lista_abilita_livello[num_abilita]=int.Parse(node_3.GetAttribute("liv"));
+                }
+            }
             foreach(XmlElement node_2 in node.SelectNodes("lista_pupetti")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("p")){
                     num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
