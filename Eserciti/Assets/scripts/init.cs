@@ -9,6 +9,8 @@ using System.IO;
 public class init : MonoBehaviour
 {
     public info_comuni info_comuni;
+    public effetti effetti;
+    public TMPro.TextMeshProUGUI txt_desc_abilita;
     public GameObject lista_pupi;
     public GameObject mappa;
     public Dictionary<string, GameObject> lista_obj_pupetti = new Dictionary<string, GameObject>();
@@ -96,6 +98,7 @@ public class init : MonoBehaviour
         foreach(KeyValuePair<int,string> attachStat in lista_abilita_id){
             if (attachStat.Value!=""){
                 lista_abilita_cooldown_secondi[attachStat.Key]=info_comuni.lista_abilita_cooldown[attachStat.Value][lista_abilita_livello[attachStat.Key]];
+
             } else {
                 lista_abilita_GO[attachStat.Key].SetActive(false);
             }
@@ -115,7 +118,6 @@ public class init : MonoBehaviour
         float per_10;
         foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
             lp_totali_basic_rule[attachStat.Key].int_key_pupo=attachStat.Key;
-            //lp_totali_basic_rule[attachStat.Key].attiva_pupo();             //il tutto basicamente dipenderebbe da quì...
             if (lp_totali_basic_rule[attachStat.Key].bool_fazione_nemica){
                 num_pupi_generati_cattivi++;
                 lp_cattivi.Add(num_pupi_generati_cattivi,attachStat.Key);
@@ -126,7 +128,7 @@ public class init : MonoBehaviour
                     j=1;
                     num_battaglione_nemico++;
                 }
-                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,(j*-2)+15);
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,(j*-2)+15,false);
 
             } else {
                 num_pupi_generati_buoni++;
@@ -138,7 +140,7 @@ public class init : MonoBehaviour
                     i=1;
                     num_battaglione_amico++;
                 }
-                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico,xa,(i*-2)+15);
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico,xa,(i*-2)+15,false);
 
                 if (lp_totali_basic_rule[attachStat.Key].velocita_proiettile==0){
                     lp_totali_basic_rule[attachStat.Key].danno+=lista_upgrade["melee_damage"];
@@ -157,25 +159,19 @@ public class init : MonoBehaviour
                 }
             }
         }
-
-        /*
-        foreach(KeyValuePair<int,int> attachStat in lp_buoni){
-            i++;
-            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xa, (i*2)-5, 1f);
-            lp_totali_basic_rule[attachStat.Key].attiva_pupo();
-            
-        }
-        foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
-            //lp_totali[attachStat.Value].transform.localPosition = new Vector3(15, (attachStat.Key*-2)+5, 1f);
-            lp_totali[attachStat.Value].transform.localPosition = new Vector3(xc, (attachStat.Key*2)+5, 1f);
-        }
-        */
+        txt_desc_abilita.SetText("");
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
     }
 
     // Update is called once per frame
     void Update(){
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            if (int_abilita_scelta!=0){
+                int_abilita_scelta=0;
+                txt_desc_abilita.SetText("");
+            }
+        }
         if (!bool_inizio_partita){
             if (bool_fine_partita){return;}
         }
@@ -240,7 +236,15 @@ public class init : MonoBehaviour
         int int_abilita=int.Parse(go_abilita.name.Replace("abilita_",""));
         if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
             int_abilita_scelta=int_abilita;
-            print ("stò cercando di attivare l'abilità "+int_abilita_scelta+" ... deve cliccare sulla mappa");
+            switch (int_abilita_scelta){
+                default:{
+                    string testo="";
+                    testo+="Select where want to use "+info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita_scelta]];
+                    testo+="\n\nPress ESC to cancel";
+                    txt_desc_abilita.SetText(testo);
+                    break;
+                }
+            }
         } else {
             print ("è in cooldown");
         }
@@ -263,24 +267,82 @@ public class init : MonoBehaviour
         }
     }
 
+    public void evoca_pupo(string id_pupo, float xar, float yar){
+        genera_pupo(id_pupo);
+        if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_fazione_nemica){
+            num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
+            lp_buoni.Add(num_pupi_generati_buoni,num_pupi_generati_totali);
+            float per_10;
+
+            //lp_totali[num_pupi_generati_totali].transform.localPosition = new Vector3(xa, (i*-2)+15, 1f);
+            lp_totali_basic_rule[num_pupi_generati_totali].attiva_pupo(2,xar,yar,true);
+
+            if (lp_totali_basic_rule[num_pupi_generati_totali].velocita_proiettile==0){
+                lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["melee_damage"];
+            }
+            else {
+                if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_mago){
+                    lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["distance_damage"];
+                }
+                else {
+                    lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["spell_damage"];
+                }
+            }
+            if (lista_upgrade["health"]>0){
+                per_10=lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max*lista_upgrade["health"]/10;
+                lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max+=per_10;
+            }
+        }
+        effetti.eff_evocazione_brown(xar,yar);
+    }
+
     public void attiva_abilita_coordinate(float xar, float yar){
         if (int_abilita_scelta!=0){
             print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
             lista_abilita_cooldown_secondi_attuale[int_abilita_scelta]=lista_abilita_cooldown_secondi[int_abilita_scelta];
             setta_cooldown_abilita(int_abilita_scelta,1);
-            int_abilita_scelta=0;
+            txt_desc_abilita.SetText("");
+            int liv=lista_abilita_livello[int_abilita_scelta];
+            switch (lista_abilita_id[int_abilita_scelta]){
+                case "evoca_formiche":{
+                    float random_x;
+                    float random_y;
+                    for (int i=1;i<=2*liv;i++){
+                        random_x=Random.Range(-1f,2f)+xar;
+                        random_y=Random.Range(-1f,2f)+yar;
+                        evoca_pupo("formica_warrior",random_x,random_y);
+                    }
+                    break;
+                }
+            }
 
+
+            int_abilita_scelta=0;
+            /*
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cube.transform.SetParent(mappa.transform);
             cube.transform.localPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 1f);
+            */
         }
     }
 
     public void mouse_exit(GameObject obj){
+        if (obj.name.Contains("abilita_")){
+            if (int_abilita_scelta==0){
+                txt_desc_abilita.SetText("");
+            }
+        }
         //print ("mouse: sono uscito da "+obj.name);
+        //switch 
     }
     public void mouse_enter(GameObject obj){
-        //print ("mouse: sono entrato su "+obj.name);
+        if (obj.name.Contains("abilita_")){
+            if (int_abilita_scelta==0){
+                int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
+                string testo=info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
+                txt_desc_abilita.SetText(testo);
+            }
+        }
     }
 
     public void cerca_prossimo_bersaglio(int id_attaccante){

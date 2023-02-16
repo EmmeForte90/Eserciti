@@ -137,8 +137,10 @@ public class basic_rule : MonoBehaviour
         bool_morto=false;
     }
 
-    public void attiva_pupo(int battaglione,float x, float y){//perchè ogni pupo che si rispetti, deve essere attivato!
-        gameObject.transform.localPosition=new Vector3(x, y, -1f);  //così sono invisibili al creato.
+    public void attiva_pupo(int battaglione, float x, float y, bool bool_evocato){//perchè ogni pupo che si rispetti, deve essere attivato!
+        float z=-1f;
+        if (bool_evocato){z=1f;}
+        gameObject.transform.localPosition=new Vector3(x, y, z);  //così sono invisibili al creato.
         gameObject.SetActive(true);
         StartCoroutine(attiva_pupo_coroutine(battaglione,x,y));
     }
