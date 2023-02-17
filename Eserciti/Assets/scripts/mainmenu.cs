@@ -50,7 +50,7 @@ public class mainmenu : MonoBehaviour
 
     void Update(){
         if (Input.GetKeyDown(KeyCode.Z)){
-            click_eroe("formica_nera");
+            click_eroe("regina_formica_nera");
             inizia_nuova_partita();
         }
     }
@@ -64,27 +64,62 @@ public class mainmenu : MonoBehaviour
         lista_pupetti.Clear();
         lista_abilita.Clear();
         switch (id_eroe){
-            case "formica_nera":{
+            case "regina_formica_nera":{
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
                 lista_pupetti.Add("formica_warrior",6);
                 lista_pupetti.Add("formica_arcer",2);
-                lista_abilita.Add("evoca_formiche",1);
+                
                 denaro=30;
                 break;
             }
-            case "formica_rossa":{
-                id_abilita="evoca_formiche";
-                nome="Red Ant";
-                descrizione="Sembrano carine ed innocenti, ma se ti prendono, iniziano a mordere!";
+            case "re_mosca":{
+                id_abilita="mosche_fastidiose";
+                nome="King Fly";
+                descrizione="Una dozzina sono fastidiose. Una dozzina di dozzine diventano incontrollabili.";
+                lista_pupetti.Add("mosca_warrior",10);
+                lista_pupetti.Add("mosca_arcer",6);
+                lista_pupetti.Add("mosca_wizard",2);
+                break;
+            }
+            case "regina_ape":{
+                id_abilita="miele";
+                nome="Queen Bee";
+                descrizione="Un sacrificio è salvare poco. Un intero sacrificio è salvare la regina.";
+                lista_pupetti.Add("ape_warrior",4);
+                lista_pupetti.Add("ape_arcer",1);
+                break;
+            }
+            case "regina_ragno":{
+                id_abilita="ragnatele";
+                nome="Queen Spider";
+                descrizione="Non vuoi rilassarti? Ci pensano le loro ragnatele";
+                lista_pupetti.Add("spider_warrior",4);
+                lista_pupetti.Add("spider_arcer",2);
+                lista_pupetti.Add("spider_wizard",1);
+                break;
+            }
+            case "re_cavalletta":{
+                id_abilita="velocita";
+                nome="King Grasshopper";
+                descrizione="Saltellano veloci e a volte incontrollabili";
+                lista_pupetti.Add("cavalletta_warrior",6);
+                lista_pupetti.Add("cavalletta_arcer",2);
+                break;
+            }
+            case "re_scarabeo":{
+                id_abilita="armatura";
+                nome="King Beetle";
+                descrizione="Non sono solo semplici e nobili insetti. Prova a mettere un dito tra le loro chele";
+                lista_pupetti.Add("scarabeo_warrior",8);
                 break;
             }
         }
+
+        lista_abilita.Add(id_abilita,1);
         txt_nome_eroe.SetText(nome);
         txt_descrizione_eroe.SetText(descrizione);
-
-        print (info_comuni.lista_abilita_nome[id_abilita]);
 
         txt_nome_abilita.SetText(info_comuni.lista_abilita_nome[id_abilita]);
         txt_descrizione_abilita.SetText(info_comuni.lista_abilita_descrizione[id_abilita]);
