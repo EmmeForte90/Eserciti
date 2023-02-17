@@ -15,6 +15,7 @@ public class init : MonoBehaviour
     public GameObject lista_pupi;
     public GameObject mappa;
     public GameObject pannello_vittoria;
+    public GameObject pannello_sconfitta;
     public TMPro.TextMeshProUGUI txt_denaro_guadagnato;
     public TMPro.TextMeshProUGUI txt_ondata_vittoria;
     private int denaro;
@@ -69,6 +70,7 @@ public class init : MonoBehaviour
 
     void Awake(){
         pannello_vittoria.SetActive(false);
+        pannello_sconfitta.SetActive(false);
         foreach (Transform child in lista_pupi.transform) {
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
