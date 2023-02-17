@@ -90,6 +90,11 @@ public class basic_rule : MonoBehaviour
         }
         StartCoroutine(inizia_percorso_random_coroutine());
     }
+    public void esulta(){
+        skeletonAnimation.AnimationName=an_vittoria_tipo;
+        bool_attivo=false;
+    }
+
     private IEnumerator inizia_percorso_random_coroutine(){
         int random=Random.Range(ritardo_mov_random_min,ritardo_mov_random_max);
         yield return new WaitForSeconds(random);
@@ -239,6 +244,7 @@ public class basic_rule : MonoBehaviour
 
     private void inizia_percorso_random(){
         //if (stato=="attack"){StartCoroutine(inizia_percorso_random_coroutine());return;}        //in verità è più figo commentato
+        if (!bool_attivo){return;}
         if (bool_morto){return;}
         if (bool_movimento_random){return;}
         float x=transform.position.x;

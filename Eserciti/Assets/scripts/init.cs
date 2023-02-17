@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 using System.Text;
 using System.Xml; //Needed for XML functionality
@@ -13,11 +14,16 @@ public class init : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_desc_abilita;
     public GameObject lista_pupi;
     public GameObject mappa;
+    public GameObject pannello_vittoria;
+    public TMPro.TextMeshProUGUI txt_denaro_guadagnato;
+    public TMPro.TextMeshProUGUI txt_ondata_vittoria;
+    private int denaro;
     public Dictionary<string, GameObject> lista_obj_pupetti = new Dictionary<string, GameObject>();
     public Dictionary<int, GameObject> lp_totali = new Dictionary<int, GameObject>();
     public Dictionary<int, basic_rule> lp_totali_basic_rule = new Dictionary<int, basic_rule>();
     public Dictionary<int, int> lp_buoni = new Dictionary<int, int>();
     public Dictionary<int, int> lp_cattivi = new Dictionary<int, int>();
+    public Dictionary<string, int> lista_pupi_buoni_partenza = new Dictionary<string, int>();
     public GameObject lista_abilita;
 
     //sezione relativa ai cooldown
@@ -30,7 +36,6 @@ public class init : MonoBehaviour
     public Dictionary<int, int> lista_abilita_livello = new Dictionary<int, int>();
     public int int_abilita_scelta=0;
     public int abilita_totali=0;
-
 
     private int num_pupi_generati_totali=0;
     private int num_pupi_generati_buoni=0;
@@ -63,6 +68,7 @@ public class init : MonoBehaviour
     private string id_arena;
 
     void Awake(){
+        pannello_vittoria.SetActive(false);
         foreach (Transform child in lista_pupi.transform) {
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
@@ -222,10 +228,61 @@ public class init : MonoBehaviour
 
     public void fine_partita(string esito){
         if (esito=="vittoria"){
-            print ("vince il giocatore");
+            int denaro_guadagnato=0;
+            if (num_ondata<=5){denaro_guadagnato=30;}
+            else if (num_ondata<=10){denaro_guadagnato=50;}
+            else if (num_ondata<=15){denaro_guadagnato=70;}
+            else if (num_ondata<=20){denaro_guadagnato=100;}
+            else {denaro_guadagnato=150;}
+            txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
+            txt_denaro_guadagnato.SetText("You have earned "+denaro_guadagnato+" gold!");
+            foreach(KeyValuePair<int,int> attachStat in lp_buoni){
+                if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                    lp_totali_basic_rule[attachStat.Value].esulta();
+                }
+            }
+
+            path=Application.persistentDataPath + "/game_c.xml";
+            //File.Delete(path);
+            num_ondata++;
+
+            xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"'";
+            denaro+=denaro_guadagnato;
+            xml_content+=" denaro='"+denaro+"'>";
+
+            xml_content+="\n\t<lista_abilita>";
+            foreach(KeyValuePair<int,string> attachStat in lista_abilita_id){
+                if (attachStat.Value!=""){
+                    xml_content+="\n\t\t<a liv='"+lista_abilita_livello[attachStat.Key]+"'>"+attachStat.Value+"</a>";
+                }
+            }
+            xml_content+="\n\t</lista_abilita>";
+
+            xml_content+="\n\t<lista_pupetti>";
+            foreach(KeyValuePair<string,int> attachStat in lista_pupi_buoni_partenza){
+                xml_content+="\n\t\t<p num='"+attachStat.Value+"'>"+attachStat.Key+"</p>";
+            }
+            xml_content+="\n\t</lista_pupetti>";
+            xml_content+="\n\t<lista_upgrade>";
+            foreach(KeyValuePair<string,int> attachStat in lista_upgrade){
+                xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
+            }
+            xml_content+="\n\t</lista_upgrade>";
+            xml_content+="\n</game>";
+
+            StreamWriter writer = new StreamWriter(path, false);
+            writer.Write(xml_content);
+            writer.Close();
+            print (xml_content);
+
+            pannello_vittoria.SetActive(true);
         } else {
             print ("vincono i nemici");
         }
+    }
+
+    public void next_stage(){
+        SceneManager.LoadScene("upgrade");
     }
 
     public void setta_cooldown_abilita(int abilita, float settaggio){
@@ -233,6 +290,7 @@ public class init : MonoBehaviour
     }
 
     public void click_abilita(GameObject go_abilita){
+        if (bool_fine_partita){return;}
         int int_abilita=int.Parse(go_abilita.name.Replace("abilita_",""));
         if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
             int_abilita_scelta=int_abilita;
@@ -251,7 +309,7 @@ public class init : MonoBehaviour
     }
 
     public void mouse_click(GameObject obj, string tipo){
-        print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
+        //print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
         print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
         if (obj.name.Contains("abilita_")){click_abilita(obj);}
         else if (obj.name=="area_cliccabile"){
@@ -544,6 +602,7 @@ public class init : MonoBehaviour
         foreach(XmlElement node in xml_game.SelectNodes("game")){
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
+            denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){
                     num_abilita++;
@@ -556,6 +615,7 @@ public class init : MonoBehaviour
                     num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
                     tipo_pupo_temp=node_3.InnerText;
                     print ("dovrei avere "+num_pupi_temp+" del tipo "+tipo_pupo_temp);
+                    lista_pupi_buoni_partenza.Add(tipo_pupo_temp,num_pupi_temp);            //così almeno c'è li abbiamo e buonanotte per quando salviamo...
 
                     for (i=1;i<=num_pupi_temp;i++){
                         genera_pupo(tipo_pupo_temp);

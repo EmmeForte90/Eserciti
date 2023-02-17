@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-using UnityEngine.UI;
 using System.Text;
 using System.Xml; //Needed for XML functionality
 using System.IO;
