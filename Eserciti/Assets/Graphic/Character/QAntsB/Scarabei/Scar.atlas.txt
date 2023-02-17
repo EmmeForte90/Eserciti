@@ -11,8 +11,6 @@ bounds:1542,1624,493,365
 Claw
 bounds:987,918,68,163
 rotate:90
-Claw copia
-bounds:388,103,58,169
 Head
 bounds:2,2,270,384
 rotate:90
