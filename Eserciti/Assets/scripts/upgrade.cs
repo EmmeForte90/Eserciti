@@ -10,6 +10,10 @@ using System.IO;
 
 public class upgrade : MonoBehaviour
 {   
+    public info_comuni info_comuni;
+    public GameObject pannello_premio_update;
+    public GameObject pannello_upgrade;
+
     public TMPro.TextMeshProUGUI txt_next_stage;
     public TMPro.TextMeshProUGUI txt_denaro;
     private int denaro;
@@ -112,6 +116,9 @@ public class upgrade : MonoBehaviour
             check_abilita(attachStat.Key);
         }
         txt_denaro.SetText(denaro.ToString());
+
+        pannello_scelta_premio.SetActive(true);
+        pannello_upgrade.SetActive(false);
     }
 
     public void check_abilita(string abilita){

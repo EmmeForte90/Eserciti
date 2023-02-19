@@ -21,6 +21,7 @@ public class mainmenu : MonoBehaviour
     private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>();
     private Dictionary<string, int> lista_abilita = new Dictionary<string, int>();
     private Dictionary<string, int> livelli_upgrade = new Dictionary<string, int>();
+    private Dictionary<string, int> lista_razze_sbloccate = new Dictionary<string, int>();
 
     public GameObject sch_sel_personaggio;
     public GameObject sch_mainmenu;
@@ -63,6 +64,7 @@ public class mainmenu : MonoBehaviour
         id_eroe_scelto=id_eroe;
         lista_pupetti.Clear();
         lista_abilita.Clear();
+        lista_razze_sbloccate.Clear();
         switch (id_eroe){
             case "regina_formica_nera":{
                 id_abilita="evoca_formiche";
@@ -70,6 +72,7 @@ public class mainmenu : MonoBehaviour
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
                 lista_pupetti.Add("formica_warrior",6);
                 lista_pupetti.Add("formica_arcer",2);
+                lista_razze_sbloccate.Add("formiche",1);
                 
                 denaro=30;
                 break;
@@ -81,6 +84,7 @@ public class mainmenu : MonoBehaviour
                 lista_pupetti.Add("mosca_warrior",10);
                 lista_pupetti.Add("mosca_arcer",6);
                 lista_pupetti.Add("mosca_wizard",2);
+                lista_razze_sbloccate.Add("mosche",1);
                 break;
             }
             case "regina_ape":{
@@ -89,6 +93,7 @@ public class mainmenu : MonoBehaviour
                 descrizione="Un sacrificio è salvare poco. Un intero sacrificio è salvare la regina.";
                 lista_pupetti.Add("ape_warrior",4);
                 lista_pupetti.Add("ape_arcer",1);
+                lista_razze_sbloccate.Add("api",1);
                 break;
             }
             case "regina_ragno":{
@@ -98,6 +103,7 @@ public class mainmenu : MonoBehaviour
                 lista_pupetti.Add("spider_warrior",4);
                 lista_pupetti.Add("spider_arcer",2);
                 lista_pupetti.Add("spider_wizard",1);
+                lista_razze_sbloccate.Add("ragnetti",1);
                 break;
             }
             case "re_cavalletta":{
@@ -106,6 +112,7 @@ public class mainmenu : MonoBehaviour
                 descrizione="Saltellano veloci e a volte incontrollabili";
                 lista_pupetti.Add("cavalletta_warrior",6);
                 lista_pupetti.Add("cavalletta_arcer",2);
+                lista_razze_sbloccate.Add("cavallette",1);
                 break;
             }
             case "re_scarabeo":{
@@ -113,6 +120,7 @@ public class mainmenu : MonoBehaviour
                 nome="King Beetle";
                 descrizione="Non sono solo semplici e nobili insetti. Prova a mettere un dito tra le loro chele";
                 lista_pupetti.Add("scarabeo_warrior",8);
+                lista_razze_sbloccate.Add("scarabei",1);
                 break;
             }
         }
@@ -163,6 +171,12 @@ public class mainmenu : MonoBehaviour
             xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
         }
         xml_content+="\n\t</lista_upgrade>";
+
+        xml_content+="\n\t<lista_razze_sbloccate>";
+        foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+            xml_content+="\n\t\t<r liv='"+attachStat.Value+"'>"+attachStat.Key+"</r>";
+        }
+        xml_content+="\n\t</lista_razze_sbloccate>";
         xml_content+="\n</game>";
 
         StreamWriter writer = new StreamWriter(path_xml, false);

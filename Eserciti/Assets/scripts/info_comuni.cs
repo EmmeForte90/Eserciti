@@ -7,9 +7,18 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, string> lista_abilita_nome = new Dictionary<string, string>();
     public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
+
+    public Dictionary<string, int> lista_razze_totale = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Awake()
     {
+        lista_razze_totale.Add("formiche",1);
+        lista_razze_totale.Add("mosche",1);
+        lista_razze_totale.Add("api",1);
+        lista_razze_totale.Add("ragnetti",1);
+        //lista_razze_totale.Add("cavallette",1);
+        //lista_razze_totale.Add("scarabei",1);
+
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
         lista_abilita_descrizione.Add("evoca_formiche","Summon 3 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
         lista_abilita_cooldown.Add("evoca_formiche",new Dictionary<int, int>());
