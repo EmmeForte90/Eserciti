@@ -11,8 +11,21 @@ using System.IO;
 public class upgrade : MonoBehaviour
 {   
     public info_comuni info_comuni;
-    public GameObject pannello_premio_update;
+    public GameObject pannello_scelta_premio;
     public GameObject pannello_upgrade;
+
+    public Image img_premio_upgrade_1;
+    public TMPro.TextMeshProUGUI titolo_premio_upgrade_1;
+    public TMPro.TextMeshProUGUI monete_premio_upgrade_1;
+    public TMPro.TextMeshProUGUI descrizione_premio_upgrade_1;
+    public Image img_premio_upgrade_2;
+    public TMPro.TextMeshProUGUI titolo_premio_upgrade_2;
+    public TMPro.TextMeshProUGUI monete_premio_upgrade_2;
+    public TMPro.TextMeshProUGUI descrizione_premio_upgrade_2;
+    public Image img_premio_upgrade_3;
+    public TMPro.TextMeshProUGUI titolo_premio_upgrade_3;
+    public TMPro.TextMeshProUGUI monete_premio_upgrade_3;
+    public TMPro.TextMeshProUGUI descrizione_premio_upgrade_3;
 
     public TMPro.TextMeshProUGUI txt_next_stage;
     public TMPro.TextMeshProUGUI txt_denaro;
@@ -64,6 +77,7 @@ public class upgrade : MonoBehaviour
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_upgrade_descrizione = new Dictionary<string, TMPro.TextMeshProUGUI>();
 
     private Dictionary<string, int> livelli_attuali_upgrade = new Dictionary<string, int>();
+    private Dictionary<string, int> lista_random = new Dictionary<string, int>();
 
     // Start is called before the first frame update
     void Start(){
@@ -119,6 +133,15 @@ public class upgrade : MonoBehaviour
 
         pannello_scelta_premio.SetActive(true);
         pannello_upgrade.SetActive(false);
+    }
+
+    public void click_upgrade_number(int numero){
+        print ("ha scelto l'upgrade "+numero);
+    }
+
+    private void get_premi_upgrade(){
+
+        //lista_random
     }
 
     public void check_abilita(string abilita){

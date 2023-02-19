@@ -183,7 +183,7 @@ public class mainmenu : MonoBehaviour
         writer.Write(xml_content);
         writer.Close();
 
-        //print (xml_content);
+        print (xml_content);
 
         SceneManager.LoadScene("game");
     }

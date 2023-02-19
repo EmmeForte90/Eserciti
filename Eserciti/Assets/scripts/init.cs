@@ -61,6 +61,7 @@ public class init : MonoBehaviour
     private int max_pupi_battaglione=20;
 
     public Dictionary<string, int> lista_upgrade = new Dictionary<string, int>();
+    public Dictionary<string, int> lista_razze_sbloccate = new Dictionary<string, int>();
 
     //da quì in poi le andremo a prendere dalle opzioni della partita in corso
     private int num_ondata=1;
@@ -270,6 +271,13 @@ public class init : MonoBehaviour
                 xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
             }
             xml_content+="\n\t</lista_upgrade>";
+
+            xml_content+="\n\t<lista_razze_sbloccate>";
+            foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+                xml_content+="\n\t\t<r liv='"+attachStat.Value+"'>"+attachStat.Key+"</r>";
+            }
+            xml_content+="\n\t</lista_razze_sbloccate>";
+
             xml_content+="\n</game>";
 
             StreamWriter writer = new StreamWriter(path, false);
@@ -627,6 +635,11 @@ public class init : MonoBehaviour
             foreach(XmlElement node_2 in node.SelectNodes("lista_upgrade")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("u")){
                     lista_upgrade[node_3.InnerText]=int.Parse(node_3.GetAttribute("liv"));
+                }
+            }
+            foreach(XmlElement node_2 in node.SelectNodes("lista_razze_sbloccate")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("r")){
+                    lista_razze_sbloccate[node_3.InnerText]=int.Parse(node_3.GetAttribute("liv"));
                 }
             }
         }
