@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Text;
 using System.Xml; //Needed for XML functionality
 using System.IO;
+using System.Linq;
 
 public class upgrade : MonoBehaviour
 {   
@@ -79,6 +80,8 @@ public class upgrade : MonoBehaviour
     private Dictionary<string, int> livelli_attuali_upgrade = new Dictionary<string, int>();
     private Dictionary<string, int> lista_random = new Dictionary<string, int>();
 
+    public Dictionary<string, int> lista_razze_sbloccate = new Dictionary<string, int>();
+
     // Start is called before the first frame update
     void Start(){
         path_xml=Application.persistentDataPath + "/game_c.xml";
@@ -133,6 +136,8 @@ public class upgrade : MonoBehaviour
 
         pannello_scelta_premio.SetActive(true);
         pannello_upgrade.SetActive(false);
+
+        get_premi_upgrade();
     }
 
     public void click_upgrade_number(int numero){
@@ -140,8 +145,67 @@ public class upgrade : MonoBehaviour
     }
 
     private void get_premi_upgrade(){
+        string premio="";
+        string pupo_singolo="";
+        //prima parte: Diamo uno dei pupetti sbloccati
+        foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+            //pupo_singolo=info_comuni.lista_razze_totale[attachStat.Key];      //no: Tanto saranno sempre al plurale...
+            pupo_singolo=attachStat.Key;
+            lista_random.Add("pupo_"+pupo_singolo+"_warrior_1",1);
+            lista_random.Add("pupo_"+pupo_singolo+"_arcer_1",1);
+            lista_random.Add("pupo_"+pupo_singolo+"_wizard_1",1);
+        }
+        premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+        crea_premio_upgrade(premio,1);
+    }
 
-        //lista_random
+    private void crea_premio_upgrade(string premio, int num_cont_premio){
+        string razza_pupo;
+        string classe_pupo;
+        string tipo;
+        int livello_pupo;
+        string[] splitArray;
+
+        string titolo="";
+        string descrizione="";
+        int monete=0;
+
+        splitArray=premio.Split(char.Parse("_"));
+        tipo=splitArray[0];
+        if (tipo=="pupo"){
+            int num_pupi=Random.Range(5,15);
+            razza_pupo = splitArray[1];
+            classe_pupo = splitArray[2];
+            livello_pupo = int.Parse(splitArray[3]);
+            monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
+            monete=30-monete;
+
+            print (razza_pupo+" - "+classe_pupo+" - "+livello_pupo);
+            titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo];
+            descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+        }
+
+        switch (num_cont_premio){
+            case 1:{
+                titolo_premio_upgrade_1.SetText(titolo);
+                monete_premio_upgrade_1.SetText("+ "+monete+" gold");
+                descrizione_premio_upgrade_1.SetText(descrizione);
+                break;
+            }
+            case 2:{
+                titolo_premio_upgrade_2.SetText(titolo);
+                monete_premio_upgrade_2.SetText("+ "+monete+" gold");
+                descrizione_premio_upgrade_2.SetText(descrizione);
+                break;
+            }
+            case 3:{
+                titolo_premio_upgrade_3.SetText(titolo);
+                monete_premio_upgrade_3.SetText("+ "+monete+" gold");
+                descrizione_premio_upgrade_3.SetText(descrizione);
+                break;
+            }
+        }
+
     }
 
     public void check_abilita(string abilita){
@@ -256,8 +320,6 @@ public class upgrade : MonoBehaviour
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){
                     liv_abilita_temp=int.Parse(node_3.GetAttribute("liv"));
                     abilita_temp=node_3.InnerText;
-                    print ("dovrei avere "+abilita_temp+" di livello "+liv_abilita_temp);
-
                     lista_abilita.Add(abilita_temp,liv_abilita_temp);
                 }
             }
@@ -266,13 +328,16 @@ public class upgrade : MonoBehaviour
                     num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
                     tipo_pupo_temp=node_3.InnerText;
                     print ("dovrei avere "+num_pupi_temp+" del tipo "+tipo_pupo_temp);
-
-                    lista_pupetti.Add(tipo_pupo_temp,num_pupi_temp);
                 }
             }
             foreach(XmlElement node_2 in node.SelectNodes("lista_upgrade")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("u")){
                     livelli_attuali_upgrade[node_3.InnerText]=int.Parse(node_3.GetAttribute("liv"));
+                }
+            }
+            foreach(XmlElement node_2 in node.SelectNodes("lista_razze_sbloccate")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("r")){
+                    lista_razze_sbloccate[node_3.InnerText]=int.Parse(node_3.GetAttribute("liv"));
                 }
             }
         }
@@ -300,6 +365,13 @@ public class upgrade : MonoBehaviour
             xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
         }
         xml_content+="\n\t</lista_upgrade>";
+
+        xml_content+="\n\t<lista_razze_sbloccate>";
+        foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+            xml_content+="\n\t\t<r liv='"+attachStat.Value+"'>"+attachStat.Key+"</r>";
+        }
+        xml_content+="\n\t</lista_razze_sbloccate>";
+
         xml_content+="\n</game>";
 
         StreamWriter writer = new StreamWriter(path_xml, false);

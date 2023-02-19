@@ -8,16 +8,42 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
 
-    public Dictionary<string, int> lista_razze_totale = new Dictionary<string, int>();
+    public Dictionary<string, string> lista_razze_totale = new Dictionary<string, string>();
+    public Dictionary<string, string> lista_razza_pupi_nome = new Dictionary<string, string>();
+    public Dictionary<string, string> lista_pupi_descrizione = new Dictionary<string, string>();
+    public Dictionary<string, string> lista_classi_nome = new Dictionary<string, string>();
+    public Dictionary<string, float> lista_costo_unita_razza = new Dictionary<string, float>();
     // Start is called before the first frame update
     void Awake()
     {
-        lista_razze_totale.Add("formiche",1);
-        lista_razze_totale.Add("mosche",1);
-        lista_razze_totale.Add("api",1);
-        lista_razze_totale.Add("ragnetti",1);
-        //lista_razze_totale.Add("cavallette",1);
-        //lista_razze_totale.Add("scarabei",1);
+        lista_costo_unita_razza.Add("formiche",1f);
+        lista_costo_unita_razza.Add("mosche",0.7f);
+        lista_costo_unita_razza.Add("api",1.5f);
+        lista_costo_unita_razza.Add("ragnetti",1.5f);
+
+        lista_classi_nome.Add("warrior","Warrior");
+        lista_classi_nome.Add("arcer","Arcer");
+        lista_classi_nome.Add("wizard","Wizard");
+
+        //NB: I Nomi e le descrizioni, saranno sempre al plurale
+        lista_razza_pupi_nome.Add("formiche","Ants");
+        lista_razza_pupi_nome.Add("mosche","Flies");
+        lista_razza_pupi_nome.Add("api","Bees");
+        lista_razza_pupi_nome.Add("ragnetti","Spiders");
+
+        lista_pupi_descrizione.Add("formiche","Most commons soldiers");
+        lista_pupi_descrizione.Add("mosche","Cheap cost but frails");
+        lista_pupi_descrizione.Add("api","Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
+        lista_pupi_descrizione.Add("ragnetti","Ogni volta che colpiscono, rallentano il bersaglio. Sono immuni da questo effetto da parte di altri ragni");
+
+
+        //NB: Il singolare a destra è importante per definire la tipologia del pupo negli upgrade
+        lista_razze_totale.Add("formiche","formica");
+        lista_razze_totale.Add("mosche","mosca");
+        lista_razze_totale.Add("api","ape");
+        lista_razze_totale.Add("ragnetti","ragnetto");
+        //lista_razze_totale.Add("cavallette","cavalletta");
+        //lista_razze_totale.Add("scarabei","scarabeo");
 
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
         lista_abilita_descrizione.Add("evoca_formiche","Summon 3 warrior ants for each level. Cooldown is really long and you can use only few times every match.");

@@ -553,54 +553,8 @@ public class init : MonoBehaviour
     private void setta_game_da_file(){
         string string_temp="";
         path=Application.persistentDataPath + "/game_c.xml";
-        //File.Delete(path);
-        if (!System.IO.File.Exists(path)){//se NON esiste questo file, vuol dire che stà iniziando una partita da 0
-            int denaro;
-            if (!PlayerPrefs.HasKey("new_game_id_hero")){
-                PlayerPrefs.SetString("new_game_id_hero","formica_nera");
-            }
-            if (bool_debug){
-                PlayerPrefs.SetString("new_game_id_hero","formica_nera");
-            }
-            id_hero=PlayerPrefs.GetString("new_game_id_hero");
-            xml_content="<game id_hero='"+id_hero+"' num_ondata='1'";
-            switch (id_hero){
-                default:{
-                    denaro=2000;
-                    break;
-                }
-            }
-            xml_content+=" denaro='"+denaro+"'>";
-            xml_content+="\n\t<lista_abilita>";
-            switch (id_hero){
-                case "formica_nera":{
-                    xml_content+="\n\t\t<a liv='1'>evoca_formiche</a>";
-                    break;
-                }
-            }
-            xml_content+="\n\t</lista_abilita>";
-            xml_content+="\n\t<lista_pupetti>";
-            switch (id_hero){
-                case "formica_nera":{
-                    xml_content+="\n\t\t<p num='6'>formica_warrior</p>";
-                    xml_content+="\n\t\t<p num='2'>formica_arcer</p>";
-                    break;
-                }
-            }
-            xml_content+="\n\t</lista_pupetti>";
-            xml_content+="\n\t<lista_upgrade>";
-            foreach(KeyValuePair<string,int> attachStat in lista_upgrade){
-                xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
-            }
-            xml_content+="\n\t</lista_upgrade>";
-            xml_content+="\n</game>";
 
-            StreamWriter writer = new StreamWriter(path, false);
-            writer.Write(xml_content);
-            writer.Close();
-        }
         //arrivati a questo punto, il file deve esistere per forza ed andiamo a prendere tutte le cose che serviranno al giocatore.
-
         XmlDocument xml_game = new XmlDocument ();
         string_temp=System.IO.File.ReadAllText(path);
         //string_temp=f_comuni.decripta(string_temp, "munimuni");
