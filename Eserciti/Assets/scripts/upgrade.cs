@@ -36,6 +36,7 @@ public class upgrade : MonoBehaviour
     private string id_hero;
     private int num_ondata;
     private int i;
+    private int num_max_abilita=6;
 
     //lista_dei costi delle varie abilità
     public TMPro.TextMeshProUGUI txt_u_c_melee_damage;
@@ -147,60 +148,92 @@ public class upgrade : MonoBehaviour
     private void get_premi_upgrade(){
         string premio="";
         string pupo_singolo="";
+        int livello=1;  //ben presto dovrà cambiare a seconda delle circostanze (o dell'ondata)
         //prima parte: Diamo uno dei pupetti sbloccati
         foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
             //pupo_singolo=info_comuni.lista_razze_totale[attachStat.Key];      //no: Tanto saranno sempre al plurale...
             pupo_singolo=attachStat.Key;
-            lista_random.Add("pupo_"+pupo_singolo+"_warrior_1",1);
-            lista_random.Add("pupo_"+pupo_singolo+"_arcer_1",1);
-            lista_random.Add("pupo_"+pupo_singolo+"_wizard_1",1);
+            lista_random.Add("pupo_"+pupo_singolo+"_warrior_"+livello,1);
+            lista_random.Add("pupo_"+pupo_singolo+"_arcer_"+livello,1);
+            lista_random.Add("pupo_"+pupo_singolo+"_wizard_"+livello,1);
         }
         premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
         crea_premio_upgrade(premio,1);
+
+        //secondo premio
+        lista_random.Remove(premio);
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
+            if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
+                //ne inseriamo due per dare più pissibilità che escano...
+                lista_random.Add("nrazza_"+attachStat.Key+"_"+livello+"_a",1);
+                lista_random.Add("nrazza_"+attachStat.Key+"_"+livello+"_b",1);
+            }
+        }
+        premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+        crea_premio_upgrade(premio,2);
+
+        //terzo premio
+        lista_random.Remove(premio);
+        if (lista_abilita.Count<num_max_abilita){
+            foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                if (!lista_abilita.ContainsKey(attachStat.Key)){
+                    lista_random.Add("abilita_"+attachStat.Key+"_"+livello,1);
+                }
+            }
+        }
     }
 
     private void crea_premio_upgrade(string premio, int num_cont_premio){
-        string razza_pupo;
-        string classe_pupo;
         string tipo;
-        int livello_pupo;
         string[] splitArray;
 
         string titolo="";
         string descrizione="";
         int monete=0;
+        string txt_monete="";
 
         splitArray=premio.Split(char.Parse("_"));
         tipo=splitArray[0];
-        if (tipo=="pupo"){
-            int num_pupi=Random.Range(5,15);
-            razza_pupo = splitArray[1];
-            classe_pupo = splitArray[2];
-            livello_pupo = int.Parse(splitArray[3]);
-            monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
-            monete=30-monete;
+        switch (tipo){
+            case "pupo":{
+                string razza_pupo = splitArray[1];
+                int num_pupi=Random.Range(5,15);
+                string classe_pupo = splitArray[2];
+                int livello_pupo = int.Parse(splitArray[3]);
+                monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
+                monete=30-monete;
+                txt_monete="+ "+monete+" gold";
 
-            print (razza_pupo+" - "+classe_pupo+" - "+livello_pupo);
-            titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo];
-            descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+                print (razza_pupo+" - "+classe_pupo+" - "+livello_pupo);
+                titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo];
+                descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+                break;
+            }
+            case "nrazza":{
+                int livello_razza = int.Parse(splitArray[2]);
+                string razza_pupo = splitArray[1];
+                titolo="Unlock "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" (Level "+livello_razza+")";
+                descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+                break;
+            }
         }
 
         switch (num_cont_premio){
             case 1:{
                 titolo_premio_upgrade_1.SetText(titolo);
-                monete_premio_upgrade_1.SetText("+ "+monete+" gold");
+                monete_premio_upgrade_1.SetText(txt_monete);
                 descrizione_premio_upgrade_1.SetText(descrizione);
                 break;
             }
             case 2:{
                 titolo_premio_upgrade_2.SetText(titolo);
-                monete_premio_upgrade_2.SetText("+ "+monete+" gold");
+                monete_premio_upgrade_2.SetText(txt_monete);
                 descrizione_premio_upgrade_2.SetText(descrizione);
                 break;
             }
             case 3:{
                 titolo_premio_upgrade_3.SetText(titolo);
-                monete_premio_upgrade_3.SetText("+ "+monete+" gold");
+                monete_premio_upgrade_3.SetText(txt_monete);
                 descrizione_premio_upgrade_3.SetText(descrizione);
                 break;
             }
