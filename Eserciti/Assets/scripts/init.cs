@@ -114,6 +114,8 @@ public class init : MonoBehaviour
         }
 
         switch (num_ondata){
+            case 1:{for (i=1;i<=10;i++){genera_pupo("coccinella_warrior");}break;}
+            case 2:{for (i=1;i<=20;i++){genera_pupo("coccinella_warrior");}break;}
             default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file
                 for (i=1;i<=10;i++){genera_pupo("coccinella_warrior");}
                 //genera_pupo("ape_warrior");
