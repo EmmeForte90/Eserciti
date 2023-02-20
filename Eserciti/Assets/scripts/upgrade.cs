@@ -15,6 +15,9 @@ public class upgrade : MonoBehaviour
     public GameObject pannello_scelta_premio;
     public GameObject pannello_upgrade;
 
+    public GameObject blocco_unita_liv_1;
+    private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_unita_esercito = new Dictionary<string, TMPro.TextMeshProUGUI>(); 
+
     public Image img_premio_upgrade_1;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_1;
     public TMPro.TextMeshProUGUI monete_premio_upgrade_1;
@@ -34,7 +37,6 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_denaro;
     private int denaro;
     private string path_xml;
-    private string xml_content;
     private string id_hero;
     private int num_ondata;
     private int i;
@@ -87,6 +89,9 @@ public class upgrade : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
+        get_all_blocchi_testo_unita();
+        riempi_blocchi_testo_unita();
+        
         path_xml=Application.persistentDataPath + "/game_c.xml";
 
         lista_txt_upgrade_costi.Add("melee_damage",txt_u_c_melee_damage);
@@ -128,7 +133,6 @@ public class upgrade : MonoBehaviour
         //da quì, andremo a prendere da dove si trovano, tutte le altre informazioni
         carica_info_xml();  //effettivamente e da quì che carichiamo le info importanti...
 
-        num_ondata++;
         txt_next_stage.SetText("Next: "+num_ondata);
 
         //settaggi iniziali
@@ -141,6 +145,25 @@ public class upgrade : MonoBehaviour
         pannello_upgrade.SetActive(false);
 
         get_premi_upgrade();
+        //riempi_blocchi_testo_unita();     //viene già fatto al momento della scelta del premio...
+    }
+
+    private void get_all_blocchi_testo_unita(){
+        string string_temp="";
+        foreach (Transform child in blocco_unita_liv_1.transform.GetComponentsInChildren<Transform>()) {
+            print ("blocco: "+child.name);
+            if (child.name.Contains("num_")){
+                string_temp=child.name.Replace("num_","");
+                lista_txt_unita_esercito.Add(string_temp,child.GetComponent<TMPro.TextMeshProUGUI>());
+                lista_txt_unita_esercito[string_temp].SetText("0");
+            }
+        }
+    }
+
+    private void riempi_blocchi_testo_unita(){
+        foreach(KeyValuePair<string,int> attachStat in lista_pupetti){
+            lista_txt_unita_esercito[attachStat.Key].SetText(attachStat.Value.ToString());
+        }
     }
 
     public void click_upgrade_number(int numero){
@@ -194,6 +217,8 @@ public class upgrade : MonoBehaviour
         }
         pannello_scelta_premio.SetActive(false);
         pannello_upgrade.SetActive(true);
+
+        riempi_blocchi_testo_unita();
     }
 
     private void get_premi_upgrade(){
@@ -233,6 +258,8 @@ public class upgrade : MonoBehaviour
         }
         premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
         crea_premio_upgrade(premio,3);
+
+        
     }
 
     private void crea_premio_upgrade(string premio, int num_cont_premio){
@@ -435,7 +462,7 @@ public class upgrade : MonoBehaviour
                 foreach(XmlElement node_3 in node_2.SelectNodes("p")){
                     num_pupi_temp=int.Parse(node_3.GetAttribute("num"));
                     tipo_pupo_temp=node_3.InnerText;
-                    print ("dovrei avere "+num_pupi_temp+" del tipo "+tipo_pupo_temp);
+                    lista_pupetti.Add(tipo_pupo_temp,num_pupi_temp);
                 }
             }
             foreach(XmlElement node_2 in node.SelectNodes("lista_upgrade")){
@@ -456,7 +483,7 @@ public class upgrade : MonoBehaviour
         path_xml=Application.persistentDataPath + "/game_c.xml";
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
 
-        xml_content="";
+        string xml_content="";
         xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' denaro='"+denaro+"'>";
         xml_content+="\n\t<lista_abilita>";
         foreach(KeyValuePair<string,int> attachStat in lista_abilita){
