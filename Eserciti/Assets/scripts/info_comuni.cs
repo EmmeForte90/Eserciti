@@ -54,7 +54,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["evoca_formiche"].Add(3,30);
 
         lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
-        lista_abilita_descrizione.Add("mosche_fastidiose","Crea uno sciamo che si muove in maniera random che danneggia tutto ciò che trova al suo passaggio.");
+        lista_abilita_descrizione.Add("mosche_fastidiose","Crea uno sciamo che si muove in maniera random che danneggia tutto ciò che trova al suo passaggio. Mosche e zanzare sono immuni.");
         lista_abilita_cooldown.Add("mosche_fastidiose",new Dictionary<int, int>());
         lista_abilita_cooldown["mosche_fastidiose"].Add(1,20);
         lista_abilita_cooldown["mosche_fastidiose"].Add(2,20);
@@ -70,9 +70,9 @@ public class info_comuni : MonoBehaviour
         lista_abilita_nome.Add("ragnatele","Spiderweb");
         lista_abilita_descrizione.Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end.");
         lista_abilita_cooldown.Add("ragnatele",new Dictionary<int, int>());
-        lista_abilita_cooldown["ragnatele"].Add(1,20);
-        lista_abilita_cooldown["ragnatele"].Add(2,20);
-        lista_abilita_cooldown["ragnatele"].Add(3,20);
+        lista_abilita_cooldown["ragnatele"].Add(1,5);
+        lista_abilita_cooldown["ragnatele"].Add(2,5);
+        lista_abilita_cooldown["ragnatele"].Add(3,5);
 
         lista_abilita_nome.Add("velocita","Speed");
         lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 5 seconds.");

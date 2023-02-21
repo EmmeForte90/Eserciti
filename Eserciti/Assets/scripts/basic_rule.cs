@@ -59,8 +59,14 @@ public class basic_rule : MonoBehaviour
     public float old_x;
     public Vector3[] waypoints;
 
+    //blocco relativo ai possibili effetti del personaggi
+    public bool bool_ragnatele;
+    private float secondi_ragnatela=0;
+    private float timer_ragnatele=0;
+
     // Start is called before the first frame update
     void Awake(){
+        bool_ragnatele=false;
         bool_movimento_random=false;
         thrust=10;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
@@ -90,6 +96,41 @@ public class basic_rule : MonoBehaviour
             }
         }
         StartCoroutine(inizia_percorso_random_coroutine());
+    }
+
+    // Update is called once per frame
+    void Update(){
+        if (!bool_attivo){return;}
+        if (bool_morto){return;}
+        if (bool_ragnatele){
+            if (secondi_ragnatela>0){
+                secondi_ragnatela-=Time.deltaTime;
+            } else {
+                skeletonAnimation.state.GetCurrent(0).TimeScale = 1;
+                bool_ragnatele=false;
+                secondi_ragnatela=0;
+            }
+        }
+        Flip();
+        //if (int_key_pupo==1){print (int_key_pupo+" - "+stato);}
+        switch (stato){
+            case "wait":
+            case "idle":{skeletonAnimation.AnimationName="idle";break;}
+            case "move":{skeletonAnimation.AnimationName=an_movimento_tipo;break;}
+            case "attack":{skeletonAnimation.AnimationName=an_attacco_tipo;break;}
+        }
+        /*
+        if (stato!="move"){
+            iTween.Stop();
+        }
+        */
+
+        //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
+        if (Input.GetKeyDown("space")){
+            inizia_percorso_random();
+            //rb2D.AddForce(transform.down * thrust*50, ForceMode2D.Force);
+            //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
+        }
     }
     public void esulta(){
         skeletonAnimation.AnimationName=an_vittoria_tipo;
@@ -151,32 +192,6 @@ public class basic_rule : MonoBehaviour
         StartCoroutine(attiva_pupo_coroutine(battaglione,x,y));
     }
 
-    // Update is called once per frame
-    void Update(){
-        if (!bool_attivo){return;}
-        if (bool_morto){return;}
-        Flip();
-        //if (int_key_pupo==1){print (int_key_pupo+" - "+stato);}
-        switch (stato){
-            case "wait":
-            case "idle":{skeletonAnimation.AnimationName="idle";break;}
-            case "move":{skeletonAnimation.AnimationName=an_movimento_tipo;break;}
-            case "attack":{skeletonAnimation.AnimationName=an_attacco_tipo;break;}
-        }
-        /*
-        if (stato!="move"){
-            iTween.Stop();
-        }
-        */
-
-        //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
-        if (Input.GetKeyDown("space")){
-            inizia_percorso_random();
-            //rb2D.AddForce(transform.down * thrust*50, ForceMode2D.Force);
-            //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
-        }
-    }
-
     public void attiva_proiettile_mago(int id_difensore){
         proiettile.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
         proiettile.SetActive(true);
@@ -197,6 +212,21 @@ public class basic_rule : MonoBehaviour
     public void danneggia(float danni){
         vitalita-=danni;
         if (vitalita<=0){morte_personaggio();return;}
+        aggiorna_barra_energia();
+    }
+
+    public void applica_ragnatela(float valore_blocco){
+        print ("colpito dalle ragnatele");
+        bool_ragnatele=true;
+        secondi_ragnatela+=valore_blocco;
+        skeletonAnimation.state.GetCurrent(0).TimeScale = 0;
+    }
+
+    public void cura(float cura){
+        vitalita+=cura;
+        if (vitalita>vitalita_max){
+            vitalita=vitalita_max;
+        }
         aggiorna_barra_energia();
     }
 
@@ -248,6 +278,7 @@ public class basic_rule : MonoBehaviour
         if (!bool_attivo){return;}
         if (bool_morto){return;}
         if (bool_movimento_random){return;}
+        if (bool_ragnatele){return;}
         float x=transform.position.x;
         float y=transform.position.y;
         float z=transform.position.z;

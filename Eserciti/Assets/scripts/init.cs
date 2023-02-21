@@ -443,6 +443,34 @@ public class init : MonoBehaviour
 
                     break;
                 }
+                case "miele":{
+                    effetti.eff_miele(xar,yar);
+                    float distanza_temp;
+                    float valore_cura=5;    //anche questo potrebbe dipendere dal livello
+                    foreach(KeyValuePair<int,int> attachStat in lp_buoni){
+                        if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                            distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                            if (distanza_temp<=4){
+                                lp_totali_basic_rule[attachStat.Value].cura(valore_cura);
+                            }
+                        }
+                    }
+                    break;
+                }
+                case "ragnatele":{
+                    effetti.eff_ragnatele(xar,yar);
+                    float distanza_temp;
+                    float valore_blocco=4;    //anche questo potrebbe dipendere dal livello
+                    foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
+                        if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                            distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                            if (distanza_temp<=4){
+                                lp_totali_basic_rule[attachStat.Value].applica_ragnatela(valore_blocco);
+                            }
+                        }
+                    }
+                    break;
+                }
             }
 
 
@@ -480,9 +508,11 @@ public class init : MonoBehaviour
     }
 
     public void cerca_prossimo_bersaglio(int id_attaccante){
+        if (lp_totali_basic_rule[id_attaccante].bool_ragnatele){return;}
         float distanza_difensore=10000;
         float distanza=0;
         int id_pupo_difensore=0;
+
         if (lp_totali_basic_rule[id_attaccante].id_difensore_mago!=0){
             int id_difensore_mago=lp_totali_basic_rule[id_attaccante].id_difensore_mago;
             lp_totali_basic_rule[id_attaccante].proiettile.transform.position=Vector3.MoveTowards(lp_totali_basic_rule[id_attaccante].proiettile.transform.position, lp_totali_basic_rule[id_difensore_mago].transform.position,lp_totali_basic_rule[id_attaccante].velocita_proiettile * Time.deltaTime);
