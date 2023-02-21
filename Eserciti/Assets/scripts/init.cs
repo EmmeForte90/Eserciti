@@ -69,7 +69,14 @@ public class init : MonoBehaviour
     private int num_battaglione_nemico=1;
     private string id_arena;
 
+    //cose legate agli effetti
+    public GameObject particle_mosche;
+    private bool bool_mosche_fastidiose;
+
     void Awake(){
+        particle_mosche.SetActive(false);
+        bool_mosche_fastidiose=false;
+
         pannello_vittoria.SetActive(false);
         pannello_sconfitta.SetActive(false);
         foreach (Transform child in lista_pupi.transform) {
@@ -185,6 +192,23 @@ public class init : MonoBehaviour
         }
         if (!bool_inizio_partita){
             if (bool_fine_partita){return;}
+        }
+
+        //parte relativa alle mosche fastidiose
+        if (bool_mosche_fastidiose){
+            float distanza_temp;
+            foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
+                if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                    distanza_temp=calcola_distanza(
+                        lp_totali[attachStat.Value].transform.position.x,
+                        lp_totali[attachStat.Value].transform.position.y,
+                        particle_mosche.transform.position.x,particle_mosche.transform.position.y);
+                    if (distanza_temp<=3.5){
+                        //print ("colpisco "+attachStat.Value+" - "+distanza_temp);
+                        lp_totali_basic_rule[attachStat.Value].danneggia(0.05f);
+                    }
+                }
+            }
         }
         //andiamo a prendere i cooldown e li abbassiamo se c'è ne sono...
         for (int i=1;i<=abilita_totali;i++){
@@ -384,6 +408,31 @@ public class init : MonoBehaviour
                     }
                     break;
                 }
+                case "mosche_fastidiose":{
+                    bool_mosche_fastidiose=true;
+                    int time=5;
+                    float random_x;
+                    float random_y;
+                    float z=1;
+                    Vector3[] waypoints;
+                    int num_path=time*2;
+                    waypoints=new Vector3[num_path];
+                    random_x=xar;
+                    random_y=yar;
+                    for (int i=0;i<num_path;i++){
+                        random_x+=Random.Range(-2f,2f);
+                        random_y+=Random.Range(-2f,2f);
+                        waypoints[i]=new Vector3(random_x,random_y,-11f);
+                    }
+
+                    particle_mosche.SetActive(true);
+                    particle_mosche.transform.localPosition = new Vector3(xar, yar, -11f);
+                    iTween.MoveTo(particle_mosche, iTween.Hash("path", waypoints, "time", time, "easetype", iTween.EaseType.linear));
+
+                    StartCoroutine(termina_mosche_fastidiose(time));
+
+                    break;
+                }
             }
 
 
@@ -394,6 +443,11 @@ public class init : MonoBehaviour
             cube.transform.localPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 1f);
             */
         }
+    }
+    public IEnumerator termina_mosche_fastidiose(int secondi) {
+        yield return new WaitForSeconds(secondi);
+        bool_mosche_fastidiose=false;
+        particle_mosche.SetActive(false);
     }
 
     public void mouse_exit(GameObject obj){

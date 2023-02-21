@@ -45,6 +45,7 @@ public class info_comuni : MonoBehaviour
         //lista_razze_totale.Add("cavallette","cavalletta");
         //lista_razze_totale.Add("scarabei","scarabeo");
 
+        //La lista di tutte le abilita!
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
         lista_abilita_descrizione.Add("evoca_formiche","Summon 3 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
         lista_abilita_cooldown.Add("evoca_formiche",new Dictionary<int, int>());
@@ -53,7 +54,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["evoca_formiche"].Add(3,30);
 
         lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
-        lista_abilita_descrizione.Add("mosche_fastidiose","Create a swarm of flies for few seconds. All enemy into swarm can move or permorf attacks until swarm end.");
+        lista_abilita_descrizione.Add("mosche_fastidiose","Crea uno sciamo che si muove in maniera random che danneggia tutto ciò che trova al suo passaggio.");
         lista_abilita_cooldown.Add("mosche_fastidiose",new Dictionary<int, int>());
         lista_abilita_cooldown["mosche_fastidiose"].Add(1,20);
         lista_abilita_cooldown["mosche_fastidiose"].Add(2,20);
