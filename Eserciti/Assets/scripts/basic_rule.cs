@@ -73,7 +73,8 @@ public class basic_rule : MonoBehaviour
             distanza_attacco*=1.5f;
         }
         ritardo_attacco+=0.5f;          //in linea generale, bisogna sempre evitare che l'attacco sia più veloce o uguale alla velocità dell'animazione...
-        velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
+        //velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
+        //velocita_movimento*=0.8f;
     }
     void Start(){
         switch (razza){

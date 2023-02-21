@@ -196,17 +196,14 @@ public class init : MonoBehaviour
 
         //parte relativa alle mosche fastidiose
         if (bool_mosche_fastidiose){
-            float distanza_temp;
             foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
                 if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
-                    distanza_temp=calcola_distanza(
-                        lp_totali[attachStat.Value].transform.position.x,
-                        lp_totali[attachStat.Value].transform.position.y,
-                        particle_mosche.transform.position.x,particle_mosche.transform.position.y);
-                    if (distanza_temp<=3.5){
-                        //print ("colpisco "+attachStat.Value+" - "+distanza_temp);
-                        lp_totali_basic_rule[attachStat.Value].danneggia(0.05f);
-                    }
+                    calcola_eventuale_danno_mosche_fastidiose(attachStat.Value);
+                }
+            }
+            foreach(KeyValuePair<int,int> attachStat in lp_buoni){
+                if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                    calcola_eventuale_danno_mosche_fastidiose(attachStat.Value);
                 }
             }
         }
@@ -246,6 +243,19 @@ public class init : MonoBehaviour
             if (bool_fine_partita){
                 fine_partita("vittoria");
                 return;
+            }
+        }
+    }
+
+    private void calcola_eventuale_danno_mosche_fastidiose(int id_pupo){
+        if (lp_totali_basic_rule[id_pupo].razza!="mosca"){
+            float distanza_temp=calcola_distanza(
+                lp_totali[id_pupo].transform.position.x,
+                lp_totali[id_pupo].transform.position.y,
+                particle_mosche.transform.position.x,particle_mosche.transform.position.y);
+            if (distanza_temp<=3.5f){
+                //print ("colpisco "+attachStat.Value+" - "+distanza_temp);
+                lp_totali_basic_rule[id_pupo].danneggia(0.05f);
             }
         }
     }
