@@ -446,12 +446,12 @@ public class init : MonoBehaviour
                 case "miele":{
                     effetti.eff_miele(xar,yar);
                     float distanza_temp;
-                    float valore_cura=5;    //anche questo potrebbe dipendere dal livello
+                    float valore_abilita=5;    //anche questo potrebbe dipendere dal livello
                     foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                         if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                             distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
                             if (distanza_temp<=4){
-                                lp_totali_basic_rule[attachStat.Value].cura(valore_cura);
+                                lp_totali_basic_rule[attachStat.Value].cura(valore_abilita);
                             }
                         }
                     }
@@ -460,12 +460,26 @@ public class init : MonoBehaviour
                 case "ragnatele":{
                     effetti.eff_ragnatele(xar,yar);
                     float distanza_temp;
-                    float valore_blocco=4;    //anche questo potrebbe dipendere dal livello
+                    float valore_abilita=4;    //anche questo potrebbe dipendere dal livello
                     foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
                         if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                             distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
                             if (distanza_temp<=4){
-                                lp_totali_basic_rule[attachStat.Value].applica_ragnatela(valore_blocco);
+                                lp_totali_basic_rule[attachStat.Value].applica_ragnatela(valore_abilita);
+                            }
+                        }
+                    }
+                    break;
+                }
+                case "velocita":{
+                    effetti.eff_velocita(xar,yar);
+                    float distanza_temp;
+                    float valore_abilita=5;    //anche questo potrebbe dipendere dal livello
+                    foreach(KeyValuePair<int,int> attachStat in lp_buoni){
+                        if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                            distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                            if (distanza_temp<=4){
+                                lp_totali_basic_rule[attachStat.Value].applica_velocita(valore_abilita);
                             }
                         }
                     }
@@ -563,7 +577,7 @@ public class init : MonoBehaviour
                 lp_totali_basic_rule[id_attaccante].old_x=lp_totali[id_difensore].transform.position.x;
                 if (distanza>lp_totali_basic_rule[id_attaccante].distanza_attacco){
                     lp_totali_basic_rule[id_attaccante].stato="move";
-                    lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * Time.deltaTime);
+                    lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * lp_totali_basic_rule[id_attaccante].velocita_pupo_effetti *Time.deltaTime);
         
                 } else {
                     pupo_attacca_bersaglio(id_attaccante, id_difensore);
@@ -582,7 +596,7 @@ public class init : MonoBehaviour
     }
 
     public IEnumerator fine_mov_attacco(int id_attaccante, int id_difensore, float x_att, float y_att) {
-        yield return new WaitForSeconds(lp_totali_basic_rule[id_attaccante].anim_velocita_attacco);
+        yield return new WaitForSeconds(lp_totali_basic_rule[id_attaccante].anim_velocita_attacco/lp_totali_basic_rule[id_attaccante].velocita_pupo_effetti);
         if (!lp_totali_basic_rule[id_attaccante].bool_morto){//beh potrebbe capitare che è stato colpito prima che sferrasse l'attaccp finale...
             if (!lp_totali_basic_rule[id_difensore].bool_morto){//beh potrebbe capitare che è stato colpito il suo bersaglio...
                 lp_totali_basic_rule[id_attaccante].stato="wait";

@@ -11,6 +11,7 @@ public class effetti : MonoBehaviour
     public GameObject particle_ragnatele_2;
     public GameObject particle_ragnatele_3;
     public GameObject particle_ragnatele_grande;
+    public GameObject particle_velocita;
 
     // Start is called before the first frame update
     void Start()
@@ -64,5 +65,13 @@ public class effetti : MonoBehaviour
         go_temp_4.transform.SetParent(mappa.transform);
         go_temp_4.transform.localPosition = new Vector3(xar, yar, 1f);
         go_temp_4.GetComponent<ParticleSystem>().Play();
+    }
+
+    public void eff_velocita(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(particle_velocita);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.GetComponent<ParticleSystem>().Play();
     }
 }

@@ -68,14 +68,14 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["miele"].Add(3,20);
 
         lista_abilita_nome.Add("ragnatele","Spiderweb");
-        lista_abilita_descrizione.Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end.");
+        lista_abilita_descrizione.Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end. Spiders are immune.");
         lista_abilita_cooldown.Add("ragnatele",new Dictionary<int, int>());
-        lista_abilita_cooldown["ragnatele"].Add(1,5);
-        lista_abilita_cooldown["ragnatele"].Add(2,5);
-        lista_abilita_cooldown["ragnatele"].Add(3,5);
+        lista_abilita_cooldown["ragnatele"].Add(1,20);
+        lista_abilita_cooldown["ragnatele"].Add(2,20);
+        lista_abilita_cooldown["ragnatele"].Add(3,20);
 
         lista_abilita_nome.Add("velocita","Speed");
-        lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 5 seconds.");
+        lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 5 seconds. It doesn't work on webbed targets.");
         lista_abilita_cooldown.Add("velocita",new Dictionary<int, int>());
         lista_abilita_cooldown["velocita"].Add(1,30);
         lista_abilita_cooldown["velocita"].Add(2,30);

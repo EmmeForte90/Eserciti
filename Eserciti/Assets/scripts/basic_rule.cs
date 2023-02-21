@@ -62,10 +62,13 @@ public class basic_rule : MonoBehaviour
     //blocco relativo ai possibili effetti del personaggi
     public bool bool_ragnatele;
     private float secondi_ragnatela=0;
-    private float timer_ragnatele=0;
+    public bool bool_velocita;
+    private float secondi_velocita=0;
+    public float velocita_pupo_effetti=1f;
 
     // Start is called before the first frame update
     void Awake(){
+        bool_velocita=false;
         bool_ragnatele=false;
         bool_movimento_random=false;
         thrust=10;
@@ -109,6 +112,15 @@ public class basic_rule : MonoBehaviour
                 skeletonAnimation.state.GetCurrent(0).TimeScale = 1;
                 bool_ragnatele=false;
                 secondi_ragnatela=0;
+            }
+        } else if (bool_velocita){
+            if (secondi_velocita>0){
+                secondi_velocita-=Time.deltaTime;
+            } else {
+                skeletonAnimation.state.GetCurrent(0).TimeScale = 1;
+                bool_velocita=false;
+                velocita_pupo_effetti=1;
+                secondi_velocita=0;
             }
         }
         Flip();
@@ -205,7 +217,7 @@ public class basic_rule : MonoBehaviour
     }
 
     public IEnumerator coroutine_ready() {
-        yield return new WaitForSeconds(ritardo_attacco);
+        yield return new WaitForSeconds(ritardo_attacco/velocita_pupo_effetti);
         stato="idle";
     }
 
@@ -216,10 +228,20 @@ public class basic_rule : MonoBehaviour
     }
 
     public void applica_ragnatela(float valore_blocco){
-        print ("colpito dalle ragnatele");
         bool_ragnatele=true;
+        bool_velocita=false;
+        velocita_pupo_effetti=0;
+        secondi_velocita=0;
         secondi_ragnatela+=valore_blocco;
         skeletonAnimation.state.GetCurrent(0).TimeScale = 0;
+    }
+
+    public void applica_velocita(float valore){
+        if (bool_ragnatele){return;}
+        bool_velocita=true;
+        velocita_pupo_effetti=2;
+        secondi_velocita+=valore;
+        skeletonAnimation.state.GetCurrent(0).TimeScale = 2;
     }
 
     public void cura(float cura){
@@ -282,7 +304,7 @@ public class basic_rule : MonoBehaviour
         float x=transform.position.x;
         float y=transform.position.y;
         float z=transform.position.z;
-        float velocita_movimento_fattore=5/velocita_movimento;
+        float velocita_movimento_fattore=5/velocita_movimento*velocita_pupo_effetti;
 
         string tipo="";
         string direzione="dx";
