@@ -643,7 +643,7 @@ public class init : MonoBehaviour
         } else {
             valore_danno-=lp_totali_basic_rule[id_difensore].armatura_distanza;
         }
-        if (lp_totali_basic_rule[id_difensore].bool_armatura){valore_danno-=5;}
+        if (lp_totali_basic_rule[id_difensore].bool_armatura){valore_danno-=1;}
         if (valore_danno<0.1f){valore_danno=0.1f;}  //farà sempre un minimo di danno.
         lp_totali_basic_rule[id_difensore].danneggia(valore_danno);
     }

@@ -744,6 +744,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &25766841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +967,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &27019985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,6 +1190,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &35814509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,6 +1580,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &41784871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,6 +1802,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &43139479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,6 +2525,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &55178701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2741,6 +2747,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &57625641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3612,6 +3619,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &81318003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3833,6 +3841,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &84224090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4055,6 +4064,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &84359216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,6 +4287,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &85049067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4833,6 +4844,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &98523918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5202,6 +5214,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &110116824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5424,6 +5437,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &122093177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5646,6 +5660,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &133128185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10680,6 +10695,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &135200442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10901,6 +10917,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &145570953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11290,6 +11307,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &148227450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11512,6 +11530,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &157384384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11734,6 +11753,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &158736491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11955,6 +11975,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &168974449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12177,6 +12198,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &171855133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12565,6 +12587,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &191050436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12787,6 +12810,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &193118680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13176,6 +13200,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &194451461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13565,6 +13590,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &201338115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13954,6 +13980,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &219887431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19465,6 +19492,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &267819586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19687,6 +19715,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &271845612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19909,6 +19938,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &280022118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20130,6 +20160,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &290945113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20352,6 +20383,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &301589557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20574,6 +20606,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &310289199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20796,6 +20829,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &318887196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21153,6 +21187,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &331986050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21375,6 +21410,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &347179022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21596,6 +21632,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &355094490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21817,6 +21854,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &357577192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22206,6 +22244,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &360381108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22428,6 +22467,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &361666353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22649,6 +22689,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &362240856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23447,6 +23488,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &371938773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23669,6 +23711,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &372270297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23891,6 +23934,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &374591189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24280,6 +24324,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &380902659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24649,6 +24694,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &383621184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24871,6 +24917,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &392449835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30071,6 +30118,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &404887639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30293,6 +30341,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &405347968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30514,6 +30563,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &407995094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30735,6 +30785,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &408592266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30956,6 +31007,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &412271475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36157,6 +36209,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &432367168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36546,6 +36599,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &454240809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41755,6 +41809,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &464223451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42367,6 +42422,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &474291145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42589,6 +42645,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &499025553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42811,6 +42868,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &503132570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43167,6 +43225,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &524056895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43388,6 +43447,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &528052383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43943,6 +44003,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &534375926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44418,6 +44479,7 @@ MonoBehaviour:
   particle_ragnatele_3: {fileID: 1347409810}
   particle_ragnatele_grande: {fileID: 257188406}
   particle_velocita: {fileID: 396775254}
+  particle_armatura: {fileID: 587342928}
 --- !u!1 &566002224
 GameObject:
   m_ObjectHideFlags: 0
@@ -44625,6 +44687,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &568843715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44895,7 +44958,7 @@ GameObject:
   - component: {fileID: 587342931}
   - component: {fileID: 587342930}
   m_Layer: 0
-  m_Name: particle_velocita (1)
+  m_Name: particle_armatura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44937,7 +45000,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45124,7 +45187,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: -5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -45177,8 +45240,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.5849056, g: 0.34529608, b: 0.0022071474, a: 1}
-      maxColor: {r: 0.3773585, g: 0.15537561, b: 0, a: 1}
+      minColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+      maxColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -45556,14 +45619,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 300
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.15
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -45822,7 +45885,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -45932,7 +45995,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 2
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -46088,7 +46151,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 1
+    separateAxes: 0
   RotationModule:
     enabled: 0
     x:
@@ -46260,9 +46323,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0.12830192, g: 0.6415094, b: 0, a: 0}
+        key2: {r: 0.12830192, g: 0.6415094, b: 0, a: 1}
         key3: {r: 0.12830192, g: 0.6415094, b: 0, a: 0}
         key4: {r: 0.12830192, g: 0.6415094, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -46277,9 +46340,9 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 46260
+        atime1: 14264
         atime2: 65535
-        atime3: 0
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
@@ -50160,6 +50223,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &599887377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50683,6 +50747,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &623239331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51071,6 +51136,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &629590464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51459,6 +51525,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &634927644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51847,6 +51914,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &647394991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52068,6 +52136,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &648529402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52290,6 +52359,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &665875462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52678,6 +52748,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &676800900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53234,6 +53305,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &683014517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53455,6 +53527,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &689391954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54257,6 +54330,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &714900835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54581,6 +54655,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &723034769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54802,6 +54877,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &729194345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55023,6 +55099,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &737209526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55693,6 +55770,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &752449910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56415,6 +56493,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &792326682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56803,6 +56882,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &801538424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57024,6 +57104,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &806347878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57580,6 +57661,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &828840185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57802,6 +57884,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &830159414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58023,6 +58106,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &833292852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58245,6 +58329,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &833749031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58467,6 +58552,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &834490944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58856,6 +58942,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &846078456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59077,6 +59164,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &850670326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59298,6 +59386,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &852556845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59519,6 +59608,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &856183420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59741,6 +59831,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &861058765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59962,6 +60053,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &869465792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60350,6 +60442,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &896712078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60885,6 +60978,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &902621178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61106,6 +61200,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &904403612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61328,6 +61423,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &908337833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61621,6 +61717,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &910451697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61842,6 +61939,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &912882519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62231,6 +62329,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &918608463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62600,6 +62699,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &936005569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63155,6 +63255,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &942787987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63376,6 +63477,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &961206015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63598,6 +63700,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &963740578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63987,6 +64090,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &974274613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64208,6 +64312,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &977455335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64430,6 +64535,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &979161841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64773,6 +64879,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &991239171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65329,6 +65436,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &998570558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65717,6 +65825,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1010158870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66150,6 +66259,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1022183260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66371,6 +66481,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1024891647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66760,6 +66871,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1035352996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66982,6 +67094,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1042470196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67741,6 +67854,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1059301011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68296,6 +68410,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1061062346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68999,6 +69114,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1082951978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69330,6 +69446,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1104781773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69552,6 +69669,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1141642897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70075,6 +70193,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1153907880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70296,6 +70415,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1159813354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70517,6 +70637,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1185549394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71152,6 +71273,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1213653813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71540,6 +71662,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1245462096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71929,6 +72052,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1256423960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72151,6 +72275,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1262105694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72372,6 +72497,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1262704372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72594,6 +72720,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1263569999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72886,6 +73013,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1265445463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73108,6 +73236,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1281734840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73329,6 +73458,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1288946449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73550,6 +73680,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1289929879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73772,6 +73903,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1290974568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73994,6 +74126,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1293807655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74550,6 +74683,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1312322277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74771,6 +74905,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1312532721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74993,6 +75128,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1317136255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75214,6 +75350,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1328409788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75436,6 +75573,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1328669585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75658,6 +75796,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1331193082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81201,6 +81340,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1351982066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81590,6 +81730,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1361079944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81811,6 +81952,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1361864890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82108,6 +82250,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1372686349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82330,6 +82473,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1380919393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82718,6 +82862,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1395789543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82940,6 +83085,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1404340544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83161,6 +83307,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1405221812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83382,6 +83529,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1412093480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83603,6 +83751,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1424004371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83824,6 +83973,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1424758894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84045,6 +84195,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1427266981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84267,6 +84418,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1431430541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84656,6 +84808,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1444257350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85045,6 +85198,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1449933026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85433,6 +85587,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1456962505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85822,6 +85977,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1461969672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86044,6 +86200,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1475297889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86579,6 +86736,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1485414376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86801,6 +86959,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1500095092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87189,6 +87348,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1501136387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87487,6 +87647,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1505059975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87709,6 +87870,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1505132334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87931,6 +88093,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1506575380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88319,6 +88482,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1518590954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88855,6 +89019,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1541842414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89076,6 +89241,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1542760394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89444,6 +89610,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1552181811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89665,6 +89832,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1554323507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90296,6 +90464,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1564920543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90685,6 +90854,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1582338312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90907,6 +91077,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1585465081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91128,6 +91299,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1589110504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91350,6 +91522,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1590915714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91572,6 +91745,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1591350435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91794,6 +91968,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1592064034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92163,6 +92338,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1596548727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92384,6 +92560,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1600725803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92606,6 +92783,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1603622147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92827,6 +93005,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1609751429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93049,6 +93228,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1610889825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93271,6 +93451,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1625900835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93493,6 +93674,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1627506510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93882,6 +94064,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1644346066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94437,6 +94620,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1652636810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94659,6 +94843,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1657729848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94956,6 +95141,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1689932505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95177,6 +95363,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1695171193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95399,6 +95586,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1696263518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95696,6 +95884,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1700666479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96599,6 +96788,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1748975327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96821,6 +97011,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1751318418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97376,6 +97567,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1770815077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97764,6 +97956,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1777137550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98025,6 +98218,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1802631491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98720,6 +98914,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1834726779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99020,6 +99215,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1836139340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99690,6 +99886,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1864858006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99911,6 +100108,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1869492903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100133,6 +100331,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1877618262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100354,6 +100553,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1880945268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100575,6 +100775,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1885096711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100797,6 +100998,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1885765370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101018,6 +101220,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1890424252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101240,6 +101443,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1893260929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106597,6 +106801,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1917806321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106819,6 +107024,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1918995959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111873,6 +112079,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1937913869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112261,6 +112468,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1938150673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112482,6 +112690,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1964582856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113172,6 +113381,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1977856555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113394,6 +113604,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1980439724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113616,6 +113827,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1987777363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113837,6 +114049,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1989875138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114058,6 +114271,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1991241655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114280,6 +114494,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &1994346075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114502,6 +114717,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2001468074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114723,6 +114939,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2009298906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114944,6 +115161,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2012936505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115332,6 +115550,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2023098710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115888,6 +116107,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2032378466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116109,6 +116329,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2035574753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116331,6 +116552,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2037144341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116553,6 +116775,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2041024012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116856,6 +117079,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2056305373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117078,6 +117302,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2057775783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117633,6 +117858,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2066931920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117854,6 +118080,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2068233224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118243,6 +118470,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2074456646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118540,6 +118768,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2087206039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118762,6 +118991,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2088368753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119150,6 +119380,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2094959656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119372,6 +119603,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2104320563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119594,6 +119826,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2106677432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119982,6 +120215,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2123417257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120371,6 +120605,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2127189379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120672,6 +120907,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2136877413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120893,6 +121129,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2140471449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121115,6 +121352,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2141582328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121337,6 +121575,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2142110417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121558,6 +121797,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2143487775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121780,6 +122020,7 @@ MonoBehaviour:
   bool_ragnatele: 0
   bool_velocita: 0
   velocita_pupo_effetti: 1
+  bool_armatura: 0
 --- !u!114 &2146126953
 MonoBehaviour:
   m_ObjectHideFlags: 0
