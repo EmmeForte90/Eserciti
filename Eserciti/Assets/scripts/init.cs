@@ -485,6 +485,20 @@ public class init : MonoBehaviour
                     }
                     break;
                 }
+                case "armatura":{
+                    effetti.eff_armatura(xar,yar);
+                    float distanza_temp;
+                    float valore_abilita=5;    //anche questo potrebbe dipendere dal livello
+                    foreach(KeyValuePair<int,int> attachStat in lp_buoni){
+                        if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                            distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                            if (distanza_temp<=4){
+                                lp_totali_basic_rule[attachStat.Value].applica_armatura(valore_abilita);
+                            }
+                        }
+                    }
+                    break;
+                }
             }
 
 
@@ -629,6 +643,7 @@ public class init : MonoBehaviour
         } else {
             valore_danno-=lp_totali_basic_rule[id_difensore].armatura_distanza;
         }
+        if (lp_totali_basic_rule[id_difensore].bool_armatura){valore_danno-=5;}
         if (valore_danno<0.1f){valore_danno=0.1f;}  //farà sempre un minimo di danno.
         lp_totali_basic_rule[id_difensore].danneggia(valore_danno);
     }

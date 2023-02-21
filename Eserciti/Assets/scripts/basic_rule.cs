@@ -65,9 +65,12 @@ public class basic_rule : MonoBehaviour
     public bool bool_velocita;
     private float secondi_velocita=0;
     public float velocita_pupo_effetti=1f;
+    public bool bool_armatura;
+    private float secondi_armatura=0;
 
     // Start is called before the first frame update
     void Awake(){
+        bool_armatura=false;
         bool_velocita=false;
         bool_ragnatele=false;
         bool_movimento_random=false;
@@ -121,6 +124,14 @@ public class basic_rule : MonoBehaviour
                 bool_velocita=false;
                 velocita_pupo_effetti=1;
                 secondi_velocita=0;
+            }
+        }
+        if (bool_armatura){
+            if (secondi_armatura>0){
+                secondi_armatura-=Time.deltaTime;
+            } else {
+                bool_armatura=false;
+                secondi_armatura=0;
             }
         }
         Flip();
@@ -242,6 +253,12 @@ public class basic_rule : MonoBehaviour
         velocita_pupo_effetti=2;
         secondi_velocita+=valore;
         skeletonAnimation.state.GetCurrent(0).TimeScale = 2;
+    }
+
+    public void applica_armatura(float valore){
+        if (bool_ragnatele){return;}
+        bool_armatura=true;
+        secondi_armatura+=valore;
     }
 
     public void cura(float cura){
