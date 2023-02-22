@@ -242,6 +242,13 @@ public class init : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        if (Input.GetKeyDown(KeyCode.Q)){click_abilita(1);}
+        if (Input.GetKeyDown(KeyCode.W)){click_abilita(2);}
+        if (Input.GetKeyDown(KeyCode.E)){click_abilita(3);}
+        if (Input.GetKeyDown(KeyCode.R)){click_abilita(4);}
+        if (Input.GetKeyDown(KeyCode.T)){click_abilita(5);}
+        if (Input.GetKeyDown(KeyCode.Y)){click_abilita(6);}
+
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (int_abilita_scelta!=0){
                 int_abilita_scelta=0;
@@ -393,15 +400,15 @@ public class init : MonoBehaviour
         lista_abilita_cooldown_img[abilita].fillAmount=settaggio;
     }
 
-    public void click_abilita(GameObject go_abilita){
+    public void click_abilita(int int_abilita){
         if (bool_fine_partita){return;}
-        int int_abilita=int.Parse(go_abilita.name.Replace("abilita_",""));
+        if ((!lista_abilita_id.ContainsKey(int_abilita))||(lista_abilita_id[int_abilita]=="")){return;}
         if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
             int_abilita_scelta=int_abilita;
-            switch (int_abilita_scelta){
+            switch (lista_abilita_id[int_abilita]){
                 default:{
                     string testo="";
-                    testo+="Select where want to use "+info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita_scelta]];
+                    testo+="Select where want to use "+info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita]];
                     testo+="\n\nPress ESC to cancel";
                     txt_desc_abilita.SetText(testo);
                     break;
@@ -415,7 +422,10 @@ public class init : MonoBehaviour
     public void mouse_click(GameObject obj, string tipo){
         //print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
         print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
-        if (obj.name.Contains("abilita_")){click_abilita(obj);}
+        if (obj.name.Contains("abilita_")){
+            int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
+            click_abilita(int_abilita);
+        }
         else if (obj.name=="area_cliccabile"){
             if (int_abilita_scelta!=0){
                 attiva_abilita_coordinate(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
