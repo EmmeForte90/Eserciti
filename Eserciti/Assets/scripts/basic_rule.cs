@@ -352,14 +352,16 @@ public class basic_rule : MonoBehaviour
 
         string tipo="";
         string direzione="dx";
-        int random=Random.Range(1,3);
+        int random=Random.Range(1,5);
         switch (random){
             case 1:{tipo="cerchio_basso";break;}
             case 2:{tipo="cerchio_alto";break;}
-            case 3:{tipo="cerchio_basso_lungo";break;}
-            case 4:{tipo="cerchio_alto_lungo";break;}
+            case 3:{tipo="cerchio_basso_lento";break;}
+            case 4:{tipo="cerchio_alto_lento";break;}
         }
         if (bool_fazione_nemica){direzione="sx";}
+
+        direzione="dx"; if (Random.Range(0,2)==0){direzione="sx";}  //commenta questa riga se vuoi togliere l'aleatorietà
         tipo+="_"+direzione;
 
         switch (tipo){
@@ -381,6 +383,26 @@ public class basic_rule : MonoBehaviour
             case "cerchio_alto_sx":{
                 waypoints=new Vector3[]{new Vector3(x-0.5f,y+1,z), new Vector3(x-1,y+1.5f,z), new Vector3(x-2,y+2,z)};  //cerchio basso SX
                 velocita_movimento_fattore*=Random.Range(0.5f,1.5f);
+                break;
+            }
+            case "cerchio_basso_lento_dx":{
+                waypoints=new Vector3[]{new Vector3(x+0.3f,y-0.7f,z), new Vector3(x+0.6f,y-1f,z), new Vector3(x+1.5f,y-1.5f,z)};  //cerchio basso DX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.2f);
+                break;
+            }
+            case "cerchio_alto_lento_dx":{
+                waypoints=new Vector3[]{new Vector3(x+0.3f,y+0.7f,z), new Vector3(x+0.6f,y+1f,z), new Vector3(x+1.5f,y+1.5f,z)};  //cerchio basso DX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.2f);
+                break;
+            }
+            case "cerchio_basso_lento_sx":{
+                waypoints=new Vector3[]{new Vector3(x-0.3f,y-0.7f,z), new Vector3(x-0.6f,y-1f,z), new Vector3(x-1.5f,y-1.5f,z)};  //cerchio basso SX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.2f);
+                break;
+            }
+            case "cerchio_alto_lento_sx":{
+                waypoints=new Vector3[]{new Vector3(x-0.3f,y+0.7f,z), new Vector3(x-0.6f,y+1f,z), new Vector3(x-1.5f,y+1.5f,z)};  //cerchio basso SX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.2f);
                 break;
             }
         }
