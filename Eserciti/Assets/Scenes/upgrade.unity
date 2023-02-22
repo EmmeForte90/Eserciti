@@ -30505,7 +30505,7 @@ GameObject:
   - component: {fileID: 2067821647}
   - component: {fileID: 2067821646}
   m_Layer: 0
-  m_Name: num_formica_warrior
+  m_Name: num_formica_ragnetto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
