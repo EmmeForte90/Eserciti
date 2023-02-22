@@ -14,8 +14,7 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, string> lista_classi_nome = new Dictionary<string, string>();
     public Dictionary<string, float> lista_costo_unita_razza = new Dictionary<string, float>();
     // Start is called before the first frame update
-    void Awake()
-    {
+    void Awake(){
         lista_costo_unita_razza.Add("formiche",1f);
         lista_costo_unita_razza.Add("mosche",0.7f);
         lista_costo_unita_razza.Add("api",1.5f);

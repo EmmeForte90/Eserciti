@@ -50,8 +50,20 @@ public class mainmenu : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.Z)){
+        if (Input.GetKeyDown(KeyCode.Alpha1)){
             click_eroe("regina_formica_nera");
+            inizia_nuova_partita();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)){
+            click_eroe("re_mosca");
+            inizia_nuova_partita();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3)){
+            click_eroe("regina_ape");
+            inizia_nuova_partita();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4)){
+            click_eroe("regina_ragno");
             inizia_nuova_partita();
         }
     }
