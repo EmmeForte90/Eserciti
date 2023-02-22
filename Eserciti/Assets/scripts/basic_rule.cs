@@ -286,7 +286,9 @@ public class basic_rule : MonoBehaviour
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="die";
         skeletonAnimation.state.GetCurrent(0).TimeScale = 1;    //perchè per effetti vari, potrebbe essere bloccato
+
         bool_morto=true;
+        col2D.enabled=false;
         GetComponent<MeshRenderer>().sortingOrder-=2000;
         //StartCoroutine(disattiva_pupo());
 
