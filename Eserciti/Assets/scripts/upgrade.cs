@@ -248,7 +248,7 @@ public class upgrade : MonoBehaviour
 
         //terzo premio
         lista_random.Remove(premio);
-        lista_random.Add("denaro_"+livello,1);
+        lista_random.Add("denaro-"+livello,1);
         if (lista_abilita.Count<num_max_abilita){
             foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
                 if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
@@ -317,6 +317,9 @@ public class upgrade : MonoBehaviour
                 titolo="Gold!";
                 descrizione="Un grande tributo alla morale della truppa!";
                 break;
+            }
+            default:{
+                print ("non ho trovato questo: "+tipo);break;
             }
         }
 

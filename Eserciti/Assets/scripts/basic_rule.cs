@@ -241,7 +241,7 @@ public class basic_rule : MonoBehaviour
     }
 
     public void applica_ragnatela(float valore_blocco){
-        print ("attivo l'effetto delle ragnatele sul pupo "+int_key_pupo);
+        if (bool_morto){return;}
         bool_ragnatele=true;
         bool_velocita=false;
         velocita_pupo_effetti=0;
@@ -251,6 +251,7 @@ public class basic_rule : MonoBehaviour
     }
 
     public void applica_velocita(float valore){
+        if (bool_morto){return;}
         if (bool_ragnatele){return;}
         bool_velocita=true;
         velocita_pupo_effetti=2;
@@ -259,6 +260,7 @@ public class basic_rule : MonoBehaviour
     }
 
     public void applica_armatura(float valore){
+        if (bool_morto){return;}
         if (bool_ragnatele){return;}
         bool_armatura=true;
         secondi_armatura+=valore;
@@ -278,6 +280,7 @@ public class basic_rule : MonoBehaviour
         stato="die";
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="die";
+        skeletonAnimation.state.GetCurrent(0).TimeScale = 1;    //perchè per effetti vari, potrebbe essere bloccato
         bool_morto=true;
         GetComponent<MeshRenderer>().sortingOrder-=2000;
         //StartCoroutine(disattiva_pupo());
