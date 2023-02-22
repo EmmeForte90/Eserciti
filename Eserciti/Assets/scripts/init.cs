@@ -112,7 +112,8 @@ public class init : MonoBehaviour
         foreach(KeyValuePair<int,string> attachStat in lista_abilita_id){
             if (attachStat.Value!=""){
                 lista_abilita_cooldown_secondi[attachStat.Key]=info_comuni.lista_abilita_cooldown[attachStat.Value][lista_abilita_livello[attachStat.Key]];
-
+                
+                setta_img_abilita(attachStat.Key);
             } else {
                 lista_abilita_GO[attachStat.Key].SetActive(false);
             }
@@ -238,6 +239,13 @@ public class init : MonoBehaviour
         txt_desc_abilita.SetText("");
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
+    }
+
+    private void setta_img_abilita(int int_abilita){
+        string abilita=lista_abilita_id[int_abilita];
+        print ("ecco l'abilita: "+abilita);
+        Sprite sprite_temp  = Resources.Load<Sprite>("icone_abilita/"+abilita);
+        lista_abilita_img[int_abilita].sprite = sprite_temp;
     }
 
     // Update is called once per frame
