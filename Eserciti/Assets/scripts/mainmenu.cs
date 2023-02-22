@@ -112,9 +112,9 @@ public class mainmenu : MonoBehaviour
                 id_abilita="ragnatele";
                 nome="Queen Spider";
                 descrizione="Non vuoi rilassarti? Ci pensano le loro ragnatele";
-                lista_pupetti.Add("spider_warrior",4);
-                lista_pupetti.Add("spider_arcer",2);
-                lista_pupetti.Add("spider_wizard",1);
+                lista_pupetti.Add("ragnetto_warrior",4);
+                lista_pupetti.Add("ragnetto_arcer",2);
+                lista_pupetti.Add("ragnetto_wizard",1);
                 lista_razze_sbloccate.Add("ragnetti",1);
                 break;
             }

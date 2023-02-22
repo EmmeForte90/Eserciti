@@ -112,9 +112,11 @@ public class basic_rule : MonoBehaviour
             if (secondi_ragnatela>0){
                 secondi_ragnatela-=Time.deltaTime;
             } else {
+                print ("finisce l'effetto delle ragnatele sul pupo "+int_key_pupo);
                 skeletonAnimation.state.GetCurrent(0).TimeScale = 1;
                 bool_ragnatele=false;
                 secondi_ragnatela=0;
+                velocita_pupo_effetti=1;
             }
         } else if (bool_velocita){
             if (secondi_velocita>0){
@@ -239,6 +241,7 @@ public class basic_rule : MonoBehaviour
     }
 
     public void applica_ragnatela(float valore_blocco){
+        print ("attivo l'effetto delle ragnatele sul pupo "+int_key_pupo);
         bool_ragnatele=true;
         bool_velocita=false;
         velocita_pupo_effetti=0;
