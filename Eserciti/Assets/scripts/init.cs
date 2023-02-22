@@ -163,7 +163,7 @@ public class init : MonoBehaviour
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
                 for (i=1;i<=5;i++){genera_pupo("coccinella_wizard");}
                 for (i=1;i<=5;i++){genera_pupo("calabrone_warrior");}
-                for (i=1;i<=3;i++){genera_pupo("calabrone_archer");}
+                for (i=1;i<=3;i++){genera_pupo("calabrone_arcer");}
                 break;
             }
             case 8:{
@@ -171,13 +171,13 @@ public class init : MonoBehaviour
                 for (i=1;i<=3;i++){genera_pupo("formica_rossa_arcer");}
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
                 for (i=1;i<=5;i++){genera_pupo("calabrone_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("calabrone_archer");}
+                for (i=1;i<=5;i++){genera_pupo("calabrone_arcer");}
                 break;
             }
             case 9:{
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
                 for (i=1;i<=8;i++){genera_pupo("calabrone_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("calabrone_archer");}
+                for (i=1;i<=5;i++){genera_pupo("calabrone_arcer");}
                 for (i=1;i<=3;i++){genera_pupo("calabrone_wizard");}
                 break;
             }
