@@ -73871,7 +73871,7 @@ MonoBehaviour:
   velocita_movimento: 7
   vitalita_max: 4
   bool_fazione_nemica: 0
-  distanza_attacco: 0
+  distanza_attacco: 6
   ritardo_attacco: 1.4
   raggio_sfera_attacco: 0.7
   danno: 1
