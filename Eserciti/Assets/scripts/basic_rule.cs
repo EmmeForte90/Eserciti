@@ -28,13 +28,18 @@ public class basic_rule : MonoBehaviour
     //NON TOCCARE                  //la potenza del bump...
     public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
-    private float x_att, y_att;                 //le sue coordinate quando ha attaccato qualcuno; In verità saranno deprecate, credo.
     public GameObject barra_energia_pf;
     public GameObject barra_energia_vuota_pf;
     public GameObject barra_energia;
     public GameObject barra_energia_vuota;
 
     public GameObject proiettile;
+
+    //opzioni valide solo per le api
+    public GameObject aculeo_pf;                //indica la tipologia dell'aculeo (valido solo per le API)
+    public GameObject aculeo;                  
+    public float aculeo_x;                      //sono le coordinate di qualcuno da attaccare in caso di morte
+    public float aculeo_y;
 
     public float vitalita;
     public bullet_rule valori_proiettile;
@@ -284,6 +289,22 @@ public class basic_rule : MonoBehaviour
         bool_morto=true;
         GetComponent<MeshRenderer>().sortingOrder-=2000;
         //StartCoroutine(disattiva_pupo());
+
+        if (razza=="ape"){
+            aculeo=aculeo_pf;
+
+            y_iniziale_freccia=0.5f;
+            //x_iniziale_freccia=-0.3f;
+
+            aculeo.transform.SetParent(mappa.transform);
+            aculeo.SetActive(true);
+
+            valori_proiettile=aculeo_pf.GetComponent<bullet_rule>();
+            valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
+
+            aculeo.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
+            valori_proiettile.setta_e_vai(aculeo_x,aculeo_y,int_key_pupo);
+        }
     }
 
     public IEnumerator disattiva_pupo() {
@@ -373,8 +394,6 @@ public class basic_rule : MonoBehaviour
 
     public void anim_attacco(float x, float y){
         stato="attack";
-        x_att=x;
-        y_att=y;
         StartCoroutine(coroutine_ready());
     }
 

@@ -594,7 +594,6 @@ public class init : MonoBehaviour
     }
 
     public void cerca_prossimo_bersaglio(int id_attaccante){
-        if (lp_totali_basic_rule[id_attaccante].bool_ragnatele){return;}
         float distanza_difensore=10000;
         float distanza=0;
         int id_pupo_difensore=0;
@@ -608,6 +607,7 @@ public class init : MonoBehaviour
                 lp_totali_basic_rule[id_attaccante].proiettile.SetActive(false);
             }
         }
+        if (lp_totali_basic_rule[id_attaccante].bool_ragnatele){return;}
 
         if (!lp_totali_basic_rule[id_attaccante].bool_fazione_nemica){
             foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
@@ -647,6 +647,10 @@ public class init : MonoBehaviour
             if (!lp_totali_basic_rule[id_difensore].bool_morto){
                 float distanza=calcola_distanza_due_pupi(id_attaccante,id_difensore);
                 lp_totali_basic_rule[id_attaccante].old_x=lp_totali[id_difensore].transform.position.x;
+                if (lp_totali_basic_rule[id_attaccante].razza=="ape"){
+                    lp_totali_basic_rule[id_attaccante].aculeo_x=lp_totali[id_difensore].transform.position.x;
+                    lp_totali_basic_rule[id_attaccante].aculeo_y=lp_totali[id_difensore].transform.position.y;
+                }
                 if (distanza>lp_totali_basic_rule[id_attaccante].distanza_attacco){
                     lp_totali_basic_rule[id_attaccante].stato="move";
                     lp_totali[id_attaccante].transform.position=Vector3.MoveTowards(lp_totali[id_attaccante].transform.position,lp_totali[id_difensore].transform.position,lp_totali_basic_rule[id_attaccante].velocita_movimento * lp_totali_basic_rule[id_attaccante].velocita_pupo_effetti *Time.deltaTime);
