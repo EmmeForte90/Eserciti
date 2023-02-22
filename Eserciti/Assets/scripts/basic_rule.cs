@@ -338,18 +338,22 @@ public class basic_rule : MonoBehaviour
         switch (tipo){
             case "cerchio_basso_dx":{
                 waypoints=new Vector3[]{new Vector3(x+0.5f,y-1,z), new Vector3(x+1,y-1.5f,z), new Vector3(x+2,y-2,z)};  //cerchio basso DX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.5f);
                 break;
             }
             case "cerchio_alto_dx":{
                 waypoints=new Vector3[]{new Vector3(x+0.5f,y+1,z), new Vector3(x+1,y+1.5f,z), new Vector3(x+2,y+2,z)};  //cerchio basso DX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.5f);
                 break;
             }
             case "cerchio_basso_sx":{
                 waypoints=new Vector3[]{new Vector3(x-0.5f,y-1,z), new Vector3(x-1,y-1.5f,z), new Vector3(x-2,y-2,z)};  //cerchio basso SX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.5f);
                 break;
             }
             case "cerchio_alto_sx":{
                 waypoints=new Vector3[]{new Vector3(x-0.5f,y+1,z), new Vector3(x-1,y+1.5f,z), new Vector3(x-2,y+2,z)};  //cerchio basso SX
+                velocita_movimento_fattore*=Random.Range(0.5f,1.5f);
                 break;
             }
         }
