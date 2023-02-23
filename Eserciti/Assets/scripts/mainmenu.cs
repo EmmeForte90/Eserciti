@@ -82,8 +82,8 @@ public class mainmenu : MonoBehaviour
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
-                lista_pupetti.Add("formica_warrior",6);
-                lista_pupetti.Add("formica_arcer",2);
+                lista_pupetti.Add("formica_warrior",4);
+                lista_pupetti.Add("formica_arcer",1);
                 lista_razze_sbloccate.Add("formiche",1);
                 
                 denaro=30;

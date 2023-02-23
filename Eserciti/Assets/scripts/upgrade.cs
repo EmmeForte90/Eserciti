@@ -278,7 +278,7 @@ public class upgrade : MonoBehaviour
         switch (tipo){
             case "pupo":{
                 string razza_pupo = splitArray[1];
-                int num_pupi=Random.Range(5,15);
+                int num_pupi=Random.Range(3,9);
                 string classe_pupo = splitArray[2];
                 int livello_pupo = int.Parse(splitArray[3]);
                 monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);

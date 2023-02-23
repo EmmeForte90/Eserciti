@@ -88,6 +88,7 @@ public class basic_rule : MonoBehaviour
         if (velocita_proiettile!=0){
             velocita_proiettile*=1.5f;
             distanza_attacco*=1.5f;
+            distanza_attacco+=Random.Range(-1f,1f);
         }
         ritardo_attacco+=0.5f;          //in linea generale, bisogna sempre evitare che l'attacco sia più veloce o uguale alla velocità dell'animazione...
         //velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
@@ -291,6 +292,10 @@ public class basic_rule : MonoBehaviour
         col2D.enabled=false;
         GetComponent<MeshRenderer>().sortingOrder-=2000;
         //StartCoroutine(disattiva_pupo());
+
+        if (bool_mago){
+            proiettile.SetActive(false);
+        }
 
         if (razza=="ape"){
             aculeo=aculeo_pf;

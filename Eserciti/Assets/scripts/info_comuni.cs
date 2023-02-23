@@ -15,10 +15,10 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, float> lista_costo_unita_razza = new Dictionary<string, float>();
     // Start is called before the first frame update
     void Awake(){
-        lista_costo_unita_razza.Add("formiche",1f);
-        lista_costo_unita_razza.Add("mosche",0.7f);
-        lista_costo_unita_razza.Add("api",1.5f);
-        lista_costo_unita_razza.Add("ragnetti",1.5f);
+        lista_costo_unita_razza.Add("formiche",2f);
+        lista_costo_unita_razza.Add("mosche",1.4f);
+        lista_costo_unita_razza.Add("api",3f);
+        lista_costo_unita_razza.Add("ragnetti",3f);
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
@@ -48,9 +48,9 @@ public class info_comuni : MonoBehaviour
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
         lista_abilita_descrizione.Add("evoca_formiche","Summon 2 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
         lista_abilita_cooldown.Add("evoca_formiche",new Dictionary<int, int>());
-        lista_abilita_cooldown["evoca_formiche"].Add(1,30);
-        lista_abilita_cooldown["evoca_formiche"].Add(2,30);
-        lista_abilita_cooldown["evoca_formiche"].Add(3,30);
+        lista_abilita_cooldown["evoca_formiche"].Add(1,18);
+        lista_abilita_cooldown["evoca_formiche"].Add(2,18);
+        lista_abilita_cooldown["evoca_formiche"].Add(3,18);
 
         lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
         lista_abilita_descrizione.Add("mosche_fastidiose","Crea uno sciamo che si muove in maniera random che danneggia tutto ciò che trova al suo passaggio. Mosche e zanzare sono immuni.");
