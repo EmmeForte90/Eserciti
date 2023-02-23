@@ -15,10 +15,10 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, float> lista_costo_unita_razza = new Dictionary<string, float>();
     // Start is called before the first frame update
     void Awake(){
-        lista_costo_unita_razza.Add("formiche",2f);
-        lista_costo_unita_razza.Add("mosche",1.4f);
-        lista_costo_unita_razza.Add("api",3f);
-        lista_costo_unita_razza.Add("ragnetti",3f);
+        lista_costo_unita_razza.Add("formiche",20f);
+        lista_costo_unita_razza.Add("mosche",15f);
+        lista_costo_unita_razza.Add("api",30f);
+        lista_costo_unita_razza.Add("ragnetti",30f);
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");

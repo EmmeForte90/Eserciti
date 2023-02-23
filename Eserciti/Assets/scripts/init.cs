@@ -143,43 +143,47 @@ public class init : MonoBehaviour
                 break;
             }
             case 5:{
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_arcer");}
-                for (i=1;i<=3;i++){genera_pupo("coccinella_wizard");}
-                for (i=1;i<=5;i++){genera_pupo("coccinella_wizard");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_warrior");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_arcer");}
+                for (i=1;i<=4;i++){genera_pupo("coccinella_wizard");}
                 for (i=1;i<=1;i++){genera_pupo("calabrone_warrior");}
                 break;
             }
             case 6:{
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_arcer");}
-                for (i=1;i<=5;i++){genera_pupo("coccinella_wizard");}
-                for (i=1;i<=3;i++){genera_pupo("calabrone_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_warrior");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_arcer");}
+                for (i=1;i<=4;i++){genera_pupo("coccinella_wizard");}
+                for (i=1;i<=2;i++){genera_pupo("calabrone_warrior");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_wizard");}
                 break;
             }
             case 7:{
-                for (i=1;i<=3;i++){genera_pupo("formica_rossa_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_arcer");}
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
-                for (i=1;i<=5;i++){genera_pupo("coccinella_wizard");}
-                for (i=1;i<=5;i++){genera_pupo("calabrone_warrior");}
-                for (i=1;i<=3;i++){genera_pupo("calabrone_arcer");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_warrior");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_arcer");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_wizard");}
+                for (i=1;i<=3;i++){genera_pupo("calabrone_warrior");}
+                for (i=1;i<=2;i++){genera_pupo("calabrone_arcer");}
                 break;
             }
             case 8:{
-                for (i=1;i<=3;i++){genera_pupo("coccinella_wizard");}
-                for (i=1;i<=3;i++){genera_pupo("formica_rossa_arcer");}
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_arcer");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_wizard");}
                 for (i=1;i<=5;i++){genera_pupo("calabrone_warrior");}
-                for (i=1;i<=5;i++){genera_pupo("calabrone_arcer");}
+                for (i=1;i<=3;i++){genera_pupo("calabrone_arcer");}
+                for (i=1;i<=1;i++){genera_pupo("calabrone_wizard");}
                 break;
             }
             case 9:{
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard");}
-                for (i=1;i<=8;i++){genera_pupo("calabrone_warrior");}
+                for (i=1;i<=4;i++){genera_pupo("formica_rossa_wizard");}
+                for (i=1;i<=6;i++){genera_pupo("calabrone_warrior");}
                 for (i=1;i<=5;i++){genera_pupo("calabrone_arcer");}
-                for (i=1;i<=3;i++){genera_pupo("calabrone_wizard");}
+                for (i=1;i<=2;i++){genera_pupo("calabrone_wizard");}
+                break;
+            }
+            case 10:{
+                for (i=1;i<=10;i++){genera_pupo("calabrone_warrior");}
+                for (i=1;i<=8;i++){genera_pupo("calabrone_arcer");}
+                for (i=1;i<=5;i++){genera_pupo("calabrone_wizard");}
                 break;
             }
             default:{//da quì generiamo i nemici nemici che ci interessano; Perchè quelli amici lo facciamo da setta_game_da_file

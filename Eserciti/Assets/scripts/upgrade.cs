@@ -225,41 +225,99 @@ public class upgrade : MonoBehaviour
         string premio="";
         string pupo_singolo="";
         int livello=1;  //ben presto dovrà cambiare a seconda delle circostanze (o dell'ondata)
-        //prima parte: Diamo uno dei pupetti sbloccati
-        foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
-            //pupo_singolo=info_comuni.lista_razze_totale[attachStat.Key];      //no: Tanto saranno sempre al plurale...
-            pupo_singolo=attachStat.Key;
-            lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello,1);
-            lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello,1);
-            lista_random.Add("pupo-"+pupo_singolo+"-wizard-"+livello,1);
-        }
-        premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
-        crea_premio_upgrade(premio,1);
 
-        //secondo premio
-        lista_random.Remove(premio);
-        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
-            if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
-                lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
+        switch (num_ondata){
+            case 3:{//scegli una nuova razza da sbloccare
+                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
+                    if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
+                        lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
+                    }
+                }
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,1);
+                lista_random.Remove(premio);
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,2);
+                lista_random.Remove(premio);
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,3);
+                lista_random.Remove(premio);
+                break;
+            }
+            case 2:
+            case 4:{//solo pupetti normali
+                foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+                    //pupo_singolo=info_comuni.lista_razze_totale[attachStat.Key];      //no: Tanto saranno sempre al plurale...
+                    pupo_singolo=attachStat.Key;
+                    lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello,1);
+                    lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello,1);
+                    lista_random.Add("pupo-"+pupo_singolo+"-wizard-"+livello,1);
+                }
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,1);
+                lista_random.Remove(premio);
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,2);
+                lista_random.Remove(premio);
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,3);
+                lista_random.Remove(premio);
+                break;
+            }
+            case 5:{
+                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                    if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
+                    else {livello=lista_abilita[attachStat.Key]+1;}
+                    lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);
+                }
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,1);
+                lista_random.Remove(premio);
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,2);
+                lista_random.Remove(premio);
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,3);
+                lista_random.Remove(premio);
+                break;
+            }
+            default:{
+                //prima parte: Diamo uno dei pupetti sbloccati
+                foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+                    //pupo_singolo=info_comuni.lista_razze_totale[attachStat.Key];      //no: Tanto saranno sempre al plurale...
+                    pupo_singolo=attachStat.Key;
+                    lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello,1);
+                    lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello,1);
+                    lista_random.Add("pupo-"+pupo_singolo+"-wizard-"+livello,1);
+                }
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,1);
+
+                //secondo premio
+                lista_random.Remove(premio);
+                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
+                    if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
+                        lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
+                    }
+                }
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,2);
+
+                //terzo premio
+                lista_random.Remove(premio);
+                lista_random.Add("denaro-"+livello,1);
+                if (lista_abilita.Count<num_max_abilita){
+                    foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                        if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
+                        else {livello=lista_abilita[attachStat.Key]+1;}
+                        lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);
+                    }
+                }
+                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                crea_premio_upgrade(premio,3);
+                break;
             }
         }
-        premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
-        crea_premio_upgrade(premio,2);
-
-        //terzo premio
-        lista_random.Remove(premio);
-        lista_random.Add("denaro-"+livello,1);
-        if (lista_abilita.Count<num_max_abilita){
-            foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
-                if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
-                else {livello=lista_abilita[attachStat.Key]+1;}
-                lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);
-            }
-        }
-        premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
-        crea_premio_upgrade(premio,3);
-
-        
     }
 
     private void crea_premio_upgrade(string premio, int num_cont_premio){
@@ -278,11 +336,11 @@ public class upgrade : MonoBehaviour
         switch (tipo){
             case "pupo":{
                 string razza_pupo = splitArray[1];
-                int num_pupi=Random.Range(3,9);
+                int num_pupi=Random.Range(1,4);
                 string classe_pupo = splitArray[2];
                 int livello_pupo = int.Parse(splitArray[3]);
                 monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
-                monete=30-monete;
+                monete=100-monete;
                 txt_monete="+ "+monete+" gold";
                 lista_premi_settati_num_pupi.Add(num_cont_premio,num_pupi);
 
