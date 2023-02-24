@@ -209,6 +209,7 @@ public class init : MonoBehaviour
                     j=1;
                     num_battaglione_nemico++;
                 }
+                lp_totali_basic_rule[attachStat.Key].vitalita_max*=0.8f;    //diminuire un pò l'eenrgia dei pupi nemici
                 lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,(j*-2)+ya_start,false);
 
             } else {
@@ -481,6 +482,7 @@ public class init : MonoBehaviour
     }
 
     public void attiva_abilita_coordinate(float xar, float yar){
+        if (bool_fine_partita){int_abilita_scelta=0;return;}
         if (int_abilita_scelta!=0){
             //print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
             lista_abilita_cooldown_secondi_attuale[int_abilita_scelta]=lista_abilita_cooldown_secondi[int_abilita_scelta];
@@ -695,6 +697,7 @@ public class init : MonoBehaviour
 
     public IEnumerator fine_mov_attacco(int id_attaccante, int id_difensore, float x_att, float y_att) {
         yield return new WaitForSeconds(lp_totali_basic_rule[id_attaccante].anim_velocita_attacco/lp_totali_basic_rule[id_attaccante].velocita_pupo_effetti);
+        //lp_totali_basic_rule[id_attaccante].bool_stop_hit=false;
         if (!lp_totali_basic_rule[id_attaccante].bool_morto){//beh potrebbe capitare che è stato colpito prima che sferrasse l'attaccp finale...
             if (!lp_totali_basic_rule[id_difensore].bool_morto){//beh potrebbe capitare che è stato colpito il suo bersaglio...
                 lp_totali_basic_rule[id_attaccante].stato="wait";
@@ -705,6 +708,8 @@ public class init : MonoBehaviour
                         if (id_attaccante!=attachStat.Key){
                             if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
                                 calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                //lp_totali_basic_rule[id_attaccante].bool_stop_hit=true;
+                                break;
                             }
                         }
                     }

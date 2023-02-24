@@ -32,6 +32,7 @@ public class basic_rule : MonoBehaviour
     public GameObject barra_energia_vuota_pf;
     public GameObject barra_energia;
     public GameObject barra_energia_vuota;
+    //public bool bool_stop_hit=false;            //in pratica, quando attacca può colpire una volta sola; Che per ora non serve perchè funziona con un semplice "break" su fine_mov_attacco
 
     public GameObject proiettile;
 
