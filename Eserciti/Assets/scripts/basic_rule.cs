@@ -241,6 +241,7 @@ public class basic_rule : MonoBehaviour
     }
 
     public void danneggia(float danni){
+        if (bool_morto){return;}
         vitalita-=danni;
         if (vitalita<=0){morte_personaggio();return;}
         aggiorna_barra_energia();
@@ -281,6 +282,8 @@ public class basic_rule : MonoBehaviour
     }
 
     private void morte_personaggio(){
+        print (int_key_pupo+" è morto!");
+        bool_morto=true;
         barra_energia.SetActive(false);
         barra_energia_vuota.SetActive(false);
         stato="die";
@@ -288,7 +291,6 @@ public class basic_rule : MonoBehaviour
         skeletonAnimation.AnimationName="die";
         skeletonAnimation.state.GetCurrent(0).TimeScale = 1;    //perchè per effetti vari, potrebbe essere bloccato
 
-        bool_morto=true;
         col2D.enabled=false;
         GetComponent<MeshRenderer>().sortingOrder-=2000;
         //StartCoroutine(disattiva_pupo());

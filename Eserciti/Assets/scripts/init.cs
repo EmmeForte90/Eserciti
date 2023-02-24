@@ -482,7 +482,7 @@ public class init : MonoBehaviour
 
     public void attiva_abilita_coordinate(float xar, float yar){
         if (int_abilita_scelta!=0){
-            print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
+            //print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
             lista_abilita_cooldown_secondi_attuale[int_abilita_scelta]=lista_abilita_cooldown_secondi[int_abilita_scelta];
             setta_cooldown_abilita(int_abilita_scelta,1);
             txt_desc_abilita.SetText("");
