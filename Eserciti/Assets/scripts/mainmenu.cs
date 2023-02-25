@@ -158,6 +158,7 @@ public class mainmenu : MonoBehaviour
         livelli_upgrade.Add("hero_cooldown",0);
         livelli_upgrade.Add("random_unity",0);
         livelli_upgrade.Add("random_spell",0);
+        livelli_upgrade.Add("random_race",0);
         livelli_upgrade.Add("food",0);
 
         //magari fare uno switch a seconda dell'eroe scelto cosicchè da poter scegliere in santa pace poi i vari livelli di upgrade ed anche per il denaro scelto.

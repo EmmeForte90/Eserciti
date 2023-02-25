@@ -18,6 +18,10 @@ public class upgrade : MonoBehaviour
     public GameObject blocco_unita_liv_1;
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_unita_esercito = new Dictionary<string, TMPro.TextMeshProUGUI>(); 
 
+    public GameObject cont_upgrade_1;
+    public GameObject cont_upgrade_2;
+    public GameObject cont_upgrade_3;
+
     public Image img_premio_upgrade_1;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_1;
     public TMPro.TextMeshProUGUI monete_premio_upgrade_1;
@@ -141,6 +145,8 @@ public class upgrade : MonoBehaviour
         }
         txt_denaro.SetText(denaro.ToString());
 
+        check_full_abilita();
+
         pannello_scelta_premio.SetActive(true);
         pannello_upgrade.SetActive(false);
 
@@ -200,6 +206,7 @@ public class upgrade : MonoBehaviour
                 int livello_abilita = int.Parse(splitArray[2]);
                 if (livello_abilita==1){lista_abilita.Add(abilita,1);}
                 else {lista_abilita[abilita]++;}
+                check_full_abilita();
                 break;
             }
             case "denaro":{
@@ -266,10 +273,15 @@ public class upgrade : MonoBehaviour
             }
             case 5:{
                 foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
-                    if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
-                    else {livello=lista_abilita[attachStat.Key]+1;}
-                    if (livello<4){lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);}
+                    if (!lista_abilita.ContainsKey(attachStat.Key)){
+                        if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                    }
+                    else {
+                        livello=lista_abilita[attachStat.Key]+1;
+                        if (livello<4){lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);}
+                    }
                 }
+
                 premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
                 crea_premio_upgrade(premio,1);
                 lista_random.Remove(premio);
@@ -293,7 +305,7 @@ public class upgrade : MonoBehaviour
                 premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
                 crea_premio_upgrade(premio,1);
 
-                //secondo premio
+                //secondo premio (inseriamo anche la possibilità di sbloccare una razza)
                 lista_random.Remove(premio);
                 foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
                     if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
@@ -303,20 +315,33 @@ public class upgrade : MonoBehaviour
                 premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
                 crea_premio_upgrade(premio,2);
 
-                //terzo premio
+                //terzo premio (inseriamo anche la possibilità di sbloccare una abilità)
                 lista_random.Remove(premio);
                 lista_random.Add("denaro-"+livello,1);
-                if (lista_abilita.Count<num_max_abilita){
-                    foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
-                        if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
-                        else {livello=lista_abilita[attachStat.Key]+1;}
+                
+                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                    if (!lista_abilita.ContainsKey(attachStat.Key)){
+                        if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                    }
+                    else {
+                        livello=lista_abilita[attachStat.Key]+1;
                         if (livello<4){lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);}
                     }
                 }
+
                 premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
                 crea_premio_upgrade(premio,3);
                 break;
             }
+        }
+    }
+
+    private void check_full_abilita(){
+        if (lista_abilita.Count>=num_max_abilita){
+            foreach(KeyValuePair<string,int> attachStat in lista_abilita){
+                if (attachStat.Value<3){return;}
+            }
+            lista_B_upgrade_bottoni["random_spell"].interactable=false;
         }
     }
 
@@ -369,8 +394,9 @@ public class upgrade : MonoBehaviour
                     monete=0;
                     int livello = int.Parse(splitArray[1]);
                     switch (livello){
-                        default:{monete=50;break;}
+                        default:{monete=100;break;}
                     }
+                    txt_monete="+ "+monete+" gold";
                     titolo="Gold!";
                     descrizione="Un grande tributo al morale della truppa!";
                     break;
@@ -380,28 +406,39 @@ public class upgrade : MonoBehaviour
                     print ("non ho trovato questo: "+tipo);break;
                 }
             }
+
+            switch (num_cont_premio){
+                case 1:{
+                    cont_upgrade_1.SetActive(true);
+                    titolo_premio_upgrade_1.SetText(titolo);
+                    monete_premio_upgrade_1.SetText(txt_monete);
+                    descrizione_premio_upgrade_1.SetText(descrizione);
+                    break;
+                }
+                case 2:{
+                    cont_upgrade_2.SetActive(true);
+                    titolo_premio_upgrade_2.SetText(titolo);
+                    monete_premio_upgrade_2.SetText(txt_monete);
+                    descrizione_premio_upgrade_2.SetText(descrizione);
+                    break;
+                }
+                case 3:{
+                    cont_upgrade_3.SetActive(true);
+                    titolo_premio_upgrade_3.SetText(titolo);
+                    monete_premio_upgrade_3.SetText(txt_monete);
+                    descrizione_premio_upgrade_3.SetText(descrizione);
+                    break;
+                }
+            }
+        }
+        else {
+            switch (num_cont_premio){
+                case 1:{cont_upgrade_1.SetActive(false);break;}
+                case 2:{cont_upgrade_2.SetActive(false);break;}
+                case 3:{cont_upgrade_3.SetActive(false);break;}
+            }
         }
 
-        switch (num_cont_premio){
-            case 1:{
-                titolo_premio_upgrade_1.SetText(titolo);
-                monete_premio_upgrade_1.SetText(txt_monete);
-                descrizione_premio_upgrade_1.SetText(descrizione);
-                break;
-            }
-            case 2:{
-                titolo_premio_upgrade_2.SetText(titolo);
-                monete_premio_upgrade_2.SetText(txt_monete);
-                descrizione_premio_upgrade_2.SetText(descrizione);
-                break;
-            }
-            case 3:{
-                titolo_premio_upgrade_3.SetText(titolo);
-                monete_premio_upgrade_3.SetText(txt_monete);
-                descrizione_premio_upgrade_3.SetText(descrizione);
-                break;
-            }
-        }
     }
 
     public void check_abilita(string abilita){
@@ -494,38 +531,46 @@ public class upgrade : MonoBehaviour
                     string premio="";
                     lista_random.Clear();
                     lista_premi_settati.Clear();
-                    if (lista_abilita.Count<num_max_abilita){
-                        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
-                            if (!lista_abilita.ContainsKey(attachStat.Key)){livello=1;}
-                            else {livello=lista_abilita[attachStat.Key]+1;}
+                    foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                        if (!lista_abilita.ContainsKey(attachStat.Key)){
+                            if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                        }
+                        else {
+                            livello=lista_abilita[attachStat.Key]+1;
                             if (livello<4){lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);}
                         }
-
-                        if (lista_random.Count()>1){
-                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
-                            crea_premio_upgrade(premio,1);
-                            lista_random.Remove(premio);
-                            if (lista_random.Count()>0){
-                                premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
-                                crea_premio_upgrade(premio,2);
-                                lista_random.Remove(premio);
-
-                                if (lista_random.Count()>0){
-                                    premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
-                                    crea_premio_upgrade(premio,3);
-                                    lista_random.Remove(premio);
-                                } else {crea_premio_upgrade("",3);}
-                            } else {crea_premio_upgrade("",2);}
-
-                            pannello_scelta_premio.SetActive(true);
-                            pannello_upgrade.SetActive(false);
-                        } else {
+                    }
+                    switch (lista_random.Count()){
+                        case 1:{
                             premio=lista_random.ElementAt(0).Key;
                             crea_premio_upgrade(premio,1);
                             crea_premio_upgrade("",2);
                             crea_premio_upgrade("",3);
+                            break;
                         }
-                    } else {print ("ERRORE: Non dovrei neanche essere quì visto che non posso prendere nessuna abilità in più");}
+                        case 2:{
+                            premio=lista_random.ElementAt(0).Key;
+                            crea_premio_upgrade(premio,1);
+                            lista_random.Remove(premio);
+                            premio=lista_random.ElementAt(0).Key;
+                            crea_premio_upgrade(premio,2);
+                            crea_premio_upgrade("",3);
+                            break;
+                        }
+                        default:{
+                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                            crea_premio_upgrade(premio,1);
+                            lista_random.Remove(premio);
+                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                            crea_premio_upgrade(premio,2);
+                            lista_random.Remove(premio);
+                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                            crea_premio_upgrade(premio,3);
+                            break;
+                        }
+                    }
+                    pannello_scelta_premio.SetActive(true);
+                    pannello_upgrade.SetActive(false);
                     break;
                 }
             }
@@ -548,9 +593,10 @@ public class upgrade : MonoBehaviour
                 costo=200*(livello+1);
                 break;
             }
+            case "random_race":
             case "random_unity":
             case "random_spell":{
-                costo=1;
+                costo=100;
                 break;
             }
             default:{
