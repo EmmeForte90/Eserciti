@@ -55,6 +55,7 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_c_hero_cooldown;
     public TMPro.TextMeshProUGUI txt_u_c_random_unity;
     public TMPro.TextMeshProUGUI txt_u_c_random_spell;
+    public TMPro.TextMeshProUGUI txt_u_c_random_race;
     public TMPro.TextMeshProUGUI txt_u_c_food;
 
     //lista bottoni "upgrade" delle abilità
@@ -66,6 +67,7 @@ public class upgrade : MonoBehaviour
     public Button B_u_b_hero_cooldown;
     public Button B_u_b_random_unity;
     public Button B_u_b_random_spell;
+    public Button B_u_b_random_race;
     public Button B_u_b_food;
 
     //lista descrizioni delle abilità (cambiano a seconda del livello)
@@ -77,6 +79,7 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_d_hero_cooldown;
     public TMPro.TextMeshProUGUI txt_u_d_random_unity;
     public TMPro.TextMeshProUGUI txt_u_d_random_spell;
+    public TMPro.TextMeshProUGUI txt_u_d_random_race;
     public TMPro.TextMeshProUGUI txt_u_d_food;
 
     private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>(); 
@@ -106,6 +109,7 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_costi.Add("hero_cooldown",txt_u_c_hero_cooldown);
         lista_txt_upgrade_costi.Add("random_unity",txt_u_c_random_unity);
         lista_txt_upgrade_costi.Add("random_spell",txt_u_c_random_spell);
+        lista_txt_upgrade_costi.Add("random_race",txt_u_c_random_race);
         lista_txt_upgrade_costi.Add("food",txt_u_c_food);
 
         lista_B_upgrade_bottoni.Add("melee_damage",B_u_b_melee_damage);
@@ -116,6 +120,7 @@ public class upgrade : MonoBehaviour
         lista_B_upgrade_bottoni.Add("hero_cooldown",B_u_b_hero_cooldown);
         lista_B_upgrade_bottoni.Add("random_unity",B_u_b_random_unity);
         lista_B_upgrade_bottoni.Add("random_spell",B_u_b_random_spell);
+        lista_B_upgrade_bottoni.Add("random_race",B_u_b_random_race);
         lista_B_upgrade_bottoni.Add("food",B_u_b_food);
 
         lista_txt_upgrade_descrizione.Add("melee_damage",txt_u_d_melee_damage);
@@ -126,6 +131,7 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_descrizione.Add("hero_cooldown",txt_u_d_hero_cooldown);
         lista_txt_upgrade_descrizione.Add("random_unity",txt_u_d_random_unity);
         lista_txt_upgrade_descrizione.Add("random_spell",txt_u_d_random_spell);
+        lista_txt_upgrade_descrizione.Add("random_race",txt_u_d_random_race);
         lista_txt_upgrade_descrizione.Add("food",txt_u_d_food);
 
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
@@ -146,6 +152,7 @@ public class upgrade : MonoBehaviour
         txt_denaro.SetText(denaro.ToString());
 
         check_full_abilita();
+        check_full_race();
 
         pannello_scelta_premio.SetActive(true);
         pannello_upgrade.SetActive(false);
@@ -199,6 +206,7 @@ public class upgrade : MonoBehaviour
                 int livello_razza = int.Parse(splitArray[2]);
                 string razza_pupo = splitArray[1];
                 lista_razze_sbloccate.Add(razza_pupo,livello_razza);
+                check_full_race();
                 break;
             }
             case "abilita":{
@@ -342,6 +350,14 @@ public class upgrade : MonoBehaviour
                 if (attachStat.Value<3){return;}
             }
             lista_B_upgrade_bottoni["random_spell"].interactable=false;
+            lista_txt_upgrade_descrizione["random_spell"].SetText("You have unlocked all abilities or don't have space for new one.");
+        }
+    }
+
+    private void check_full_race(){
+        if (lista_razze_sbloccate.Count>=info_comuni.lista_razze_totale.Count){
+            lista_B_upgrade_bottoni["random_race"].interactable=false;
+            lista_txt_upgrade_descrizione["random_race"].SetText("You have unlocked all races for this level.");
         }
     }
 
@@ -453,7 +469,8 @@ public class upgrade : MonoBehaviour
             case "hero_damage":{testo="The abilities of your hero hit +"+((livello+1)*10)+"%";break;}
             case "hero_cooldown":{testo="The cooldown of your hero is -"+((livello+1)*10)+"% reduced";break;}
             case "random_unity":{testo="Choose a random unit of three";break;}
-            case "random_spell":{testo="Choose a random ability of three";break;}
+            case "random_spell":{testo="Scegli tra tre nuove abilita oppure una già esistente ma di livello superiore";break;}
+            case "random_race":{testo="Scegli tra tre nuove razze da sbloccar";break;}
             case "food":{testo="Add +20 space units";break;}
         }
         lista_txt_upgrade_descrizione[abilita].SetText(testo);
@@ -538,6 +555,49 @@ public class upgrade : MonoBehaviour
                         else {
                             livello=lista_abilita[attachStat.Key]+1;
                             if (livello<4){lista_random.Add("abilita-"+attachStat.Key+"-"+livello,1);}
+                        }
+                    }
+                    switch (lista_random.Count()){
+                        case 1:{
+                            premio=lista_random.ElementAt(0).Key;
+                            crea_premio_upgrade(premio,1);
+                            crea_premio_upgrade("",2);
+                            crea_premio_upgrade("",3);
+                            break;
+                        }
+                        case 2:{
+                            premio=lista_random.ElementAt(0).Key;
+                            crea_premio_upgrade(premio,1);
+                            lista_random.Remove(premio);
+                            premio=lista_random.ElementAt(0).Key;
+                            crea_premio_upgrade(premio,2);
+                            crea_premio_upgrade("",3);
+                            break;
+                        }
+                        default:{
+                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                            crea_premio_upgrade(premio,1);
+                            lista_random.Remove(premio);
+                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                            crea_premio_upgrade(premio,2);
+                            lista_random.Remove(premio);
+                            premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
+                            crea_premio_upgrade(premio,3);
+                            break;
+                        }
+                    }
+                    pannello_scelta_premio.SetActive(true);
+                    pannello_upgrade.SetActive(false);
+                    break;
+                }
+                case "random_race":{
+                    string premio="";
+                    int livello=1;
+                    lista_random.Clear();
+                    lista_premi_settati.Clear();
+                    foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
+                        if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
+                            lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
                         }
                     }
                     switch (lista_random.Count()){
