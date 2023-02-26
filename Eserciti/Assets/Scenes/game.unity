@@ -643,7 +643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25766836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -8.609997, z: 10}
+  m_LocalPosition: {x: 42.55, y: -6.709999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3758,12 +3758,12 @@ GameObject:
   - component: {fileID: 84224088}
   - component: {fileID: 84224087}
   m_Layer: 0
-  m_Name: ragnetto_warrior (1)
+  m_Name: ragnetto_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &84224086
 Transform:
   m_ObjectHideFlags: 0
@@ -4772,12 +4772,12 @@ GameObject:
   - component: {fileID: 98523916}
   - component: {fileID: 98523915}
   m_Layer: 0
-  m_Name: formica_rossa_arcer (1)
+  m_Name: formica_rossa_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &98523914
 Transform:
   m_ObjectHideFlags: 0
@@ -11653,12 +11653,12 @@ GameObject:
   - component: {fileID: 157384382}
   - component: {fileID: 157384381}
   m_Layer: 0
-  m_Name: scarafaggio_wizard (1)
+  m_Name: scarafaggio_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &157384380
 Transform:
   m_ObjectHideFlags: 0
@@ -19878,12 +19878,12 @@ GameObject:
   - component: {fileID: 271845610}
   - component: {fileID: 271845609}
   m_Layer: 0
-  m_Name: vespa_wizard (1)
+  m_Name: vespa_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &271845608
 Transform:
   m_ObjectHideFlags: 0
@@ -20105,12 +20105,12 @@ GameObject:
   - component: {fileID: 280022116}
   - component: {fileID: 280022115}
   m_Layer: 0
-  m_Name: ragnetto_wizard (2)
+  m_Name: ragnetto_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &280022114
 Transform:
   m_ObjectHideFlags: 0
@@ -20332,12 +20332,12 @@ GameObject:
   - component: {fileID: 290945111}
   - component: {fileID: 290945110}
   m_Layer: 0
-  m_Name: ape_warrior (2)
+  m_Name: ape_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &290945109
 Transform:
   m_ObjectHideFlags: 0
@@ -22054,7 +22054,7 @@ GameObject:
   - component: {fileID: 357577190}
   - component: {fileID: 357577189}
   m_Layer: 0
-  m_Name: formica_horseman (2)
+  m_Name: formica_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22068,7 +22068,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357577187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -0.3789959, z: 10}
+  m_LocalPosition: {x: 52.27, y: 1.5210018, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24585,12 +24585,12 @@ GameObject:
   - component: {fileID: 380902657}
   - component: {fileID: 380902656}
   m_Layer: 0
-  m_Name: formica_wizard (2)
+  m_Name: formica_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &380902655
 Transform:
   m_ObjectHideFlags: 0
@@ -30619,12 +30619,12 @@ GameObject:
   - component: {fileID: 405347966}
   - component: {fileID: 405347965}
   m_Layer: 0
-  m_Name: zanzara_arcer (1)
+  m_Name: zanzara_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &405347964
 Transform:
   m_ObjectHideFlags: 0
@@ -30846,7 +30846,7 @@ GameObject:
   - component: {fileID: 407995092}
   - component: {fileID: 407995091}
   m_Layer: 0
-  m_Name: coccinella_horseman (1)
+  m_Name: coccinella_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30860,7 +30860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407995089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -8.609997, z: 10}
+  m_LocalPosition: {x: 46.85, y: -6.709999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42112,7 +42112,7 @@ GameObject:
   - component: {fileID: 464223449}
   - component: {fileID: 464223448}
   m_Layer: 0
-  m_Name: ragnetto_horseman (2)
+  m_Name: ragnetto_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42126,7 +42126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464223446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -12.6799965, z: 10}
+  m_LocalPosition: {x: 52.27, y: -10.779999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52769,7 +52769,7 @@ GameObject:
   - component: {fileID: 648529400}
   - component: {fileID: 648529399}
   m_Layer: 0
-  m_Name: scarafaggio_horseman (2)
+  m_Name: scarafaggio_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52783,7 +52783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648529397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -14.559998, z: 10}
+  m_LocalPosition: {x: 52.27, y: -12.66, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52995,12 +52995,12 @@ GameObject:
   - component: {fileID: 665875460}
   - component: {fileID: 665875459}
   m_Layer: 0
-  m_Name: ape_wizard (1)
+  m_Name: ape_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &665875458
 Transform:
   m_ObjectHideFlags: 0
@@ -53389,12 +53389,12 @@ GameObject:
   - component: {fileID: 676800898}
   - component: {fileID: 676800897}
   m_Layer: 0
-  m_Name: coccinella_warrior (2)
+  m_Name: coccinella_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &676800896
 Transform:
   m_ObjectHideFlags: 0
@@ -53949,12 +53949,12 @@ GameObject:
   - component: {fileID: 683014515}
   - component: {fileID: 683014514}
   m_Layer: 0
-  m_Name: formica_rossa_wizard (2)
+  m_Name: formica_rossa_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &683014513
 Transform:
   m_ObjectHideFlags: 0
@@ -55312,7 +55312,7 @@ GameObject:
   - component: {fileID: 723034767}
   - component: {fileID: 723034766}
   m_Layer: 0
-  m_Name: coccinella_horseman (2)
+  m_Name: coccinella_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55326,7 +55326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723034764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.96, y: -8.609997, z: 10}
+  m_LocalPosition: {x: 52.27, y: -6.709999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55764,7 +55764,7 @@ GameObject:
   - component: {fileID: 737209524}
   - component: {fileID: 737209523}
   m_Layer: 0
-  m_Name: formica_horseman (1)
+  m_Name: formica_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55778,7 +55778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737209521}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -0.3789959, z: 10}
+  m_LocalPosition: {x: 46.85, y: 1.5210018, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56439,7 +56439,7 @@ GameObject:
   - component: {fileID: 752449908}
   - component: {fileID: 752449907}
   m_Layer: 0
-  m_Name: zanzara_horseman (2)
+  m_Name: zanzara_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56453,7 +56453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752449905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -18.649998, z: 10}
+  m_LocalPosition: {x: 52.27, y: -16.75, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59380,12 +59380,12 @@ GameObject:
   - component: {fileID: 834490942}
   - component: {fileID: 834490941}
   m_Layer: 0
-  m_Name: mosca_arcer (2)
+  m_Name: mosca_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &834490940
 Transform:
   m_ObjectHideFlags: 0
@@ -59774,12 +59774,12 @@ GameObject:
   - component: {fileID: 846078454}
   - component: {fileID: 846078453}
   m_Layer: 0
-  m_Name: ape_arcer (2)
+  m_Name: ape_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &846078452
 Transform:
   m_ObjectHideFlags: 0
@@ -60453,7 +60453,7 @@ GameObject:
   - component: {fileID: 856183418}
   - component: {fileID: 856183417}
   m_Layer: 0
-  m_Name: calabrone_horseman (2)
+  m_Name: calabrone_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60467,7 +60467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856183415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -6.7099953, z: 10}
+  m_LocalPosition: {x: 52.27, y: -4.8099976, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60679,12 +60679,12 @@ GameObject:
   - component: {fileID: 861058763}
   - component: {fileID: 861058762}
   m_Layer: 0
-  m_Name: scarafaggio_arcer (2)
+  m_Name: scarafaggio_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &861058761
 Transform:
   m_ObjectHideFlags: 0
@@ -60906,12 +60906,12 @@ GameObject:
   - component: {fileID: 869465790}
   - component: {fileID: 869465789}
   m_Layer: 0
-  m_Name: zanzara_warrior (1)
+  m_Name: zanzara_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &869465788
 Transform:
   m_ObjectHideFlags: 0
@@ -61299,12 +61299,12 @@ GameObject:
   - component: {fileID: 896712076}
   - component: {fileID: 896712075}
   m_Layer: 0
-  m_Name: formica_warrior (1)
+  m_Name: formica_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &896712074
 Transform:
   m_ObjectHideFlags: 0
@@ -62589,12 +62589,12 @@ GameObject:
   - component: {fileID: 910451695}
   - component: {fileID: 910451694}
   m_Layer: 0
-  m_Name: calabrone_arcer (1)
+  m_Name: calabrone_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &910451693
 Transform:
   m_ObjectHideFlags: 0
@@ -63583,12 +63583,12 @@ GameObject:
   - component: {fileID: 936005567}
   - component: {fileID: 936005566}
   m_Layer: 0
-  m_Name: ragnetto_arcer (2)
+  m_Name: ragnetto_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &936005565
 Transform:
   m_ObjectHideFlags: 0
@@ -64158,7 +64158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942787982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -2.5199966, z: 10}
+  m_LocalPosition: {x: 42.55, y: -0.61999893, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64370,7 +64370,7 @@ GameObject:
   - component: {fileID: 961206013}
   - component: {fileID: 961206012}
   m_Layer: 0
-  m_Name: vespa_horseman (1)
+  m_Name: vespa_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64384,7 +64384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961206010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -16.579998, z: 10}
+  m_LocalPosition: {x: 46.85, y: -14.68, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66352,12 +66352,12 @@ GameObject:
   - component: {fileID: 998570556}
   - component: {fileID: 998570555}
   m_Layer: 0
-  m_Name: ape_arcer (1)
+  m_Name: ape_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &998570554
 Transform:
   m_ObjectHideFlags: 0
@@ -66746,12 +66746,12 @@ GameObject:
   - component: {fileID: 1010158868}
   - component: {fileID: 1010158867}
   m_Layer: 0
-  m_Name: formica_rossa_warrior (2)
+  m_Name: formica_rossa_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1010158866
 Transform:
   m_ObjectHideFlags: 0
@@ -67424,7 +67424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024891642}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -18.649998, z: 10}
+  m_LocalPosition: {x: 42.55, y: -16.75, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67803,12 +67803,12 @@ GameObject:
   - component: {fileID: 1035352994}
   - component: {fileID: 1035352993}
   m_Layer: 0
-  m_Name: mosca_wizard (2)
+  m_Name: mosca_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1035352992
 Transform:
   m_ObjectHideFlags: 0
@@ -68795,7 +68795,7 @@ GameObject:
   - component: {fileID: 1059301009}
   - component: {fileID: 1059301008}
   m_Layer: 0
-  m_Name: formica_rossa_horseman (1)
+  m_Name: formica_rossa_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68809,7 +68809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059301006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.38, y: -2.5199966, z: 10}
+  m_LocalPosition: {x: 46.85, y: -0.61999893, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70062,12 +70062,12 @@ GameObject:
   - component: {fileID: 1082951976}
   - component: {fileID: 1082951975}
   m_Layer: 0
-  m_Name: calabrone_arcer (2)
+  m_Name: calabrone_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1082951974
 Transform:
   m_ObjectHideFlags: 0
@@ -70566,7 +70566,7 @@ GameObject:
   - component: {fileID: 1104781771}
   - component: {fileID: 1104781770}
   m_Layer: 0
-  m_Name: ragnetto_horseman (1)
+  m_Name: ragnetto_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70580,7 +70580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104781768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -12.6799965, z: 10}
+  m_LocalPosition: {x: 46.85, y: -10.78, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70825,12 +70825,12 @@ GameObject:
   - component: {fileID: 1141642895}
   - component: {fileID: 1141642894}
   m_Layer: 0
-  m_Name: coccinella_arcer (2)
+  m_Name: coccinella_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1141642893
 Transform:
   m_ObjectHideFlags: 0
@@ -72446,12 +72446,12 @@ GameObject:
   - component: {fileID: 1213653811}
   - component: {fileID: 1213653810}
   m_Layer: 0
-  m_Name: calabrone_warrior (1)
+  m_Name: calabrone_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1213653809
 Transform:
   m_ObjectHideFlags: 0
@@ -73459,12 +73459,12 @@ GameObject:
   - component: {fileID: 1262105692}
   - component: {fileID: 1262105691}
   m_Layer: 0
-  m_Name: formica_arcer (1)
+  m_Name: formica_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1262105690
 Transform:
   m_ObjectHideFlags: 0
@@ -74210,12 +74210,12 @@ GameObject:
   - component: {fileID: 1265445461}
   - component: {fileID: 1265445460}
   m_Layer: 0
-  m_Name: coccinella_warrior (1)
+  m_Name: coccinella_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1265445459
 Transform:
   m_ObjectHideFlags: 0
@@ -74938,12 +74938,12 @@ GameObject:
   - component: {fileID: 1289929877}
   - component: {fileID: 1289929876}
   m_Layer: 0
-  m_Name: vespa_warrior (1)
+  m_Name: vespa_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1289929875
 Transform:
   m_ObjectHideFlags: 0
@@ -75391,12 +75391,12 @@ GameObject:
   - component: {fileID: 1293807653}
   - component: {fileID: 1293807652}
   m_Layer: 0
-  m_Name: formica_arcer (2)
+  m_Name: formica_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1293807651
 Transform:
   m_ObjectHideFlags: 0
@@ -77085,12 +77085,12 @@ GameObject:
   - component: {fileID: 1331193080}
   - component: {fileID: 1331193079}
   m_Layer: 0
-  m_Name: scarafaggio_arcer (1)
+  m_Name: scarafaggio_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1331193078
 Transform:
   m_ObjectHideFlags: 0
@@ -83027,12 +83027,12 @@ GameObject:
   - component: {fileID: 1361079942}
   - component: {fileID: 1361079941}
   m_Layer: 0
-  m_Name: calabrone_wizard (2)
+  m_Name: calabrone_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1361079940
 Transform:
   m_ObjectHideFlags: 0
@@ -83556,12 +83556,12 @@ GameObject:
   - component: {fileID: 1372686347}
   - component: {fileID: 1372686346}
   m_Layer: 0
-  m_Name: formica_warrior (2)
+  m_Name: formica_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1372686345
 Transform:
   m_ObjectHideFlags: 0
@@ -83782,12 +83782,12 @@ GameObject:
   - component: {fileID: 1380919391}
   - component: {fileID: 1380919390}
   m_Layer: 0
-  m_Name: ragnetto_wizard (1)
+  m_Name: ragnetto_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1380919389
 Transform:
   m_ObjectHideFlags: 0
@@ -84176,7 +84176,7 @@ GameObject:
   - component: {fileID: 1395789541}
   - component: {fileID: 1395789540}
   m_Layer: 0
-  m_Name: ape_horseman (1)
+  m_Name: ape_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84190,7 +84190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395789538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -4.569996, z: 10}
+  m_LocalPosition: {x: 46.85, y: -2.6699982, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85533,7 +85533,7 @@ GameObject:
   - component: {fileID: 1427266979}
   - component: {fileID: 1427266978}
   m_Layer: 0
-  m_Name: scarafaggio_horseman (1)
+  m_Name: scarafaggio_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85547,7 +85547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427266976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -14.559998, z: 10}
+  m_LocalPosition: {x: 46.85, y: -12.66, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85759,12 +85759,12 @@ GameObject:
   - component: {fileID: 1431430539}
   - component: {fileID: 1431430538}
   m_Layer: 0
-  m_Name: calabrone_wizard (1)
+  m_Name: calabrone_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1431430537
 Transform:
   m_ObjectHideFlags: 0
@@ -87850,12 +87850,12 @@ GameObject:
   - component: {fileID: 1456962503}
   - component: {fileID: 1456962502}
   m_Layer: 0
-  m_Name: vespa_warrior (2)
+  m_Name: vespa_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1456962501
 Transform:
   m_ObjectHideFlags: 0
@@ -89011,12 +89011,12 @@ GameObject:
   - component: {fileID: 1485414374}
   - component: {fileID: 1485414373}
   m_Layer: 0
-  m_Name: zanzara_warrior (2)
+  m_Name: zanzara_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1485414372
 Transform:
   m_ObjectHideFlags: 0
@@ -92163,7 +92163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554323502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -14.559998, z: 10}
+  m_LocalPosition: {x: 42.55, y: -12.66, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93178,12 +93178,12 @@ GameObject:
   - component: {fileID: 1582338310}
   - component: {fileID: 1582338309}
   m_Layer: 0
-  m_Name: coccinella_wizard (2)
+  m_Name: coccinella_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1582338308
 Transform:
   m_ObjectHideFlags: 0
@@ -93405,12 +93405,12 @@ GameObject:
   - component: {fileID: 1585465079}
   - component: {fileID: 1585465078}
   m_Layer: 0
-  m_Name: scarafaggio_wizard (2)
+  m_Name: scarafaggio_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1585465077
 Transform:
   m_ObjectHideFlags: 0
@@ -94913,7 +94913,7 @@ GameObject:
   - component: {fileID: 1600725801}
   - component: {fileID: 1600725800}
   m_Layer: 0
-  m_Name: calabrone_horseman (1)
+  m_Name: calabrone_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94927,7 +94927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600725798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -6.7099953, z: 10}
+  m_LocalPosition: {x: 46.85, y: -4.8099976, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95366,12 +95366,12 @@ GameObject:
   - component: {fileID: 1609751427}
   - component: {fileID: 1609751426}
   m_Layer: 0
-  m_Name: ape_warrior (1)
+  m_Name: ape_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1609751425
 Transform:
   m_ObjectHideFlags: 0
@@ -95592,12 +95592,12 @@ GameObject:
   - component: {fileID: 1610889823}
   - component: {fileID: 1610889822}
   m_Layer: 0
-  m_Name: vespa_wizard (2)
+  m_Name: vespa_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1610889821
 Transform:
   m_ObjectHideFlags: 0
@@ -96440,12 +96440,12 @@ GameObject:
   - component: {fileID: 1644346064}
   - component: {fileID: 1644346063}
   m_Layer: 0
-  m_Name: formica_wizard (1)
+  m_Name: formica_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1644346062
 Transform:
   m_ObjectHideFlags: 0
@@ -97015,7 +97015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652636805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -4.569996, z: 10}
+  m_LocalPosition: {x: 42.55, y: -2.6699982, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97355,12 +97355,12 @@ GameObject:
   - component: {fileID: 1657729846}
   - component: {fileID: 1657729845}
   m_Layer: 0
-  m_Name: zanzara_arcer (2)
+  m_Name: zanzara_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1657729844
 Transform:
   m_ObjectHideFlags: 0
@@ -97658,7 +97658,7 @@ GameObject:
   - component: {fileID: 1689932503}
   - component: {fileID: 1689932502}
   m_Layer: 0
-  m_Name: zanzara_horseman (1)
+  m_Name: zanzara_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97672,7 +97672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689932500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -18.649998, z: 10}
+  m_LocalPosition: {x: 46.85, y: -16.75, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97884,12 +97884,12 @@ GameObject:
   - component: {fileID: 1695171191}
   - component: {fileID: 1695171190}
   m_Layer: 0
-  m_Name: scarafaggio_warrior (2)
+  m_Name: scarafaggio_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1695171189
 Transform:
   m_ObjectHideFlags: 0
@@ -99547,12 +99547,12 @@ GameObject:
   - component: {fileID: 1751318416}
   - component: {fileID: 1751318415}
   m_Layer: 0
-  m_Name: coccinella_arcer (1)
+  m_Name: coccinella_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1751318414
 Transform:
   m_ObjectHideFlags: 0
@@ -100577,12 +100577,12 @@ GameObject:
   - component: {fileID: 1777137548}
   - component: {fileID: 1777137547}
   m_Layer: 0
-  m_Name: calabrone_warrior (2)
+  m_Name: calabrone_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1777137546
 Transform:
   m_ObjectHideFlags: 0
@@ -101542,12 +101542,12 @@ GameObject:
   - component: {fileID: 1834726777}
   - component: {fileID: 1834726776}
   m_Layer: 0
-  m_Name: mosca_wizard (1)
+  m_Name: mosca_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1834726775
 Transform:
   m_ObjectHideFlags: 0
@@ -102523,12 +102523,12 @@ GameObject:
   - component: {fileID: 1864858004}
   - component: {fileID: 1864858003}
   m_Layer: 0
-  m_Name: mosca_warrior (2)
+  m_Name: mosca_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1864858002
 Transform:
   m_ObjectHideFlags: 0
@@ -102749,12 +102749,12 @@ GameObject:
   - component: {fileID: 1869492901}
   - component: {fileID: 1869492900}
   m_Layer: 0
-  m_Name: formica_rossa_warrior (1)
+  m_Name: formica_rossa_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1869492899
 Transform:
   m_ObjectHideFlags: 0
@@ -102975,12 +102975,12 @@ GameObject:
   - component: {fileID: 1877618260}
   - component: {fileID: 1877618259}
   m_Layer: 0
-  m_Name: zanzara_wizard (2)
+  m_Name: zanzara_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1877618258
 Transform:
   m_ObjectHideFlags: 0
@@ -103216,7 +103216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880945263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -12.6799965, z: 10}
+  m_LocalPosition: {x: 42.55, y: -10.779999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103895,7 +103895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890424247}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -0.3789959, z: 10}
+  m_LocalPosition: {x: 42.55, y: 1.5210018, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104107,12 +104107,12 @@ GameObject:
   - component: {fileID: 1893260927}
   - component: {fileID: 1893260926}
   m_Layer: 0
-  m_Name: vespa_arcer (1)
+  m_Name: vespa_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1893260925
 Transform:
   m_ObjectHideFlags: 0
@@ -109469,12 +109469,12 @@ GameObject:
   - component: {fileID: 1917806319}
   - component: {fileID: 1917806318}
   m_Layer: 0
-  m_Name: vespa_arcer (2)
+  m_Name: vespa_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1917806317
 Transform:
   m_ObjectHideFlags: 0
@@ -109696,12 +109696,12 @@ GameObject:
   - component: {fileID: 1918995957}
   - component: {fileID: 1918995956}
   m_Layer: 0
-  m_Name: ape_wizard (2)
+  m_Name: ape_wizard_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1918995955
 Transform:
   m_ObjectHideFlags: 0
@@ -115149,7 +115149,7 @@ GameObject:
   - component: {fileID: 1938150671}
   - component: {fileID: 1938150670}
   m_Layer: 0
-  m_Name: ape_horseman (2)
+  m_Name: ape_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115163,7 +115163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938150668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -4.569996, z: 10}
+  m_LocalPosition: {x: 52.27, y: -2.6699982, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -115389,7 +115389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964582851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -6.7099953, z: 10}
+  m_LocalPosition: {x: 42.55, y: -4.8099976, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116296,12 +116296,12 @@ GameObject:
   - component: {fileID: 1980439722}
   - component: {fileID: 1980439721}
   m_Layer: 0
-  m_Name: zanzara_wizard (1)
+  m_Name: zanzara_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1980439720
 Transform:
   m_ObjectHideFlags: 0
@@ -117732,7 +117732,7 @@ GameObject:
   - component: {fileID: 2009298904}
   - component: {fileID: 2009298903}
   m_Layer: 0
-  m_Name: mosca_horseman (1)
+  m_Name: mosca_horseman_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117746,7 +117746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009298901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.380001, y: -10.699997, z: 10}
+  m_LocalPosition: {x: 46.85, y: -8.799999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118351,12 +118351,12 @@ GameObject:
   - component: {fileID: 2023098708}
   - component: {fileID: 2023098707}
   m_Layer: 0
-  m_Name: scarafaggio_warrior (1)
+  m_Name: scarafaggio_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2023098706
 Transform:
   m_ObjectHideFlags: 0
@@ -118911,12 +118911,12 @@ GameObject:
   - component: {fileID: 2032378464}
   - component: {fileID: 2032378463}
   m_Layer: 0
-  m_Name: mosca_arcer (1)
+  m_Name: mosca_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2032378462
 Transform:
   m_ObjectHideFlags: 0
@@ -119152,7 +119152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035574748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -10.699997, z: 10}
+  m_LocalPosition: {x: 42.55, y: -8.799999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119364,12 +119364,12 @@ GameObject:
   - component: {fileID: 2037144339}
   - component: {fileID: 2037144338}
   m_Layer: 0
-  m_Name: ragnetto_arcer (1)
+  m_Name: ragnetto_arcer_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2037144337
 Transform:
   m_ObjectHideFlags: 0
@@ -120687,7 +120687,7 @@ GameObject:
   - component: {fileID: 2066931918}
   - component: {fileID: 2066931917}
   m_Layer: 0
-  m_Name: formica_rossa_horseman (2)
+  m_Name: formica_rossa_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120701,7 +120701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066931915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9599981, y: -2.5199966, z: 10}
+  m_LocalPosition: {x: 52.27, y: -0.61999893, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -120913,12 +120913,12 @@ GameObject:
   - component: {fileID: 2068233222}
   - component: {fileID: 2068233221}
   m_Layer: 0
-  m_Name: mosca_warrior (1)
+  m_Name: mosca_warrior_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2068233220
 Transform:
   m_ObjectHideFlags: 0
@@ -121609,12 +121609,12 @@ GameObject:
   - component: {fileID: 2087206037}
   - component: {fileID: 2087206036}
   m_Layer: 0
-  m_Name: ragnetto_warrior (2)
+  m_Name: ragnetto_warrior_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2087206035
 Transform:
   m_ObjectHideFlags: 0
@@ -122229,7 +122229,7 @@ GameObject:
   - component: {fileID: 2094959654}
   - component: {fileID: 2094959653}
   m_Layer: 0
-  m_Name: mosca_horseman (2)
+  m_Name: mosca_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122243,7 +122243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094959651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -10.699997, z: 10}
+  m_LocalPosition: {x: 52.27, y: -8.799999, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122455,12 +122455,12 @@ GameObject:
   - component: {fileID: 2104320561}
   - component: {fileID: 2104320560}
   m_Layer: 0
-  m_Name: formica_rossa_arcer (2)
+  m_Name: formica_rossa_arcer_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2104320559
 Transform:
   m_ObjectHideFlags: 0
@@ -122682,12 +122682,12 @@ GameObject:
   - component: {fileID: 2106677430}
   - component: {fileID: 2106677429}
   m_Layer: 0
-  m_Name: coccinella_wizard (1)
+  m_Name: coccinella_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2106677428
 Transform:
   m_ObjectHideFlags: 0
@@ -123090,7 +123090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123417252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -16.579998, z: 10}
+  m_LocalPosition: {x: 42.55, y: -14.68, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124004,7 +124004,7 @@ GameObject:
   - component: {fileID: 2140471447}
   - component: {fileID: 2140471446}
   m_Layer: 0
-  m_Name: vespa_horseman (2)
+  m_Name: vespa_horseman_3
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124018,7 +124018,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140471444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.959999, y: -16.58, z: 10}
+  m_LocalPosition: {x: 52.27, y: -14.680002, z: 10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124910,12 +124910,12 @@ GameObject:
   - component: {fileID: 2146126951}
   - component: {fileID: 2146126950}
   m_Layer: 0
-  m_Name: formica_rossa_wizard (1)
+  m_Name: formica_rossa_wizard_2
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2146126949
 Transform:
   m_ObjectHideFlags: 0
