@@ -7,18 +7,19 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, string> lista_abilita_nome = new Dictionary<string, string>();
     public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
+    public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown_partenza = new Dictionary<string, Dictionary<int, int>>();
 
     public Dictionary<string, string> lista_razze_totale = new Dictionary<string, string>();
     public Dictionary<string, string> lista_razza_pupi_nome = new Dictionary<string, string>();
     public Dictionary<string, string> lista_pupi_descrizione = new Dictionary<string, string>();
     public Dictionary<string, string> lista_classi_nome = new Dictionary<string, string>();
-    public Dictionary<string, float> lista_costo_unita_razza = new Dictionary<string, float>();
+    public Dictionary<string, int> lista_costo_unita_razza = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Awake(){
-        lista_costo_unita_razza.Add("formiche",20f);
-        lista_costo_unita_razza.Add("mosche",15f);
-        lista_costo_unita_razza.Add("api",30f);
-        lista_costo_unita_razza.Add("ragnetti",30f);
+        lista_costo_unita_razza.Add("formiche",30);
+        lista_costo_unita_razza.Add("mosche",30);
+        lista_costo_unita_razza.Add("api",30);
+        lista_costo_unita_razza.Add("ragnetti",30);
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
@@ -34,7 +35,6 @@ public class info_comuni : MonoBehaviour
         lista_pupi_descrizione.Add("mosche","Cheap cost but frails");
         lista_pupi_descrizione.Add("api","Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
         lista_pupi_descrizione.Add("ragnetti","Ogni volta che colpiscono, rallentano il bersaglio. Sono immuni da questo effetto da parte di altri ragni");
-
 
         //NB: Il singolare a destra è importante per definire la tipologia del pupo negli upgrade
         lista_razze_totale.Add("formiche","formica");
@@ -86,6 +86,14 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["armatura"].Add(1,30);
         lista_abilita_cooldown["armatura"].Add(2,30);
         lista_abilita_cooldown["armatura"].Add(3,30);
+
+        //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
+        foreach(KeyValuePair<string,Dictionary<int,int>> attachStat in lista_abilita_cooldown){
+            lista_abilita_cooldown_partenza.Add(attachStat.Key,new Dictionary<int, int>());
+            for (int i=1;i<=3;i++){
+                lista_abilita_cooldown_partenza[attachStat.Key].Add(i,attachStat.Value[i]/2);
+            }
+        }
     }
 
     // Update is called once per frame

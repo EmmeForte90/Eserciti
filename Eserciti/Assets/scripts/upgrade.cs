@@ -21,6 +21,7 @@ public class upgrade : MonoBehaviour
     public GameObject cont_upgrade_1;
     public GameObject cont_upgrade_2;
     public GameObject cont_upgrade_3;
+    public GameObject cont_upgrade_unlock_unity_tier;
 
     public Image img_premio_upgrade_1;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_1;
@@ -36,6 +37,7 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI descrizione_premio_upgrade_3;
     private Dictionary<int, string> lista_premi_settati = new Dictionary<int, string>();
     private Dictionary<int, int> lista_premi_settati_num_pupi = new Dictionary<int, int>();
+    private Dictionary<int, int> lista_premi_settati_monete = new Dictionary<int, int>();
 
     public TMPro.TextMeshProUGUI txt_next_stage;
     public TMPro.TextMeshProUGUI txt_denaro;
@@ -43,6 +45,7 @@ public class upgrade : MonoBehaviour
     private string path_xml;
     private string id_hero;
     private int num_ondata;
+    private int tier_unity_sbloccato;
     private int i;
     private int num_max_abilita=6;
 
@@ -53,9 +56,11 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_c_health;
     public TMPro.TextMeshProUGUI txt_u_c_hero_damage;
     public TMPro.TextMeshProUGUI txt_u_c_hero_cooldown;
-    public TMPro.TextMeshProUGUI txt_u_c_random_unity;
+    public TMPro.TextMeshProUGUI txt_u_c_random_unity_1;
     public TMPro.TextMeshProUGUI txt_u_c_random_spell;
     public TMPro.TextMeshProUGUI txt_u_c_random_race;
+    public TMPro.TextMeshProUGUI txt_u_c_random_unity_2;
+    public TMPro.TextMeshProUGUI txt_u_c_random_unity_3;
     public TMPro.TextMeshProUGUI txt_u_c_food;
 
     //lista bottoni "upgrade" delle abilità
@@ -65,9 +70,11 @@ public class upgrade : MonoBehaviour
     public Button B_u_b_health;
     public Button B_u_b_hero_damage;
     public Button B_u_b_hero_cooldown;
-    public Button B_u_b_random_unity;
+    public Button B_u_b_random_unity_1;
     public Button B_u_b_random_spell;
     public Button B_u_b_random_race;
+    public Button B_u_b_random_unity_2;
+    public Button B_u_b_random_unity_3;
     public Button B_u_b_food;
 
     //lista descrizioni delle abilità (cambiano a seconda del livello)
@@ -77,9 +84,11 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_d_health;
     public TMPro.TextMeshProUGUI txt_u_d_hero_damage;
     public TMPro.TextMeshProUGUI txt_u_d_hero_cooldown;
-    public TMPro.TextMeshProUGUI txt_u_d_random_unity;
+    public TMPro.TextMeshProUGUI txt_u_d_random_unity_1;
     public TMPro.TextMeshProUGUI txt_u_d_random_spell;
     public TMPro.TextMeshProUGUI txt_u_d_random_race;
+    public TMPro.TextMeshProUGUI txt_u_d_random_unity_2;
+    public TMPro.TextMeshProUGUI txt_u_d_random_unity_3;
     public TMPro.TextMeshProUGUI txt_u_d_food;
 
     private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>(); 
@@ -94,6 +103,8 @@ public class upgrade : MonoBehaviour
 
     public Dictionary<string, int> lista_razze_sbloccate = new Dictionary<string, int>();
 
+    private int valore_monete_premio=100;
+
     // Start is called before the first frame update
     void Start(){
         get_all_blocchi_testo_unita();
@@ -107,9 +118,11 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_costi.Add("health",txt_u_c_health);
         lista_txt_upgrade_costi.Add("hero_damage",txt_u_c_hero_damage);
         lista_txt_upgrade_costi.Add("hero_cooldown",txt_u_c_hero_cooldown);
-        lista_txt_upgrade_costi.Add("random_unity",txt_u_c_random_unity);
+        lista_txt_upgrade_costi.Add("random_unity_1",txt_u_c_random_unity_1);
         lista_txt_upgrade_costi.Add("random_spell",txt_u_c_random_spell);
         lista_txt_upgrade_costi.Add("random_race",txt_u_c_random_race);
+        lista_txt_upgrade_costi.Add("random_unity_2",txt_u_c_random_unity_2);
+        lista_txt_upgrade_costi.Add("random_unity_3",txt_u_c_random_unity_3);
         lista_txt_upgrade_costi.Add("food",txt_u_c_food);
 
         lista_B_upgrade_bottoni.Add("melee_damage",B_u_b_melee_damage);
@@ -118,9 +131,11 @@ public class upgrade : MonoBehaviour
         lista_B_upgrade_bottoni.Add("health",B_u_b_health);
         lista_B_upgrade_bottoni.Add("hero_damage",B_u_b_hero_damage);
         lista_B_upgrade_bottoni.Add("hero_cooldown",B_u_b_hero_cooldown);
-        lista_B_upgrade_bottoni.Add("random_unity",B_u_b_random_unity);
+        lista_B_upgrade_bottoni.Add("random_unity_1",B_u_b_random_unity_1);
         lista_B_upgrade_bottoni.Add("random_spell",B_u_b_random_spell);
         lista_B_upgrade_bottoni.Add("random_race",B_u_b_random_race);
+        lista_B_upgrade_bottoni.Add("random_unity_2",B_u_b_random_unity_2);
+        lista_B_upgrade_bottoni.Add("random_unity_3",B_u_b_random_unity_3);
         lista_B_upgrade_bottoni.Add("food",B_u_b_food);
 
         lista_txt_upgrade_descrizione.Add("melee_damage",txt_u_d_melee_damage);
@@ -129,9 +144,11 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_descrizione.Add("health",txt_u_d_health);
         lista_txt_upgrade_descrizione.Add("hero_damage",txt_u_d_hero_damage);
         lista_txt_upgrade_descrizione.Add("hero_cooldown",txt_u_d_hero_cooldown);
-        lista_txt_upgrade_descrizione.Add("random_unity",txt_u_d_random_unity);
+        lista_txt_upgrade_descrizione.Add("random_unity_1",txt_u_d_random_unity_1);
         lista_txt_upgrade_descrizione.Add("random_spell",txt_u_d_random_spell);
         lista_txt_upgrade_descrizione.Add("random_race",txt_u_d_random_race);
+        lista_txt_upgrade_descrizione.Add("random_unity_2",txt_u_d_random_unity_2);
+        lista_txt_upgrade_descrizione.Add("random_unity_3",txt_u_d_random_unity_3);
         lista_txt_upgrade_descrizione.Add("food",txt_u_d_food);
 
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
@@ -159,6 +176,9 @@ public class upgrade : MonoBehaviour
 
         get_premi_upgrade();
         //riempi_blocchi_testo_unita();     //viene già fatto al momento della scelta del premio...
+
+        print ("tier: "+tier_unity_sbloccato);
+        if (tier_unity_sbloccato<2){cont_upgrade_unity_tier_3.SetActive(false);}
     }
 
     private void get_all_blocchi_testo_unita(){
@@ -193,8 +213,7 @@ public class upgrade : MonoBehaviour
                 int num_pupi=lista_premi_settati_num_pupi[numero];
                 string classe_pupo = splitArray[2];
                 int livello_pupo = int.Parse(splitArray[3]);
-                monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
-                monete=100-monete;
+                monete=lista_premi_settati_monete[numero];
 
                 string pupo_xml=info_comuni.lista_razze_totale[razza_pupo]+"_"+classe_pupo;
 
@@ -220,7 +239,7 @@ public class upgrade : MonoBehaviour
             case "denaro":{
                 int livello = int.Parse(splitArray[1]);
                 switch (livello){
-                    default:{monete=50;break;}
+                    default:{monete=valore_monete_premio;break;}
                 }
                 break;
             }
@@ -233,6 +252,16 @@ public class upgrade : MonoBehaviour
         pannello_upgrade.SetActive(true);
 
         riempi_blocchi_testo_unita();
+        check_all_button();
+    }
+
+    private void check_all_button(){
+        int costo;
+        foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
+            costo=ritorna_costo_abilita(attachStat.Key);
+            if (costo>denaro){lista_B_upgrade_bottoni[attachStat.Key].interactable=false;}
+            else {lista_B_upgrade_bottoni[attachStat.Key].interactable=true;}
+        }
     }
 
     private void get_premi_upgrade(){
@@ -376,13 +405,22 @@ public class upgrade : MonoBehaviour
             switch (tipo){
                 case "pupo":{
                     string razza_pupo = splitArray[1];
-                    int num_pupi=Random.Range(1,4);
                     string classe_pupo = splitArray[2];
                     int livello_pupo = int.Parse(splitArray[3]);
-                    monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
-                    monete=100-monete;
-                    txt_monete="+ "+monete+" gold";
+                    int num_pupi=Random.Range(1,4);
+                    //monete=(int)(info_comuni.lista_costo_unita_razza[razza_pupo]*num_pupi);
+                    //monete=valore_monete_premio-monete;
+
+                    //nuovo sistema:
+                    num_pupi=1; if (razza_pupo=="mosche"){num_pupi=2;}
+
+                    print (splitArray.Count());
+                    if (splitArray.Count()<5){
+                        monete=valore_monete_premio-(info_comuni.lista_costo_unita_razza[razza_pupo]*livello_pupo);
+                        txt_monete="+ "+monete+" gold";
+                    }
                     lista_premi_settati_num_pupi.Add(num_cont_premio,num_pupi);
+                    lista_premi_settati_monete.Add(num_cont_premio,monete);
 
                     titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo];
                     descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
@@ -410,7 +448,7 @@ public class upgrade : MonoBehaviour
                     monete=0;
                     int livello = int.Parse(splitArray[1]);
                     switch (livello){
-                        default:{monete=100;break;}
+                        default:{monete=valore_monete_premio;break;}
                     }
                     txt_monete="+ "+monete+" gold";
                     titolo="Gold!";
@@ -468,9 +506,19 @@ public class upgrade : MonoBehaviour
             case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
             case "hero_damage":{testo="The abilities of your hero hit +"+((livello+1)*10)+"%";break;}
             case "hero_cooldown":{testo="The cooldown of your hero is -"+((livello+1)*10)+"% reduced";break;}
-            case "random_unity":{testo="Choose a random unit of three";break;}
+            case "random_unity_1":{testo="Scegli tra tre unità random delle razze sbloccate.";break;}
             case "random_spell":{testo="Scegli tra tre nuove abilita oppure una già esistente ma di livello superiore";break;}
-            case "random_race":{testo="Scegli tra tre nuove razze da sbloccar";break;}
+            case "random_race":{testo="Scegli tra tre nuove razze da sbloccare";break;}
+            case "random_unity_2":{
+                if (tier_unity_sbloccato<2){testo="Sblocca la possibilità delle unità di livello 2.";}
+                else {testo="Scegli tra tre unità random delle razze sbloccate di livello 2.";}
+                break;
+            }
+            case "random_unity_3":{
+                if (tier_unity_sbloccato<3){testo="Sblocca la possibilità delle unità di livello 3.";}
+                else {testo="Scegli tra tre unità random delle razze sbloccate di livello 3.";}
+                break;
+            }
             case "food":{testo="Add +20 space units";break;}
         }
         lista_txt_upgrade_descrizione[abilita].SetText(testo);
@@ -516,18 +564,23 @@ public class upgrade : MonoBehaviour
                 }
             }
             switch (abilita){
-                case "random_unity":{
+                case "random_unity_3":
+                case "random_unity_2":
+                case "random_unity_1":{
                     string pupo_singolo="";
                     int livello=1;
+                    if (abilita=="random_unity_2"){livello=2;}
+                    else if (abilita=="random_unity_3"){livello=3;}
                     string premio="";
                     lista_random.Clear();
                     lista_premi_settati.Clear();
                     lista_premi_settati_num_pupi.Clear();
+                    lista_premi_settati_monete.Clear();
                     foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
                         pupo_singolo=attachStat.Key;
-                        lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello,1);
-                        lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello,1);
-                        lista_random.Add("pupo-"+pupo_singolo+"-wizard-"+livello,1);
+                        lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello+"-0",1);
+                        lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello+"-0",1);
+                        lista_random.Add("pupo-"+pupo_singolo+"-wizard-"+livello+"-0",1);
                     }
                     premio=lista_random.ElementAt(Random.Range(0, lista_random.Count)).Key;
                     crea_premio_upgrade(premio,1);
@@ -653,8 +706,21 @@ public class upgrade : MonoBehaviour
                 costo=200*(livello+1);
                 break;
             }
+            case "random_unity_1":{
+                costo=30+(5*livello);
+                break;
+            }
+            case "random_unity_2":{
+                if (tier_unity_sbloccato>1){costo=60+(5*livello);}
+                else {costo=400;}
+                break;
+            }
+            case "random_unity_3":{
+                if (tier_unity_sbloccato>2){costo=90+(5*livello);}
+                else {costo=2000;}
+                break;
+            }
             case "random_race":
-            case "random_unity":
             case "random_spell":{
                 costo=100;
                 break;
@@ -689,6 +755,7 @@ public class upgrade : MonoBehaviour
         foreach(XmlElement node in xml_game.SelectNodes("game")){
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
+            tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
             denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){
@@ -723,7 +790,7 @@ public class upgrade : MonoBehaviour
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
 
         string xml_content="";
-        xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' denaro='"+denaro+"'>";
+        xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' denaro='"+denaro+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"'>";
         xml_content+="\n\t<lista_abilita>";
         foreach(KeyValuePair<string,int> attachStat in lista_abilita){
             xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";

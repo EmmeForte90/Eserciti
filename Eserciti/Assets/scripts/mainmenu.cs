@@ -82,8 +82,8 @@ public class mainmenu : MonoBehaviour
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
-                lista_pupetti.Add("formica_warrior",2);
-                lista_pupetti.Add("formica_arcer",1);
+                lista_pupetti.Add("formica_warrior",4);
+                lista_pupetti.Add("formica_arcer",2);
                 lista_razze_sbloccate.Add("formiche",1);
                 
                 denaro=30;
@@ -149,16 +149,18 @@ public class mainmenu : MonoBehaviour
     }
 
     public void inizia_nuova_partita(){
-        denaro=30;
+        denaro=0;
         livelli_upgrade.Add("melee_damage",0);
         livelli_upgrade.Add("distance_damage",0);
         livelli_upgrade.Add("spell_damage",0);
         livelli_upgrade.Add("health",0);
         livelli_upgrade.Add("hero_damage",0);
         livelli_upgrade.Add("hero_cooldown",0);
-        livelli_upgrade.Add("random_unity",0);
+        livelli_upgrade.Add("random_unity_1",0);
         livelli_upgrade.Add("random_spell",0);
         livelli_upgrade.Add("random_race",0);
+        livelli_upgrade.Add("random_unity_2",0);
+        livelli_upgrade.Add("random_unity_3",0);
         livelli_upgrade.Add("food",0);
 
         //magari fare uno switch a seconda dell'eroe scelto cosicchè da poter scegliere in santa pace poi i vari livelli di upgrade ed anche per il denaro scelto.
@@ -168,7 +170,7 @@ public class mainmenu : MonoBehaviour
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
 
         xml_content="";
-        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"'>";
+        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"' tier_unity_sbloccato='1'>";
         xml_content+="\n\t<lista_abilita>";
         foreach(KeyValuePair<string,int> attachStat in lista_abilita){
             xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";

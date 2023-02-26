@@ -283,7 +283,6 @@ public class basic_rule : MonoBehaviour
     }
 
     private void morte_personaggio(){
-        print (int_key_pupo+" è morto!");
         bool_morto=true;
         barra_energia.SetActive(false);
         barra_energia_vuota.SetActive(false);
