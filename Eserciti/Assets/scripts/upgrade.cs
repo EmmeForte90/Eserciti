@@ -22,6 +22,8 @@ public class upgrade : MonoBehaviour
     public GameObject cont_upgrade_2;
     public GameObject cont_upgrade_3;
     public GameObject cont_upgrade_unlock_unity_tier;
+    public GameObject cont_upgrade_unity_tier_2;
+    public GameObject cont_upgrade_unity_tier_3;
 
     public Image img_premio_upgrade_1;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_1;
@@ -61,6 +63,7 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_c_random_race;
     public TMPro.TextMeshProUGUI txt_u_c_random_unity_2;
     public TMPro.TextMeshProUGUI txt_u_c_random_unity_3;
+    public TMPro.TextMeshProUGUI txt_u_c_unlock_next_unity_tier;
     public TMPro.TextMeshProUGUI txt_u_c_food;
 
     //lista bottoni "upgrade" delle abilità
@@ -75,6 +78,7 @@ public class upgrade : MonoBehaviour
     public Button B_u_b_random_race;
     public Button B_u_b_random_unity_2;
     public Button B_u_b_random_unity_3;
+    public Button B_u_b_unlock_next_unity_tier;
     public Button B_u_b_food;
 
     //lista descrizioni delle abilità (cambiano a seconda del livello)
@@ -89,6 +93,7 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_d_random_race;
     public TMPro.TextMeshProUGUI txt_u_d_random_unity_2;
     public TMPro.TextMeshProUGUI txt_u_d_random_unity_3;
+    public TMPro.TextMeshProUGUI txt_u_d_unlock_next_unity_tier;
     public TMPro.TextMeshProUGUI txt_u_d_food;
 
     private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>(); 
@@ -123,6 +128,7 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_costi.Add("random_race",txt_u_c_random_race);
         lista_txt_upgrade_costi.Add("random_unity_2",txt_u_c_random_unity_2);
         lista_txt_upgrade_costi.Add("random_unity_3",txt_u_c_random_unity_3);
+        lista_txt_upgrade_costi.Add("unlock_next_unity_tier",txt_u_c_unlock_next_unity_tier);
         lista_txt_upgrade_costi.Add("food",txt_u_c_food);
 
         lista_B_upgrade_bottoni.Add("melee_damage",B_u_b_melee_damage);
@@ -136,6 +142,7 @@ public class upgrade : MonoBehaviour
         lista_B_upgrade_bottoni.Add("random_race",B_u_b_random_race);
         lista_B_upgrade_bottoni.Add("random_unity_2",B_u_b_random_unity_2);
         lista_B_upgrade_bottoni.Add("random_unity_3",B_u_b_random_unity_3);
+        lista_B_upgrade_bottoni.Add("unlock_next_unity_tier",B_u_b_unlock_next_unity_tier);
         lista_B_upgrade_bottoni.Add("food",B_u_b_food);
 
         lista_txt_upgrade_descrizione.Add("melee_damage",txt_u_d_melee_damage);
@@ -149,6 +156,7 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_descrizione.Add("random_race",txt_u_d_random_race);
         lista_txt_upgrade_descrizione.Add("random_unity_2",txt_u_d_random_unity_2);
         lista_txt_upgrade_descrizione.Add("random_unity_3",txt_u_d_random_unity_3);
+        lista_txt_upgrade_descrizione.Add("unlock_next_unity_tier",txt_u_d_unlock_next_unity_tier);
         lista_txt_upgrade_descrizione.Add("food",txt_u_d_food);
 
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
@@ -178,7 +186,11 @@ public class upgrade : MonoBehaviour
         //riempi_blocchi_testo_unita();     //viene già fatto al momento della scelta del premio...
 
         print ("tier: "+tier_unity_sbloccato);
-        if (tier_unity_sbloccato<2){cont_upgrade_unity_tier_3.SetActive(false);}
+        if (tier_unity_sbloccato<1){
+            cont_upgrade_unity_tier_2.SetActive(false);
+            cont_upgrade_unity_tier_3.SetActive(false);
+        }
+        else if (tier_unity_sbloccato<2){cont_upgrade_unity_tier_3.SetActive(false);}
     }
 
     private void get_all_blocchi_testo_unita(){
@@ -414,7 +426,6 @@ public class upgrade : MonoBehaviour
                     //nuovo sistema:
                     num_pupi=1; if (razza_pupo=="mosche"){num_pupi=2;}
 
-                    print (splitArray.Count());
                     if (splitArray.Count()<5){
                         monete=valore_monete_premio-(info_comuni.lista_costo_unita_razza[razza_pupo]*livello_pupo);
                         txt_monete="+ "+monete+" gold";
@@ -509,14 +520,11 @@ public class upgrade : MonoBehaviour
             case "random_unity_1":{testo="Scegli tra tre unità random delle razze sbloccate.";break;}
             case "random_spell":{testo="Scegli tra tre nuove abilita oppure una già esistente ma di livello superiore";break;}
             case "random_race":{testo="Scegli tra tre nuove razze da sbloccare";break;}
-            case "random_unity_2":{
+            case "random_unity_2":{testo="Scegli tra tre unità random delle razze sbloccate di livello 2.";break;}
+            case "random_unity_3":{testo="Scegli tra tre unità random delle razze sbloccate di livello 3.";break;}
+            case "unlock_next_unity_tier":{
                 if (tier_unity_sbloccato<2){testo="Sblocca la possibilità delle unità di livello 2.";}
-                else {testo="Scegli tra tre unità random delle razze sbloccate di livello 2.";}
-                break;
-            }
-            case "random_unity_3":{
-                if (tier_unity_sbloccato<3){testo="Sblocca la possibilità delle unità di livello 3.";}
-                else {testo="Scegli tra tre unità random delle razze sbloccate di livello 3.";}
+                else if (tier_unity_sbloccato<3){testo="Sblocca la possibilità delle unità di livello 3.";}
                 break;
             }
             case "food":{testo="Add +20 space units";break;}
@@ -696,6 +704,11 @@ public class upgrade : MonoBehaviour
         int costo=0;
         int livello=livelli_attuali_upgrade[abilita];
         switch (abilita){
+            case "unlock_next_unity_tier":{
+                if (tier_unity_sbloccato<2){costo=400;}
+                else if (tier_unity_sbloccato<3){costo=1000;}
+                break;
+            }
             case "melee_damage":
             case "distance_damage":
             case "spell_damage":
@@ -710,16 +723,8 @@ public class upgrade : MonoBehaviour
                 costo=30+(5*livello);
                 break;
             }
-            case "random_unity_2":{
-                if (tier_unity_sbloccato>1){costo=60+(5*livello);}
-                else {costo=400;}
-                break;
-            }
-            case "random_unity_3":{
-                if (tier_unity_sbloccato>2){costo=90+(5*livello);}
-                else {costo=2000;}
-                break;
-            }
+            case "random_unity_2":{costo=60+(5*livello);break;}
+            case "random_unity_3":{costo=90+(5*livello);break;}
             case "random_race":
             case "random_spell":{
                 costo=100;
