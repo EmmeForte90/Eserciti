@@ -9,6 +9,9 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 using System.Linq;
 
+using Spine;
+using Spine.Unity;
+
 public class upgrade : MonoBehaviour
 {   
     public info_comuni info_comuni;
@@ -16,7 +19,10 @@ public class upgrade : MonoBehaviour
     public GameObject pannello_upgrade;
 
     public GameObject blocco_unita_liv_1;
+    public GameObject blocco_unita_liv_2;
+    public GameObject blocco_unita_liv_3;
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_unita_esercito = new Dictionary<string, TMPro.TextMeshProUGUI>(); 
+    private Dictionary<string, SkeletonGraphic> lista_icona_unita_esercito = new Dictionary<string, SkeletonGraphic>(); 
 
     public GameObject cont_upgrade_1;
     public GameObject cont_upgrade_2;
@@ -191,6 +197,10 @@ public class upgrade : MonoBehaviour
             cont_upgrade_unity_tier_3.SetActive(false);
         }
         else if (tier_unity_sbloccato<2){cont_upgrade_unity_tier_3.SetActive(false);}
+
+        foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+            sblocca_unita_razza(attachStat.Key,attachStat.Value);
+        }
     }
 
     private void get_all_blocchi_testo_unita(){
@@ -199,9 +209,33 @@ public class upgrade : MonoBehaviour
             if (child.name.Contains("num_")){
                 string_temp=child.name.Replace("num_","");
                 lista_txt_unita_esercito.Add(string_temp,child.GetComponent<TMPro.TextMeshProUGUI>());
-                lista_txt_unita_esercito[string_temp].SetText("0");
+            }
+            else if (child.name.Contains("icona_")){
+                string_temp=child.name.Replace("num_","");
+                lista_icona_unita_esercito.Add(string_temp,child.GetComponent<SkeletonGraphic>());
+                lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 0.4f);
             }
         }
+    }
+
+    private void sblocca_unita_razza(string razza_plurare, int livello){
+        string razza=info_comuni.lista_razze_totale[razza_plurare];
+        string string_temp;
+
+        string_temp="icona_"+razza+"_warrior"; if (livello>1){string_temp+="_"+livello;}
+        lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 1f);
+        string_temp=razza+"_warrior"; if (livello>1){string_temp+="_"+livello;}
+        lista_txt_unita_esercito[string_temp].SetText("0");
+
+        string_temp="icona_"+razza+"_arcer"; if (livello>1){string_temp+="_"+livello;}
+        lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 1f);
+        string_temp=razza+"_arcer"; if (livello>1){string_temp+="_"+livello;}
+        lista_txt_unita_esercito[string_temp].SetText("0");
+
+        string_temp="icona_"+razza+"_wizard"; if (livello>1){string_temp+="_"+livello;}
+        lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 1f);
+        string_temp=razza+"_wizard"; if (livello>1){string_temp+="_"+livello;}
+        lista_txt_unita_esercito[string_temp].SetText("0");
     }
 
     private void riempi_blocchi_testo_unita(){
@@ -235,8 +269,9 @@ public class upgrade : MonoBehaviour
             }
             case "nrazza":{
                 int livello_razza = int.Parse(splitArray[2]);
-                string razza_pupo = splitArray[1];
-                lista_razze_sbloccate.Add(razza_pupo,livello_razza);
+                string razza = splitArray[1];
+                lista_razze_sbloccate.Add(razza,livello_razza);
+                sblocca_unita_razza(razza,livello_razza);
                 check_full_race();
                 break;
             }
