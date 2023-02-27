@@ -21,6 +21,8 @@ public class upgrade : MonoBehaviour
     public GameObject blocco_unita_liv_1;
     public GameObject blocco_unita_liv_2;
     public GameObject blocco_unita_liv_3;
+    public GameObject img_scura_blocco_unita_liv_2;
+    public GameObject img_scura_blocco_unita_liv_3;
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_unita_esercito = new Dictionary<string, TMPro.TextMeshProUGUI>(); 
     private Dictionary<string, SkeletonGraphic> lista_icona_unita_esercito = new Dictionary<string, SkeletonGraphic>(); 
 
@@ -191,15 +193,25 @@ public class upgrade : MonoBehaviour
         get_premi_upgrade();
         //riempi_blocchi_testo_unita();     //viene già fatto al momento della scelta del premio...
 
-        print ("tier: "+tier_unity_sbloccato);
-        if (tier_unity_sbloccato<1){
-            cont_upgrade_unity_tier_2.SetActive(false);
-            cont_upgrade_unity_tier_3.SetActive(false);
-        }
-        else if (tier_unity_sbloccato<2){cont_upgrade_unity_tier_3.SetActive(false);}
+        check_img_nere_upgrade_unity_tier();
 
         foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
             sblocca_unita_razza(attachStat.Key,attachStat.Value);
+        }
+    }
+
+    private void check_img_nere_upgrade_unity_tier(){
+        if (tier_unity_sbloccato<2){
+            cont_upgrade_unity_tier_2.SetActive(false);
+            cont_upgrade_unity_tier_3.SetActive(false);
+        }
+        else {
+            img_scura_blocco_unita_liv_2.SetActive(false);
+            if (tier_unity_sbloccato<3){
+                cont_upgrade_unity_tier_3.SetActive(false);
+            } else {
+                img_scura_blocco_unita_liv_3.SetActive(true);
+            }
         }
     }
 
@@ -213,7 +225,7 @@ public class upgrade : MonoBehaviour
             else if (child.name.Contains("icona_")){
                 string_temp=child.name.Replace("num_","");
                 lista_icona_unita_esercito.Add(string_temp,child.GetComponent<SkeletonGraphic>());
-                lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 0.4f);
+                //lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 0.4f);
             }
         }
     }
@@ -606,7 +618,14 @@ public class upgrade : MonoBehaviour
                     lista_B_upgrade_bottoni[attachStat.Key].interactable=false;
                 }
             }
+
             switch (abilita){
+                case "unlock_next_unity_tier":{
+                    tier_unity_sbloccato++;
+                    check_img_nere_upgrade_unity_tier();
+
+                    break;
+                }
                 case "random_unity_3":
                 case "random_unity_2":
                 case "random_unity_1":{
