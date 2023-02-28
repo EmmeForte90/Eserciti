@@ -84,7 +84,7 @@ public class mainmenu : MonoBehaviour
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
                 lista_pupetti.Add("formica_warrior",4);
                 lista_pupetti.Add("formica_arcer",2);
-                lista_razze_sbloccate.Add("formiche",1);
+                lista_razze_sbloccate.Add("formiche_1",1);
                 
                 denaro=30;
                 break;
@@ -96,7 +96,7 @@ public class mainmenu : MonoBehaviour
                 lista_pupetti.Add("mosca_warrior",10);
                 lista_pupetti.Add("mosca_arcer",6);
                 lista_pupetti.Add("mosca_wizard",2);
-                lista_razze_sbloccate.Add("mosche",1);
+                lista_razze_sbloccate.Add("mosche_1",1);
                 break;
             }
             case "regina_ape":{
@@ -105,7 +105,7 @@ public class mainmenu : MonoBehaviour
                 descrizione="Un sacrificio è salvare poco. Un intero sacrificio è salvare la regina.";
                 lista_pupetti.Add("ape_warrior",4);
                 lista_pupetti.Add("ape_arcer",1);
-                lista_razze_sbloccate.Add("api",1);
+                lista_razze_sbloccate.Add("api_1",1);
                 break;
             }
             case "regina_ragno":{
@@ -115,7 +115,7 @@ public class mainmenu : MonoBehaviour
                 lista_pupetti.Add("ragnetto_warrior",4);
                 lista_pupetti.Add("ragnetto_arcer",2);
                 lista_pupetti.Add("ragnetto_wizard",1);
-                lista_razze_sbloccate.Add("ragnetti",1);
+                lista_razze_sbloccate.Add("ragnetti_1",1);
                 break;
             }
             case "re_cavalletta":{
@@ -124,7 +124,7 @@ public class mainmenu : MonoBehaviour
                 descrizione="Saltellano veloci e a volte incontrollabili";
                 lista_pupetti.Add("cavalletta_warrior",6);
                 lista_pupetti.Add("cavalletta_arcer",2);
-                lista_razze_sbloccate.Add("cavallette",1);
+                lista_razze_sbloccate.Add("cavallette_1",1);
                 break;
             }
             case "re_scarabeo":{
@@ -132,7 +132,7 @@ public class mainmenu : MonoBehaviour
                 nome="King Beetle";
                 descrizione="Non sono solo semplici e nobili insetti. Prova a mettere un dito tra le loro chele";
                 lista_pupetti.Add("scarabeo_warrior",8);
-                lista_razze_sbloccate.Add("scarabei",1);
+                lista_razze_sbloccate.Add("scarabei_1",1);
                 break;
             }
         }

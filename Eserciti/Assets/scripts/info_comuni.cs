@@ -15,34 +15,42 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, string> lista_classi_nome = new Dictionary<string, string>();
     public Dictionary<string, int> lista_costo_unita_razza = new Dictionary<string, int>();
     // Start is called before the first frame update
-    void Awake(){
-        lista_costo_unita_razza.Add("formiche",30);
-        lista_costo_unita_razza.Add("mosche",30);
-        lista_costo_unita_razza.Add("api",30);
-        lista_costo_unita_razza.Add("ragnetti",30);
 
+    private string string_temp;
+    void Awake(){
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
         lista_classi_nome.Add("wizard","Wizard");
+        
+        //praticamente essendo di tre livelli diversi, tanto vale fare direttamente così; Come fossero tre razze diverse a seconda del livello.
+        //Domani faremo la stessa cosa per le cavalcature
+        for (int i=1;i<=3;i++){
+            //NB: Il singolare a destra è importante per definire la tipologia del pupo negli upgrade
+            lista_razze_totale.Add("formiche_"+i,"formica");
+            lista_razze_totale.Add("mosche_"+i,"mosca");
+            lista_razze_totale.Add("api_"+i,"ape");
+            lista_razze_totale.Add("ragnetti_"+i,"ragnetto");
+            //lista_razze_totale.Add("cavallette_"+i,"cavalletta");
+            //lista_razze_totale.Add("scarabei_"+i,"scarabeo");
 
-        //NB: I Nomi e le descrizioni, saranno sempre al plurale
-        lista_razza_pupi_nome.Add("formiche","Ants");
-        lista_razza_pupi_nome.Add("mosche","Flies");
-        lista_razza_pupi_nome.Add("api","Bees");
-        lista_razza_pupi_nome.Add("ragnetti","Spiders");
+            //Le descrizioni
+            lista_pupi_descrizione.Add("formiche_"+i,"Most commons soldiers");
+            lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
+            lista_pupi_descrizione.Add("api_"+i,"Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
+            lista_pupi_descrizione.Add("ragnetti_"+i,"Ogni volta che colpiscono, rallentano il bersaglio. Sono immuni da questo effetto da parte di altri ragni");
 
-        lista_pupi_descrizione.Add("formiche","Most commons soldiers");
-        lista_pupi_descrizione.Add("mosche","Cheap cost but frails");
-        lista_pupi_descrizione.Add("api","Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
-        lista_pupi_descrizione.Add("ragnetti","Ogni volta che colpiscono, rallentano il bersaglio. Sono immuni da questo effetto da parte di altri ragni");
+            //NB: I Nomi e le descrizioni, saranno sempre al plurale
+            lista_razza_pupi_nome.Add("formiche_"+i,"Ants");     
+            lista_razza_pupi_nome.Add("mosche_"+i,"Flies");      
+            lista_razza_pupi_nome.Add("api_"+i,"Bees");          
+            lista_razza_pupi_nome.Add("ragnetti_"+i,"Spiders");  
 
-        //NB: Il singolare a destra è importante per definire la tipologia del pupo negli upgrade
-        lista_razze_totale.Add("formiche","formica");
-        lista_razze_totale.Add("mosche","mosca");
-        lista_razze_totale.Add("api","ape");
-        lista_razze_totale.Add("ragnetti","ragnetto");
-        //lista_razze_totale.Add("cavallette","cavalletta");
-        //lista_razze_totale.Add("scarabei","scarabeo");
+            //i costi dei vari pupetti
+            lista_costo_unita_razza.Add("formiche_"+i,30*i);
+            lista_costo_unita_razza.Add("mosche_"+i,30*i);
+            lista_costo_unita_razza.Add("api_"+i,30*i);
+            lista_costo_unita_razza.Add("ragnetti_"+i,30*i);
+        }
 
         //La lista di tutte le abilita!
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");

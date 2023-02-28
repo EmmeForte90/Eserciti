@@ -206,11 +206,12 @@ public class upgrade : MonoBehaviour
             cont_upgrade_unity_tier_3.SetActive(false);
         }
         else {
+            cont_upgrade_unity_tier_2.SetActive(true);
             img_scura_blocco_unita_liv_2.SetActive(false);
             if (tier_unity_sbloccato<3){
                 cont_upgrade_unity_tier_3.SetActive(false);
             } else {
-                img_scura_blocco_unita_liv_3.SetActive(true);
+                img_scura_blocco_unita_liv_3.SetActive(false);
             }
         }
     }
@@ -225,7 +226,28 @@ public class upgrade : MonoBehaviour
             else if (child.name.Contains("icona_")){
                 string_temp=child.name.Replace("num_","");
                 lista_icona_unita_esercito.Add(string_temp,child.GetComponent<SkeletonGraphic>());
-                //lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 0.4f);
+            }
+        }
+
+        foreach (Transform child in blocco_unita_liv_2.transform.GetComponentsInChildren<Transform>()) {
+            if (child.name.Contains("num_")){
+                string_temp=child.name.Replace("num_","");
+                lista_txt_unita_esercito.Add(string_temp,child.GetComponent<TMPro.TextMeshProUGUI>());
+            }
+            else if (child.name.Contains("icona_")){
+                string_temp=child.name.Replace("num_","");
+                lista_icona_unita_esercito.Add(string_temp,child.GetComponent<SkeletonGraphic>());
+            }
+        }
+
+        foreach (Transform child in blocco_unita_liv_3.transform.GetComponentsInChildren<Transform>()) {
+            if (child.name.Contains("num_")){
+                string_temp=child.name.Replace("num_","");
+                lista_txt_unita_esercito.Add(string_temp,child.GetComponent<TMPro.TextMeshProUGUI>());
+            }
+            else if (child.name.Contains("icona_")){
+                string_temp=child.name.Replace("num_","");
+                lista_icona_unita_esercito.Add(string_temp,child.GetComponent<SkeletonGraphic>());
             }
         }
     }
@@ -480,7 +502,7 @@ public class upgrade : MonoBehaviour
                     lista_premi_settati_num_pupi.Add(num_cont_premio,num_pupi);
                     lista_premi_settati_monete.Add(num_cont_premio,monete);
 
-                    titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo];
+                    titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" lvl "+livello_pupo;
                     descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
                     break;
                 }
@@ -564,7 +586,7 @@ public class upgrade : MonoBehaviour
             case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
             case "hero_damage":{testo="The abilities of your hero hit +"+((livello+1)*10)+"%";break;}
             case "hero_cooldown":{testo="The cooldown of your hero is -"+((livello+1)*10)+"% reduced";break;}
-            case "random_unity_1":{testo="Scegli tra tre unità random delle razze sbloccate.";break;}
+            case "random_unity_1":{testo="Scegli tra tre unità random delle razze sbloccate di livello 1.";break;}
             case "random_spell":{testo="Scegli tra tre nuove abilita oppure una già esistente ma di livello superiore";break;}
             case "random_race":{testo="Scegli tra tre nuove razze da sbloccare";break;}
             case "random_unity_2":{testo="Scegli tra tre unità random delle razze sbloccate di livello 2.";break;}
@@ -572,6 +594,7 @@ public class upgrade : MonoBehaviour
             case "unlock_next_unity_tier":{
                 if (tier_unity_sbloccato<2){testo="Sblocca la possibilità delle unità di livello 2.";}
                 else if (tier_unity_sbloccato<3){testo="Sblocca la possibilità delle unità di livello 3.";}
+                else {cont_upgrade_unlock_unity_tier.SetActive(false);}
                 break;
             }
             case "food":{testo="Add +20 space units";break;}
@@ -622,8 +645,15 @@ public class upgrade : MonoBehaviour
             switch (abilita){
                 case "unlock_next_unity_tier":{
                     tier_unity_sbloccato++;
+                    check_all_button();
+                    check_abilita("unlock_next_unity_tier");
                     check_img_nere_upgrade_unity_tier();
-
+                    switch (id_hero){
+                        case "regina_formica_nera":{lista_razze_sbloccate.Add("formiche_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
+                    }
+                    foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+                        sblocca_unita_razza(attachStat.Key,attachStat.Value);
+                    }
                     break;
                 }
                 case "random_unity_3":
@@ -639,6 +669,7 @@ public class upgrade : MonoBehaviour
                     lista_premi_settati_num_pupi.Clear();
                     lista_premi_settati_monete.Clear();
                     foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
+                        print ("posso mettere nel random "+attachStat.Key+" - "+attachStat.Value);
                         pupo_singolo=attachStat.Key;
                         lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello+"-0",1);
                         lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello+"-0",1);
@@ -710,9 +741,13 @@ public class upgrade : MonoBehaviour
                     int livello=1;
                     lista_random.Clear();
                     lista_premi_settati.Clear();
+                    string[] splitArray;
                     foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_razze_totale){
                         if (!lista_razze_sbloccate.ContainsKey(attachStat.Key)){
-                            lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
+                            splitArray=attachStat.Key.Split(char.Parse("_"));
+                            if (int.Parse(splitArray[1])<=tier_unity_sbloccato){
+                                lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
+                            }
                         }
                     }
                     switch (lista_random.Count()){
