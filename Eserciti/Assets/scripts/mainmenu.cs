@@ -82,8 +82,8 @@ public class mainmenu : MonoBehaviour
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
                 descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
-                lista_pupetti.Add("formica_warrior",4);
-                lista_pupetti.Add("formica_arcer",2);
+                lista_pupetti.Add("formica_warrior_1",4);
+                lista_pupetti.Add("formica_arcer_1",2);
                 lista_razze_sbloccate.Add("formiche_1",1);
                 
                 denaro=30;
@@ -93,9 +93,9 @@ public class mainmenu : MonoBehaviour
                 id_abilita="mosche_fastidiose";
                 nome="King Fly";
                 descrizione="Una dozzina sono fastidiose. Una dozzina di dozzine diventano incontrollabili.";
-                lista_pupetti.Add("mosca_warrior",10);
-                lista_pupetti.Add("mosca_arcer",6);
-                lista_pupetti.Add("mosca_wizard",2);
+                lista_pupetti.Add("mosca_warrior_1",10);
+                lista_pupetti.Add("mosca_arce_1r",6);
+                lista_pupetti.Add("mosca_wizard_1",2);
                 lista_razze_sbloccate.Add("mosche_1",1);
                 break;
             }
@@ -103,8 +103,8 @@ public class mainmenu : MonoBehaviour
                 id_abilita="miele";
                 nome="Queen Bee";
                 descrizione="Un sacrificio è salvare poco. Un intero sacrificio è salvare la regina.";
-                lista_pupetti.Add("ape_warrior",4);
-                lista_pupetti.Add("ape_arcer",1);
+                lista_pupetti.Add("ape_warrior_1",4);
+                lista_pupetti.Add("ape_arcer_1",1);
                 lista_razze_sbloccate.Add("api_1",1);
                 break;
             }
@@ -112,9 +112,9 @@ public class mainmenu : MonoBehaviour
                 id_abilita="ragnatele";
                 nome="Queen Spider";
                 descrizione="Non vuoi rilassarti? Ci pensano le loro ragnatele";
-                lista_pupetti.Add("ragnetto_warrior",4);
-                lista_pupetti.Add("ragnetto_arcer",2);
-                lista_pupetti.Add("ragnetto_wizard",1);
+                lista_pupetti.Add("ragnetto_warrior_1",4);
+                lista_pupetti.Add("ragnetto_arcer_1",2);
+                lista_pupetti.Add("ragnetto_wizard_1",1);
                 lista_razze_sbloccate.Add("ragnetti_1",1);
                 break;
             }
@@ -122,8 +122,8 @@ public class mainmenu : MonoBehaviour
                 id_abilita="velocita";
                 nome="King Grasshopper";
                 descrizione="Saltellano veloci e a volte incontrollabili";
-                lista_pupetti.Add("cavalletta_warrior",6);
-                lista_pupetti.Add("cavalletta_arcer",2);
+                lista_pupetti.Add("cavalletta_warrior_1",6);
+                lista_pupetti.Add("cavalletta_arcer_1",2);
                 lista_razze_sbloccate.Add("cavallette_1",1);
                 break;
             }
@@ -131,7 +131,7 @@ public class mainmenu : MonoBehaviour
                 id_abilita="armatura";
                 nome="King Beetle";
                 descrizione="Non sono solo semplici e nobili insetti. Prova a mettere un dito tra le loro chele";
-                lista_pupetti.Add("scarabeo_warrior",8);
+                lista_pupetti.Add("scarabeo_warrior_1",8);
                 lista_razze_sbloccate.Add("scarabei_1",1);
                 break;
             }

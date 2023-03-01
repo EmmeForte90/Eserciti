@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 25766839}
   - component: {fileID: 25766838}
   m_Layer: 0
-  m_Name: coccinella_horseman
+  m_Name: coccinella_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 35814507}
   - component: {fileID: 35814506}
   m_Layer: 0
-  m_Name: calabrone_wizard
+  m_Name: calabrone_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3531,7 +3531,7 @@ GameObject:
   - component: {fileID: 81318001}
   - component: {fileID: 81318000}
   m_Layer: 0
-  m_Name: coccinella_wizard
+  m_Name: coccinella_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4211,7 +4211,7 @@ GameObject:
   - component: {fileID: 85049065}
   - component: {fileID: 85049064}
   m_Layer: 0
-  m_Name: formica_arcer
+  m_Name: formica_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5767,7 +5767,7 @@ GameObject:
   - component: {fileID: 133128183}
   - component: {fileID: 133128182}
   m_Layer: 0
-  m_Name: formica_rossa_wizard
+  m_Name: formica_rossa_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12333,7 +12333,7 @@ GameObject:
   - component: {fileID: 171855131}
   - component: {fileID: 171855130}
   m_Layer: 0
-  m_Name: formica_wizard
+  m_Name: formica_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21828,7 +21828,7 @@ GameObject:
   - component: {fileID: 355094488}
   - component: {fileID: 355094487}
   m_Layer: 0
-  m_Name: calabrone_warrior
+  m_Name: calabrone_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22674,7 +22674,7 @@ GameObject:
   - component: {fileID: 361666351}
   - component: {fileID: 361666350}
   m_Layer: 0
-  m_Name: formica_rossa_arcer
+  m_Name: formica_rossa_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24959,7 +24959,7 @@ GameObject:
   - component: {fileID: 383621182}
   - component: {fileID: 383621181}
   m_Layer: 0
-  m_Name: vespa_wizard
+  m_Name: vespa_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25186,7 +25186,7 @@ GameObject:
   - component: {fileID: 392449833}
   - component: {fileID: 392449832}
   m_Layer: 0
-  m_Name: ape_arcer
+  m_Name: ape_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43182,7 +43182,7 @@ GameObject:
   - component: {fileID: 503132568}
   - component: {fileID: 503132567}
   m_Layer: 0
-  m_Name: ragnetto_wizard
+  m_Name: ragnetto_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57294,7 +57294,7 @@ GameObject:
   - component: {fileID: 792326680}
   - component: {fileID: 792326679}
   m_Layer: 0
-  m_Name: scarafaggio_warrior
+  m_Name: scarafaggio_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64144,7 +64144,7 @@ GameObject:
   - component: {fileID: 942787985}
   - component: {fileID: 942787984}
   m_Layer: 0
-  m_Name: formica_rossa_horseman
+  m_Name: formica_rossa_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67410,7 +67410,7 @@ GameObject:
   - component: {fileID: 1024891645}
   - component: {fileID: 1024891644}
   m_Layer: 0
-  m_Name: zanzara_horseman
+  m_Name: zanzara_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71580,7 +71580,7 @@ GameObject:
   - component: {fileID: 1159813352}
   - component: {fileID: 1159813351}
   m_Layer: 0
-  m_Name: ragnetto_warrior
+  m_Name: ragnetto_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73912,7 +73912,7 @@ GameObject:
   - component: {fileID: 1263569997}
   - component: {fileID: 1263569996}
   m_Layer: 0
-  m_Name: scarafaggio_arcer
+  m_Name: scarafaggio_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75164,7 +75164,7 @@ GameObject:
   - component: {fileID: 1290974566}
   - component: {fileID: 1290974565}
   m_Layer: 0
-  m_Name: mosca_wizard
+  m_Name: mosca_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83254,7 +83254,7 @@ GameObject:
   - component: {fileID: 1361864888}
   - component: {fileID: 1361864887}
   m_Layer: 0
-  m_Name: zanzara_warrior
+  m_Name: zanzara_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84855,7 +84855,7 @@ GameObject:
   - component: {fileID: 1412093478}
   - component: {fileID: 1412093477}
   m_Layer: 0
-  m_Name: vespa_warrior
+  m_Name: vespa_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90387,7 +90387,7 @@ GameObject:
   - component: {fileID: 1506575378}
   - component: {fileID: 1506575377}
   m_Layer: 0
-  m_Name: ape_wizard
+  m_Name: ape_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90782,7 +90782,7 @@ GameObject:
   - component: {fileID: 1518590952}
   - component: {fileID: 1518590951}
   m_Layer: 0
-  m_Name: ape_warrior
+  m_Name: ape_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92149,7 +92149,7 @@ GameObject:
   - component: {fileID: 1554323505}
   - component: {fileID: 1554323504}
   m_Layer: 0
-  m_Name: scarafaggio_horseman
+  m_Name: scarafaggio_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93858,7 +93858,7 @@ GameObject:
   - component: {fileID: 1590915712}
   - component: {fileID: 1590915711}
   m_Layer: 0
-  m_Name: calabrone_arcer
+  m_Name: calabrone_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95139,7 +95139,7 @@ GameObject:
   - component: {fileID: 1603622145}
   - component: {fileID: 1603622144}
   m_Layer: 0
-  m_Name: ragnetto_arcer
+  m_Name: ragnetto_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97001,7 +97001,7 @@ GameObject:
   - component: {fileID: 1652636808}
   - component: {fileID: 1652636807}
   m_Layer: 0
-  m_Name: ape_horseman
+  m_Name: ape_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98110,7 +98110,7 @@ GameObject:
   - component: {fileID: 1696263516}
   - component: {fileID: 1696263515}
   m_Layer: 0
-  m_Name: zanzara_arcer
+  m_Name: zanzara_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100842,7 +100842,7 @@ GameObject:
   - component: {fileID: 1802631489}
   - component: {fileID: 1802631488}
   m_Layer: 0
-  m_Name: vespa_arcer
+  m_Name: vespa_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103202,7 +103202,7 @@ GameObject:
   - component: {fileID: 1880945266}
   - component: {fileID: 1880945265}
   m_Layer: 0
-  m_Name: ragnetto_horseman
+  m_Name: ragnetto_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103654,7 +103654,7 @@ GameObject:
   - component: {fileID: 1885765368}
   - component: {fileID: 1885765367}
   m_Layer: 0
-  m_Name: zanzara_wizard
+  m_Name: zanzara_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103881,7 +103881,7 @@ GameObject:
   - component: {fileID: 1890424250}
   - component: {fileID: 1890424249}
   m_Layer: 0
-  m_Name: formica_horseman
+  m_Name: formica_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115375,7 +115375,7 @@ GameObject:
   - component: {fileID: 1964582854}
   - component: {fileID: 1964582853}
   m_Layer: 0
-  m_Name: calabrone_horseman
+  m_Name: calabrone_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116070,7 +116070,7 @@ GameObject:
   - component: {fileID: 1977856553}
   - component: {fileID: 1977856552}
   m_Layer: 0
-  m_Name: coccinella_warrior
+  m_Name: coccinella_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117278,7 +117278,7 @@ GameObject:
   - component: {fileID: 1994346073}
   - component: {fileID: 1994346072}
   m_Layer: 0
-  m_Name: scarafaggio_wizard
+  m_Name: scarafaggio_wizard_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117958,7 +117958,7 @@ GameObject:
   - component: {fileID: 2012936503}
   - component: {fileID: 2012936502}
   m_Layer: 0
-  m_Name: mosca_warrior
+  m_Name: mosca_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119138,7 +119138,7 @@ GameObject:
   - component: {fileID: 2035574751}
   - component: {fileID: 2035574750}
   m_Layer: 0
-  m_Name: mosca_horseman
+  m_Name: mosca_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119900,7 +119900,7 @@ GameObject:
   - component: {fileID: 2056305371}
   - component: {fileID: 2056305370}
   m_Layer: 0
-  m_Name: formica_rossa_warrior
+  m_Name: formica_rossa_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123076,7 +123076,7 @@ GameObject:
   - component: {fileID: 2123417255}
   - component: {fileID: 2123417254}
   m_Layer: 0
-  m_Name: vespa_horseman
+  m_Name: vespa_horseman_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123469,7 +123469,7 @@ GameObject:
   - component: {fileID: 2127189377}
   - component: {fileID: 2127189376}
   m_Layer: 0
-  m_Name: coccinella_arcer
+  m_Name: coccinella_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124230,7 +124230,7 @@ GameObject:
   - component: {fileID: 2141582326}
   - component: {fileID: 2141582325}
   m_Layer: 0
-  m_Name: mosca_arcer
+  m_Name: mosca_arcer_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124684,7 +124684,7 @@ GameObject:
   - component: {fileID: 2143487773}
   - component: {fileID: 2143487772}
   m_Layer: 0
-  m_Name: formica_warrior
+  m_Name: formica_warrior_1
   m_TagString: pupo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
