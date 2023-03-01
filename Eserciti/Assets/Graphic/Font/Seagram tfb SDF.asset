@@ -56,7 +56,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Seagram tfb Atlas Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -119,7 +120,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.73125
+    - _ScaleRatioC: 0.6139799
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -133,9 +134,9 @@ Material:
     - _TextureHeight: 1024
     - _TextureWidth: 1024
     - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
+    - _UnderlayOffsetX: 0.29
+    - _UnderlayOffsetY: -0.79
+    - _UnderlaySoftness: 0.401
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
@@ -150,7 +151,7 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.85882354}
   m_BuildTextureStacks: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -276,6 +277,20 @@ MonoBehaviour:
       m_Y: 103
       m_Width: 15
       m_Height: 16
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 21
+    m_Metrics:
+      m_Width: 46.21875
+      m_Height: 67.5
+      m_HorizontalBearingX: 5.015625
+      m_HorizontalBearingY: 67.5
+      m_HorizontalAdvance: 53.875
+    m_GlyphRect:
+      m_X: 413
+      m_Y: 10
+      m_Width: 47
+      m_Height: 68
     m_Scale: 1
     m_AtlasIndex: 0
   - m_Index: 22
@@ -1034,20 +1049,6 @@ MonoBehaviour:
       m_Height: 0
     m_Scale: 1
     m_AtlasIndex: 0
-  - m_Index: 21
-    m_Metrics:
-      m_Width: 46.21875
-      m_Height: 67.5
-      m_HorizontalBearingX: 5.015625
-      m_HorizontalBearingY: 67.5
-      m_HorizontalAdvance: 53.875
-    m_GlyphRect:
-      m_X: 413
-      m_Y: 10
-      m_Width: 47
-      m_Height: 68
-    m_Scale: 1
-    m_AtlasIndex: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 32
@@ -1072,6 +1073,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 46
     m_GlyphIndex: 17
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 50
+    m_GlyphIndex: 21
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 51
@@ -1288,10 +1293,6 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 8230
     m_GlyphIndex: 213
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 50
-    m_GlyphIndex: 21
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: -2956652347977261064}
