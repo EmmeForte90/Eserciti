@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 11442884}
   - component: {fileID: 11442883}
   m_Layer: 0
-  m_Name: icona_cavalletta_warrior
+  m_Name: icona_cavalletta_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 85266591}
   - component: {fileID: 85266590}
   m_Layer: 0
-  m_Name: icona_ragnetto_wizard
+  m_Name: icona_ragnetto_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3330,7 +3330,7 @@ GameObject:
   - component: {fileID: 220182047}
   - component: {fileID: 220182046}
   m_Layer: 0
-  m_Name: icona_ape_wizard
+  m_Name: icona_ape_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3427,7 +3427,7 @@ GameObject:
   - component: {fileID: 224957603}
   - component: {fileID: 224957602}
   m_Layer: 0
-  m_Name: icona_scarabeo_wizard
+  m_Name: icona_scarabeo_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4742,7 +4742,7 @@ GameObject:
   - component: {fileID: 287678510}
   - component: {fileID: 287678509}
   m_Layer: 0
-  m_Name: num_cavalletta_arcer
+  m_Name: num_cavalletta_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4985,7 +4985,7 @@ GameObject:
   - component: {fileID: 297944829}
   - component: {fileID: 297944828}
   m_Layer: 0
-  m_Name: num_scarabeo_warrior
+  m_Name: num_scarabeo_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5882,7 +5882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1763894470}
+  m_Material: {fileID: 1355561019}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6641,7 +6641,7 @@ GameObject:
   - component: {fileID: 371940342}
   - component: {fileID: 371940341}
   m_Layer: 0
-  m_Name: num_ragnetto_wizard
+  m_Name: num_ragnetto_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6828,6 +6828,70 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!21 &378237474
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &380957299
 GameObject:
   m_ObjectHideFlags: 0
@@ -7305,6 +7369,70 @@ Material:
     - _TimeSettings: 0
     - _TimeValue: 0
     - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
+--- !u!21 &390679533
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
@@ -8066,7 +8194,7 @@ GameObject:
   - component: {fileID: 457928744}
   - component: {fileID: 457928743}
   m_Layer: 0
-  m_Name: icona_scarabeo_arcer
+  m_Name: icona_scarabeo_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8201,7 +8329,7 @@ GameObject:
   - component: {fileID: 458510330}
   - component: {fileID: 458510329}
   m_Layer: 0
-  m_Name: num_ragnetto_warrior
+  m_Name: num_ragnetto_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8336,7 +8464,7 @@ GameObject:
   - component: {fileID: 462453683}
   - component: {fileID: 462453682}
   m_Layer: 0
-  m_Name: icona_ape_arcer
+  m_Name: icona_ape_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10269,7 +10397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1365001185}
+  m_Material: {fileID: 2134947120}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -10959,70 +11087,6 @@ MonoBehaviour:
   m_Constraint: 2
   m_ConstraintCount: 1
 --- !u!21 &600889759
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
---- !u!21 &602385102
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -11972,7 +12036,7 @@ GameObject:
   - component: {fileID: 642754426}
   - component: {fileID: 642754425}
   m_Layer: 0
-  m_Name: num_formica_arcer
+  m_Name: num_formica_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12095,6 +12159,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642754423}
   m_CullTransparentMesh: 1
+--- !u!21 &645248223
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &647483925
 GameObject:
   m_ObjectHideFlags: 0
@@ -13227,7 +13355,7 @@ GameObject:
   - component: {fileID: 709314270}
   - component: {fileID: 709314269}
   m_Layer: 0
-  m_Name: icona_formica_warrior
+  m_Name: icona_formica_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13445,7 +13573,7 @@ GameObject:
   - component: {fileID: 729507982}
   - component: {fileID: 729507981}
   m_Layer: 0
-  m_Name: num_ape_warrior
+  m_Name: num_ape_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14964,7 +15092,7 @@ GameObject:
   - component: {fileID: 818635068}
   - component: {fileID: 818635067}
   m_Layer: 0
-  m_Name: icona_formica_wizard
+  m_Name: icona_formica_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15821,7 +15949,7 @@ GameObject:
   - component: {fileID: 867096760}
   - component: {fileID: 867096759}
   m_Layer: 0
-  m_Name: icona_ape_warrior
+  m_Name: icona_ape_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19479,7 +19607,7 @@ GameObject:
   - component: {fileID: 1066763925}
   - component: {fileID: 1066763924}
   m_Layer: 0
-  m_Name: num_formica_warrior
+  m_Name: num_formica_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20087,7 +20215,7 @@ GameObject:
   - component: {fileID: 1094917624}
   - component: {fileID: 1094917623}
   m_Layer: 0
-  m_Name: icona_ragnetto_arcer
+  m_Name: icona_ragnetto_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20319,7 +20447,7 @@ GameObject:
   - component: {fileID: 1106618402}
   - component: {fileID: 1106618401}
   m_Layer: 0
-  m_Name: num_cavalletta_wizard
+  m_Name: num_cavalletta_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20454,7 +20582,7 @@ GameObject:
   - component: {fileID: 1107542838}
   - component: {fileID: 1107542837}
   m_Layer: 0
-  m_Name: icona_cavalletta_wizard
+  m_Name: icona_cavalletta_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20686,7 +20814,7 @@ GameObject:
   - component: {fileID: 1109479158}
   - component: {fileID: 1109479157}
   m_Layer: 0
-  m_Name: icona_ragnetto_warrior
+  m_Name: icona_ragnetto_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23837,7 +23965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 602385102}
+  m_Material: {fileID: 390679533}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -24199,7 +24327,7 @@ GameObject:
   - component: {fileID: 1298393330}
   - component: {fileID: 1298393329}
   m_Layer: 0
-  m_Name: icona_cavalletta_arcer
+  m_Name: icona_cavalletta_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24670,7 +24798,7 @@ GameObject:
   - component: {fileID: 1306969438}
   - component: {fileID: 1306969437}
   m_Layer: 0
-  m_Name: icona_formica_arcer
+  m_Name: icona_formica_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25138,6 +25266,70 @@ MonoBehaviour:
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
   shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
   original: {fileID: 1894709080}
+--- !u!21 &1355561019
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1363730094
 GameObject:
   m_ObjectHideFlags: 0
@@ -25150,7 +25342,7 @@ GameObject:
   - component: {fileID: 1363730097}
   - component: {fileID: 1363730096}
   m_Layer: 0
-  m_Name: icona_scarabeo_warrior
+  m_Name: icona_scarabeo_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25235,70 +25427,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363730094}
   m_CullTransparentMesh: 0
---- !u!21 &1365001185
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1365159623
 GameObject:
   m_ObjectHideFlags: 0
@@ -25484,7 +25612,7 @@ GameObject:
   - component: {fileID: 1380919931}
   - component: {fileID: 1380919930}
   m_Layer: 0
-  m_Name: num_scarabeo_arcer
+  m_Name: num_scarabeo_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25619,7 +25747,7 @@ GameObject:
   - component: {fileID: 1389903534}
   - component: {fileID: 1389903533}
   m_Layer: 0
-  m_Name: num_cavalletta_warrior
+  m_Name: num_cavalletta_warrior_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28735,6 +28863,70 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
   m_BuildTextureStacks: []
+--- !u!21 &1520318718
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1525307483
 GameObject:
   m_ObjectHideFlags: 0
@@ -29503,7 +29695,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548546421}
   m_CullTransparentMesh: 1
---- !u!21 &1562214048
+--- !u!21 &1550220308
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -29702,70 +29894,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564941821}
   m_CullTransparentMesh: 1
---- !u!21 &1565750163
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1566902630
 GameObject:
   m_ObjectHideFlags: 0
@@ -31303,7 +31431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1565750163}
+  m_Material: {fileID: 378237474}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -32133,70 +32261,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!21 &1710133771
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1729577035
 GameObject:
   m_ObjectHideFlags: 0
@@ -33006,70 +33070,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761755699}
   m_CullTransparentMesh: 1
---- !u!21 &1763894470
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!21 &1765269305
 Material:
   serializedVersion: 8
@@ -33537,7 +33537,7 @@ GameObject:
   - component: {fileID: 1800372619}
   - component: {fileID: 1800372618}
   m_Layer: 0
-  m_Name: num_ape_arcer
+  m_Name: num_ape_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33819,7 +33819,7 @@ GameObject:
   - component: {fileID: 1820288180}
   - component: {fileID: 1820288179}
   m_Layer: 0
-  m_Name: num_ragnetto_arcer
+  m_Name: num_ragnetto_arcer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34724,70 +34724,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -32}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!21 &1861053865
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1868254765
 GameObject:
   m_ObjectHideFlags: 0
@@ -35628,7 +35564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1562214048}
+  m_Material: {fileID: 645248223}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -36985,7 +36921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1861053865}
+  m_Material: {fileID: 1550220308}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -37603,7 +37539,7 @@ GameObject:
   - component: {fileID: 2003352729}
   - component: {fileID: 2003352728}
   m_Layer: 0
-  m_Name: num_ape_wizard
+  m_Name: num_ape_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38617,7 +38553,7 @@ GameObject:
   - component: {fileID: 2067821647}
   - component: {fileID: 2067821646}
   m_Layer: 0
-  m_Name: num_formica_wizard
+  m_Name: num_formica_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39344,7 +39280,7 @@ GameObject:
   - component: {fileID: 2087574708}
   - component: {fileID: 2087574707}
   m_Layer: 0
-  m_Name: num_scarabeo_wizard
+  m_Name: num_scarabeo_wizard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39984,7 +39920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1710133771}
+  m_Material: {fileID: 1520318718}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -40227,6 +40163,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124780188}
   m_CullTransparentMesh: 1
+--- !u!21 &2134947120
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &2143533301
 GameObject:
   m_ObjectHideFlags: 0

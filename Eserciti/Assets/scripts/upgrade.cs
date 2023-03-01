@@ -213,6 +213,7 @@ public class upgrade : MonoBehaviour
             if (tier_unity_sbloccato<3){
                 cont_upgrade_unity_tier_3.SetActive(false);
             } else {
+                cont_upgrade_unity_tier_3.SetActive(true);
                 img_scura_blocco_unita_liv_3.SetActive(false);
             }
         }
@@ -258,19 +259,19 @@ public class upgrade : MonoBehaviour
         string razza=info_comuni.lista_razze_totale[razza_plurare];
         string string_temp;
 
-        string_temp="icona_"+razza+"_warrior"; if (livello>1){string_temp+="_"+livello;}
+        string_temp="icona_"+razza+"_warrior_"+livello;
         lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 1f);
-        string_temp=razza+"_warrior"; if (livello>1){string_temp+="_"+livello;}
+        string_temp=razza+"_warrior_"+livello;
         lista_txt_unita_esercito[string_temp].SetText("0");
 
-        string_temp="icona_"+razza+"_arcer"; if (livello>1){string_temp+="_"+livello;}
+        string_temp="icona_"+razza+"_arcer_"+livello;
         lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 1f);
-        string_temp=razza+"_arcer"; if (livello>1){string_temp+="_"+livello;}
+        string_temp=razza+"_arcer_"+livello;
         lista_txt_unita_esercito[string_temp].SetText("0");
 
-        string_temp="icona_"+razza+"_wizard"; if (livello>1){string_temp+="_"+livello;}
+        string_temp="icona_"+razza+"_wizard_"+livello;
         lista_icona_unita_esercito[string_temp].color=new Color(1, 1, 1, 1f);
-        string_temp=razza+"_wizard"; if (livello>1){string_temp+="_"+livello;}
+        string_temp=razza+"_wizard_"+livello;
         lista_txt_unita_esercito[string_temp].SetText("0");
     }
 
@@ -300,7 +301,7 @@ public class upgrade : MonoBehaviour
                 int livello_pupo = int.Parse(splitArray_razza[1]);
                 monete=lista_premi_settati_monete[numero];
 
-                string pupo_xml=info_comuni.lista_razze_totale[razza_pupo]+"_"+classe_pupo;
+                string pupo_xml=info_comuni.lista_razze_totale[razza_pupo]+"_"+classe_pupo+"_"+livello_pupo;
                 print (pupo_xml);
 
                 if (!lista_pupetti.ContainsKey(pupo_xml)){lista_pupetti.Add(pupo_xml,0);}
