@@ -843,8 +843,8 @@ public class upgrade : MonoBehaviour
         int livello=livelli_attuali_upgrade[abilita];
         switch (abilita){
             case "unlock_next_unity_tier":{
-                if (tier_unity_sbloccato<2){costo=400;}
-                else if (tier_unity_sbloccato<3){costo=1000;}
+                if (tier_unity_sbloccato<2){costo=200;}
+                else if (tier_unity_sbloccato<3){costo=500;}
                 break;
             }
             case "melee_damage":
@@ -854,7 +854,7 @@ public class upgrade : MonoBehaviour
             case "hero_damage":
             case "hero_cooldown":
             {
-                costo=200*(livello+1);
+                costo=100*(livello+1);
                 break;
             }
             case "random_unity_1":{

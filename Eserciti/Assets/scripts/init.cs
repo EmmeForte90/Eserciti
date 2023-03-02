@@ -117,6 +117,11 @@ public class init : MonoBehaviour
                 setta_img_abilita(attachStat.Key);
                 lista_abilita_cooldown_secondi_attuale[attachStat.Key]=info_comuni.lista_abilita_cooldown_partenza[attachStat.Value][lista_abilita_livello[attachStat.Key]];
 
+                if (lista_upgrade["hero_cooldown"]>0){
+                    lista_abilita_cooldown_secondi[attachStat.Key]=lista_abilita_cooldown_secondi[attachStat.Key]*(100-(lista_upgrade["hero_cooldown"]*10))/100;
+                    lista_abilita_cooldown_secondi_attuale[attachStat.Key]=lista_abilita_cooldown_secondi_attuale[attachStat.Key]*(100-(lista_upgrade["hero_cooldown"]*10))/100;
+                }
+
                 if (attachStat.Value=="mosche_fastidiose"){
                     liv_mosche_fastidiose=lista_abilita_livello[attachStat.Key];
                 }
@@ -138,7 +143,7 @@ public class init : MonoBehaviour
                 break;
             }
             case 3:{
-                for (i=1;i<=5;i++){genera_pupo("formica_rossa_warrior_1");}
+                for (i=1;i<=3;i++){genera_pupo("formica_rossa_warrior_1");}
                 for (i=1;i<=8;i++){genera_pupo("coccinella_arcer_1");}
                 for (i=1;i<=5;i++){genera_pupo("coccinella_wizard_1");}
                 break;
@@ -147,7 +152,7 @@ public class init : MonoBehaviour
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_warrior_1");}
                 for (i=1;i<=5;i++){genera_pupo("coccinella_arcer_1");}
                 for (i=1;i<=3;i++){genera_pupo("coccinella_wizard_1");}
-                for (i=1;i<=2;i++){genera_pupo("formica_rossa_arcer_1");}
+                for (i=1;i<=1;i++){genera_pupo("formica_rossa_arcer_1");}
                 break;
             }
             case 5:{
@@ -161,18 +166,18 @@ public class init : MonoBehaviour
                 for (i=1;i<=2;i++){genera_pupo("formica_rossa_warrior_1");}
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_arcer_1");}
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard_1");}
-                for (i=1;i<=3;i++){genera_pupo("calabrone_warrior_1");}
+                for (i=1;i<=1;i++){genera_pupo("calabrone_warrior_1");}
                 break;
             }
             case 7:{
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_arcer_1");}
                 for (i=1;i<=5;i++){genera_pupo("formica_rossa_wizard_1");}
-                for (i=1;i<=5;i++){genera_pupo("calabrone_warrior_1");}
+                for (i=1;i<=3;i++){genera_pupo("calabrone_warrior_1");}
                 for (i=1;i<=2;i++){genera_pupo("calabrone_arcer_1");}
                 break;
             }
             case 8:{
-                for (i=1;i<=7;i++){genera_pupo("formica_rossa_wizard_1");}
+                for (i=1;i<=3;i++){genera_pupo("formica_rossa_wizard_1");}
                 for (i=1;i<=5;i++){genera_pupo("calabrone_warrior_1");}
                 for (i=1;i<=8;i++){genera_pupo("calabrone_arcer_1");}
                 break;
@@ -336,7 +341,7 @@ public class init : MonoBehaviour
                 particle_mosche.transform.position.x,particle_mosche.transform.position.y);
             if (distanza_temp<=3.5f){
                 //print ("colpisco "+attachStat.Value+" - "+distanza_temp);
-                lp_totali_basic_rule[id_pupo].danneggia(0.035f*liv_mosche_fastidiose);
+                lp_totali_basic_rule[id_pupo].danneggia(0.025f*liv_mosche_fastidiose);
             }
         }
     }

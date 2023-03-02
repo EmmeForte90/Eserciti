@@ -63,7 +63,7 @@ public class basic_rule : MonoBehaviour
     private bool bool_dir_dx=true;
     private float horizontal;
     public float old_x;
-    public Vector3[] waypoints;
+    private Vector3[] waypoints;
 
     //blocco relativo ai possibili effetti del personaggi
     public bool bool_ragnatele;
