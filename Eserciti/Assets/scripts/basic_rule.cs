@@ -88,6 +88,7 @@ public class basic_rule : MonoBehaviour
         //settaggi globali per non cambiare tutti i pupi
         if (velocita_proiettile!=0){
             velocita_proiettile*=1.5f;
+            velocita_proiettile*=2f;
             distanza_attacco*=1.5f;
             distanza_attacco+=Random.Range(-1f,1f);
         }

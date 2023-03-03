@@ -695,6 +695,7 @@ public class upgrade : MonoBehaviour
                         sblocca_unita_razza(attachStat.Key,attachStat.Value);
                     }
                     check_full_race();
+                    riempi_blocchi_testo_unita();
                     break;
                 }
                 case "random_unity_3":

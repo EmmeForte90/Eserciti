@@ -44800,7 +44800,7 @@ GameObject:
   - component: {fileID: 770382237}
   - component: {fileID: 770382236}
   m_Layer: 0
-  m_Name: freccia_comune
+  m_Name: freccia_comune_ca2
   m_TagString: proiettile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46762,7 +46762,7 @@ MonoBehaviour:
   velocita_proiettile: 9
   proiettile_pf: {fileID: 1864529367}
   bool_mago: 0
-  razza: scarafaggio
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
   bool_morto: 0
@@ -48946,10 +48946,10 @@ MonoBehaviour:
   ritardo_mov_random_max: 14
   armatura_melee: 1
   armatura_distanza: 0.4
-  velocita_proiettile: 0
+  velocita_proiettile: 7.5
   proiettile_pf: {fileID: 770382234}
   bool_mago: 0
-  razza: scarafaggio
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
   bool_morto: 0
@@ -51014,7 +51014,7 @@ MonoBehaviour:
   velocita_proiettile: 8
   proiettile_pf: {fileID: 421100786}
   bool_mago: 0
-  razza: scarafaggio
+  razza: ape
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
   bool_morto: 0
@@ -52758,10 +52758,10 @@ MonoBehaviour:
   ritardo_mov_random_max: 14
   armatura_melee: 1.4
   armatura_distanza: 0.8
-  velocita_proiettile: 0
+  velocita_proiettile: 8.5
   proiettile_pf: {fileID: 469449963}
   bool_mago: 0
-  razza: scarafaggio
+  razza: calabrone
   anim_velocita_attacco: 1
   anim_ritardo_morte: 1
   bool_morto: 0
