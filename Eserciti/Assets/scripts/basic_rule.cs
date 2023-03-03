@@ -74,6 +74,8 @@ public class basic_rule : MonoBehaviour
     public bool bool_armatura;
     private float secondi_armatura=0;
 
+    public float valore_pupo;
+
     // Start is called before the first frame update
     void Awake(){
         bool_armatura=false;
@@ -95,6 +97,14 @@ public class basic_rule : MonoBehaviour
         ritardo_attacco+=0.5f;          //in linea generale, bisogna sempre evitare che l'attacco sia più veloce o uguale alla velocità dell'animazione...
         //velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
         //velocita_movimento*=0.8f;
+
+        valore_pupo+=(velocita_movimento);
+        valore_pupo+=(vitalita_max*2);
+        valore_pupo-=(ritardo_attacco*2);
+        valore_pupo+=(raggio_sfera_attacco);
+        valore_pupo-=(danno*2);
+        valore_pupo+=(armatura_melee*2);
+        valore_pupo+=(armatura_distanza*2);
     }
     void Start(){
         switch (razza){
