@@ -28,7 +28,6 @@ public class basic_rule : MonoBehaviour
     //NON TOCCARE                  //la potenza del bump...
     public bool bool_morto=true;               //se prenderlo in considerazione o meno negli script; Non toccare
     public string stato="idle";                 //idle, wait (riposo cioè ripresa di attacco), attack, move
-    public GameObject barra_energia_pf;
     public GameObject barra_energia_vuota_pf;
     public GameObject barra_energia;
     public GameObject barra_energia_vuota;
@@ -211,11 +210,16 @@ public class basic_rule : MonoBehaviour
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         barra_energia_vuota=Instantiate(barra_energia_vuota_pf);
         barra_energia_vuota.transform.SetParent(gameObject.transform);
-        barra_energia_vuota.transform.localPosition = new Vector3(0f, -0.3f, -0.5f);
+        barra_energia_vuota.transform.localPosition = new Vector3(-0.5f, -0.3f, 10f);
+        barra_energia_vuota.transform.localScale=new Vector3(1f,0.25f,1);
 
-        barra_energia=Instantiate(barra_energia_pf);
-        barra_energia.transform.SetParent(gameObject.transform);
-        barra_energia.transform.localPosition = new Vector3(0f, -0.3f, -0.6f);
+        foreach (Transform child in barra_energia_vuota.transform) {
+            if (child.name=="barra"){
+                barra_energia=child.gameObject;
+                barra_energia.transform.localPosition = new Vector3(1, -0, -9.6f);
+                barra_energia.transform.localScale=new Vector3(-1f,1,1);
+            }
+        }
 
         vitalita=vitalita_max;
 
@@ -355,7 +359,10 @@ public class basic_rule : MonoBehaviour
         float percentuale=vitalita*100/vitalita_max;
         percentuale=percentuale*3/100;
         //percentuale*=0.7f;  //uff; Sembra che così non potremmo mai editare bene la grandezza per personaggi diversi
-       barra_energia.transform.localScale = new Vector3 (percentuale,0.5f,1);
+
+        //nuovo sistema:
+        percentuale=vitalita/vitalita_max;
+        barra_energia.transform.localScale = new Vector3 (-percentuale,1,1);
     }
 
     void OnTriggerEnter2D(Collider2D col){
@@ -462,12 +469,34 @@ public class basic_rule : MonoBehaviour
         if (transform.position.x==old_x){return;}
         if (transform.position.x<old_x){horizontal=1;}
         else {horizontal=-1;}
-        //old_x=transform.position.x;
         if (bool_dir_dx && horizontal < 0f || !bool_dir_dx && horizontal > 0f){
             bool_dir_dx = !bool_dir_dx;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+
+            Vector3 localScale_barra = barra_energia_vuota.transform.localScale;
+            Vector3 localPosition_barra = barra_energia_vuota.transform.localPosition;
+
+
+            localScale_barra.x *= -1f;
+            barra_energia_vuota.transform.localScale = localScale_barra;
+            localPosition_barra.x*=-1f;
+            barra_energia_vuota.transform.localPosition = localPosition_barra;
+
+            /*
+            if (localScale.x==1){
+                localScale_barra.x = -1f;
+                barra_energia_vuota.transform.localScale = localScale_barra;
+                localPosition_barra.x=0.5f;
+                barra_energia_vuota.transform.localPosition = localPosition_barra;
+            } else {
+                localScale_barra.x *= 1f;
+                barra_energia_vuota.transform.localScale = localScale_barra;
+                localPosition_barra.x=-0.5f;
+                barra_energia_vuota.transform.localPosition = localPosition_barra;
+            }
+            */
         }
     }
 }
