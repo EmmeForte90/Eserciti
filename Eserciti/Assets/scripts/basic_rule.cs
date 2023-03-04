@@ -106,19 +106,21 @@ public class basic_rule : MonoBehaviour
 
         if (livello>1){
             velocita_movimento+=(livello*0.8f);
-            vitalita_max+=(livello*2);
-            danno+=(1.5f*livello);
+            vitalita_max+=(livello*1.5f);
+            danno+=(0.5f*livello);
             armatura_melee+=(0.5f*livello);
             armatura_distanza+=(0.5f*livello);
+
+            //valore_pupo+=(livello*2);
         }
 
-        valore_pupo+=(velocita_movimento*1.5f);
-        valore_pupo+=(vitalita_max*3);
+        valore_pupo+=(velocita_movimento*2f);
+        valore_pupo+=(vitalita_max*4);
         valore_pupo-=(ritardo_attacco*2);
         valore_pupo+=(raggio_sfera_attacco);
-        valore_pupo-=(danno*3);
-        valore_pupo+=(armatura_melee*2);
-        valore_pupo+=(armatura_distanza*2);
+        valore_pupo-=(danno*4);
+        valore_pupo+=(armatura_melee*3);
+        valore_pupo+=(armatura_distanza*3);
 
         if (bool_mago){valore_pupo+=(1*livello);}
     }

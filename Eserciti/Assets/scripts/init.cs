@@ -73,8 +73,8 @@ public class init : MonoBehaviour
     private bool bool_mosche_fastidiose;
     private int liv_mosche_fastidiose;
 
-    public int valore_iniziale_ondata=130;
-    public int valore_incrementale_ondata=40;
+    private int valore_iniziale_ondata=130;
+    private int valore_incrementale_ondata=45;
 
     void Awake(){
         particle_mosche.SetActive(false);
@@ -151,7 +151,7 @@ public class init : MonoBehaviour
                     j=1;
                     num_battaglione_nemico++;
                 }
-                lp_totali_basic_rule[attachStat.Key].vitalita_max*=0.8f;    //diminuire un pò l'eenrgia dei pupi nemici
+                //lp_totali_basic_rule[attachStat.Key].vitalita_max*=0.8f;    //diminuire un pò l'eenrgia dei pupi nemici
                 lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,(j*-2)+ya_start,false);
 
             } else {
@@ -786,7 +786,7 @@ public class init : MonoBehaviour
             }
         }
 
-        //print (string_temp);
+        print (string_temp);
 
         float punteggio_residuo=valore_iniziale_ondata+(valore_incrementale_ondata*num_ondata);
         int num_random=0;
@@ -816,5 +816,6 @@ public class init : MonoBehaviour
                 punteggio_residuo-=punteggio_pupi[lista_pupi_temp[num_random]];
             }
         }
+        print ("punteggio residuo: "+punteggio_residuo);
     }
 }
