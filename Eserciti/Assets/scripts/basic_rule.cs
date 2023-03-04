@@ -75,6 +75,8 @@ public class basic_rule : MonoBehaviour
     private float secondi_armatura=0;
 
     public float valore_pupo;
+    public float valore_plus_pupo=0;
+    public float livello;
 
     // Start is called before the first frame update
     void Awake(){
@@ -89,7 +91,7 @@ public class basic_rule : MonoBehaviour
         
         //settaggi globali per non cambiare tutti i pupi
         if (velocita_proiettile!=0){
-            velocita_proiettile*=1.5f;
+            //velocita_proiettile*=1.5f;
             velocita_proiettile*=2f;
             distanza_attacco*=1.5f;
             distanza_attacco+=Random.Range(-1f,1f);
@@ -98,14 +100,29 @@ public class basic_rule : MonoBehaviour
         //velocita_movimento*=1.2f;       //così si velocizzano un pò i ragazzi
         //velocita_movimento*=0.8f;
 
-        valore_pupo+=(velocita_movimento);
-        valore_pupo+=(vitalita_max*2);
+        livello=1;
+        if (gameObject.name.Contains("_2")){livello=2;}
+        else if (gameObject.name.Contains("_3")){livello=3;}
+
+        if (livello>1){
+            velocita_movimento+=(livello*0.8f);
+            vitalita_max+=(livello*2);
+            danno+=(1.5f*livello);
+            armatura_melee+=(0.5f*livello);
+            armatura_distanza+=(0.5f*livello);
+        }
+
+        valore_pupo+=(velocita_movimento*1.5f);
+        valore_pupo+=(vitalita_max*3);
         valore_pupo-=(ritardo_attacco*2);
         valore_pupo+=(raggio_sfera_attacco);
-        valore_pupo-=(danno*2);
+        valore_pupo-=(danno*3);
         valore_pupo+=(armatura_melee*2);
         valore_pupo+=(armatura_distanza*2);
+
+        if (bool_mago){valore_pupo+=(1*livello);}
     }
+
     void Start(){
         switch (razza){
             case "ape":

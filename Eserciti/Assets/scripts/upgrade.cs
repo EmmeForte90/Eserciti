@@ -256,7 +256,13 @@ public class upgrade : MonoBehaviour
     }
 
     private void sblocca_unita_razza(string razza_plurare, int livello){
+        print ("dovrei sbloccare "+razza_plurare+" - "+livello);
         string razza=info_comuni.lista_razze_totale[razza_plurare];
+        string[] splitArray;
+        splitArray=razza_plurare.Split(char.Parse("_"));   
+        livello=int.Parse(splitArray[1]);
+        print ("dovrei sbloccare "+razza_plurare+" - "+livello);
+
         string string_temp;
 
         string_temp="icona_"+razza+"_warrior_"+livello;

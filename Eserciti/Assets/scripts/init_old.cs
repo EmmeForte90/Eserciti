@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using System.Text;
 using System.Xml; //Needed for XML functionality
 using System.IO;
-public class init : MonoBehaviour
+public class init_old : MonoBehaviour
 {
     public info_comuni info_comuni;
     public effetti effetti;
@@ -72,9 +72,6 @@ public class init : MonoBehaviour
     public GameObject particle_mosche;
     private bool bool_mosche_fastidiose;
     private int liv_mosche_fastidiose;
-
-    public int valore_iniziale_ondata=130;
-    public int valore_incrementale_ondata=40;
 
     void Awake(){
         particle_mosche.SetActive(false);
@@ -776,45 +773,25 @@ public class init : MonoBehaviour
                     num_pupi_g++;
                     lista_pupi_temp.Add(num_pupi_g,child.name);
                     punteggio_pupi.Add(child.name,child.gameObject.GetComponent<basic_rule>().valore_pupo);
-                    string_temp+="\n"+child.name+"-"+punteggio_pupi[child.name];
+                    string_temp+="\npunteggio_new: "+child.name+"-"+punteggio_pupi[child.name];
                 } else if (child.name.Contains("formica_rossa")){
                     num_pupi_g++;
                     lista_pupi_temp.Add(num_pupi_g,child.name);
                     punteggio_pupi.Add(child.name,child.gameObject.GetComponent<basic_rule>().valore_pupo);
-                    string_temp+="\n"+child.name+"-"+punteggio_pupi[child.name];
+                    string_temp+="\npunteggio_new: "+child.name+"-"+punteggio_pupi[child.name];
                 }
             }
         }
 
         //print (string_temp);
 
-        float punteggio_residuo=valore_iniziale_ondata+(valore_incrementale_ondata*num_ondata);
+        float punteggio_residuo=150+(50*num_ondata);
         int num_random=0;
 
-        if (num_ondata<11){
-            while(punteggio_residuo>0){
-                num_random=Random.Range(1,(num_pupi_g+1));
-                if (lista_pupi_temp[num_random].Contains("_1")){
-                    genera_pupo(lista_pupi_temp[num_random]);
-                    punteggio_residuo-=punteggio_pupi[lista_pupi_temp[num_random]];
-                }
-            }
-        }
-        else if (num_ondata<21){
-            while(punteggio_residuo>0){
-                num_random=Random.Range(1,(num_pupi_g+1));
-                if ((lista_pupi_temp[num_random].Contains("_1"))||(lista_pupi_temp[num_random].Contains("_2"))){
-                    genera_pupo(lista_pupi_temp[num_random]);
-                    punteggio_residuo-=punteggio_pupi[lista_pupi_temp[num_random]];
-                }
-            }
-        }
-        else {//gran bollito
-            while(punteggio_residuo>0){
-                num_random=Random.Range(1,(num_pupi_g+1));
-                genera_pupo(lista_pupi_temp[num_random]);
-                punteggio_residuo-=punteggio_pupi[lista_pupi_temp[num_random]];
-            }
+        while(punteggio_residuo>0){
+            num_random=Random.Range(1,(num_pupi_g+1));
+            genera_pupo(lista_pupi_temp[num_random]);
+            punteggio_residuo-=punteggio_pupi[lista_pupi_temp[num_random]];
         }
     }
 }
