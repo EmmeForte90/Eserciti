@@ -81,6 +81,7 @@ public class basic_rule : MonoBehaviour
     public GameObject particle_smoke;
     public GameObject eff_hit_distance;
     public GameObject eff_hit_distance_aculeo;
+    public GameObject eff_hit_critico;
 
 
     public float valore_pupo;
@@ -89,6 +90,7 @@ public class basic_rule : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake(){
+        //per_critico=100;    //debug;
         bool_armatura=false;
         bool_velocita=false;
         bool_ragnatele=false;
@@ -250,6 +252,7 @@ public class basic_rule : MonoBehaviour
                 valori_proiettile.velocita=velocita_proiettile;
                 valori_proiettile.danno=danno;
                 valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
+                valori_proiettile.per_critico=per_critico;
             } else {
                 proiettile.SetActive(false);
             }
@@ -405,23 +408,32 @@ public class basic_rule : MonoBehaviour
             if (!br.bool_attivo){return;}
             if (int_key_pupo!=br.id_attaccante){
                 if (bool_fazione_nemica!=br.bool_fazione_nemica){//appartengono a due fazioni diverse
+                    float danno=br.danno;
                     br.attiva_morte_proiettile();
-                    br.danno-=armatura_distanza;
-                    danneggia(br.danno);
+
+                    if (Random.Range(1,101)<=br.per_critico){//è un critico!
+                        danno*=3;
+                        GameObject go_temp_cr;
+                        go_temp_cr=Instantiate(eff_hit_critico);
+                        go_temp_cr.transform.SetParent(mappa.transform);
+                        go_temp_cr.transform.localPosition = new Vector3(transform.position.x, transform.position.y+0.5f, 1f);
+                        go_temp_cr.SetActive(true);
+                    }
+
+                    danno-=armatura_distanza;
+                    danneggia(danno);
 
                     if (!br.bool_aculeo){
                         GameObject go_temp;
                         go_temp=Instantiate(eff_hit_distance);
                         go_temp.transform.SetParent(mappa.transform);
                         go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y+0.5f, 1f);
-                        go_temp.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
                         go_temp.SetActive(true);
                     } else {
                         GameObject go_temp;
                         go_temp=Instantiate(eff_hit_distance_aculeo);
                         go_temp.transform.SetParent(mappa.transform);
                         go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y+0.5f, 1f);
-                        go_temp.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
                         go_temp.SetActive(true);
                     }
                 }

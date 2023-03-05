@@ -676,6 +676,11 @@ public class init : MonoBehaviour
 
     public void calcola_danno_combattimento(int id_attaccante, int id_difensore){
         float valore_danno=lp_totali_basic_rule[id_attaccante].danno;
+        if (Random.Range(1,101)<=lp_totali_basic_rule[id_attaccante].per_critico){//è un critico!
+            valore_danno*=3;
+            effetti.effetto_hit_critico(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
+        }
+
         if (lp_totali_basic_rule[id_attaccante].velocita_proiettile==0){
             effetti.effetto_hit_melee(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
             valore_danno-=lp_totali_basic_rule[id_difensore].armatura_melee;
