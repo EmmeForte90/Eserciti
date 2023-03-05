@@ -132,8 +132,11 @@ public class basic_rule : MonoBehaviour
         valore_pupo-=(danno*4);
         valore_pupo+=(armatura_melee*3);
         valore_pupo+=(armatura_distanza*3);
+        valore_pupo+=(per_critico/10);
 
         if (bool_mago){valore_pupo+=(1*livello);}
+
+        valore_pupo+=valore_plus_pupo;
     }
 
     void Start(){
@@ -248,6 +251,7 @@ public class basic_rule : MonoBehaviour
             proiettile.transform.SetParent(mappa.transform);
             proiettile.transform.localPosition = new Vector3(0f, 0f, 1f);
             if (!bool_mago){
+                valori_proiettile.razza=razza;
                 valori_proiettile=proiettile_pf.GetComponent<bullet_rule>();
                 valori_proiettile.velocita=velocita_proiettile;
                 valori_proiettile.danno=danno;
@@ -355,6 +359,7 @@ public class basic_rule : MonoBehaviour
             aculeo.transform.SetParent(mappa.transform);
             aculeo.SetActive(true);
 
+            valori_proiettile.razza=razza;
             valori_proiettile=aculeo_pf.GetComponent<bullet_rule>();
             valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
             valori_proiettile.bool_aculeo=true;
@@ -420,7 +425,10 @@ public class basic_rule : MonoBehaviour
                         go_temp_cr.SetActive(true);
                     }
 
-                    danno-=armatura_distanza;
+                    if (br.razza!="calabrone"){
+                        danno-=armatura_distanza;
+                        if (bool_armatura){danno-=1;}
+                    }
                     danneggia(danno);
 
                     if (!br.bool_aculeo){

@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 2046}
-      m_SelectedIDs: 62b5ffff
-      m_LastClickedID: -19102
-      m_ExpandedIDs: bc71fbffc671fbff4074fbfff413fdff9c15fdffa615fdff841afdff842cffff483bffff38baffff78e2ffffaef0ffff72f4ffff2cfbfffff4ffffffaa8700003a8800007288000084880000a6cf000024d0000092d60000e8d6000054d70000aadb0000
+      scrollPos: {x: 0, y: 126}
+      m_SelectedIDs: 40b5ffff
+      m_LastClickedID: -19136
+      m_ExpandedIDs: bc71fbffc671fbff4074fbfff413fdff9c15fdffa615fdff841afdff842cffff483bffff38baffff78e2ffffaef0ffff72f4ffff2cfbfffff4ffffffaa8700003a880000728800008488000024d0000092d60000e8d6000054d70000aadb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

@@ -15,6 +15,7 @@ public class bullet_rule : MonoBehaviour
     private float angolo_proiettile;
     public bool bool_aculeo=false;
     public int per_critico=0;
+    public string razza="";
 
     // Start is called before the first frame update
     void Start(){

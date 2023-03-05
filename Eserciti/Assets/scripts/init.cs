@@ -683,11 +683,15 @@ public class init : MonoBehaviour
 
         if (lp_totali_basic_rule[id_attaccante].velocita_proiettile==0){
             effetti.effetto_hit_melee(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
-            valore_danno-=lp_totali_basic_rule[id_difensore].armatura_melee;
+            if (lp_totali_basic_rule[id_attaccante].razza!="calabrone"){
+                valore_danno-=lp_totali_basic_rule[id_difensore].armatura_melee;
+            }
         } else {//solo ai maghi succede di calcolare il danno da combattimento a distanza...
              effetti.effetto_hit_magic_sfera(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
         }
-        if (lp_totali_basic_rule[id_difensore].bool_armatura){valore_danno-=1;}
+        if (lp_totali_basic_rule[id_attaccante].razza!="calabrone"){
+            if (lp_totali_basic_rule[id_difensore].bool_armatura){valore_danno-=1;}
+        }
         if (valore_danno<0.1f){valore_danno=0.1f;}  //farà sempre un minimo di danno.
         lp_totali_basic_rule[id_difensore].danneggia(valore_danno);
 
