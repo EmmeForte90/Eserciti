@@ -77,6 +77,7 @@ public class basic_rule : MonoBehaviour
     public GameObject particle_sangue_1;
     public GameObject particle_sangue_2;
     public GameObject particle_sangue_toon;
+    public GameObject particle_smoke;
 
     public float valore_pupo;
     public float valore_plus_pupo=0;
@@ -369,6 +370,14 @@ public class basic_rule : MonoBehaviour
         go_temp.GetComponent<ParticleSystem>().Play();
     }
 
+    public void effetto_fumo(){
+        GameObject go_temp_2;
+        go_temp_2=Instantiate(particle_smoke);
+        go_temp_2.transform.SetParent(mappa.transform);
+        go_temp_2.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
+        go_temp_2.SetActive(true);
+    }
+
     public IEnumerator disattiva_pupo() {
         yield return new WaitForSeconds(anim_ritardo_morte);
         //gameObject.SetActive(false);
@@ -406,7 +415,9 @@ public class basic_rule : MonoBehaviour
 
     private void movimento_zigzag(int num){
         switch (razza){
+            case "mosca":
             case "zanzara":{
+                effetto_fumo();
                 float thrust=50;
                 rb2D.AddForce(new Vector2(Random.Range(-thrust,thrust),Random.Range(-thrust,thrust)), ForceMode2D.Impulse);
                 bool_movimento_random=true;
@@ -437,6 +448,7 @@ public class basic_rule : MonoBehaviour
         if (bool_ragnatele){return;}
 
         switch (razza){
+            case "mosca":
             case "zanzara":{
                 if (Random.Range(1,5)!=4){
                     movimento_zigzag(1);
