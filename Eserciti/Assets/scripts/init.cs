@@ -196,6 +196,16 @@ public class init : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        /*
+        if (Input.GetKeyDown(KeyCode.Z)){
+            foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
+                effetti.effetto_hit_1(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y);
+                effetti.eff_armatura(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y);
+                effetti.eff_ragnatele(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y);
+
+            }
+        }
+        */
         if (Input.GetKeyDown(KeyCode.Q)){click_abilita(1);}
         if (Input.GetKeyDown(KeyCode.W)){click_abilita(2);}
         if (Input.GetKeyDown(KeyCode.E)){click_abilita(3);}
@@ -649,6 +659,7 @@ public class init : MonoBehaviour
                         if (id_attaccante!=attachStat.Key){
                             if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
                                 calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                effetti.effetto_hit_1(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y);
                                 //lp_totali_basic_rule[id_attaccante].bool_stop_hit=true;
                                 break;
                             }
