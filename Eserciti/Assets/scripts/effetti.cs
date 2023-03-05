@@ -18,11 +18,15 @@ public class effetti : MonoBehaviour
 
     public GameObject eff_hit_1;
 
-    public void effetto_hit_1(float xar, float yar){
+    public void effetto_hit_1(string tipo, float xar, float yar){
         GameObject go_temp;
         go_temp=Instantiate(eff_hit_1);
         go_temp.transform.SetParent(mappa.transform);
         go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        switch (tipo){
+            case "melee":{go_temp.transform.localScale = new Vector3(0.8f, 0.8f, 1f);break;}
+            case "distance":{go_temp.transform.localScale = new Vector3(0.4f, 0.4f, 1f);break;}
+        }
         go_temp.SetActive(true);
     }
 

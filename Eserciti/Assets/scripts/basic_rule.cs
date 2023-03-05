@@ -76,6 +76,7 @@ public class basic_rule : MonoBehaviour
     //blocco relativo ai possibili particle dei personaggi
     public GameObject particle_sangue_1;
     public GameObject particle_sangue_2;
+    public GameObject particle_sangue_toon;
 
     public float valore_pupo;
     public float valore_plus_pupo=0;
@@ -352,6 +353,12 @@ public class basic_rule : MonoBehaviour
             aculeo.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
             valori_proiettile.setta_e_vai(aculeo_x,aculeo_y,int_key_pupo);
         }
+        GameObject go_temp_2;
+        go_temp_2=Instantiate(particle_sangue_toon);
+        go_temp_2.transform.SetParent(mappa.transform);
+        go_temp_2.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
+        go_temp_2.SetActive(true);
+
         GameObject go_temp;
         go_temp=Instantiate(particle_sangue_1);
         switch (Random.Range(1,3)){
