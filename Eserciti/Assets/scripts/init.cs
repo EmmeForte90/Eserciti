@@ -786,7 +786,7 @@ public class init : MonoBehaviour
             }
         }
 
-        print (string_temp);
+        //print (string_temp);
 
         float punteggio_residuo=valore_iniziale_ondata+(valore_incrementale_ondata*num_ondata);
         int num_random=0;
@@ -816,6 +816,6 @@ public class init : MonoBehaviour
                 punteggio_residuo-=punteggio_pupi[lista_pupi_temp[num_random]];
             }
         }
-        print ("punteggio residuo: "+punteggio_residuo);
+        //print ("punteggio residuo: "+punteggio_residuo);
     }
 }

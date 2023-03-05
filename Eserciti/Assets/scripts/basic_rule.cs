@@ -73,6 +73,10 @@ public class basic_rule : MonoBehaviour
     public bool bool_armatura;
     private float secondi_armatura=0;
 
+    //blocco relativo ai possibili particle dei personaggi
+    public GameObject particle_sangue_1;
+    public GameObject particle_sangue_2;
+
     public float valore_pupo;
     public float valore_plus_pupo=0;
     public float livello;
@@ -83,7 +87,7 @@ public class basic_rule : MonoBehaviour
         bool_velocita=false;
         bool_ragnatele=false;
         bool_movimento_random=false;
-        thrust=10;
+        thrust=50;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         col2D = gameObject.GetComponent<BoxCollider2D>();
         bool_morto=true;    //è importante che si capisca che inizia da morto; Poi appena si attiva diventa bool_morto=false
@@ -148,7 +152,6 @@ public class basic_rule : MonoBehaviour
             if (secondi_ragnatela>0){
                 secondi_ragnatela-=Time.deltaTime;
             } else {
-                print ("finisce l'effetto delle ragnatele sul pupo "+int_key_pupo);
                 skeletonAnimation.state.GetCurrent(0).TimeScale = 1;
                 bool_ragnatele=false;
                 secondi_ragnatela=0;
@@ -189,7 +192,8 @@ public class basic_rule : MonoBehaviour
         //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
         if (Input.GetKeyDown("space")){
             inizia_percorso_random();
-            //rb2D.AddForce(transform.down * thrust*50, ForceMode2D.Force);
+            //rb2D.AddForce(transform.up * thrust*50, ForceMode2D.Force);
+            //rb2D.AddForce(new Vector2(Random.Range(-thrust,thrust),Random.Range(-thrust,thrust)), ForceMode2D.Impulse);
             //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
     }
@@ -348,6 +352,14 @@ public class basic_rule : MonoBehaviour
             aculeo.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
             valori_proiettile.setta_e_vai(aculeo_x,aculeo_y,int_key_pupo);
         }
+        GameObject go_temp;
+        go_temp=Instantiate(particle_sangue_1);
+        switch (Random.Range(1,3)){
+            case 2:{go_temp=Instantiate(particle_sangue_2);break;}
+        }
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
+        go_temp.GetComponent<ParticleSystem>().Play();
     }
 
     public IEnumerator disattiva_pupo() {
@@ -385,12 +397,49 @@ public class basic_rule : MonoBehaviour
         }
     }
 
+    private void movimento_zigzag(int num){
+        switch (razza){
+            case "zanzara":{
+                float thrust=50;
+                rb2D.AddForce(new Vector2(Random.Range(-thrust,thrust),Random.Range(-thrust,thrust)), ForceMode2D.Impulse);
+                bool_movimento_random=true;
+                if (num!=0){
+                    num++;
+                    if (Random.Range(0,num)==0){
+                        StartCoroutine(coro_prossimo_zigzag(num));
+                    }
+                    return;
+                }
+                termina_movimento_random();
+                break;
+            }
+        }
+    }
+
+    private IEnumerator coro_prossimo_zigzag(int num){
+        int random=Random.Range(ritardo_mov_random_min,ritardo_mov_random_max);
+        yield return new WaitForSeconds(0.25f);
+        movimento_zigzag(num);
+    }
+
     private void inizia_percorso_random(){
         //if (stato=="attack"){StartCoroutine(inizia_percorso_random_coroutine());return;}        //in verità è più figo commentato
         if (!bool_attivo){return;}
         if (bool_morto){return;}
         if (bool_movimento_random){return;}
         if (bool_ragnatele){return;}
+
+        switch (razza){
+            case "zanzara":{
+                if (Random.Range(1,5)!=4){
+                    movimento_zigzag(1);
+                    bool_movimento_random=true;
+                    return;
+                }
+                break;
+            }
+        }
+
         float x=transform.position.x;
         float y=transform.position.y;
         float z=transform.position.z;
@@ -398,19 +447,38 @@ public class basic_rule : MonoBehaviour
 
         string tipo="";
         string direzione="dx";
-        int random=Random.Range(1,5);
+        int random=Random.Range(1,9);
+        float fattore_spostamento_random_pos=0;
         switch (random){
-            case 1:{tipo="cerchio_basso";break;}
-            case 2:{tipo="cerchio_alto";break;}
-            case 3:{tipo="cerchio_basso_lento";break;}
-            case 4:{tipo="cerchio_alto_lento";break;}
+            case 1:
+            case 2:
+            case 3:
+            case 4:{
+                fattore_spostamento_random_pos=random*0.5f;
+                tipo="random_pos";
+                break;
+            }
+            case 5:{tipo="cerchio_basso";break;}
+            case 6:{tipo="cerchio_alto";break;}
+            case 7:{tipo="cerchio_basso_lento";break;}
+            case 8:{tipo="cerchio_alto_lento";break;}
         }
+        tipo="random_pos";
         if (bool_fazione_nemica){direzione="sx";}
 
         direzione="dx"; if (Random.Range(0,2)==0){direzione="sx";}  //commenta questa riga se vuoi togliere l'aleatorietà
         tipo+="_"+direzione;
 
         switch (tipo){
+            case "random_pos_dx":
+            case "random_pos_sx":{
+                waypoints=new Vector3[]{
+                    new Vector3(x+Random.Range(-fattore_spostamento_random_pos,fattore_spostamento_random_pos),y+Random.Range(-fattore_spostamento_random_pos,fattore_spostamento_random_pos),z),
+                    new Vector3(x+Random.Range(-fattore_spostamento_random_pos,fattore_spostamento_random_pos),y+Random.Range(-fattore_spostamento_random_pos,fattore_spostamento_random_pos),z)
+                };
+                velocita_movimento_fattore*=Random.Range(1f,2f);
+                break;
+            }
             case "cerchio_basso_dx":{
                 waypoints=new Vector3[]{new Vector3(x+0.5f,y-1,z), new Vector3(x+1,y-1.5f,z), new Vector3(x+2,y-2,z)};  //cerchio basso DX
                 velocita_movimento_fattore*=Random.Range(0.5f,1.5f);

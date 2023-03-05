@@ -13,6 +13,8 @@ public class effetti : MonoBehaviour
     public GameObject particle_ragnatele_grande;
     public GameObject particle_velocita;
     public GameObject particle_armatura;
+    public GameObject particle_sangue_1;
+    public GameObject particle_sangue_2;
 
     public void eff_evocazione_brown(float xar, float yar){
         GameObject go_temp;
@@ -67,6 +69,17 @@ public class effetti : MonoBehaviour
     public void eff_armatura(float xar, float yar){
         GameObject go_temp;
         go_temp=Instantiate(particle_armatura);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.GetComponent<ParticleSystem>().Play();
+    }
+
+    public void eff_sangue(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(particle_sangue_1);
+        switch (Random.Range(1,3)){
+            case 2:{go_temp=Instantiate(particle_sangue_2);break;}
+        }
         go_temp.transform.SetParent(mappa.transform);
         go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
         go_temp.GetComponent<ParticleSystem>().Play();
