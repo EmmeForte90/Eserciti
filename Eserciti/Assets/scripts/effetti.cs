@@ -19,6 +19,16 @@ public class effetti : MonoBehaviour
     public GameObject eff_hit_melee;
     public GameObject eff_hit_magic_sfera;
     public GameObject eff_hit_critico;
+    public GameObject eff_cura;
+
+    //in verità per ora lo usiamo direttamente sui pupi...
+    public void effetto_cura(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(eff_cura);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.SetActive(true);
+    }
 
     public void effetto_hit_critico(float xar, float yar){
         GameObject go_temp;

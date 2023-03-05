@@ -82,6 +82,7 @@ public class basic_rule : MonoBehaviour
     public GameObject eff_hit_distance;
     public GameObject eff_hit_distance_aculeo;
     public GameObject eff_hit_critico;
+    public GameObject eff_cura;
 
 
     public float valore_pupo;
@@ -251,8 +252,8 @@ public class basic_rule : MonoBehaviour
             proiettile.transform.SetParent(mappa.transform);
             proiettile.transform.localPosition = new Vector3(0f, 0f, 1f);
             if (!bool_mago){
-                valori_proiettile.razza=razza;
                 valori_proiettile=proiettile_pf.GetComponent<bullet_rule>();
+                valori_proiettile.razza=razza;
                 valori_proiettile.velocita=velocita_proiettile;
                 valori_proiettile.danno=danno;
                 valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
@@ -331,6 +332,12 @@ public class basic_rule : MonoBehaviour
             vitalita=vitalita_max;
         }
         aggiorna_barra_energia();
+        
+        GameObject go_temp;
+        go_temp=Instantiate(eff_cura);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y+0.5f, 1f);
+        go_temp.SetActive(true);
     }
 
     private void morte_personaggio(){

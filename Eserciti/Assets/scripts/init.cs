@@ -701,6 +701,10 @@ public class init : MonoBehaviour
                 lp_totali_basic_rule[id_difensore].applica_ragnatela(0.5f);
                 break;
             }
+            case "zanzara":{
+                lp_totali_basic_rule[id_attaccante].cura(valore_danno/10);
+                break;
+            }
         }
     }
 
