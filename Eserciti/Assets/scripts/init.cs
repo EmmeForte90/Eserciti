@@ -682,8 +682,11 @@ public class init : MonoBehaviour
         } else {
             if (!lp_totali_basic_rule[id_attaccante].bool_mago){
                 valore_danno-=lp_totali_basic_rule[id_difensore].armatura_distanza;
+                effetti.effetto_hit_1("distance",lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
+            } else {
+                effetti.effetto_hit_magic_sfera(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
             }
-            effetti.effetto_hit_1("distance",lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
+            
         }
         if (lp_totali_basic_rule[id_difensore].bool_armatura){valore_danno-=1;}
         if (valore_danno<0.1f){valore_danno=0.1f;}  //farà sempre un minimo di danno.

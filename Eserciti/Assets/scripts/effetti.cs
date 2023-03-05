@@ -17,6 +17,16 @@ public class effetti : MonoBehaviour
     public GameObject particle_sangue_2;
 
     public GameObject eff_hit_1;
+    public GameObject eff_hit_magic_sfera;
+
+    public void effetto_hit_magic_sfera(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(eff_hit_magic_sfera);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+        go_temp.SetActive(true);
+    }
 
     public void effetto_hit_1(string tipo, float xar, float yar){
         GameObject go_temp;
