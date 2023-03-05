@@ -13,6 +13,7 @@ public class bullet_rule : MonoBehaviour
     public float yar=0f;
     public int id_attaccante=0;             //int key del pupo che attacca
     private float angolo_proiettile;
+    public bool bool_aculeo=false;
 
     // Start is called before the first frame update
     void Start(){

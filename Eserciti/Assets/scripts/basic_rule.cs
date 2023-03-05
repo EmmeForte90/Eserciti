@@ -21,6 +21,7 @@ public class basic_rule : MonoBehaviour
     public GameObject proiettile_pf;            //indica la tipologia di proiettile che genera quando attacca a distanza
     public bool bool_mago=false;
     public string razza;                        //la razza del pupetto
+    public int per_critico=5;
 
     public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float anim_ritardo_morte=1f;
@@ -78,6 +79,9 @@ public class basic_rule : MonoBehaviour
     public GameObject particle_sangue_2;
     public GameObject particle_sangue_toon;
     public GameObject particle_smoke;
+    public GameObject eff_hit_distance;
+    public GameObject eff_hit_distance_aculeo;
+
 
     public float valore_pupo;
     public float valore_plus_pupo=0;
@@ -350,6 +354,7 @@ public class basic_rule : MonoBehaviour
 
             valori_proiettile=aculeo_pf.GetComponent<bullet_rule>();
             valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
+            valori_proiettile.bool_aculeo=true;
 
             aculeo.transform.localPosition = new Vector3(transform.position.x+x_iniziale_freccia, transform.position.y+y_iniziale_freccia, 1f);
             valori_proiettile.setta_e_vai(aculeo_x,aculeo_y,int_key_pupo);
@@ -401,7 +406,24 @@ public class basic_rule : MonoBehaviour
             if (int_key_pupo!=br.id_attaccante){
                 if (bool_fazione_nemica!=br.bool_fazione_nemica){//appartengono a due fazioni diverse
                     br.attiva_morte_proiettile();
+                    br.danno-=armatura_distanza;
                     danneggia(br.danno);
+
+                    if (!br.bool_aculeo){
+                        GameObject go_temp;
+                        go_temp=Instantiate(eff_hit_distance);
+                        go_temp.transform.SetParent(mappa.transform);
+                        go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y+0.5f, 1f);
+                        go_temp.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
+                        go_temp.SetActive(true);
+                    } else {
+                        GameObject go_temp;
+                        go_temp=Instantiate(eff_hit_distance_aculeo);
+                        go_temp.transform.SetParent(mappa.transform);
+                        go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y+0.5f, 1f);
+                        go_temp.transform.localScale = new Vector3(0.4f, 0.4f, 1f);
+                        go_temp.SetActive(true);
+                    }
                 }
             }
         }
