@@ -29,6 +29,11 @@ public class init : MonoBehaviour
 
     //sezione relativa ai cooldown
     public Dictionary<int, GameObject> lista_abilita_GO = new Dictionary<int, GameObject>();
+
+    public Dictionary<int, GameObject> lista_cerchietti_rossi_GO = new Dictionary<int, GameObject>();
+    public Dictionary<int, GameObject> lista_cerchietti_blu_GO = new Dictionary<int, GameObject>();
+    public Dictionary<int, GameObject> lista_cerchietti_verdi_GO = new Dictionary<int, GameObject>();
+
     public Dictionary<int, Image> lista_abilita_img = new Dictionary<int, Image>();
     public Dictionary<int, Image> lista_abilita_cooldown_img = new Dictionary<int, Image>();
     public Dictionary<int, float> lista_abilita_cooldown_secondi = new Dictionary<int, float>();
@@ -100,11 +105,19 @@ public class init : MonoBehaviour
             lista_abilita_cooldown_secondi.Add(i,0);
             lista_abilita_cooldown_secondi_attuale.Add(i,0);
             foreach (Transform child_2 in child.gameObject.transform) {
-                if (child_2.name=="img_cooldown"){
-                    lista_abilita_cooldown_img.Add(i,child_2.gameObject.GetComponent<Image>());
-                    setta_cooldown_abilita(i,0f);
-                } else if (child_2.name=="img_abilita"){
-                    lista_abilita_img.Add(i,child_2.gameObject.GetComponent<Image>());
+                switch (child_2.name){
+                    case "img_cooldown":{
+                        lista_abilita_cooldown_img.Add(i,child_2.gameObject.GetComponent<Image>());
+                        setta_cooldown_abilita(i,0f);
+                        break;
+                    }
+                    case "img_abilita":{
+                        lista_abilita_img.Add(i,child_2.gameObject.GetComponent<Image>());
+                        break;
+                    }
+                    case "img_cerchietto_bianco_rosso":{lista_cerchietti_rossi_GO.Add(i,child_2.gameObject);break;}
+                    case "img_cerchietto_bianco_blu":{lista_cerchietti_blu_GO.Add(i,child_2.gameObject);break;}
+                    case "img_cerchietto_bianco_verde":{lista_cerchietti_verdi_GO.Add(i,child_2.gameObject);break;}
                 }
             }
             lista_abilita_id.Add(i,"");
@@ -124,6 +137,7 @@ public class init : MonoBehaviour
                     lista_abilita_cooldown_secondi[attachStat.Key]=lista_abilita_cooldown_secondi[attachStat.Key]*(100-(lista_upgrade["hero_cooldown"]*10))/100;
                     lista_abilita_cooldown_secondi_attuale[attachStat.Key]=lista_abilita_cooldown_secondi_attuale[attachStat.Key]*(100-(lista_upgrade["hero_cooldown"]*10))/100;
                 }
+                setta_cerchietto_abilita(attachStat.Key,"rosso");
 
                 if (attachStat.Value=="mosche_fastidiose"){
                     liv_mosche_fastidiose=lista_abilita_livello[attachStat.Key];
@@ -240,6 +254,8 @@ public class init : MonoBehaviour
                 lista_abilita_cooldown_secondi_attuale[i]-=Time.deltaTime;
                 if (lista_abilita_cooldown_secondi_attuale[i]>0){
                     setta_cooldown_abilita(i,(lista_abilita_cooldown_secondi_attuale[i]/lista_abilita_cooldown_secondi[i]));
+                } else {
+                    setta_cerchietto_abilita(i,"verde");
                 }
             }
         }
@@ -366,6 +382,9 @@ public class init : MonoBehaviour
         if (bool_fine_partita){return;}
         if ((!lista_abilita_id.ContainsKey(int_abilita))||(lista_abilita_id[int_abilita]=="")){return;}
         if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
+            if (int_abilita_scelta!=0){
+                setta_cerchietto_abilita(int_abilita_scelta,"verde");
+            }
             int_abilita_scelta=int_abilita;
             switch (lista_abilita_id[int_abilita]){
                 default:{
@@ -435,6 +454,7 @@ public class init : MonoBehaviour
         if (int_abilita_scelta!=0){
             //print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
             lista_abilita_cooldown_secondi_attuale[int_abilita_scelta]=lista_abilita_cooldown_secondi[int_abilita_scelta];
+            setta_cerchietto_abilita(int_abilita_scelta,"rosso");
             setta_cooldown_abilita(int_abilita_scelta,1);
             txt_desc_abilita.SetText("");
             int liv=lista_abilita_livello[int_abilita_scelta];
@@ -552,17 +572,39 @@ public class init : MonoBehaviour
             if (int_abilita_scelta==0){
                 txt_desc_abilita.SetText("");
             }
+            int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
+            if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
+                if (int_abilita_scelta!=int_abilita){
+                    setta_cerchietto_abilita(int_abilita,"verde");
+                }
+            } else {
+                setta_cerchietto_abilita(int_abilita,"rosso");
+            }
         }
         //print ("mouse: sono uscito da "+obj.name);
-        //switch 
     }
     public void mouse_enter(GameObject obj){
         if (obj.name.Contains("abilita_")){
+            int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             if (int_abilita_scelta==0){
-                int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
                 string testo=info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
                 txt_desc_abilita.SetText(testo);
             }
+            if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
+                setta_cerchietto_abilita(int_abilita,"blu");
+            }
+        }
+    }
+
+    private void setta_cerchietto_abilita(int int_abilita, string colore){
+        lista_cerchietti_rossi_GO[int_abilita].SetActive(false);
+        lista_cerchietti_blu_GO[int_abilita].SetActive(false);
+        lista_cerchietti_verdi_GO[int_abilita].SetActive(false);
+
+        switch (colore){
+            case "rosso":{lista_cerchietti_rossi_GO[int_abilita].SetActive(true);break;}
+            case "blu":{lista_cerchietti_blu_GO[int_abilita].SetActive(true);break;}
+            case "verde":{lista_cerchietti_verdi_GO[int_abilita].SetActive(true);break;}
         }
     }
 
@@ -677,6 +719,7 @@ public class init : MonoBehaviour
     public void calcola_danno_combattimento(int id_attaccante, int id_difensore){
         float valore_danno=lp_totali_basic_rule[id_attaccante].danno;
         if (Random.Range(1,101)<=lp_totali_basic_rule[id_attaccante].per_critico){//è un critico!
+            print ("critico! on melee");
             valore_danno*=3;
             effetti.effetto_hit_critico(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
         }
