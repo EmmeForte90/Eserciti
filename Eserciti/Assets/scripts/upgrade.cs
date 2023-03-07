@@ -567,7 +567,10 @@ public class upgrade : MonoBehaviour
                     } else {
                         titolo="Unlock "+info_comuni.lista_abilita_nome[abilita]+" level "+livello_abilita;
                     }
-                    descrizione="Upgrade the ability "+info_comuni.lista_abilita_nome[abilita]+" to level 2";
+                    descrizione="Upgrade the ability "+info_comuni.lista_abilita_nome[abilita]+" to level "+livello_abilita;
+
+                    riempi_img_premio(num_cont_premio,"reward_abilita/"+abilita+"_"+livello_abilita);
+                    
                     break;
                 }
                 case "denaro":{
@@ -619,6 +622,15 @@ public class upgrade : MonoBehaviour
             }
         }
 
+    }
+
+    private void riempi_img_premio(int num_cont_premio, string sprite){
+        Sprite sprite_temp  = Resources.Load<Sprite>(sprite);
+        switch (num_cont_premio){
+            case 1:{img_premio_upgrade_1.sprite = sprite_temp;break;}
+            case 2:{img_premio_upgrade_2.sprite = sprite_temp;break;}
+            case 3:{img_premio_upgrade_3.sprite = sprite_temp;break;}
+        }
     }
 
     public void check_abilita(string abilita){

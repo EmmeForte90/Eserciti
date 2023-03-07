@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f69fffff
-      m_LastClickedID: -24586
-      m_ExpandedIDs: 2cfbffffb6700000d27000006e7500007676000084760000d67800002c7a0000827a0000be7b0000b67e00006e810000
+      m_SelectedIDs: b6950000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8652feff2cfbffffb6700000d27000006e75000084760000d67800002c7a0000827a0000be7b0000b67e00006e810000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1020.60645, y: 144.81769, z: 9.623344}
+    m_Target: {x: 1194.342, y: 183.95366, z: 7.629619}
     speed: 2
-    m_Value: {x: 1020.60645, y: 144.81769, z: 9.623344}
+    m_Value: {x: 1194.342, y: 183.95366, z: 7.629619}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 273.6366
+    m_Target: 473.0104
     speed: 2
-    m_Value: 273.6366
+    m_Value: 473.0104
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -656,14 +656,14 @@ MonoBehaviour:
     y: 428
     width: 1172.8
     height: 294.8
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -705,22 +705,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cappe\Desktop\Eserciti\Eserciti
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 50.200012}
-    m_SelectedIDs: 148b0000
-    m_LastClickedID: 35604
-    m_ExpandedIDs: 00000000008b0000028b0000048b0000068b0000088b00000a8b00000c8b000000ca9a3b
+    scrollPos: {x: 0, y: 230.20001}
+    m_SelectedIDs: 288b0000
+    m_LastClickedID: 35624
+    m_ExpandedIDs: 00000000008b0000028b0000048b0000068b0000088b00000a8b00000c8b0000128b00001a8b0000268b0000ea9e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,8 +773,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f69fffff
-    m_LastClickedInstanceID: -24586
+    m_SelectedInstanceIDs: b6950000
+    m_LastClickedInstanceID: 38326
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
