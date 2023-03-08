@@ -550,6 +550,8 @@ public class upgrade : MonoBehaviour
 
                     titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" lvl "+livello_pupo;
                     descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+
+                    riempi_img_premio(num_cont_premio,"reward_pupi/"+info_comuni.lista_razze_totale[razza_pupo]+"_"+livello_pupo);
                     break;
                 }
                 case "nrazza":{
