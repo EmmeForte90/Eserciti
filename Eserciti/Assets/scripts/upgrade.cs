@@ -18,6 +18,10 @@ public class upgrade : MonoBehaviour
     public GameObject pannello_scelta_premio;
     public GameObject pannello_upgrade;
 
+    public GameObject cont_scrigno;
+    public TMPro.TextMeshProUGUI testo_reward;
+
+
     public GameObject blocco_unita_liv_1;
     public GameObject blocco_unita_liv_2;
     public GameObject blocco_unita_liv_3;
@@ -36,14 +40,17 @@ public class upgrade : MonoBehaviour
 
 
     public Image img_premio_upgrade_1;
+    public GameObject img_monete_upgrade_1;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_1;
     public TMPro.TextMeshProUGUI monete_premio_upgrade_1;
     public TMPro.TextMeshProUGUI descrizione_premio_upgrade_1;
     public Image img_premio_upgrade_2;
+    public GameObject img_monete_upgrade_2;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_2;
     public TMPro.TextMeshProUGUI monete_premio_upgrade_2;
     public TMPro.TextMeshProUGUI descrizione_premio_upgrade_2;
     public Image img_premio_upgrade_3;
+    public GameObject img_monete_upgrade_3;
     public TMPro.TextMeshProUGUI titolo_premio_upgrade_3;
     public TMPro.TextMeshProUGUI monete_premio_upgrade_3;
     public TMPro.TextMeshProUGUI descrizione_premio_upgrade_3;
@@ -288,6 +295,8 @@ public class upgrade : MonoBehaviour
     }
 
     public void click_upgrade_number(int numero){
+        cont_scrigno.SetActive(false);
+        testo_reward.SetText("Choose Your Upgrade");
         string premio=lista_premi_settati[numero];
         string tipo;
         string[] splitArray;
@@ -544,6 +553,7 @@ public class upgrade : MonoBehaviour
                     if (premio.Contains("plus_monete")){
                         monete=valore_monete_premio-(info_comuni.lista_costo_unita_razza[razza_pupo]);
                         txt_monete="+ "+monete+" gold";
+                        txt_monete="+"+monete;
                     }
                     lista_premi_settati_num_pupi.Add(num_cont_premio,num_pupi);
                     lista_premi_settati_monete.Add(num_cont_premio,monete);
@@ -582,6 +592,7 @@ public class upgrade : MonoBehaviour
                         default:{monete=valore_monete_premio;break;}
                     }
                     txt_monete="+ "+monete+" gold";
+                    txt_monete="+"+monete;
                     titolo="Gold!";
                     descrizione="Un grande tributo al morale della truppa!";
                     break;
@@ -594,6 +605,7 @@ public class upgrade : MonoBehaviour
 
             switch (num_cont_premio){
                 case 1:{
+                    if (txt_monete==""){img_monete_upgrade_1.SetActive(false);} else {img_monete_upgrade_1.SetActive(true);}
                     cont_upgrade_1.SetActive(true);
                     titolo_premio_upgrade_1.SetText(titolo);
                     monete_premio_upgrade_1.SetText(txt_monete);
@@ -601,6 +613,7 @@ public class upgrade : MonoBehaviour
                     break;
                 }
                 case 2:{
+                    if (txt_monete==""){img_monete_upgrade_2.SetActive(false);} else {img_monete_upgrade_2.SetActive(true);}
                     cont_upgrade_2.SetActive(true);
                     titolo_premio_upgrade_2.SetText(titolo);
                     monete_premio_upgrade_2.SetText(txt_monete);
@@ -608,6 +621,7 @@ public class upgrade : MonoBehaviour
                     break;
                 }
                 case 3:{
+                    if (txt_monete==""){img_monete_upgrade_3.SetActive(false);} else {img_monete_upgrade_3.SetActive(true);}
                     cont_upgrade_3.SetActive(true);
                     titolo_premio_upgrade_3.SetText(titolo);
                     monete_premio_upgrade_3.SetText(txt_monete);
