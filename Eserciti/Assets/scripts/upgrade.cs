@@ -606,6 +606,7 @@ public class upgrade : MonoBehaviour
                     txt_monete="+"+monete;
                     titolo="Gold!";
                     descrizione="Un grande tributo al morale della truppa!";
+                    riempi_img_premio(num_cont_premio,"reward_bold");
                     break;
                 }
                 case "":{break;}
