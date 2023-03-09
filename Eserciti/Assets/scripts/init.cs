@@ -9,6 +9,9 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public GameObject cont_descrizione_volante;
+    public Text txt_descrizione_volante;
+
     public info_comuni info_comuni;
     public effetti effetti;
     public TMPro.TextMeshProUGUI txt_desc_abilita;
@@ -208,8 +211,19 @@ public class init : MonoBehaviour
         lista_abilita_img[int_abilita].sprite = sprite_temp;
     }
 
+    private void descrizione_follow_mouse(){
+        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.x+=500;
+        mousePosition.y+=200;
+        mousePosition.z=0;
+        cont_descrizione_volante.transform.position=mousePosition;
+    }
+
     // Update is called once per frame
     void Update(){
+        descrizione_follow_mouse();
+
         if (Input.GetKeyDown(KeyCode.Z)){
             foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                 effetti.effetto_hit_melee(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y+0.5f);
@@ -580,6 +594,7 @@ public class init : MonoBehaviour
             } else {
                 setta_cerchietto_abilita(int_abilita,"rosso");
             }
+            cont_descrizione_volante.SetActive(false);
         }
         //print ("mouse: sono uscito da "+obj.name);
     }
@@ -588,7 +603,10 @@ public class init : MonoBehaviour
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             if (int_abilita_scelta==0){
                 string testo=info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
+                cont_descrizione_volante.SetActive(true);
                 txt_desc_abilita.SetText(testo);
+                testo = testo.Replace(".", ".\n");
+                txt_descrizione_volante.text=testo;
             }
             if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
                 setta_cerchietto_abilita(int_abilita,"blu");
