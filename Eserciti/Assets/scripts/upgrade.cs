@@ -578,6 +578,8 @@ public class upgrade : MonoBehaviour
                     string razza_pupo = splitArray[1];
                     titolo="Unlock "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" (Level "+livello_razza+")";
                     descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+
+                    riempi_img_premio(num_cont_premio,"upgrade_nrazza/"+info_comuni.lista_razze_totale[razza_pupo]+"_"+livello_razza);
                     break;
                 }
                 case "abilita":{
