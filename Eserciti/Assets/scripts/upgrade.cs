@@ -561,7 +561,16 @@ public class upgrade : MonoBehaviour
                     titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" lvl "+livello_pupo;
                     descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
 
-                    riempi_img_premio(num_cont_premio,"reward_pupi/"+info_comuni.lista_razze_totale[razza_pupo]+"_"+livello_pupo);
+                    string string_temp_img="reward_pupi_2/skeleton-Lv"+livello_pupo+"_";
+                    switch (classe_pupo){
+                        case "warrior":{string_temp_img+="Warrior";break;}
+                        case "arcer":{string_temp_img+="Bow";break;}
+                        case "wizard":{string_temp_img+="Wizard";break;}
+                    }
+                    string_temp_img+="-"+char.ToUpper(info_comuni.lista_razze_totale[razza_pupo][0])+info_comuni.lista_razze_totale[razza_pupo].Substring(1);
+                    if (razza_pupo.Contains("formiche")){string_temp_img+="N";}
+
+                    riempi_img_premio(num_cont_premio,string_temp_img);
                     break;
                 }
                 case "nrazza":{
@@ -641,6 +650,7 @@ public class upgrade : MonoBehaviour
     }
 
     private void riempi_img_premio(int num_cont_premio, string sprite){
+        print (sprite);
         Sprite sprite_temp  = Resources.Load<Sprite>(sprite);
         switch (num_cont_premio){
             case 1:{img_premio_upgrade_1.sprite = sprite_temp;break;}
