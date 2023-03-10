@@ -366,8 +366,8 @@ public class basic_rule : MonoBehaviour
             aculeo.transform.SetParent(mappa.transform);
             aculeo.SetActive(true);
 
-            valori_proiettile.razza=razza;
             valori_proiettile=aculeo_pf.GetComponent<bullet_rule>();
+            valori_proiettile.razza=razza;
             valori_proiettile.bool_fazione_nemica=bool_fazione_nemica;
             valori_proiettile.bool_aculeo=true;
 

@@ -66,7 +66,7 @@ public class upgrade : MonoBehaviour
     private int num_ondata;
     private int tier_unity_sbloccato;
     private int i;
-    private int num_max_abilita=6;
+    private int num_max_abilita=8;
 
     //lista_dei costi delle varie abilità
     public TMPro.TextMeshProUGUI txt_u_c_melee_damage;

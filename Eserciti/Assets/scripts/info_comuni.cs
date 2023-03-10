@@ -95,6 +95,13 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["armatura"].Add(2,30);
         lista_abilita_cooldown["armatura"].Add(3,30);
 
+        lista_abilita_nome.Add("zombie","Zombie");
+        lista_abilita_descrizione.Add("zombie","Evoca degli insetti zombie casuali. Al primo livello ne evoca 5. Al secondo ne evoca 8. Al terzo ne evoca 10");
+        lista_abilita_cooldown.Add("zombie",new Dictionary<int, int>());
+        lista_abilita_cooldown["zombie"].Add(1,30);
+        lista_abilita_cooldown["zombie"].Add(2,30);
+        lista_abilita_cooldown["zombie"].Add(3,30);
+
         //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
         foreach(KeyValuePair<string,Dictionary<int,int>> attachStat in lista_abilita_cooldown){
             lista_abilita_cooldown_partenza.Add(attachStat.Key,new Dictionary<int, int>());

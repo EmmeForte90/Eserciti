@@ -447,24 +447,31 @@ public class init : MonoBehaviour
             num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
             lp_buoni.Add(num_pupi_generati_buoni,num_pupi_generati_totali);
             float per_10;
-
-            //lp_totali[num_pupi_generati_totali].transform.localPosition = new Vector3(xa, (i*-2)+15, 1f);
             lp_totali_basic_rule[num_pupi_generati_totali].attiva_pupo(2,xar,yar,true);
-
-            if (lp_totali_basic_rule[num_pupi_generati_totali].velocita_proiettile==0){
-                lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["melee_damage"];
+            if (id_pupo.Contains("zombie")){
+                lp_totali_basic_rule[num_pupi_generati_totali].danno/=2;
+                lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max/=2;
+                lp_totali_basic_rule[num_pupi_generati_totali].velocita_movimento/=2;
+                lp_totali_basic_rule[num_pupi_generati_totali].distanza_attacco/=2;
+                lp_totali_basic_rule[num_pupi_generati_totali].ritardo_attacco*=2;
             }
             else {
-                if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_mago){
-                    lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["distance_damage"];
+                //lp_totali[num_pupi_generati_totali].transform.localPosition = new Vector3(xa, (i*-2)+15, 1f);
+                if (lp_totali_basic_rule[num_pupi_generati_totali].velocita_proiettile==0){
+                    lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["melee_damage"];
                 }
                 else {
-                    lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["spell_damage"];
+                    if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_mago){
+                        lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["distance_damage"];
+                    }
+                    else {
+                        lp_totali_basic_rule[num_pupi_generati_totali].danno+=lista_upgrade["spell_damage"];
+                    }
                 }
-            }
-            if (lista_upgrade["health"]>0){
-                per_10=lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max*lista_upgrade["health"]/10;
-                lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max+=per_10;
+                if (lista_upgrade["health"]>0){
+                    per_10=lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max*lista_upgrade["health"]/10;
+                    lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max+=per_10;
+                }
             }
         }
         effetti.eff_evocazione_brown(xar,yar);
@@ -480,6 +487,34 @@ public class init : MonoBehaviour
             //txt_desc_abilita.SetText("");
             int liv=lista_abilita_livello[int_abilita_scelta];
             switch (lista_abilita_id[int_abilita_scelta]){
+                case "zombie":{
+                    float random_x;
+                    float random_y;
+                    int num_zombie=5;
+                    if (liv==2){num_zombie=7;}
+                    else if (liv==3){num_zombie=10;}
+                    string zombie_temp="";
+                    for (int i=1;i<=num_zombie;i++){
+                        random_x=Random.Range(-2f,2f)+xar;
+                        random_y=Random.Range(-2f,2f)+yar;
+                        zombie_temp="";
+                        switch (Random.Range(1,5)){
+                            case 1:{zombie_temp+="formica";break;}
+                            case 2:{zombie_temp+="ape";break;}
+                            case 3:{zombie_temp+="mosca";break;}
+                            case 4:{zombie_temp+="ragnetto";break;}
+                        }
+                        zombie_temp+="_";
+                        switch (Random.Range(1,4)){
+                            case 1:{zombie_temp+="warrior";break;}
+                            case 2:{zombie_temp+="arcer";break;}
+                            case 3:{zombie_temp+="wizard";break;}
+                        }
+                        zombie_temp+="_1_zombie";
+                        evoca_pupo(zombie_temp,random_x,random_y);
+                    }
+                    break;
+                }
                 case "evoca_formiche":{
                     float random_x;
                     float random_y;
