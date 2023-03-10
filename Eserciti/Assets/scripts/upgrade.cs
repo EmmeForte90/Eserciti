@@ -905,12 +905,9 @@ public class upgrade : MonoBehaviour
                 costo=100*(livello+1);
                 break;
             }
-            case "random_unity_1":{
-                costo=30+(5*livello);
-                break;
-            }
-            case "random_unity_2":{costo=60+(5*livello);break;}
-            case "random_unity_3":{costo=90+(5*livello);break;}
+            case "random_unity_1":{costo=30+(10*livello);break;}
+            case "random_unity_2":{costo=60+(10*livello);break;}
+            case "random_unity_3":{costo=90+(10*livello);break;}
             case "random_race":
             case "random_spell":{
                 costo=100;

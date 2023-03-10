@@ -11,10 +11,11 @@ public class init : MonoBehaviour
 {
     public GameObject cont_descrizione_volante;
     public Text txt_descrizione_volante;
+    private int abilita_temp_mouse;
 
     public info_comuni info_comuni;
     public effetti effetti;
-    public TMPro.TextMeshProUGUI txt_desc_abilita;
+    //public TMPro.TextMeshProUGUI txt_desc_abilita;    //presto disattiverai tutto ciò che concerne stà cosa!
     public GameObject lista_pupi;
     public GameObject mappa;
     public GameObject pannello_vittoria;
@@ -200,7 +201,7 @@ public class init : MonoBehaviour
                 }
             }
         }
-        txt_desc_abilita.SetText("");
+        //txt_desc_abilita.SetText("");
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
     }
@@ -214,8 +215,14 @@ public class init : MonoBehaviour
     private void descrizione_follow_mouse(){
         //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition.x+=500;
-        mousePosition.y+=200;
+
+        float x_plus=400;
+        float y_plus=150;
+
+        x_plus-=(abilita_temp_mouse*70);
+
+        mousePosition.x+=x_plus;
+        mousePosition.y+=y_plus;
         mousePosition.z=0;
         cont_descrizione_volante.transform.position=mousePosition;
     }
@@ -242,7 +249,7 @@ public class init : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (int_abilita_scelta!=0){
                 int_abilita_scelta=0;
-                txt_desc_abilita.SetText("");
+                //txt_desc_abilita.SetText("");
             }
         }
         if (!bool_inizio_partita){
@@ -405,7 +412,7 @@ public class init : MonoBehaviour
                     string testo="";
                     testo+="Select where want to use "+info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita]];
                     testo+="\n\nPress ESC to cancel";
-                    txt_desc_abilita.SetText(testo);
+                    //txt_desc_abilita.SetText(testo);
                     break;
                 }
             }
@@ -470,7 +477,7 @@ public class init : MonoBehaviour
             lista_abilita_cooldown_secondi_attuale[int_abilita_scelta]=lista_abilita_cooldown_secondi[int_abilita_scelta];
             setta_cerchietto_abilita(int_abilita_scelta,"rosso");
             setta_cooldown_abilita(int_abilita_scelta,1);
-            txt_desc_abilita.SetText("");
+            //txt_desc_abilita.SetText("");
             int liv=lista_abilita_livello[int_abilita_scelta];
             switch (lista_abilita_id[int_abilita_scelta]){
                 case "evoca_formiche":{
@@ -584,7 +591,7 @@ public class init : MonoBehaviour
     public void mouse_exit(GameObject obj){
         if (obj.name.Contains("abilita_")){
             if (int_abilita_scelta==0){
-                txt_desc_abilita.SetText("");
+                //txt_desc_abilita.SetText("");
             }
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
@@ -604,8 +611,9 @@ public class init : MonoBehaviour
             if (int_abilita_scelta==0){
                 string testo=info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
                 cont_descrizione_volante.SetActive(true);
-                txt_desc_abilita.SetText(testo);
-                testo = testo.Replace(".", ".\n");
+                abilita_temp_mouse=int_abilita;
+                //txt_desc_abilita.SetText(testo);
+                //testo = testo.Replace(".", ".\n");
                 txt_descrizione_volante.text=testo;
             }
             if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
