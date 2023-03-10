@@ -925,7 +925,7 @@ public class init : MonoBehaviour
         string string_temp="";
 
         foreach (Transform child in lista_pupi.transform) {
-            if (!child.name.Contains("horseman")){
+            if ((!child.name.Contains("horseman"))&&(!child.name.Contains("zombie"))){
                 if ((!child.name.Contains("formica"))&&(!child.name.Contains("ape"))&&(!child.name.Contains("ragnetto"))&&(!child.name.Contains("mosca"))){
                     num_pupi_g++;
                     lista_pupi_temp.Add(num_pupi_g,child.name);
