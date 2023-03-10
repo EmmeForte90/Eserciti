@@ -105,9 +105,9 @@ public class info_comuni : MonoBehaviour
         lista_abilita_nome.Add("resurrezione","resurrezione");
         lista_abilita_descrizione.Add("resurrezione","Rievoca un pupetto morto alleato. Il livello del pupo evocato è uguale a quello del livello dell'abilità. Non ha effetto se non ci sono stati pupetti morti.");
         lista_abilita_cooldown.Add("resurrezione",new Dictionary<int, int>());
-        lista_abilita_cooldown["resurrezione"].Add(1,40);
-        lista_abilita_cooldown["resurrezione"].Add(2,50);
-        lista_abilita_cooldown["resurrezione"].Add(3,60);
+        lista_abilita_cooldown["resurrezione"].Add(1,4);   //40, 50 e 60
+        lista_abilita_cooldown["resurrezione"].Add(2,5);
+        lista_abilita_cooldown["resurrezione"].Add(3,6);
 
         //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
         foreach(KeyValuePair<string,Dictionary<int,int>> attachStat in lista_abilita_cooldown){

@@ -441,13 +441,18 @@ public class init : MonoBehaviour
         }
     }
 
-    public void evoca_pupo(string id_pupo, float xar, float yar){
+    public void evoca_pupo(string id_pupo, float xar, float yar, string tipo_evocazione){
+        int tempo_evocazione=2;
+        switch (tipo_evocazione){
+            case "resurrezione":{tempo_evocazione=4;break;}
+            case "zombie":{tempo_evocazione=3;break;}
+        }
         genera_pupo(id_pupo);
         if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_fazione_nemica){
             num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
             lp_buoni.Add(num_pupi_generati_buoni,num_pupi_generati_totali);
             float per_10;
-            lp_totali_basic_rule[num_pupi_generati_totali].attiva_pupo(2,xar,yar,true);
+            lp_totali_basic_rule[num_pupi_generati_totali].attiva_pupo(tempo_evocazione,xar,yar,true);
             if (id_pupo.Contains("zombie")){
                 lp_totali_basic_rule[num_pupi_generati_totali].danno*=1.5f;
                 lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max/=2;
@@ -487,6 +492,29 @@ public class init : MonoBehaviour
             //txt_desc_abilita.SetText("");
             int liv=lista_abilita_livello[int_abilita_scelta];
             switch (lista_abilita_id[int_abilita_scelta]){
+                case "resurrezione":{
+                    float distanza_temp;
+                    int id_pupo_risveglio=0;
+                    float distanza_pupo=10000;
+                    foreach(KeyValuePair<int,int> attachStat in lp_buoni){
+                        if (lp_totali_basic_rule[attachStat.Value].bool_morto){
+                            if (lp_totali[attachStat.Value].name.Contains("_"+liv)){
+                                distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                                if (distanza_temp<distanza_pupo){
+                                    distanza_pupo=distanza_temp;
+                                    id_pupo_risveglio=attachStat.Value;
+                                }
+                            }
+                        }
+                    }
+                    if (id_pupo_risveglio!=0){
+                        float x=lp_totali[id_pupo_risveglio].transform.position.x;
+                        float y=lp_totali[id_pupo_risveglio].transform.position.y;
+                        effetti.effetto_resurrezione(x,y);
+                        evoca_pupo(lp_totali[id_pupo_risveglio].name,x,y, "resurrezione");
+                    } else {print ("non è ancora morto nessuno di quel livello");}
+                    break;
+                }
                 case "zombie":{
                     float random_x;
                     float random_y;
@@ -511,7 +539,7 @@ public class init : MonoBehaviour
                             case 3:{zombie_temp+="wizard";break;}
                         }
                         zombie_temp+="_1_zombie";
-                        evoca_pupo(zombie_temp,random_x,random_y);
+                        evoca_pupo(zombie_temp,random_x,random_y,"zombie");
                     }
                     break;
                 }
@@ -521,7 +549,7 @@ public class init : MonoBehaviour
                     for (int i=1;i<=2*liv;i++){
                         random_x=Random.Range(-1f,2f)+xar;
                         random_y=Random.Range(-1f,2f)+yar;
-                        evoca_pupo("formica_warrior_1",random_x,random_y);
+                        evoca_pupo("formica_warrior_1",random_x,random_y,"evocazione");
                     }
                     break;
                 }
