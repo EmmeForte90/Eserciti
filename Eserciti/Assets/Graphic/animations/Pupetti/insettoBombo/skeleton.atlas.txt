@@ -1,0 +1,10 @@
+skeleton.png
+size:512,512
+filter:Linear,Linear
+pma:true
+Body
+bounds:2,55,277,295
+Head
+bounds:2,2,59,51
+Wing1
+bounds:281,311,43,39
