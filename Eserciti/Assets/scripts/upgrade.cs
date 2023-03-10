@@ -14,6 +14,12 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    public Button btn_upgrade_pupetti;
+
+    public GameObject lista_upgrade_generici;
+    public GameObject lista_upgrade_pupetti;
+    public GameObject lista_upgrade_eroe;
+
     public info_comuni info_comuni;
     public GameObject pannello_scelta_premio;
     public GameObject pannello_upgrade;
@@ -206,6 +212,19 @@ public class upgrade : MonoBehaviour
 
         foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
             sblocca_unita_razza(attachStat.Key,attachStat.Value);
+        }
+        btn_upgrade_pupetti.onClick.Invoke();
+    }
+
+    public void bottone_dx_lista_upgrade(string tipo){
+        lista_upgrade_generici.SetActive(false);
+        lista_upgrade_pupetti.SetActive(false);
+        lista_upgrade_eroe.SetActive(false);
+
+        switch (tipo){
+            case "generici":{lista_upgrade_generici.SetActive(true);break;}
+            case "pupetti":{lista_upgrade_pupetti.SetActive(true);break;}
+            case "eroe":{lista_upgrade_eroe.SetActive(true);break;}
         }
     }
 
@@ -671,8 +690,8 @@ public class upgrade : MonoBehaviour
             case "distance_damage":{testo="Your units hit +"+(livello+1)+" on distance attacks";break;}
             case "spell_damage":{testo="Your units hit +"+(livello+1)+" on spell attacks";break;}
             case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
-            case "hero_damage":{testo="The abilities of your hero hit +"+((livello+1)*10)+"%";break;}
-            case "hero_cooldown":{testo="The cooldown of your hero is -"+((livello+1)*10)+"% reduced";break;}
+            case "hero_damage":{testo="Le abilità del tuo eroe che danneggiano, lo fanno del +"+((livello+1)*10)+"%";break;}
+            case "hero_cooldown":{testo="I cooldown delle tue abilità sono ridutti del -"+((livello+1)*10)+"%";break;}
             case "random_unity_1":{testo="Scegli tra tre unità random delle razze sbloccate di livello 1.";break;}
             case "random_spell":{testo="Scegli tra tre nuove abilita oppure una già esistente ma di livello superiore";break;}
             case "random_race":{testo="Scegli tra tre nuove razze da sbloccare";break;}
