@@ -449,7 +449,7 @@ public class init : MonoBehaviour
             float per_10;
             lp_totali_basic_rule[num_pupi_generati_totali].attiva_pupo(2,xar,yar,true);
             if (id_pupo.Contains("zombie")){
-                lp_totali_basic_rule[num_pupi_generati_totali].danno/=2;
+                lp_totali_basic_rule[num_pupi_generati_totali].danno*=1.5f;
                 lp_totali_basic_rule[num_pupi_generati_totali].vitalita_max/=2;
                 lp_totali_basic_rule[num_pupi_generati_totali].velocita_movimento/=2;
                 lp_totali_basic_rule[num_pupi_generati_totali].distanza_attacco/=2;
