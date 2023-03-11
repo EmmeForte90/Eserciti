@@ -148,6 +148,20 @@ public class mainmenu : MonoBehaviour
         lista_obj_eroi[id_eroe].SetActive(true);
     }
 
+    public void continue_game(){
+        string string_temp="";
+        string path_xml=Application.persistentDataPath + "/game_c.xml";
+
+        XmlDocument xml_game = new XmlDocument ();
+        string_temp=System.IO.File.ReadAllText(path_xml);
+        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        xml_game.LoadXml(string_temp);
+
+        foreach(XmlElement node in xml_game.SelectNodes("game")){
+            SceneManager.LoadScene(node.GetAttribute("posizione"));
+        }
+    }
+
     public void inizia_nuova_partita(){
         denaro=0;
         livelli_upgrade.Add("melee_damage",0);
@@ -170,7 +184,7 @@ public class mainmenu : MonoBehaviour
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
 
         xml_content="";
-        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"' tier_unity_sbloccato='1'>";
+        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"' tier_unity_sbloccato='1' posizione='game'>";
         xml_content+="\n\t<lista_abilita>";
         foreach(KeyValuePair<string,int> attachStat in lista_abilita){
             xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";

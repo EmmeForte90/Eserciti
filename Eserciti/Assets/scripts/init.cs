@@ -351,7 +351,7 @@ public class init : MonoBehaviour
 
             xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"'";
             denaro+=denaro_guadagnato;
-            xml_content+=" denaro='"+denaro+"'>";
+            xml_content+=" denaro='"+denaro+"' posizione='upgrade'>";
 
             xml_content+="\n\t<lista_abilita>";
             foreach(KeyValuePair<int,string> attachStat in lista_abilita_id){
