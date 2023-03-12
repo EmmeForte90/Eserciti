@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c67f0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: b4dcffffc6f7ffff2cfbffffc4f4000032f500005cf500004af8000068f800006afe0000
+      m_SelectedIDs: 049efcff
+      m_LastClickedID: -221692
+      m_ExpandedIDs: f89dfcff049efcff0eb6fcff7453fdffa06cfdffac6cfdff3e73fdff0879fdff8ebefdff5608feff341dfefffc20feff9c27feff1c2afeff322efeff40f3feffec6bffff8a73ffff4c79ffffbc7bffffb4dcffffc6f7ffff2cfbffffc4f4000032f500005cf500004af8000068f800006afe00009ebf010092c0010064c101000ac8020078c80200a2c8020090cb0200aecb020090cc020050d00200b0d10200e8da0300c6dc0300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -242,7 +242,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 7}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 893.16925, y: 523.7687, z: -8.320757}
+    m_Target: {x: 1836.2637, y: 500.56973, z: -0.7820922}
     speed: 2
-    m_Value: {x: 893.16925, y: 523.7687, z: -8.320757}
+    m_Value: {x: 1836.2637, y: 500.56973, z: -0.7820922}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 663.8204
+    m_Target: 484.451
     speed: 2
-    m_Value: 663.8204
+    m_Value: 484.451
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -705,22 +705,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/reward_pupi_2
+    - Assets/img/scroll
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/reward_pupi_2
+  - Assets/img/scroll
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cappe\Desktop\Eserciti\Eserciti
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 180}
-    m_SelectedIDs: e6810000
-    m_LastClickedID: 33254
-    m_ExpandedIDs: 00000000a2810000a4810000a6810000a8810000aa810000ac810000ae810000b0810000b2810000ce81000000ca9a3b
+    scrollPos: {x: 0, y: 134.20001}
+    m_SelectedIDs: e8df0300
+    m_LastClickedID: 253928
+    m_ExpandedIDs: 00000000a2810000a4810000a6810000a8810000aa810000ac810000b0810000b2810000ce810000d88100006293000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -748,7 +748,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a2810000a4810000a6810000a8810000aa810000ac810000ae810000b0810000b281000000ca9a3b
+    m_ExpandedIDs: 00000000a2810000a4810000a6810000a8810000aa810000ac810000b0810000b2810000d88100006293000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,8 +773,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c67f0000
-    m_LastClickedInstanceID: 32710
+    m_SelectedInstanceIDs: 049efcff
+    m_LastClickedInstanceID: -221692
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300000a7d0000c2980000
     m_RenameOverlay:
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 320
+    m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1

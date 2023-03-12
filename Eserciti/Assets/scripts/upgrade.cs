@@ -607,9 +607,9 @@ public class upgrade : MonoBehaviour
                     if (livello_abilita==1){
                         titolo="New ability: "+info_comuni.lista_abilita_nome[abilita];
                     } else {
-                        titolo="Unlock "+info_comuni.lista_abilita_nome[abilita]+" level "+livello_abilita;
+                        titolo=info_comuni.lista_abilita_nome[abilita]+" level "+livello_abilita;
                     }
-                    descrizione="Upgrade the ability "+info_comuni.lista_abilita_nome[abilita]+" to level "+livello_abilita;
+                    descrizione=info_comuni.lista_abilita_descrizione[abilita];
 
                     riempi_img_premio(num_cont_premio,"reward_abilita/"+abilita+"_"+livello_abilita);
                     
@@ -625,7 +625,7 @@ public class upgrade : MonoBehaviour
                     txt_monete="+"+monete;
                     titolo="Gold!";
                     descrizione="Un grande tributo al morale della truppa!";
-                    riempi_img_premio(num_cont_premio,"reward_bold");
+                    riempi_img_premio(num_cont_premio,"reward_gold");
                     break;
                 }
                 case "":{break;}

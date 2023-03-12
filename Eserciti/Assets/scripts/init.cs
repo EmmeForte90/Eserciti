@@ -581,7 +581,7 @@ public class init : MonoBehaviour
                 case "miele":{
                     effetti.eff_miele(xar,yar);
                     float distanza_temp;
-                    float valore_abilita=5;    //anche questo potrebbe dipendere dal livello
+                    float valore_abilita=3+(liv);    //anche questo potrebbe dipendere dal livello
                     foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                         if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                             distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
@@ -609,7 +609,7 @@ public class init : MonoBehaviour
                 case "velocita":{
                     effetti.eff_velocita(xar,yar);
                     float distanza_temp;
-                    float valore_abilita=5;    //anche questo potrebbe dipendere dal livello
+                    float valore_abilita=3+liv;
                     foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                         if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                             distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
@@ -623,7 +623,7 @@ public class init : MonoBehaviour
                 case "armatura":{
                     effetti.eff_armatura(xar,yar);
                     float distanza_temp;
-                    float valore_abilita=5;    //anche questo potrebbe dipendere dal livello
+                    float valore_abilita=3+liv;
                     foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                         if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                             distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);

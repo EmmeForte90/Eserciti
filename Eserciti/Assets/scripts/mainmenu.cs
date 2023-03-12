@@ -25,11 +25,28 @@ public class mainmenu : MonoBehaviour
 
     public GameObject sch_sel_personaggio;
     public GameObject sch_mainmenu;
+    public GameObject sch_upgrade_perenni;
     private int denaro=0;
+    private int num_gemme=0;
+    private int num_gemme_totali=0;
+    private int num_partite=0;
+
+    private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
+    public GameObject cont_singoli_upgrade;
+    //public Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_nome_upgrade_perenne = new Dictionary<string, TMPro.TextMeshProUGUI>();    //il nome non cambierà mai
+    public Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_descrizione_upgrade_perenne = new Dictionary<string, TMPro.TextMeshProUGUI>();
+    public Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_costo_upgrade_perenne = new Dictionary<string, TMPro.TextMeshProUGUI>();
+    public Dictionary<string, GameObject> lista_obj_cont_num_romani_img_upgrade_perenne = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> lista_obj_cont_num_romani_txt_upgrade_perenne = new Dictionary<string, GameObject>();
+    public Dictionary<string, Button> lista_obj_bottone_upgrade_perenne = new Dictionary<string, Button>();
+    public TMPro.TextMeshProUGUI txt_num_gemme;
+
     // Start is called before the first frame update
     void Start()
     {
         Screen.SetResolution(1920, 1080, true);
+
+        prendi_info_partite();
 
         foreach (Transform child in lista_eroi.transform) {
             lista_obj_eroi.Add(child.name,child.gameObject);
@@ -159,6 +176,168 @@ public class mainmenu : MonoBehaviour
 
         foreach(XmlElement node in xml_game.SelectNodes("game")){
             SceneManager.LoadScene(node.GetAttribute("posizione"));
+        }
+    }
+
+    public void pannello_upgrade_perenni(){
+        sch_sel_personaggio.SetActive(false);
+        sch_mainmenu.SetActive(false);
+        sch_upgrade_perenni.SetActive(true);
+    }
+
+    public void btn_compra_upgrade_perenne(GameObject GO_upgrade){
+        string upgrade=GO_upgrade.name;
+        int livello=lista_upgrade_perenni_liv[upgrade];
+        int costo=info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1];
+        num_gemme-=costo;
+        lista_upgrade_perenni_liv[upgrade]++;
+        txt_num_gemme.SetText(num_gemme.ToString());
+        aggiorna_upgrade_perenne(upgrade);
+        salva_file_info_partite();
+    }
+
+    private void salva_file_info_partite(){
+        string xml_content="";
+        string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
+        xml_content="<info_partite num_partite='"+num_partite+"' num_gemme='"+num_gemme+"' num_gemme_totali='"+num_gemme_totali+"'>";
+        xml_content+="\n\t<upgrade_perenni>";
+        foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
+            xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
+        }
+        xml_content+="\n\t</upgrade_perenni>";
+        xml_content+="\n</info_partite>";
+
+
+        //print (xml_content);
+        StreamWriter writer = new StreamWriter(path_xml, false);
+        writer.Write(xml_content);
+        writer.Close();
+    }
+
+    private void prendi_info_partite(){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+            lista_upgrade_perenni_liv.Add(attachStat.Key,0);
+        }
+
+        string xml_content="";
+        string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
+        File.Delete(path_xml);  //stiamo in pieno e totale debug
+        if (!System.IO.File.Exists(path_xml)){//se NON esiste questo file, vuol dire che è la prima volta che gioca a questo gioco
+            xml_content="<info_partite num_partite='0' num_gemme='0' num_gemme_totali='0'>";
+            xml_content+="\n\t<upgrade_perenni>";
+            foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
+                xml_content+="\n\t\t<u liv='0'>"+attachStat.Key+"</u>";
+            }
+            xml_content+="\n\t</upgrade_perenni>";
+            xml_content+="\n</info_partite>";
+
+
+            //print (xml_content);
+            StreamWriter writer = new StreamWriter(path_xml, false);
+            writer.Write(xml_content);
+            writer.Close();
+        }
+
+        XmlDocument xml_game = new XmlDocument ();
+        string string_temp=System.IO.File.ReadAllText(path_xml);
+        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        xml_game.LoadXml(string_temp);
+
+        string upgrade_temp="";
+        int liv_upgrade_temp=0;
+        foreach(XmlElement node in xml_game.SelectNodes("info_partite")){
+            num_partite=int.Parse(node.GetAttribute("num_partite"));
+            num_gemme=int.Parse(node.GetAttribute("num_gemme"));
+            num_gemme_totali=int.Parse(node.GetAttribute("num_gemme_totali"));
+
+            foreach(XmlElement node_2 in node.SelectNodes("upgrade_perenni")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("u")){
+                    liv_upgrade_temp=int.Parse(node_3.GetAttribute("liv"));
+                    upgrade_temp=node_3.InnerText;
+                    lista_upgrade_perenni_liv[upgrade_temp]=liv_upgrade_temp;
+                }
+            }
+        }
+
+        foreach (Transform g in cont_singoli_upgrade.transform){
+            upgrade_temp=g.name;
+            liv_upgrade_temp=lista_upgrade_perenni_liv[upgrade_temp];
+            foreach (Transform g2 in g.transform){
+                switch (g2.name){
+                    case "nome_upgrade":{//mettiamolo diretto perchè il nome non cambierà mai
+                        g2.transform.GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_upgrade_perenni_nome[upgrade_temp]);
+                        break;
+                    }
+                    case "descrizione_upgrade":{
+                        lista_txt_descrizione_upgrade_perenne.Add(upgrade_temp,g2.transform.GetComponent<TMPro.TextMeshProUGUI>());
+                        //g2.transform.GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_upgrade_perenni_descrizione[upgrade_temp][liv_upgrade_temp+1]);
+                        break;
+                    }
+                    case "costo_upgrade":{
+                        lista_txt_costo_upgrade_perenne.Add(upgrade_temp,g2.transform.GetComponent<TMPro.TextMeshProUGUI>());
+                        //g2.transform.GetComponent<TMPro.TextMeshProUGUI>().SetText("Cost:\n"+info_comuni.lista_upgrade_perenni_costi[upgrade_temp][liv_upgrade_temp+1].ToString());
+                        break;
+                    }
+                    case "cont_num_romani_img_upgrade":{
+                        lista_obj_cont_num_romani_img_upgrade_perenne.Add(upgrade_temp,g2.gameObject);
+                        break;
+                    }
+                    case "cont_num_romani_txt_upgrade":{
+                        lista_obj_cont_num_romani_txt_upgrade_perenne.Add(upgrade_temp,g2.gameObject);
+                        break;
+                    }
+                    case "bottone_compra":{
+                        lista_obj_bottone_upgrade_perenne.Add(upgrade_temp,g2.gameObject.GetComponent<Button>());
+                        break;
+                    }
+                }
+            }
+        }
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+            aggiorna_upgrade_perenne(attachStat.Key);
+        }
+        txt_num_gemme.SetText(num_gemme.ToString());
+    }
+
+    private void aggiorna_upgrade_perenne(string upgrade){
+        int livello=lista_upgrade_perenni_liv[upgrade];
+        if (livello<info_comuni.lista_upgrade_perenni_max_level[upgrade]){
+            lista_txt_descrizione_upgrade_perenne[upgrade].SetText(info_comuni.lista_upgrade_perenni_descrizione[upgrade][livello+1]);
+            lista_txt_costo_upgrade_perenne[upgrade].SetText("Cost:\n"+info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1].ToString());
+            if (info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1]>num_gemme){
+                lista_obj_bottone_upgrade_perenne[upgrade].interactable=false;
+            }
+        } else {
+            lista_txt_descrizione_upgrade_perenne[upgrade].SetText("Hai raggiunto il livello massimo");
+            lista_txt_costo_upgrade_perenne[upgrade].SetText("");
+            lista_obj_bottone_upgrade_perenne[upgrade].interactable=false;
+        }
+
+        string[] splitArray;
+        int num_romano;
+
+        foreach (Transform child in lista_obj_cont_num_romani_img_upgrade_perenne[upgrade].transform){
+            splitArray=child.name.Split(char.Parse("_"));
+            num_romano=int.Parse(splitArray[3]);
+
+            if (num_romano>info_comuni.lista_upgrade_perenni_max_level[upgrade]){
+                child.gameObject.SetActive(false);
+            }
+        }
+        foreach (Transform child in lista_obj_cont_num_romani_txt_upgrade_perenne[upgrade].transform){
+            splitArray=child.name.Split(char.Parse("_"));
+            num_romano=int.Parse(splitArray[3]);
+
+            if (num_romano>info_comuni.lista_upgrade_perenni_max_level[upgrade]){
+                child.gameObject.SetActive(false);
+            }
+            else {
+                if (num_romano>livello){
+                    child.GetComponent<TMPro.TextMeshProUGUI>().color = new Color(0.6f, 0.6f, 0.6f, 1);
+                } else {
+                    child.GetComponent<TMPro.TextMeshProUGUI>().color = new Color(1, 0.8f, 0f, 1);
+                }
+            }   
         }
     }
 

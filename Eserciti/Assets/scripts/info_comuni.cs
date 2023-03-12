@@ -16,8 +16,90 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, int> lista_costo_unita_razza = new Dictionary<string, int>();
     // Start is called before the first frame update
 
+    public Dictionary<string, string> lista_upgrade_perenni_nome = new Dictionary<string, string>();
+    public Dictionary<string, int> lista_upgrade_perenni_max_level = new Dictionary<string, int>();
+    public Dictionary<string, Dictionary<int, int>> lista_upgrade_perenni_costi = new Dictionary<string, Dictionary<int, int>>();
+    public Dictionary<string, Dictionary<int, string>> lista_upgrade_perenni_descrizione = new Dictionary<string, Dictionary<int, string>>();
+
     private string string_temp;
     void Awake(){
+        lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
+        lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
+        lista_upgrade_perenni_nome.Add("proiettili_distanza","Massima Distanza");
+        lista_upgrade_perenni_nome.Add("costi_pupi","Costo Esercito");
+        lista_upgrade_perenni_nome.Add("costi_guadagno","Guadagno");
+        lista_upgrade_perenni_nome.Add("costi_abilita","Costo Abilità");
+        lista_upgrade_perenni_nome.Add("melee_velocita_attacco","Velocità d'attacco");
+        lista_upgrade_perenni_nome.Add("melee_colpiti","More hits");
+        lista_upgrade_perenni_nome.Add("melee_ignora_attacco","Ignore attacks");
+        lista_upgrade_perenni_nome.Add("melee_dono_zanzare","Lifesteal");
+
+        lista_upgrade_perenni_max_level.Add("proiettili_ignora_armatura",4);
+        lista_upgrade_perenni_max_level.Add("proiettili_head_shot",5);
+        lista_upgrade_perenni_max_level.Add("proiettili_distanza",3);
+        lista_upgrade_perenni_max_level.Add("costi_pupi",3);
+        lista_upgrade_perenni_max_level.Add("costi_guadagno",5);
+        lista_upgrade_perenni_max_level.Add("costi_abilita",4);
+        lista_upgrade_perenni_max_level.Add("melee_velocita_attacco",4);
+        lista_upgrade_perenni_max_level.Add("melee_colpiti",2);
+        lista_upgrade_perenni_max_level.Add("melee_ignora_attacco",3);
+        lista_upgrade_perenni_max_level.Add("melee_dono_zanzare",3);
+
+        //settiamo genericamente che ogni upgrade perenne ha un costo di 10 per livello che si vuole ottenere
+        foreach(KeyValuePair<string,string> attachStat in lista_upgrade_perenni_nome){
+            lista_upgrade_perenni_costi.Add(attachStat.Key,new Dictionary<int, int>());
+            lista_upgrade_perenni_descrizione.Add(attachStat.Key,new Dictionary<int, string>());
+            for (int i=1;i<=lista_upgrade_perenni_max_level[attachStat.Key];i++){
+                lista_upgrade_perenni_costi[attachStat.Key].Add(i,(10*i));
+                lista_upgrade_perenni_descrizione[attachStat.Key].Add(i,"Descrizione "+i);
+            }
+        }
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="Le frecce ignorano l'armatura del bersaglio del 25%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="Le frecce ignorano l'armatura del bersaglio del 50%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="Le frecce ignorano l'armatura del bersaglio del 75%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][4]="Le frecce ignorano l'armatura del bersaglio del 100%";
+
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][1]="Le frecce hanno l'1% di possibilità di uccedere il nemico con un colpo";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][2]="Le frecce hanno il 2% di possibilità di uccedere il nemico con un colpo";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][3]="Le frecce hanno il 3% di possibilità di uccedere il nemico con un colpo";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][4]="Le frecce hanno il 4% di possibilità di uccedere il nemico con un colpo";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][5]="Le frecce hanno il 5% di possibilità di uccedere il nemico con un colpo";
+
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][1]="Aumenta la distanza massima d'attacco a distanza di +1";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Aumenta la distanza massima d'attacco a distanza di +2";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Aumenta la distanza massima d'attacco a distanza di +3";
+
+        lista_upgrade_perenni_descrizione["costi_pupi"][1]="I pupi costano 5 in meno";
+        lista_upgrade_perenni_descrizione["costi_pupi"][2]="I pupi costano 10 in meno";
+        lista_upgrade_perenni_descrizione["costi_pupi"][3]="I pupi costano 15 in meno";
+
+        lista_upgrade_perenni_descrizione["costi_guadagno"][1]="Guadagni +10 a fine stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][2]="Guadagni +20 a fine stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][3]="Guadagni +30 a fine stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][4]="Guadagni +40 a fine stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][5]="Guadagni +50 a fine stage";
+
+        lista_upgrade_perenni_descrizione["costi_abilita"][1]="Diminuisce il costo delle abilità di 5";
+        lista_upgrade_perenni_descrizione["costi_abilita"][2]="Diminuisce il costo delle abilità di 10";
+        lista_upgrade_perenni_descrizione["costi_abilita"][3]="Diminuisce il costo delle abilità di 15";
+        lista_upgrade_perenni_descrizione["costi_abilita"][4]="Diminuisce il costo delle abilità di 20";
+
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][1]="Aumenta la velocità d'attacco del 5%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][2]="Aumenta la velocità d'attacco del 10%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][3]="Aumenta la velocità d'attacco del 15%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][4]="Aumenta la velocità d'attacco del 20%";
+
+        lista_upgrade_perenni_descrizione["melee_colpiti"][1]="Gli attacchi melee possono colpire 2 pupetti in più contemporaneamente";
+        lista_upgrade_perenni_descrizione["melee_colpiti"][2]="Gli attacchi melee possono colpire 3 pupetti in più contemporaneamente";
+
+        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][1]="I pupetti melee ignoreranno il primo colpo ricevuto";
+        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][2]="I pupetti melee ignoreranno il primo ed il secondo colpo ricevuti";
+        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][3]="I pupetti melee ignoreranno il primo, il secondo e il terzo colpo ricevuti";
+
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="I pupetti melee guadagnano il 5% di salute dei danni che infliggono";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="I pupetti melee guadagnano l'8% di salute dei danni che infliggono";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="I pupetti melee guadagnano il 10% di salute dei danni che infliggono";
+
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
         lista_classi_nome.Add("wizard","Wizard");
