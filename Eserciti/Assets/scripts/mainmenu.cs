@@ -38,7 +38,8 @@ public class mainmenu : MonoBehaviour
     public Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_costo_upgrade_perenne = new Dictionary<string, TMPro.TextMeshProUGUI>();
     public Dictionary<string, GameObject> lista_obj_cont_num_romani_img_upgrade_perenne = new Dictionary<string, GameObject>();
     public Dictionary<string, GameObject> lista_obj_cont_num_romani_txt_upgrade_perenne = new Dictionary<string, GameObject>();
-    public Dictionary<string, Button> lista_obj_bottone_upgrade_perenne = new Dictionary<string, Button>();
+    public Dictionary<string, GameObject> lista_obj_bottone_upgrade_perenne = new Dictionary<string, GameObject>();
+    public Dictionary<string, Button> lista_btn_bottone_upgrade_perenne = new Dictionary<string, Button>();
     public TMPro.TextMeshProUGUI txt_num_gemme;
 
     // Start is called before the first frame update
@@ -46,7 +47,7 @@ public class mainmenu : MonoBehaviour
     {
         Screen.SetResolution(1920, 1080, true);
 
-        prendi_info_partite();
+        carica_info_partite();
 
         foreach (Transform child in lista_eroi.transform) {
             lista_obj_eroi.Add(child.name,child.gameObject);
@@ -67,19 +68,22 @@ public class mainmenu : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.Alpha1)){
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            torna_indietro();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1)){
             click_eroe("regina_formica_nera");
             inizia_nuova_partita();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2)){
+        else if (Input.GetKeyDown(KeyCode.Alpha2)){
             click_eroe("re_mosca");
             inizia_nuova_partita();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3)){
+        else if (Input.GetKeyDown(KeyCode.Alpha3)){
             click_eroe("regina_ape");
             inizia_nuova_partita();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4)){
+        else if (Input.GetKeyDown(KeyCode.Alpha4)){
             click_eroe("regina_ragno");
             inizia_nuova_partita();
         }
@@ -165,6 +169,23 @@ public class mainmenu : MonoBehaviour
         lista_obj_eroi[id_eroe].SetActive(true);
     }
 
+    private void disattiva_pannelli(){
+        sch_sel_personaggio.SetActive(false);
+        sch_upgrade_perenni.SetActive(false);
+        sch_mainmenu.SetActive(false);
+    }
+
+    public void attiva_pannello(string pannello){
+        disattiva_pannelli();
+    }
+
+    public void torna_indietro(){
+        if ((sch_sel_personaggio.activeSelf)||(sch_upgrade_perenni.activeSelf)){
+            disattiva_pannelli();
+            sch_mainmenu.SetActive(true);
+        }
+    }
+
     public void continue_game(){
         string string_temp="";
         string path_xml=Application.persistentDataPath + "/game_c.xml";
@@ -214,14 +235,14 @@ public class mainmenu : MonoBehaviour
         writer.Close();
     }
 
-    private void prendi_info_partite(){
+    private void carica_info_partite(){
         foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
             lista_upgrade_perenni_liv.Add(attachStat.Key,0);
         }
 
         string xml_content="";
         string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
-        File.Delete(path_xml);  //stiamo in pieno e totale debug
+        //File.Delete(path_xml);  //stiamo in pieno e totale debug
         if (!System.IO.File.Exists(path_xml)){//se NON esiste questo file, vuol dire che è la prima volta che gioca a questo gioco
             xml_content="<info_partite num_partite='0' num_gemme='0' num_gemme_totali='0'>";
             xml_content+="\n\t<upgrade_perenni>";
@@ -287,7 +308,8 @@ public class mainmenu : MonoBehaviour
                         break;
                     }
                     case "bottone_compra":{
-                        lista_obj_bottone_upgrade_perenne.Add(upgrade_temp,g2.gameObject.GetComponent<Button>());
+                        lista_obj_bottone_upgrade_perenne.Add(upgrade_temp,g2.gameObject);
+                        lista_btn_bottone_upgrade_perenne.Add(upgrade_temp,g2.gameObject.GetComponent<Button>());
                         break;
                     }
                 }
@@ -305,12 +327,12 @@ public class mainmenu : MonoBehaviour
             lista_txt_descrizione_upgrade_perenne[upgrade].SetText(info_comuni.lista_upgrade_perenni_descrizione[upgrade][livello+1]);
             lista_txt_costo_upgrade_perenne[upgrade].SetText("Cost:\n"+info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1].ToString());
             if (info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1]>num_gemme){
-                lista_obj_bottone_upgrade_perenne[upgrade].interactable=false;
+                lista_btn_bottone_upgrade_perenne[upgrade].interactable=false;
             }
         } else {
             lista_txt_descrizione_upgrade_perenne[upgrade].SetText("Hai raggiunto il livello massimo");
             lista_txt_costo_upgrade_perenne[upgrade].SetText("");
-            lista_obj_bottone_upgrade_perenne[upgrade].interactable=false;
+            lista_obj_bottone_upgrade_perenne[upgrade].SetActive(false);
         }
 
         string[] splitArray;
@@ -333,7 +355,7 @@ public class mainmenu : MonoBehaviour
             }
             else {
                 if (num_romano>livello){
-                    child.GetComponent<TMPro.TextMeshProUGUI>().color = new Color(0.6f, 0.6f, 0.6f, 1);
+                    child.GetComponent<TMPro.TextMeshProUGUI>().color = new Color(0.1f, 0.1f, 0.1f, 1);
                 } else {
                     child.GetComponent<TMPro.TextMeshProUGUI>().color = new Color(1, 0.8f, 0f, 1);
                 }

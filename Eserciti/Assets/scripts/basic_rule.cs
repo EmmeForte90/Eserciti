@@ -22,6 +22,7 @@ public class basic_rule : MonoBehaviour
     public bool bool_mago=false;
     public string razza;                        //la razza del pupetto
     public int per_critico=5;
+    public int up_proiettili_ignora_armatura=0;
 
     public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float anim_ritardo_morte=1f;
@@ -432,10 +433,26 @@ public class basic_rule : MonoBehaviour
                         go_temp_cr.SetActive(true);
                     }
 
+                    bool bool_armatura=true;
+
                     if (br.razza!="calabrone"){
+                        if (up_proiettili_ignora_armatura!=0){
+                            if (bool_fazione_nemica){
+                                float per_random=Random.Range(1,101);
+                                print ("ho scagliato una freccia con "+up_proiettili_ignora_armatura+" (tiro: "+per_random+")");
+                                if (per_random=>(up_proiettili_ignora_armatura*25)){
+                                    bool_armatura=false;
+                                }
+                            }
+                        }
+                    } else {bool_armatura=false;}
+
+                        
+                    if (bool_armatura){
                         danno-=armatura_distanza;
                         if (bool_armatura){danno-=1;}
-                    }
+                    } else {print ("incredibile! ignora l'armatura del bersaglio!!!");}
+
                     danneggia(danno);
 
                     if (!br.bool_aculeo){

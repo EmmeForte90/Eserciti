@@ -9,6 +9,11 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
+    private int num_gemme=0;
+    private int num_gemme_totali=0;
+    private int num_partite=0;
+
     public GameObject cont_descrizione_volante;
     public Text txt_descrizione_volante;
     private int abilita_temp_mouse;
@@ -86,6 +91,11 @@ public class init : MonoBehaviour
     private int valore_incrementale_ondata=45;
 
     void Awake(){
+        carica_info_partite();  //semplicemente per prendere gli upgrade della partita
+        foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
+            print (attachStat.Key+" - "+attachStat.Value);
+        }
+
         particle_mosche.SetActive(false);
         bool_mosche_fastidiose=false;
 
@@ -159,6 +169,7 @@ public class init : MonoBehaviour
         float per_10;
         foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
             lp_totali_basic_rule[attachStat.Key].int_key_pupo=attachStat.Key;
+            lp_totali_basic_rule[attachStat.Key].up_proiettili_ignora_armatura=lista_upgrade_perenni_liv["proiettili_ignora_armatura"];
             if (lp_totali_basic_rule[attachStat.Key].bool_fazione_nemica){
                 num_pupi_generati_cattivi++;
                 lp_cattivi.Add(num_pupi_generati_cattivi,attachStat.Key);
@@ -855,6 +866,7 @@ public class init : MonoBehaviour
         go_temp.name=id_pupo;
         lp_totali.Add(num_pupi_generati_totali,go_temp);
         lp_totali_basic_rule.Add(num_pupi_generati_totali,go_temp.GetComponent<basic_rule>());
+        lp_totali_basic_rule[num_pupi_generati_totali].up_proiettili_ignora_armatura=lista_upgrade_perenni_liv["proiettili_ignora_armatura"];
         go_temp.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2000);
         go_temp.SetActive(false);
     }
@@ -865,6 +877,36 @@ public class init : MonoBehaviour
         float dist_y=Mathf.Abs(yor - yar);
         distanza=Mathf.Sqrt((dist_x*dist_x) + (dist_y*dist_y));
         return distanza;
+    }
+
+    private void carica_info_partite(){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+            lista_upgrade_perenni_liv.Add(attachStat.Key,0);
+        }
+
+        string xml_content="";
+        string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
+
+        XmlDocument xml_game = new XmlDocument ();
+        string string_temp=System.IO.File.ReadAllText(path_xml);
+        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        xml_game.LoadXml(string_temp);
+
+        string upgrade_temp="";
+        int liv_upgrade_temp=0;
+        foreach(XmlElement node in xml_game.SelectNodes("info_partite")){
+            num_partite=int.Parse(node.GetAttribute("num_partite"));
+            num_gemme=int.Parse(node.GetAttribute("num_gemme"));
+            num_gemme_totali=int.Parse(node.GetAttribute("num_gemme_totali"));
+
+            foreach(XmlElement node_2 in node.SelectNodes("upgrade_perenni")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("u")){
+                    liv_upgrade_temp=int.Parse(node_3.GetAttribute("liv"));
+                    upgrade_temp=node_3.InnerText;
+                    lista_upgrade_perenni_liv[upgrade_temp]=liv_upgrade_temp;
+                }
+            }
+        }
     }
 
     private void setta_game_da_file(){
