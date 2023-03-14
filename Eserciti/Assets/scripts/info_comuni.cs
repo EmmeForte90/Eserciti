@@ -96,9 +96,9 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_descrizione["melee_ignora_attacco"][2]="I pupetti melee ignoreranno il primo ed il secondo colpo ricevuti";
         lista_upgrade_perenni_descrizione["melee_ignora_attacco"][3]="I pupetti melee ignoreranno il primo, il secondo e il terzo colpo ricevuti";
 
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="I pupetti melee guadagnano il 5% di salute dei danni che infliggono";
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="I pupetti melee guadagnano l'8% di salute dei danni che infliggono";
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="I pupetti melee guadagnano il 10% di salute dei danni che infliggono";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="I pupetti melee guadagnano il 5% di salute della propria vitalità";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="I pupetti melee guadagnano l'8% di salute della propria vitalità";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="I pupetti melee guadagnano il 10% di salute della propria vitalità";
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");

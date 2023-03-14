@@ -54,6 +54,11 @@ public class mainmenu : MonoBehaviour
         }
 
         nascondi_eroi();
+
+        if (!PlayerPrefs.HasKey("ultima_posizione")){PlayerPrefs.SetString("ultima_posizione","mainmenu");}
+        switch (PlayerPrefs.GetString("ultima_posizione")){
+            case "gioco_sconfitta":{attiva_pannello(sch_upgrade_perenni);break;}
+        }
     }
 
     public void new_game(){
@@ -175,14 +180,14 @@ public class mainmenu : MonoBehaviour
         sch_mainmenu.SetActive(false);
     }
 
-    public void attiva_pannello(string pannello){
+    public void attiva_pannello(GameObject pannello){
         disattiva_pannelli();
+        pannello.SetActive(true);
     }
 
     public void torna_indietro(){
         if ((sch_sel_personaggio.activeSelf)||(sch_upgrade_perenni.activeSelf)){
-            disattiva_pannelli();
-            sch_mainmenu.SetActive(true);
+            attiva_pannello(sch_mainmenu);
         }
     }
 

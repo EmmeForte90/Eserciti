@@ -406,12 +406,12 @@ public class init : MonoBehaviour
             num_partite++;
             salva_file_info_partite();
 
+            PlayerPrefs.SetString("ultima_posizione","gioco_sconfitta");
             pannello_sconfitta.SetActive(true);
         }
     }
 
     public void btn_ricomincia(){
-        PlayerPrefs.SetString("ultima_posizione","gioco_sconfitta");
         SceneManager.LoadScene("mainmenu");
     }
 
@@ -812,6 +812,7 @@ public class init : MonoBehaviour
                     foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                         if (id_attaccante!=attachStat.Key){
                             if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
+                                calcola_danno_combattimento(id_attaccante, attachStat.Key);break;
                                 if (lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco==0){
                                     calcola_danno_combattimento(id_attaccante, attachStat.Key);
                                 } else {lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco--;
@@ -853,7 +854,7 @@ public class init : MonoBehaviour
                 int percentuale=5;
                 if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare==2){percentuale=8;}
                 else if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare==3){percentuale=10;}
-                lp_totali_basic_rule[id_attaccante].cura(valore_danno/percentuale);
+                lp_totali_basic_rule[id_attaccante].cura(lp_totali_basic_rule[id_attaccante].vitalita_max/percentuale);
             }
         } else {//solo ai maghi succede di calcolare il danno da combattimento a distanza...
              effetti.effetto_hit_magic_sfera(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
@@ -871,7 +872,7 @@ public class init : MonoBehaviour
                 break;
             }
             case "zanzara":{
-                lp_totali_basic_rule[id_attaccante].cura(valore_danno/10);
+                lp_totali_basic_rule[id_attaccante].cura(lp_totali_basic_rule[id_attaccante].vitalita_max/10);
                 break;
             }
         }
