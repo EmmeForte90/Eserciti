@@ -9,6 +9,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
     private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
     private int num_gemme=0;
     private int num_gemme_totali=0;
@@ -394,8 +395,24 @@ public class init : MonoBehaviour
 
             pannello_vittoria.SetActive(true);
         } else {
-            print ("vincono i nemici");
+            path=Application.persistentDataPath + "/game_c.xml";
+            //File.Delete(path);        //poi lo cancelleremo quando non saremo in pieno debug
+
+            int num_gemme_guadagnate=num_ondata;
+            testo_gemme_guadagnate.SetText("Hai guadagnato "+num_gemme_guadagnate+" gemme");
+
+            num_gemme+=num_gemme_guadagnate;
+            num_gemme_totali+=num_gemme_guadagnate;
+            num_partite++;
+            salva_file_info_partite();
+
+            pannello_sconfitta.SetActive(true);
         }
+    }
+
+    public void btn_ricomincia(){
+        PlayerPrefs.SetString("ultima_posizione","gioco_sconfitta");
+        SceneManager.LoadScene("mainmenu");
     }
 
     public void next_stage(){
@@ -931,6 +948,24 @@ public class init : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void salva_file_info_partite(){
+        string xml_content="";
+        string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
+        xml_content="<info_partite num_partite='"+num_partite+"' num_gemme='"+num_gemme+"' num_gemme_totali='"+num_gemme_totali+"'>";
+        xml_content+="\n\t<upgrade_perenni>";
+        foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
+            xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
+        }
+        xml_content+="\n\t</upgrade_perenni>";
+        xml_content+="\n</info_partite>";
+
+
+        //print (xml_content);
+        StreamWriter writer = new StreamWriter(path_xml, false);
+        writer.Write(xml_content);
+        writer.Close();
     }
 
     private void setta_game_da_file(){
