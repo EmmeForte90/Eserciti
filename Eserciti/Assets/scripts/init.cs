@@ -92,9 +92,6 @@ public class init : MonoBehaviour
 
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
-        foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
-            print (attachStat.Key+" - "+attachStat.Value);
-        }
 
         particle_mosche.SetActive(false);
         bool_mosche_fastidiose=false;
@@ -169,7 +166,6 @@ public class init : MonoBehaviour
         float per_10;
         foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
             lp_totali_basic_rule[attachStat.Key].int_key_pupo=attachStat.Key;
-            lp_totali_basic_rule[attachStat.Key].up_proiettili_ignora_armatura=lista_upgrade_perenni_liv["proiettili_ignora_armatura"];
             if (lp_totali_basic_rule[attachStat.Key].bool_fazione_nemica){
                 num_pupi_generati_cattivi++;
                 lp_cattivi.Add(num_pupi_generati_cattivi,attachStat.Key);
@@ -795,12 +791,19 @@ public class init : MonoBehaviour
                 if (lp_totali_basic_rule[id_attaccante].velocita_proiettile==0){
                     float distanza=0;
                     float raggio_sfera_attacco=lp_totali_basic_rule[id_attaccante].raggio_sfera_attacco;
+                    int num_colpire=1+lp_totali_basic_rule[id_attaccante].up_pupetti_colpiti_contemporaneamente;
                     foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                         if (id_attaccante!=attachStat.Key){
                             if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
-                                calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                if (lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco==0){
+                                    calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                } else {lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco--;
+                                    print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco+") --- ("+lp_totali[id_difensore].name+")");
+                                }
+                                num_colpire--;
                                 //lp_totali_basic_rule[id_attaccante].bool_stop_hit=true;
-                                break;
+                                if (num_colpire<=0){break;}
+                                //else {print ("incredibile! posso riattaccare ("+num_colpire+") --- ("+lp_totali[id_attaccante].name+")");}
                             }
                         }
                     }
@@ -828,6 +831,12 @@ public class init : MonoBehaviour
             effetti.effetto_hit_melee(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
             if (lp_totali_basic_rule[id_attaccante].razza!="calabrone"){
                 valore_danno-=lp_totali_basic_rule[id_difensore].armatura_melee;
+            }
+            if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare!=0){
+                int percentuale=5;
+                if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare==2){percentuale=8;}
+                else if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare==3){percentuale=10;}
+                lp_totali_basic_rule[id_attaccante].cura(valore_danno/percentuale);
             }
         } else {//solo ai maghi succede di calcolare il danno da combattimento a distanza...
              effetti.effetto_hit_magic_sfera(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
@@ -867,6 +876,21 @@ public class init : MonoBehaviour
         lp_totali.Add(num_pupi_generati_totali,go_temp);
         lp_totali_basic_rule.Add(num_pupi_generati_totali,go_temp.GetComponent<basic_rule>());
         lp_totali_basic_rule[num_pupi_generati_totali].up_proiettili_ignora_armatura=lista_upgrade_perenni_liv["proiettili_ignora_armatura"];
+        lp_totali_basic_rule[num_pupi_generati_totali].up_proiettili_head_shot=lista_upgrade_perenni_liv["proiettili_head_shot"];
+        if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_fazione_nemica){
+            if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_mago){
+                if (lp_totali_basic_rule[num_pupi_generati_totali].velocita_proiettile!=0){
+                    lp_totali_basic_rule[num_pupi_generati_totali].distanza_attacco+=lista_upgrade_perenni_liv["proiettili_distanza"];
+                } else {//è un guerriero
+                    if (lista_upgrade_perenni_liv["melee_velocita_attacco"]>0){                   
+                        lp_totali_basic_rule[num_pupi_generati_totali].ritardo_attacco-=(lp_totali_basic_rule[num_pupi_generati_totali].ritardo_attacco/10*lista_upgrade_perenni_liv["melee_velocita_attacco"]);
+                    }
+                    lp_totali_basic_rule[num_pupi_generati_totali].up_pupetti_colpiti_contemporaneamente=lista_upgrade_perenni_liv["melee_colpiti"];
+                    lp_totali_basic_rule[num_pupi_generati_totali].up_melee_ignora_attacco=lista_upgrade_perenni_liv["melee_ignora_attacco"];
+                    lp_totali_basic_rule[num_pupi_generati_totali].up_melee_dono_zanzare=lista_upgrade_perenni_liv["melee_dono_zanzare"];
+                }
+            }
+        }
         go_temp.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2000);
         go_temp.SetActive(false);
     }

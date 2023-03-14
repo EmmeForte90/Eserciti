@@ -23,6 +23,10 @@ public class basic_rule : MonoBehaviour
     public string razza;                        //la razza del pupetto
     public int per_critico=5;
     public int up_proiettili_ignora_armatura=0;
+    public int up_proiettili_head_shot=0;
+    public int up_pupetti_colpiti_contemporaneamente=0;
+    public int up_melee_ignora_attacco=0;
+    public int up_melee_dono_zanzare=0;
 
     public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float anim_ritardo_morte=1f;
@@ -433,27 +437,38 @@ public class basic_rule : MonoBehaviour
                         go_temp_cr.SetActive(true);
                     }
 
-                    bool bool_armatura=true;
-
-                    if (br.razza!="calabrone"){
-                        if (up_proiettili_ignora_armatura!=0){
-                            if (bool_fazione_nemica){
-                                float per_random=Random.Range(1,101);
-                                print ("ho scagliato una freccia con "+up_proiettili_ignora_armatura+" (tiro: "+per_random+")");
-                                if (per_random=>(up_proiettili_ignora_armatura*25)){
-                                    bool_armatura=false;
-                                }
+                    bool bool_head_shot=false;
+                    if (bool_fazione_nemica){
+                        if (up_proiettili_head_shot!=0){
+                            float per_random_head_shot=Random.Range(1,101);
+                            if (per_random_head_shot<=up_proiettili_head_shot){
+                                bool_head_shot=true;
+                                print ("incredibile! headshot con "+per_random_head_shot);
                             }
                         }
-                    } else {bool_armatura=false;}
+                    }
 
-                        
-                    if (bool_armatura){
-                        danno-=armatura_distanza;
-                        if (bool_armatura){danno-=1;}
-                    } else {print ("incredibile! ignora l'armatura del bersaglio!!!");}
-
-                    danneggia(danno);
+                    if (!bool_head_shot){
+                        bool bool_armatura=true;
+                        if (br.razza!="calabrone"){
+                            if (up_proiettili_ignora_armatura!=0){
+                                if (bool_fazione_nemica){
+                                    float per_random=Random.Range(1,101);
+                                    float per_possibilita=(up_proiettili_ignora_armatura*25);
+                                    //if (bool_fazione_nemica){print ("ho scagliato una freccia con "+up_proiettili_ignora_armatura+" (tiro: "+per_random+")");}
+                                    if (per_random<=per_possibilita){
+                                        bool_armatura=false;
+                                        //if (bool_fazione_nemica){print ("incredibile! ignora l'armatura del bersaglio!!! ("+br.razza+")");}
+                                    }
+                                }
+                            }
+                        } else {bool_armatura=false;}
+                        if (bool_armatura){
+                            danno-=armatura_distanza;
+                            if (bool_armatura){danno-=1;}
+                        }
+                        danneggia(danno);
+                    } else {morte_personaggio();}
 
                     if (!br.bool_aculeo){
                         GameObject go_temp;
