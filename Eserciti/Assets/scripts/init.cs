@@ -810,18 +810,20 @@ public class init : MonoBehaviour
                     float raggio_sfera_attacco=lp_totali_basic_rule[id_attaccante].raggio_sfera_attacco;
                     int num_colpire=1+lp_totali_basic_rule[id_attaccante].up_pupetti_colpiti_contemporaneamente;
                     foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
-                        if (id_attaccante!=attachStat.Key){
-                            if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
-                                calcola_danno_combattimento(id_attaccante, attachStat.Key);break;
-                                if (lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco==0){
+                        if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
+                            if (id_attaccante!=attachStat.Key){
+                                if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
                                     calcola_danno_combattimento(id_attaccante, attachStat.Key);
-                                } else {lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco--;
-                                    print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco+") --- ("+lp_totali[id_difensore].name+")");
+                                    if (lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco==0){
+                                        calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                    } else {lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco--;
+                                        print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco+") --- ("+lp_totali[id_difensore].name+")");
+                                    }
+                                    num_colpire--;
+                                    //lp_totali_basic_rule[id_attaccante].bool_stop_hit=true;
+                                    if (num_colpire<=0){break;}
+                                    //else {print ("incredibile! posso riattaccare ("+num_colpire+") --- ("+lp_totali[id_attaccante].name+")");}
                                 }
-                                num_colpire--;
-                                //lp_totali_basic_rule[id_attaccante].bool_stop_hit=true;
-                                if (num_colpire<=0){break;}
-                                //else {print ("incredibile! posso riattaccare ("+num_colpire+") --- ("+lp_totali[id_attaccante].name+")");}
                             }
                         }
                     }
