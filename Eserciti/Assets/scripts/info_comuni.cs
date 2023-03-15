@@ -23,6 +23,7 @@ public class info_comuni : MonoBehaviour
 
     private string string_temp;
     void Awake(){
+        //traduerree la parte a destra di questo blocco
         lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
         lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
         lista_upgrade_perenni_nome.Add("proiettili_distanza","Massima Distanza");
@@ -54,6 +55,7 @@ public class info_comuni : MonoBehaviour
                 lista_upgrade_perenni_descrizione[attachStat.Key].Add(i,"Descrizione "+i);
             }
         }
+        //traduerree la parte a destra di questi blocchi
         lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="Le frecce ignorano l'armatura del bersaglio del 25%";
         lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="Le frecce ignorano l'armatura del bersaglio del 50%";
         lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="Le frecce ignorano l'armatura del bersaglio del 75%";
@@ -115,7 +117,8 @@ public class info_comuni : MonoBehaviour
             //lista_razze_totale.Add("cavallette_"+i,"cavalletta");
             //lista_razze_totale.Add("scarabei_"+i,"scarabeo");
 
-            //Le descrizioni
+            //tradurre i seguenti blocchi (a destra)
+            //Le descrizione
             lista_pupi_descrizione.Add("formiche_"+i,"Most commons soldiers");
             lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
             lista_pupi_descrizione.Add("api_"+i,"Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
@@ -134,6 +137,7 @@ public class info_comuni : MonoBehaviour
             lista_costo_unita_razza.Add("ragnetti_"+i,30*i);
         }
 
+        //traduci nei blocchi le frasi lunghe (sempre a destra)
         //La lista di tutte le abilita!
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
         lista_abilita_descrizione.Add("evoca_formiche","Summon 2 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
