@@ -26,7 +26,7 @@ public class info_comuni : MonoBehaviour
         //traduerree la parte a destra di questo blocco
         lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
         lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
-        lista_upgrade_perenni_nome.Add("proiettili_distanza","Massima Distanza");
+        lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
         lista_upgrade_perenni_nome.Add("costi_pupi","Costo Esercito");
         lista_upgrade_perenni_nome.Add("costi_guadagno","Guadagno");
         lista_upgrade_perenni_nome.Add("costi_abilita","Costo Abilità");
