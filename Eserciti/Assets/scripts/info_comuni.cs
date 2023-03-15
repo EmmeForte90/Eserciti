@@ -114,8 +114,8 @@ public class info_comuni : MonoBehaviour
             lista_razze_totale.Add("mosche_"+i,"mosca");
             lista_razze_totale.Add("api_"+i,"ape");
             lista_razze_totale.Add("ragnetti_"+i,"ragnetto");
-            //lista_razze_totale.Add("cavallette_"+i,"cavalletta");
-            //lista_razze_totale.Add("scarabei_"+i,"scarabeo");
+            lista_razze_totale.Add("cavallette_"+i,"cavalletta");
+            lista_razze_totale.Add("scarabei_"+i,"scarabeo");
 
             //tradurre i seguenti blocchi (a destra)
             //Le descrizione
@@ -123,18 +123,24 @@ public class info_comuni : MonoBehaviour
             lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
             lista_pupi_descrizione.Add("api_"+i,"Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
             lista_pupi_descrizione.Add("ragnetti_"+i,"Ogni volta che colpiscono, rallentano il bersaglio. Sono immuni da questo effetto da parte di altri ragni");
+            lista_pupi_descrizione.Add("cavallette_"+i,"Le cavallette, sono particolarmente veloci.");
+            lista_pupi_descrizione.Add("scarabei_"+i,"Gli scarabei sono la razza più resistente a cui puoi aspirare.");
 
             //NB: I Nomi e le descrizioni, saranno sempre al plurale
             lista_razza_pupi_nome.Add("formiche_"+i,"Ants");     
             lista_razza_pupi_nome.Add("mosche_"+i,"Flies");      
             lista_razza_pupi_nome.Add("api_"+i,"Bees");          
             lista_razza_pupi_nome.Add("ragnetti_"+i,"Spiders");  
+            lista_razza_pupi_nome.Add("cavallette_"+i,"Grasshopper");  
+            lista_razza_pupi_nome.Add("scarabei_"+i,"Beetle");  
 
             //i costi dei vari pupetti
             lista_costo_unita_razza.Add("formiche_"+i,30*i);
             lista_costo_unita_razza.Add("mosche_"+i,30*i);
             lista_costo_unita_razza.Add("api_"+i,30*i);
             lista_costo_unita_razza.Add("ragnetti_"+i,30*i);
+            lista_costo_unita_razza.Add("cavallette_"+i,30*i);
+            lista_costo_unita_razza.Add("scarabei_"+i,30*i);
         }
 
         //traduci nei blocchi le frasi lunghe (sempre a destra)
