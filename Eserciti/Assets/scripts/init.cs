@@ -9,6 +9,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
     private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
     private int num_gemme=0;
@@ -135,6 +136,7 @@ public class init : MonoBehaviour
             lista_abilita_id.Add(i,"");
         }
         abilita_totali=i;
+        setta_sfondo();
 
         setta_game_da_file();
 
@@ -212,6 +214,11 @@ public class init : MonoBehaviour
         //txt_desc_abilita.SetText("");
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
+    }
+
+    private void setta_sfondo(){
+        Sprite sprite_temp  = Resources.Load<Sprite>("arene/tt"+(Random.Range(1,6).ToString()));
+        sfondo.sprite = sprite_temp;
     }
 
     private void setta_img_abilita(int int_abilita){
