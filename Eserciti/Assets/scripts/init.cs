@@ -9,6 +9,10 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public Image img_skull;
+    public GameObject GO_anim_fiamma;
+    private bool bool_eroe_attivo=false;
+
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
     private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
@@ -92,9 +96,13 @@ public class init : MonoBehaviour
     private int valore_iniziale_ondata=130;
     private int valore_incrementale_ondata=45;
 
+    private float per_potere_eroe=0;
+    private float incr_potere_eroe=0.5f;
+
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
 
+        GO_anim_fiamma.SetActive(false);
         particle_mosche.SetActive(false);
         bool_mosche_fastidiose=false;
 
@@ -214,6 +222,13 @@ public class init : MonoBehaviour
         //txt_desc_abilita.SetText("");
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
+
+        if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
+    }
+
+    private void attiva_bottone_potere_eroe(){
+        bool_eroe_attivo=true;
+        GO_anim_fiamma.SetActive(true);
     }
 
     private void setta_sfondo(){
@@ -244,6 +259,11 @@ public class init : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        if (per_potere_eroe<100){
+            per_potere_eroe+=incr_potere_eroe;
+            img_skull.fillAmount=1-(per_potere_eroe/100);
+            if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
+        }
         descrizione_follow_mouse();
 
         if (Input.GetKeyDown(KeyCode.Z)){
@@ -696,6 +716,8 @@ public class init : MonoBehaviour
                 setta_cerchietto_abilita(int_abilita,"rosso");
             }
             cont_descrizione_volante.SetActive(false);
+        } else if (obj.name=="img_skull"){
+            cont_descrizione_volante.SetActive(false);
         }
         //print ("mouse: sono uscito da "+obj.name);
     }
@@ -713,6 +735,9 @@ public class init : MonoBehaviour
             if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
                 setta_cerchietto_abilita(int_abilita,"blu");
             }
+        } else if (obj.name=="img_skull"){
+            txt_descrizione_volante.text=info_comuni.lista_powerhero_descrizione[id_hero];
+            cont_descrizione_volante.SetActive(true);
         }
     }
 
@@ -995,6 +1020,7 @@ public class init : MonoBehaviour
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
             tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
+            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update");}
             denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){

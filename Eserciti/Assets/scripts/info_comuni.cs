@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class info_comuni : MonoBehaviour
 {
+    public Dictionary<string, string> lista_powerhero_descrizione = new Dictionary<string, string>();
+
     public Dictionary<string, string> lista_abilita_nome = new Dictionary<string, string>();
     public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
@@ -23,6 +25,14 @@ public class info_comuni : MonoBehaviour
 
     private string string_temp;
     void Awake(){
+        //tradurre la parte destra di questo blocco
+        lista_powerhero_descrizione.Add("regina_formica_nera","Descrizione del potere eroe del re formica nera");
+        lista_powerhero_descrizione.Add("re_mosca","Descrizione del potere eroe del re mosca");
+        lista_powerhero_descrizione.Add("regina_ape","Descrizione del potere eroe della regina ape");
+        lista_powerhero_descrizione.Add("regina_ragno","Descrizione del potere eroe della regina ragno");
+        lista_powerhero_descrizione.Add("re_cavalletta","Descrizione del potere eroe del re cavalletta");
+        lista_powerhero_descrizione.Add("re_scarabeo","Descrizione del potere eroe del re scarabeo");
+
         //traduerree la parte a destra di questo blocco
         lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
         lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
