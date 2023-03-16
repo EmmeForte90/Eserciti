@@ -11,7 +11,9 @@ public class init : MonoBehaviour
 {
     public Image img_skull;
     public GameObject GO_anim_fiamma;
+    public Image img_BarraEroe_piena;
     private bool bool_eroe_attivo=false;
+    private Color color_img_BarraEroe_piena;
 
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
@@ -105,6 +107,7 @@ public class init : MonoBehaviour
         GO_anim_fiamma.SetActive(false);
         particle_mosche.SetActive(false);
         bool_mosche_fastidiose=false;
+        color_img_BarraEroe_piena=img_BarraEroe_piena.color;
 
         pannello_vittoria.SetActive(false);
         pannello_sconfitta.SetActive(false);
@@ -223,7 +226,10 @@ public class init : MonoBehaviour
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
 
-        if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
+        if (per_potere_eroe>=100){
+            color_img_BarraEroe_piena.a=1f;
+            attiva_bottone_potere_eroe();
+        }
     }
 
     private void attiva_bottone_potere_eroe(){
@@ -262,6 +268,7 @@ public class init : MonoBehaviour
         if (per_potere_eroe<100){
             per_potere_eroe+=incr_potere_eroe;
             img_skull.fillAmount=1-(per_potere_eroe/100);
+            color_img_BarraEroe_piena.a=(1-img_skull.fillAmount);
             if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
         }
         descrizione_follow_mouse();
