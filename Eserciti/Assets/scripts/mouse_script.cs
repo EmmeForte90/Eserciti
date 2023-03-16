@@ -18,7 +18,6 @@ public class mouse_script : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 	//questo sembra funzionare per tutto ciò che si trova sulla canvas
 	public void OnPointerClick(PointerEventData eventData){
 		if (eventData.button == PointerEventData.InputButton.Left){
-			print ("ci sono");
 			//onLeftClick.Invoke();
 			init.mouse_click(gameObject, "sx");
 		}

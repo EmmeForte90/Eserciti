@@ -4,15 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+using Spine;
+using Spine.Unity;
+
 using System.Text;
 using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    private bool bool_eroe_in_azione=false;
+    public GameObject cont_eroi_pupi;
+    private GameObject pupo_eroe;
+    private SkeletonGraphic SkeletonGraphic_hero;
+    public GameObject cont_eroi;
     public Image img_skull;
     public GameObject GO_anim_fiamma;
     public Image img_BarraEroe_piena;
-    private bool bool_eroe_attivo=false;
+    private bool bool_potere_eroe_pieno=false;
     private Color color_img_BarraEroe_piena;
 
     public SpriteRenderer sfondo;
@@ -100,6 +108,7 @@ public class init : MonoBehaviour
 
     private float per_potere_eroe=0;
     private float incr_potere_eroe=0.5f;
+    private float decr_potere_eroe=0.5f;
 
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
@@ -150,6 +159,16 @@ public class init : MonoBehaviour
         setta_sfondo();
 
         setta_game_da_file();
+
+        //ora che abbiamo l'id hero, andiamo a disattivare tutti gli altri
+        foreach (Transform child in cont_eroi.transform) {
+            if (child.name!=id_hero){child.gameObject.SetActive(false);}
+            else {SkeletonGraphic_hero=child.gameObject.GetComponent<SkeletonGraphic>();}
+        }
+
+        foreach (Transform child in cont_eroi_pupi.transform) {
+            if (child.name==id_hero+"_hero"){pupo_eroe=child.gameObject;}
+        }
 
         //poi andiamo a prendere i settaggi per ogni cooldown che ha salvato da qualche parte nella partita
         foreach(KeyValuePair<int,string> attachStat in lista_abilita_id){
@@ -226,14 +245,14 @@ public class init : MonoBehaviour
         bool_inizio_partita=true;
         StartCoroutine(start_partita());
 
+        aggiorna_img_abilita_eroe();
         if (per_potere_eroe>=100){
-            color_img_BarraEroe_piena.a=1f;
             attiva_bottone_potere_eroe();
         }
     }
 
     private void attiva_bottone_potere_eroe(){
-        bool_eroe_attivo=true;
+        bool_potere_eroe_pieno=true;
         GO_anim_fiamma.SetActive(true);
     }
 
@@ -263,13 +282,31 @@ public class init : MonoBehaviour
         cont_descrizione_volante.transform.position=mousePosition;
     }
 
+    private void aggiorna_img_abilita_eroe(){
+        img_skull.fillAmount=1-(per_potere_eroe/100);
+        color_img_BarraEroe_piena.a=(1-img_skull.fillAmount);
+        img_BarraEroe_piena.color=color_img_BarraEroe_piena;
+    }
+
     // Update is called once per frame
     void Update(){
-        if (per_potere_eroe<100){
-            per_potere_eroe+=incr_potere_eroe;
-            img_skull.fillAmount=1-(per_potere_eroe/100);
-            color_img_BarraEroe_piena.a=(1-img_skull.fillAmount);
-            if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
+        if (!bool_eroe_in_azione){
+            if (!bool_potere_eroe_pieno){
+                if (per_potere_eroe<100){
+                    per_potere_eroe+=incr_potere_eroe;
+                    aggiorna_img_abilita_eroe();
+                    if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
+                }
+            }
+        } else {//essendo in azione, dobbiamo farlo decrementare
+            if (per_potere_eroe>0){
+                per_potere_eroe-=decr_potere_eroe;
+                aggiorna_img_abilita_eroe();
+
+                if (per_potere_eroe<=0){
+                    disattiva_eroe();
+                }
+            }
         }
         descrizione_follow_mouse();
 
@@ -497,6 +534,41 @@ public class init : MonoBehaviour
             cube.transform.localPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 1f);
             */
         }
+        else if (obj.name=="img_skull"){
+            if (bool_eroe_in_azione){return;}
+            if (per_potere_eroe>=100){
+                GO_anim_fiamma.SetActive(false);
+                bool_eroe_in_azione=true;
+                SkeletonGraphic_hero.AnimationState.SetAnimation(0, "start", false);    //se metti a true andrà in loop
+                StartCoroutine(aggiungi_eroe_scena());
+            }
+        }
+    }
+
+    private IEnumerator aggiungi_eroe_scena() {
+        int num_secondi=3;
+        yield return new WaitForSeconds(num_secondi);
+        print ("attivo l'eroe nella scena");
+    }
+
+    private void disattiva_eroe(){
+        //prima faremo fare altre scenette al nostro eroe
+        StartCoroutine(anim_rimetti_eroe_a_posto());
+    }
+
+    private IEnumerator anim_rimetti_eroe_a_posto() {
+        int num_secondi=3;
+        yield return new WaitForSeconds(num_secondi);
+        SkeletonGraphic_hero.AnimationState.SetAnimation(0, "fine", false);    //se metti a true andrà in loop
+        StartCoroutine(setta_eroe_normale());
+    }
+
+    private IEnumerator setta_eroe_normale(){
+        yield return new WaitForSeconds(1);
+        SkeletonGraphic_hero.AnimationState.SetAnimation(0, "animation", true);    //se metti a true andrà in loop
+        per_potere_eroe=0;
+        bool_eroe_in_azione=false;
+        bool_potere_eroe_pieno=false;
     }
 
     public void evoca_pupo(string id_pupo, float xar, float yar, string tipo_evocazione){
