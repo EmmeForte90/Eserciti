@@ -107,8 +107,8 @@ public class init : MonoBehaviour
     private int valore_incrementale_ondata=45;
 
     private float per_potere_eroe=0;
-    private float incr_potere_eroe=0.5f;
-    private float decr_potere_eroe=0.5f;
+    private float incr_potere_eroe=1;
+    private float decr_potere_eroe=0.1f;
 
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
@@ -546,7 +546,7 @@ public class init : MonoBehaviour
     }
 
     private IEnumerator aggiungi_eroe_scena() {
-        int num_secondi=3;
+        int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
         print ("attivo l'eroe nella scena");
     }

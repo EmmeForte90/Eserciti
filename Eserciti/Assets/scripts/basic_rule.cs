@@ -143,6 +143,8 @@ public class basic_rule : MonoBehaviour
         if (bool_mago){valore_pupo+=(1*livello);}
 
         valore_pupo+=valore_plus_pupo;
+
+        //print (gameObject.name+" - "+valore_pupo);
     }
 
     void Start(){
