@@ -148,6 +148,7 @@ public class basic_rule : MonoBehaviour
     }
 
     void Start(){
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
         switch (razza){
             case "ape":
             case "calabrone":
@@ -157,6 +158,14 @@ public class basic_rule : MonoBehaviour
                 an_movimento_tipo="fly";
                 an_vittoria_tipo="win_fly";
                 an_attacco_tipo="attack_fly";
+                break;
+            }
+            case "eroe":{
+                skeletonAnimation.loop=false;
+                skeletonAnimation.AnimationName="start";
+
+                an_movimento_tipo="move";
+                an_vittoria_tipo="idle";
                 break;
             }
         }
@@ -216,6 +225,13 @@ public class basic_rule : MonoBehaviour
             //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
     }
+
+    public void disattiva_eroe(){
+        bool_morto=true;
+        skeletonAnimation.loop=false;
+        skeletonAnimation.AnimationName="fine";
+    }
+
     public void esulta(){
         skeletonAnimation.AnimationName=an_vittoria_tipo;
         bool_attivo=false;
@@ -229,8 +245,8 @@ public class basic_rule : MonoBehaviour
 
     private IEnumerator attiva_pupo_coroutine(int battaglione, float x, float y){
         yield return new WaitForSeconds((battaglione-1)*1);
+        if (razza=="eroe"){skeletonAnimation.loop=true;}
         gameObject.transform.localPosition=new Vector3(x, y, 1f);
-        skeletonAnimation = GetComponent<SkeletonAnimation>();
         barra_energia_vuota=Instantiate(barra_energia_vuota_pf);
         barra_energia_vuota.transform.SetParent(gameObject.transform);
         barra_energia_vuota.transform.localPosition = new Vector3(-0.5f, -0.3f, 10f);

@@ -22,6 +22,10 @@ public class effetti : MonoBehaviour
     public GameObject eff_cura;
     public GameObject eff_resurrezione;
 
+    public void eff_evocazione_eroe(float xar, float yar, string id_hero){
+        print ("effetto evocazione eroe...");
+    }
+
     //in verità per ora lo usiamo direttamente sui pupi...
     public void effetto_cura(float xar, float yar){
         GameObject go_temp;

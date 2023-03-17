@@ -12,6 +12,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    private int int_key_eroe=0;
     private bool bool_eroe_in_azione=false;
     public GameObject cont_eroi_pupi;
     private GameObject pupo_eroe;
@@ -107,8 +108,8 @@ public class init : MonoBehaviour
     private int valore_incrementale_ondata=45;
 
     private float per_potere_eroe=0;
-    private float incr_potere_eroe=1;
-    private float decr_potere_eroe=0.1f;
+    private float incr_potere_eroe=5;
+    private float decr_potere_eroe=0.5f;
 
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
@@ -167,7 +168,13 @@ public class init : MonoBehaviour
         }
 
         foreach (Transform child in cont_eroi_pupi.transform) {
-            if (child.name==id_hero+"_hero"){pupo_eroe=child.gameObject;}
+            print (child.name);
+            if (child.name==id_hero+"_eroe"){
+                print ("trovato!");
+                pupo_eroe=child.gameObject;
+                lista_obj_pupetti.Add("eroe",pupo_eroe);
+                break;
+            }
         }
 
         //poi andiamo a prendere i settaggi per ogni cooldown che ha salvato da qualche parte nella partita
@@ -548,16 +555,19 @@ public class init : MonoBehaviour
     private IEnumerator aggiungi_eroe_scena() {
         int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
-        print ("attivo l'eroe nella scena");
+        evoca_eroe();
     }
 
     private void disattiva_eroe(){
         //prima faremo fare altre scenette al nostro eroe
+        if (!lp_totali_basic_rule[int_key_eroe].bool_morto){
+            lp_totali_basic_rule[int_key_eroe].disattiva_eroe();
+        }
         StartCoroutine(anim_rimetti_eroe_a_posto());
     }
 
     private IEnumerator anim_rimetti_eroe_a_posto() {
-        int num_secondi=3;
+        int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
         SkeletonGraphic_hero.AnimationState.SetAnimation(0, "fine", false);    //se metti a true andrà in loop
         StartCoroutine(setta_eroe_normale());
@@ -569,6 +579,24 @@ public class init : MonoBehaviour
         per_potere_eroe=0;
         bool_eroe_in_azione=false;
         bool_potere_eroe_pieno=false;
+    }
+
+    private void evoca_eroe(){
+        float xar=0;
+        float yar=0;
+        switch (id_hero){
+            case "formica":{
+                xar=0;yar=0;break;
+            }
+        }
+        int tempo_evocazione=2;
+        genera_pupo("eroe");
+        num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
+        int_key_eroe=num_pupi_generati_totali;
+        lp_buoni.Add(num_pupi_generati_buoni,num_pupi_generati_totali);
+        lp_totali_basic_rule[num_pupi_generati_totali].attiva_pupo(tempo_evocazione,xar,yar,true);
+
+        effetti.eff_evocazione_eroe(xar,yar,id_hero);
     }
 
     public void evoca_pupo(string id_pupo, float xar, float yar, string tipo_evocazione){
@@ -953,7 +981,7 @@ public class init : MonoBehaviour
     public void calcola_danno_combattimento(int id_attaccante, int id_difensore){
         float valore_danno=lp_totali_basic_rule[id_attaccante].danno;
         if (Random.Range(1,101)<=lp_totali_basic_rule[id_attaccante].per_critico){//è un critico!
-            print ("critico! on melee");
+            //print ("critico! on melee");
             valore_danno*=3;
             effetti.effetto_hit_critico(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
         }
