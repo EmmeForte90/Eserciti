@@ -12,10 +12,11 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    private basic_rule br_eroe;
     private int int_key_eroe=0;
     private bool bool_eroe_in_azione=false;
     public GameObject cont_eroi_pupi;
-    private GameObject pupo_eroe;
+    private GameObject GO_pupo_eroe;
     private SkeletonGraphic SkeletonGraphic_hero;
     public GameObject cont_eroi;
     public Image img_skull;
@@ -23,6 +24,9 @@ public class init : MonoBehaviour
     public Image img_BarraEroe_piena;
     private bool bool_potere_eroe_pieno=false;
     private Color color_img_BarraEroe_piena;
+    private float per_potere_eroe=0;
+    private float incr_potere_eroe=5;
+    private float decr_potere_eroe=0.5f;
 
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
@@ -107,10 +111,6 @@ public class init : MonoBehaviour
     private int valore_iniziale_ondata=130;
     private int valore_incrementale_ondata=45;
 
-    private float per_potere_eroe=0;
-    private float incr_potere_eroe=5;
-    private float decr_potere_eroe=0.5f;
-
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
 
@@ -168,11 +168,9 @@ public class init : MonoBehaviour
         }
 
         foreach (Transform child in cont_eroi_pupi.transform) {
-            print (child.name);
             if (child.name==id_hero+"_eroe"){
-                print ("trovato!");
-                pupo_eroe=child.gameObject;
-                lista_obj_pupetti.Add("eroe",pupo_eroe);
+                GO_pupo_eroe=child.gameObject;
+                lista_obj_pupetti.Add("eroe",GO_pupo_eroe);
                 break;
             }
         }
@@ -256,6 +254,26 @@ public class init : MonoBehaviour
         if (per_potere_eroe>=100){
             attiva_bottone_potere_eroe();
         }
+
+        switch (id_hero){
+            case "re_mosca":{//il danno potrebbe variare a seconda di eventuali abilità prese
+                foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
+                    if (lp_totali_basic_rule[attachStat.Key].bool_fazione_nemica){
+                        lp_totali_basic_rule[attachStat.Key].danno_eroe=5f;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    private void decrementa_potere_eroe(){
+        per_potere_eroe-=decr_potere_eroe;
+        aggiorna_img_abilita_eroe();
+
+        if (per_potere_eroe<=0){
+            disattiva_eroe();
+        }
     }
 
     private void attiva_bottone_potere_eroe(){
@@ -307,12 +325,7 @@ public class init : MonoBehaviour
             }
         } else {//essendo in azione, dobbiamo farlo decrementare
             if (per_potere_eroe>0){
-                per_potere_eroe-=decr_potere_eroe;
-                aggiorna_img_abilita_eroe();
-
-                if (per_potere_eroe<=0){
-                    disattiva_eroe();
-                }
+                decrementa_potere_eroe();
             }
         }
         descrizione_follow_mouse();
@@ -555,13 +568,36 @@ public class init : MonoBehaviour
     private IEnumerator aggiungi_eroe_scena() {
         int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
-        evoca_eroe();
+        switch (id_hero){
+            case "re_mosca":{
+                num_pupi_generati_totali++;
+                GameObject go_temp;
+                GO_pupo_eroe.transform.SetParent(mappa.transform);
+                GO_pupo_eroe.transform.localPosition = new Vector3(0, 0, 11f);
+                GO_pupo_eroe.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2001);
+                GO_pupo_eroe.GetComponent<re_mosca_rule>().attiva();
+
+                break;
+            }
+            default:{evoca_eroe();break;}
+        }
+        
     }
 
     private void disattiva_eroe(){
         //prima faremo fare altre scenette al nostro eroe
-        if (!lp_totali_basic_rule[int_key_eroe].bool_morto){
-            lp_totali_basic_rule[int_key_eroe].disattiva_eroe();
+        switch (id_hero){
+            case "re_mosca":{
+                GO_pupo_eroe.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2001);
+                GO_pupo_eroe.GetComponent<re_mosca_rule>().disattiva();
+                break;
+            }
+            default:{
+                if (!lp_totali_basic_rule[int_key_eroe].bool_morto){
+                    lp_totali_basic_rule[int_key_eroe].disattiva_eroe();
+                }
+                break;
+            }
         }
         StartCoroutine(anim_rimetti_eroe_a_posto());
     }
@@ -584,11 +620,6 @@ public class init : MonoBehaviour
     private void evoca_eroe(){
         float xar=0;
         float yar=0;
-        switch (id_hero){
-            case "formica":{
-                xar=0;yar=0;break;
-            }
-        }
         int tempo_evocazione=2;
         genera_pupo("eroe");
         num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
@@ -979,6 +1010,7 @@ public class init : MonoBehaviour
     }
 
     public void calcola_danno_combattimento(int id_attaccante, int id_difensore){
+        if (id_difensore==int_key_eroe){decrementa_potere_eroe();return;}
         float valore_danno=lp_totali_basic_rule[id_attaccante].danno;
         if (Random.Range(1,101)<=lp_totali_basic_rule[id_attaccante].per_critico){//è un critico!
             //print ("critico! on melee");

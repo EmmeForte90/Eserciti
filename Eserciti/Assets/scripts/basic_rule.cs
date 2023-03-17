@@ -27,6 +27,7 @@ public class basic_rule : MonoBehaviour
     public int up_pupetti_colpiti_contemporaneamente=0;
     public int up_melee_ignora_attacco=0;
     public int up_melee_dono_zanzare=0;
+    public float danno_eroe=0;                  //è il danno che verrebbe inflitto in caso di eroe
 
     public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float anim_ritardo_morte=1f;
@@ -502,6 +503,12 @@ public class basic_rule : MonoBehaviour
                         go_temp.SetActive(true);
                     }
                 }
+            }
+        }
+        else if (col.name=="re_mosca_eroe"){
+            if ((razza!="mosca")&&(razza!="zanzara")){
+                print ("sono stato danneggiato dal re mosca!!!");
+                danneggia(danno_eroe);
             }
         }
     }
