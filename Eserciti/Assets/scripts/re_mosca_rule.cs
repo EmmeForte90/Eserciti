@@ -55,7 +55,7 @@ public class re_mosca_rule : MonoBehaviour
     }
 
     private IEnumerator inizia_movimenti_random(){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         skeletonAnimation.loop=true;
         skeletonAnimation.AnimationName="skill";
         int time=20;
