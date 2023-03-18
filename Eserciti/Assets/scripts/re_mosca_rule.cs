@@ -23,6 +23,8 @@ public class re_mosca_rule : MonoBehaviour
         col2D = gameObject.GetComponent<BoxCollider2D>();
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         old_x=transform.position.x;
+        gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -44,14 +46,16 @@ public class re_mosca_rule : MonoBehaviour
     }
 
     public void attiva(){
+        print ("attivo!");
         skeletonAnimation.loop=false;
-        gameObject.SetActive(true);
+        skeletonAnimation.state.ClearTracks();
         skeletonAnimation.AnimationName="start";
+        gameObject.SetActive(true);
         StartCoroutine(inizia_movimenti_random());
     }
 
     private IEnumerator inizia_movimenti_random(){
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         skeletonAnimation.loop=true;
         skeletonAnimation.AnimationName="skill";
         int time=20;

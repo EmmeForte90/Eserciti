@@ -577,6 +577,15 @@ public class init : MonoBehaviour
         int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
         switch (id_hero){
+            case "regina_ragno":{
+                num_pupi_generati_totali++;
+                GO_pupo_eroe.transform.SetParent(mappa.transform);
+                GO_pupo_eroe.transform.localPosition = new Vector3(0, 0, 11f);
+                GO_pupo_eroe.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2001);
+                GO_pupo_eroe.GetComponent<regina_ragno_rule>().attiva();
+
+                break;
+            }
             case "regina_ape":{
                 num_pupi_generati_totali++;
                 GO_pupo_eroe.transform.SetParent(mappa.transform);
@@ -597,12 +606,16 @@ public class init : MonoBehaviour
             }
             default:{evoca_eroe();break;}
         }
-        
     }
 
     private void disattiva_eroe(){
         //prima faremo fare altre scenette al nostro eroe
         switch (id_hero){
+            case "regina_ragno":{
+                GO_pupo_eroe.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2001);
+                GO_pupo_eroe.GetComponent<regina_ragno_rule>().disattiva();
+                break;
+            }
             case "re_mosca":{
                 GO_pupo_eroe.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2001);
                 GO_pupo_eroe.GetComponent<re_mosca_rule>().disattiva();
@@ -641,7 +654,7 @@ public class init : MonoBehaviour
     private void evoca_eroe(){
         float xar=0;
         float yar=0;
-        int tempo_evocazione=2;
+        int tempo_evocazione=3;
         genera_pupo("eroe");
         num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
         int_key_eroe=num_pupi_generati_totali;
