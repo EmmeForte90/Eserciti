@@ -27,7 +27,7 @@ public class basic_rule : MonoBehaviour
     public int up_pupetti_colpiti_contemporaneamente=0;
     public int up_melee_ignora_attacco=0;
     public int up_melee_dono_zanzare=0;
-    public float danno_eroe=0;                  //è il danno che verrebbe inflitto in caso di eroe
+    public float danno_eroe=0;                  //è il danno che verrebbe inflitto in caso di eroe (o quanto cura)
 
     public float anim_velocita_attacco=1f;           //indica la velocità del movimento dell'attacco. Dipende dall'animazione in genere!
     public float anim_ritardo_morte=1f;
@@ -438,6 +438,7 @@ public class basic_rule : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col){
+        if (bool_morto){return;}
         //print ("ho urtato qualcosa: "+col.name+" ("+col.tag+")");
         if (col.tag=="proiettile"){
             bullet_rule br=col.GetComponent<bullet_rule>();
@@ -509,6 +510,11 @@ public class basic_rule : MonoBehaviour
             if ((razza!="mosca")&&(razza!="zanzara")){
                 print ("sono stato danneggiato dal re mosca!!!");
                 danneggia(danno_eroe);
+            }
+        }
+        else if (col.name=="regina_ape_eroe"){
+            if (!bool_fazione_nemica){
+                cura(danno_eroe);
             }
         }
     }
