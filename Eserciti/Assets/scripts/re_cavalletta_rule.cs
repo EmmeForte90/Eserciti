@@ -20,6 +20,11 @@ public class re_cavalletta_rule : MonoBehaviour
     private int num_bombe_lanciate=0;
     private Vector3 pos_iniziale_bombe;
     float t;
+
+    public GameObject ps_eroe_cavalletta_linee_basse;
+    public GameObject ps_eroe_cavalletta_linee_alte_ritardo;
+    public GameObject ps_eroe_cavalletta_fumo_basso;
+    public GameObject ps_eroe_cavalletta_fumo_basso_ritardo;
     
     // Start is called before the first frame update
     void Start()
@@ -80,6 +85,19 @@ public class re_cavalletta_rule : MonoBehaviour
         bool_termina_devastazione=true;
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="fine";
+
+        GameObject go_temp;
+        go_temp=Instantiate(ps_eroe_cavalletta_fumo_basso);
+        go_temp.transform.SetParent(gameObject.transform);
+        go_temp.transform.localPosition = new Vector3(0, -0, -10f);
+        go_temp.SetActive(true);
+
+        GameObject go_temp_2;
+        go_temp_2=Instantiate(ps_eroe_cavalletta_linee_alte_ritardo);
+        go_temp_2.transform.SetParent(gameObject.transform);
+        go_temp_2.transform.localPosition = new Vector3(0, -0, -10f);
+        go_temp_2.GetComponent<ParticleSystem>().Play();
+
         StartCoroutine(disattiva_totale());
     }
 
@@ -94,6 +112,19 @@ public class re_cavalletta_rule : MonoBehaviour
         skeletonAnimation.state.ClearTracks();
         skeletonAnimation.AnimationName="start";
         gameObject.SetActive(true);
+
+        GameObject go_temp;
+        go_temp=Instantiate(ps_eroe_cavalletta_linee_basse);
+        go_temp.transform.SetParent(gameObject.transform);
+        go_temp.transform.localPosition = new Vector3(0, 10, -10f);
+        go_temp.GetComponent<ParticleSystem>().Play();
+
+        GameObject go_temp_2;
+        go_temp_2=Instantiate(ps_eroe_cavalletta_fumo_basso_ritardo);
+        go_temp_2.transform.SetParent(gameObject.transform);
+        go_temp_2.transform.localPosition = new Vector3(0, 0, -10f);
+        go_temp_2.SetActive(true);
+
         StartCoroutine(inizia_azione_cavalletta());
     }
 
@@ -116,15 +147,19 @@ public class re_cavalletta_rule : MonoBehaviour
             skeletonAnimation.loop=false;
             skeletonAnimation.AnimationName="attack";
             yield return new WaitForSeconds(0.4f);
-            lancia_bomba();
+            if (!bool_termina_devastazione){
+                lancia_bomba();
+            }
         }
     }
 
     private IEnumerator return_idle(){
         if (!bool_termina_devastazione){
             yield return new WaitForSeconds(1);
-            skeletonAnimation.loop=true;
-            skeletonAnimation.AnimationName="idle";
+            if (!bool_termina_devastazione){
+                skeletonAnimation.loop=true;
+                skeletonAnimation.AnimationName="idle";
+            }
         }
     }
 
@@ -153,7 +188,9 @@ public class re_cavalletta_rule : MonoBehaviour
     private IEnumerator lancia_next_bomba(){
         if (!bool_termina_devastazione){
             yield return new WaitForSeconds(3);
-            StartCoroutine(lancia_bomba_anim());
+            if (!bool_termina_devastazione){
+                StartCoroutine(lancia_bomba_anim());
+            }
         }
     }
 }

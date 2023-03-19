@@ -116,15 +116,19 @@ public class regina_ragno_rule : MonoBehaviour
             skeletonAnimation.loop=false;
             skeletonAnimation.AnimationName="attack";
             yield return new WaitForSeconds(0.4f);
-            lancia_bomba();
+            if (!bool_termina_devastazione){
+                lancia_bomba();
+            }
         }
     }
 
     private IEnumerator return_idle(){
         if (!bool_termina_devastazione){
             yield return new WaitForSeconds(1);
-            skeletonAnimation.loop=true;
-            skeletonAnimation.AnimationName="idle";
+            if (!bool_termina_devastazione){
+                skeletonAnimation.loop=true;
+                skeletonAnimation.AnimationName="idle";
+            }
         }
     }
 
@@ -153,7 +157,9 @@ public class regina_ragno_rule : MonoBehaviour
     private IEnumerator lancia_next_bomba(){
         if (!bool_termina_devastazione){
             yield return new WaitForSeconds(3);
-            StartCoroutine(lancia_bomba_anim());
+            if (!bool_termina_devastazione){
+                StartCoroutine(lancia_bomba_anim());
+            }
         }
     }
 }
