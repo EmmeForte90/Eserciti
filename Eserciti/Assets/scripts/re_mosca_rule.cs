@@ -18,10 +18,14 @@ public class re_mosca_rule : MonoBehaviour
 
     public GameObject ps_eroe_mosca;
     public GameObject ps_eroe_mosca_escape;
+    public GameObject particle_poche_mosche;
+
+    private bool bool_mosche_poche_attive=false;
     
     // Start is called before the first frame update
     void Start()
     {
+        bool_mosche_poche_attive=false;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         col2D = gameObject.GetComponent<BoxCollider2D>();
         skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -34,6 +38,13 @@ public class re_mosca_rule : MonoBehaviour
     void Update()
     {
         Flip();
+        if (bool_mosche_poche_attive){
+            GameObject go_temp;
+            go_temp=Instantiate(particle_poche_mosche);
+            go_temp.transform.SetParent(gameObject.transform);
+            go_temp.transform.localPosition = new Vector3(0, 0, -10f);
+            go_temp.SetActive(true);
+        }
     }
 
     public void attiva_ps_azzurro_evocazione(){
@@ -45,6 +56,7 @@ public class re_mosca_rule : MonoBehaviour
     }
 
     public void disattiva(){
+        bool_mosche_poche_attive=false;
         iTween.Stop(gameObject);
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="fine";
@@ -70,6 +82,7 @@ public class re_mosca_rule : MonoBehaviour
         gameObject.SetActive(true);
         attiva_ps_azzurro_evocazione();
         StartCoroutine(inizia_movimenti_random());
+        bool_mosche_poche_attive=true;
     }
 
     private IEnumerator inizia_movimenti_random(){
