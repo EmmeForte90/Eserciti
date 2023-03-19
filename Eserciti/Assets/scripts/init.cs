@@ -26,7 +26,7 @@ public class init : MonoBehaviour
     private Color color_img_BarraEroe_piena;
     private float per_potere_eroe=0;
     private float incr_potere_eroe=5;
-    private float decr_potere_eroe=0.1f;
+    private float decr_potere_eroe=0.2f;
 
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
@@ -573,6 +573,10 @@ public class init : MonoBehaviour
         }
     }
 
+    public void bomba(string tipo, float xar, float yar){
+        print ("ho sganciato una bomba del tipo "+tipo+" alle coordinate "+xar+" - "+yar);
+    }
+
     private IEnumerator aggiungi_eroe_scena() {
         int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
@@ -580,7 +584,7 @@ public class init : MonoBehaviour
             case "regina_ragno":{
                 num_pupi_generati_totali++;
                 GO_pupo_eroe.transform.SetParent(mappa.transform);
-                GO_pupo_eroe.transform.localPosition = new Vector3(0, 0, 11f);
+                GO_pupo_eroe.transform.localPosition = new Vector3(-38, 0, 11f);
                 GO_pupo_eroe.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2001);
                 GO_pupo_eroe.GetComponent<regina_ragno_rule>().attiva();
 
