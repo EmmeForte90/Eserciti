@@ -18,10 +18,14 @@ public class regina_ape_rule : MonoBehaviour
 
     public GameObject ps_eroe_mosca;
     public GameObject ps_eroe_mosca_escape;
+    public GameObject particle_miele_colante;
+
+    private bool bool_miele_colante_attivo=false;
     
     // Start is called before the first frame update
     void Start()
     {
+        bool_miele_colante_attivo=false;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         col2D = gameObject.GetComponent<BoxCollider2D>();
         skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -33,6 +37,13 @@ public class regina_ape_rule : MonoBehaviour
     void Update()
     {
         Flip();
+        if (bool_miele_colante_attivo){
+            GameObject go_temp;
+            go_temp=Instantiate(particle_miele_colante);
+            go_temp.transform.SetParent(gameObject.transform);
+            go_temp.transform.localPosition = new Vector3(0, 0, -10f);
+            go_temp.SetActive(true);
+        }
     }
 
     public void attiva_ps_azzurro_evocazione(){
@@ -44,6 +55,7 @@ public class regina_ape_rule : MonoBehaviour
     }
 
     public void disattiva(){
+        bool_miele_colante_attivo=false;
         iTween.Stop(gameObject);
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="fine";
@@ -53,7 +65,7 @@ public class regina_ape_rule : MonoBehaviour
         go_temp.transform.SetParent(gameObject.transform);
         go_temp.transform.localPosition = new Vector3(0, 0, -10f);
         go_temp.GetComponent<ParticleSystem>().Play();
-        
+
         StartCoroutine(disattiva_totale());
     }
 
@@ -70,6 +82,7 @@ public class regina_ape_rule : MonoBehaviour
         gameObject.SetActive(true);
         attiva_ps_azzurro_evocazione();
         StartCoroutine(inizia_movimenti_random());
+        bool_miele_colante_attivo=true;
     }
 
     private IEnumerator inizia_movimenti_random(){
