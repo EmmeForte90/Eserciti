@@ -26,6 +26,7 @@ public class effetti : MonoBehaviour
 
     public void eff_evocazione_eroe(float xar, float yar, string id_hero){
         switch (id_hero){
+            case "re_scarabeo":
             case "regina_formica_nera":{
                 GameObject go_temp;
                 go_temp=Instantiate(particle_summon_eroe_formica);

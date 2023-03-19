@@ -89,6 +89,7 @@ public class basic_rule : MonoBehaviour
     public GameObject eff_hit_distance_aculeo;
     public GameObject eff_hit_critico;
     public GameObject eff_cura;
+    public GameObject eff_sparizione_eroe_basso;
 
 
     public float valore_pupo;
@@ -231,6 +232,15 @@ public class basic_rule : MonoBehaviour
         bool_morto=true;
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="fine";
+        StartCoroutine(effetto_fumo_basso_eroe());
+    }
+    private IEnumerator effetto_fumo_basso_eroe(){
+        yield return new WaitForSeconds(0.5f);
+        GameObject go_temp;
+        go_temp=Instantiate(eff_sparizione_eroe_basso);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
+        go_temp.SetActive(true);
     }
 
     public void esulta(){
