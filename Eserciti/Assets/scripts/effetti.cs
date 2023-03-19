@@ -22,8 +22,19 @@ public class effetti : MonoBehaviour
     public GameObject eff_cura;
     public GameObject eff_resurrezione;
 
+    public GameObject particle_summon_eroe_formica;
+
     public void eff_evocazione_eroe(float xar, float yar, string id_hero){
-        print ("effetto evocazione eroe...");
+        switch (id_hero){
+            case "regina_formica_nera":{
+                GameObject go_temp;
+                go_temp=Instantiate(particle_summon_eroe_formica);
+                go_temp.transform.SetParent(mappa.transform);
+                go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+                go_temp.GetComponent<ParticleSystem>().Play();
+                break;
+            }
+        }
     }
 
     //in verità per ora lo usiamo direttamente sui pupi...
