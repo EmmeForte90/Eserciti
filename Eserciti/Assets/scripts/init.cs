@@ -548,7 +548,7 @@ public class init : MonoBehaviour
 
     public void mouse_click(GameObject obj, string tipo){
         //print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
-        print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
+        //print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
         if (obj.name.Contains("abilita_")){
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             click_abilita(int_abilita);

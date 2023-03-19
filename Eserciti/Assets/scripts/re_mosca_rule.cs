@@ -15,6 +15,9 @@ public class re_mosca_rule : MonoBehaviour
     private float horizontal;
     public float old_x;
     private Vector3[] waypoints;
+
+    public GameObject ps_eroe_mosca;
+    public GameObject ps_eroe_mosca_escape;
     
     // Start is called before the first frame update
     void Start()
@@ -33,10 +36,25 @@ public class re_mosca_rule : MonoBehaviour
         Flip();
     }
 
+    public void attiva_ps_azzurro_evocazione(){
+        GameObject go_temp;
+        go_temp=Instantiate(ps_eroe_mosca);
+        go_temp.transform.SetParent(gameObject.transform);
+        go_temp.transform.localPosition = new Vector3(0, 0, -10f);
+        go_temp.GetComponent<ParticleSystem>().Play();
+    }
+
     public void disattiva(){
-        iTween.Stop();
+        iTween.Stop(gameObject);
         skeletonAnimation.loop=false;
         skeletonAnimation.AnimationName="fine";
+
+        GameObject go_temp;
+        go_temp=Instantiate(ps_eroe_mosca_escape);
+        go_temp.transform.SetParent(gameObject.transform);
+        go_temp.transform.localPosition = new Vector3(0, 0, -10f);
+        go_temp.GetComponent<ParticleSystem>().Play();
+
         StartCoroutine(disattiva_totale());
     }
 
@@ -46,11 +64,11 @@ public class re_mosca_rule : MonoBehaviour
     }
 
     public void attiva(){
-        print ("attivo!");
         skeletonAnimation.loop=false;
         skeletonAnimation.state.ClearTracks();
         skeletonAnimation.AnimationName="start";
         gameObject.SetActive(true);
+        attiva_ps_azzurro_evocazione();
         StartCoroutine(inizia_movimenti_random());
     }
 

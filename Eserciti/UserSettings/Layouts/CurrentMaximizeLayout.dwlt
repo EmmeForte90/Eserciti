@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 440
     height: 476
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -223,9 +223,9 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 238}
-      m_SelectedIDs: b6760000
-      m_LastClickedID: 30390
+      scrollPos: {x: 0, y: 254}
+      m_SelectedIDs: aa7b0000
+      m_LastClickedID: 31658
       m_ExpandedIDs: 2cfbffff18710000347100001c7300006e770000d47a0000d67e00000a8700001888000078890000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 732.80005
     height: 476
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.6408851, y: -0.00343556, z: -8.950125}
+    m_Target: {x: 2438.2368, y: 730.34827, z: -10.976035}
     speed: 2
-    m_Value: {x: 0.6408851, y: -0.00343556, z: -8.950125}
+    m_Value: {x: 2438.2368, y: 730.34827, z: -10.976035}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.0124564
+    m_Target: 3.6342168
     speed: 2
-    m_Value: 5.0124564
+    m_Value: 3.6342168
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -705,21 +705,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Graphic/animations/Pupetti/Zombie
+    - Assets/Graphic/animations/Pupetti/Hero/Mosca
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Graphic/animations/Pupetti/Zombie
+  - Assets/Graphic/animations/Pupetti/Hero/Mosca
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cappe\Desktop\Eserciti\Eserciti
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 322.2}
-    m_SelectedIDs: ce990000
-    m_LastClickedID: 39374
+    scrollPos: {x: 0, y: 303}
+    m_SelectedIDs: aab70000
+    m_LastClickedID: 47018
     m_ExpandedIDs: 000000009496000096960000989600009a9600009c9600009e960000a0960000a2960000a4960000a6960000c6990000ca9900007aab000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -773,9 +773,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f6760000
-    m_LastClickedInstanceID: 30454
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 88d1edff
+    m_LastClickedInstanceID: -1191544
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000a7d0000c2980000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
