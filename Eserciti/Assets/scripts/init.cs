@@ -352,6 +352,8 @@ public class init : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)){click_abilita(4);}
         if (Input.GetKeyDown(KeyCode.T)){click_abilita(5);}
         if (Input.GetKeyDown(KeyCode.Y)){click_abilita(6);}
+        if (Input.GetKeyDown(KeyCode.U)){click_abilita(7);}
+        if (Input.GetKeyDown(KeyCode.I)){click_abilita(8);}
 
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (int_abilita_scelta!=0){
