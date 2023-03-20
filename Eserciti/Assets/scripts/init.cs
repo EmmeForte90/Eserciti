@@ -26,7 +26,7 @@ public class init : MonoBehaviour
     private Color color_img_BarraEroe_piena;
     private float per_potere_eroe=0;
     private float incr_potere_eroe=5;
-    private float decr_potere_eroe=0.5f;
+    private float decr_potere_eroe=0.1f;
 
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
@@ -576,7 +576,41 @@ public class init : MonoBehaviour
     }
 
     public void bomba(string tipo, float xar, float yar){
-        print ("ho sganciato una bomba del tipo "+tipo+" alle coordinate "+xar+" - "+yar);
+        print ("Una bomba del tipo "+tipo+" ha colpito alle coordinate "+xar+" - "+yar);
+
+        switch (tipo){
+            case "bomba_eroe_ragnatele":{
+                effetti.eff_ragnatele(xar,yar);
+                float distanza_temp;
+                float valore_abilita=6;
+                foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
+                    if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                        distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                        if (distanza_temp<=4){
+                            lp_totali_basic_rule[attachStat.Value].applica_ragnatela(valore_abilita);
+                        }
+                    }
+                }
+                break;
+            }
+            case "bomba_eroe_cavalletta":{
+                effetti.effetto_esplosione(xar,yar);
+                float distanza_temp;
+                float valore_abilita=6;
+                float valore_danno=valore_abilita*0.5f+Random.Range(0.5f,1f);
+
+                foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
+                    if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                        distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                        if (distanza_temp<=4){
+                            valore_danno+=(4-distanza_temp);
+                            lp_totali_basic_rule[attachStat.Value].danneggia(valore_danno);
+                        }
+                    }
+                }
+                break;
+            }
+        }
     }
 
     private IEnumerator aggiungi_eroe_scena() {

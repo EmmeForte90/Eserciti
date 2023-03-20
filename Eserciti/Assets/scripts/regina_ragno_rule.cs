@@ -21,7 +21,7 @@ public class regina_ragno_rule : MonoBehaviour
     private int num_bombe_lanciate=0;
     private Vector3 pos_iniziale_bombe;
     private float t;
-    public float ritardo_attacco=1f;
+    public float ritardo_attacco=3f;
     
     // Start is called before the first frame update
     void Start()
@@ -42,24 +42,20 @@ public class regina_ragno_rule : MonoBehaviour
 
     void Update(){
         if (num_bombe_lanciate!=0){
-            foreach(KeyValuePair<int,GameObject> attachStat in lista_bombe_GO){
+            foreach(KeyValuePair<int,Vector3> attachStat in lista_bombe_destinazione){
                 if (lista_bombe_attive[attachStat.Key]<1){
                     lista_bombe_attive[attachStat.Key]+=0.01f;
                     //print ("bomba: "+attachStat.Key+" - "+lista_bombe_attive[attachStat.Key]);
-                    attachStat.Value.transform.position=punto_parabola(pos_iniziale_bombe,lista_bombe_destinazione[attachStat.Key],lista_bombe_mid_destinazione[attachStat.Key],t,lista_bombe_attive[attachStat.Key]);
-                    attachStat.Value.transform.Rotate(0,0,6*lista_bombe_rotazione[attachStat.Key]*Time.deltaTime);
+                    lista_bombe_GO[attachStat.Key].transform.position=punto_parabola(pos_iniziale_bombe,lista_bombe_destinazione[attachStat.Key],lista_bombe_mid_destinazione[attachStat.Key],t,lista_bombe_attive[attachStat.Key]);
+                    lista_bombe_GO[attachStat.Key].transform.Rotate(0,0,6*lista_bombe_rotazione[attachStat.Key]*Time.deltaTime);
 
                     if (lista_bombe_attive[attachStat.Key]>=1){
-                        disattiva_bomba(attachStat.Key);
+                        lista_bombe_GO[attachStat.Key].SetActive(false);
+                        init.bomba("bomba_eroe_ragnatele",lista_bombe_destinazione[attachStat.Key].x,lista_bombe_destinazione[attachStat.Key].y);
                     }
                 }
             }
         }
-    }
-
-    private void disattiva_bomba(int int_key_bomba){
-        print ("disattivo la bomba "+int_key_bomba);
-        lista_bombe_GO[int_key_bomba].SetActive(false);
     }
 
     private Vector3 punto_parabola(Vector3 start_point, Vector3 end_point, Vector3 mid_point, float t, float count){

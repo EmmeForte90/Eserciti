@@ -25,6 +25,8 @@ public class effetti : MonoBehaviour
     public GameObject ps_eroe_formica;
     public GameObject ps_eroe_mosca;
 
+    public GameObject eff_esplosione;
+
     public void eff_evocazione_eroe(float xar, float yar, string id_hero){
         print ("attivo l'effetto per id_hero: "+id_hero);
         switch (id_hero){
@@ -38,6 +40,14 @@ public class effetti : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void effetto_esplosione(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(eff_esplosione);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.SetActive(true);
     }
 
     //in verità per ora lo usiamo direttamente sui pupi...
