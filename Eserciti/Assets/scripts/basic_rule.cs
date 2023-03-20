@@ -48,6 +48,7 @@ public class basic_rule : MonoBehaviour
     public float aculeo_x;                      //sono le coordinate di qualcuno da attaccare in caso di morte
     public float aculeo_y;
 
+    public float livello_veleno=0;
     public float vitalita;
     public bullet_rule valori_proiettile;
     public int id_difensore_mago=0;
@@ -98,6 +99,7 @@ public class basic_rule : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake(){
+        livello_veleno=0;
         //per_critico=100;    //debug;
         bool_armatura=false;
         bool_velocita=false;
@@ -178,6 +180,9 @@ public class basic_rule : MonoBehaviour
     void Update(){
         if (!bool_attivo){return;}
         if (bool_morto){return;}
+        if (livello_veleno>0){
+            danneggia(livello_veleno);
+        }
         if (bool_ragnatele){
             if (secondi_ragnatela>0){
                 secondi_ragnatela-=Time.deltaTime;

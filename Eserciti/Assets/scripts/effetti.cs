@@ -26,6 +26,8 @@ public class effetti : MonoBehaviour
     public GameObject ps_eroe_mosca;
 
     public GameObject eff_esplosione;
+    public GameObject eff_esplosione_piccola;
+    public GameObject eff_esplosione_velenosa;
 
     public void eff_evocazione_eroe(float xar, float yar, string id_hero){
         print ("attivo l'effetto per id_hero: "+id_hero);
@@ -45,6 +47,22 @@ public class effetti : MonoBehaviour
     public void effetto_esplosione(float xar, float yar){
         GameObject go_temp;
         go_temp=Instantiate(eff_esplosione);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.SetActive(true);
+    }
+
+    public void effetto_esplosione_piccola(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(eff_esplosione_piccola);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        go_temp.SetActive(true);
+    }
+
+    public void effetto_esplosione_velenosa(float xar, float yar){
+        GameObject go_temp;
+        go_temp=Instantiate(eff_esplosione_velenosa);
         go_temp.transform.SetParent(mappa.transform);
         go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
         go_temp.SetActive(true);

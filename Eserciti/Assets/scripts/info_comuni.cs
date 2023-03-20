@@ -33,7 +33,7 @@ public class info_comuni : MonoBehaviour
         lista_powerhero_descrizione.Add("re_cavalletta","Descrizione del potere eroe del re cavalletta");
         lista_powerhero_descrizione.Add("re_scarabeo","Descrizione del potere eroe del re scarabeo");
 
-        //traduerree la parte a destra di questo blocco
+        //UPGRADE PERENNI traduerree la parte a destra di questo blocco
         lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
         lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
         lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
@@ -65,7 +65,7 @@ public class info_comuni : MonoBehaviour
                 lista_upgrade_perenni_descrizione[attachStat.Key].Add(i,"Descrizione "+i);
             }
         }
-        //traduerree la parte a destra di questi blocchi
+        //UPGRADE PERENNI - traduerree la parte a destra di questi blocchi
         lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="Le frecce ignorano l'armatura del bersaglio del 25%";
         lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="Le frecce ignorano l'armatura del bersaglio del 50%";
         lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="Le frecce ignorano l'armatura del bersaglio del 75%";
@@ -204,12 +204,27 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["zombie"].Add(2,30);
         lista_abilita_cooldown["zombie"].Add(3,30);
 
-        lista_abilita_nome.Add("resurrezione","resurrezione");
+        lista_abilita_nome.Add("resurrezione","Resurrezione");
         lista_abilita_descrizione.Add("resurrezione","Rievoca un pupetto morto alleato. Il livello del pupo evocato è uguale a quello del livello dell'abilità. Non ha effetto se non ci sono stati pupetti morti.");
         lista_abilita_cooldown.Add("resurrezione",new Dictionary<int, int>());
         lista_abilita_cooldown["resurrezione"].Add(1,20);
         lista_abilita_cooldown["resurrezione"].Add(2,30);
         lista_abilita_cooldown["resurrezione"].Add(3,40);
+
+        lista_abilita_nome.Add("insetto_esplosivo","Insetto Esplosivo");
+        lista_abilita_descrizione.Add("insetto_esplosivo","Evoca un insetto esplosivo per livello il quale correra casualmente sulla mappa per poi esplodere danneggiando tutti gli insetti vicini.");
+        lista_abilita_cooldown.Add("insetto_esplosivo",new Dictionary<int, int>());
+        lista_abilita_cooldown["insetto_esplosivo"].Add(1,5);
+        lista_abilita_cooldown["insetto_esplosivo"].Add(2,30);
+        lista_abilita_cooldown["insetto_esplosivo"].Add(3,40);
+
+        lista_abilita_nome.Add("insetto_esplosivo_velenoso","Insetto Esplosivo");
+        lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Evoca un insetto esplosivo per livello il quale correra casualmente sulla mappa per poi esplodere intossicando tutti gli insetti vicini.");
+        lista_abilita_cooldown.Add("insetto_esplosivo_velenoso",new Dictionary<int, int>());
+        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(1,5);
+        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,5);
+        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,5);
+
 
         //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
         foreach(KeyValuePair<string,Dictionary<int,int>> attachStat in lista_abilita_cooldown){

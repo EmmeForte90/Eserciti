@@ -111,6 +111,9 @@ public class init : MonoBehaviour
     private int valore_iniziale_ondata=130;
     private int valore_incrementale_ondata=45;
 
+    public GameObject insetto_esplosivo_pf;
+    public GameObject insetto_esplosivo_velenoso_pf;
+
     void Awake(){
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
 
@@ -759,6 +762,55 @@ public class init : MonoBehaviour
         effetti.eff_evocazione_brown(xar,yar);
     }
 
+    private void evoca_insetto_esplosivo(GameObject go_insetto, float xar, float yar){
+        int tempo_evocazione=2;
+        GameObject go_temp;
+        go_temp=Instantiate(go_insetto);
+        go_temp.transform.SetParent(mappa.transform);
+        go_temp.transform.localPosition = new Vector3(xar, yar, 1f);
+        effetti.eff_evocazione_brown(xar,yar);
+        go_temp.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2000);
+        go_temp.GetComponent<insetto_esplosivo_rule>().attiva();
+
+    }
+
+    public void insetto_esplode(string tipo, float xar, float yar){
+        switch (tipo){
+            case "insetto_esplosivo":{
+                effetti.effetto_esplosione_piccola(xar,yar);
+                float distanza_temp;
+                float valore_abilita=6;
+                float valore_danno=valore_abilita*0.5f+Random.Range(0.5f,1f);
+
+                foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
+                    if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
+                        distanza_temp=calcola_distanza(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,xar,yar);
+                        if (distanza_temp<=4){
+                            valore_danno+=(4-distanza_temp);
+                            lp_totali_basic_rule[attachStat.Key].danneggia(valore_danno);
+                        }
+                    }
+                }
+                break;
+            }
+            case "insetto_esplosivo_velenoso":{
+                effetti.effetto_esplosione_velenosa(xar,yar);
+                float distanza_temp;
+                float livello_veleno=0.0075f;
+
+                foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
+                    if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
+                        distanza_temp=calcola_distanza(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,xar,yar);
+                        if (distanza_temp<=3){
+                            lp_totali_basic_rule[attachStat.Key].livello_veleno+=livello_veleno;
+                        }
+                    }
+                }
+                break;
+            }
+        }
+    }
+
     public void attiva_abilita_coordinate(float xar, float yar){
         if (bool_fine_partita){int_abilita_scelta=0;return;}
         if (int_abilita_scelta!=0){
@@ -827,6 +879,26 @@ public class init : MonoBehaviour
                         random_x=Random.Range(-1f,2f)+xar;
                         random_y=Random.Range(-1f,2f)+yar;
                         evoca_pupo("formica_warrior_1",random_x,random_y,"evocazione");
+                    }
+                    break;
+                }
+                case "insetto_esplosivo":{
+                    float random_x;
+                    float random_y;
+                    for (int i=1;i<=liv;i++){
+                        random_x=Random.Range(-1f,1f)+xar;
+                        random_y=Random.Range(-1f,1f)+yar;
+                        evoca_insetto_esplosivo(insetto_esplosivo_pf,random_x,random_y);
+                    }
+                    break;
+                }
+                case "insetto_esplosivo_velenoso":{
+                    float random_x;
+                    float random_y;
+                    for (int i=1;i<=liv;i++){
+                        random_x=Random.Range(-1f,1f)+xar;
+                        random_y=Random.Range(-1f,1f)+yar;
+                        evoca_insetto_esplosivo(insetto_esplosivo_velenoso_pf,random_x,random_y);
                     }
                     break;
                 }

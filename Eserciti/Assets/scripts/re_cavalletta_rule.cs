@@ -37,15 +37,6 @@ public class re_cavalletta_rule : MonoBehaviour
         gameObject.SetActive(false);
 
         t=10f;
-        Vector3 vor=new Vector3(-38,0.05f,-1);
-        Vector3 var=new Vector3(-4,-1,-1);
-        Vector3 vin=vor +(var -vor)/2 +Vector3.up *t;
-        print ("vin: "+vin);
-        Vector3 m1,m2;
-        for (float i=0;i<=1;i+=0.1f){
-            print (punto_parabola(vor,var,vin,t,i));
-        }
-        //lancio la bomba n. 1: (-38.00, 0.05, -1.00) - (-21.00, 0.02, -1.00) - (-4.00, -1.00, -1.00)
     }
 
     void Update(){
