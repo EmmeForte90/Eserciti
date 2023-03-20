@@ -26,7 +26,7 @@ public class init : MonoBehaviour
     private Color color_img_BarraEroe_piena;
     private float per_potere_eroe=0;
     private float incr_potere_eroe=5;
-    private float decr_potere_eroe=0.2f;
+    private float decr_potere_eroe=0.5f;
 
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;

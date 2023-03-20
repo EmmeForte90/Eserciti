@@ -16,10 +16,12 @@ public class regina_ragno_rule : MonoBehaviour
     public Dictionary<int, GameObject> lista_bombe_GO = new Dictionary<int, GameObject>(); 
     public Dictionary<int, Vector3> lista_bombe_destinazione = new Dictionary<int, Vector3>();
     public Dictionary<int, Vector3> lista_bombe_mid_destinazione = new Dictionary<int, Vector3>(); 
+    public Dictionary<int, float> lista_bombe_rotazione = new Dictionary<int,float>();
     private bool bool_termina_devastazione=false;
     private int num_bombe_lanciate=0;
     private Vector3 pos_iniziale_bombe;
-    float t;
+    private float t;
+    public float ritardo_attacco=1f;
     
     // Start is called before the first frame update
     void Start()
@@ -33,11 +35,8 @@ public class regina_ragno_rule : MonoBehaviour
         Vector3 vor=new Vector3(-38,0.05f,-1);
         Vector3 var=new Vector3(-4,-1,-1);
         Vector3 vin=vor +(var -vor)/2 +Vector3.up *t;
-        print ("vin: "+vin);
         Vector3 m1,m2;
-        for (float i=0;i<=1;i+=0.1f){
-            print (punto_parabola(vor,var,vin,t,i));
-        }
+        //for (float i=0;i<=1;i+=0.1f){print (punto_parabola(vor,var,vin,t,i));}
         //lancio la bomba n. 1: (-38.00, 0.05, -1.00) - (-21.00, 0.02, -1.00) - (-4.00, -1.00, -1.00)
     }
 
@@ -48,6 +47,7 @@ public class regina_ragno_rule : MonoBehaviour
                     lista_bombe_attive[attachStat.Key]+=0.01f;
                     //print ("bomba: "+attachStat.Key+" - "+lista_bombe_attive[attachStat.Key]);
                     attachStat.Value.transform.position=punto_parabola(pos_iniziale_bombe,lista_bombe_destinazione[attachStat.Key],lista_bombe_mid_destinazione[attachStat.Key],t,lista_bombe_attive[attachStat.Key]);
+                    attachStat.Value.transform.Rotate(0,0,6*lista_bombe_rotazione[attachStat.Key]*Time.deltaTime);
 
                     if (lista_bombe_attive[attachStat.Key]>=1){
                         disattiva_bomba(attachStat.Key);
@@ -106,6 +106,7 @@ public class regina_ragno_rule : MonoBehaviour
         lista_bombe_attive.Clear();
         lista_bombe_destinazione.Clear();
         lista_bombe_mid_destinazione.Clear();
+        lista_bombe_rotazione.Clear();
 
         StartCoroutine(lancia_bomba_anim());
     }
@@ -114,7 +115,7 @@ public class regina_ragno_rule : MonoBehaviour
         if (!bool_termina_devastazione){
             StartCoroutine(return_idle());
             skeletonAnimation.loop=false;
-            skeletonAnimation.AnimationName="attack";
+            skeletonAnimation.AnimationName="attack_1"; //l'altro attacco sembra respingere o dare un colpo di un pungiglione
             yield return new WaitForSeconds(0.4f);
             if (!bool_termina_devastazione){
                 lancia_bomba();
@@ -147,7 +148,8 @@ public class regina_ragno_rule : MonoBehaviour
             lista_bombe_GO.Add(num_bombe_lanciate,go_temp);
             lista_bombe_destinazione.Add(num_bombe_lanciate,destinazione);
             lista_bombe_attive.Add(num_bombe_lanciate,0);
-
+            lista_bombe_rotazione.Add(num_bombe_lanciate,Random.Range(30,120));
+            if (Random.Range(0,2)==1){lista_bombe_rotazione[num_bombe_lanciate]*=-1;}
 
             print ("lancio la bomba n. "+num_bombe_lanciate+": "+pos_iniziale_bombe+" - "+vin+" - "+destinazione);
 
@@ -156,7 +158,7 @@ public class regina_ragno_rule : MonoBehaviour
     }
     private IEnumerator lancia_next_bomba(){
         if (!bool_termina_devastazione){
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(ritardo_attacco);
             if (!bool_termina_devastazione){
                 StartCoroutine(lancia_bomba_anim());
             }

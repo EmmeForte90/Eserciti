@@ -16,10 +16,12 @@ public class re_cavalletta_rule : MonoBehaviour
     public Dictionary<int, GameObject> lista_bombe_GO = new Dictionary<int, GameObject>(); 
     public Dictionary<int, Vector3> lista_bombe_destinazione = new Dictionary<int, Vector3>();
     public Dictionary<int, Vector3> lista_bombe_mid_destinazione = new Dictionary<int, Vector3>(); 
+    public Dictionary<int, float> lista_bombe_rotazione = new Dictionary<int,float>();
     private bool bool_termina_devastazione=false;
     private int num_bombe_lanciate=0;
     private Vector3 pos_iniziale_bombe;
     float t;
+    public float ritardo_attacco=1f;
 
     public GameObject ps_eroe_cavalletta_linee_basse;
     public GameObject ps_eroe_cavalletta_linee_alte_ritardo;
@@ -53,6 +55,7 @@ public class re_cavalletta_rule : MonoBehaviour
                     lista_bombe_attive[attachStat.Key]+=0.01f;
                     //print ("bomba: "+attachStat.Key+" - "+lista_bombe_attive[attachStat.Key]);
                     attachStat.Value.transform.position=punto_parabola(pos_iniziale_bombe,lista_bombe_destinazione[attachStat.Key],lista_bombe_mid_destinazione[attachStat.Key],t,lista_bombe_attive[attachStat.Key]);
+                    attachStat.Value.transform.Rotate(0,0,6*lista_bombe_rotazione[attachStat.Key]*Time.deltaTime);
 
                     if (lista_bombe_attive[attachStat.Key]>=1){
                         disattiva_bomba(attachStat.Key);
@@ -137,6 +140,7 @@ public class re_cavalletta_rule : MonoBehaviour
         lista_bombe_attive.Clear();
         lista_bombe_destinazione.Clear();
         lista_bombe_mid_destinazione.Clear();
+        lista_bombe_rotazione.Clear();
 
         StartCoroutine(lancia_bomba_anim());
     }
@@ -178,6 +182,8 @@ public class re_cavalletta_rule : MonoBehaviour
             lista_bombe_GO.Add(num_bombe_lanciate,go_temp);
             lista_bombe_destinazione.Add(num_bombe_lanciate,destinazione);
             lista_bombe_attive.Add(num_bombe_lanciate,0);
+            lista_bombe_rotazione.Add(num_bombe_lanciate,Random.Range(30,120));
+            if (Random.Range(0,2)==1){lista_bombe_rotazione[num_bombe_lanciate]*=-1;}
 
 
             print ("lancio la bomba n. "+num_bombe_lanciate+": "+pos_iniziale_bombe+" - "+vin+" - "+destinazione);
@@ -187,7 +193,7 @@ public class re_cavalletta_rule : MonoBehaviour
     }
     private IEnumerator lancia_next_bomba(){
         if (!bool_termina_devastazione){
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(ritardo_attacco);
             if (!bool_termina_devastazione){
                 StartCoroutine(lancia_bomba_anim());
             }
