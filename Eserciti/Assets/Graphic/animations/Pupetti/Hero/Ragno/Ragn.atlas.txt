@@ -9,7 +9,7 @@ Body
 bounds:1557,863,141,300
 rotate:90
 Braccio
-bounds:1859,904,91,100
+bounds:642,100,91,100
 Coda
 bounds:753,555,247,300
 rotate:90
@@ -20,9 +20,11 @@ Head
 bounds:1557,805,56,100
 rotate:90
 Livello 2
-bounds:642,402,92,100
+bounds:1859,904,92,100
 Shadow
 bounds:753,509,108,44
+Web
+bounds:642,202,100,300
 ZZ
 bounds:753,804,500,200
 Zampa
