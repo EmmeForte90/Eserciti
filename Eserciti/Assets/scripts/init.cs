@@ -815,6 +815,7 @@ public class init : MonoBehaviour
     }
 
     public void attiva_abilita_coordinate(float xar, float yar){
+        setta_cursore("default");
         if (bool_fine_partita){int_abilita_scelta=0;return;}
         if (int_abilita_scelta!=0){
             //print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
@@ -1006,7 +1007,7 @@ public class init : MonoBehaviour
     private void setta_cursore(string tipo){
         switch (tipo){
             default:{Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);break;}
-            case "abilita":{Cursor.SetCursor(cursore_abilita, Vector2.zero, CursorMode.ForceSoftware);break;}
+            case "abilita":{Cursor.SetCursor(cursore_abilita, new Vector2(100,50), CursorMode.ForceSoftware);break;}
         }
     }
 
