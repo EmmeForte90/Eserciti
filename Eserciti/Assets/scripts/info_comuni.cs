@@ -225,6 +225,20 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,5);
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,5);
 
+        lista_abilita_nome.Add("bombo","Catapulta di Bombo");
+        lista_abilita_descrizione.Add("bombo","Catapulta a grappolo 5 bombo per livello che esplodono all'impatto danneggiando qualsiasi insetto nella vasta area colpita.");
+        lista_abilita_cooldown.Add("bombo",new Dictionary<int, int>());
+        lista_abilita_cooldown["bombo"].Add(1,5);
+        lista_abilita_cooldown["bombo"].Add(2,5);
+        lista_abilita_cooldown["bombo"].Add(3,5);
+
+        lista_abilita_nome.Add("balestra","Balestre di aculeo");
+        lista_abilita_descrizione.Add("balestra","Lancia 5 aculei per livello uno dopo l'altro che esplodono all'impatto danneggiando qualsiasi insetto nella vasta area colpita.");
+        lista_abilita_cooldown.Add("balestra",new Dictionary<int, int>());
+        lista_abilita_cooldown["balestra"].Add(1,5);
+        lista_abilita_cooldown["balestra"].Add(2,5);
+        lista_abilita_cooldown["balestra"].Add(3,5);
+
 
         //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
         foreach(KeyValuePair<string,Dictionary<int,int>> attachStat in lista_abilita_cooldown){

@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public abilita_balestra abilita_balestra;
+    public abilita_bombo abilita_bombo;
     private basic_rule br_eroe;
     private int int_key_eroe=0;
     private bool bool_eroe_in_azione=false;
@@ -585,6 +587,24 @@ public class init : MonoBehaviour
         print ("Una bomba del tipo "+tipo+" ha colpito alle coordinate "+xar+" - "+yar);
 
         switch (tipo){
+            case "bomba_balestra":
+            case "bomba_bombo":{
+                effetti.effetto_esplosione_piccola(xar,yar);
+                float distanza_temp;
+                float valore_abilita=2;
+                float valore_danno=valore_abilita*0.5f+Random.Range(0.5f,1f);
+
+                foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
+                    if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
+                        distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                        if (distanza_temp<=2){
+                            valore_danno+=(2-distanza_temp);
+                            lp_totali_basic_rule[attachStat.Value].danneggia(valore_danno);
+                        }
+                    }
+                }
+                break;
+            }
             case "bomba_eroe_ragnatele":{
                 effetti.eff_ragnatele(xar,yar);
                 float distanza_temp;
@@ -814,6 +834,8 @@ public class init : MonoBehaviour
         }
     }
 
+
+
     public void attiva_abilita_coordinate(float xar, float yar){
         setta_cursore("default");
         if (bool_fine_partita){int_abilita_scelta=0;return;}
@@ -825,6 +847,42 @@ public class init : MonoBehaviour
             //txt_desc_abilita.SetText("");
             int liv=lista_abilita_livello[int_abilita_scelta];
             switch (lista_abilita_id[int_abilita_scelta]){
+                case "balestra":{
+                    int num_bombo=liv*5;
+                    float random_x;
+                    float random_y;
+                    string zombie_temp="";
+
+                    abilita_balestra.resetta();
+
+                    for (int i=1;i<=num_bombo;i++){
+                        random_x=Random.Range(-5f,5f)+xar;
+                        random_y=Random.Range(-5f,5f)+yar;
+
+                        abilita_balestra.aggiungi(i,liv,random_x, random_y);
+                    }
+
+                    abilita_balestra.avvia();
+                    break;
+                }
+                case "bombo":{
+                    int num_bombo=liv*5;
+                    float random_x;
+                    float random_y;
+                    string zombie_temp="";
+
+                    abilita_bombo.resetta();
+
+                    for (int i=1;i<=num_bombo;i++){
+                        random_x=Random.Range(-5f,5f)+xar;
+                        random_y=Random.Range(-5f,5f)+yar;
+
+                        abilita_bombo.aggiungi(i,liv,random_x, random_y);
+                    }
+
+                    abilita_bombo.avvia();
+                    break;
+                }
                 case "resurrezione":{
                     float distanza_temp;
                     int id_pupo_risveglio=0;
