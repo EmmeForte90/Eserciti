@@ -8,12 +8,6 @@ public class mouse_script : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 	public UnityEvent onLeftClick;
 	public UnityEvent onRightClick;
 	public UnityEvent onMiddleClick;
-	
-	/*
-	public void Start(){
-		init = gameObject.Find("script").GetComponent<init>();
-	}
-	*/
 
 	//questo sembra funzionare per tutto ciò che si trova sulla canvas
 	public void OnPointerClick(PointerEventData eventData){
@@ -40,7 +34,6 @@ public class mouse_script : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 		if (Input.GetMouseButtonDown(1)){init.mouse_click(gameObject, "dx");}
 	}
 	void OnMouseEnter(){
-		//print (gameObject);
 		try{	//non ho idea per la quale, questa buffonata fà funzionare il tutto...
 			init.mouse_enter(gameObject);
 		}	

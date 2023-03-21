@@ -38,7 +38,7 @@ public class insetto_esplosivo_rule : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         skeletonAnimation.loop=true;
         skeletonAnimation.AnimationName="walk";
-        int time=3;
+        int time=5;
         float random_x;
         float random_y;
         float z=1;

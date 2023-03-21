@@ -27,6 +27,7 @@ public class init : MonoBehaviour
     private float per_potere_eroe=0;
     private float incr_potere_eroe=5;
     private float decr_potere_eroe=0.1f;
+    public Texture2D cursore_abilita;
 
     public SpriteRenderer sfondo;
     public TMPro.TextMeshProUGUI testo_gemme_guadagnate;
@@ -360,6 +361,8 @@ public class init : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (int_abilita_scelta!=0){
+                setta_cursore("default");
+                setta_cerchietto_abilita(int_abilita_scelta,"verde");
                 int_abilita_scelta=0;
                 //txt_desc_abilita.SetText("");
             }
@@ -1000,8 +1003,20 @@ public class init : MonoBehaviour
         particle_mosche.SetActive(false);
     }
 
+    private void setta_cursore(string tipo){
+        switch (tipo){
+            default:{Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);break;}
+            case "abilita":{Cursor.SetCursor(cursore_abilita, Vector2.zero, CursorMode.ForceSoftware);break;}
+        }
+    }
+
     public void mouse_exit(GameObject obj){
-        if (obj.name.Contains("abilita_")){
+        if (obj.name=="area_cliccabile"){
+            if (int_abilita_scelta!=0){
+                setta_cursore("default");
+            }
+        }
+        else if (obj.name.Contains("abilita_")){
             if (int_abilita_scelta==0){
                 //txt_desc_abilita.SetText("");
             }
@@ -1020,7 +1035,12 @@ public class init : MonoBehaviour
         //print ("mouse: sono uscito da "+obj.name);
     }
     public void mouse_enter(GameObject obj){
-        if (obj.name.Contains("abilita_")){
+        if (obj.name=="area_cliccabile"){
+            if (int_abilita_scelta!=0){
+                setta_cursore("abilita");
+            }
+        }
+        else if (obj.name.Contains("abilita_")){
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             if (int_abilita_scelta==0){
                 string testo=info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
