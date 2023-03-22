@@ -10,6 +10,7 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown_partenza = new Dictionary<string, Dictionary<int, int>>();
+    public Dictionary<string, bool> lista_bool_abilita_classe = new Dictionary<string, bool>();
 
     public Dictionary<string, string> lista_razze_totale = new Dictionary<string, string>();
     public Dictionary<string, string> lista_razza_pupi_nome = new Dictionary<string, string>();
@@ -156,6 +157,7 @@ public class info_comuni : MonoBehaviour
         //traduci nei blocchi le frasi lunghe (sempre a destra)
         //La lista di tutte le abilita!
         lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
+        lista_bool_abilita_classe.Add("evoca_formiche",true);
         lista_abilita_descrizione.Add("evoca_formiche","Summon 2 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
         lista_abilita_cooldown.Add("evoca_formiche",new Dictionary<int, int>());
         lista_abilita_cooldown["evoca_formiche"].Add(1,18);
@@ -163,6 +165,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["evoca_formiche"].Add(3,18);
 
         lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
+        lista_bool_abilita_classe.Add("mosche_fastidiose",true);
         lista_abilita_descrizione.Add("mosche_fastidiose","Crea uno sciamo che si muove in maniera random che danneggia tutto ciò che trova al suo passaggio. Mosche e zanzare sono immuni.");
         lista_abilita_cooldown.Add("mosche_fastidiose",new Dictionary<int, int>());
         lista_abilita_cooldown["mosche_fastidiose"].Add(1,20);
@@ -170,6 +173,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["mosche_fastidiose"].Add(3,20);
 
         lista_abilita_nome.Add("miele","Honey");
+        lista_bool_abilita_classe.Add("miele",true);
         lista_abilita_descrizione.Add("miele","Regenerate all friendly unities hitten in the area.");
         lista_abilita_cooldown.Add("miele",new Dictionary<int, int>());
         lista_abilita_cooldown["miele"].Add(1,20);
@@ -177,6 +181,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["miele"].Add(3,20);
 
         lista_abilita_nome.Add("ragnatele","Spiderweb");
+        lista_bool_abilita_classe.Add("ragnatele",true);
         lista_abilita_descrizione.Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end. Spiders are immune.");
         lista_abilita_cooldown.Add("ragnatele",new Dictionary<int, int>());
         lista_abilita_cooldown["ragnatele"].Add(1,20);
@@ -184,6 +189,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["ragnatele"].Add(3,20);
 
         lista_abilita_nome.Add("velocita","Speed");
+        lista_bool_abilita_classe.Add("velocita",true);
         lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 5 seconds. It doesn't work on webbed targets.");
         lista_abilita_cooldown.Add("velocita",new Dictionary<int, int>());
         lista_abilita_cooldown["velocita"].Add(1,30);
@@ -191,6 +197,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["velocita"].Add(3,30);
 
         lista_abilita_nome.Add("armatura","Armour");
+        lista_bool_abilita_classe.Add("armatura",true);
         lista_abilita_descrizione.Add("armatura","Increase the armour of all friendly hitten unities in the area for 5 seconds.");
         lista_abilita_cooldown.Add("armatura",new Dictionary<int, int>());
         lista_abilita_cooldown["armatura"].Add(1,30);
@@ -198,6 +205,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["armatura"].Add(3,30);
 
         lista_abilita_nome.Add("zombie","Zombie");
+        lista_bool_abilita_classe.Add("zombie",false);
         lista_abilita_descrizione.Add("zombie","Evoca degli insetti zombie casuali. Al primo livello ne evoca 5. Al secondo ne evoca 8. Al terzo ne evoca 10");
         lista_abilita_cooldown.Add("zombie",new Dictionary<int, int>());
         lista_abilita_cooldown["zombie"].Add(1,30);
@@ -205,6 +213,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["zombie"].Add(3,30);
 
         lista_abilita_nome.Add("resurrezione","Resurrezione");
+        lista_bool_abilita_classe.Add("resurrezione",false);
         lista_abilita_descrizione.Add("resurrezione","Rievoca un pupetto morto alleato. Il livello del pupo evocato è uguale a quello del livello dell'abilità. Non ha effetto se non ci sono stati pupetti morti.");
         lista_abilita_cooldown.Add("resurrezione",new Dictionary<int, int>());
         lista_abilita_cooldown["resurrezione"].Add(1,20);
@@ -212,6 +221,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["resurrezione"].Add(3,40);
 
         lista_abilita_nome.Add("insetto_esplosivo","Insetto Esplosivo");
+        lista_bool_abilita_classe.Add("insetto_esplosivo",false);
         lista_abilita_descrizione.Add("insetto_esplosivo","Evoca un insetto esplosivo per livello il quale correra casualmente sulla mappa per poi esplodere danneggiando tutti gli insetti vicini.");
         lista_abilita_cooldown.Add("insetto_esplosivo",new Dictionary<int, int>());
         lista_abilita_cooldown["insetto_esplosivo"].Add(1,5);
@@ -219,6 +229,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["insetto_esplosivo"].Add(3,40);
 
         lista_abilita_nome.Add("insetto_esplosivo_velenoso","Insetto Esplosivo");
+        lista_bool_abilita_classe.Add("insetto_esplosivo_velenoso",false);
         lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Evoca un insetto esplosivo per livello il quale correra casualmente sulla mappa per poi esplodere intossicando tutti gli insetti vicini.");
         lista_abilita_cooldown.Add("insetto_esplosivo_velenoso",new Dictionary<int, int>());
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(1,5);
@@ -226,13 +237,15 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,5);
 
         lista_abilita_nome.Add("bombo","Catapulta di Bombo");
+        lista_bool_abilita_classe.Add("bombo",false);
         lista_abilita_descrizione.Add("bombo","Catapulta a grappolo 5 bombo per livello che esplodono all'impatto danneggiando qualsiasi insetto nella vasta area colpita.");
         lista_abilita_cooldown.Add("bombo",new Dictionary<int, int>());
         lista_abilita_cooldown["bombo"].Add(1,5);
         lista_abilita_cooldown["bombo"].Add(2,5);
         lista_abilita_cooldown["bombo"].Add(3,5);
 
-        lista_abilita_nome.Add("balestra","Balestre di aculeo");
+        lista_abilita_nome.Add("balestra","Balestre di aculei");
+        lista_bool_abilita_classe.Add("balestra",false);
         lista_abilita_descrizione.Add("balestra","Lancia 5 aculei per livello uno dopo l'altro che esplodono all'impatto danneggiando qualsiasi insetto nella vasta area colpita.");
         lista_abilita_cooldown.Add("balestra",new Dictionary<int, int>());
         lista_abilita_cooldown["balestra"].Add(1,5);
