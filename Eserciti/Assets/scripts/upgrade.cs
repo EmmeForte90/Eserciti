@@ -43,6 +43,7 @@ public class upgrade : MonoBehaviour
     public GameObject cont_upgrade_unity_tier_2;
     public GameObject cont_upgrade_unity_tier_3;
     public GameObject cont_upgrade_random_race;
+    public GameObject cont_upgrade_random_spell;
 
 
     public Image img_premio_upgrade_1;
@@ -72,7 +73,7 @@ public class upgrade : MonoBehaviour
     private int num_ondata;
     private int tier_unity_sbloccato;
     private int i;
-    private int num_max_abilita=8;
+    private int num_max_abilita=7;
     private float per_potere_eroe;
 
     //lista_dei costi delle varie abilità
@@ -383,8 +384,14 @@ public class upgrade : MonoBehaviour
         int costo;
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
             costo=ritorna_costo_abilita(attachStat.Key);
-            if (costo>denaro){lista_B_upgrade_bottoni[attachStat.Key].interactable=false;}
-            else {lista_B_upgrade_bottoni[attachStat.Key].interactable=true;}
+            if (costo>denaro){
+                lista_B_upgrade_bottoni[attachStat.Key].interactable=false;
+                lista_B_upgrade_bottoni[attachStat.Key].gameObject.SetActive(false);
+            }
+            else {
+                lista_B_upgrade_bottoni[attachStat.Key].interactable=true;
+                lista_B_upgrade_bottoni[attachStat.Key].gameObject.SetActive(true);
+            }
         }
     }
 
@@ -439,7 +446,9 @@ public class upgrade : MonoBehaviour
             case 5:{
                 foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
                     if (!lista_abilita.ContainsKey(attachStat.Key)){
-                        if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                        if (!info_comuni.lista_bool_abilita_classe[attachStat.Key]){
+                            if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                        }
                     }
                     else {
                         livello=lista_abilita[attachStat.Key]+1;
@@ -493,7 +502,9 @@ public class upgrade : MonoBehaviour
                 
                 foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
                     if (!lista_abilita.ContainsKey(attachStat.Key)){
-                        if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                        if (!info_comuni.lista_bool_abilita_classe[attachStat.Key]){
+                            if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                        }
                     }
                     else {
                         livello=lista_abilita[attachStat.Key]+1;
@@ -513,8 +524,11 @@ public class upgrade : MonoBehaviour
             foreach(KeyValuePair<string,int> attachStat in lista_abilita){
                 if (attachStat.Value<3){return;}
             }
+            cont_upgrade_random_spell.SetActive(false);
             lista_B_upgrade_bottoni["random_spell"].interactable=false;
+            lista_B_upgrade_bottoni["random_spell"].gameObject.SetActive(false);
             lista_txt_upgrade_descrizione["random_spell"].SetText("You have unlocked all abilities or don't have space for new one.");
+            lista_txt_upgrade_costi["random_spell"].SetText("Cost: /");
         }
     }
 
@@ -532,6 +546,7 @@ public class upgrade : MonoBehaviour
         if (lista_razze_sbloccate.Count>=da_sbloccare){
             cont_upgrade_random_race.SetActive(false);
             lista_B_upgrade_bottoni["random_race"].interactable=false;
+            lista_B_upgrade_bottoni["random_race"].gameObject.SetActive(false);
             string testo="You have unlocked all races of level";
             switch (tier_unity_sbloccato){
                 case 1:{testo+=" 1";break;}
@@ -716,8 +731,9 @@ public class upgrade : MonoBehaviour
             case "health":{
                 if (livello>=10){
                     lista_B_upgrade_bottoni[abilita].interactable=false;
+                    lista_B_upgrade_bottoni[abilita].gameObject.SetActive(false);
                     lista_txt_upgrade_descrizione[abilita].SetText("You have reach the max level for this upgrade!");
-                    lista_txt_upgrade_costi[abilita].SetText("Cost: "+costo.ToString("/"));
+                    lista_txt_upgrade_costi[abilita].SetText("Cost: /");
                 }
                 break;
             }
@@ -725,8 +741,9 @@ public class upgrade : MonoBehaviour
             case "hero_cooldown":{
                 if (livello>=5){
                     lista_B_upgrade_bottoni[abilita].interactable=false;
+                    lista_B_upgrade_bottoni[abilita].gameObject.SetActive(false);
                     lista_txt_upgrade_descrizione[abilita].SetText("You have reach the max level for this upgrade!");
-                    lista_txt_upgrade_costi[abilita].SetText("Cost: "+costo.ToString("/"));
+                    lista_txt_upgrade_costi[abilita].SetText("Cost: /");
                 }
                 break;
             }
@@ -746,6 +763,7 @@ public class upgrade : MonoBehaviour
                 costo=ritorna_costo_abilita(attachStat.Key);
                 if (costo>denaro){
                     lista_B_upgrade_bottoni[attachStat.Key].interactable=false;
+                    lista_B_upgrade_bottoni[attachStat.Key].gameObject.SetActive(false);
                 }
             }
 
@@ -811,7 +829,9 @@ public class upgrade : MonoBehaviour
                     lista_premi_settati.Clear();
                     foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
                         if (!lista_abilita.ContainsKey(attachStat.Key)){
-                            if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                            if (!info_comuni.lista_bool_abilita_classe[attachStat.Key]){
+                                if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
+                            }
                         }
                         else {
                             livello=lista_abilita[attachStat.Key]+1;
