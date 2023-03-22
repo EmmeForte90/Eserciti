@@ -92,6 +92,14 @@ public class mainmenu : MonoBehaviour
             click_eroe("regina_ragno");
             inizia_nuova_partita();
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha5)){
+            click_eroe("re_cavalletta");
+            inizia_nuova_partita();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha6)){
+            click_eroe("re_scarabeo");
+            inizia_nuova_partita();
+        }
     }
 
     public void click_eroe(string id_eroe){
@@ -120,7 +128,7 @@ public class mainmenu : MonoBehaviour
                 nome="King Fly";
                 descrizione="Una dozzina sono fastidiose. Una dozzina di dozzine diventano incontrollabili.";
                 lista_pupetti.Add("mosca_warrior_1",10);
-                lista_pupetti.Add("mosca_arce_1r",6);
+                lista_pupetti.Add("mosca_arce_1",6);
                 lista_pupetti.Add("mosca_wizard_1",2);
                 lista_razze_sbloccate.Add("mosche_1",1);
                 break;
