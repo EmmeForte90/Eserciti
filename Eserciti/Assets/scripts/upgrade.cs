@@ -73,6 +73,7 @@ public class upgrade : MonoBehaviour
     private int tier_unity_sbloccato;
     private int i;
     private int num_max_abilita=8;
+    private float per_potere_eroe;
 
     //lista_dei costi delle varie abilità
     public TMPro.TextMeshProUGUI txt_u_c_melee_damage;
@@ -963,6 +964,7 @@ public class upgrade : MonoBehaviour
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
             tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
+            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update");}
             denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){
@@ -997,7 +999,7 @@ public class upgrade : MonoBehaviour
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
 
         string xml_content="";
-        xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' denaro='"+denaro+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"' posizione='game'>";
+        xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' denaro='"+denaro+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"' per_potere_eroe='"+per_potere_eroe+"' posizione='game'>";
         xml_content+="\n\t<lista_abilita>";
         foreach(KeyValuePair<string,int> attachStat in lista_abilita){
             xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";

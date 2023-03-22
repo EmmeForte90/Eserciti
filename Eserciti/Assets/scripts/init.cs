@@ -167,6 +167,13 @@ public class init : MonoBehaviour
 
         setta_game_da_file();
 
+        incr_potere_eroe=info_comuni.lista_incremento_potere_eroe[id_hero];
+        decr_potere_eroe=info_comuni.lista_decremento_potere_eroe[id_hero];
+
+
+        //incr_potere_eroe=5;   //debug
+        decr_potere_eroe=0.1f;  //debug
+
         //ora che abbiamo l'id hero, andiamo a disattivare tutti gli altri
         foreach (Transform child in cont_eroi.transform) {
             if (child.name!=id_hero){child.gameObject.SetActive(false);}
@@ -329,20 +336,6 @@ public class init : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        if (!bool_eroe_in_azione){
-            if (!bool_potere_eroe_pieno){
-                if (per_potere_eroe<100){
-                    per_potere_eroe+=incr_potere_eroe;
-                    aggiorna_img_abilita_eroe();
-                    if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
-                }
-            }
-        } else {//essendo in azione, dobbiamo farlo decrementare
-            if (per_potere_eroe>0){
-                decrementa_potere_eroe();
-            }
-        }
-        descrizione_follow_mouse();
 
         if (Input.GetKeyDown(KeyCode.Z)){
             foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
@@ -372,6 +365,21 @@ public class init : MonoBehaviour
         if (!bool_inizio_partita){
             if (bool_fine_partita){return;}
         }
+
+        if (!bool_eroe_in_azione){
+            if (!bool_potere_eroe_pieno){
+                if (per_potere_eroe<100){
+                    per_potere_eroe+=incr_potere_eroe;
+                    aggiorna_img_abilita_eroe();
+                    if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
+                }
+            }
+        } else {//essendo in azione, dobbiamo farlo decrementare
+            if (per_potere_eroe>0){
+                decrementa_potere_eroe();
+            }
+        }
+        descrizione_follow_mouse();
 
         //parte relativa alle mosche fastidiose
         if (bool_mosche_fastidiose){
@@ -466,7 +474,7 @@ public class init : MonoBehaviour
             //File.Delete(path);
             num_ondata++;
 
-            xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"'";
+            xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"' per_potere_eroe='"+per_potere_eroe+"'";
             denaro+=denaro_guadagnato;
             xml_content+=" denaro='"+denaro+"' posizione='upgrade'>";
 

@@ -24,8 +24,28 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, Dictionary<int, int>> lista_upgrade_perenni_costi = new Dictionary<string, Dictionary<int, int>>();
     public Dictionary<string, Dictionary<int, string>> lista_upgrade_perenni_descrizione = new Dictionary<string, Dictionary<int, string>>();
 
+    public Dictionary<string, float> lista_incremento_potere_eroe = new Dictionary<string, float>();
+    public Dictionary<string, float> lista_decremento_potere_eroe = new Dictionary<string, float>();
+
     private string string_temp;
     void Awake(){
+        //non tradurre nulla
+        lista_incremento_potere_eroe.Add("regina_formica_nera",0.01f);
+        lista_incremento_potere_eroe.Add("re_mosca",0.01f);
+        lista_incremento_potere_eroe.Add("regina_ape",0.01f);
+        lista_incremento_potere_eroe.Add("regina_ragno",0.01f);
+        lista_incremento_potere_eroe.Add("re_cavalletta",0.01f);
+        lista_incremento_potere_eroe.Add("re_scarabeo",0.01f);
+
+        //0.1f corrisponde grossomodo a 17 secondi
+        //0.15 corrisponde grossomodo a 9 secondi
+        lista_decremento_potere_eroe.Add("regina_formica_nera",0.15f);
+        lista_decremento_potere_eroe.Add("re_mosca",0.15f);
+        lista_decremento_potere_eroe.Add("regina_ape",0.15f);
+        lista_decremento_potere_eroe.Add("regina_ragno",0.15f);
+        lista_decremento_potere_eroe.Add("re_cavalletta",0.15f);
+        lista_decremento_potere_eroe.Add("re_scarabeo",0.15f);
+
         //tradurre la parte destra di questo blocco
         lista_powerhero_descrizione.Add("regina_formica_nera","Descrizione del potere eroe del re formica nera");
         lista_powerhero_descrizione.Add("re_mosca","Descrizione del potere eroe del re mosca");
