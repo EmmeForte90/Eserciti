@@ -15,6 +15,8 @@ using Spine.Unity;
 public class upgrade : MonoBehaviour
 {   
     public Button btn_upgrade_pupetti;
+    public Button btn_upgrade_eroe;
+    public Button btn_upgrade_generici;
 
     public GameObject lista_upgrade_generici;
     public GameObject lista_upgrade_pupetti;
@@ -219,6 +221,10 @@ public class upgrade : MonoBehaviour
     }
 
     public void bottone_dx_lista_upgrade(string tipo){
+        //btn_upgrade_pupetti;
+        //btn_upgrade_eroe;
+        //btn_upgrade_generici;
+
         lista_upgrade_generici.SetActive(false);
         lista_upgrade_pupetti.SetActive(false);
         lista_upgrade_eroe.SetActive(false);
