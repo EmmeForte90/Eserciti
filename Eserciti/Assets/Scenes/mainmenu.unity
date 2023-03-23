@@ -19084,7 +19084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 51.873962, y: -692.92566}
+  m_AnchoredPosition: {x: 51.874023, y: -692.92566}
   m_SizeDelta: {x: 87.6012, y: 58.7344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294331772
@@ -25268,7 +25268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: All Rights reserved.
+  m_text: All Rights reserved. Created by Eros Cappello and Mauro "Emme" Forte
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac8da90f0766a3349888ad5c96910053, type: 2}
   m_sharedMaterial: {fileID: -917779902871837630, guid: ac8da90f0766a3349888ad5c96910053, type: 2}
