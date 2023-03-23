@@ -244,7 +244,7 @@ public class info_comuni : MonoBehaviour
         lista_bool_abilita_classe.Add("insetto_esplosivo",false);
         lista_abilita_descrizione.Add("insetto_esplosivo","Summon an explosive insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo",new Dictionary<int, int>());
-        lista_abilita_cooldown["insetto_esplosivo"].Add(1,5);
+        lista_abilita_cooldown["insetto_esplosivo"].Add(1,20);
         lista_abilita_cooldown["insetto_esplosivo"].Add(2,30);
         lista_abilita_cooldown["insetto_esplosivo"].Add(3,40);
 
@@ -252,25 +252,25 @@ public class info_comuni : MonoBehaviour
         lista_bool_abilita_classe.Add("insetto_esplosivo_velenoso",false);
         lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Summon an explosive poison insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo_velenoso",new Dictionary<int, int>());
-        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(1,5);
-        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,5);
-        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,5);
+        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(1,20);
+        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,30);
+        lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,40);
 
         lista_abilita_nome.Add("bombo","Catapulta di Bombo");
         lista_bool_abilita_classe.Add("bombo",false);
         lista_abilita_descrizione.Add("bombo","Cluster catapult that launches 5 bombs per level which explode on impact, damaging any insect in a large area hit");
         lista_abilita_cooldown.Add("bombo",new Dictionary<int, int>());
-        lista_abilita_cooldown["bombo"].Add(1,5);
-        lista_abilita_cooldown["bombo"].Add(2,5);
-        lista_abilita_cooldown["bombo"].Add(3,5);
+        lista_abilita_cooldown["bombo"].Add(1,20);
+        lista_abilita_cooldown["bombo"].Add(2,30);
+        lista_abilita_cooldown["bombo"].Add(3,40);
 
         lista_abilita_nome.Add("balestra","Balestre di aculei");
         lista_bool_abilita_classe.Add("balestra",false);
         lista_abilita_descrizione.Add("balestra","Launches 5 spikes per level one after the other that explode on impact damaging any insects in the wide area hit.");
         lista_abilita_cooldown.Add("balestra",new Dictionary<int, int>());
-        lista_abilita_cooldown["balestra"].Add(1,5);
-        lista_abilita_cooldown["balestra"].Add(2,5);
-        lista_abilita_cooldown["balestra"].Add(3,5);
+        lista_abilita_cooldown["balestra"].Add(1,20);
+        lista_abilita_cooldown["balestra"].Add(2,30);
+        lista_abilita_cooldown["balestra"].Add(3,40);
 
 
         //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
