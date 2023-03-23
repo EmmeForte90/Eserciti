@@ -87,51 +87,51 @@ public class info_comuni : MonoBehaviour
             }
         }
         //UPGRADE PERENNI - traduerree la parte a destra di questi blocchi
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="Le frecce ignorano l'armatura del bersaglio del 25%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="Le frecce ignorano l'armatura del bersaglio del 50%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="Le frecce ignorano l'armatura del bersaglio del 75%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][4]="Le frecce ignorano l'armatura del bersaglio del 100%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor 25%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor 50%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor 75%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor 100%";
 
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][1]="Le frecce hanno l'1% di possibilità di uccedere il nemico con un colpo";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][2]="Le frecce hanno il 2% di possibilità di uccedere il nemico con un colpo";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][3]="Le frecce hanno il 3% di possibilità di uccedere il nemico con un colpo";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][4]="Le frecce hanno il 4% di possibilità di uccedere il nemico con un colpo";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][5]="Le frecce hanno il 5% di possibilità di uccedere il nemico con un colpo";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][1]="The arrows have a 1% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][2]="The arrows have a 2% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][3]="The arrows have a 3% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][4]="The arrows have a 4% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][5]="The arrows have a 5% chance of killing the enemy with one shot";
 
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][1]="Aumenta la distanza massima d'attacco a distanza di +1";
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Aumenta la distanza massima d'attacco a distanza di +2";
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Aumenta la distanza massima d'attacco a distanza di +3";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][1]="Increases the maximum attack range by +1";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Increases the maximum attack range by +2";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Increases the maximum attack range by +3";
 
-        lista_upgrade_perenni_descrizione["costi_pupi"][1]="I pupi costano 5 in meno";
-        lista_upgrade_perenni_descrizione["costi_pupi"][2]="I pupi costano 10 in meno";
-        lista_upgrade_perenni_descrizione["costi_pupi"][3]="I pupi costano 15 in meno";
+        lista_upgrade_perenni_descrizione["costi_pupi"][1]="The puppets cost 5 less";
+        lista_upgrade_perenni_descrizione["costi_pupi"][2]="The puppets cost 10 less";
+        lista_upgrade_perenni_descrizione["costi_pupi"][3]="The puppets cost 15 less";
 
-        lista_upgrade_perenni_descrizione["costi_guadagno"][1]="Guadagni +10 a fine stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][2]="Guadagni +20 a fine stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][3]="Guadagni +30 a fine stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][4]="Guadagni +40 a fine stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][5]="Guadagni +50 a fine stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][1]="You earn +10 at the end of the stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][2]="You earn +20 at the end of the stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][3]="You earn +30 at the end of the stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][4]="You earn +40 at the end of the stage";
+        lista_upgrade_perenni_descrizione["costi_guadagno"][5]="You earn +50 at the end of the stage";
 
-        lista_upgrade_perenni_descrizione["costi_abilita"][1]="Diminuisce il costo delle abilità di 5";
-        lista_upgrade_perenni_descrizione["costi_abilita"][2]="Diminuisce il costo delle abilità di 10";
-        lista_upgrade_perenni_descrizione["costi_abilita"][3]="Diminuisce il costo delle abilità di 15";
-        lista_upgrade_perenni_descrizione["costi_abilita"][4]="Diminuisce il costo delle abilità di 20";
+        lista_upgrade_perenni_descrizione["costi_abilita"][1]="Reduces the cost of abilities by 5";
+        lista_upgrade_perenni_descrizione["costi_abilita"][2]="Reduces the cost of abilities by 10";
+        lista_upgrade_perenni_descrizione["costi_abilita"][3]="Reduces the cost of abilities by 15";
+        lista_upgrade_perenni_descrizione["costi_abilita"][4]="Reduces the cost of abilities by 20";
 
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][1]="Aumenta la velocità d'attacco del 5%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][2]="Aumenta la velocità d'attacco del 10%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][3]="Aumenta la velocità d'attacco del 15%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][4]="Aumenta la velocità d'attacco del 20%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][1]="Increases attack speed by 5%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][2]="Increases attack speed by 10%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][3]="Increases attack speed by 15%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][4]="Increases attack speed by 20%";
 
-        lista_upgrade_perenni_descrizione["melee_colpiti"][1]="Gli attacchi melee possono colpire 2 pupetti in più contemporaneamente";
-        lista_upgrade_perenni_descrizione["melee_colpiti"][2]="Gli attacchi melee possono colpire 3 pupetti in più contemporaneamente";
+        lista_upgrade_perenni_descrizione["melee_colpiti"][1]="Melee attacks can hit 2 additional puppets at the same time";
+        lista_upgrade_perenni_descrizione["melee_colpiti"][2]="Melee attacks can hit 3 additional puppets at the same time";
 
-        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][1]="I pupetti melee ignoreranno il primo colpo ricevuto";
-        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][2]="I pupetti melee ignoreranno il primo ed il secondo colpo ricevuti";
-        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][3]="I pupetti melee ignoreranno il primo, il secondo e il terzo colpo ricevuti";
+        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][1]="Melee puppets will ignore the first hit they receive";
+        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][2]="Melee puppets will ignore the first and second hits they receive";
+        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][3]="Melee puppets will ignore the first, second, and third hits they receive";
 
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="I pupetti melee guadagnano il 5% di salute della propria vitalità";
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="I pupetti melee guadagnano l'8% di salute della propria vitalità";
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="I pupetti melee guadagnano il 10% di salute della propria vitalità";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="Melee puppets gain 5% of their health as vitality.";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="Melee puppets gain 8% of their health as vitality.";
+        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="Melee puppets gain 10% of their health as vitality.";
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
@@ -152,10 +152,10 @@ public class info_comuni : MonoBehaviour
             //Le descrizione
             lista_pupi_descrizione.Add("formiche_"+i,"Most commons soldiers");
             lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
-            lista_pupi_descrizione.Add("api_"+i,"Quando muoiono lanciano il loro pungiglione contro qualche nemico.");
-            lista_pupi_descrizione.Add("ragnetti_"+i,"Ogni volta che colpiscono, rallentano il bersaglio. Sono immuni da questo effetto da parte di altri ragni");
-            lista_pupi_descrizione.Add("cavallette_"+i,"Le cavallette, sono particolarmente veloci.");
-            lista_pupi_descrizione.Add("scarabei_"+i,"Gli scarabei sono la razza più resistente a cui puoi aspirare.");
+            lista_pupi_descrizione.Add("api_"+i,"When they die, they launch their stinger at some enemy");
+            lista_pupi_descrizione.Add("ragnetti_"+i,"Every time they hit, they slow down the target. They are immune to this effect from other spiders");
+            lista_pupi_descrizione.Add("cavallette_"+i,"Grasshoppers are particularly fast.");
+            lista_pupi_descrizione.Add("scarabei_"+i,"Beetles are the most resilient race you can aspire to");
 
             //NB: I Nomi e le descrizioni, saranno sempre al plurale
             lista_razza_pupi_nome.Add("formiche_"+i,"Ants");     
@@ -186,7 +186,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
         lista_bool_abilita_classe.Add("mosche_fastidiose",true);
-        lista_abilita_descrizione.Add("mosche_fastidiose","Crea uno sciamo che si muove in maniera random che danneggia tutto ciò che trova al suo passaggio. Mosche e zanzare sono immuni.");
+        lista_abilita_descrizione.Add("mosche_fastidiose","Create a swarm that moves randomly and damages everything it encounters. Flies and mosquitoes are immune");
         lista_abilita_cooldown.Add("mosche_fastidiose",new Dictionary<int, int>());
         lista_abilita_cooldown["mosche_fastidiose"].Add(1,20);
         lista_abilita_cooldown["mosche_fastidiose"].Add(2,20);
@@ -226,7 +226,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("zombie","Zombie");
         lista_bool_abilita_classe.Add("zombie",false);
-        lista_abilita_descrizione.Add("zombie","Evoca degli insetti zombie casuali. Al primo livello ne evoca 5. Al secondo ne evoca 8. Al terzo ne evoca 10");
+        lista_abilita_descrizione.Add("zombie","Summon random zombie insects. At the first level, it summons 5. At the second level, it summons 8. At the third level, it summons 10");
         lista_abilita_cooldown.Add("zombie",new Dictionary<int, int>());
         lista_abilita_cooldown["zombie"].Add(1,30);
         lista_abilita_cooldown["zombie"].Add(2,30);
@@ -234,7 +234,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("resurrezione","Resurrezione");
         lista_bool_abilita_classe.Add("resurrezione",false);
-        lista_abilita_descrizione.Add("resurrezione","Rievoca un pupetto morto alleato. Il livello del pupo evocato è uguale a quello del livello dell'abilità. Non ha effetto se non ci sono stati pupetti morti.");
+        lista_abilita_descrizione.Add("resurrezione","Revive a fallen ally puppet. The level of the summoned puppet is equal to the level of the ability. It has no effect if there are no fallen puppets.");
         lista_abilita_cooldown.Add("resurrezione",new Dictionary<int, int>());
         lista_abilita_cooldown["resurrezione"].Add(1,20);
         lista_abilita_cooldown["resurrezione"].Add(2,30);
@@ -242,7 +242,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("insetto_esplosivo","Insetto Esplosivo");
         lista_bool_abilita_classe.Add("insetto_esplosivo",false);
-        lista_abilita_descrizione.Add("insetto_esplosivo","Evoca un insetto esplosivo per livello il quale correra casualmente sulla mappa per poi esplodere danneggiando tutti gli insetti vicini.");
+        lista_abilita_descrizione.Add("insetto_esplosivo","Summon an explosive insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo",new Dictionary<int, int>());
         lista_abilita_cooldown["insetto_esplosivo"].Add(1,5);
         lista_abilita_cooldown["insetto_esplosivo"].Add(2,30);
@@ -250,7 +250,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("insetto_esplosivo_velenoso","Insetto Esplosivo");
         lista_bool_abilita_classe.Add("insetto_esplosivo_velenoso",false);
-        lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Evoca un insetto esplosivo per livello il quale correra casualmente sulla mappa per poi esplodere intossicando tutti gli insetti vicini.");
+        lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Summon an explosive poison insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo_velenoso",new Dictionary<int, int>());
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(1,5);
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,5);
@@ -258,7 +258,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("bombo","Catapulta di Bombo");
         lista_bool_abilita_classe.Add("bombo",false);
-        lista_abilita_descrizione.Add("bombo","Catapulta a grappolo 5 bombo per livello che esplodono all'impatto danneggiando qualsiasi insetto nella vasta area colpita.");
+        lista_abilita_descrizione.Add("bombo","Cluster catapult that launches 5 bombs per level which explode on impact, damaging any insect in a large area hit");
         lista_abilita_cooldown.Add("bombo",new Dictionary<int, int>());
         lista_abilita_cooldown["bombo"].Add(1,5);
         lista_abilita_cooldown["bombo"].Add(2,5);
@@ -266,7 +266,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("balestra","Balestre di aculei");
         lista_bool_abilita_classe.Add("balestra",false);
-        lista_abilita_descrizione.Add("balestra","Lancia 5 aculei per livello uno dopo l'altro che esplodono all'impatto danneggiando qualsiasi insetto nella vasta area colpita.");
+        lista_abilita_descrizione.Add("balestra","Launches 5 spikes per level one after the other that explode on impact damaging any insects in the wide area hit.");
         lista_abilita_cooldown.Add("balestra",new Dictionary<int, int>());
         lista_abilita_cooldown["balestra"].Add(1,5);
         lista_abilita_cooldown["balestra"].Add(2,5);

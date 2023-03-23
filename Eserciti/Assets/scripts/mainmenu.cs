@@ -115,7 +115,7 @@ public class mainmenu : MonoBehaviour
             case "regina_formica_nera":{
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
-                descrizione="Sinonimo d'invasione! Sembrano sempre poche ed innocenti ed invece...";
+                descrizione="Incursion! They always seem small and innocent, but in reality...";
                 lista_pupetti.Add("formica_warrior_1",4);
                 lista_pupetti.Add("formica_arcer_1",2);
                 lista_razze_sbloccate.Add("formiche_1",1);
@@ -126,7 +126,7 @@ public class mainmenu : MonoBehaviour
             case "re_mosca":{
                 id_abilita="mosche_fastidiose";
                 nome="King Fly";
-                descrizione="Una dozzina sono fastidiose. Una dozzina di dozzine diventano incontrollabili.";
+                descrizione="A dozen are troublesome. A dozen dozens become uncontrollable.";
                 lista_pupetti.Add("mosca_warrior_1",10);
                 lista_pupetti.Add("mosca_arce_1",6);
                 lista_pupetti.Add("mosca_wizard_1",2);
@@ -136,7 +136,7 @@ public class mainmenu : MonoBehaviour
             case "regina_ape":{
                 id_abilita="miele";
                 nome="Queen Bee";
-                descrizione="Un sacrificio è salvare poco. Un intero sacrificio è salvare la regina.";
+                descrizione="To sacrifice is to save little. To sacrifice all is to save the queen.";
                 lista_pupetti.Add("ape_warrior_1",4);
                 lista_pupetti.Add("ape_arcer_1",1);
                 lista_razze_sbloccate.Add("api_1",1);
@@ -145,7 +145,7 @@ public class mainmenu : MonoBehaviour
             case "regina_ragno":{
                 id_abilita="ragnatele";
                 nome="Queen Spider";
-                descrizione="Non vuoi rilassarti? Ci pensano le loro ragnatele";
+                descrizione="Don't you want to relax? Let their spider webs do the job.";
                 lista_pupetti.Add("ragnetto_warrior_1",4);
                 lista_pupetti.Add("ragnetto_arcer_1",2);
                 lista_pupetti.Add("ragnetto_wizard_1",1);
@@ -155,7 +155,7 @@ public class mainmenu : MonoBehaviour
             case "re_cavalletta":{
                 id_abilita="velocita";
                 nome="King Grasshopper";
-                descrizione="Saltellano veloci e a volte incontrollabili";
+                descrizione="They hop quickly and sometimes uncontrollably.";
                 lista_pupetti.Add("cavalletta_warrior_1",6);
                 lista_pupetti.Add("cavalletta_arcer_1",2);
                 lista_razze_sbloccate.Add("cavallette_1",1);
@@ -164,7 +164,7 @@ public class mainmenu : MonoBehaviour
             case "re_scarabeo":{
                 id_abilita="armatura";
                 nome="King Beetle";
-                descrizione="Non sono solo semplici e nobili insetti. Prova a mettere un dito tra le loro chele";
+                descrizione="They are not just simple and noble insects. Try putting a finger between their pincers.";
                 lista_pupetti.Add("scarabeo_warrior_1",8);
                 lista_razze_sbloccate.Add("scarabei_1",1);
                 break;
@@ -343,7 +343,7 @@ public class mainmenu : MonoBehaviour
                 lista_btn_bottone_upgrade_perenne[upgrade].interactable=false;
             }
         } else {
-            lista_txt_descrizione_upgrade_perenne[upgrade].SetText("Hai raggiunto il livello massimo");
+            lista_txt_descrizione_upgrade_perenne[upgrade].SetText("You have reached the maximum level.");
             lista_txt_costo_upgrade_perenne[upgrade].SetText("");
             lista_obj_bottone_upgrade_perenne[upgrade].SetActive(false);
         }

@@ -706,16 +706,16 @@ public class upgrade : MonoBehaviour
             case "distance_damage":{testo="Your units hit +"+(livello+1)+" on distance attacks";break;}
             case "spell_damage":{testo="Your units hit +"+(livello+1)+" on spell attacks";break;}
             case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
-            case "hero_damage":{testo="Le abilità del tuo eroe che danneggiano, lo fanno del +"+((livello+1)*10)+"%";break;}
-            case "hero_cooldown":{testo="I cooldown delle tue abilità sono ridutti del -"+((livello+1)*10)+"%";break;}
-            case "random_unity_1":{testo="Scegli tra tre unità random delle razze sbloccate di livello 1.";break;}
-            case "random_spell":{testo="Scegli tra tre nuove abilita oppure una già esistente ma di livello superiore";break;}
-            case "random_race":{testo="Scegli tra tre nuove razze da sbloccare";break;}
-            case "random_unity_2":{testo="Scegli tra tre unità random delle razze sbloccate di livello 2.";break;}
-            case "random_unity_3":{testo="Scegli tra tre unità random delle razze sbloccate di livello 3.";break;}
+            case "hero_damage":{testo="The abilities of your hero that deal damage, do so by +"+((livello+1)*10)+"%";break;}
+            case "hero_cooldown":{testo="The cooldown of your abilities is reduced by -"+((livello+1)*10)+"%";break;}
+            case "random_unity_1":{testo="Choose one of three randomly selected level 1 units from the unlocked races";break;}
+            case "random_spell":{testo="Choose between three new abilities or an existing one at a higher level";break;}
+            case "random_race":{testo="Choose from three new races to unlock";break;}
+            case "random_unity_2":{testo="Choose one of three randomly selected level 2 units from the unlocked races";break;}
+            case "random_unity_3":{testo="Choose one of three randomly selected level 3 units from the unlocked races";break;}
             case "unlock_next_unity_tier":{
-                if (tier_unity_sbloccato<2){testo="Sblocca la possibilità delle unità di livello 2.";}
-                else if (tier_unity_sbloccato<3){testo="Sblocca la possibilità delle unità di livello 3.";}
+                if (tier_unity_sbloccato<2){testo="Unlock the ability to produce level 2 units";}
+                else if (tier_unity_sbloccato<3){testo="Unlock the ability to produce level 23 units";}
                 else {cont_upgrade_unlock_unity_tier.SetActive(false);}
                 break;
             }
