@@ -58,11 +58,20 @@ public class mainmenu : MonoBehaviour
         if (!PlayerPrefs.HasKey("ultima_posizione")){PlayerPrefs.SetString("ultima_posizione","mainmenu");}
         switch (PlayerPrefs.GetString("ultima_posizione")){
             case "gioco_sconfitta":{
+                print ("attivo...");
                 attiva_pannello(sch_upgrade_perenni);
+                break;
+            }
+            default:{
+                attiva_pannello(sch_mainmenu);
                 break;
             }
         }
         PlayerPrefs.SetString("ultima_posizione","mainmenu");
+    }
+
+    public void esci_da_gioco(){
+        Application.Quit();
     }
 
     public void new_game(){

@@ -1274,7 +1274,8 @@ public class init : MonoBehaviour
                 int percentuale=5;
                 if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare==2){percentuale=8;}
                 else if (lp_totali_basic_rule[id_attaccante].up_melee_dono_zanzare==3){percentuale=10;}
-                lp_totali_basic_rule[id_attaccante].cura(lp_totali_basic_rule[id_attaccante].vitalita_max/percentuale);
+                //print ("curo con zanzare di: "+(lp_totali_basic_rule[id_attaccante].vitalita_max*percentuale/100)+" - "+lp_totali_basic_rule[id_attaccante].vitalita_max+"*"+percentuale+"/100");
+                lp_totali_basic_rule[id_attaccante].cura(lp_totali_basic_rule[id_attaccante].vitalita_max*percentuale/100);
             }
         } else {//solo ai maghi succede di calcolare il danno da combattimento a distanza...
              effetti.effetto_hit_magic_sfera(lp_totali[id_difensore].transform.position.x,lp_totali[id_difensore].transform.position.y+0.5f);
@@ -1449,7 +1450,14 @@ public class init : MonoBehaviour
 
         foreach (Transform child in lista_pupi.transform) {
             if ((!child.name.Contains("horseman"))&&(!child.name.Contains("zombie"))){
-                if ((!child.name.Contains("formica"))&&(!child.name.Contains("ape"))&&(!child.name.Contains("ragnetto"))&&(!child.name.Contains("mosca"))){
+                if (
+                    (!child.name.Contains("formica"))&&
+                    (!child.name.Contains("ape"))&&
+                    (!child.name.Contains("ragnetto"))&&
+                    (!child.name.Contains("mosca"))&&
+                    (!child.name.Contains("cavalletta"))&&
+                    (!child.name.Contains("scarabeo"))
+                ){
                     num_pupi_g++;
                     lista_pupi_temp.Add(num_pupi_g,child.name);
                     punteggio_pupi.Add(child.name,child.gameObject.GetComponent<basic_rule>().valore_pupo);
