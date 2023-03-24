@@ -345,14 +345,14 @@ public class init : MonoBehaviour
 
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q)){click_abilita(1);}
-        if (Input.GetKeyDown(KeyCode.W)){click_abilita(2);}
-        if (Input.GetKeyDown(KeyCode.E)){click_abilita(3);}
-        if (Input.GetKeyDown(KeyCode.R)){click_abilita(4);}
-        if (Input.GetKeyDown(KeyCode.T)){click_abilita(5);}
-        if (Input.GetKeyDown(KeyCode.Y)){click_abilita(6);}
-        if (Input.GetKeyDown(KeyCode.U)){click_abilita(7);}
-        if (Input.GetKeyDown(KeyCode.I)){click_abilita(8);}
+        if (Input.GetKeyDown(KeyCode.Q)){check_click_abilita(1);}
+        if (Input.GetKeyDown(KeyCode.W)){check_click_abilita(2);}
+        if (Input.GetKeyDown(KeyCode.E)){check_click_abilita(3);}
+        if (Input.GetKeyDown(KeyCode.R)){check_click_abilita(4);}
+        if (Input.GetKeyDown(KeyCode.T)){check_click_abilita(5);}
+        if (Input.GetKeyDown(KeyCode.Y)){check_click_abilita(6);}
+        if (Input.GetKeyDown(KeyCode.U)){check_click_abilita(7);}
+        if (Input.GetKeyDown(KeyCode.I)){check_click_abilita(8);}
 
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (int_abilita_scelta!=0){
@@ -433,6 +433,15 @@ public class init : MonoBehaviour
                 fine_partita("vittoria");
                 return;
             }
+        }
+    }
+
+    private void check_click_abilita(int int_abilita){
+        if (bool_fine_partita){return;}
+        if ((!lista_abilita_id.ContainsKey(int_abilita))||(lista_abilita_id[int_abilita]=="")){return;}
+        if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
+            setta_cursore("abilita");
+            click_abilita(int_abilita);
         }
     }
 
@@ -548,6 +557,8 @@ public class init : MonoBehaviour
                 setta_cerchietto_abilita(int_abilita_scelta,"verde");
             }
             int_abilita_scelta=int_abilita;
+            setta_cerchietto_abilita(int_abilita_scelta,"blu");
+
             switch (lista_abilita_id[int_abilita]){
                 default:{
                     string testo="";
