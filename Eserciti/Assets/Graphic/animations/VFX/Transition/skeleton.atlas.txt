@@ -1,0 +1,56 @@
+skeleton.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Transition - V02 Energy 095 Radial Horizontal_00001
+bounds:2,1030,512,512
+Transition - V02 Energy 095 Radial Horizontal_00002
+bounds:2,516,512,512
+Transition - V02 Energy 095 Radial Horizontal_00003
+bounds:516,1030,512,512
+Transition - V02 Energy 095 Radial Horizontal_00004
+bounds:2,2,512,512
+Transition - V02 Energy 095 Radial Horizontal_00005
+bounds:516,516,512,512
+Transition - V02 Energy 095 Radial Horizontal_00006
+bounds:1030,1030,512,512
+Transition - V02 Energy 095 Radial Horizontal_00007
+bounds:516,2,512,512
+Transition - V02 Energy 095 Radial Horizontal_00008
+bounds:1030,516,512,512
+Transition - V02 Energy 095 Radial Horizontal_00009
+bounds:1030,2,512,512
+
+skeleton_2.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Transition - V02 Energy 095 Radial Horizontal_00010
+bounds:2,1030,512,512
+Transition - V02 Energy 095 Radial Horizontal_00011
+bounds:2,516,512,512
+Transition - V02 Energy 095 Radial Horizontal_00012
+bounds:516,1030,512,512
+Transition - V02 Energy 095 Radial Horizontal_00013
+bounds:2,2,512,512
+Transition - V02 Energy 095 Radial Horizontal_00014
+bounds:516,516,512,512
+Transition - V02 Energy 095 Radial Horizontal_00015
+bounds:1030,1030,512,512
+Transition - V02 Energy 095 Radial Horizontal_00016
+bounds:516,2,512,512
+Transition - V02 Energy 095 Radial Horizontal_00017
+bounds:1030,516,512,512
+Transition - V02 Energy 095 Radial Horizontal_00018
+bounds:1030,2,512,512
+
+skeleton_3.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+Transition - V02 Energy 095 Radial Horizontal_00019
+bounds:2,2,512,512
+Transition - V02 Energy 095 Radial Horizontal_00020
+bounds:516,2,512,512
+Transition - V02 Energy 095 Radial Horizontal_00021
+bounds:1030,2,512,512
