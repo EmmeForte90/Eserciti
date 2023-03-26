@@ -137,8 +137,11 @@ public class upgrade : MonoBehaviour
 
     private int valore_monete_premio=100;
 
+    private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
+
     // Start is called before the first frame update
     void Start(){
+        carica_info_partite();
         get_all_blocchi_testo_unita();
         riempi_blocchi_testo_unita();
         
@@ -951,12 +954,13 @@ public class upgrade : MonoBehaviour
                 costo=100*(livello+1);
                 break;
             }
-            case "random_unity_1":{costo=30+(10*livello);break;}
-            case "random_unity_2":{costo=60+(10*livello);break;}
-            case "random_unity_3":{costo=90+(10*livello);break;}
-            case "random_race":
+            case "random_unity_1":{costo=30+(10*livello)-(lista_upgrade_perenni_liv["costi_pupi"]*5);break;}
+            case "random_unity_2":{costo=60+(10*livello)-(lista_upgrade_perenni_liv["costi_pupi"]*5);break;}
+            case "random_unity_3":{costo=90+(10*livello)-(lista_upgrade_perenni_liv["costi_pupi"]*5);break;}
+            case "random_race":{costo=100;break;}
             case "random_spell":{
                 costo=100;
+                costo-=(lista_upgrade_perenni_liv["costi_abilita"]*5);
                 break;
             }
             default:{
@@ -1057,5 +1061,37 @@ public class upgrade : MonoBehaviour
         //print (xml_content);
 
         SceneManager.LoadScene("game");
+    }
+
+    private void carica_info_partite(){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+            lista_upgrade_perenni_liv.Add(attachStat.Key,0);
+        }
+
+        string xml_content="";
+        string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
+
+        XmlDocument xml_game = new XmlDocument ();
+        string string_temp=System.IO.File.ReadAllText(path_xml);
+        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        xml_game.LoadXml(string_temp);
+
+        string upgrade_temp="";
+        int liv_upgrade_temp=0;
+        foreach(XmlElement node in xml_game.SelectNodes("info_partite")){
+            /*
+            num_partite=int.Parse(node.GetAttribute("num_partite"));
+            num_gemme=int.Parse(node.GetAttribute("num_gemme"));
+            num_gemme_totali=int.Parse(node.GetAttribute("num_gemme_totali"));
+            */
+
+            foreach(XmlElement node_2 in node.SelectNodes("upgrade_perenni")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("u")){
+                    liv_upgrade_temp=int.Parse(node_3.GetAttribute("liv"));
+                    upgrade_temp=node_3.InnerText;
+                    lista_upgrade_perenni_liv[upgrade_temp]=liv_upgrade_temp;
+                }
+            }
+        }
     }
 }

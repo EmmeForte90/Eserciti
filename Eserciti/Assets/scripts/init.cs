@@ -471,6 +471,9 @@ public class init : MonoBehaviour
             else if (num_ondata<=15){denaro_guadagnato=70;}
             else if (num_ondata<=20){denaro_guadagnato=100;}
             else {denaro_guadagnato=150;}
+
+            denaro_guadagnato+=(lista_upgrade_perenni_liv["costi_guadagno"]*10);
+
             txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
             txt_denaro_guadagnato.SetText("You have earned "+denaro_guadagnato+" gold!");
             foreach(KeyValuePair<int,int> attachStat in lp_buoni){
@@ -603,8 +606,7 @@ public class init : MonoBehaviour
     }
 
     public void bomba(string tipo, float xar, float yar){
-        print ("Una bomba del tipo "+tipo+" ha colpito alle coordinate "+xar+" - "+yar);
-
+        //print ("Una bomba del tipo "+tipo+" ha colpito alle coordinate "+xar+" - "+yar);
         switch (tipo){
             case "bomba_balestra":
             case "bomba_bombo":{
