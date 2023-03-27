@@ -1345,6 +1345,15 @@ public class init : MonoBehaviour
         }
         go_temp.GetComponent<MeshRenderer>().sortingOrder = (num_pupi_generati_totali+2000);
         go_temp.SetActive(false);
+
+        //debug...
+        if (lp_totali_basic_rule[num_pupi_generati_totali].bool_fazione_nemica){
+            if (!PlayerPrefs.HasKey("num_pupi_generati_"+id_pupo)){
+                PlayerPrefs.SetInt("num_pupi_generati_"+id_pupo,0);
+            }
+            int num_pupi_temp=PlayerPrefs.GetInt("num_pupi_generati_"+id_pupo)+1;
+            PlayerPrefs.SetInt("num_pupi_generati_"+id_pupo,num_pupi_temp);
+        }
     }
 
     public float calcola_distanza(float xor, float yor, float xar, float yar){

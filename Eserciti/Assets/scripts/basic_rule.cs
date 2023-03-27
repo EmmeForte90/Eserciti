@@ -380,6 +380,16 @@ public class basic_rule : MonoBehaviour
     }
 
     private void morte_personaggio(){
+        //debug...
+        if (bool_fazione_nemica){
+            string id_pupo=gameObject.name;
+            if (!PlayerPrefs.HasKey("num_pupi_morti_"+id_pupo)){
+                PlayerPrefs.SetInt("num_pupi_morti_"+id_pupo,0);
+            }
+            int num_pupi_temp=PlayerPrefs.GetInt("num_pupi_morti_"+id_pupo)+1;
+            PlayerPrefs.SetInt("num_pupi_morti_"+id_pupo,num_pupi_temp);
+        }
+
         bool_morto=true;
         barra_energia.SetActive(false);
         barra_energia_vuota.SetActive(false);
