@@ -48,21 +48,21 @@ public class info_comuni : MonoBehaviour
         lista_premio_nome.Add("unlock_all_race_level_2","Titolo");
         lista_premio_nome.Add("unlock_all_race_level_3","Titolo");
 
-        lista_premio_descrizione.Add("end_hero_regina_formica_nera","Completa il gioco con Black Ant");
-        lista_premio_descrizione.Add("end_hero_regina_re_mosca","Completa il gioco con King mosca");
-        lista_premio_descrizione.Add("end_hero_regina_regina_ape","Completa il gioco con Bee queen");
-        lista_premio_descrizione.Add("end_hero_regina_regina_ragno","Completa il gioco con Ragna");
-        lista_premio_descrizione.Add("end_hero_regina_re_cavalletta","Completa il gioco con Cavalletta");
-        lista_premio_descrizione.Add("end_hero_regina_re_scarabeo","Completa il gioco con Scarababbeo");
-        lista_premio_descrizione.Add("reach_stage_10","Raggiungi il livello 10");
-        lista_premio_descrizione.Add("reach_stage_20","Raggiungi il livello 20");
-        lista_premio_descrizione.Add("reach_stage_30","Raggiungi il livello 30");
-        lista_premio_descrizione.Add("gain_10000_gold","Guadagna 10000 monete");
-        lista_premio_descrizione.Add("gain_100_gems","Guadagna 100 gemme");
-        lista_premio_descrizione.Add("gain_1000_gems","Guadagna 1000 gemme");
-        lista_premio_descrizione.Add("unlock_all_race_level_1","Sblocca tutte le razze di livello 1 in una partita");
-        lista_premio_descrizione.Add("unlock_all_race_level_2","Sblocca tutte le razze di livello 2 in una partita");
-        lista_premio_descrizione.Add("unlock_all_race_level_3","Sblocca tutte le razze di livello 3 in una partita");
+        lista_premio_descrizione.Add("end_hero_regina_formica_nera","Complete with Black Ant");
+        lista_premio_descrizione.Add("end_hero_regina_re_mosca","Complete with King moss");
+        lista_premio_descrizione.Add("end_hero_regina_regina_ape","Complete with Queen Abe");
+        lista_premio_descrizione.Add("end_hero_regina_regina_ragno","Complete with Queen Web");
+        lista_premio_descrizione.Add("end_hero_regina_re_cavalletta","Complete with King Gross");
+        lista_premio_descrizione.Add("end_hero_regina_re_scarabeo","Complete with King Big");
+        lista_premio_descrizione.Add("reach_stage_10","Earn level 10");
+        lista_premio_descrizione.Add("reach_stage_20","Earn leve 20");
+        lista_premio_descrizione.Add("reach_stage_30","Earn leve 30");
+        lista_premio_descrizione.Add("gain_10000_gold","Earn 10000 Coins");
+        lista_premio_descrizione.Add("gain_100_gems","Earn 100 gems");
+        lista_premio_descrizione.Add("gain_1000_gems","Earn 1000 gems");
+        lista_premio_descrizione.Add("unlock_all_race_level_1","Unlock all kind of puppets level 1");
+        lista_premio_descrizione.Add("unlock_all_race_level_2","Unlock all kind of puppets level 2");
+        lista_premio_descrizione.Add("unlock_all_race_level_3","Unlock all kind of puppets level 3 ");
 
         //non tradurre nulla
         lista_incremento_potere_eroe.Add("regina_formica_nera",0.01f);
@@ -82,12 +82,12 @@ public class info_comuni : MonoBehaviour
         lista_decremento_potere_eroe.Add("re_scarabeo",0.15f);
 
         //tradurre la parte destra di questo blocco
-        lista_powerhero_descrizione.Add("regina_formica_nera","Descrizione del potere eroe del re formica nera");
-        lista_powerhero_descrizione.Add("re_mosca","Descrizione del potere eroe del re mosca");
-        lista_powerhero_descrizione.Add("regina_ape","Descrizione del potere eroe della regina ape");
-        lista_powerhero_descrizione.Add("regina_ragno","Descrizione del potere eroe della regina ragno");
-        lista_powerhero_descrizione.Add("re_cavalletta","Descrizione del potere eroe del re cavalletta");
-        lista_powerhero_descrizione.Add("re_scarabeo","Descrizione del potere eroe del re scarabeo");
+        lista_powerhero_descrizione.Add("regina_formica_nera","Invoke the Queen Ant to detroy the enemy puppets");
+        lista_powerhero_descrizione.Add("re_mosca","Invoke the King Mos, he going around and damage all enemies puppets in the arena");
+        lista_powerhero_descrizione.Add("regina_ape","Invoke the Queen Abe, she going around and heal all your puppets in the arena");
+        lista_powerhero_descrizione.Add("regina_ragno","Invoke the Spider Queen Weeb, she throws webs balls that reduce the speed of enemy puppets");
+        lista_powerhero_descrizione.Add("re_cavalletta","Invoke the King Grass, he throws balls of earth to damage enemy puppets.");
+        lista_powerhero_descrizione.Add("re_scarabeo","Invoke the King Big to detroy the enemy puppets");
 
         //UPGRADE PERENNI traduerree la parte a destra di questo blocco
         lista_upgrade_perenni_nome.Add("costi_pupi","Cost Army");
