@@ -42,9 +42,12 @@ public class mainmenu : MonoBehaviour
     public Dictionary<string, Button> lista_btn_bottone_upgrade_perenne = new Dictionary<string, Button>();
     public TMPro.TextMeshProUGUI txt_num_gemme;
 
+    public Scrollbar ScrollbarScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        ScrollbarScript.value = 1f;
         Screen.SetResolution(1920, 1080, true);
 
         carica_info_partite();
