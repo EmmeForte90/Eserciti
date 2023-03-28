@@ -649,7 +649,7 @@ public class upgrade : MonoBehaviour
                     txt_monete="+ "+monete+" gold";
                     txt_monete="+"+monete;
                     titolo="Gold!";
-                    descrizione="Un grande tributo al morale della truppa!";
+                    descrizione="Makes happy your army!";
                     riempi_img_premio(num_cont_premio,"reward_gold");
                     break;
                 }
@@ -784,6 +784,11 @@ public class upgrade : MonoBehaviour
                     check_img_nere_upgrade_unity_tier();
                     switch (id_hero){
                         case "regina_formica_nera":{lista_razze_sbloccate.Add("formiche_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
+                        case "re_mosca":{lista_razze_sbloccate.Add("mosche_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
+                        case "regina_ape":{lista_razze_sbloccate.Add("api_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
+                        case "regina_ragno":{lista_razze_sbloccate.Add("ragnetti_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
+                        case "re_cavalletta":{lista_razze_sbloccate.Add("cavallette_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
+                        case "re_scarabeo":{lista_razze_sbloccate.Add("scarabei_"+tier_unity_sbloccato,tier_unity_sbloccato);break;}
                     }
                     foreach(KeyValuePair<string,int> attachStat in lista_razze_sbloccate){
                         sblocca_unita_razza(attachStat.Key,attachStat.Value);
