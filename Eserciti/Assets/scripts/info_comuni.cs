@@ -55,9 +55,6 @@ public class info_comuni : MonoBehaviour
         lista_powerhero_descrizione.Add("re_scarabeo","Descrizione del potere eroe del re scarabeo");
 
         //UPGRADE PERENNI traduerree la parte a destra di questo blocco
-        lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
-        lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
-        lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
         lista_upgrade_perenni_nome.Add("costi_pupi","Costo Esercito");
         lista_upgrade_perenni_nome.Add("costi_guadagno","Guadagno");
         lista_upgrade_perenni_nome.Add("costi_abilita","Costo Abilità");
@@ -65,6 +62,9 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_nome.Add("melee_colpiti","More hits");
         lista_upgrade_perenni_nome.Add("melee_ignora_attacco","Ignore attacks");
         lista_upgrade_perenni_nome.Add("melee_dono_zanzare","Lifesteal");
+        lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
+        lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
+        lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
 
         lista_upgrade_perenni_max_level.Add("proiettili_ignora_armatura",4);
         lista_upgrade_perenni_max_level.Add("proiettili_head_shot",5);
@@ -87,21 +87,6 @@ public class info_comuni : MonoBehaviour
             }
         }
         //UPGRADE PERENNI - traduerree la parte a destra di questi blocchi
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor 25%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor 50%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor 75%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor 100%";
-
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][1]="The arrows have a 1% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][2]="The arrows have a 2% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][3]="The arrows have a 3% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][4]="The arrows have a 4% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][5]="The arrows have a 5% chance of killing the enemy with one shot";
-
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][1]="Increases the maximum attack range by +1";
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Increases the maximum attack range by +2";
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Increases the maximum attack range by +3";
-
         lista_upgrade_perenni_descrizione["costi_pupi"][1]="The puppets cost 5 less";
         lista_upgrade_perenni_descrizione["costi_pupi"][2]="The puppets cost 10 less";
         lista_upgrade_perenni_descrizione["costi_pupi"][3]="The puppets cost 15 less";
@@ -132,6 +117,61 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="Melee puppets gain 5% of their health as vitality.";
         lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="Melee puppets gain 8% of their health as vitality.";
         lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="Melee puppets gain 10% of their health as vitality.";
+
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor 25%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor 50%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor 75%";
+        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor 100%";
+
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][1]="The arrows have a 1% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][2]="The arrows have a 2% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][3]="The arrows have a 3% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][4]="The arrows have a 4% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["proiettili_head_shot"][5]="The arrows have a 5% chance of killing the enemy with one shot";
+
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][1]="Increases the maximum attack range by +1";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Increases the maximum attack range by +2";
+        lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Increases the maximum attack range by +3";
+
+        lista_upgrade_perenni_costi["costi_pupi"][1]=30;
+        lista_upgrade_perenni_costi["costi_pupi"][2]=70;
+        lista_upgrade_perenni_costi["costi_pupi"][3]=150;
+
+        lista_upgrade_perenni_costi["costi_guadagno"][1]=50;
+        lista_upgrade_perenni_costi["costi_guadagno"][2]=120;
+        lista_upgrade_perenni_costi["costi_guadagno"][3]=200;
+        lista_upgrade_perenni_costi["costi_guadagno"][4]=300;
+        lista_upgrade_perenni_costi["costi_guadagno"][5]=450;
+
+        lista_upgrade_perenni_costi["costi_abilita"][1]=30;
+        lista_upgrade_perenni_costi["costi_abilita"][2]=60;
+        lista_upgrade_perenni_costi["costi_abilita"][3]=100;
+        lista_upgrade_perenni_costi["costi_abilita"][4]=150;
+
+        lista_upgrade_perenni_costi["melee_velocita_attacco"][1]=25;
+        lista_upgrade_perenni_costi["melee_velocita_attacco"][2]=50;
+        lista_upgrade_perenni_costi["melee_velocita_attacco"][3]=80;
+        lista_upgrade_perenni_costi["melee_velocita_attacco"][4]=120;
+
+        lista_upgrade_perenni_costi["melee_colpiti"][1]=50;
+        lista_upgrade_perenni_costi["melee_colpiti"][2]=150;
+
+        lista_upgrade_perenni_costi["melee_ignora_attacco"][1]=30;
+        lista_upgrade_perenni_costi["melee_ignora_attacco"][2]=60;
+        lista_upgrade_perenni_costi["melee_ignora_attacco"][3]=100;
+
+        lista_upgrade_perenni_costi["melee_dono_zanzare"][1]=30;
+        lista_upgrade_perenni_costi["melee_dono_zanzare"][2]=80;
+        lista_upgrade_perenni_costi["melee_dono_zanzare"][3]=150;
+
+        lista_upgrade_perenni_costi["proiettili_ignora_armatura"][1]=15;
+        lista_upgrade_perenni_costi["proiettili_ignora_armatura"][2]=35;
+        lista_upgrade_perenni_costi["proiettili_ignora_armatura"][3]=65;
+        lista_upgrade_perenni_costi["proiettili_ignora_armatura"][4]=100;
+
+        lista_upgrade_perenni_costi["proiettili_distanza"][1]=20;
+        lista_upgrade_perenni_costi["proiettili_distanza"][2]=50;
+        lista_upgrade_perenni_costi["proiettili_distanza"][3]=100;
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
