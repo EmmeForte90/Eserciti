@@ -6,6 +6,9 @@ public class info_comuni : MonoBehaviour
 {
     public Dictionary<string, string> lista_powerhero_descrizione = new Dictionary<string, string>();
 
+    public Dictionary<string, string> lista_premio_nome = new Dictionary<string, string>();
+    public Dictionary<string, string> lista_premio_descrizione = new Dictionary<string, string>();
+
     public Dictionary<string, string> lista_abilita_nome = new Dictionary<string, string>();
     public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
@@ -29,6 +32,38 @@ public class info_comuni : MonoBehaviour
 
     private string string_temp;
     void Awake(){
+        lista_premio_nome.Add("end_hero_regina_formica_nera","Titolo");
+        lista_premio_nome.Add("end_hero_regina_re_mosca","Titoloa");
+        lista_premio_nome.Add("end_hero_regina_regina_ape","Titolo");
+        lista_premio_nome.Add("end_hero_regina_regina_ragno","Titolo");
+        lista_premio_nome.Add("end_hero_regina_re_cavalletta","Titolo");
+        lista_premio_nome.Add("end_hero_regina_re_scarabeo","Titolo");
+        lista_premio_nome.Add("reach_stage_10","Titolo");
+        lista_premio_nome.Add("reach_stage_20","Titolo");
+        lista_premio_nome.Add("reach_stage_30","Titolo");
+        lista_premio_nome.Add("gain_10000_gold","Titolo");
+        lista_premio_nome.Add("gain_100_gems","Titolo");
+        lista_premio_nome.Add("gain_1000_gems","Titolo");
+        lista_premio_nome.Add("unlock_all_race_level_1","Titolo");
+        lista_premio_nome.Add("unlock_all_race_level_2","Titolo");
+        lista_premio_nome.Add("unlock_all_race_level_3","Titolo");
+
+        lista_premio_descrizione.Add("end_hero_regina_formica_nera","Completa il gioco con Black Ant");
+        lista_premio_descrizione.Add("end_hero_regina_re_mosca","Completa il gioco con King mosca");
+        lista_premio_descrizione.Add("end_hero_regina_regina_ape","Completa il gioco con Bee queen");
+        lista_premio_descrizione.Add("end_hero_regina_regina_ragno","Completa il gioco con Ragna");
+        lista_premio_descrizione.Add("end_hero_regina_re_cavalletta","Completa il gioco con Cavalletta");
+        lista_premio_descrizione.Add("end_hero_regina_re_scarabeo","Completa il gioco con Scarababbeo");
+        lista_premio_descrizione.Add("reach_stage_10","Raggiungi il livello 10");
+        lista_premio_descrizione.Add("reach_stage_20","Raggiungi il livello 20");
+        lista_premio_descrizione.Add("reach_stage_30","Raggiungi il livello 30");
+        lista_premio_descrizione.Add("gain_10000_gold","Guadagna 10000 monete");
+        lista_premio_descrizione.Add("gain_100_gems","Guadagna 100 gemme");
+        lista_premio_descrizione.Add("gain_1000_gems","Guadagna 1000 gemme");
+        lista_premio_descrizione.Add("unlock_all_race_level_1","Sblocca tutte le razze di livello 1 in una partita");
+        lista_premio_descrizione.Add("unlock_all_race_level_2","Sblocca tutte le razze di livello 2 in una partita");
+        lista_premio_descrizione.Add("unlock_all_race_level_3","Sblocca tutte le razze di livello 3 in una partita");
+
         //non tradurre nulla
         lista_incremento_potere_eroe.Add("regina_formica_nera",0.01f);
         lista_incremento_potere_eroe.Add("re_mosca",0.01f);
@@ -55,14 +90,14 @@ public class info_comuni : MonoBehaviour
         lista_powerhero_descrizione.Add("re_scarabeo","Descrizione del potere eroe del re scarabeo");
 
         //UPGRADE PERENNI traduerree la parte a destra di questo blocco
-        lista_upgrade_perenni_nome.Add("costi_pupi","Costo Esercito");
-        lista_upgrade_perenni_nome.Add("costi_guadagno","Guadagno");
-        lista_upgrade_perenni_nome.Add("costi_abilita","Costo Abilità");
-        lista_upgrade_perenni_nome.Add("melee_velocita_attacco","Velocità d'attacco");
-        lista_upgrade_perenni_nome.Add("melee_colpiti","More hits");
+        lista_upgrade_perenni_nome.Add("costi_pupi","Cost Army");
+        lista_upgrade_perenni_nome.Add("costi_guadagno","Improve earn");
+        lista_upgrade_perenni_nome.Add("costi_abilita","Cost skills");
+        lista_upgrade_perenni_nome.Add("melee_velocita_attacco","Melee attack speed");
+        lista_upgrade_perenni_nome.Add("melee_colpiti","Melee More hits");
         lista_upgrade_perenni_nome.Add("melee_ignora_attacco","Ignore attacks");
         lista_upgrade_perenni_nome.Add("melee_dono_zanzare","Lifesteal");
-        lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignora Armatura");
+        lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignore Armor");
         lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
         lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
 
@@ -102,10 +137,10 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_descrizione["costi_abilita"][3]="Reduces the cost of abilities by 15";
         lista_upgrade_perenni_descrizione["costi_abilita"][4]="Reduces the cost of abilities by 20";
 
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][1]="Increases attack speed by 5%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][2]="Increases attack speed by 10%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][3]="Increases attack speed by 15%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][4]="Increases attack speed by 20%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][1]="Increases melee attack speed by 5%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][2]="Increases melee attack speed by 10%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][3]="Increases melee attack speed by 15%";
+        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][4]="Increases melee attack speed by 20%";
 
         lista_upgrade_perenni_descrizione["melee_colpiti"][1]="Melee attacks can hit 2 additional puppets at the same time";
         lista_upgrade_perenni_descrizione["melee_colpiti"][2]="Melee attacks can hit 3 additional puppets at the same time";

@@ -144,7 +144,7 @@ public class mainmenu : MonoBehaviour
                 nome="King Fly";
                 descrizione="A dozen are troublesome. A dozen dozens become uncontrollable.";
                 lista_pupetti.Add("mosca_warrior_1",10);
-                lista_pupetti.Add("mosca_arce_1",6);
+                lista_pupetti.Add("mosca_arcer_1",6);
                 lista_pupetti.Add("mosca_wizard_1",2);
                 lista_razze_sbloccate.Add("mosche_1",1);
                 break;
