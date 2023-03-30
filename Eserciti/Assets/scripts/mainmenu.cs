@@ -153,9 +153,9 @@ public class mainmenu : MonoBehaviour
                 id_abilita="miele";
                 nome="Queen Bee";
                 descrizione="To sacrifice is to save little. To sacrifice all is to save the queen.";
-                lista_pupetti.Add("ape_warrior_1",4);
-                lista_pupetti.Add("ape_arcer_1",1);
-                lista_razze_sbloccate.Add("api_1",1);
+                lista_pupetti.Add("ape_warrior_1",6);
+                lista_pupetti.Add("ape_arcer_1",3);
+                lista_razze_sbloccate.Add("api_1",2);
                 break;
             }
             case "regina_ragno":{

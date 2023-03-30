@@ -471,7 +471,6 @@ public class basic_rule : MonoBehaviour
             if (int_key_pupo!=br.id_attaccante){
                 if (bool_fazione_nemica!=br.bool_fazione_nemica){//appartengono a due fazioni diverse
                     float danno=br.danno;
-                    print ("danno prima: "+danno);
                     br.attiva_morte_proiettile();
 
                     if (Random.Range(1,101)<=br.per_critico){//è un critico!
@@ -513,7 +512,6 @@ public class basic_rule : MonoBehaviour
                             danno-=armatura_distanza;
                             //if (bool_armatura){danno-=1;}
                         }
-                        print ("danno dopo: "+danno);
                         if (danno<0.1f){danno=0.1f;}  //farà sempre un minimo di danno.
                         danneggia(danno);
                     } else {morte_personaggio();}

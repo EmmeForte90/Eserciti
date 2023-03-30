@@ -271,8 +271,8 @@ public class info_comuni : MonoBehaviour
         lista_bool_abilita_classe.Add("miele",true);
         lista_abilita_descrizione.Add("miele","Regenerate all friendly unities hitten in the area.");
         lista_abilita_cooldown.Add("miele",new Dictionary<int, int>());
-        lista_abilita_cooldown["miele"].Add(1,20);
-        lista_abilita_cooldown["miele"].Add(2,20);
+        lista_abilita_cooldown["miele"].Add(1,15);
+        lista_abilita_cooldown["miele"].Add(2,18);
         lista_abilita_cooldown["miele"].Add(3,20);
 
         lista_abilita_nome.Add("ragnatele","Spiderweb");

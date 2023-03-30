@@ -615,12 +615,12 @@ public class init : MonoBehaviour
                 float valore_abilita=2;
                 float valore_danno=valore_abilita*0.5f+Random.Range(0.5f,1f);
 
-                foreach(KeyValuePair<int,int> attachStat in lp_cattivi){
-                    if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
-                        distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
+                foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
+                    if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
+                        distanza_temp=calcola_distanza(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,xar,yar);
                         if (distanza_temp<=2){
                             valore_danno+=(2-distanza_temp);
-                            lp_totali_basic_rule[attachStat.Value].danneggia(valore_danno);
+                            lp_totali_basic_rule[attachStat.Key].danneggia(valore_danno);
                         }
                     }
                 }
