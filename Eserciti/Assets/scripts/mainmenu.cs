@@ -143,9 +143,9 @@ public class mainmenu : MonoBehaviour
                 id_abilita="mosche_fastidiose";
                 nome="King Fly";
                 descrizione="A dozen are troublesome. A dozen dozens become uncontrollable.";
-                lista_pupetti.Add("mosca_warrior_1",10);
-                lista_pupetti.Add("mosca_arcer_1",6);
-                lista_pupetti.Add("mosca_wizard_1",2);
+                lista_pupetti.Add("mosca_warrior_1",12);
+                lista_pupetti.Add("mosca_arcer_1",8);
+                lista_pupetti.Add("mosca_wizard_1",4);
                 lista_razze_sbloccate.Add("mosche_1",1);
                 break;
             }

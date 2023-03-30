@@ -38,8 +38,7 @@ public class basic_rule : MonoBehaviour
     public GameObject barra_energia_vuota_pf;
     public GameObject barra_energia;
     public GameObject barra_energia_vuota;
-    //public bool bool_stop_hit=false;            //in pratica, quando attacca può colpire una volta sola; Che per ora non serve perchè funziona con un semplice "break" su fine_mov_attacco
-
+    
     public GameObject proiettile;
 
     //opzioni valide solo per le api
@@ -140,8 +139,8 @@ public class basic_rule : MonoBehaviour
         valore_pupo-=(ritardo_attacco*2);
         valore_pupo+=(raggio_sfera_attacco);
         valore_pupo-=(danno*4);
-        valore_pupo+=(armatura_melee*3);
-        valore_pupo+=(armatura_distanza*3);
+        valore_pupo+=(armatura_melee*4);
+        valore_pupo+=(armatura_distanza*4);
         valore_pupo+=(per_critico/10);
 
         if (bool_mago){valore_pupo+=(1*livello);}

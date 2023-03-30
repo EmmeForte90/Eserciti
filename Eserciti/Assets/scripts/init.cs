@@ -1231,7 +1231,6 @@ public class init : MonoBehaviour
 
     public IEnumerator fine_mov_attacco(int id_attaccante, int id_difensore, float x_att, float y_att) {
         yield return new WaitForSeconds(lp_totali_basic_rule[id_attaccante].anim_velocita_attacco/lp_totali_basic_rule[id_attaccante].velocita_pupo_effetti);
-        //lp_totali_basic_rule[id_attaccante].bool_stop_hit=false;
         if (!lp_totali_basic_rule[id_attaccante].bool_morto){//beh potrebbe capitare che è stato colpito prima che sferrasse l'attaccp finale...
             if (!lp_totali_basic_rule[id_difensore].bool_morto){//beh potrebbe capitare che è stato colpito il suo bersaglio...
                 lp_totali_basic_rule[id_attaccante].stato="wait";
@@ -1249,8 +1248,11 @@ public class init : MonoBehaviour
                                     } else {lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco--;
                                         print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco+") --- ("+lp_totali[id_difensore].name+")");
                                     }
-                                    num_colpire--;
-                                    //lp_totali_basic_rule[id_attaccante].bool_stop_hit=true;
+                                    if (lp_totali_basic_rule[id_difensore].razza!="mosca"){
+                                        num_colpire--;
+                                    } else if (Random.Range(1,101)<=50){
+                                        num_colpire--;
+                                    }
                                     if (num_colpire<=0){break;}
                                     //else {print ("incredibile! posso riattaccare ("+num_colpire+") --- ("+lp_totali[id_attaccante].name+")");}
                                 }
