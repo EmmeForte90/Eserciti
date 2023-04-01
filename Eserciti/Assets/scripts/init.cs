@@ -131,6 +131,7 @@ public class init : MonoBehaviour
             lista_obj_pupetti.Add(child.name,child.gameObject);
         }
         int i=0,j=0,k=0;
+        float random_start_y=0;
 
         lista_upgrade.Add("melee_damage",0);
         lista_upgrade.Add("distance_damage",0);
@@ -228,7 +229,11 @@ public class init : MonoBehaviour
                     num_battaglione_nemico++;
                 }
                 //lp_totali_basic_rule[attachStat.Key].vitalita_max*=0.8f;    //diminuire un pò l'eenrgia dei pupi nemici
-                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,(j*-2)+ya_start,false);
+                random_start_y=(j*-2)+ya_start;
+                random_start_y=-15;
+                random_start_y=Random.Range(-15f,17f);
+                //print (random_start_y+" - "+num_battaglione_nemico+" - "+max_pupi_battaglione);
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_nemico,xc,random_start_y,false);
 
             } else {
                 num_pupi_generati_buoni++;
@@ -240,7 +245,10 @@ public class init : MonoBehaviour
                     i=1;
                     num_battaglione_amico++;
                 }
-                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico,xa,(i*-2)+ya_start,false);
+                random_start_y=(i*-2)+ya_start;
+                random_start_y=17;
+                random_start_y=Random.Range(-13f,15f);
+                lp_totali_basic_rule[attachStat.Key].attiva_pupo(num_battaglione_amico,xa,random_start_y,false);
 
                 if (lp_totali_basic_rule[attachStat.Key].velocita_proiettile==0){
                     lp_totali_basic_rule[attachStat.Key].danno+=lista_upgrade["melee_damage"];

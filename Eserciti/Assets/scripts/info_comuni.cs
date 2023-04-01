@@ -68,7 +68,7 @@ public class info_comuni : MonoBehaviour
         lista_incremento_potere_eroe.Add("regina_formica_nera",0.01f);
         lista_incremento_potere_eroe.Add("re_mosca",0.01f);
         lista_incremento_potere_eroe.Add("regina_ape",0.01f);
-        lista_incremento_potere_eroe.Add("regina_ragno",0.01f);
+        lista_incremento_potere_eroe.Add("regina_ragno",0.015f);
         lista_incremento_potere_eroe.Add("re_cavalletta",0.01f);
         lista_incremento_potere_eroe.Add("re_scarabeo",0.01f);
 
@@ -77,7 +77,7 @@ public class info_comuni : MonoBehaviour
         lista_decremento_potere_eroe.Add("regina_formica_nera",0.15f);
         lista_decremento_potere_eroe.Add("re_mosca",0.15f);
         lista_decremento_potere_eroe.Add("regina_ape",0.15f);
-        lista_decremento_potere_eroe.Add("regina_ragno",0.15f);
+        lista_decremento_potere_eroe.Add("regina_ragno",0.1f);
         lista_decremento_potere_eroe.Add("re_cavalletta",0.15f);
         lista_decremento_potere_eroe.Add("re_scarabeo",0.15f);
 
@@ -279,8 +279,8 @@ public class info_comuni : MonoBehaviour
         lista_bool_abilita_classe.Add("ragnatele",true);
         lista_abilita_descrizione.Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end. Spiders are immune.");
         lista_abilita_cooldown.Add("ragnatele",new Dictionary<int, int>());
-        lista_abilita_cooldown["ragnatele"].Add(1,20);
-        lista_abilita_cooldown["ragnatele"].Add(2,20);
+        lista_abilita_cooldown["ragnatele"].Add(1,15);
+        lista_abilita_cooldown["ragnatele"].Add(2,18);
         lista_abilita_cooldown["ragnatele"].Add(3,20);
 
         lista_abilita_nome.Add("velocita","Speed");

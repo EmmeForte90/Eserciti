@@ -163,8 +163,8 @@ public class mainmenu : MonoBehaviour
                 nome="Queen Spider";
                 descrizione="Don't you want to relax? Let their spider webs do the job.";
                 lista_pupetti.Add("ragnetto_warrior_1",4);
-                lista_pupetti.Add("ragnetto_arcer_1",2);
-                lista_pupetti.Add("ragnetto_wizard_1",1);
+                lista_pupetti.Add("ragnetto_arcer_1",4);
+                lista_pupetti.Add("ragnetto_wizard_1",4);
                 lista_razze_sbloccate.Add("ragnetti_1",1);
                 break;
             }
