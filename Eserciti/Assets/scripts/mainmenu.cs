@@ -132,7 +132,7 @@ public class mainmenu : MonoBehaviour
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
                 descrizione="Incursion! They always seem small and innocent, but in reality...";
-                lista_pupetti.Add("formica_warrior_1",4);
+                lista_pupetti.Add("formica_warrior_1",6);
                 lista_pupetti.Add("formica_arcer_1",2);
                 lista_razze_sbloccate.Add("formiche_1",1);
                 
@@ -181,7 +181,7 @@ public class mainmenu : MonoBehaviour
                 id_abilita="armatura";
                 nome="King Beetle";
                 descrizione="They are not just simple and noble insects. Try putting a finger between their pincers.";
-                lista_pupetti.Add("scarabeo_warrior_1",8);
+                lista_pupetti.Add("scarabeo_warrior_1",6);
                 lista_razze_sbloccate.Add("scarabei_1",1);
                 break;
             }

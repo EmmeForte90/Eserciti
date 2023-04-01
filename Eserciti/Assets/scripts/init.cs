@@ -1013,7 +1013,7 @@ public class init : MonoBehaviour
                 case "miele":{
                     effetti.eff_miele(xar,yar);
                     float distanza_temp;
-                    float valore_abilita=3+(liv);    //anche questo potrebbe dipendere dal livello
+                    float valore_abilita=1.8f+(liv*0.8f);    //anche questo potrebbe dipendere dal livello
                     foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                         if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                             distanza_temp=calcola_distanza(lp_totali[attachStat.Value].transform.position.x,lp_totali[attachStat.Value].transform.position.y,xar,yar);
@@ -1497,7 +1497,11 @@ public class init : MonoBehaviour
 
         //print (string_temp);
 
-        float punteggio_residuo=valore_iniziale_ondata+(valore_incrementale_ondata*num_ondata);
+        int valore_incrementale_temp=valore_incrementale_ondata;
+        if (num_ondata>10){valore_incrementale_temp+=10;}
+        if (num_ondata>20){valore_incrementale_temp+=15;}
+        if (num_ondata>30){valore_incrementale_temp+=20;}
+        float punteggio_residuo=valore_iniziale_ondata+(valore_incrementale_temp*num_ondata);
         int num_random=0;
 
         if (num_ondata<11){
