@@ -69,7 +69,7 @@ public class info_comuni : MonoBehaviour
         lista_incremento_potere_eroe.Add("re_mosca",0.01f);
         lista_incremento_potere_eroe.Add("regina_ape",0.01f);
         lista_incremento_potere_eroe.Add("regina_ragno",0.015f);
-        lista_incremento_potere_eroe.Add("re_cavalletta",0.01f);
+        lista_incremento_potere_eroe.Add("re_cavalletta",0.02f);
         lista_incremento_potere_eroe.Add("re_scarabeo",0.01f);
 
         //0.1f corrisponde grossomodo a 17 secondi
@@ -78,7 +78,7 @@ public class info_comuni : MonoBehaviour
         lista_decremento_potere_eroe.Add("re_mosca",0.15f);
         lista_decremento_potere_eroe.Add("regina_ape",0.15f);
         lista_decremento_potere_eroe.Add("regina_ragno",0.1f);
-        lista_decremento_potere_eroe.Add("re_cavalletta",0.15f);
+        lista_decremento_potere_eroe.Add("re_cavalletta",0.125f);
         lista_decremento_potere_eroe.Add("re_scarabeo",0.15f);
 
         //tradurre la parte destra di questo blocco
@@ -229,7 +229,7 @@ public class info_comuni : MonoBehaviour
             lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
             lista_pupi_descrizione.Add("api_"+i,"When they die, they launch their stinger at some enemy");
             lista_pupi_descrizione.Add("ragnetti_"+i,"Every time they hit, they slow down the target. They are immune to this effect from other spiders");
-            lista_pupi_descrizione.Add("cavallette_"+i,"Grasshoppers are particularly fast.");
+            lista_pupi_descrizione.Add("cavallette_"+i,"Le cavallette sono particolarmente veloci. Inoltre hanno il 10% di possibilità di schivare un attacco corpo a corpo o a distanza");
             lista_pupi_descrizione.Add("scarabei_"+i,"Beetles are the most resilient race you can aspire to");
 
             //NB: I Nomi e le descrizioni, saranno sempre al plurale
@@ -261,7 +261,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
         lista_bool_abilita_classe.Add("mosche_fastidiose",true);
-        lista_abilita_descrizione.Add("mosche_fastidiose","Create a swarm that moves randomly and damages everything it encounters. Flies and mosquitoes are immune");
+        lista_abilita_descrizione.Add("mosche_fastidiose","Create a swarm that moves randomly and damages everything it encounters. Flies and mosquitoes are immune.");
         lista_abilita_cooldown.Add("mosche_fastidiose",new Dictionary<int, int>());
         lista_abilita_cooldown["mosche_fastidiose"].Add(1,15);
         lista_abilita_cooldown["mosche_fastidiose"].Add(2,18);
@@ -285,11 +285,11 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("velocita","Speed");
         lista_bool_abilita_classe.Add("velocita",true);
-        lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 5 seconds. It doesn't work on webbed targets.");
+        lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 3 seconds + 1 for each level. It doesn't work on webbed targets.");
         lista_abilita_cooldown.Add("velocita",new Dictionary<int, int>());
-        lista_abilita_cooldown["velocita"].Add(1,30);
-        lista_abilita_cooldown["velocita"].Add(2,30);
-        lista_abilita_cooldown["velocita"].Add(3,30);
+        lista_abilita_cooldown["velocita"].Add(1,20);
+        lista_abilita_cooldown["velocita"].Add(2,20);
+        lista_abilita_cooldown["velocita"].Add(3,20);
 
         lista_abilita_nome.Add("armatura","Armour");
         lista_bool_abilita_classe.Add("armatura",true);
@@ -301,7 +301,7 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("zombie","Zombie");
         lista_bool_abilita_classe.Add("zombie",false);
-        lista_abilita_descrizione.Add("zombie","Summon random zombie insects. At the first level, it summons 5. At the second level, it summons 8. At the third level, it summons 10");
+        lista_abilita_descrizione.Add("zombie","Summon random zombie insects. At the first level, it summons 5. At the second level, it summons 8. At the third level, it summons 10.");
         lista_abilita_cooldown.Add("zombie",new Dictionary<int, int>());
         lista_abilita_cooldown["zombie"].Add(1,30);
         lista_abilita_cooldown["zombie"].Add(2,30);

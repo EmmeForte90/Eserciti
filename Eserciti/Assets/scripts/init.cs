@@ -837,8 +837,8 @@ public class init : MonoBehaviour
                 foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                     if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
                         distanza_temp=calcola_distanza(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,xar,yar);
-                        if (distanza_temp<=4){
-                            valore_danno+=(4-distanza_temp);
+                        if (distanza_temp<=6){
+                            valore_danno+=(6-distanza_temp);
                             lp_totali_basic_rule[attachStat.Key].danneggia(valore_danno);
                         }
                     }
@@ -853,7 +853,7 @@ public class init : MonoBehaviour
                 foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                     if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
                         distanza_temp=calcola_distanza(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,xar,yar);
-                        if (distanza_temp<=3){
+                        if (distanza_temp<=4.5f){
                             lp_totali_basic_rule[attachStat.Key].livello_veleno+=livello_veleno;
                         }
                     }
@@ -1250,13 +1250,22 @@ public class init : MonoBehaviour
                         if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
                             if (id_attaccante!=attachStat.Key){
                                 if (controlla_punto_attacco(x_att,y_att,lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,raggio_sfera_attacco)){
-                                    calcola_danno_combattimento(id_attaccante, attachStat.Key);
-                                    if (lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco==0){
-                                        calcola_danno_combattimento(id_attaccante, attachStat.Key);
-                                    } else {lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco--;
-                                        print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[id_difensore].up_melee_ignora_attacco+") --- ("+lp_totali[id_difensore].name+")");
+                                    //calcola_danno_combattimento(id_attaccante, attachStat.Key);   //beh effettivamente bisogna vedere se ignora con il discorso degli upgrade specifici (presto potrai cancellare questa riga)
+                                    if (lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco==0){
+                                        if (lp_totali_basic_rule[attachStat.Key].razza!="cavalletta"){
+                                            calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                        } else {
+                                            if (Random.Range(1,101)>10){
+                                                calcola_danno_combattimento(id_attaccante, attachStat.Key);
+                                            } else {
+                                                print ("cavalletta schiva on melee!");
+                                                lp_totali_basic_rule[attachStat.Key].movimento_zigzag(1);
+                                            }
+                                        }
+                                    } else {lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco--;
+                                        print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco+") --- ("+lp_totali[attachStat.Key].name+")");
                                     }
-                                    if (lp_totali_basic_rule[id_difensore].razza!="mosca"){
+                                    if (lp_totali_basic_rule[attachStat.Key].razza!="mosca"){
                                         num_colpire--;
                                     } else if (Random.Range(1,101)<=50){
                                         num_colpire--;

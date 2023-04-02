@@ -172,7 +172,7 @@ public class mainmenu : MonoBehaviour
                 id_abilita="velocita";
                 nome="King Grasshopper";
                 descrizione="They hop quickly and sometimes uncontrollably.";
-                lista_pupetti.Add("cavalletta_warrior_1",6);
+                lista_pupetti.Add("cavalletta_warrior_1",5);
                 lista_pupetti.Add("cavalletta_arcer_1",2);
                 lista_razze_sbloccate.Add("cavallette_1",1);
                 break;

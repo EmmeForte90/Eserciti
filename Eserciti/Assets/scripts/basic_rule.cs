@@ -470,8 +470,15 @@ public class basic_rule : MonoBehaviour
             if (!br.bool_attivo){return;}
             if (int_key_pupo!=br.id_attaccante){
                 if (bool_fazione_nemica!=br.bool_fazione_nemica){//appartengono a due fazioni diverse
-                    float danno=br.danno;
                     br.attiva_morte_proiettile();
+                    if (razza=="cavalletta"){
+                        if (Random.Range(1,101)<=10){
+                            print ("cavalletta schiva un proiettile!");
+                            movimento_zigzag(1);
+                            return;
+                        }
+                    }
+                    float danno=br.danno;
 
                     if (Random.Range(1,101)<=br.per_critico){//è un critico!
                         danno*=3;
@@ -551,7 +558,7 @@ public class basic_rule : MonoBehaviour
         }
     }
 
-    private void movimento_zigzag(int num){
+    public void movimento_zigzag(int num){
         switch (razza){
             case "mosca":
             case "zanzara":{
