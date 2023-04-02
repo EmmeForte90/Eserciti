@@ -247,7 +247,7 @@ public class basic_rule : MonoBehaviour
         StartCoroutine(effetto_fumo_basso_eroe());
     }
     private IEnumerator effetto_fumo_basso_eroe(){
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         GameObject go_temp;
         go_temp=Instantiate(eff_sparizione_eroe_basso);
         go_temp.transform.SetParent(mappa.transform);

@@ -38,6 +38,7 @@ public class mainmenu : MonoBehaviour
     public Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_costo_upgrade_perenne = new Dictionary<string, TMPro.TextMeshProUGUI>();
     public Dictionary<string, GameObject> lista_obj_cont_num_romani_img_upgrade_perenne = new Dictionary<string, GameObject>();
     public Dictionary<string, GameObject> lista_obj_cont_num_romani_txt_upgrade_perenne = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> lista_obj_diamante_upgrade_perenne = new Dictionary<string, GameObject>();
     public Dictionary<string, GameObject> lista_obj_bottone_upgrade_perenne = new Dictionary<string, GameObject>();
     public Dictionary<string, Button> lista_btn_bottone_upgrade_perenne = new Dictionary<string, Button>();
     public TMPro.TextMeshProUGUI txt_num_gemme;
@@ -181,7 +182,7 @@ public class mainmenu : MonoBehaviour
                 id_abilita="armatura";
                 nome="King Beetle";
                 descrizione="They are not just simple and noble insects. Try putting a finger between their pincers.";
-                lista_pupetti.Add("scarabeo_warrior_1",6);
+                lista_pupetti.Add("scarabeo_warrior_1",8);
                 lista_razze_sbloccate.Add("scarabei_1",1);
                 break;
             }
@@ -336,6 +337,10 @@ public class mainmenu : MonoBehaviour
                         lista_obj_cont_num_romani_txt_upgrade_perenne.Add(upgrade_temp,g2.gameObject);
                         break;
                     }
+                    case "img_diamante_upgrade":{
+                        lista_obj_diamante_upgrade_perenne.Add(upgrade_temp,g2.gameObject);
+                        break;
+                    }
                     case "bottone_compra":{
                         lista_obj_bottone_upgrade_perenne.Add(upgrade_temp,g2.gameObject);
                         lista_btn_bottone_upgrade_perenne.Add(upgrade_temp,g2.gameObject.GetComponent<Button>());
@@ -356,12 +361,14 @@ public class mainmenu : MonoBehaviour
             lista_txt_descrizione_upgrade_perenne[upgrade].SetText(info_comuni.lista_upgrade_perenni_descrizione[upgrade][livello+1]);
             lista_txt_costo_upgrade_perenne[upgrade].SetText("Cost:\n"+info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1].ToString());
             if (info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1]>num_gemme){
-                lista_btn_bottone_upgrade_perenne[upgrade].interactable=false;
+                //lista_btn_bottone_upgrade_perenne[upgrade].interactable=false;
+                lista_obj_bottone_upgrade_perenne[upgrade].SetActive(false);
             }
         } else {
             lista_txt_descrizione_upgrade_perenne[upgrade].SetText("You have reached the maximum level.");
             lista_txt_costo_upgrade_perenne[upgrade].SetText("");
             lista_obj_bottone_upgrade_perenne[upgrade].SetActive(false);
+            lista_obj_diamante_upgrade_perenne[upgrade].SetActive(false);
         }
 
         string[] splitArray;

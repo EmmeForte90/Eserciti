@@ -293,11 +293,11 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("armatura","Armour");
         lista_bool_abilita_classe.Add("armatura",true);
-        lista_abilita_descrizione.Add("armatura","Increase the armour of all friendly hitten unities in the area for 5 seconds.");
+        lista_abilita_descrizione.Add("armatura","Increase the armour of all friendly hitten unities in the area for 3 seconds + 1 for each level.");
         lista_abilita_cooldown.Add("armatura",new Dictionary<int, int>());
-        lista_abilita_cooldown["armatura"].Add(1,30);
-        lista_abilita_cooldown["armatura"].Add(2,30);
-        lista_abilita_cooldown["armatura"].Add(3,30);
+        lista_abilita_cooldown["armatura"].Add(1,20);
+        lista_abilita_cooldown["armatura"].Add(2,20);
+        lista_abilita_cooldown["armatura"].Add(3,20);
 
         lista_abilita_nome.Add("zombie","Zombie");
         lista_bool_abilita_classe.Add("zombie",false);
