@@ -91,6 +91,7 @@ public class basic_rule : MonoBehaviour
     public GameObject eff_cura;
     public GameObject eff_sparizione_eroe_basso;
 
+    public GameObject ps_fumo_verde;
 
     public float valore_pupo;
     public float valore_plus_pupo=0;
@@ -230,6 +231,13 @@ public class basic_rule : MonoBehaviour
             //rb2D.AddForce(new Vector2(Random.Range(-thrust,thrust),Random.Range(-thrust,thrust)), ForceMode2D.Impulse);
             //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
+    }
+
+    public void aggiungi_effetto_fumo_verde(){
+        GameObject go_temp;
+        go_temp=Instantiate(ps_fumo_verde);
+        go_temp.transform.SetParent(gameObject.transform);
+        go_temp.transform.localPosition = new Vector3(0, 0.5f, 1f);
     }
 
     public void disattiva_eroe(){
@@ -437,6 +445,11 @@ public class basic_rule : MonoBehaviour
         go_temp.transform.SetParent(mappa.transform);
         go_temp.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 1f);
         go_temp.GetComponent<ParticleSystem>().Play();
+
+        //distruggiamo eventuali effetti ed effettini
+        foreach (Transform child in gameObject.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 
     public void effetto_fumo(){
@@ -574,6 +587,12 @@ public class basic_rule : MonoBehaviour
                     return;
                 }
                 termina_movimento_random();
+                break;
+            }
+            case "cavalletta":{
+                effetto_fumo();
+                float thrust=50;
+                rb2D.AddForce(new Vector2(Random.Range(-thrust,thrust),Random.Range(-thrust,thrust)), ForceMode2D.Impulse);
                 break;
             }
         }

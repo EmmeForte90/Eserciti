@@ -854,6 +854,7 @@ public class init : MonoBehaviour
                     if (!lp_totali_basic_rule[attachStat.Key].bool_morto){
                         distanza_temp=calcola_distanza(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y,xar,yar);
                         if (distanza_temp<=4.5f){
+                            lp_totali_basic_rule[attachStat.Key].aggiungi_effetto_fumo_verde();
                             lp_totali_basic_rule[attachStat.Key].livello_veleno+=livello_veleno;
                         }
                     }
