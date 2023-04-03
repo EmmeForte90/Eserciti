@@ -74,12 +74,12 @@ public class info_comuni : MonoBehaviour
 
         //0.1f corrisponde grossomodo a 17 secondi
         //0.15 corrisponde grossomodo a 9 secondi
-        lista_decremento_potere_eroe.Add("regina_formica_nera",0.15f);
-        lista_decremento_potere_eroe.Add("re_mosca",0.15f);
-        lista_decremento_potere_eroe.Add("regina_ape",0.15f);
+        lista_decremento_potere_eroe.Add("regina_formica_nera",0.1f);
+        lista_decremento_potere_eroe.Add("re_mosca",0.1f);
+        lista_decremento_potere_eroe.Add("regina_ape",0.1f);
         lista_decremento_potere_eroe.Add("regina_ragno",0.1f);
-        lista_decremento_potere_eroe.Add("re_cavalletta",0.125f);
-        lista_decremento_potere_eroe.Add("re_scarabeo",0.15f);
+        lista_decremento_potere_eroe.Add("re_cavalletta",0.1f);
+        lista_decremento_potere_eroe.Add("re_scarabeo",0.1f);
 
         //tradurre la parte destra di questo blocco
         lista_powerhero_descrizione.Add("regina_formica_nera","Invoke the Queen Ant to detroy the enemy puppets");

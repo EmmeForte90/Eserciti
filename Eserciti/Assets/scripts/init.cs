@@ -29,6 +29,8 @@ public class init : MonoBehaviour
     private float per_potere_eroe=0;
     private float incr_potere_eroe=5;
     private float decr_potere_eroe=0.1f;
+    private bool bool_inizio_decremento_eroe=false;
+
     public Texture2D cursore_abilita;
 
     public SpriteRenderer sfondo;
@@ -173,7 +175,7 @@ public class init : MonoBehaviour
 
 
         //incr_potere_eroe=5;   //debug
-        decr_potere_eroe=0.1f;  //debug
+        //decr_potere_eroe=1f;  //debug
 
         //ora che abbiamo l'id hero, andiamo a disattivare tutti gli altri
         foreach (Transform child in cont_eroi.transform) {
@@ -297,6 +299,7 @@ public class init : MonoBehaviour
     }
 
     private void decrementa_potere_eroe(){
+        if (!bool_inizio_decremento_eroe){return;}
         per_potere_eroe-=decr_potere_eroe;
         aggiorna_img_abilita_eroe();
 
@@ -604,7 +607,7 @@ public class init : MonoBehaviour
         }
         else if (obj.name=="img_skull"){
             if (bool_eroe_in_azione){return;}
-            if (per_potere_eroe>=100){
+            if (per_potere_eroe>=100){//attiviamo l'eroe
                 GO_anim_fiamma.SetActive(false);
                 bool_eroe_in_azione=true;
                 SkeletonGraphic_hero.AnimationState.SetAnimation(0, "start", false);    //se metti a true andrà in loop
@@ -668,9 +671,15 @@ public class init : MonoBehaviour
         }
     }
 
+    private IEnumerator inizia_decremento_potere_eroe(){
+        yield return new WaitForSeconds(2);
+        bool_inizio_decremento_eroe=true;
+    }
+
     private IEnumerator aggiungi_eroe_scena() {
         int num_secondi=2;
         yield return new WaitForSeconds(num_secondi);
+        StartCoroutine(inizia_decremento_potere_eroe());
         switch (id_hero){
             case "re_cavalletta":{
                 num_pupi_generati_totali++;
