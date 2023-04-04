@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: skeleton_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: d8da6f9db91a15a46a04142f6fa3d79d, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 2cfdc988130d7e6459a360ae876dc835, type: 2}
+  - {fileID: 2100000, guid: 42320893690b12a45b16c5dfcc1ad8c8, type: 2}
+  - {fileID: 2100000, guid: 313dba7c9be58b64fafccd8c101cc120, type: 2}
