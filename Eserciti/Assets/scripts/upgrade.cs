@@ -14,6 +14,8 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    public SkeletonGraphic SkeletonGraphic_fade;
+
     public Button btn_upgrade_pupetti;
     public Button btn_upgrade_eroe;
     public Button btn_upgrade_generici;
@@ -1065,7 +1067,13 @@ public class upgrade : MonoBehaviour
 
         //print (xml_content);
 
-        SceneManager.LoadScene("game");
+        StartCoroutine(carica_scena_fadeout("game"));
+    }
+
+    private IEnumerator carica_scena_fadeout(string scena){    
+        SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
+        yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
+        SceneManager.LoadScene(scena);
     }
 
     private void carica_info_partite(){
