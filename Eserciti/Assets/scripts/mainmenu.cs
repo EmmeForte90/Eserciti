@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+using Spine;
+using Spine.Unity;
+
 using System.Text;
 using System.Xml; //Needed for XML functionality
 using System.IO;
@@ -11,6 +14,9 @@ using System.IO;
 public class mainmenu : MonoBehaviour
 {
     public info_comuni info_comuni;
+
+    public SkeletonGraphic SkeletonGraphic_fade;
+
     public TMPro.TextMeshProUGUI txt_nome_eroe;
     public TMPro.TextMeshProUGUI txt_descrizione_eroe;
     public TMPro.TextMeshProUGUI txt_nome_abilita;

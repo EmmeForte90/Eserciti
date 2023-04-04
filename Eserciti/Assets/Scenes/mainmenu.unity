@@ -25957,7 +25957,7 @@ GameObject:
   - component: {fileID: 1299914937}
   - component: {fileID: 1299914936}
   m_Layer: 0
-  m_Name: Fade
+  m_Name: fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26011,7 +26011,7 @@ MonoBehaviour:
   initialFlipX: 0
   initialFlipY: 0
   startingAnimation: fade_in
-  startingLoop: 1
+  startingLoop: 0
   timeScale: 1
   freeze: 0
   updateWhenInvisible: 3
@@ -40756,6 +40756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_comuni: {fileID: 2054175672}
+  SkeletonGraphic_fade: {fileID: 1299914936}
   txt_nome_eroe: {fileID: 440379639}
   txt_descrizione_eroe: {fileID: 213139526}
   txt_nome_abilita: {fileID: 1778379861}
