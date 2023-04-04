@@ -16514,9 +16514,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 287ce1884ba7500448eff495418b3e0e, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -16536,7 +16536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -33280,8 +33280,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: All Rights reserved. Created by Eros Cappello and Mauro "Emme" Forte
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ac8da90f0766a3349888ad5c96910053, type: 2}
-  m_sharedMaterial: {fileID: -917779902871837630, guid: ac8da90f0766a3349888ad5c96910053, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e7c8b3bcef6ce64e816366ae85991ae, type: 2}
+  m_sharedMaterial: {fileID: -2480137253502672179, guid: 1e7c8b3bcef6ce64e816366ae85991ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36498,7 +36498,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 195
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -40735,6 +40735,7 @@ GameObject:
   - component: {fileID: 2054175671}
   - component: {fileID: 2054175670}
   - component: {fileID: 2054175672}
+  - component: {fileID: 2054175673}
   m_Layer: 0
   m_Name: scripts
   m_TagString: Untagged
@@ -40760,6 +40761,8 @@ MonoBehaviour:
   txt_nome_abilita: {fileID: 1778379861}
   txt_descrizione_abilita: {fileID: 374107705}
   lista_eroi: {fileID: 1062558735}
+  Fade: {fileID: 788310278}
+  Anm: {fileID: 788310282}
   sch_sel_personaggio: {fileID: 250474294}
   sch_mainmenu: {fileID: 1421119153}
   sch_upgrade_perenni: {fileID: 1393054284}
@@ -40793,6 +40796,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe0084dab485154d88f849c3dec6d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2054175673
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054175669}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 287ce1884ba7500448eff495418b3e0e, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2054236074
 GameObject:
   m_ObjectHideFlags: 0
