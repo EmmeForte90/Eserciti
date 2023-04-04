@@ -22,6 +22,7 @@ public class mainmenu : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_nome_abilita;
     public TMPro.TextMeshProUGUI txt_descrizione_abilita;
     public GameObject lista_eroi;
+    public Animator Anm;
     public Dictionary<string, GameObject> lista_obj_eroi = new Dictionary<string, GameObject>();
     private string id_eroe_scelto="";
     private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>();
@@ -54,6 +55,7 @@ public class mainmenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Anm = GetComponent<Animator>();
         ScrollbarScript.value = 1f;
         Screen.SetResolution(1920, 1080, true);
 
@@ -99,6 +101,7 @@ public class mainmenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)){
             torna_indietro();
         }
+        /*
         else if (Input.GetKeyDown(KeyCode.Alpha1)){
             click_eroe("regina_formica_nera");
             inizia_nuova_partita();
@@ -123,6 +126,7 @@ public class mainmenu : MonoBehaviour
             click_eroe("re_scarabeo");
             inizia_nuova_partita();
         }
+        */
     }
 
     public void click_eroe(string id_eroe){
@@ -455,15 +459,13 @@ public class mainmenu : MonoBehaviour
         writer.Write(xml_content);
         writer.Close();
 
-        print (xml_content);
-    StartCoroutine(FadeIn());   
- }
- IEnumerator FadeIn()
-{    
-       // Anm.SetTrigger("FadeTran");
-        yield return new WaitForSeconds(2.8f); // Wait before showing the next letter
+
+        //print (xml_content);
+        StartCoroutine(FadeOut());   
+    }
+    private IEnumerator FadeOut(){    
+        SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
+        yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
         SceneManager.LoadScene("game");
-
-}
-
+    }
 }
