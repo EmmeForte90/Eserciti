@@ -12,6 +12,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    private bool bool_in_uscita=false;
     public SkeletonGraphic SkeletonGraphic_fade;
 
     public abilita_balestra abilita_balestra;
@@ -300,6 +301,20 @@ public class init : MonoBehaviour
         }
     }
 
+    public void click_btn_pausa(){
+        Time.timeScale=0;
+    }
+
+    public void click_btn_mainmenu(){
+        bool_in_uscita=true;
+        Time.timeScale=1;
+        StartCoroutine(carica_scena_fadeout("mainmenu"));
+    }
+
+    public void click_btn_resume(){
+        Time.timeScale=1;
+    }
+
     private void decrementa_potere_eroe(){
         if (!bool_inizio_decremento_eroe){return;}
         per_potere_eroe-=decr_potere_eroe;
@@ -349,7 +364,7 @@ public class init : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-
+        if (bool_in_uscita){return;}
         if (Input.GetKeyDown(KeyCode.Z)){
             foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                 effetti.effetto_hit_melee(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y+0.5f);
