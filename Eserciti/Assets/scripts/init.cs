@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public SkeletonGraphic SkeletonGraphic_fade;
+
     public abilita_balestra abilita_balestra;
     public abilita_bombo abilita_bombo;
     private basic_rule br_eroe;
@@ -552,11 +554,17 @@ public class init : MonoBehaviour
     }
 
     public void btn_ricomincia(){
-        SceneManager.LoadScene("mainmenu");
+        StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
     public void next_stage(){
-        SceneManager.LoadScene("upgrade");
+        StartCoroutine(carica_scena_fadeout("upgrade"));
+    }
+
+    private IEnumerator carica_scena_fadeout(string scena){    
+        SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
+        yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
+        SceneManager.LoadScene(scena);
     }
 
     public void setta_cooldown_abilita(int abilita, float settaggio){
