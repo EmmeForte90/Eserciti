@@ -236,7 +236,7 @@ public class mainmenu : MonoBehaviour
         xml_game.LoadXml(string_temp);
 
         foreach(XmlElement node in xml_game.SelectNodes("game")){
-            SceneManager.LoadScene(node.GetAttribute("posizione"));
+            StartCoroutine(FadeOut(node.GetAttribute("posizione")));
         }
     }
 
@@ -461,11 +461,11 @@ public class mainmenu : MonoBehaviour
 
 
         //print (xml_content);
-        StartCoroutine(FadeOut());   
+        StartCoroutine(FadeOut("game"));   
     }
-    private IEnumerator FadeOut(){    
+    private IEnumerator FadeOut(string scena){    
         SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
         yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene(scena);
     }
 }
