@@ -22,8 +22,6 @@ public class mainmenu : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_nome_abilita;
     public TMPro.TextMeshProUGUI txt_descrizione_abilita;
     public GameObject lista_eroi;
-    public GameObject Fade;
-    public Animator Anm;
     public Dictionary<string, GameObject> lista_obj_eroi = new Dictionary<string, GameObject>();
     private string id_eroe_scelto="";
     private Dictionary<string, int> lista_pupetti = new Dictionary<string, int>();
@@ -56,7 +54,6 @@ public class mainmenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Anm = GetComponent<Animator>();
         ScrollbarScript.value = 1f;
         Screen.SetResolution(1920, 1080, true);
 
@@ -457,7 +454,6 @@ public class mainmenu : MonoBehaviour
         StreamWriter writer = new StreamWriter(path_xml, false);
         writer.Write(xml_content);
         writer.Close();
-        Fade.gameObject.SetActive(true); // Hide dialogue text when player exits the trigger
 
         print (xml_content);
     StartCoroutine(FadeIn());   
