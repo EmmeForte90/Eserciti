@@ -227,6 +227,7 @@ public class upgrade : MonoBehaviour
         }
         btn_upgrade_pupetti.onClick.Invoke();
     }
+    
     public void click_btn_mainmenu(){
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }

@@ -12,6 +12,9 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public GameObject pannello_pause;
+    public GameObject pannello_areyousure;
+
     private bool bool_in_uscita=false;
     public SkeletonGraphic SkeletonGraphic_fade;
 
@@ -302,7 +305,13 @@ public class init : MonoBehaviour
     }
 
     public void click_btn_pausa(){
+        pannello_pause.SetActive(true);
+        pannello_areyousure.SetActive(false);
         Time.timeScale=0;
+    }
+
+    public void click_btn_mainmenu_areyousure(){
+        pannello_areyousure.SetActive(true);
     }
 
     public void click_btn_mainmenu(){
@@ -312,6 +321,7 @@ public class init : MonoBehaviour
     }
 
     public void click_btn_resume(){
+        pannello_pause.SetActive(false);
         Time.timeScale=1;
     }
 
@@ -388,6 +398,16 @@ public class init : MonoBehaviour
                 setta_cerchietto_abilita(int_abilita_scelta,"verde");
                 int_abilita_scelta=0;
                 //txt_desc_abilita.SetText("");
+            } else {
+                if (!pannello_pause.activeSelf){
+                    click_btn_pausa();
+                } else {
+                    if (pannello_areyousure.activeSelf){
+                        click_btn_pausa();
+                    } else {
+                        click_btn_resume();
+                    }
+                }
             }
         }
         if (!bool_inizio_partita){
