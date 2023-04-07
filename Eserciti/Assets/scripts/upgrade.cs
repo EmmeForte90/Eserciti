@@ -14,6 +14,9 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    public GameObject pannello_pause;
+    public GameObject pannello_areyousure;
+
     public SkeletonGraphic SkeletonGraphic_fade;
 
     public Button btn_upgrade_pupetti;
@@ -985,7 +988,30 @@ public class upgrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            if (!pannello_pause.activeSelf){
+                click_btn_pausa();
+            } else {
+                if (pannello_areyousure.activeSelf){
+                    click_btn_pausa();
+                } else {
+                    click_btn_exit_pausa();
+                }
+            }
+        }
+    }
+
+    public void click_btn_pausa(){
+        pannello_pause.SetActive(true);
+        pannello_areyousure.SetActive(false);
+    }
+
+    public void click_btn_mainmenu_areyousure(){
+        pannello_areyousure.SetActive(true);
+    }
+
+    public void click_btn_exit_pausa(){
+        pannello_pause.SetActive(false);
     }
 
     public void carica_info_xml(){
