@@ -17,6 +17,8 @@ public class mainmenu : MonoBehaviour
 
     public SkeletonGraphic SkeletonGraphic_fade;
 
+    public Button bottone_continua;
+
     public TMPro.TextMeshProUGUI txt_nome_eroe;
     public TMPro.TextMeshProUGUI txt_descrizione_eroe;
     public TMPro.TextMeshProUGUI txt_nome_abilita;
@@ -55,6 +57,10 @@ public class mainmenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!System.IO.File.Exists(Application.persistentDataPath + "/game_c.xml")){
+            bottone_continua.interactable = false;
+        }
+         bottone_continua.interactable = false;
         Anm = GetComponent<Animator>();
         ScrollbarScript.value = 1f;
         Screen.SetResolution(1920, 1080, true);

@@ -40676,6 +40676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_comuni: {fileID: 2054175672}
   SkeletonGraphic_fade: {fileID: 1299914936}
+  bottone_continua: {fileID: 1386624675}
   txt_nome_eroe: {fileID: 440379639}
   txt_descrizione_eroe: {fileID: 213139526}
   txt_nome_abilita: {fileID: 1778379861}
