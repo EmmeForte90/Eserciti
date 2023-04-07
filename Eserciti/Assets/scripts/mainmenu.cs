@@ -60,7 +60,8 @@ public class mainmenu : MonoBehaviour
         if (!System.IO.File.Exists(Application.persistentDataPath + "/game_c.xml")){
             bottone_continua.interactable = false;
         }
-         bottone_continua.interactable = false;
+        //bottone_continua.interactable = false;    //debug
+
         Anm = GetComponent<Animator>();
         ScrollbarScript.value = 1f;
         Screen.SetResolution(1920, 1080, true);
