@@ -13,6 +13,8 @@ using System.IO;
 
 public class mainmenu : MonoBehaviour
 {
+    public f_audio f_audio;
+
     public info_comuni info_comuni;
 
     public SkeletonGraphic SkeletonGraphic_fade;
@@ -74,15 +76,16 @@ public class mainmenu : MonoBehaviour
 
         nascondi_eroi();
 
+        disattiva_pannelli();
+
         if (!PlayerPrefs.HasKey("ultima_posizione")){PlayerPrefs.SetString("ultima_posizione","mainmenu");}
         switch (PlayerPrefs.GetString("ultima_posizione")){
             case "gioco_sconfitta":{
-                print ("attivo...");
-                attiva_pannello(sch_upgrade_perenni);
+                sch_upgrade_perenni.SetActive(true);
                 break;
             }
             default:{
-                attiva_pannello(sch_mainmenu);
+                sch_mainmenu.SetActive(true);
                 break;
             }
         }
@@ -94,6 +97,7 @@ public class mainmenu : MonoBehaviour
     }
 
     public void new_game(){
+        f_audio.play_audio("click_generico_t");
         sch_mainmenu.SetActive(false);
         sch_sel_personaggio.SetActive(true);
     }
@@ -137,6 +141,7 @@ public class mainmenu : MonoBehaviour
     }
 
     public void click_eroe(string id_eroe){
+        f_audio.play_audio("click_generico_t");
         string nome="";
         string descrizione="";
         string id_abilita="";
@@ -223,17 +228,20 @@ public class mainmenu : MonoBehaviour
     }
 
     public void attiva_pannello(GameObject pannello){
+        f_audio.play_audio("click_generico_t");
         disattiva_pannelli();
         pannello.SetActive(true);
     }
 
     public void torna_indietro(){
         if ((sch_sel_personaggio.activeSelf)||(sch_upgrade_perenni.activeSelf)){
+            f_audio.play_audio("click_generico_t");
             attiva_pannello(sch_mainmenu);
         }
     }
 
     public void continue_game(){
+        f_audio.play_audio("click_ok_2");
         string string_temp="";
         string path_xml=Application.persistentDataPath + "/game_c.xml";
 
@@ -248,12 +256,14 @@ public class mainmenu : MonoBehaviour
     }
 
     public void pannello_upgrade_perenni(){
+        f_audio.play_audio("click_generico_t");
         sch_sel_personaggio.SetActive(false);
         sch_mainmenu.SetActive(false);
         sch_upgrade_perenni.SetActive(true);
     }
 
     public void btn_compra_upgrade_perenne(GameObject GO_upgrade){
+        f_audio.play_audio("nicola_acquista_upgrade");
         string upgrade=GO_upgrade.name;
         int livello=lista_upgrade_perenni_liv[upgrade];
         int costo=info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1];
@@ -417,6 +427,7 @@ public class mainmenu : MonoBehaviour
     }
 
     public void inizia_nuova_partita(){
+        f_audio.play_audio("click_ok_2");
         denaro=0;
         livelli_upgrade.Add("melee_damage",0);
         livelli_upgrade.Add("distance_damage",0);

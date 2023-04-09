@@ -12,6 +12,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public f_audio f_audio;
     public GameObject pannello_pause;
     public GameObject pannello_areyousure;
 
