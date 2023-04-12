@@ -6,6 +6,7 @@ using Spine.Unity;
 
 public class basic_rule : MonoBehaviour
 {
+    public f_audio f_audio;
     public float velocita_movimento=5f;         //la velocità di movimento del personaggio
     public float vitalita_max=10f;              //la sua energia
     public bool bool_fazione_nemica=false;      //
@@ -398,6 +399,7 @@ public class basic_rule : MonoBehaviour
             PlayerPrefs.SetInt("num_pupi_morti_"+id_pupo,num_pupi_temp);
         }
 
+        f_audio.play_audio("hit_carne_"+Random.Range(1,4));
         bool_morto=true;
         barra_energia.SetActive(false);
         barra_energia_vuota.SetActive(false);

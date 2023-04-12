@@ -306,22 +306,26 @@ public class init : MonoBehaviour
     }
 
     public void click_btn_pausa(){
+        f_audio.play_audio("click_generico_t");
         pannello_pause.SetActive(true);
         pannello_areyousure.SetActive(false);
         Time.timeScale=0;
     }
 
     public void click_btn_mainmenu_areyousure(){
+        f_audio.play_audio("click_generico_t");
         pannello_areyousure.SetActive(true);
     }
 
     public void click_btn_mainmenu(){
         bool_in_uscita=true;
         Time.timeScale=1;
+        f_audio.play_audio("audio_click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
     public void click_btn_resume(){
+        f_audio.play_audio("click_generico_t");
         pannello_pause.SetActive(false);
         Time.timeScale=1;
     }
@@ -337,6 +341,7 @@ public class init : MonoBehaviour
     }
 
     private void attiva_bottone_potere_eroe(){
+        f_audio.play_audio("lancio_magia_nuvola_bianca");
         bool_potere_eroe_pieno=true;
         GO_anim_fiamma.SetActive(true);
     }
@@ -573,6 +578,7 @@ public class init : MonoBehaviour
 
             pannello_vittoria.SetActive(true);
         } else {
+            f_audio.play_audio("audio_nicola_morte");
             path=Application.persistentDataPath + "/game_c.xml";
             //File.Delete(path);        //poi lo cancelleremo quando non saremo in pieno debug
 
@@ -590,10 +596,12 @@ public class init : MonoBehaviour
     }
 
     public void btn_ricomincia(){
+        f_audio.play_audio("audio_click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
     public void next_stage(){
+        f_audio.play_audio("audio_click_ok_2");
         StartCoroutine(carica_scena_fadeout("upgrade"));
     }
 
@@ -611,6 +619,7 @@ public class init : MonoBehaviour
         if (bool_fine_partita){return;}
         if ((!lista_abilita_id.ContainsKey(int_abilita))||(lista_abilita_id[int_abilita]=="")){return;}
         if (lista_abilita_cooldown_secondi_attuale[int_abilita]<=0){
+            f_audio.play_audio("click_generico_t");
             if (int_abilita_scelta!=0){
                 setta_cerchietto_abilita(int_abilita_scelta,"verde");
             }
@@ -652,6 +661,7 @@ public class init : MonoBehaviour
         else if (obj.name=="img_skull"){
             if (bool_eroe_in_azione){return;}
             if (per_potere_eroe>=100){//attiviamo l'eroe
+                f_audio.stop_audio("lancio_magia_nuvola_bianca");
                 GO_anim_fiamma.SetActive(false);
                 bool_eroe_in_azione=true;
                 SkeletonGraphic_hero.AnimationState.SetAnimation(0, "start", false);    //se metti a true andrà in loop
@@ -923,6 +933,7 @@ public class init : MonoBehaviour
         setta_cursore("default");
         if (bool_fine_partita){int_abilita_scelta=0;return;}
         if (int_abilita_scelta!=0){
+            f_audio.play_audio("resurrezione");
             //print ("attivo l'abilita numero "+int_abilita_scelta+" alle coordinate "+xar+"-"+yar+" ... durata cooldown: "+lista_abilita_cooldown_secondi[int_abilita_scelta]);
             lista_abilita_cooldown_secondi_attuale[int_abilita_scelta]=lista_abilita_cooldown_secondi[int_abilita_scelta];
             setta_cerchietto_abilita(int_abilita_scelta,"rosso");
@@ -1296,6 +1307,7 @@ public class init : MonoBehaviour
         if (!lp_totali_basic_rule[id_attaccante].bool_morto){//beh potrebbe capitare che è stato colpito prima che sferrasse l'attaccp finale...
             if (!lp_totali_basic_rule[id_difensore].bool_morto){//beh potrebbe capitare che è stato colpito il suo bersaglio...
                 lp_totali_basic_rule[id_attaccante].stato="wait";
+                f_audio.play_audio("colpo_"+Random.Range(1,4));
                 if (lp_totali_basic_rule[id_attaccante].velocita_proiettile==0){
                     float distanza=0;
                     float raggio_sfera_attacco=lp_totali_basic_rule[id_attaccante].raggio_sfera_attacco;

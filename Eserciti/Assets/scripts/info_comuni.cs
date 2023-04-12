@@ -33,7 +33,7 @@ public class info_comuni : MonoBehaviour
     private string string_temp;
     void Awake(){
         lista_premio_nome.Add("end_hero_regina_formica_nera","Titolo");
-        lista_premio_nome.Add("end_hero_regina_re_mosca","Titoloa");
+        lista_premio_nome.Add("end_hero_regina_re_mosca","Titolo");
         lista_premio_nome.Add("end_hero_regina_regina_ape","Titolo");
         lista_premio_nome.Add("end_hero_regina_regina_ragno","Titolo");
         lista_premio_nome.Add("end_hero_regina_re_cavalletta","Titolo");
@@ -48,21 +48,23 @@ public class info_comuni : MonoBehaviour
         lista_premio_nome.Add("unlock_all_race_level_2","Titolo");
         lista_premio_nome.Add("unlock_all_race_level_3","Titolo");
 
-        lista_premio_descrizione.Add("end_hero_regina_formica_nera","Complete with Black Ant");
-        lista_premio_descrizione.Add("end_hero_regina_re_mosca","Complete with King moss");
-        lista_premio_descrizione.Add("end_hero_regina_regina_ape","Complete with Queen Abe");
-        lista_premio_descrizione.Add("end_hero_regina_regina_ragno","Complete with Queen Web");
-        lista_premio_descrizione.Add("end_hero_regina_re_cavalletta","Complete with King Gross");
-        lista_premio_descrizione.Add("end_hero_regina_re_scarabeo","Complete with King Big");
-        lista_premio_descrizione.Add("reach_stage_10","Earn level 10");
-        lista_premio_descrizione.Add("reach_stage_20","Earn leve 20");
-        lista_premio_descrizione.Add("reach_stage_30","Earn leve 30");
+        lista_premio_descrizione.Add("end_hero_regina_formica_nera","Reach stage 40 with Black Ant");
+        lista_premio_descrizione.Add("end_hero_regina_re_mosca","Reach stage 40 with King Moss");
+        lista_premio_descrizione.Add("end_hero_regina_regina_ape","Reach stage 40 with Queen Abe");
+        lista_premio_descrizione.Add("end_hero_regina_regina_ragno","Reach stage 40 with Queen Web");
+        lista_premio_descrizione.Add("end_hero_regina_re_cavalletta","Reach stage 40 with King Gross");
+        lista_premio_descrizione.Add("end_hero_regina_re_scarabeo","Reach stage 40 with King Big");
+        lista_premio_descrizione.Add("reach_stage_10","Reach stage 10");
+        lista_premio_descrizione.Add("reach_stage_20","Reach stage 20");
+        lista_premio_descrizione.Add("reach_stage_30","Reach stage 30");
         lista_premio_descrizione.Add("gain_10000_gold","Earn 10000 Coins");
         lista_premio_descrizione.Add("gain_100_gems","Earn 100 gems");
         lista_premio_descrizione.Add("gain_1000_gems","Earn 1000 gems");
+        /*
         lista_premio_descrizione.Add("unlock_all_race_level_1","Unlock all kind of puppets level 1");
         lista_premio_descrizione.Add("unlock_all_race_level_2","Unlock all kind of puppets level 2");
         lista_premio_descrizione.Add("unlock_all_race_level_3","Unlock all kind of puppets level 3 ");
+        */
 
         //non tradurre nulla
         lista_incremento_potere_eroe.Add("regina_formica_nera",0.01f);

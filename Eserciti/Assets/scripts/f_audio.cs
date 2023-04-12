@@ -2,6 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+AUDIO MANCANTI
+Fare un audio per ogni eroe o per lo meno quando l'eroe entra in campo
+esplosione generica
+audio di quando l'eroe và via
+audio generico per l'evocazione dei pupi
+audio zip/schiva quando le mosche, zanzare zippano o quando le cavallette schivano
+? audio del fumo (per il gas)
+    audio attacco warrior, archer, wizard
+    audio hit
+audio morte personaggio
+audio freccia parte
+*/
+
 public class f_audio : MonoBehaviour
 {
     //blocco dedicata all'audio
@@ -18,36 +32,43 @@ public class f_audio : MonoBehaviour
         audio_singolo.Add("nicola_acquista_upgrade",1);
         audio_singolo.Add("hit_carne_3",1);
         audio_singolo.Add("hit_carne_2",1);
-        audio_singolo.Add("hit_carne",1);
+        audio_singolo.Add("hit_carne_1",1);
         audio_singolo.Add("click_ok_2",1);
         audio_singolo.Add("resurrezione",1);
         audio_singolo.Add("denaro_3",1);
         audio_singolo.Add("denaro_2",1);
         audio_singolo.Add("denaro_1",1);
-        audio_singolo.Add("colpo_3",1);
-        audio_singolo.Add("colpo_2",1);
-        audio_singolo.Add("colpo_1",1);
+        audio_singolo.Add("colpo_3",0.8f);
+        audio_singolo.Add("colpo_2",0.8f);
+        audio_singolo.Add("colpo_1",0.8f);
         audio_singolo.Add("click_ok",1);
         audio_singolo.Add("click_generico_t",1);
+        audio_singolo.Add("lancio_magia_nuvola_bianca",1);
+
 
         foreach(KeyValuePair<string,float> attachStat in audio_singolo){
             audio_temp=Instantiate(audio_default);
             audio_temp.GetComponent<AudioSource>().clip = Resources.Load("audio/"+attachStat.Key) as AudioClip;
             audio_temp.GetComponent<AudioSource>().volume = attachStat.Value;
-            /*
+
             if (
-                (attachStat.Key=="music_main_menu")||
-                (attachStat.Key=="music_negozio_2")||
-                (attachStat.Key=="music_game_1")||
-                (attachStat.Key=="lancio_magia_nuvola_bianca")||
-                (attachStat.Key=="lancio_magia_nuvola_nera")
+                //(attachStat.Key=="music_main_menu")||
+                //(attachStat.Key=="music_negozio_2")||
+                //(attachStat.Key=="music_game_1")||
+                (attachStat.Key=="lancio_magia_nuvola_bianca")
             ){audio_temp.GetComponent<AudioSource>().loop=true;}
-            */
+
             audio_temp.name="audio_"+attachStat.Key;
             audio_temp.transform.SetParent(GO_Suoni.transform);
 
             lista_audioData.Add(attachStat.Key,audio_temp.GetComponent<AudioSource>());
         }
+    }
+
+    public void stop_audio(string id_audio){
+        try{
+            lista_audioData[id_audio].Stop();
+        } catch {}
     }
 
     public void play_audio(string id_audio){
