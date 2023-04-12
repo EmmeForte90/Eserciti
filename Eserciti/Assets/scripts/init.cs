@@ -320,7 +320,7 @@ public class init : MonoBehaviour
     public void click_btn_mainmenu(){
         bool_in_uscita=true;
         Time.timeScale=1;
-        f_audio.play_audio("audio_click_ok_2");
+        f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
@@ -596,12 +596,12 @@ public class init : MonoBehaviour
     }
 
     public void btn_ricomincia(){
-        f_audio.play_audio("audio_click_ok_2");
+        f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
     public void next_stage(){
-        f_audio.play_audio("audio_click_ok_2");
+        f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("upgrade"));
     }
 

@@ -14,6 +14,8 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    public f_audio f_audio;
+
     public GameObject pannello_pause;
     public GameObject pannello_areyousure;
 
@@ -227,12 +229,14 @@ public class upgrade : MonoBehaviour
         }
         btn_upgrade_pupetti.onClick.Invoke();
     }
-    
+
     public void click_btn_mainmenu(){
+        f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
     public void bottone_dx_lista_upgrade(string tipo){
+        f_audio.play_audio("click_generico_t");
         //btn_upgrade_pupetti;
         //btn_upgrade_eroe;
         //btn_upgrade_generici;
@@ -302,12 +306,12 @@ public class upgrade : MonoBehaviour
     }
 
     private void sblocca_unita_razza(string razza_plurare, int livello){
-        print ("dovrei sbloccare "+razza_plurare+" - "+livello);
+        //print ("dovrei sbloccare "+razza_plurare+" - "+livello);
         string razza=info_comuni.lista_razze_totale[razza_plurare];
         string[] splitArray;
         splitArray=razza_plurare.Split(char.Parse("_"));   
         livello=int.Parse(splitArray[1]);
-        print ("dovrei sbloccare "+razza_plurare+" - "+livello);
+        //print ("dovrei sbloccare "+razza_plurare+" - "+livello);
 
         string string_temp;
 
@@ -334,6 +338,7 @@ public class upgrade : MonoBehaviour
     }
 
     public void click_upgrade_number(int numero){
+        f_audio.play_audio("denaro_"+Random.Range(1,4));
         cont_scrigno.SetActive(false);
         testo_reward.SetText("Choose Your Upgrade");
         string premio=lista_premi_settati[numero];
@@ -769,6 +774,7 @@ public class upgrade : MonoBehaviour
     }
 
     public void btn_compra(string abilita){
+        f_audio.play_audio("denaro_"+Random.Range(1,4));
         int costo=ritorna_costo_abilita(abilita);
         if (denaro>=costo){
             denaro-=costo;
@@ -1003,15 +1009,18 @@ public class upgrade : MonoBehaviour
     }
 
     public void click_btn_pausa(){
+        f_audio.play_audio("click_generico_t");
         pannello_pause.SetActive(true);
         pannello_areyousure.SetActive(false);
     }
 
     public void click_btn_mainmenu_areyousure(){
+        f_audio.play_audio("click_generico_t");
         pannello_areyousure.SetActive(true);
     }
 
     public void click_btn_exit_pausa(){
+        f_audio.play_audio("click_generico_t");
         pannello_pause.SetActive(false);
     }
 
@@ -1061,6 +1070,7 @@ public class upgrade : MonoBehaviour
     }
 
     public void salva_e_continua(){
+        f_audio.play_audio("click_ok_2");
         string string_temp="";
         path_xml=Application.persistentDataPath + "/game_c.xml";
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...

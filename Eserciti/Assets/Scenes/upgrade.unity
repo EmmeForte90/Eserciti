@@ -632,70 +632,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!21 &60174606
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &64840140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,6 +2084,134 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!1 &140787798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140787799}
+  - component: {fileID: 140787800}
+  m_Layer: 0
+  m_Name: audio_default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &140787799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140787798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1378541763}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &140787800
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140787798}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &145079756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,7 +2397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 60174606}
+  m_Material: {fileID: 469743600}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2837,6 +2901,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179532831}
   m_CullTransparentMesh: 1
+--- !u!21 &179606332
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &188237354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5023,70 +5151,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262607123}
   m_CullTransparentMesh: 1
---- !u!21 &266541738
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!21 &283713031
 Material:
   serializedVersion: 8
@@ -5436,6 +5500,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289109765}
   m_CullTransparentMesh: 1
+--- !u!21 &297285023
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &297944826
 GameObject:
   m_ObjectHideFlags: 0
@@ -6346,7 +6474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 926166923}
+  m_Material: {fileID: 897379008}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6996,70 +7124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360331414}
   m_CullTransparentMesh: 1
---- !u!21 &361417699
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &362956551
 GameObject:
   m_ObjectHideFlags: 0
@@ -8571,70 +8635,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411114323}
   m_CullTransparentMesh: 1
---- !u!21 &431826090
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &453896676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9084,7 +9084,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462453680}
   m_CullTransparentMesh: 0
---- !u!21 &462807151
+--- !u!21 &469743600
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -9245,6 +9245,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470237401}
   m_CullTransparentMesh: 0
+--- !u!21 &485513903
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &487639603
 GameObject:
   m_ObjectHideFlags: 0
@@ -9650,6 +9714,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496359960}
   m_CullTransparentMesh: 1
+--- !u!21 &496563973
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &498276320
 GameObject:
   m_ObjectHideFlags: 0
@@ -11273,7 +11401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 361417699}
+  m_Material: {fileID: 855489844}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -14135,70 +14263,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675857228}
   m_CullTransparentMesh: 1
---- !u!21 &677366174
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &691253584
 GameObject:
   m_ObjectHideFlags: 0
@@ -17155,7 +17219,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836221698}
   m_CullTransparentMesh: 0
---- !u!21 &839925055
+--- !u!21 &855489844
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -18100,6 +18164,70 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!21 &897379008
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &902429117
 GameObject:
   m_ObjectHideFlags: 0
@@ -18640,70 +18768,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922355604}
   m_CullTransparentMesh: 0
---- !u!21 &926166923
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &927847248
 GameObject:
   m_ObjectHideFlags: 0
@@ -18838,6 +18902,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927847248}
   m_CullTransparentMesh: 1
+--- !u!21 &936671065
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &945493555
 GameObject:
   m_ObjectHideFlags: 0
@@ -18953,7 +19081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1439891731}
+  m_Material: {fileID: 1099251738}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -19433,7 +19561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 677366174}
+  m_Material: {fileID: 496563973}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -21009,70 +21137,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031371152}
   m_CullTransparentMesh: 1
---- !u!21 &1036993116
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1042133894
 GameObject:
   m_ObjectHideFlags: 0
@@ -22266,6 +22330,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097732264}
   m_CullTransparentMesh: 1
+--- !u!21 &1099251738
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1102108152
 GameObject:
   m_ObjectHideFlags: 0
@@ -23644,6 +23772,70 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!21 &1136715650
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1139096090
 GameObject:
   m_ObjectHideFlags: 0
@@ -26139,7 +26331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1036993116}
+  m_Material: {fileID: 1998474427}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -26216,7 +26408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1476654381}
+  m_Material: {fileID: 1442814787}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -27244,7 +27436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 462807151}
+  m_Material: {fileID: 179606332}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -27673,6 +27865,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365159623}
   m_CullTransparentMesh: 1
+--- !u!1 &1378541762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378541763}
+  m_Layer: 0
+  m_Name: GO_suoni
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378541763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378541762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 900.3252, y: 539.62775, z: -9.11909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 140787799}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379229645
 GameObject:
   m_ObjectHideFlags: 0
@@ -28696,7 +28920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1733120524}
+  m_Material: {fileID: 936671065}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -29484,70 +29708,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439291599}
   m_CullTransparentMesh: 1
---- !u!21 &1439891731
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1442271510
 GameObject:
   m_ObjectHideFlags: 0
@@ -29681,6 +29841,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442271510}
   m_CullTransparentMesh: 1
+--- !u!21 &1442814787
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1443198275
 GameObject:
   m_ObjectHideFlags: 0
@@ -30768,70 +30992,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471061902}
   m_CullTransparentMesh: 1
---- !u!21 &1476654381
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1477553887
 GameObject:
   m_ObjectHideFlags: 0
@@ -31148,6 +31308,70 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!21 &1482292294
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1486364935
 GameObject:
   m_ObjectHideFlags: 0
@@ -34817,7 +35041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 839925055}
+  m_Material: {fileID: 1482292294}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -35888,70 +36112,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1733120524
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1739019879
 GameObject:
   m_ObjectHideFlags: 0
@@ -36233,6 +36393,7 @@ GameObject:
   - component: {fileID: 1746812232}
   - component: {fileID: 1746812231}
   - component: {fileID: 1746812233}
+  - component: {fileID: 1746812234}
   m_Layer: 0
   m_Name: scripts
   m_TagString: Untagged
@@ -36252,6 +36413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e169f6071f225d4d8df8d7678a16122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  f_audio: {fileID: 1746812234}
   pannello_pause: {fileID: 1025271388}
   pannello_areyousure: {fileID: 1471061902}
   SkeletonGraphic_fade: {fileID: 2062603314}
@@ -36362,6 +36524,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe0084dab485154d88f849c3dec6d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1746812234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746812230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17488ff0fedb6aa42bcaea15702dee18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio_default: {fileID: 140787798}
+  GO_Suoni: {fileID: 1378541762}
 --- !u!1 &1749252391
 GameObject:
   m_ObjectHideFlags: 0
@@ -38889,70 +39065,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882929824}
   m_CullTransparentMesh: 1
---- !u!21 &1884884701
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instanced Shader
-  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
-  m_ValidKeywords:
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ShineShaderMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _PixelsPerUnit: 100
-    - _RectHeight: 100
-    - _RectWidth: 100
-    - _ScreenWidthUnits: 10
-    - _ShaderSpace: 0
-    - _ShineContrast: 2
-    - _ShineFade: 1
-    - _ShineRotation: 0
-    - _ShineSaturation: 0.5
-    - _ShineScale: 0.05
-    - _ShineSmoothness: 2
-    - _ShineSpeed: 0.1
-    - _ShineWidth: 0.1
-    - _TimeFPS: 5
-    - _TimeFrequency: 2
-    - _TimeRange: 0.5
-    - _TimeScale: 1
-    - _TimeSettings: 0
-    - _TimeValue: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &1885822721
 GameObject:
   m_ObjectHideFlags: 0
@@ -39587,7 +39699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 266541738}
+  m_Material: {fileID: 297285023}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -41171,7 +41283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 431826090}
+  m_Material: {fileID: 1136715650}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -41642,6 +41754,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995033291}
   m_CullTransparentMesh: 1
+--- !u!21 &1998474427
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: b082b459c739dbf4180248e7eba83c1b, type: 3}
+  m_ValidKeywords:
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _PixelsPerUnit: 100
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1999982110
 GameObject:
   m_ObjectHideFlags: 0
@@ -44468,7 +44644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1884884701}
+  m_Material: {fileID: 485513903}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

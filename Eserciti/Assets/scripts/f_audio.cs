@@ -26,7 +26,7 @@ public class f_audio : MonoBehaviour
     public GameObject GO_Suoni;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audio_singolo.Add("nicola_morte",1);
         audio_singolo.Add("nicola_acquista_upgrade",1);

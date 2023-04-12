@@ -32,21 +32,23 @@ public class info_comuni : MonoBehaviour
 
     private string string_temp;
     void Awake(){
-        lista_premio_nome.Add("end_hero_regina_formica_nera","Titolo");
-        lista_premio_nome.Add("end_hero_regina_re_mosca","Titolo");
-        lista_premio_nome.Add("end_hero_regina_regina_ape","Titolo");
-        lista_premio_nome.Add("end_hero_regina_regina_ragno","Titolo");
-        lista_premio_nome.Add("end_hero_regina_re_cavalletta","Titolo");
-        lista_premio_nome.Add("end_hero_regina_re_scarabeo","Titolo");
-        lista_premio_nome.Add("reach_stage_10","Titolo");
-        lista_premio_nome.Add("reach_stage_20","Titolo");
-        lista_premio_nome.Add("reach_stage_30","Titolo");
-        lista_premio_nome.Add("gain_10000_gold","Titolo");
-        lista_premio_nome.Add("gain_100_gems","Titolo");
-        lista_premio_nome.Add("gain_1000_gems","Titolo");
+        lista_premio_nome.Add("end_hero_regina_formica_nera","Black Ant");
+        lista_premio_nome.Add("end_hero_regina_re_mosca","King Moss");
+        lista_premio_nome.Add("end_hero_regina_regina_ape","Queen Abe");
+        lista_premio_nome.Add("end_hero_regina_regina_ragno","Queen Web");
+        lista_premio_nome.Add("end_hero_regina_re_cavalletta","King Gross");
+        lista_premio_nome.Add("end_hero_regina_re_scarabeo","King Big");
+        lista_premio_nome.Add("reach_stage_10","Stage 10");
+        lista_premio_nome.Add("reach_stage_20","Stage 20");
+        lista_premio_nome.Add("reach_stage_30","Stage 30");
+        lista_premio_nome.Add("gain_10000_gold","Big money");
+        lista_premio_nome.Add("gain_100_gems","A Diamond is forever");
+        lista_premio_nome.Add("gain_1000_gems","But many Diamonds are better");
+        /*
         lista_premio_nome.Add("unlock_all_race_level_1","Titolo");
         lista_premio_nome.Add("unlock_all_race_level_2","Titolo");
         lista_premio_nome.Add("unlock_all_race_level_3","Titolo");
+        */
 
         lista_premio_descrizione.Add("end_hero_regina_formica_nera","Reach stage 40 with Black Ant");
         lista_premio_descrizione.Add("end_hero_regina_re_mosca","Reach stage 40 with King Moss");
