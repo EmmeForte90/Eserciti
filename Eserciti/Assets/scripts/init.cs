@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public CanvasScaler CanvasScaler;
+
     public f_audio f_audio;
     public GameObject pannello_pause;
     public GameObject pannello_areyousure;
@@ -127,6 +129,7 @@ public class init : MonoBehaviour
     public GameObject insetto_esplosivo_velenoso_pf;
 
     void Awake(){
+        Screen.SetResolution(1920, 1080, true);
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
 
         GO_anim_fiamma.SetActive(false);
@@ -641,7 +644,7 @@ public class init : MonoBehaviour
     }
 
     public void mouse_click(GameObject obj, string tipo){
-        //print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
+        print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
         //print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
         if (obj.name.Contains("abilita_")){
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));

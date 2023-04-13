@@ -148,6 +148,7 @@ public class upgrade : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
+        Screen.SetResolution(1920, 1080, true);
         carica_info_partite();
         get_all_blocchi_testo_unita();
         riempi_blocchi_testo_unita();
