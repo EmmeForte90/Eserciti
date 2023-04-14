@@ -225,13 +225,15 @@ public class basic_rule : MonoBehaviour
         }
         */
 
+        /*
         //proviamo a creare dei BUMP effect semplici per non far muovere il pupo sempre nella stessa direzione...
         if (Input.GetKeyDown("space")){
-            inizia_percorso_random();
+            //inizia_percorso_random();
             //rb2D.AddForce(transform.up * thrust*50, ForceMode2D.Force);
             //rb2D.AddForce(new Vector2(Random.Range(-thrust,thrust),Random.Range(-thrust,thrust)), ForceMode2D.Impulse);
             //rb2D.AddForce(-transform.up * thrust, ForceMode2D.Impulse);
         }
+        */
     }
 
     public void aggiungi_effetto_fumo_verde(){
