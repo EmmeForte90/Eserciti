@@ -105,6 +105,9 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
         lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
 
+        lista_upgrade_perenni_nome.Add("magia_veleno","Poison Spells");
+        lista_upgrade_perenni_nome.Add("magia_blocco","Blocking Spells");
+
         lista_upgrade_perenni_max_level.Add("proiettili_ignora_armatura",4);
         lista_upgrade_perenni_max_level.Add("proiettili_head_shot",5);
         lista_upgrade_perenni_max_level.Add("proiettili_distanza",3);
@@ -115,6 +118,9 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_max_level.Add("melee_colpiti",2);
         lista_upgrade_perenni_max_level.Add("melee_ignora_attacco",3);
         lista_upgrade_perenni_max_level.Add("melee_dono_zanzare",3);
+
+        lista_upgrade_perenni_max_level.Add("magia_veleno",3);
+        lista_upgrade_perenni_max_level.Add("magia_blocco",3);
 
         //settiamo genericamente che ogni upgrade perenne ha un costo di 10 per livello che si vuole ottenere
         foreach(KeyValuePair<string,string> attachStat in lista_upgrade_perenni_nome){
@@ -172,6 +178,14 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Increases the maximum attack range by +2";
         lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Increases the maximum attack range by +3";
 
+        lista_upgrade_perenni_descrizione["magia_veleno"][1]="Le magie lanciate, avvelenano il bersaglio. Maggiore è il livello, maggiore sarà il veleno";
+        lista_upgrade_perenni_descrizione["magia_veleno"][2]="Le magie lanciate, avvelenano il bersaglio. Maggiore è il livello, maggiore sarà il veleno";
+        lista_upgrade_perenni_descrizione["magia_veleno"][3]="Le magie lanciate, avvelenano il bersaglio. Maggiore è il livello, maggiore sarà il veleno";
+
+        lista_upgrade_perenni_descrizione["magia_blocco"][1]="Le magie lanciate, rallentano il bersaglio. Maggiore è il livello, maggiore sarà il tempo di rallentamento";
+        lista_upgrade_perenni_descrizione["magia_blocco"][2]="Le magie lanciate, rallentano il bersaglio. Maggiore è il livello, maggiore sarà il tempo di rallentamento";
+        lista_upgrade_perenni_descrizione["magia_blocco"][3]="Le magie lanciate, rallentano il bersaglio. Maggiore è il livello, maggiore sarà il tempo di rallentamento";
+
         lista_upgrade_perenni_costi["costi_pupi"][1]=30;
         lista_upgrade_perenni_costi["costi_pupi"][2]=70;
         lista_upgrade_perenni_costi["costi_pupi"][3]=150;
@@ -211,6 +225,10 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_costi["proiettili_distanza"][1]=20;
         lista_upgrade_perenni_costi["proiettili_distanza"][2]=50;
         lista_upgrade_perenni_costi["proiettili_distanza"][3]=100;
+
+        lista_upgrade_perenni_costi["magia_veleno"][1]=20;
+        lista_upgrade_perenni_costi["magia_veleno"][2]=50;
+        lista_upgrade_perenni_costi["magia_veleno"][3]=100;
 
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");

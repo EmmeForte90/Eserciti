@@ -1399,6 +1399,20 @@ public class init : MonoBehaviour
                 break;
             }
         }
+
+        if (!lp_totali_basic_rule[id_attaccante].bool_fazione_nemica){
+            if (lp_totali_basic_rule[id_attaccante].bool_mago){
+                if (lista_upgrade_perenni_liv["magia_veleno"]>0){
+                    if (lp_totali_basic_rule[id_difensore].livello_veleno==0){
+                        lp_totali_basic_rule[id_difensore].aggiungi_effetto_fumo_verde();
+                    }
+                    lp_totali_basic_rule[id_difensore].livello_veleno+=(0.005f*lista_upgrade_perenni_liv["magia_veleno"]);
+                }
+                if (lista_upgrade_perenni_liv["magia_blocco"]>0){
+                    lp_totali_basic_rule[id_difensore].applica_ragnatela(0.1f*lista_upgrade_perenni_liv["magia_blocco"]);
+                }
+            }
+        }
     }
 
     private bool controlla_punto_attacco(float xor, float yor, float xar, float yar, float distanza){

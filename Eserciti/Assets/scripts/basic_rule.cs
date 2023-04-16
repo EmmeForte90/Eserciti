@@ -558,7 +558,7 @@ public class basic_rule : MonoBehaviour
         }
         else if (col.name=="re_mosca_eroe"){
             if ((razza!="mosca")&&(razza!="zanzara")){
-                print ("sono stato danneggiato dal re mosca!!!");
+                //print ("sono stato danneggiato dal re mosca!!!");
                 danneggia(danno_eroe);
             }
         }
