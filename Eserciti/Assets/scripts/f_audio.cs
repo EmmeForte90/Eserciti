@@ -38,9 +38,9 @@ public class f_audio : MonoBehaviour
         audio_singolo.Add("denaro_3",1);
         audio_singolo.Add("denaro_2",1);
         audio_singolo.Add("denaro_1",1);
-        audio_singolo.Add("colpo_3",0.8f);
-        audio_singolo.Add("colpo_2",0.8f);
-        audio_singolo.Add("colpo_1",0.8f);
+        audio_singolo.Add("colpo_3",0.2f);
+        audio_singolo.Add("colpo_2",0.2f);
+        audio_singolo.Add("colpo_1",0.2f);
         audio_singolo.Add("click_ok",1);
         audio_singolo.Add("click_generico_t",1);
         audio_singolo.Add("lancio_magia_nuvola_bianca",1);
