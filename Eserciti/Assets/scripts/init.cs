@@ -1199,7 +1199,8 @@ public class init : MonoBehaviour
         else if (obj.name.Contains("abilita_")){
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             if (int_abilita_scelta==0){
-                string testo=info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
+                int liv=lista_abilita_livello[int_abilita];
+                string testo=info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita]]+" liv "+liv+"\n"+info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
                 cont_descrizione_volante.SetActive(true);
                 abilita_temp_mouse=int_abilita;
                 //txt_desc_abilita.SetText(testo);
