@@ -92,6 +92,8 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_c_health;
     public TMPro.TextMeshProUGUI txt_u_c_hero_damage;
     public TMPro.TextMeshProUGUI txt_u_c_hero_cooldown;
+    public TMPro.TextMeshProUGUI txt_u_c_hero_time;
+    public TMPro.TextMeshProUGUI txt_u_c_hero_charge;
     public TMPro.TextMeshProUGUI txt_u_c_random_unity_1;
     public TMPro.TextMeshProUGUI txt_u_c_random_spell;
     public TMPro.TextMeshProUGUI txt_u_c_random_race;
@@ -107,6 +109,8 @@ public class upgrade : MonoBehaviour
     public Button B_u_b_health;
     public Button B_u_b_hero_damage;
     public Button B_u_b_hero_cooldown;
+    public Button B_u_b_hero_time;
+    public Button B_u_b_hero_charge;
     public Button B_u_b_random_unity_1;
     public Button B_u_b_random_spell;
     public Button B_u_b_random_race;
@@ -122,6 +126,8 @@ public class upgrade : MonoBehaviour
     public TMPro.TextMeshProUGUI txt_u_d_health;
     public TMPro.TextMeshProUGUI txt_u_d_hero_damage;
     public TMPro.TextMeshProUGUI txt_u_d_hero_cooldown;
+    public TMPro.TextMeshProUGUI txt_u_d_hero_time;
+    public TMPro.TextMeshProUGUI txt_u_d_hero_charge;
     public TMPro.TextMeshProUGUI txt_u_d_random_unity_1;
     public TMPro.TextMeshProUGUI txt_u_d_random_spell;
     public TMPro.TextMeshProUGUI txt_u_d_random_race;
@@ -161,6 +167,8 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_costi.Add("health",txt_u_c_health);
         lista_txt_upgrade_costi.Add("hero_damage",txt_u_c_hero_damage);
         lista_txt_upgrade_costi.Add("hero_cooldown",txt_u_c_hero_cooldown);
+        lista_txt_upgrade_costi.Add("hero_time",txt_u_c_hero_time);
+        lista_txt_upgrade_costi.Add("hero_charge",txt_u_c_hero_charge);
         lista_txt_upgrade_costi.Add("random_unity_1",txt_u_c_random_unity_1);
         lista_txt_upgrade_costi.Add("random_spell",txt_u_c_random_spell);
         lista_txt_upgrade_costi.Add("random_race",txt_u_c_random_race);
@@ -175,6 +183,8 @@ public class upgrade : MonoBehaviour
         lista_B_upgrade_bottoni.Add("health",B_u_b_health);
         lista_B_upgrade_bottoni.Add("hero_damage",B_u_b_hero_damage);
         lista_B_upgrade_bottoni.Add("hero_cooldown",B_u_b_hero_cooldown);
+        lista_B_upgrade_bottoni.Add("hero_time",B_u_b_hero_time);
+        lista_B_upgrade_bottoni.Add("hero_charge",B_u_b_hero_charge);
         lista_B_upgrade_bottoni.Add("random_unity_1",B_u_b_random_unity_1);
         lista_B_upgrade_bottoni.Add("random_spell",B_u_b_random_spell);
         lista_B_upgrade_bottoni.Add("random_race",B_u_b_random_race);
@@ -189,6 +199,8 @@ public class upgrade : MonoBehaviour
         lista_txt_upgrade_descrizione.Add("health",txt_u_d_health);
         lista_txt_upgrade_descrizione.Add("hero_damage",txt_u_d_hero_damage);
         lista_txt_upgrade_descrizione.Add("hero_cooldown",txt_u_d_hero_cooldown);
+        lista_txt_upgrade_descrizione.Add("hero_time",txt_u_d_hero_time);
+        lista_txt_upgrade_descrizione.Add("hero_charge",txt_u_d_hero_charge);
         lista_txt_upgrade_descrizione.Add("random_unity_1",txt_u_d_random_unity_1);
         lista_txt_upgrade_descrizione.Add("random_spell",txt_u_d_random_spell);
         lista_txt_upgrade_descrizione.Add("random_race",txt_u_d_random_race);
@@ -732,6 +744,8 @@ public class upgrade : MonoBehaviour
             case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
             case "hero_damage":{testo="The abilities of your hero that deal damage, do so by +"+((livello+1)*10)+"%";break;}
             case "hero_cooldown":{testo="The cooldown of your abilities is reduced by -"+((livello+1)*10)+"%";break;}
+            case "hero_time":{testo="Increase the time of your hero fury by +"+((livello+1)*10)+"%";break;}
+            case "hero_charge":{testo="The cooldown of your hero is reduced by -"+((livello+1)*10)+"%";break;}
             case "random_unity_1":{testo="Choose one of three randomly selected level 1 units from the unlocked races";break;}
             case "random_spell":{testo="Choose between three new abilities or an existing one at a higher level";break;}
             case "random_race":{testo="Choose from three new races to unlock";break;}
@@ -761,6 +775,8 @@ public class upgrade : MonoBehaviour
                 }
                 break;
             }
+            case "hero_time":
+            case "hero_charge":
             case "hero_damage":
             case "hero_cooldown":{
                 if (livello>=5){
@@ -965,6 +981,8 @@ public class upgrade : MonoBehaviour
                 else if (tier_unity_sbloccato<3){costo=500;}
                 break;
             }
+            case "hero_time":
+            case "hero_charge":
             case "melee_damage":
             case "distance_damage":
             case "spell_damage":

@@ -151,6 +151,8 @@ public class init : MonoBehaviour
         lista_upgrade.Add("health",0);
         lista_upgrade.Add("hero_damage",0);
         lista_upgrade.Add("hero_cooldown",0);
+        lista_upgrade.Add("hero_charge",0);
+        lista_upgrade.Add("hero_time",0);
 
         foreach (Transform child in lista_abilita.transform) {
             i++;
@@ -181,7 +183,13 @@ public class init : MonoBehaviour
         setta_game_da_file();
 
         incr_potere_eroe=info_comuni.lista_incremento_potere_eroe[id_hero];
+        if (lista_upgrade["hero_charge"]>0){
+            incr_potere_eroe+=(incr_potere_eroe*0.1f*lista_upgrade["hero_charge"]);
+        }
         decr_potere_eroe=info_comuni.lista_decremento_potere_eroe[id_hero];
+        if (lista_upgrade["hero_time"]>0){
+            decr_potere_eroe-=(decr_potere_eroe*0.1f*lista_upgrade["hero_time"]);
+        }
 
 
         //incr_potere_eroe=5;   //debug
