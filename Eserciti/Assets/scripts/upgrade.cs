@@ -744,7 +744,7 @@ public class upgrade : MonoBehaviour
             case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
             case "hero_damage":{testo="The abilities of your hero that deal damage, do so by +"+((livello+1)*10)+"%";break;}
             case "hero_cooldown":{testo="The cooldown of your abilities is reduced by -"+((livello+1)*10)+"%";break;}
-            case "hero_time":{testo="Increase the time of your hero fury by +"+((livello+1)*10)+"%";break;}
+            case "hero_time":{testo="Increases the time of your hero fury by +"+((livello+1)*10)+"%";break;}
             case "hero_charge":{testo="The cooldown of your hero is reduced by -"+((livello+1)*10)+"%";break;}
             case "random_unity_1":{testo="Choose one of three randomly selected level 1 units from the unlocked races";break;}
             case "random_spell":{testo="Choose between three new abilities or an existing one at a higher level";break;}

@@ -178,13 +178,13 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Increases the maximum attack range by +2";
         lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Increases the maximum attack range by +3";
 
-        lista_upgrade_perenni_descrizione["magia_veleno"][1]="Le magie lanciate, avvelenano il bersaglio. Maggiore è il livello, maggiore sarà il veleno";
-        lista_upgrade_perenni_descrizione["magia_veleno"][2]="Le magie lanciate, avvelenano il bersaglio. Maggiore è il livello, maggiore sarà il veleno";
-        lista_upgrade_perenni_descrizione["magia_veleno"][3]="Le magie lanciate, avvelenano il bersaglio. Maggiore è il livello, maggiore sarà il veleno";
+        lista_upgrade_perenni_descrizione["magia_veleno"][1]="The casted spells poison the target. The higher the level, the greater the poison";
+        lista_upgrade_perenni_descrizione["magia_veleno"][2]="The casted spells poison the target. The higher the level, the greater the poison";
+        lista_upgrade_perenni_descrizione["magia_veleno"][3]="The casted spells poison the target. The higher the level, the greater the poison";
 
-        lista_upgrade_perenni_descrizione["magia_blocco"][1]="Le magie lanciate, rallentano il bersaglio. Maggiore è il livello, maggiore sarà il tempo di rallentamento";
-        lista_upgrade_perenni_descrizione["magia_blocco"][2]="Le magie lanciate, rallentano il bersaglio. Maggiore è il livello, maggiore sarà il tempo di rallentamento";
-        lista_upgrade_perenni_descrizione["magia_blocco"][3]="Le magie lanciate, rallentano il bersaglio. Maggiore è il livello, maggiore sarà il tempo di rallentamento";
+        lista_upgrade_perenni_descrizione["magia_blocco"][1]="The casted spells slow down the target. The higher the level, the longer the slowing time";
+        lista_upgrade_perenni_descrizione["magia_blocco"][2]="The casted spells slow down the target. The higher the level, the longer the slowing time";
+        lista_upgrade_perenni_descrizione["magia_blocco"][3]="The casted spells slow down the target. The higher the level, the longer the slowing time";
 
         lista_upgrade_perenni_costi["costi_pupi"][1]=30;
         lista_upgrade_perenni_costi["costi_pupi"][2]=70;
