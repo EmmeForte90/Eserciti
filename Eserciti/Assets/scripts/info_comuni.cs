@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class info_comuni : MonoBehaviour
 {
+    public Dictionary<string, int> lista_costi_sblocco_eroe = new Dictionary<string, int>();
+
     public Dictionary<string, string> lista_powerhero_descrizione = new Dictionary<string, string>();
 
     public Dictionary<string, string> lista_premio_nome = new Dictionary<string, string>();
@@ -67,6 +69,12 @@ public class info_comuni : MonoBehaviour
         lista_premio_descrizione.Add("unlock_all_race_level_2","Unlock all kind of puppets level 2");
         lista_premio_descrizione.Add("unlock_all_race_level_3","Unlock all kind of puppets level 3 ");
         */
+        lista_costi_sblocco_eroe.Add("regina_formica_nera",0);
+        lista_costi_sblocco_eroe.Add("re_mosca",20);
+        lista_costi_sblocco_eroe.Add("regina_ape",25);
+        lista_costi_sblocco_eroe.Add("regina_ragno",30);
+        lista_costi_sblocco_eroe.Add("re_cavalletta",35);
+        lista_costi_sblocco_eroe.Add("re_scarabeo",40);
 
         //non tradurre nulla
         lista_incremento_potere_eroe.Add("regina_formica_nera",0.01f);

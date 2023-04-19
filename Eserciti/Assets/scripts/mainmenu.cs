@@ -13,6 +13,10 @@ using System.IO;
 
 public class mainmenu : MonoBehaviour
 {
+    private Dictionary<string, bool> lista_eroi_sbloccati = new Dictionary<string, bool>();
+    private Dictionary<string, GameObject> lista_GO_lock_eroi = new Dictionary<string, GameObject>();
+    private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_gems_unlock_eroi = new Dictionary<string, TMPro.TextMeshProUGUI>();
+
     public f_audio f_audio;
 
     public info_comuni info_comuni;
@@ -59,6 +63,13 @@ public class mainmenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lista_eroi_sbloccati.Add("regina_formica_nera",true);
+        lista_eroi_sbloccati.Add("re_mosca",false);
+        lista_eroi_sbloccati.Add("regina_ape",false);
+        lista_eroi_sbloccati.Add("regina_ragno",false);
+        lista_eroi_sbloccati.Add("re_cavalletta",false);
+        lista_eroi_sbloccati.Add("re_scarabeo",false);
+
         if (!System.IO.File.Exists(Application.persistentDataPath + "/game_c.xml")){
             bottone_continua.interactable = false;
         }
@@ -69,6 +80,14 @@ public class mainmenu : MonoBehaviour
         Screen.SetResolution(1920, 1080, true);
 
         carica_info_partite();
+        foreach(KeyValuePair<string,bool> attachStat in lista_eroi_sbloccati){
+            print (attachStat.Key); 
+            GameObject.Find("txt_gems_unlock_"+attachStat.Key).GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_costi_sblocco_eroe[attachStat.Key].ToString());
+            lista_GO_lock_eroi.Add(attachStat.Key,GameObject.Find("lock_"+attachStat.Key));
+            if (attachStat.Value==true){
+                sblocca_eroe(attachStat.Key);
+            }
+        }
 
         foreach (Transform child in lista_eroi.transform) {
             lista_obj_eroi.Add(child.name,child.gameObject);
@@ -90,6 +109,10 @@ public class mainmenu : MonoBehaviour
             }
         }
         PlayerPrefs.SetString("ultima_posizione","mainmenu");
+    }
+
+    private void sblocca_eroe(string eroe){
+        lista_GO_lock_eroi[eroe].SetActive(false);
     }
 
     public void esci_da_gioco(){
@@ -333,6 +356,12 @@ public class mainmenu : MonoBehaviour
                     liv_upgrade_temp=int.Parse(node_3.GetAttribute("liv"));
                     upgrade_temp=node_3.InnerText;
                     lista_upgrade_perenni_liv[upgrade_temp]=liv_upgrade_temp;
+                }
+            }
+
+            foreach(XmlElement node_2 in node.SelectNodes("eroi_sbloccati")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("e")){
+                    lista_eroi_sbloccati[node_3.InnerText]=true;
                 }
             }
         }
