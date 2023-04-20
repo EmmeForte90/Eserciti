@@ -81,7 +81,6 @@ public class mainmenu : MonoBehaviour
 
         carica_info_partite();
         foreach(KeyValuePair<string,bool> attachStat in lista_eroi_sbloccati){
-            print (attachStat.Key); 
             GameObject.Find("txt_gems_unlock_"+attachStat.Key).GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_costi_sblocco_eroe[attachStat.Key].ToString());
             lista_GO_lock_eroi.Add(attachStat.Key,GameObject.Find("lock_"+attachStat.Key));
             if (attachStat.Value==true){
@@ -93,6 +92,10 @@ public class mainmenu : MonoBehaviour
             lista_obj_eroi.Add(child.name,child.gameObject);
         }
 
+        txt_nome_eroe.SetText("");
+        txt_descrizione_eroe.SetText("");
+        txt_nome_abilita.SetText("");
+        txt_descrizione_abilita.SetText("");
         nascondi_eroi();
 
         disattiva_pannelli();
