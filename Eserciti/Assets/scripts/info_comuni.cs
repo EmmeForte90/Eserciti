@@ -35,11 +35,11 @@ public class info_comuni : MonoBehaviour
     private string string_temp;
     void Awake(){
         lista_premio_nome.Add("end_hero_regina_formica_nera","Black Ant");
-        lista_premio_nome.Add("end_hero_regina_re_mosca","King Moss");
-        lista_premio_nome.Add("end_hero_regina_regina_ape","Queen Abe");
-        lista_premio_nome.Add("end_hero_regina_regina_ragno","Queen Web");
-        lista_premio_nome.Add("end_hero_regina_re_cavalletta","King Gross");
-        lista_premio_nome.Add("end_hero_regina_re_scarabeo","King Big");
+        lista_premio_nome.Add("end_hero_re_mosca","King Moss");
+        lista_premio_nome.Add("end_hero_regina_ape","Queen Abe");
+        lista_premio_nome.Add("end_hero_regina_ragno","Queen Web");
+        lista_premio_nome.Add("end_hero_re_cavalletta","King Gross");
+        lista_premio_nome.Add("end_hero_re_scarabeo","King Big");
         lista_premio_nome.Add("reach_stage_10","Stage 10");
         lista_premio_nome.Add("reach_stage_20","Stage 20");
         lista_premio_nome.Add("reach_stage_30","Stage 30");
@@ -53,11 +53,11 @@ public class info_comuni : MonoBehaviour
         */
 
         lista_premio_descrizione.Add("end_hero_regina_formica_nera","Reach stage 40 with Black Ant");
-        lista_premio_descrizione.Add("end_hero_regina_re_mosca","Reach stage 40 with King Moss");
-        lista_premio_descrizione.Add("end_hero_regina_regina_ape","Reach stage 40 with Queen Abe");
-        lista_premio_descrizione.Add("end_hero_regina_regina_ragno","Reach stage 40 with Queen Web");
-        lista_premio_descrizione.Add("end_hero_regina_re_cavalletta","Reach stage 40 with King Gross");
-        lista_premio_descrizione.Add("end_hero_regina_re_scarabeo","Reach stage 40 with King Big");
+        lista_premio_descrizione.Add("end_hero_re_mosca","Reach stage 40 with King Moss");
+        lista_premio_descrizione.Add("end_hero_regina_ape","Reach stage 40 with Queen Abe");
+        lista_premio_descrizione.Add("end_hero_regina_ragno","Reach stage 40 with Queen Web");
+        lista_premio_descrizione.Add("end_hero_re_cavalletta","Reach stage 40 with King Gross");
+        lista_premio_descrizione.Add("end_hero_re_scarabeo","Reach stage 40 with King Big");
         lista_premio_descrizione.Add("reach_stage_10","Reach stage 10");
         lista_premio_descrizione.Add("reach_stage_20","Reach stage 20");
         lista_premio_descrizione.Add("reach_stage_30","Reach stage 30");

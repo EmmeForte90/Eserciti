@@ -12,7 +12,7 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
-    public CanvasScaler CanvasScaler;
+    public archivement archivement;
 
     public f_audio f_audio;
     public GameObject pannello_pause;
@@ -540,6 +540,7 @@ public class init : MonoBehaviour
             denaro_guadagnato+=(lista_upgrade_perenni_liv["costi_guadagno"]*10);
 
             txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
+
             txt_denaro_guadagnato.SetText("You have earned "+denaro_guadagnato+" gold!");
             foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                 if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
@@ -588,13 +589,20 @@ public class init : MonoBehaviour
             print (xml_content);
 
             pannello_vittoria.SetActive(true);
+
+            switch (num_ondata){
+                case 10:{archivement.archivia_premio("reach_stage_10");break;}
+                case 20:{archivement.archivia_premio("reach_stage_20");break;}
+                case 30:{archivement.archivia_premio("reach_stage_30");break;}
+                case 40:{archivement.archivia_premio("end_hero_"+id_hero);break;}
+            }
         } else {
-            f_audio.play_audio("audio_nicola_morte");
+            f_audio.play_audio("nicola_morte");
             path=Application.persistentDataPath + "/game_c.xml";
             //File.Delete(path);        //poi lo cancelleremo quando non saremo in pieno debug
 
             int num_gemme_guadagnate=num_ondata;
-            testo_gemme_guadagnate.SetText("Hai guadagnato "+num_gemme_guadagnate+" gemme");
+            testo_gemme_guadagnate.SetText("You earn "+num_gemme_guadagnate+" gems");
 
             num_gemme+=num_gemme_guadagnate;
             num_gemme_totali+=num_gemme_guadagnate;
@@ -652,7 +660,7 @@ public class init : MonoBehaviour
     }
 
     public void mouse_click(GameObject obj, string tipo){
-        print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
+        //print ("mouse: ho cliccato su "+obj.name+" (del tipo "+tipo);
         //print (Camera.main.ScreenToWorldPoint(Input.mousePosition)+" - "+Input.mousePosition+" - "+Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
         if (obj.name.Contains("abilita_")){
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
@@ -662,12 +670,6 @@ public class init : MonoBehaviour
             if (int_abilita_scelta!=0){
                 attiva_abilita_coordinate(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
             }
-
-            /*
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.transform.SetParent(mappa.transform);
-            cube.transform.localPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 1f);
-            */
         }
         else if (obj.name=="img_skull"){
             if (bool_eroe_in_azione){return;}
