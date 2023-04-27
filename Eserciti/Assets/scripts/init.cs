@@ -592,7 +592,7 @@ public class init : MonoBehaviour
             StreamWriter writer = new StreamWriter(path, false);
             writer.Write(xml_content);
             writer.Close();
-            print (xml_content);
+            //print (xml_content);
 
             pannello_vittoria.SetActive(true);
 
@@ -1531,8 +1531,7 @@ public class init : MonoBehaviour
         xml_content+="\n\t</upgrade_perenni>";
         xml_content+="\n</info_partite>";
 
-
-        print (xml_content);
+        //print (xml_content);
         StreamWriter writer = new StreamWriter(path_xml, false);
         writer.Write(xml_content);
         writer.Close();

@@ -324,7 +324,6 @@ public class upgrade : MonoBehaviour
         string[] splitArray;
         splitArray=razza_plurare.Split(char.Parse("_"));   
         livello=int.Parse(splitArray[1]);
-        //print ("dovrei sbloccare "+razza_plurare+" - "+livello);
 
         string string_temp;
 
@@ -374,7 +373,7 @@ public class upgrade : MonoBehaviour
                 monete=lista_premi_settati_monete[numero];
 
                 string pupo_xml=info_comuni.lista_razze_totale[razza_pupo]+"_"+classe_pupo+"_"+livello_pupo;
-                print (pupo_xml);
+                //print (pupo_xml);
 
                 if (!lista_pupetti.ContainsKey(pupo_xml)){lista_pupetti.Add(pupo_xml,0);}
                 lista_pupetti[pupo_xml]+=num_pupi;
@@ -383,7 +382,7 @@ public class upgrade : MonoBehaviour
             case "nrazza":{
                 int livello_razza = int.Parse(splitArray[2]);
                 string razza = splitArray[1];
-                print ("inserisco la razza: "+razza);
+                //print ("inserisco la razza: "+razza);
                 lista_razze_sbloccate.Add(razza,livello_razza);
                 sblocca_unita_razza(razza,livello_razza);
                 check_full_race();
@@ -600,7 +599,7 @@ public class upgrade : MonoBehaviour
         string descrizione="";
         int monete=0;
         string txt_monete="";
-        print ("è entrato "+premio);
+        //print ("è entrato "+premio);
         if (premio!=""){
             string[] splitArray;
             string[] splitArray_razza;
@@ -724,7 +723,6 @@ public class upgrade : MonoBehaviour
     }
 
     private void riempi_img_premio(int num_cont_premio, string sprite){
-        print (sprite);
         Sprite sprite_temp  = Resources.Load<Sprite>(sprite);
         switch (num_cont_premio){
             case 1:{img_premio_upgrade_1.sprite = sprite_temp;break;}
@@ -753,7 +751,7 @@ public class upgrade : MonoBehaviour
             case "random_unity_3":{testo="Choose one of three randomly selected level 3 units from the unlocked races";break;}
             case "unlock_next_unity_tier":{
                 if (tier_unity_sbloccato<2){testo="Unlock the ability to produce level 2 units";}
-                else if (tier_unity_sbloccato<3){testo="Unlock the ability to produce level 23 units";}
+                else if (tier_unity_sbloccato<3){testo="Unlock the ability to produce level 3 units";}
                 else {cont_upgrade_unlock_unity_tier.SetActive(false);}
                 break;
             }
@@ -847,7 +845,7 @@ public class upgrade : MonoBehaviour
                         splitArray=attachStat.Key.Split(char.Parse("_"));
                         livello_temp=int.Parse(splitArray[1]);
                         if (livello_temp==livello_scelto){
-                            print ("posso mettere nel random "+attachStat.Key+" - "+attachStat.Value);
+                            //print ("posso mettere nel random "+attachStat.Key+" - "+attachStat.Value);
                             pupo_singolo=attachStat.Key;
                             lista_random.Add("pupo-"+pupo_singolo+"-warrior-"+livello_scelto+"-0",1);
                             lista_random.Add("pupo-"+pupo_singolo+"-arcer-"+livello_scelto+"-0",1);
@@ -928,7 +926,7 @@ public class upgrade : MonoBehaviour
                             splitArray=attachStat.Key.Split(char.Parse("_"));
                             livello=int.Parse(splitArray[1]);
                             if (livello<=tier_unity_sbloccato){
-                                print ("inserisco la razza "+attachStat.Key+" - di livello "+livello);
+                                //print ("inserisco la razza "+attachStat.Key+" - di livello "+livello);
                                 lista_random.Add("nrazza-"+attachStat.Key+"-"+livello+"-a",1);
                             }
                         }
@@ -1059,7 +1057,7 @@ public class upgrade : MonoBehaviour
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
             tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
-            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update");}
+            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update (per_potere_eroe)");}
             denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){

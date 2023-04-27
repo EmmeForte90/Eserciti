@@ -259,7 +259,7 @@ public class info_comuni : MonoBehaviour
             lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
             lista_pupi_descrizione.Add("api_"+i,"When they die, they launch their stinger at some enemy");
             lista_pupi_descrizione.Add("ragnetti_"+i,"Every time they hit, they slow down the target. They are immune to this effect from other spiders");
-            lista_pupi_descrizione.Add("cavallette_"+i,"Le cavallette sono particolarmente veloci. Inoltre hanno il 10% di possibilità di schivare un attacco corpo a corpo o a distanza");
+            lista_pupi_descrizione.Add("cavallette_"+i,"The grasshopers are fast. They have 10% of probability miss a melee attack or a distance attack");
             lista_pupi_descrizione.Add("scarabei_"+i,"Beetles are the most resilient race you can aspire to");
 
             //NB: I Nomi e le descrizioni, saranno sempre al plurale
@@ -337,7 +337,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["zombie"].Add(2,30);
         lista_abilita_cooldown["zombie"].Add(3,30);
 
-        lista_abilita_nome.Add("resurrezione","Resurrezione");
+        lista_abilita_nome.Add("resurrezione","Resurrection");
         lista_bool_abilita_classe.Add("resurrezione",false);
         lista_abilita_descrizione.Add("resurrezione","Revive a fallen ally puppet. The level of the summoned puppet is equal to the level of the ability. It has no effect if there are no fallen puppets.");
         lista_abilita_cooldown.Add("resurrezione",new Dictionary<int, int>());
@@ -345,7 +345,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["resurrezione"].Add(2,30);
         lista_abilita_cooldown["resurrezione"].Add(3,40);
 
-        lista_abilita_nome.Add("insetto_esplosivo","Insetto Esplosivo");
+        lista_abilita_nome.Add("insetto_esplosivo","Explosive bug");
         lista_bool_abilita_classe.Add("insetto_esplosivo",false);
         lista_abilita_descrizione.Add("insetto_esplosivo","Summon an explosive insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo",new Dictionary<int, int>());
@@ -353,7 +353,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["insetto_esplosivo"].Add(2,30);
         lista_abilita_cooldown["insetto_esplosivo"].Add(3,40);
 
-        lista_abilita_nome.Add("insetto_esplosivo_velenoso","Insetto Esplosivo");
+        lista_abilita_nome.Add("insetto_esplosivo_velenoso","Explosive poison bug");
         lista_bool_abilita_classe.Add("insetto_esplosivo_velenoso",false);
         lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Summon an explosive poison insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo_velenoso",new Dictionary<int, int>());
@@ -361,7 +361,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,30);
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,40);
 
-        lista_abilita_nome.Add("bombo","Catapulta di Bombo");
+        lista_abilita_nome.Add("bombo","Bombo catapult");
         lista_bool_abilita_classe.Add("bombo",false);
         lista_abilita_descrizione.Add("bombo","Cluster catapult that launches 5 bombs per level which explode on impact, damaging any insect in a large area hit");
         lista_abilita_cooldown.Add("bombo",new Dictionary<int, int>());
@@ -369,7 +369,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown["bombo"].Add(2,30);
         lista_abilita_cooldown["bombo"].Add(3,40);
 
-        lista_abilita_nome.Add("balestra","Balestre di aculei");
+        lista_abilita_nome.Add("balestra","Balistic spikes");
         lista_bool_abilita_classe.Add("balestra",false);
         lista_abilita_descrizione.Add("balestra","Launches 5 spikes per level one after the other that explode on impact damaging any insects in the wide area hit.");
         lista_abilita_cooldown.Add("balestra",new Dictionary<int, int>());
