@@ -555,7 +555,7 @@ public class init : MonoBehaviour
             }
 
             path=Application.persistentDataPath + "/game_c.xml";
-            //File.Delete(path);
+            
             num_ondata++;
 
             xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"' per_potere_eroe='"+per_potere_eroe+"'";
@@ -590,6 +590,7 @@ public class init : MonoBehaviour
             xml_content+="\n</game>";
 
             StreamWriter writer = new StreamWriter(path, false);
+            xml_content=info_comuni.Encrypt(xml_content, "munimuni");
             writer.Write(xml_content);
             writer.Close();
             //print (xml_content);
@@ -605,7 +606,7 @@ public class init : MonoBehaviour
         } else {
             f_audio.play_audio("nicola_morte");
             path=Application.persistentDataPath + "/game_c.xml";
-            //File.Delete(path);        //poi lo cancelleremo quando non saremo in pieno debug
+            File.Delete(path);        //poi lo cancelleremo quando non saremo in pieno debug
 
             int num_gemme_guadagnate=num_ondata;
             testo_gemme_guadagnate.SetText("You earn "+num_gemme_guadagnate+" gems");
@@ -1499,7 +1500,7 @@ public class init : MonoBehaviour
 
         XmlDocument xml_game = new XmlDocument ();
         string string_temp=System.IO.File.ReadAllText(path_xml);
-        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        string_temp=info_comuni.decripta(string_temp, "munimuni");
         xml_game.LoadXml(string_temp);
 
         string upgrade_temp="";
@@ -1533,6 +1534,7 @@ public class init : MonoBehaviour
 
         //print (xml_content);
         StreamWriter writer = new StreamWriter(path_xml, false);
+        xml_content=info_comuni.Encrypt(xml_content, "munimuni");
         writer.Write(xml_content);
         writer.Close();
     }
@@ -1544,7 +1546,7 @@ public class init : MonoBehaviour
         //arrivati a questo punto, il file deve esistere per forza ed andiamo a prendere tutte le cose che serviranno al giocatore.
         XmlDocument xml_game = new XmlDocument ();
         string_temp=System.IO.File.ReadAllText(path);
-        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        string_temp=info_comuni.decripta(string_temp, "munimuni");
         xml_game.LoadXml(string_temp);
 
         int num_pupi_temp;

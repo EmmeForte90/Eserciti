@@ -274,7 +274,7 @@ public class mainmenu : MonoBehaviour
 
         XmlDocument xml_game = new XmlDocument ();
         string_temp=System.IO.File.ReadAllText(path_xml);
-        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        string_temp=info_comuni.decripta(string_temp, "munimuni");
         xml_game.LoadXml(string_temp);
 
         foreach(XmlElement node in xml_game.SelectNodes("game")){
@@ -313,8 +313,9 @@ public class mainmenu : MonoBehaviour
         xml_content+="\n</info_partite>";
 
 
-        print (xml_content);
+        //print (xml_content);
         StreamWriter writer = new StreamWriter(path_xml, false);
+        xml_content=info_comuni.Encrypt(xml_content, "munimuni");
         writer.Write(xml_content);
         writer.Close();
     }
@@ -339,13 +340,14 @@ public class mainmenu : MonoBehaviour
 
             //print (xml_content);
             StreamWriter writer = new StreamWriter(path_xml, false);
+            xml_content=info_comuni.Encrypt(xml_content, "munimuni");
             writer.Write(xml_content);
             writer.Close();
         }
 
         XmlDocument xml_game = new XmlDocument ();
         string string_temp=System.IO.File.ReadAllText(path_xml);
-        //string_temp=f_comuni.decripta(string_temp, "munimuni");
+        string_temp=info_comuni.decripta(string_temp, "munimuni");
         xml_game.LoadXml(string_temp);
 
         string upgrade_temp="";
@@ -508,6 +510,7 @@ public class mainmenu : MonoBehaviour
         xml_content+="\n</game>";
 
         StreamWriter writer = new StreamWriter(path_xml, false);
+        xml_content=info_comuni.Encrypt(xml_content, "munimuni");
         writer.Write(xml_content);
         writer.Close();
 

@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Security.Cryptography;
+using System.IO;
+using System.Text;
+using System;
 
 public class info_comuni : MonoBehaviour
 {
@@ -32,7 +36,7 @@ public class info_comuni : MonoBehaviour
     public Dictionary<string, float> lista_incremento_potere_eroe = new Dictionary<string, float>();
     public Dictionary<string, float> lista_decremento_potere_eroe = new Dictionary<string, float>();
 
-    private string string_temp;
+    const int Iterations = 1000;    //encryption...non toccare
     void Awake(){
         lista_premio_nome.Add("end_hero_regina_formica_nera","Black Ant");
         lista_premio_nome.Add("end_hero_re_mosca","King Moss");
@@ -238,6 +242,10 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_costi["magia_veleno"][2]=50;
         lista_upgrade_perenni_costi["magia_veleno"][3]=100;
 
+        lista_upgrade_perenni_costi["magia_blocco"][1]=20;
+        lista_upgrade_perenni_costi["magia_blocco"][2]=50;
+        lista_upgrade_perenni_costi["magia_blocco"][3]=100;
+
         lista_classi_nome.Add("warrior","Warrior");
         lista_classi_nome.Add("arcer","Arcer");
         lista_classi_nome.Add("wizard","Wizard");
@@ -387,9 +395,101 @@ public class info_comuni : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    //blocco relativo allencrypt
+    public string Encrypt(string plainText, string password)
     {
-        
+        if (plainText == null)
+        {
+            throw new ArgumentNullException("plainText");
+        }
+
+        if (string.IsNullOrEmpty(password))
+        {
+            throw new ArgumentNullException("password");
+        }
+
+        // create instance of the DES crypto provider
+        var des = new DESCryptoServiceProvider();
+
+        // generate a random IV will be used a salt value for generating key
+        des.GenerateIV();
+
+        // use derive bytes to generate a key from the password and IV
+        var rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, des.IV, Iterations);
+
+        // generate a key from the password provided
+        byte[] key = rfc2898DeriveBytes.GetBytes(8);
+
+        // encrypt the plainText
+        using (var memoryStream = new MemoryStream())
+        using (var cryptoStream = new CryptoStream(memoryStream, des.CreateEncryptor(key, des.IV), CryptoStreamMode.Write))
+        {
+            // write the salt first not encrypted
+            memoryStream.Write(des.IV, 0, des.IV.Length);
+
+            // convert the plain text string into a byte array
+            byte[] bytes = Encoding.UTF8.GetBytes(plainText);
+
+            // write the bytes into the crypto stream so that they are encrypted bytes
+            cryptoStream.Write(bytes, 0, bytes.Length);
+            cryptoStream.FlushFinalBlock();
+
+            return Convert.ToBase64String(memoryStream.ToArray());
+        }
     }
+
+    public bool TryDecrypt(string cipherText, string password, out string plainText)
+    {
+        // its pointless trying to decrypt if the cipher text
+        // or password has not been supplied
+        if (string.IsNullOrEmpty(cipherText) || 
+            string.IsNullOrEmpty(password))
+        {
+            plainText = "";
+            return false;
+        }
+
+        try
+        {   
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+
+            using (var memoryStream = new MemoryStream(cipherBytes))
+            {
+                // create instance of the DES crypto provider
+                var des = new DESCryptoServiceProvider();
+
+                // get the IV
+                byte[] iv = new byte[8];
+                memoryStream.Read(iv, 0, iv.Length);
+
+                // use derive bytes to generate key from password and IV
+                var rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, iv, Iterations);
+
+                byte[] key = rfc2898DeriveBytes.GetBytes(8);
+
+                using (var cryptoStream = new CryptoStream(memoryStream, des.CreateDecryptor(key, iv), CryptoStreamMode.Read))
+                using (var streamReader = new StreamReader(cryptoStream))
+                {
+                    plainText = streamReader.ReadToEnd();
+                    return true;
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            // TODO: log exception
+            print(ex);
+
+            plainText = "";
+            return false;
+        }
+    }
+    
+    public string decripta(string testo, string password)
+    {
+        string decryptedValue="";
+        TryDecrypt(testo, password, out decryptedValue);
+        return decryptedValue;
+    }
+    //fine blocco
 }
