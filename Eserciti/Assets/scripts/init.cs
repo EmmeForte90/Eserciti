@@ -47,6 +47,7 @@ public class init : MonoBehaviour
     private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
     private int num_gemme=0;
     private int num_gemme_totali=0;
+    private int num_denaro_totale=0;
     private int num_partite=0;
 
     public GameObject cont_descrizione_volante;
@@ -538,6 +539,11 @@ public class init : MonoBehaviour
             else {denaro_guadagnato=150;}
 
             denaro_guadagnato+=(lista_upgrade_perenni_liv["costi_guadagno"]*10);
+            num_denaro_totale+=denaro_guadagnato;
+            if (num_denaro_totale>=10000){
+                archivement.archivia_premio("gain_10000_gold");
+            }
+            salva_file_info_partite();  //solo per il denaro...
 
             txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
 
@@ -606,6 +612,12 @@ public class init : MonoBehaviour
 
             num_gemme+=num_gemme_guadagnate;
             num_gemme_totali+=num_gemme_guadagnate;
+            if (num_gemme_totali>=100){
+                archivement.archivia_premio("gain_100_gems");
+                if (num_gemme_totali>=1000){
+                    archivement.archivia_premio("gain_1000_gems");
+                }
+            }
             num_partite++;
             salva_file_info_partite();
 
@@ -1496,6 +1508,7 @@ public class init : MonoBehaviour
             num_partite=int.Parse(node.GetAttribute("num_partite"));
             num_gemme=int.Parse(node.GetAttribute("num_gemme"));
             num_gemme_totali=int.Parse(node.GetAttribute("num_gemme_totali"));
+            try{num_denaro_totale=int.Parse(node.GetAttribute("num_denaro_totale"));}catch{print ("aspettiamo il prossimo upgrade (denaro)");}
 
             foreach(XmlElement node_2 in node.SelectNodes("upgrade_perenni")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("u")){
@@ -1510,7 +1523,7 @@ public class init : MonoBehaviour
     private void salva_file_info_partite(){
         string xml_content="";
         string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
-        xml_content="<info_partite num_partite='"+num_partite+"' num_gemme='"+num_gemme+"' num_gemme_totali='"+num_gemme_totali+"'>";
+        xml_content="<info_partite num_partite='"+num_partite+"' num_gemme='"+num_gemme+"' num_gemme_totali='"+num_gemme_totali+"' num_denaro_totale='"+num_denaro_totale+"'>";
         xml_content+="\n\t<upgrade_perenni>";
         foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
             xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
@@ -1519,7 +1532,7 @@ public class init : MonoBehaviour
         xml_content+="\n</info_partite>";
 
 
-        //print (xml_content);
+        print (xml_content);
         StreamWriter writer = new StreamWriter(path_xml, false);
         writer.Write(xml_content);
         writer.Close();
@@ -1542,7 +1555,7 @@ public class init : MonoBehaviour
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
             tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
-            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update");}
+            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update (per potere eroe)");}
             denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){

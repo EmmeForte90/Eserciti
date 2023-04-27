@@ -28,9 +28,11 @@ public class archivement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Space)){
             archivia_premio("reach_stage_30");
         }
+        */
     }
 
     public void archivia_premio(string id_premio){

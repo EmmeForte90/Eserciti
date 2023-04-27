@@ -44,6 +44,7 @@ public class mainmenu : MonoBehaviour
     private int denaro=0;
     private int num_gemme=0;
     private int num_gemme_totali=0;
+    private int num_denaro_totale=0;
     private int num_partite=0;
 
     private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
@@ -303,7 +304,7 @@ public class mainmenu : MonoBehaviour
     private void salva_file_info_partite(){
         string xml_content="";
         string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
-        xml_content="<info_partite num_partite='"+num_partite+"' num_gemme='"+num_gemme+"' num_gemme_totali='"+num_gemme_totali+"'>";
+        xml_content="<info_partite num_partite='"+num_partite+"' num_gemme='"+num_gemme+"' num_gemme_totali='"+num_gemme_totali+"' num_denaro_totale='"+num_denaro_totale+"'>";
         xml_content+="\n\t<upgrade_perenni>";
         foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
             xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
@@ -312,7 +313,7 @@ public class mainmenu : MonoBehaviour
         xml_content+="\n</info_partite>";
 
 
-        //print (xml_content);
+        print (xml_content);
         StreamWriter writer = new StreamWriter(path_xml, false);
         writer.Write(xml_content);
         writer.Close();
@@ -327,7 +328,7 @@ public class mainmenu : MonoBehaviour
         string path_xml=Application.persistentDataPath + "/info_partite_c.xml";
         //File.Delete(path_xml);  //stiamo in pieno e totale debug
         if (!System.IO.File.Exists(path_xml)){//se NON esiste questo file, vuol dire che è la prima volta che gioca a questo gioco
-            xml_content="<info_partite num_partite='0' num_gemme='0' num_gemme_totali='0'>";
+            xml_content="<info_partite num_partite='0' num_gemme='0' num_gemme_totali='0' num_denaro_totale='0'>";
             xml_content+="\n\t<upgrade_perenni>";
             foreach(KeyValuePair<string,int> attachStat in lista_upgrade_perenni_liv){
                 xml_content+="\n\t\t<u liv='0'>"+attachStat.Key+"</u>";
@@ -353,6 +354,7 @@ public class mainmenu : MonoBehaviour
             num_partite=int.Parse(node.GetAttribute("num_partite"));
             num_gemme=int.Parse(node.GetAttribute("num_gemme"));
             num_gemme_totali=int.Parse(node.GetAttribute("num_gemme_totali"));
+            try{num_denaro_totale=int.Parse(node.GetAttribute("num_denaro_totale"));}catch{print ("aspettiamo il prossimo upgrade (denaro)");}
 
             foreach(XmlElement node_2 in node.SelectNodes("upgrade_perenni")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("u")){
@@ -481,7 +483,7 @@ public class mainmenu : MonoBehaviour
         File.Delete(path_xml);  //eh si, perchè tanto dobbiamo sempre ricrearlo...
 
         xml_content="";
-        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"' tier_unity_sbloccato='1' posizione='game'>";
+        xml_content="<game id_hero='"+id_eroe_scelto+"' num_ondata='1' denaro='"+denaro+"' per_potere_eroe='0' tier_unity_sbloccato='1' posizione='game'>";
         xml_content+="\n\t<lista_abilita>";
         foreach(KeyValuePair<string,int> attachStat in lista_abilita){
             xml_content+="\n\t\t<a liv='"+attachStat.Value+"'>"+attachStat.Key+"</a>";
