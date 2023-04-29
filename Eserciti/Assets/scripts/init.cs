@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public TMPro.TextMeshProUGUI txt_num_stage;
+
     public archivement archivement;
 
     public f_audio f_audio;
@@ -231,6 +233,7 @@ public class init : MonoBehaviour
             }
         }
 
+        txt_num_stage.SetText(num_ondata.ToString());
         generazione_nemici(num_ondata);
 
         
@@ -555,7 +558,7 @@ public class init : MonoBehaviour
             }
 
             path=Application.persistentDataPath + "/game_c.xml";
-            
+
             num_ondata++;
 
             xml_content="<game id_hero='"+id_hero+"' num_ondata='"+num_ondata+"' tier_unity_sbloccato='"+tier_unity_sbloccato+"' per_potere_eroe='"+per_potere_eroe+"'";
