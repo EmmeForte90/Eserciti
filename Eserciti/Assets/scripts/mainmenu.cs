@@ -13,6 +13,13 @@ using System.IO;
 
 public class mainmenu : MonoBehaviour
 {
+    public GameObject GO_start_button;
+    public GameObject GO_ConInfo;
+    public GameObject GO_ContainerIcon;
+    public GameObject GO_cont_eroe;
+    public SkeletonGraphic SkeletonGraphic_diamante_scelta_persona;
+
+
     private Dictionary<string, bool> lista_eroi_sbloccati = new Dictionary<string, bool>();
     private Dictionary<string, GameObject> lista_GO_lock_eroi = new Dictionary<string, GameObject>();
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_gems_unlock_eroi = new Dictionary<string, TMPro.TextMeshProUGUI>();
@@ -168,6 +175,21 @@ public class mainmenu : MonoBehaviour
     }
 
     public void click_eroe(string id_eroe){
+        GO_start_button.SetActive(false);
+        GO_ConInfo.SetActive(false);
+        GO_ContainerIcon.SetActive(false);
+        GO_cont_eroe.SetActive(false);
+        if (!lista_eroi_sbloccati[id_eroe]){
+            if (true){
+                SkeletonGraphic_diamante_scelta_persona.AnimationState.SetAnimation(0, "wrong", false);    //se metti a true andrà in loop
+                return;
+            }
+        }
+        GO_start_button.SetActive(true);
+        GO_ConInfo.SetActive(true);
+        GO_ContainerIcon.SetActive(true);
+        GO_cont_eroe.SetActive(true);
+
         f_audio.play_audio("click_generico_t");
         string nome="";
         string descrizione="";
