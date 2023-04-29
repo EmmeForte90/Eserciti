@@ -29855,7 +29855,7 @@ GameObject:
   - component: {fileID: 1286237218}
   - component: {fileID: 1286237217}
   m_Layer: 5
-  m_Name: txt_num_gemme
+  m_Name: txt_num_gemme_scelta_personaggio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46596,6 +46596,7 @@ MonoBehaviour:
   GO_ContainerIcon: {fileID: 1164233937}
   GO_cont_eroe: {fileID: 1062558735}
   SkeletonGraphic_diamante_scelta_persona: {fileID: 83651567}
+  txt_num_gemme_scelta_personaggio: {fileID: 1286237217}
   f_audio: {fileID: 2054175674}
   info_comuni: {fileID: 2054175672}
   SkeletonGraphic_fade: {fileID: 1299914936}

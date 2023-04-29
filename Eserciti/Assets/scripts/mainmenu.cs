@@ -18,6 +18,7 @@ public class mainmenu : MonoBehaviour
     public GameObject GO_ContainerIcon;
     public GameObject GO_cont_eroe;
     public SkeletonGraphic SkeletonGraphic_diamante_scelta_persona;
+    public TMPro.TextMeshProUGUI txt_num_gemme_scelta_personaggio;
 
 
     private Dictionary<string, bool> lista_eroi_sbloccati = new Dictionary<string, bool>();
@@ -88,6 +89,7 @@ public class mainmenu : MonoBehaviour
         Screen.SetResolution(1920, 1080, true);
 
         carica_info_partite();
+        txt_num_gemme_scelta_personaggio.SetText(num_gemme.ToString());
         foreach(KeyValuePair<string,bool> attachStat in lista_eroi_sbloccati){
             GameObject.Find("txt_gems_unlock_"+attachStat.Key).GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_costi_sblocco_eroe[attachStat.Key].ToString());
             lista_GO_lock_eroi.Add(attachStat.Key,GameObject.Find("lock_"+attachStat.Key));
@@ -180,9 +182,15 @@ public class mainmenu : MonoBehaviour
         GO_ContainerIcon.SetActive(false);
         GO_cont_eroe.SetActive(false);
         if (!lista_eroi_sbloccati[id_eroe]){
-            if (true){
+            if (num_gemme<info_comuni.lista_costi_sblocco_eroe[id_eroe]){
                 SkeletonGraphic_diamante_scelta_persona.AnimationState.SetAnimation(0, "wrong", false);    //se metti a true andrà in loop
                 return;
+            } else {
+                lista_eroi_sbloccati[id_eroe]=true;
+                num_gemme-=info_comuni.lista_costi_sblocco_eroe[id_eroe];
+                txt_num_gemme_scelta_personaggio.SetText(num_gemme.ToString());
+                sblocca_eroe(id_eroe);
+                salva_file_info_partite();
             }
         }
         GO_start_button.SetActive(true);
@@ -332,6 +340,13 @@ public class mainmenu : MonoBehaviour
             xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
         }
         xml_content+="\n\t</upgrade_perenni>";
+        xml_content+="\n\t<eroi_sbloccati>";
+        foreach(KeyValuePair<string,bool> attachStat in lista_eroi_sbloccati){
+            if (attachStat.Value==true){
+                xml_content+="\n\t\t<e>"+attachStat.Key+"</e>";
+            }
+        }
+        xml_content+="\n\t</eroi_sbloccati>";
         xml_content+="\n</info_partite>";
 
 
