@@ -347,7 +347,7 @@ public class init : MonoBehaviour
 
     private void decrementa_potere_eroe(){
         if (!bool_inizio_decremento_eroe){return;}
-        per_potere_eroe-=decr_potere_eroe;
+        per_potere_eroe-=(decr_potere_eroe*Time.deltaTime);
         aggiorna_img_abilita_eroe();
 
         if (per_potere_eroe<=0){
@@ -396,6 +396,7 @@ public class init : MonoBehaviour
     // Update is called once per frame
     void Update(){
         if (bool_in_uscita){return;}
+        /*
         if (Input.GetKeyDown(KeyCode.Z)){
             foreach(KeyValuePair<int,GameObject> attachStat in lp_totali){
                 effetti.effetto_hit_melee(lp_totali[attachStat.Key].transform.position.x,lp_totali[attachStat.Key].transform.position.y+0.5f);
@@ -404,16 +405,16 @@ public class init : MonoBehaviour
 
             }
         }
+        */
         if (Input.GetKeyDown(KeyCode.Q)){check_click_abilita(1);}
-        if (Input.GetKeyDown(KeyCode.W)){check_click_abilita(2);}
-        if (Input.GetKeyDown(KeyCode.E)){check_click_abilita(3);}
-        if (Input.GetKeyDown(KeyCode.R)){check_click_abilita(4);}
-        if (Input.GetKeyDown(KeyCode.T)){check_click_abilita(5);}
-        if (Input.GetKeyDown(KeyCode.Y)){check_click_abilita(6);}
-        if (Input.GetKeyDown(KeyCode.U)){check_click_abilita(7);}
-        if (Input.GetKeyDown(KeyCode.I)){check_click_abilita(8);}
-
-        if (Input.GetKeyDown(KeyCode.Escape)){
+        else if (Input.GetKeyDown(KeyCode.W)){check_click_abilita(2);}
+        else if (Input.GetKeyDown(KeyCode.E)){check_click_abilita(3);}
+        else if (Input.GetKeyDown(KeyCode.R)){check_click_abilita(4);}
+        else if (Input.GetKeyDown(KeyCode.T)){check_click_abilita(5);}
+        else if (Input.GetKeyDown(KeyCode.Y)){check_click_abilita(6);}
+        else if (Input.GetKeyDown(KeyCode.U)){check_click_abilita(7);}
+        else if (Input.GetKeyDown(KeyCode.I)){check_click_abilita(8);}
+        else if (Input.GetKeyDown(KeyCode.Escape)){
             if (int_abilita_scelta!=0){
                 setta_cursore("default");
                 setta_cerchietto_abilita(int_abilita_scelta,"verde");
@@ -438,7 +439,8 @@ public class init : MonoBehaviour
         if (!bool_eroe_in_azione){
             if (!bool_potere_eroe_pieno){
                 if (per_potere_eroe<100){
-                    per_potere_eroe+=incr_potere_eroe;
+                    per_potere_eroe+=(incr_potere_eroe*Time.deltaTime);
+                    //print (per_potere_eroe);
                     aggiorna_img_abilita_eroe();
                     if (per_potere_eroe>=100){attiva_bottone_potere_eroe();}
                 }

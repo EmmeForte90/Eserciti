@@ -31,7 +31,7 @@ public class abilita_bombo : MonoBehaviour
             foreach(KeyValuePair<int,Vector3> attachStat in lista_bombo_destinazione){
                 if (lista_bombo_ritardo[attachStat.Key]){
                     if (lista_bombo_attivi[attachStat.Key]<1){
-                        lista_bombo_attivi[attachStat.Key]+=0.01f;
+                        lista_bombo_attivi[attachStat.Key]+=(1f*Time.deltaTime);
                         //print ("bombo: "+attachStat.Key+" - "+lista_bombo_attivi[attachStat.Key]);
                         lista_bombo_GO[attachStat.Key].transform.position=punto_parabola(lista_bombo_origine[attachStat.Key],lista_bombo_destinazione[attachStat.Key],lista_bombo_mid_destinazione[attachStat.Key],t,lista_bombo_attivi[attachStat.Key]);
                         lista_bombo_GO[attachStat.Key].transform.Rotate(0,0,6*lista_bombo_rotazione[attachStat.Key]*Time.deltaTime);
