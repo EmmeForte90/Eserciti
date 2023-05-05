@@ -395,6 +395,9 @@ public class init : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        if (!bool_inizio_partita){
+            if (bool_fine_partita){return;}
+        }
         if (bool_in_uscita){return;}
         /*
         if (Input.GetKeyDown(KeyCode.Z)){
@@ -431,9 +434,6 @@ public class init : MonoBehaviour
                     }
                 }
             }
-        }
-        if (!bool_inizio_partita){
-            if (bool_fine_partita){return;}
         }
 
         if (!bool_eroe_in_azione){
