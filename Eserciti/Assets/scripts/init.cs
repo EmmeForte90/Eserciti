@@ -333,7 +333,7 @@ public class init : MonoBehaviour
     }
 
     public void click_btn_mainmenu(){
-        bool_in_uscita=true;
+        if (bool_in_uscita){return;}
         Time.timeScale=1;
         f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
@@ -633,18 +633,21 @@ public class init : MonoBehaviour
     }
 
     public void btn_ricomincia(){
+        if (bool_in_uscita){return;}
         f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
 
     public void next_stage(){
+        if (bool_in_uscita){return;}
         f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("upgrade"));
     }
 
     private IEnumerator carica_scena_fadeout(string scena){    
+        bool_in_uscita=true;
         SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
-        yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
+        yield return new WaitForSeconds(1.1f);
         SceneManager.LoadScene(scena);
     }
 

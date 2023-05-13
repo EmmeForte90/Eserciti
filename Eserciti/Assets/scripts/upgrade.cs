@@ -14,6 +14,7 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    private bool bool_in_uscita=false;
     public f_audio f_audio;
 
     public GameObject pannello_pause;
@@ -244,6 +245,7 @@ public class upgrade : MonoBehaviour
     }
 
     public void click_btn_mainmenu(){
+        if (bool_in_uscita){return;}
         f_audio.play_audio("click_ok_2");
         StartCoroutine(carica_scena_fadeout("mainmenu"));
     }
@@ -1087,6 +1089,7 @@ public class upgrade : MonoBehaviour
     }
 
     public void salva_e_continua(){
+        if (bool_in_uscita){return;}
         f_audio.play_audio("click_ok_2");
         string string_temp="";
         path_xml=Application.persistentDataPath + "/game_c.xml";
@@ -1129,6 +1132,7 @@ public class upgrade : MonoBehaviour
     }
 
     private IEnumerator carica_scena_fadeout(string scena){    
+        bool_in_uscita=true;
         SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
         yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
         SceneManager.LoadScene(scena);

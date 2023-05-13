@@ -13,6 +13,8 @@ using System.IO;
 
 public class mainmenu : MonoBehaviour
 {
+    private bool bool_in_uscita=false;
+
     public GameObject GO_start_button;
     public GameObject GO_ConInfo;
     public GameObject GO_ContainerIcon;
@@ -298,6 +300,7 @@ public class mainmenu : MonoBehaviour
     }
 
     public void continue_game(){
+        if (bool_in_uscita){return;}
         f_audio.play_audio("click_ok_2");
         string string_temp="";
         string path_xml=Application.persistentDataPath + "/game_c.xml";
@@ -500,6 +503,7 @@ public class mainmenu : MonoBehaviour
     }
 
     public void inizia_nuova_partita(){
+        if (bool_in_uscita){return;}
         f_audio.play_audio("click_ok_2");
         denaro=0;
         livelli_upgrade.Add("melee_damage",0);
@@ -556,6 +560,7 @@ public class mainmenu : MonoBehaviour
         StartCoroutine(FadeOut("game"));   
     }
     private IEnumerator FadeOut(string scena){    
+        bool_in_uscita=true;
         SkeletonGraphic_fade.AnimationState.SetAnimation(0, "fade_out", false);    //se metti a true andrà in loop
         yield return new WaitForSeconds(1.1f); // Wait before showing the next letter
         SceneManager.LoadScene(scena);
