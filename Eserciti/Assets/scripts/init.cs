@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public float tempo_summoning=0;
+
     public TMPro.TextMeshProUGUI txt_num_stage;
 
     public archivement archivement;
@@ -484,6 +486,14 @@ public class init : MonoBehaviour
                 cerca_prossimo_bersaglio(attachStat.Value);
             }
         }
+
+        if (tempo_summoning>0){
+            bool_fine_partita=false;
+            tempo_summoning-=(1*Time.deltaTime);
+            print (tempo_summoning);
+            return;
+        }
+
         if (!bool_inizio_partita){
             if (bool_fine_partita){
                 fine_partita("sconfitta");
@@ -535,6 +545,7 @@ public class init : MonoBehaviour
     }
 
     public void fine_partita(string esito){
+
         if (esito=="vittoria"){
             int denaro_guadagnato=0;
             if (num_ondata<=5){denaro_guadagnato=30;}
@@ -876,6 +887,7 @@ public class init : MonoBehaviour
             case "resurrezione":{tempo_evocazione=4;break;}
             case "zombie":{tempo_evocazione=3;break;}
         }
+        tempo_summoning=tempo_evocazione;
         genera_pupo(id_pupo);
         if (!lp_totali_basic_rule[num_pupi_generati_totali].bool_fazione_nemica){
             num_pupi_generati_buoni++;  //num_pupi_generati_totali viene uincrementato dentro genera_pupo
@@ -1563,8 +1575,9 @@ public class init : MonoBehaviour
         foreach(XmlElement node in xml_game.SelectNodes("game")){
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
+            num_ondata=15;
             tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
-            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch{print ("Aspettiamo il prossimo update (per potere eroe)");}
+            try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch {print ("Aspettiamo il prossimo update (per potere eroe)");}
             denaro=int.Parse(node.GetAttribute("denaro"));
             foreach(XmlElement node_2 in node.SelectNodes("lista_abilita")){
                 foreach(XmlElement node_3 in node_2.SelectNodes("a")){
