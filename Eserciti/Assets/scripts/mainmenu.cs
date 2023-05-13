@@ -22,7 +22,6 @@ public class mainmenu : MonoBehaviour
     public SkeletonGraphic SkeletonGraphic_diamante_scelta_persona;
     public TMPro.TextMeshProUGUI txt_num_gemme_scelta_personaggio;
 
-
     private Dictionary<string, bool> lista_eroi_sbloccati = new Dictionary<string, bool>();
     private Dictionary<string, GameObject> lista_GO_lock_eroi = new Dictionary<string, GameObject>();
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_gems_unlock_eroi = new Dictionary<string, TMPro.TextMeshProUGUI>();

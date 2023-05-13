@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    private Dictionary<string, bool> lista_eroi_sbloccati = new Dictionary<string, bool>();
+
     public float tempo_summoning=0;
 
     public TMPro.TextMeshProUGUI txt_num_stage;
@@ -134,6 +136,13 @@ public class init : MonoBehaviour
     public GameObject insetto_esplosivo_velenoso_pf;
 
     void Awake(){
+        lista_eroi_sbloccati.Add("regina_formica_nera",true);
+        lista_eroi_sbloccati.Add("re_mosca",false);
+        lista_eroi_sbloccati.Add("regina_ape",false);
+        lista_eroi_sbloccati.Add("regina_ragno",false);
+        lista_eroi_sbloccati.Add("re_cavalletta",false);
+        lista_eroi_sbloccati.Add("re_scarabeo",false);
+
         Screen.SetResolution(1920, 1080, true);
         carica_info_partite();  //semplicemente per prendere gli upgrade della partita
 
@@ -1538,6 +1547,12 @@ public class init : MonoBehaviour
                     lista_upgrade_perenni_liv[upgrade_temp]=liv_upgrade_temp;
                 }
             }
+
+            foreach(XmlElement node_2 in node.SelectNodes("eroi_sbloccati")){
+                foreach(XmlElement node_3 in node_2.SelectNodes("e")){
+                    lista_eroi_sbloccati[node_3.InnerText]=true;
+                }
+            }
         }
     }
 
@@ -1550,6 +1565,15 @@ public class init : MonoBehaviour
             xml_content+="\n\t\t<u liv='"+attachStat.Value+"'>"+attachStat.Key+"</u>";
         }
         xml_content+="\n\t</upgrade_perenni>";
+
+        xml_content+="\n\t<eroi_sbloccati>";
+        foreach(KeyValuePair<string,bool> attachStat in lista_eroi_sbloccati){
+            if (attachStat.Value==true){
+                xml_content+="\n\t\t<e>"+attachStat.Key+"</e>";
+            }
+        }
+        xml_content+="\n\t</eroi_sbloccati>";
+
         xml_content+="\n</info_partite>";
 
         //print (xml_content);
@@ -1575,7 +1599,7 @@ public class init : MonoBehaviour
         foreach(XmlElement node in xml_game.SelectNodes("game")){
             id_hero=node.GetAttribute("id_hero");
             num_ondata=int.Parse(node.GetAttribute("num_ondata"));
-            num_ondata=15;
+            //num_ondata=25;    //debug
             tier_unity_sbloccato=int.Parse(node.GetAttribute("tier_unity_sbloccato"));
             try{per_potere_eroe=float.Parse(node.GetAttribute("per_potere_eroe"));} catch {print ("Aspettiamo il prossimo update (per potere eroe)");}
             denaro=int.Parse(node.GetAttribute("denaro"));
