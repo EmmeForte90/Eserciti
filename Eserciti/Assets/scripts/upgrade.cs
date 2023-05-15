@@ -225,6 +225,7 @@ public class upgrade : MonoBehaviour
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
             check_abilita(attachStat.Key);
         }
+        
         txt_denaro.SetText(denaro.ToString());
 
         check_full_abilita();

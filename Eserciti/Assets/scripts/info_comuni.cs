@@ -84,7 +84,7 @@ public class info_comuni : MonoBehaviour
         lista_incremento_potere_eroe.Add("regina_formica_nera",1f);
         lista_incremento_potere_eroe.Add("re_mosca",1f);
         lista_incremento_potere_eroe.Add("regina_ape",1f);
-        lista_incremento_potere_eroe.Add("regina_ragno",15f);
+        lista_incremento_potere_eroe.Add("regina_ragno",1.5f);
         lista_incremento_potere_eroe.Add("re_cavalletta",2f);
         lista_incremento_potere_eroe.Add("re_scarabeo",1f);
 
