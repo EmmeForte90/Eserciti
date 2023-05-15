@@ -14,6 +14,8 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    public GameObject pannello_opzioni;
+
     private bool bool_in_uscita=false;
     public f_audio f_audio;
 
@@ -225,7 +227,7 @@ public class upgrade : MonoBehaviour
         foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
             check_abilita(attachStat.Key);
         }
-        
+
         txt_denaro.SetText(denaro.ToString());
 
         check_full_abilita();
@@ -243,6 +245,11 @@ public class upgrade : MonoBehaviour
             sblocca_unita_razza(attachStat.Key,attachStat.Value);
         }
         btn_upgrade_pupetti.onClick.Invoke();
+    }
+
+    public void attiva_pannello_opzioni(){
+        pannello_opzioni.SetActive(true);
+        f_audio.play_audio("click_generico_t");
     }
 
     public void click_btn_mainmenu(){

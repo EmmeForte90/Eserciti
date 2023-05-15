@@ -5,9 +5,11 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Text;
 using System;
+using UnityEngine.UI;
 
 public class info_comuni : MonoBehaviour
 {
+
     public Dictionary<string, int> lista_costi_sblocco_eroe = new Dictionary<string, int>();
 
     public Dictionary<string, string> lista_powerhero_descrizione = new Dictionary<string, string>();

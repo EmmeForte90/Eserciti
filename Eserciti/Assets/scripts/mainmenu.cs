@@ -50,6 +50,7 @@ public class mainmenu : MonoBehaviour
     public GameObject sch_sel_personaggio;
     public GameObject sch_mainmenu;
     public GameObject sch_upgrade_perenni;
+    public GameObject pannello_opzioni;
     private int denaro=0;
     private int num_gemme=0;
     private int num_gemme_totali=0;
@@ -283,6 +284,11 @@ public class mainmenu : MonoBehaviour
         sch_sel_personaggio.SetActive(false);
         sch_upgrade_perenni.SetActive(false);
         sch_mainmenu.SetActive(false);
+    }
+
+    public void attiva_pannello_opzioni(){
+        pannello_opzioni.SetActive(true);
+        f_audio.play_audio("click_generico_t");
     }
 
     public void attiva_pannello(GameObject pannello){

@@ -12,6 +12,8 @@ using System.Xml; //Needed for XML functionality
 using System.IO;
 public class init : MonoBehaviour
 {
+    public GameObject pannello_opzioni;
+
     private Dictionary<string, bool> lista_eroi_sbloccati = new Dictionary<string, bool>();
 
     public float tempo_summoning=0;
@@ -329,6 +331,11 @@ public class init : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void attiva_pannello_opzioni(){
+        pannello_opzioni.SetActive(true);
+        f_audio.play_audio("click_generico_t");
     }
 
     public void click_btn_pausa(){

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 /*
 AUDIO MANCANTI
@@ -18,7 +20,11 @@ audio freccia parte
 
 public class f_audio : MonoBehaviour
 {
-    //blocco dedicata all'audio
+    public Slider music_slider;
+    public Slider audio_slider;
+
+    public AudioMixer audiomixer;
+    
     public Dictionary<string, float> audio_singolo = new Dictionary<string, float>();
     public Dictionary<string, AudioSource> lista_audioData = new Dictionary<string, AudioSource>();
     public GameObject audio_default;
@@ -45,7 +51,6 @@ public class f_audio : MonoBehaviour
         audio_singolo.Add("click_generico_t",1);
         audio_singolo.Add("lancio_magia_nuvola_bianca",1);
 
-
         foreach(KeyValuePair<string,float> attachStat in audio_singolo){
             audio_temp=Instantiate(audio_default);
             audio_temp.GetComponent<AudioSource>().clip = Resources.Load("audio/"+attachStat.Key) as AudioClip;
@@ -62,6 +67,35 @@ public class f_audio : MonoBehaviour
             audio_temp.transform.SetParent(GO_Suoni.transform);
 
             lista_audioData.Add(attachStat.Key,audio_temp.GetComponent<AudioSource>());
+        }
+
+        if (!PlayerPrefs.HasKey("volume_sound")){PlayerPrefs.SetFloat("volume_sound",0.5f);}
+        audio_slider.value=PlayerPrefs.GetFloat("volume_sound");
+
+        if (!PlayerPrefs.HasKey("volume_music")){PlayerPrefs.SetFloat("volume_music",0.5f);}
+        music_slider.value=PlayerPrefs.GetFloat("volume_music");
+
+        //cambia_slider_volume("audio");
+        //cambia_slider_volume("music");
+    }
+
+    void Start(){
+        cambia_slider_volume("audio");
+        cambia_slider_volume("music");
+    }
+
+    public void cambia_slider_volume(string tipo){
+        switch (tipo){
+            case "audio":{
+                PlayerPrefs.SetFloat("volume_sound",audio_slider.value);
+                audiomixer.SetFloat("SFXVolume",Mathf.Log10(audio_slider.value)*20);
+                break;
+            }
+            case "music":{
+                PlayerPrefs.SetFloat("volume_music",music_slider.value);
+                audiomixer.SetFloat("MusicVolume",Mathf.Log10(music_slider.value)*20);
+                break;
+            }
         }
     }
 
