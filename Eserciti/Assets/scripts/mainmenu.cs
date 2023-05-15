@@ -329,7 +329,9 @@ public class mainmenu : MonoBehaviour
         num_gemme-=costo;
         lista_upgrade_perenni_liv[upgrade]++;
         txt_num_gemme.SetText(num_gemme.ToString());
-        aggiorna_upgrade_perenne(upgrade);
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+            aggiorna_upgrade_perenne(attachStat.Key);
+        }
         salva_file_info_partite();
     }
 
@@ -394,6 +396,7 @@ public class mainmenu : MonoBehaviour
         foreach(XmlElement node in xml_game.SelectNodes("info_partite")){
             num_partite=int.Parse(node.GetAttribute("num_partite"));
             num_gemme=int.Parse(node.GetAttribute("num_gemme"));
+            //num_gemme=100;  //debug;
             num_gemme_totali=int.Parse(node.GetAttribute("num_gemme_totali"));
             try{num_denaro_totale=int.Parse(node.GetAttribute("num_denaro_totale"));}catch{print ("aspettiamo il prossimo upgrade (denaro)");}
 
