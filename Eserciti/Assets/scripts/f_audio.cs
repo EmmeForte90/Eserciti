@@ -69,10 +69,10 @@ public class f_audio : MonoBehaviour
             lista_audioData.Add(attachStat.Key,audio_temp.GetComponent<AudioSource>());
         }
 
-        if (!PlayerPrefs.HasKey("volume_sound")){PlayerPrefs.SetFloat("volume_sound",0.5f);}
+        if (!PlayerPrefs.HasKey("volume_sound")){PlayerPrefs.SetFloat("volume_sound",1f);}
         audio_slider.value=PlayerPrefs.GetFloat("volume_sound");
 
-        if (!PlayerPrefs.HasKey("volume_music")){PlayerPrefs.SetFloat("volume_music",0.5f);}
+        if (!PlayerPrefs.HasKey("volume_music")){PlayerPrefs.SetFloat("volume_music",1f);}
         music_slider.value=PlayerPrefs.GetFloat("volume_music");
 
         //cambia_slider_volume("audio");
