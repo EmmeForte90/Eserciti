@@ -5,41 +5,231 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Text;
 using System;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class info_comuni : MonoBehaviour
 {
+    //blocco GO traduzioni mainmenu, game, upgrade
+    public TMPro.TextMeshProUGUI testo_mm_footer_diritti;
+    public TMPro.TextMeshProUGUI bottone_mm_continue_game;
+    public TMPro.TextMeshProUGUI bottone_mm_new_game;
+    public TMPro.TextMeshProUGUI bottone_mm_quit;
+    public TMPro.TextMeshProUGUI testo_mm_choose;
+    public TMPro.TextMeshProUGUI titolo_upgrade_perenni;
+
+    public TMPro.TextMeshProUGUI testo_stage;
+    public TMPro.TextMeshProUGUI testo_game_pause;
+    public TMPro.TextMeshProUGUI bottone_game_continue;
+    public TMPro.TextMeshProUGUI bottone_game_mainmenu;
+    public TMPro.TextMeshProUGUI bottone_game_opzioni;
+    public TMPro.TextMeshProUGUI testo_game_opz_principale;
+    public TMPro.TextMeshProUGUI bottone_trad_yes;
+    public TMPro.TextMeshProUGUI bottone_trad_no;
+    public TMPro.TextMeshProUGUI testo_game_youwin;
+    public TMPro.TextMeshProUGUI bottone_game_nextstage;
+    public TMPro.TextMeshProUGUI testo_game_youlose;
+    public TMPro.TextMeshProUGUI bottone_game_restart;
+
+    public TMPro.TextMeshProUGUI testo_upgrade_army;
+    public TMPro.TextMeshProUGUI testo_upgrade_gold;
+    public TMPro.TextMeshProUGUI testo_upgrade_improveyourarmy;
+    public TMPro.TextMeshProUGUI testo_upgrade_lev1;
+    public TMPro.TextMeshProUGUI testo_upgrade_lev2;
+    public TMPro.TextMeshProUGUI testo_upgrade_lev3;
+    public TMPro.TextMeshProUGUI testo_upgrade_upgrades;
+    public TMPro.TextMeshProUGUI testo_upgrade_reward;
+    public TMPro.TextMeshProUGUI testo_upgrade_choose1;
+    public TMPro.TextMeshProUGUI testo_upgrade_choose2;
+    public TMPro.TextMeshProUGUI testo_upgrade_choose3;
+    public TMPro.TextMeshProUGUI testo_upgrade_puppetsupgrades;
+    public TMPro.TextMeshProUGUI testo_upgrade_armyupgrades;
+    public TMPro.TextMeshProUGUI testo_upgrade_tyrantupgrades;
+
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_distancedamage;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_food;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_health;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_herocooldown;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_herodamage;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_herofury;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_meleedamage;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_randomrace;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_rndheroability;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_rndul1;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_rndul2;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_rndul3;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_skillscooldown;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_spelldamage;
+    public TMPro.TextMeshProUGUI testo_upgrade_d_nome_abilita_upgnut;
+
+    public upgrade upgrade;
+    //fine blocco
+
+    public Dictionary<string, Dictionary<string, string>> lista_descrizione_eroe_mainmenu = new Dictionary<string, Dictionary<string, string>>();
 
     public Dictionary<string, int> lista_costi_sblocco_eroe = new Dictionary<string, int>();
 
-    public Dictionary<string, string> lista_powerhero_descrizione = new Dictionary<string, string>();
+    public Dictionary<string, Dictionary<string, string>> lista_powerhero_descrizione = new Dictionary<string, Dictionary<string, string>>();
 
     public Dictionary<string, string> lista_premio_nome = new Dictionary<string, string>();
     public Dictionary<string, string> lista_premio_descrizione = new Dictionary<string, string>();
 
-    public Dictionary<string, string> lista_abilita_nome = new Dictionary<string, string>();
-    public Dictionary<string, string> lista_abilita_descrizione = new Dictionary<string, string>();
+    public Dictionary<string, string> lista_abilita_id = new Dictionary<string, string>();
+    public Dictionary<string, Dictionary<string, string>> lista_abilita_nome = new Dictionary<string, Dictionary<string, string>>();
+    public Dictionary<string, Dictionary<string, string>> lista_abilita_descrizione = new Dictionary<string, Dictionary<string, string>>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown = new Dictionary<string, Dictionary<int, int>>();
     public Dictionary<string, Dictionary<int, int>> lista_abilita_cooldown_partenza = new Dictionary<string, Dictionary<int, int>>();
     public Dictionary<string, bool> lista_bool_abilita_classe = new Dictionary<string, bool>();
 
     public Dictionary<string, string> lista_razze_totale = new Dictionary<string, string>();
-    public Dictionary<string, string> lista_razza_pupi_nome = new Dictionary<string, string>();
-    public Dictionary<string, string> lista_pupi_descrizione = new Dictionary<string, string>();
-    public Dictionary<string, string> lista_classi_nome = new Dictionary<string, string>();
+    public Dictionary<string, Dictionary<string, string>> lista_razza_pupi_nome = new Dictionary<string, Dictionary<string, string>>();
+    public Dictionary<string, Dictionary<string, string>> lista_razza_pupi_nome_singolare = new Dictionary<string, Dictionary<string, string>>();
+    public Dictionary<string, Dictionary<string, string>> lista_pupi_descrizione = new Dictionary<string, Dictionary<string, string>>();
+    public Dictionary<string, Dictionary<string, string>> lista_classi_nome = new Dictionary<string, Dictionary<string, string>>();
     public Dictionary<string, int> lista_costo_unita_razza = new Dictionary<string, int>();
     // Start is called before the first frame update
 
-    public Dictionary<string, string> lista_upgrade_perenni_nome = new Dictionary<string, string>();
+    public Dictionary<string, string> lista_upgrade_perenni_id = new Dictionary<string, string>();
+    public Dictionary<string, Dictionary<string, string>> lista_upgrade_perenni_nome = new Dictionary<string, Dictionary<string, string>>();
     public Dictionary<string, int> lista_upgrade_perenni_max_level = new Dictionary<string, int>();
     public Dictionary<string, Dictionary<int, int>> lista_upgrade_perenni_costi = new Dictionary<string, Dictionary<int, int>>();
-    public Dictionary<string, Dictionary<int, string>> lista_upgrade_perenni_descrizione = new Dictionary<string, Dictionary<int, string>>();
+    public Dictionary<string, Dictionary<string,Dictionary<int, string>>> lista_upgrade_perenni_descrizione = new Dictionary<string, Dictionary<string,Dictionary<int, string>>>();
 
     public Dictionary<string, float> lista_incremento_potere_eroe = new Dictionary<string, float>();
     public Dictionary<string, float> lista_decremento_potere_eroe = new Dictionary<string, float>();
 
     const int Iterations = 1000;    //encryption...non toccare
+
     void Awake(){
+        lista_descrizione_eroe_mainmenu.Add("inglese",new Dictionary<string, string>());
+        lista_descrizione_eroe_mainmenu["inglese"].Add("regina_formica_nera","Incursion! They always seem small and innocent, but in reality...");
+        lista_descrizione_eroe_mainmenu["inglese"].Add("re_mosca","A dozen are troublesome. A dozen dozens become uncontrollable.");
+        lista_descrizione_eroe_mainmenu["inglese"].Add("regina_ape","To sacrifice is to save little. To sacrifice all is to save the queen.");
+        lista_descrizione_eroe_mainmenu["inglese"].Add("regina_ragno","Don't you want to relax? Let their spider webs do the job.");
+        lista_descrizione_eroe_mainmenu["inglese"].Add("re_cavalletta","They hop quickly and sometimes uncontrollably.");
+        lista_descrizione_eroe_mainmenu["inglese"].Add("re_scarabeo","They are not just simple and noble insects. Try putting a finger between their pincers.");
+
+        lista_descrizione_eroe_mainmenu.Add("italiano",new Dictionary<string, string>());
+        lista_descrizione_eroe_mainmenu["italiano"].Add("regina_formica_nera","Sembrano piccole ed innocenti, ma in realta...");
+        lista_descrizione_eroe_mainmenu["italiano"].Add("re_mosca","Una dozzina sono un problema. Una dozzina di dozzine, diventano incontrollabili.");
+        lista_descrizione_eroe_mainmenu["italiano"].Add("regina_ape","Sacrificare poco per salvare poco. Sacrificare tutto per salvare la regina.");
+        lista_descrizione_eroe_mainmenu["italiano"].Add("regina_ragno","Non vuoi calmarti? Lascia fare ai ragni il lavoro.");
+        lista_descrizione_eroe_mainmenu["italiano"].Add("re_cavalletta","Saltellano e si muovono in maniera rapido, veloce e confusionaria.");
+        lista_descrizione_eroe_mainmenu["italiano"].Add("re_scarabeo","Pensi siano solo nobili insetti? Prova a mettere qualcosa tra le loro chele.");
+
+
+        lista_powerhero_descrizione.Add("inglese",new Dictionary<string, string>());
+        lista_powerhero_descrizione["inglese"].Add("regina_formica_nera","Invoke the Queen Ant to detroy the enemy puppets");
+        lista_powerhero_descrizione["inglese"].Add("re_mosca","Invoke the King Mos, he going around and damage all enemies puppets in the arena");
+        lista_powerhero_descrizione["inglese"].Add("regina_ape","Invoke the Queen Abe, she going around and heal all your puppets in the arena");
+        lista_powerhero_descrizione["inglese"].Add("regina_ragno","Invoke the Spider Queen Weeb, she throws webs balls that reduce the speed of enemy puppets");
+        lista_powerhero_descrizione["inglese"].Add("re_cavalletta","Invoke the King Grass, he throws balls of earth to damage enemy puppets.");
+        lista_powerhero_descrizione["inglese"].Add("re_scarabeo","Invoke the King Big to detroy the enemy puppets");
+
+        lista_powerhero_descrizione.Add("italiano",new Dictionary<string, string>());
+        lista_powerhero_descrizione["italiano"].Add("regina_formica_nera","Invoca la Regina formica per distruggere i pupetti nemici");
+        lista_powerhero_descrizione["italiano"].Add("re_mosca","Invoca il Re Mosca che, volando, infliggerà danni a tutti i pupetti nemici");
+        lista_powerhero_descrizione["italiano"].Add("regina_ape","Invoca l'Ape Regina che, volando, curera tutti i tuoi pupetti");
+        lista_powerhero_descrizione["italiano"].Add("regina_ragno","Invoca la Regina Ragno che lancerà palle di ragnatele che bloccheranno tutti i pupetti colpiti");
+        lista_powerhero_descrizione["italiano"].Add("re_cavalletta","Invoca il Re Cavalletta che lancerà palle esplosive che danneggeranno i pupetti nemici colpiti.");
+        lista_powerhero_descrizione["italiano"].Add("re_scarabeo","Invoca il Re scarabeo per distruggere i pupetti nemici");
+
+        lista_upgrade_perenni_nome.Add("inglese",new Dictionary<string, string>());
+        lista_upgrade_perenni_nome["inglese"]["costi_pupi"]="Cost Army";
+        lista_upgrade_perenni_nome["inglese"]["costi_guadagno"]="Improve earn";
+        lista_upgrade_perenni_nome["inglese"]["costi_abilita"]="Cost skills";
+        lista_upgrade_perenni_nome["inglese"]["melee_velocita_attacco"]="Melee attack speed";
+        lista_upgrade_perenni_nome["inglese"]["melee_colpiti"]="Melee More hits";
+        lista_upgrade_perenni_nome["inglese"]["melee_ignora_attacco"]="Ignore attacks";
+        lista_upgrade_perenni_nome["inglese"]["melee_dono_zanzare"]="Lifesteal";
+        lista_upgrade_perenni_nome["inglese"]["proiettili_ignora_armatura"]="Ignore Armor";
+        lista_upgrade_perenni_nome["inglese"]["proiettili_head_shot"]="Head Shot";
+        lista_upgrade_perenni_nome["inglese"]["proiettili_distanza"]="Max Distance";
+        lista_upgrade_perenni_nome["inglese"]["magia_veleno"]="Poison Spells";
+        lista_upgrade_perenni_nome["inglese"]["magia_blocco"]="Blocking Spells";
+
+        lista_upgrade_perenni_nome.Add("italiano",new Dictionary<string, string>());
+        lista_upgrade_perenni_nome["italiano"]["costi_pupi"]="Costo pupetti";
+        lista_upgrade_perenni_nome["italiano"]["costi_guadagno"]="Guadagno";
+        lista_upgrade_perenni_nome["italiano"]["costi_abilita"]="Costo abilità";
+        lista_upgrade_perenni_nome["italiano"]["melee_velocita_attacco"]="Melee: Velocità attacco";
+        lista_upgrade_perenni_nome["italiano"]["melee_colpiti"]="Melee: Numero colpi";
+        lista_upgrade_perenni_nome["italiano"]["melee_ignora_attacco"]="Melee: Ignora attacco";
+        lista_upgrade_perenni_nome["italiano"]["melee_dono_zanzare"]="Melee: Dono zanzare";
+        lista_upgrade_perenni_nome["italiano"]["proiettili_ignora_armatura"]="Frecce: Ignora armatura";
+        lista_upgrade_perenni_nome["italiano"]["proiettili_head_shot"]="Frecce: Head Shot";
+        lista_upgrade_perenni_nome["italiano"]["proiettili_distanza"]="Frecce: Massima distanza";
+        lista_upgrade_perenni_nome["italiano"]["magia_veleno"]="Magie velenose";
+        lista_upgrade_perenni_nome["italiano"]["magia_blocco"]="Magie bloccanti";
+
+        lista_abilita_id.Add("evoca_formiche","");
+        lista_abilita_id.Add("mosche_fastidiose","");
+        lista_abilita_id.Add("miele","");
+        lista_abilita_id.Add("ragnatele","");
+        lista_abilita_id.Add("velocita","");
+        lista_abilita_id.Add("armatura","");
+        lista_abilita_id.Add("zombie","");
+        lista_abilita_id.Add("resurrezione","");
+        lista_abilita_id.Add("insetto_esplosivo","");
+        lista_abilita_id.Add("insetto_esplosivo_velenoso","");
+        lista_abilita_id.Add("bombo","");
+        lista_abilita_id.Add("balestra","");
+
+        lista_abilita_nome.Add("inglese",new Dictionary<string, string>());
+        lista_abilita_nome["inglese"].Add("evoca_formiche","Summon Warrior Ants");
+        lista_abilita_nome["inglese"].Add("mosche_fastidiose","Swarm of flies");
+        lista_abilita_nome["inglese"].Add("miele","Honey");
+        lista_abilita_nome["inglese"].Add("ragnatele","Spiderweb");
+        lista_abilita_nome["inglese"].Add("velocita","Speed");
+        lista_abilita_nome["inglese"].Add("armatura","Armour");
+        lista_abilita_nome["inglese"].Add("zombie","Zombie");
+        lista_abilita_nome["inglese"].Add("resurrezione","Resurrection");
+        lista_abilita_nome["inglese"].Add("insetto_esplosivo","Explosive bug");
+        lista_abilita_nome["inglese"].Add("insetto_esplosivo_velenoso","Explosive poison bug");
+        lista_abilita_nome["inglese"].Add("bombo","Bombo catapult");
+        lista_abilita_nome["inglese"].Add("balestra","Balistic spikes");
+
+        lista_abilita_nome.Add("italiano",new Dictionary<string, string>());
+        lista_abilita_nome["italiano"].Add("evoca_formiche","Evoca Formiche Guerriere");
+        lista_abilita_nome["italiano"].Add("mosche_fastidiose","Mosche fastidiose");
+        lista_abilita_nome["italiano"].Add("miele","Miele");
+        lista_abilita_nome["italiano"].Add("ragnatele","Ragnatele");
+        lista_abilita_nome["italiano"].Add("velocita","Velocità");
+        lista_abilita_nome["italiano"].Add("armatura","Armatura");
+        lista_abilita_nome["italiano"].Add("zombie","Zombie");
+        lista_abilita_nome["italiano"].Add("resurrezione","Resurrezione");
+        lista_abilita_nome["italiano"].Add("insetto_esplosivo","Insetto Esplosivo");
+        lista_abilita_nome["italiano"].Add("insetto_esplosivo_velenoso","Insetto tossico");
+        lista_abilita_nome["italiano"].Add("bombo","Catapulta di Bombo");
+        lista_abilita_nome["italiano"].Add("balestra","Balestra di Aculei");
+
+        lista_abilita_descrizione.Add("inglese",new Dictionary<string, string>());
+        lista_abilita_descrizione["inglese"].Add("evoca_formiche","Summon 2 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
+        lista_abilita_descrizione["inglese"].Add("mosche_fastidiose","Create a swarm that moves randomly and damages everything it encounters. Flies and mosquitoes are immune.");
+        lista_abilita_descrizione["inglese"].Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end. Spiders are immune.");
+        lista_abilita_descrizione["inglese"].Add("velocita","Increase the speed of all friendly hitten unities in the area for 3 seconds + 1 for each level. It doesn't work on webbed targets.");
+        lista_abilita_descrizione["inglese"].Add("armatura","Increase the armour of all friendly hitten unities in the area for 3 seconds + 1 for each level.");
+        lista_abilita_descrizione["inglese"].Add("zombie","Summon random zombie insects. At the first level, it summons 5. At the second level, it summons 8. At the third level, it summons 10.");
+        lista_abilita_descrizione["inglese"].Add("resurrezione","Revive a fallen ally puppet. The level of the summoned puppet is equal to the level of the ability. It has no effect if there are no fallen puppets.");
+        lista_abilita_descrizione["inglese"].Add("insetto_esplosivo","Summon an explosive insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
+        lista_abilita_descrizione["inglese"].Add("insetto_esplosivo_velenoso","Summon an explosive poison insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
+        lista_abilita_descrizione["inglese"].Add("bombo","Cluster catapult that launches 5 bombs per level which explode on impact, damaging any insect in a large area hit");
+        lista_abilita_descrizione["inglese"].Add("balestra","Launches 5 spikes per level one after the other that explode on impact damaging any insects in the wide area hit.");
+        lista_abilita_descrizione["inglese"].Add("miele","Regenerate all friendly unities hitten in the area.");
+
+        lista_abilita_descrizione.Add("italiano",new Dictionary<string, string>());
+        lista_abilita_descrizione["italiano"].Add("evoca_formiche","Evoca 2 formiche guerriere per livello.");
+        lista_abilita_descrizione["italiano"].Add("mosche_fastidiose","Crea uno nugolo di moscerini che si muove in maniera random danneggiando tutto ciò che tocca. Mosche e Zanzare ne sono immuni.");
+        lista_abilita_descrizione["italiano"].Add("ragnatele","Crea una ragnatela nell'arena. Tutti i pupetti nemici colpiti, non si potranno muovere nè attaccare. I ragni ne sono immuni.");
+        lista_abilita_descrizione["italiano"].Add("velocita","Aumenta la velocità dei tuoi pupetti colpiti per 3 secondi + 1 per ogni livello. Non funziona su bersaglio bloccati da ragnatele.");
+        lista_abilita_descrizione["italiano"].Add("armatura","Aumenta l'armatura di tutti i tuoi pupetti colpiti nell'area per 3 secondi + 1 per livello.");
+        lista_abilita_descrizione["italiano"].Add("zombie","Evoca degli insetti zombie casuali alleati. Al primo livello ne evoca 5, al secondo 8 ed al terzo 10.");
+        lista_abilita_descrizione["italiano"].Add("resurrezione","Rievoca un pupetto alleato morto. Il livello del pupetto deve essere uguale al livello dell'abilitò. Se non sono morti pupetti, l'abilità non avrà effetto.");
+        lista_abilita_descrizione["italiano"].Add("insetto_esplosivo","Evoca un insetto esplosivo per livello che correrà randomicamente sulla mappa per poi esplodere, danneggiando tutti i pupetti colpiti vicino.");
+        lista_abilita_descrizione["italiano"].Add("insetto_esplosivo_velenoso","Evoca un insetto esplosivo per livello che correrà randomicamente sulla mappa per poi esplodere, avvelenando tutti i pupetti colpiti vicino.");
+        lista_abilita_descrizione["italiano"].Add("bombo","Attiva una catapulta che lancia 5 bombe per livello che esploderanno all'impatto, danneggiando tutti i pupetti nell'area colpita.");
+        lista_abilita_descrizione["italiano"].Add("balestra","Lancia 5 aculei per livello uno di seguito all'altro che esploderanno all'impatto, danneggiando tutti i pupetti nell'area colpita.");
+        lista_abilita_descrizione["italiano"].Add("miele","Rigenera tutti i pupetti alleati colpiti nell'area.");
+
         lista_premio_nome.Add("end_hero_regina_formica_nera","Black Ant");
         lista_premio_nome.Add("end_hero_re_mosca","King Moss");
         lista_premio_nome.Add("end_hero_regina_ape","Queen Abe");
@@ -99,29 +289,6 @@ public class info_comuni : MonoBehaviour
         lista_decremento_potere_eroe.Add("re_cavalletta",10f);
         lista_decremento_potere_eroe.Add("re_scarabeo",10f);
 
-        //tradurre la parte destra di questo blocco
-        lista_powerhero_descrizione.Add("regina_formica_nera","Invoke the Queen Ant to detroy the enemy puppets");
-        lista_powerhero_descrizione.Add("re_mosca","Invoke the King Mos, he going around and damage all enemies puppets in the arena");
-        lista_powerhero_descrizione.Add("regina_ape","Invoke the Queen Abe, she going around and heal all your puppets in the arena");
-        lista_powerhero_descrizione.Add("regina_ragno","Invoke the Spider Queen Weeb, she throws webs balls that reduce the speed of enemy puppets");
-        lista_powerhero_descrizione.Add("re_cavalletta","Invoke the King Grass, he throws balls of earth to damage enemy puppets.");
-        lista_powerhero_descrizione.Add("re_scarabeo","Invoke the King Big to detroy the enemy puppets");
-
-        //UPGRADE PERENNI traduerree la parte a destra di questo blocco
-        lista_upgrade_perenni_nome.Add("costi_pupi","Cost Army");
-        lista_upgrade_perenni_nome.Add("costi_guadagno","Improve earn");
-        lista_upgrade_perenni_nome.Add("costi_abilita","Cost skills");
-        lista_upgrade_perenni_nome.Add("melee_velocita_attacco","Melee attack speed");
-        lista_upgrade_perenni_nome.Add("melee_colpiti","Melee More hits");
-        lista_upgrade_perenni_nome.Add("melee_ignora_attacco","Ignore attacks");
-        lista_upgrade_perenni_nome.Add("melee_dono_zanzare","Lifesteal");
-        lista_upgrade_perenni_nome.Add("proiettili_ignora_armatura","Ignore Armor");
-        lista_upgrade_perenni_nome.Add("proiettili_head_shot","Head Shot");
-        lista_upgrade_perenni_nome.Add("proiettili_distanza","Max Distance");
-
-        lista_upgrade_perenni_nome.Add("magia_veleno","Poison Spells");
-        lista_upgrade_perenni_nome.Add("magia_blocco","Blocking Spells");
-
         lista_upgrade_perenni_max_level.Add("proiettili_ignora_armatura",4);
         lista_upgrade_perenni_max_level.Add("proiettili_head_shot",5);
         lista_upgrade_perenni_max_level.Add("proiettili_distanza",3);
@@ -136,69 +303,146 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_max_level.Add("magia_veleno",3);
         lista_upgrade_perenni_max_level.Add("magia_blocco",3);
 
+        //bisogna lasciarli
+        lista_upgrade_perenni_id.Add("costi_pupi","");
+        lista_upgrade_perenni_id.Add("costi_guadagno","");
+        lista_upgrade_perenni_id.Add("costi_abilita","");
+        lista_upgrade_perenni_id.Add("melee_velocita_attacco","");
+        lista_upgrade_perenni_id.Add("melee_colpiti","");
+        lista_upgrade_perenni_id.Add("melee_ignora_attacco","");
+        lista_upgrade_perenni_id.Add("melee_dono_zanzare","");
+        lista_upgrade_perenni_id.Add("proiettili_ignora_armatura","");
+        lista_upgrade_perenni_id.Add("proiettili_head_shot","");
+        lista_upgrade_perenni_id.Add("proiettili_distanza","");
+        lista_upgrade_perenni_id.Add("magia_veleno","Poison Spells");
+        lista_upgrade_perenni_id.Add("magia_blocco","Blocking Spells");
+
+        lista_upgrade_perenni_descrizione.Add("inglese",new Dictionary<string, Dictionary<int, string>>());
+        lista_upgrade_perenni_descrizione.Add("italiano",new Dictionary<string, Dictionary<int, string>>());
+
         //settiamo genericamente che ogni upgrade perenne ha un costo di 10 per livello che si vuole ottenere
-        foreach(KeyValuePair<string,string> attachStat in lista_upgrade_perenni_nome){
+        foreach(KeyValuePair<string,string> attachStat in lista_upgrade_perenni_id){
             lista_upgrade_perenni_costi.Add(attachStat.Key,new Dictionary<int, int>());
-            lista_upgrade_perenni_descrizione.Add(attachStat.Key,new Dictionary<int, string>());
+            lista_upgrade_perenni_descrizione["inglese"].Add(attachStat.Key,new Dictionary<int, string>());
+            lista_upgrade_perenni_descrizione["italiano"].Add(attachStat.Key,new Dictionary<int, string>());
             for (int i=1;i<=lista_upgrade_perenni_max_level[attachStat.Key];i++){
                 lista_upgrade_perenni_costi[attachStat.Key].Add(i,(10*i));
-                lista_upgrade_perenni_descrizione[attachStat.Key].Add(i,"Descrizione "+i);
+                lista_upgrade_perenni_descrizione["inglese"][attachStat.Key].Add(i,"Descrizione "+i);
+                lista_upgrade_perenni_descrizione["italiano"][attachStat.Key].Add(i,"Descrizione "+i);
             }
         }
+        
         //UPGRADE PERENNI - traduerree la parte a destra di questi blocchi
-        lista_upgrade_perenni_descrizione["costi_pupi"][1]="The puppets cost 5 less";
-        lista_upgrade_perenni_descrizione["costi_pupi"][2]="The puppets cost 10 less";
-        lista_upgrade_perenni_descrizione["costi_pupi"][3]="The puppets cost 15 less";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_pupi"][1]="The puppets cost 5 less";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_pupi"][2]="The puppets cost 10 less";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_pupi"][3]="The puppets cost 15 less";
 
-        lista_upgrade_perenni_descrizione["costi_guadagno"][1]="You earn +10 at the end of the stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][2]="You earn +20 at the end of the stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][3]="You earn +30 at the end of the stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][4]="You earn +40 at the end of the stage";
-        lista_upgrade_perenni_descrizione["costi_guadagno"][5]="You earn +50 at the end of the stage";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_guadagno"][1]="You earn +10 at the end of the stage";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_guadagno"][2]="You earn +20 at the end of the stage";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_guadagno"][3]="You earn +30 at the end of the stage";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_guadagno"][4]="You earn +40 at the end of the stage";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_guadagno"][5]="You earn +50 at the end of the stage";
 
-        lista_upgrade_perenni_descrizione["costi_abilita"][1]="Reduces the cost of abilities by 5";
-        lista_upgrade_perenni_descrizione["costi_abilita"][2]="Reduces the cost of abilities by 10";
-        lista_upgrade_perenni_descrizione["costi_abilita"][3]="Reduces the cost of abilities by 15";
-        lista_upgrade_perenni_descrizione["costi_abilita"][4]="Reduces the cost of abilities by 20";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_abilita"][1]="Reduces the cost of abilities by 5";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_abilita"][2]="Reduces the cost of abilities by 10";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_abilita"][3]="Reduces the cost of abilities by 15";
+        lista_upgrade_perenni_descrizione["inglese"]["costi_abilita"][4]="Reduces the cost of abilities by 20";
 
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][1]="Increases melee attack speed by 5%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][2]="Increases melee attack speed by 10%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][3]="Increases melee attack speed by 15%";
-        lista_upgrade_perenni_descrizione["melee_velocita_attacco"][4]="Increases melee attack speed by 20%";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_velocita_attacco"][1]="Increases melee attack speed by 5%";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_velocita_attacco"][2]="Increases melee attack speed by 10%";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_velocita_attacco"][3]="Increases melee attack speed by 15%";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_velocita_attacco"][4]="Increases melee attack speed by 20%";
 
-        lista_upgrade_perenni_descrizione["melee_colpiti"][1]="Melee attacks can hit 2 additional puppets at the same time";
-        lista_upgrade_perenni_descrizione["melee_colpiti"][2]="Melee attacks can hit 3 additional puppets at the same time";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_colpiti"][1]="Melee attacks can hit 2 additional puppets at the same time";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_colpiti"][2]="Melee attacks can hit 3 additional puppets at the same time";
 
-        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][1]="Melee puppets will ignore the first hit they receive";
-        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][2]="Melee puppets will ignore the first and second hits they receive";
-        lista_upgrade_perenni_descrizione["melee_ignora_attacco"][3]="Melee puppets will ignore the first, second, and third hits they receive";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_ignora_attacco"][1]="Melee puppets will ignore the first hit they receive";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_ignora_attacco"][2]="Melee puppets will ignore the first and second hits they receive";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_ignora_attacco"][3]="Melee puppets will ignore the first, second, and third hits they receive";
 
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][1]="Melee puppets gain 5% of their health as vitality.";
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][2]="Melee puppets gain 8% of their health as vitality.";
-        lista_upgrade_perenni_descrizione["melee_dono_zanzare"][3]="Melee puppets gain 10% of their health as vitality.";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_dono_zanzare"][1]="Melee puppets gain 5% of their health as vitality when hit enemies";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_dono_zanzare"][2]="Melee puppets gain 8% of their health as vitality when hit enemies";
+        lista_upgrade_perenni_descrizione["inglese"]["melee_dono_zanzare"][3]="Melee puppets gain 10% of their health as vitality when hit enemies";
 
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor 25%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor 50%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor 75%";
-        lista_upgrade_perenni_descrizione["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor 100%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor 25%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor 50%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor 75%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor 100%";
 
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][1]="The arrows have a 1% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][2]="The arrows have a 2% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][3]="The arrows have a 3% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][4]="The arrows have a 4% chance of killing the enemy with one shot";
-        lista_upgrade_perenni_descrizione["proiettili_head_shot"][5]="The arrows have a 5% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][1]="The arrows have a 1% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][2]="The arrows have a 2% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][3]="The arrows have a 3% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][4]="The arrows have a 4% chance of killing the enemy with one shot";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][5]="The arrows have a 5% chance of killing the enemy with one shot";
 
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][1]="Increases the maximum attack range by +1";
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][2]="Increases the maximum attack range by +2";
-        lista_upgrade_perenni_descrizione["proiettili_distanza"][3]="Increases the maximum attack range by +3";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_distanza"][1]="Increases the maximum attack range by +1";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_distanza"][2]="Increases the maximum attack range by +2";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_distanza"][3]="Increases the maximum attack range by +3";
 
-        lista_upgrade_perenni_descrizione["magia_veleno"][1]="The casted spells poison the target. The higher the level, the greater the poison";
-        lista_upgrade_perenni_descrizione["magia_veleno"][2]="The casted spells poison the target. The higher the level, the greater the poison";
-        lista_upgrade_perenni_descrizione["magia_veleno"][3]="The casted spells poison the target. The higher the level, the greater the poison";
+        lista_upgrade_perenni_descrizione["inglese"]["magia_veleno"][1]="The casted spells poison the target. The higher the level, the greater the poison";
+        lista_upgrade_perenni_descrizione["inglese"]["magia_veleno"][2]="The casted spells poison the target. The higher the level, the greater the poison";
+        lista_upgrade_perenni_descrizione["inglese"]["magia_veleno"][3]="The casted spells poison the target. The higher the level, the greater the poison";
 
-        lista_upgrade_perenni_descrizione["magia_blocco"][1]="The casted spells slow down the target. The higher the level, the longer the slowing time";
-        lista_upgrade_perenni_descrizione["magia_blocco"][2]="The casted spells slow down the target. The higher the level, the longer the slowing time";
-        lista_upgrade_perenni_descrizione["magia_blocco"][3]="The casted spells slow down the target. The higher the level, the longer the slowing time";
+        lista_upgrade_perenni_descrizione["inglese"]["magia_blocco"][1]="The casted spells slow down the target. The higher the level, the longer the slowing time";
+        lista_upgrade_perenni_descrizione["inglese"]["magia_blocco"][2]="The casted spells slow down the target. The higher the level, the longer the slowing time";
+        lista_upgrade_perenni_descrizione["inglese"]["magia_blocco"][3]="The casted spells slow down the target. The higher the level, the longer the slowing time";
+
+
+        lista_upgrade_perenni_descrizione["italiano"]["costi_pupi"][1]="I pupetti costano 5 monete in meno";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_pupi"][2]="I pupetti costano 10 monete in meno";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_pupi"][3]="I pupetti costano 15 monete in meno";
+
+        lista_upgrade_perenni_descrizione["italiano"]["costi_guadagno"][1]="Guadagno 10 monete in più alla fine di ogni stage";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_guadagno"][2]="Guadagno 20 monete in più alla fine di ogni stage";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_guadagno"][3]="Guadagno 30 monete in più alla fine di ogni stage";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_guadagno"][4]="Guadagno 40 monete in più alla fine di ogni stage";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_guadagno"][5]="Guadagno 50 monete in più alla fine di ogni stage";
+
+        lista_upgrade_perenni_descrizione["italiano"]["costi_abilita"][1]="Riduci il costo delle abilità di 5";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_abilita"][2]="Riduci il costo delle abilità di 10";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_abilita"][3]="Riduci il costo delle abilità di 15";
+        lista_upgrade_perenni_descrizione["italiano"]["costi_abilita"][4]="Riduci il costo delle abilità di 20";
+
+        lista_upgrade_perenni_descrizione["italiano"]["melee_velocita_attacco"][1]="Aumenta la velocità d'attacco corpo a corpo del 5%";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_velocita_attacco"][2]="Aumenta la velocità d'attacco corpo a corpo del 10%";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_velocita_attacco"][3]="Aumenta la velocità d'attacco corpo a corpo del 15%";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_velocita_attacco"][4]="Aumenta la velocità d'attacco corpo a corpo del 20%";
+
+        lista_upgrade_perenni_descrizione["italiano"]["melee_colpiti"][1]="Gli attacchi corpo a corpo colpiranno 2 pupetti nemici nello stesso momento.";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_colpiti"][2]="Gli attacchi corpo a corpo colpiranno 3 pupetti nemici nello stesso momento.";
+
+        lista_upgrade_perenni_descrizione["italiano"]["melee_ignora_attacco"][1]="I pupetti guerrieri, ignoreranno il primo colpo ricevuto";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_ignora_attacco"][2]="I pupetti guerrieri, ignoreranno il primo ed il secondo colpo ricevuti";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_ignora_attacco"][3]="I pupetti guerrieri, ignoreranno il primo, il secondo ed il terzo colpo ricevuti";
+
+        lista_upgrade_perenni_descrizione["italiano"]["melee_dono_zanzare"][1]="I pupetti guerrieri guadagno il 5% della loro vitalità quando colpiscono.";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_dono_zanzare"][2]="I pupetti guerrieri guadagno il 8% della loro vitalità quando colpiscono.";
+        lista_upgrade_perenni_descrizione["italiano"]["melee_dono_zanzare"][3]="I pupetti guerrieri guadagno il 10% della loro vitalità quando colpiscono.";
+
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_ignora_armatura"][1]="Le frecce ignorano l'armatura del bersaglio del 25%";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_ignora_armatura"][2]="Le frecce ignorano l'armatura del bersaglio del 50%";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_ignora_armatura"][3]="Le frecce ignorano l'armatura del bersaglio del 75%";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_ignora_armatura"][4]="Le frecce ignorano l'armatura del bersaglio del 100%";
+
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_head_shot"][1]="Le frecce hanno l'1% di possibilità di uccidere il nemico";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_head_shot"][2]="Le frecce hanno il 2% di possibilità di uccidere il nemico";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_head_shot"][3]="Le frecce hanno il 3% di possibilità di uccidere il nemico";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_head_shot"][4]="Le frecce hanno il 4% di possibilità di uccidere il nemico";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_head_shot"][5]="Le frecce hanno il 5% di possibilità di uccidere il nemico";
+
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_distanza"][1]="Aumenta la gittata massima di +1";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_distanza"][2]="Aumenta la gittata massima di +2";
+        lista_upgrade_perenni_descrizione["italiano"]["proiettili_distanza"][3]="Aumenta la gittata massima di +3";
+
+        lista_upgrade_perenni_descrizione["italiano"]["magia_veleno"][1]="Le magie lanciate, avvelenano il bersaglio. Più è alto il livello, più sarà alto il livello di avvelenamento";
+        lista_upgrade_perenni_descrizione["italiano"]["magia_veleno"][2]="Le magie lanciate, avvelenano il bersaglio. Più è alto il livello, più sarà alto il livello di avvelenamento";
+        lista_upgrade_perenni_descrizione["italiano"]["magia_veleno"][3]="Le magie lanciate, avvelenano il bersaglio. Più è alto il livello, più sarà alto il livello di avvelenamento";
+
+        lista_upgrade_perenni_descrizione["italiano"]["magia_blocco"][1]="Le amgie lanciate, rallentano il bersaglio. Più è alto il livello, più tempo saranno rallentate.";
+        lista_upgrade_perenni_descrizione["italiano"]["magia_blocco"][2]="Le amgie lanciate, rallentano il bersaglio. Più è alto il livello, più tempo saranno rallentate.";
+        lista_upgrade_perenni_descrizione["italiano"]["magia_blocco"][3]="Le amgie lanciate, rallentano il bersaglio. Più è alto il livello, più tempo saranno rallentate.";
+
+
 
         lista_upgrade_perenni_costi["costi_pupi"][1]=30;
         lista_upgrade_perenni_costi["costi_pupi"][2]=70;
@@ -248,12 +492,27 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_costi["magia_blocco"][2]=50;
         lista_upgrade_perenni_costi["magia_blocco"][3]=100;
 
-        lista_classi_nome.Add("warrior","Warrior");
-        lista_classi_nome.Add("arcer","Arcer");
-        lista_classi_nome.Add("wizard","Wizard");
+        lista_classi_nome.Add("inglese",new Dictionary<string, string>());
+        lista_classi_nome["inglese"].Add("warrior","Warrior");
+        lista_classi_nome["inglese"].Add("arcer","Arcer");
+        lista_classi_nome["inglese"].Add("wizard","Wizard");
+
+        lista_classi_nome.Add("italiano",new Dictionary<string, string>());
+        lista_classi_nome["italiano"].Add("warrior","Guerriero");
+        lista_classi_nome["italiano"].Add("arcer","Arciere");
+        lista_classi_nome["italiano"].Add("wizard","Mago");
         
         //praticamente essendo di tre livelli diversi, tanto vale fare direttamente così; Come fossero tre razze diverse a seconda del livello.
         //Domani faremo la stessa cosa per le cavalcature
+        lista_pupi_descrizione.Add("inglese",new Dictionary<string, string>());
+        lista_pupi_descrizione.Add("italiano",new Dictionary<string, string>());
+
+        lista_razza_pupi_nome.Add("inglese",new Dictionary<string, string>());
+        lista_razza_pupi_nome.Add("italiano",new Dictionary<string, string>());
+
+        lista_razza_pupi_nome_singolare.Add("inglese",new Dictionary<string, string>());
+        lista_razza_pupi_nome_singolare.Add("italiano",new Dictionary<string, string>());
+
         for (int i=1;i<=3;i++){
             //NB: Il singolare a destra è importante per definire la tipologia del pupo negli upgrade
             lista_razze_totale.Add("formiche_"+i,"formica");
@@ -263,23 +522,6 @@ public class info_comuni : MonoBehaviour
             lista_razze_totale.Add("cavallette_"+i,"cavalletta");
             lista_razze_totale.Add("scarabei_"+i,"scarabeo");
 
-            //tradurre i seguenti blocchi (a destra)
-            //Le descrizione
-            lista_pupi_descrizione.Add("formiche_"+i,"Most commons soldiers");
-            lista_pupi_descrizione.Add("mosche_"+i,"Cheap cost but frails");
-            lista_pupi_descrizione.Add("api_"+i,"When they die, they launch their stinger at some enemy");
-            lista_pupi_descrizione.Add("ragnetti_"+i,"Every time they hit, they slow down the target. They are immune to this effect from other spiders");
-            lista_pupi_descrizione.Add("cavallette_"+i,"The grasshopers are fast. They have 10% of probability miss a melee attack or a distance attack");
-            lista_pupi_descrizione.Add("scarabei_"+i,"Beetles are the most resilient race you can aspire to");
-
-            //NB: I Nomi e le descrizioni, saranno sempre al plurale
-            lista_razza_pupi_nome.Add("formiche_"+i,"Ants");     
-            lista_razza_pupi_nome.Add("mosche_"+i,"Flies");      
-            lista_razza_pupi_nome.Add("api_"+i,"Bees");          
-            lista_razza_pupi_nome.Add("ragnetti_"+i,"Spiders");  
-            lista_razza_pupi_nome.Add("cavallette_"+i,"Grasshopper");  
-            lista_razza_pupi_nome.Add("scarabei_"+i,"Beetle");  
-
             //i costi dei vari pupetti
             lista_costo_unita_razza.Add("formiche_"+i,30*i);
             lista_costo_unita_razza.Add("mosche_"+i,30*i);
@@ -287,112 +529,292 @@ public class info_comuni : MonoBehaviour
             lista_costo_unita_razza.Add("ragnetti_"+i,30*i);
             lista_costo_unita_razza.Add("cavallette_"+i,30*i);
             lista_costo_unita_razza.Add("scarabei_"+i,30*i);
+
+            lista_pupi_descrizione["inglese"].Add("formiche_"+i,"Most commons soldiers");
+            lista_pupi_descrizione["inglese"].Add("mosche_"+i,"Cheap cost but frails");
+            lista_pupi_descrizione["inglese"].Add("api_"+i,"When they die, they launch their stinger at some enemy");
+            lista_pupi_descrizione["inglese"].Add("ragnetti_"+i,"Every time they hit, they slow down the target. They are immune to this effect from other spiders");
+            lista_pupi_descrizione["inglese"].Add("cavallette_"+i,"The grasshopers are fast. They have 10% of probability miss a melee attack or a distance attack");
+            lista_pupi_descrizione["inglese"].Add("scarabei_"+i,"Beetles are the most resilient race you can aspire to");
+
+            lista_pupi_descrizione["italiano"].Add("formiche_"+i,"Soldati più comuni");
+            lista_pupi_descrizione["italiano"].Add("mosche_"+i,"Unità economiche, ma fragili");
+            lista_pupi_descrizione["italiano"].Add("api_"+i,"Quando muoiono, lanciano un pungiglione contro un nemico");
+            lista_pupi_descrizione["italiano"].Add("ragnetti_"+i,"Rallentano i nemici che colpiscono");
+            lista_pupi_descrizione["italiano"].Add("cavallette_"+i,"Unità veloci ed inoltre hanno il 10% di possibilità di schivare un attacco corpo a corpo o a distanza");
+            lista_pupi_descrizione["italiano"].Add("scarabei_"+i,"Gli scarabei sono le unità più resistenti ai danni");
+
+            //NB: I Nomi e le descrizioni, saranno sempre al plurale
+            lista_razza_pupi_nome["inglese"].Add("formiche_"+i,"Ants");     
+            lista_razza_pupi_nome["inglese"].Add("mosche_"+i,"Flies");      
+            lista_razza_pupi_nome["inglese"].Add("api_"+i,"Bees");          
+            lista_razza_pupi_nome["inglese"].Add("ragnetti_"+i,"Spiders");  
+            lista_razza_pupi_nome["inglese"].Add("cavallette_"+i,"Grasshoppers");  
+            lista_razza_pupi_nome["inglese"].Add("scarabei_"+i,"Beetles");  
+
+            //NB: I Nomi e le descrizioni, saranno sempre al plurale
+            lista_razza_pupi_nome["italiano"].Add("formiche_"+i,"Formiche");     
+            lista_razza_pupi_nome["italiano"].Add("mosche_"+i,"Mosche");      
+            lista_razza_pupi_nome["italiano"].Add("api_"+i,"Api");          
+            lista_razza_pupi_nome["italiano"].Add("ragnetti_"+i,"Ragni");  
+            lista_razza_pupi_nome["italiano"].Add("cavallette_"+i,"Cavallette");  
+            lista_razza_pupi_nome["italiano"].Add("scarabei_"+i,"Scarabei");  
+
+            lista_razza_pupi_nome_singolare["inglese"].Add("formiche_"+i,"Ant");     
+            lista_razza_pupi_nome_singolare["inglese"].Add("mosche_"+i,"Fly");      
+            lista_razza_pupi_nome_singolare["inglese"].Add("api_"+i,"Bee");          
+            lista_razza_pupi_nome_singolare["inglese"].Add("ragnetti_"+i,"Spider");  
+            lista_razza_pupi_nome_singolare["inglese"].Add("cavallette_"+i,"Grasshopper");  
+            lista_razza_pupi_nome_singolare["inglese"].Add("scarabei_"+i,"Beetle");  
+
+            lista_razza_pupi_nome_singolare["italiano"].Add("formiche_"+i,"Formica");     
+            lista_razza_pupi_nome_singolare["italiano"].Add("mosche_"+i,"Mosca");      
+            lista_razza_pupi_nome_singolare["italiano"].Add("api_"+i,"Ape");          
+            lista_razza_pupi_nome_singolare["italiano"].Add("ragnetti_"+i,"Ragno");  
+            lista_razza_pupi_nome_singolare["italiano"].Add("cavallette_"+i,"Cavalletta");  
+            lista_razza_pupi_nome_singolare["italiano"].Add("scarabei_"+i,"Scarabeo");  
         }
 
         //traduci nei blocchi le frasi lunghe (sempre a destra)
         //La lista di tutte le abilita!
-        lista_abilita_nome.Add("evoca_formiche","Summon Warrior Ants");
         lista_bool_abilita_classe.Add("evoca_formiche",true);
-        lista_abilita_descrizione.Add("evoca_formiche","Summon 2 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
         lista_abilita_cooldown.Add("evoca_formiche",new Dictionary<int, int>());
         lista_abilita_cooldown["evoca_formiche"].Add(1,15);
         lista_abilita_cooldown["evoca_formiche"].Add(2,18);
         lista_abilita_cooldown["evoca_formiche"].Add(3,20);
 
-        lista_abilita_nome.Add("mosche_fastidiose","Swarm of flies");
         lista_bool_abilita_classe.Add("mosche_fastidiose",true);
-        lista_abilita_descrizione.Add("mosche_fastidiose","Create a swarm that moves randomly and damages everything it encounters. Flies and mosquitoes are immune.");
         lista_abilita_cooldown.Add("mosche_fastidiose",new Dictionary<int, int>());
         lista_abilita_cooldown["mosche_fastidiose"].Add(1,15);
         lista_abilita_cooldown["mosche_fastidiose"].Add(2,18);
         lista_abilita_cooldown["mosche_fastidiose"].Add(3,20);
 
-        lista_abilita_nome.Add("miele","Honey");
         lista_bool_abilita_classe.Add("miele",true);
-        lista_abilita_descrizione.Add("miele","Regenerate all friendly unities hitten in the area.");
         lista_abilita_cooldown.Add("miele",new Dictionary<int, int>());
         lista_abilita_cooldown["miele"].Add(1,15);
         lista_abilita_cooldown["miele"].Add(2,18);
         lista_abilita_cooldown["miele"].Add(3,20);
 
-        lista_abilita_nome.Add("ragnatele","Spiderweb");
         lista_bool_abilita_classe.Add("ragnatele",true);
-        lista_abilita_descrizione.Add("ragnatele","Create a spiderweb in the area. All enemy hitten can't move or permorf attacks until spiderweb end. Spiders are immune.");
         lista_abilita_cooldown.Add("ragnatele",new Dictionary<int, int>());
         lista_abilita_cooldown["ragnatele"].Add(1,15);
         lista_abilita_cooldown["ragnatele"].Add(2,18);
         lista_abilita_cooldown["ragnatele"].Add(3,20);
 
-        lista_abilita_nome.Add("velocita","Speed");
         lista_bool_abilita_classe.Add("velocita",true);
-        lista_abilita_descrizione.Add("velocita","Increase the speed of all friendly hitten unities in the area for 3 seconds + 1 for each level. It doesn't work on webbed targets.");
         lista_abilita_cooldown.Add("velocita",new Dictionary<int, int>());
         lista_abilita_cooldown["velocita"].Add(1,20);
         lista_abilita_cooldown["velocita"].Add(2,20);
         lista_abilita_cooldown["velocita"].Add(3,20);
 
-        lista_abilita_nome.Add("armatura","Armour");
         lista_bool_abilita_classe.Add("armatura",true);
-        lista_abilita_descrizione.Add("armatura","Increase the armour of all friendly hitten unities in the area for 3 seconds + 1 for each level.");
         lista_abilita_cooldown.Add("armatura",new Dictionary<int, int>());
         lista_abilita_cooldown["armatura"].Add(1,20);
         lista_abilita_cooldown["armatura"].Add(2,20);
         lista_abilita_cooldown["armatura"].Add(3,20);
 
-        lista_abilita_nome.Add("zombie","Zombie");
         lista_bool_abilita_classe.Add("zombie",false);
-        lista_abilita_descrizione.Add("zombie","Summon random zombie insects. At the first level, it summons 5. At the second level, it summons 8. At the third level, it summons 10.");
         lista_abilita_cooldown.Add("zombie",new Dictionary<int, int>());
         lista_abilita_cooldown["zombie"].Add(1,30);
         lista_abilita_cooldown["zombie"].Add(2,30);
         lista_abilita_cooldown["zombie"].Add(3,30);
 
-        lista_abilita_nome.Add("resurrezione","Resurrection");
         lista_bool_abilita_classe.Add("resurrezione",false);
-        lista_abilita_descrizione.Add("resurrezione","Revive a fallen ally puppet. The level of the summoned puppet is equal to the level of the ability. It has no effect if there are no fallen puppets.");
         lista_abilita_cooldown.Add("resurrezione",new Dictionary<int, int>());
         lista_abilita_cooldown["resurrezione"].Add(1,20);
         lista_abilita_cooldown["resurrezione"].Add(2,30);
         lista_abilita_cooldown["resurrezione"].Add(3,40);
 
-        lista_abilita_nome.Add("insetto_esplosivo","Explosive bug");
         lista_bool_abilita_classe.Add("insetto_esplosivo",false);
-        lista_abilita_descrizione.Add("insetto_esplosivo","Summon an explosive insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo",new Dictionary<int, int>());
         lista_abilita_cooldown["insetto_esplosivo"].Add(1,20);
         lista_abilita_cooldown["insetto_esplosivo"].Add(2,30);
         lista_abilita_cooldown["insetto_esplosivo"].Add(3,40);
 
-        lista_abilita_nome.Add("insetto_esplosivo_velenoso","Explosive poison bug");
         lista_bool_abilita_classe.Add("insetto_esplosivo_velenoso",false);
-        lista_abilita_descrizione.Add("insetto_esplosivo_velenoso","Summon an explosive poison insect per level that will run randomly on the map and then explode, damaging all nearby insects.");
         lista_abilita_cooldown.Add("insetto_esplosivo_velenoso",new Dictionary<int, int>());
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(1,20);
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(2,30);
         lista_abilita_cooldown["insetto_esplosivo_velenoso"].Add(3,40);
-
-        lista_abilita_nome.Add("bombo","Bombo catapult");
         lista_bool_abilita_classe.Add("bombo",false);
-        lista_abilita_descrizione.Add("bombo","Cluster catapult that launches 5 bombs per level which explode on impact, damaging any insect in a large area hit");
         lista_abilita_cooldown.Add("bombo",new Dictionary<int, int>());
         lista_abilita_cooldown["bombo"].Add(1,20);
         lista_abilita_cooldown["bombo"].Add(2,30);
         lista_abilita_cooldown["bombo"].Add(3,40);
 
-        lista_abilita_nome.Add("balestra","Balistic spikes");
         lista_bool_abilita_classe.Add("balestra",false);
-        lista_abilita_descrizione.Add("balestra","Launches 5 spikes per level one after the other that explode on impact damaging any insects in the wide area hit.");
         lista_abilita_cooldown.Add("balestra",new Dictionary<int, int>());
         lista_abilita_cooldown["balestra"].Add(1,20);
         lista_abilita_cooldown["balestra"].Add(2,30);
         lista_abilita_cooldown["balestra"].Add(3,40);
-
 
         //settiamo genericamente che ogni abilità ha un cooldown di partenza uguale alla metà di un normale cooldown
         foreach(KeyValuePair<string,Dictionary<int,int>> attachStat in lista_abilita_cooldown){
             lista_abilita_cooldown_partenza.Add(attachStat.Key,new Dictionary<int, int>());
             for (int i=1;i<=3;i++){
                 lista_abilita_cooldown_partenza[attachStat.Key].Add(i,attachStat.Value[i]/2);
+            }
+        }
+
+        if (!PlayerPrefs.HasKey("lingua")){PlayerPrefs.SetString("lingua","inglese");}
+        setta_lingua(PlayerPrefs.GetString("lingua"));
+    }
+
+    public void setta_lingua(string lingua){
+        print ("lingua: "+lingua);
+        PlayerPrefs.SetString("lingua",lingua);
+
+        if (SceneManager.GetActiveScene().name=="upgrade"){
+            upgrade.cambia_lingua();
+        }
+
+        switch (lingua){
+            case "italiano":{
+                switch (SceneManager.GetActiveScene().name){
+                    case "mainmenu":{
+                        testo_mm_footer_diritti.SetText("Tutti i diritti riservati. Creato da Eros Cappello e Mauro \"Emme\" Forte");
+                        bottone_mm_continue_game.SetText("Continua");
+                        bottone_mm_new_game.SetText("Nuova partita");
+                        bottone_mm_quit.SetText("Esci");
+                        testo_mm_choose.SetText("Scegli il tuo conquistatore");
+                        titolo_upgrade_perenni.SetText("Ricompense Infinite");
+                        break;
+                    }
+                    case "game":{
+                        testo_stage.SetText("Livello");
+                        testo_game_pause.SetText("Pausa");
+                        bottone_game_continue.SetText("Continua");
+                        bottone_game_mainmenu.SetText("Menu principale");
+                        bottone_game_opzioni.SetText("Opzioni");
+
+                        testo_game_opz_principale.SetText("I tuoi progressi verranno salvati automaticamente DOPO la battaglia.\n\nSe ritorni ora al menu principale, perderei gli upgrade accumulati durante la battaglia.\n\nSei sicuro?");
+                        bottone_trad_yes.SetText("Si");
+                        bottone_trad_no.SetText("No");
+
+                        testo_game_youwin.SetText("Hai Vinto");
+                        bottone_game_nextstage.SetText("Prossimo livello");
+
+                        testo_game_youlose.SetText("Hai Perso");
+                        bottone_game_restart.SetText("Ricomincia");
+                        break;
+                    }
+                    case "upgrade":{
+                        testo_upgrade_army.SetText("ESERCITO");
+                        testo_upgrade_gold.SetText("Monete");
+                        testo_upgrade_improveyourarmy.SetText("Migliora il tuo esercito");
+                        testo_upgrade_lev1.SetText("Liv 1");
+                        testo_upgrade_lev2.SetText("Liv 2");
+                        testo_upgrade_lev3.SetText("Liv 3");
+                        testo_upgrade_upgrades.SetText("POTENZIAMENTI");
+                        testo_upgrade_reward.SetText("Scegli la Ricompensa");
+                        testo_upgrade_choose1.SetText("SCEGLI");
+                        testo_upgrade_choose2.SetText("SCEGLI");
+                        testo_upgrade_choose3.SetText("SCEGLI");
+                        testo_upgrade_puppetsupgrades.SetText("Potenziamenti Pupetti");
+                        testo_upgrade_armyupgrades.SetText("Potenziamento Esercito");
+                        testo_upgrade_tyrantupgrades.SetText("Potenziamento Tiranno");
+
+                        testo_upgrade_d_nome_abilita_distancedamage.SetText("Danno Distanza");
+                        testo_upgrade_d_nome_abilita_food.SetText("Cibo");
+                        testo_upgrade_d_nome_abilita_health.SetText("Salute");
+                        testo_upgrade_d_nome_abilita_herocooldown.SetText("Cooldown Eroe");
+                        testo_upgrade_d_nome_abilita_herodamage.SetText("Danno Eroe");
+                        testo_upgrade_d_nome_abilita_herofury.SetText("Furia Eroe");
+                        testo_upgrade_d_nome_abilita_meleedamage.SetText("Danno\ncorpo a corpo");
+                        testo_upgrade_d_nome_abilita_randomrace.SetText("Razza Random");
+                        testo_upgrade_d_nome_abilita_rndheroability.SetText("Abilità Eroe Random");
+                        testo_upgrade_d_nome_abilita_rndul1.SetText("Unità Random livello 1");
+                        testo_upgrade_d_nome_abilita_rndul2.SetText("Unità Random livello 2");
+                        testo_upgrade_d_nome_abilita_rndul3.SetText("Unità Random livello 3");
+                        testo_upgrade_d_nome_abilita_skillscooldown.SetText("Cooldown Abilità");
+                        testo_upgrade_d_nome_abilita_spelldamage.SetText("Danno Magie");
+                        testo_upgrade_d_nome_abilita_upgnut.SetText("Sblocca prossimo livello unità");
+
+                        testo_game_pause.SetText("Pausa");
+                        bottone_game_continue.SetText("Continua");
+                        bottone_game_mainmenu.SetText("Menu principale");
+                        bottone_game_opzioni.SetText("Opzioni");
+
+                        testo_game_opz_principale.SetText("I tuoi progressi sono stati salvati.\n\nVuoi tornare al menu principale?");
+                        bottone_trad_yes.SetText("Si");
+                        bottone_trad_no.SetText("No");
+                        break;
+                    }
+                }
+                break;
+            }
+            default:{
+                switch (SceneManager.GetActiveScene().name){
+                    case "mainmenu":{
+                        testo_mm_footer_diritti.SetText("All Rights reserved. Created by Eros Cappello and Mauro \"Emme\" Forte");
+                        bottone_mm_continue_game.SetText("Continue Game");
+                        bottone_mm_new_game.SetText("New Game");
+                        bottone_mm_quit.SetText("Quit");
+                        testo_mm_choose.SetText("Choose your Conquerer");
+                        titolo_upgrade_perenni.SetText("Infinity Rewards");
+                        break;
+                    }
+                    case "game":{
+                        testo_stage.SetText("Stage");
+                        testo_game_pause.SetText("Pause");
+                        bottone_game_continue.SetText("Continue");
+                        bottone_game_mainmenu.SetText("Main Menu");
+                        bottone_game_opzioni.SetText("Options");
+
+                        testo_game_opz_principale.SetText("Your progress will be automatically saved AFTER the battle.\n\nIf you will come back on the main menu during battle you may lost your upgrade.\n\nAre you sure?");
+                        bottone_trad_yes.SetText("Yes");
+                        bottone_trad_no.SetText("No");
+                        testo_game_youwin.SetText("You Win");
+                        bottone_game_nextstage.SetText("Next Stage");
+
+                        testo_game_youlose.SetText("You Lose");
+                        bottone_game_restart.SetText("Restart");
+                        break;
+                    }
+                    case "upgrade":{
+                        testo_upgrade_army.SetText("ARMY");
+                        testo_upgrade_gold.SetText("Gold");
+                        testo_upgrade_improveyourarmy.SetText("Improve your army");
+                        testo_upgrade_lev1.SetText("Lev 1");
+                        testo_upgrade_lev2.SetText("Lev 2");
+                        testo_upgrade_lev3.SetText("Lev 3");
+                        testo_upgrade_upgrades.SetText("UPGRADES");
+                        testo_upgrade_reward.SetText("Choose Your Reward");
+                        testo_upgrade_choose1.SetText("CHOOSE");
+                        testo_upgrade_choose2.SetText("CHOOSE");
+                        testo_upgrade_choose3.SetText("CHOOSE");
+                        testo_upgrade_puppetsupgrades.SetText("Puppets upgrades");
+                        testo_upgrade_armyupgrades.SetText("Army upgrades");
+                        testo_upgrade_tyrantupgrades.SetText("Tyrant upgrades");
+
+                        testo_upgrade_d_nome_abilita_distancedamage.SetText("Distance Damage");
+                        testo_upgrade_d_nome_abilita_food.SetText("Food");
+                        testo_upgrade_d_nome_abilita_health.SetText("Health");
+                        testo_upgrade_d_nome_abilita_herocooldown.SetText("Hero Cooldown");
+                        testo_upgrade_d_nome_abilita_herodamage.SetText("Hero damage");
+                        testo_upgrade_d_nome_abilita_herofury.SetText("Hero Fury");
+                        testo_upgrade_d_nome_abilita_meleedamage.SetText("Melee Damage");
+                        testo_upgrade_d_nome_abilita_randomrace.SetText("Random Race");
+                        testo_upgrade_d_nome_abilita_rndheroability.SetText("Random Hero Ability");
+                        testo_upgrade_d_nome_abilita_rndul1.SetText("Random Unit Level 1");
+                        testo_upgrade_d_nome_abilita_rndul2.SetText("Random Unit Level 2");
+                        testo_upgrade_d_nome_abilita_rndul3.SetText("Random Unit Level 3");
+                        testo_upgrade_d_nome_abilita_skillscooldown.SetText("Skills Cooldown");
+                        testo_upgrade_d_nome_abilita_spelldamage.SetText("Spell Damage");
+                        testo_upgrade_d_nome_abilita_upgnut.SetText("Upgrade next unity tier");
+
+
+                        testo_game_pause.SetText("Pause");
+                        bottone_game_continue.SetText("Continue");
+                        bottone_game_mainmenu.SetText("Main Menu");
+                        bottone_game_opzioni.SetText("Options");
+                        bottone_trad_yes.SetText("Yes");
+                        bottone_trad_no.SetText("No");
+                        testo_game_opz_principale.SetText("Your progress will be automatically saved after the battle.\n\nIf you will come back on the main menu during battle you may lost your upgrade.\n\nAre you sure?");
+                        break;
+                    }
+                }
+                break;
             }
         }
     }

@@ -213,7 +213,6 @@ public class mainmenu : MonoBehaviour
             case "regina_formica_nera":{
                 id_abilita="evoca_formiche";
                 nome="Black Ant";
-                descrizione="Incursion! They always seem small and innocent, but in reality...";
                 lista_pupetti.Add("formica_warrior_1",6);
                 lista_pupetti.Add("formica_arcer_1",2);
                 lista_razze_sbloccate.Add("formiche_1",1);
@@ -224,7 +223,6 @@ public class mainmenu : MonoBehaviour
             case "re_mosca":{
                 id_abilita="mosche_fastidiose";
                 nome="King Fly";
-                descrizione="A dozen are troublesome. A dozen dozens become uncontrollable.";
                 lista_pupetti.Add("mosca_warrior_1",12);
                 lista_pupetti.Add("mosca_arcer_1",8);
                 lista_pupetti.Add("mosca_wizard_1",4);
@@ -234,7 +232,6 @@ public class mainmenu : MonoBehaviour
             case "regina_ape":{
                 id_abilita="miele";
                 nome="Queen Bee";
-                descrizione="To sacrifice is to save little. To sacrifice all is to save the queen.";
                 lista_pupetti.Add("ape_warrior_1",6);
                 lista_pupetti.Add("ape_arcer_1",3);
                 lista_razze_sbloccate.Add("api_1",2);
@@ -243,7 +240,6 @@ public class mainmenu : MonoBehaviour
             case "regina_ragno":{
                 id_abilita="ragnatele";
                 nome="Queen Spider";
-                descrizione="Don't you want to relax? Let their spider webs do the job.";
                 lista_pupetti.Add("ragnetto_warrior_1",4);
                 lista_pupetti.Add("ragnetto_arcer_1",4);
                 lista_pupetti.Add("ragnetto_wizard_1",4);
@@ -253,7 +249,6 @@ public class mainmenu : MonoBehaviour
             case "re_cavalletta":{
                 id_abilita="velocita";
                 nome="King Grasshopper";
-                descrizione="They hop quickly and sometimes uncontrollably.";
                 lista_pupetti.Add("cavalletta_warrior_1",5);
                 lista_pupetti.Add("cavalletta_arcer_1",2);
                 lista_razze_sbloccate.Add("cavallette_1",1);
@@ -262,19 +257,19 @@ public class mainmenu : MonoBehaviour
             case "re_scarabeo":{
                 id_abilita="armatura";
                 nome="King Beetle";
-                descrizione="They are not just simple and noble insects. Try putting a finger between their pincers.";
                 lista_pupetti.Add("scarabeo_warrior_1",8);
                 lista_razze_sbloccate.Add("scarabei_1",1);
                 break;
             }
         }
+        descrizione=info_comuni.lista_descrizione_eroe_mainmenu[PlayerPrefs.GetString("lingua")][id_eroe];
 
         lista_abilita.Add(id_abilita,1);
         txt_nome_eroe.SetText(nome);
         txt_descrizione_eroe.SetText(descrizione);
 
-        txt_nome_abilita.SetText(info_comuni.lista_abilita_nome[id_abilita]);
-        txt_descrizione_abilita.SetText(info_comuni.lista_abilita_descrizione[id_abilita]);
+        txt_nome_abilita.SetText(info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][id_abilita]);
+        txt_descrizione_abilita.SetText(info_comuni.lista_abilita_descrizione[PlayerPrefs.GetString("lingua")][id_abilita]);
 
         nascondi_eroi();
         lista_obj_eroi[id_eroe].SetActive(true);
@@ -335,7 +330,7 @@ public class mainmenu : MonoBehaviour
         num_gemme-=costo;
         lista_upgrade_perenni_liv[upgrade]++;
         txt_num_gemme.SetText(num_gemme.ToString());
-        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_id){
             aggiorna_upgrade_perenne(attachStat.Key);
         }
         salva_file_info_partite();
@@ -368,7 +363,7 @@ public class mainmenu : MonoBehaviour
     }
 
     private void carica_info_partite(){
-        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_id){
             lista_upgrade_perenni_liv.Add(attachStat.Key,0);
         }
 
@@ -427,7 +422,7 @@ public class mainmenu : MonoBehaviour
             foreach (Transform g2 in g.transform){
                 switch (g2.name){
                     case "nome_upgrade":{//mettiamolo diretto perchè il nome non cambierà mai
-                        g2.transform.GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_upgrade_perenni_nome[upgrade_temp]);
+                        g2.transform.GetComponent<TMPro.TextMeshProUGUI>().SetText(info_comuni.lista_upgrade_perenni_nome[PlayerPrefs.GetString("lingua")][upgrade_temp]);
                         break;
                     }
                     case "descrizione_upgrade":{
@@ -460,7 +455,7 @@ public class mainmenu : MonoBehaviour
                 }
             }
         }
-        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_id){
             aggiorna_upgrade_perenne(attachStat.Key);
         }
         txt_num_gemme.SetText(num_gemme.ToString());
@@ -469,7 +464,7 @@ public class mainmenu : MonoBehaviour
     private void aggiorna_upgrade_perenne(string upgrade){
         int livello=lista_upgrade_perenni_liv[upgrade];
         if (livello<info_comuni.lista_upgrade_perenni_max_level[upgrade]){
-            lista_txt_descrizione_upgrade_perenne[upgrade].SetText(info_comuni.lista_upgrade_perenni_descrizione[upgrade][livello+1]);
+            lista_txt_descrizione_upgrade_perenne[upgrade].SetText(info_comuni.lista_upgrade_perenni_descrizione[PlayerPrefs.GetString("lingua")][upgrade][livello+1]);
             lista_txt_costo_upgrade_perenne[upgrade].SetText("Cost:\n"+info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1].ToString());
             if (info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1]>num_gemme){
                 //lista_btn_bottone_upgrade_perenne[upgrade].interactable=false;

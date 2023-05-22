@@ -506,7 +506,7 @@ public class init : MonoBehaviour
         if (tempo_summoning>0){
             bool_fine_partita=false;
             tempo_summoning-=(1*Time.deltaTime);
-            print (tempo_summoning);
+            //print (tempo_summoning);
             return;
         }
 
@@ -577,9 +577,18 @@ public class init : MonoBehaviour
             }
             salva_file_info_partite();  //solo per il denaro...
 
-            txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
-
-            txt_denaro_guadagnato.SetText("You have earned "+denaro_guadagnato+" gold!");
+            switch (PlayerPrefs.GetString("lingua")){
+                case "italiano":{
+                    txt_ondata_vittoria.SetText("Livello "+num_ondata+" completato!");
+                    txt_denaro_guadagnato.SetText("Hai guadagnato "+denaro_guadagnato+" monete!");
+                    break;
+                }
+                default:{
+                    txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
+                    txt_denaro_guadagnato.SetText("You have earned "+denaro_guadagnato+" gold!");
+                    break;
+                }
+            }
             foreach(KeyValuePair<int,int> attachStat in lp_buoni){
                 if (!lp_totali_basic_rule[attachStat.Value].bool_morto){
                     lp_totali_basic_rule[attachStat.Value].esulta();
@@ -641,7 +650,17 @@ public class init : MonoBehaviour
             File.Delete(path);        //poi lo cancelleremo quando non saremo in pieno debug
 
             int num_gemme_guadagnate=num_ondata;
-            testo_gemme_guadagnate.SetText("You earn "+num_gemme_guadagnate+" gems");
+
+            switch (PlayerPrefs.GetString("lingua")){
+                case "italiano":{
+                    testo_gemme_guadagnate.SetText("Hai guadagnato "+num_gemme_guadagnate+" gemme");
+                    break;
+                }
+                default:{
+                    testo_gemme_guadagnate.SetText("You earn "+num_gemme_guadagnate+" gems");
+                    break;
+                }
+            }
 
             num_gemme+=num_gemme_guadagnate;
             num_gemme_totali+=num_gemme_guadagnate;
@@ -696,7 +715,7 @@ public class init : MonoBehaviour
             switch (lista_abilita_id[int_abilita]){
                 default:{
                     string testo="";
-                    testo+="Select where want to use "+info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita]];
+                    testo+="Select where want to use "+info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][lista_abilita_id[int_abilita]];
                     testo+="\n\nPress ESC to cancel";
                     //txt_desc_abilita.SetText(testo);
                     break;
@@ -1259,7 +1278,7 @@ public class init : MonoBehaviour
             int int_abilita=int.Parse(obj.name.Replace("abilita_",""));
             if (int_abilita_scelta==0){
                 int liv=lista_abilita_livello[int_abilita];
-                string testo=info_comuni.lista_abilita_nome[lista_abilita_id[int_abilita]]+" liv "+liv+"\n"+info_comuni.lista_abilita_descrizione[lista_abilita_id[int_abilita]];
+                string testo=info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][lista_abilita_id[int_abilita]]+" liv "+liv+"\n"+info_comuni.lista_abilita_descrizione[PlayerPrefs.GetString("lingua")][lista_abilita_id[int_abilita]];
                 cont_descrizione_volante.SetActive(true);
                 abilita_temp_mouse=int_abilita;
                 //txt_desc_abilita.SetText(testo);
@@ -1270,7 +1289,7 @@ public class init : MonoBehaviour
                 setta_cerchietto_abilita(int_abilita,"blu");
             }
         } else if (obj.name=="img_skull"){
-            txt_descrizione_volante.text=info_comuni.lista_powerhero_descrizione[id_hero];
+            txt_descrizione_volante.text=info_comuni.lista_powerhero_descrizione[PlayerPrefs.GetString("lingua")][id_hero];
             cont_descrizione_volante.SetActive(true);
         }
     }
@@ -1387,12 +1406,13 @@ public class init : MonoBehaviour
                                             if (Random.Range(1,101)>10){
                                                 calcola_danno_combattimento(id_attaccante, attachStat.Key);
                                             } else {
-                                                print ("cavalletta schiva on melee!");
+                                                //print ("cavalletta schiva on melee!");
                                                 lp_totali_basic_rule[attachStat.Key].movimento_zigzag(1);
                                             }
                                         }
-                                    } else {lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco--;
-                                        print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco+") --- ("+lp_totali[attachStat.Key].name+")");
+                                    } else {
+                                        lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco--;
+                                        //print ("incredibile! ignoro l'attacco!!! ("+lp_totali_basic_rule[attachStat.Key].up_melee_ignora_attacco+") --- ("+lp_totali[attachStat.Key].name+")");
                                     }
                                     if (lp_totali_basic_rule[attachStat.Key].razza!="mosca"){
                                         num_colpire--;
@@ -1527,7 +1547,7 @@ public class init : MonoBehaviour
     }
 
     private void carica_info_partite(){
-        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_id){
             lista_upgrade_perenni_liv.Add(attachStat.Key,0);
         }
 

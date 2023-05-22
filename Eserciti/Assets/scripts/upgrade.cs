@@ -14,6 +14,7 @@ using Spine.Unity;
 
 public class upgrade : MonoBehaviour
 {   
+    public GameObject pan_upgrades;     //servirà per prendere tutti i testi dei bottoni per cambiarli... da "upgrade" alla loro lingua...
     public GameObject pannello_opzioni;
 
     private bool bool_in_uscita=false;
@@ -144,6 +145,7 @@ public class upgrade : MonoBehaviour
 
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_upgrade_costi = new Dictionary<string, TMPro.TextMeshProUGUI>();
     private Dictionary<string, Button> lista_B_upgrade_bottoni = new Dictionary<string, Button>();
+    private Dictionary<int, TMPro.TextMeshProUGUI> lista_B_upgrade_testo_lingua = new Dictionary<int, TMPro.TextMeshProUGUI>();
     private Dictionary<string, TMPro.TextMeshProUGUI> lista_txt_upgrade_descrizione = new Dictionary<string, TMPro.TextMeshProUGUI>();
 
     private Dictionary<string, int> livelli_attuali_upgrade = new Dictionary<string, int>();
@@ -154,6 +156,8 @@ public class upgrade : MonoBehaviour
     private int valore_monete_premio=100;
 
     private Dictionary<string, int> lista_upgrade_perenni_liv = new Dictionary<string, int>();
+
+    private int num_bottoni=0;
 
     // Start is called before the first frame update
     void Start(){
@@ -216,17 +220,21 @@ public class upgrade : MonoBehaviour
             livelli_attuali_upgrade.Add(attachStat.Key,0);
         }
 
+        foreach (Transform child in pan_upgrades.transform.GetComponentsInChildren<Transform>()) {
+            if (child.name.Contains("txt_bottone_upgrade")){
+                num_bottoni++;
+                lista_B_upgrade_testo_lingua.Add(num_bottoni,child.GetComponent<TMPro.TextMeshProUGUI>());
+            }
+        }
+        
+
         denaro=10000;   //è un fake perchè tanto andrà a prenderlo da xml...puoi cancellare quando vuoi
 
         //da quì, andremo a prendere da dove si trovano, tutte le altre informazioni
         carica_info_xml();  //effettivamente e da quì che carichiamo le info importanti...
 
-        txt_next_stage.SetText("Next: "+num_ondata);
-
-        //settaggi iniziali
-        foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
-            check_abilita(attachStat.Key);
-        }
+        //settaggi iniziali + eventuale cambio di lingua
+        cambia_lingua();
 
         txt_denaro.SetText(denaro.ToString());
 
@@ -245,6 +253,33 @@ public class upgrade : MonoBehaviour
             sblocca_unita_razza(attachStat.Key,attachStat.Value);
         }
         btn_upgrade_pupetti.onClick.Invoke();
+    }
+
+    public void cambia_lingua(){
+        //txt_next_stage.SetText("Next: "+num_ondata);
+        string testo_bottoni="";
+        switch (PlayerPrefs.GetString("lingua")){
+            case "italiano":{
+                testo_bottoni="Potenzia!";
+                txt_next_stage.SetText("Prossimo livello: "+num_ondata);
+                break;
+            }
+            default:{
+                testo_bottoni="Upgrade!";
+                txt_next_stage.SetText("Next stage: "+num_ondata);
+                break;
+            }
+        }
+        for (int i=1;i<=lista_B_upgrade_testo_lingua.Count();i++){
+            lista_B_upgrade_testo_lingua[i].SetText(testo_bottoni);
+        }
+        //print (lista_B_upgrade_testo_lingua.Count());
+        check_all_abilities();
+    }
+    public void check_all_abilities(){
+        foreach(KeyValuePair<string,Button> attachStat in lista_B_upgrade_bottoni){
+            check_abilita(attachStat.Key);
+        }
     }
 
     public void attiva_pannello_opzioni(){
@@ -362,7 +397,17 @@ public class upgrade : MonoBehaviour
     public void click_upgrade_number(int numero){
         f_audio.play_audio("denaro_"+Random.Range(1,4));
         cont_scrigno.SetActive(false);
-        testo_reward.SetText("Choose Your Upgrade");
+        
+        switch (PlayerPrefs.GetString("lingua")){
+            case "italiano":{
+                testo_reward.SetText("Scegli il Potenziamento");
+                break;
+            }
+            default:{
+                testo_reward.SetText("Choose Your Upgrade");
+                break;
+            }
+        }
         string premio=lista_premi_settati[numero];
         string tipo;
         string[] splitArray;
@@ -489,7 +534,7 @@ public class upgrade : MonoBehaviour
                 break;
             }
             case 5:{
-                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_id){
                     if (!lista_abilita.ContainsKey(attachStat.Key)){
                         if (!info_comuni.lista_bool_abilita_classe[attachStat.Key]){
                             if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
@@ -545,7 +590,7 @@ public class upgrade : MonoBehaviour
                 lista_random.Remove(premio);
                 lista_random.Add("denaro-"+livello,1);
                 
-                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_id){
                     if (!lista_abilita.ContainsKey(attachStat.Key)){
                         if (!info_comuni.lista_bool_abilita_classe[attachStat.Key]){
                             if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
@@ -572,8 +617,19 @@ public class upgrade : MonoBehaviour
             cont_upgrade_random_spell.SetActive(false);
             lista_B_upgrade_bottoni["random_spell"].interactable=false;
             lista_B_upgrade_bottoni["random_spell"].gameObject.SetActive(false);
-            lista_txt_upgrade_descrizione["random_spell"].SetText("You have unlocked all abilities or don't have space for new one.");
-            lista_txt_upgrade_costi["random_spell"].SetText("Cost: /");
+
+            switch (PlayerPrefs.GetString("lingua")){
+                case "italiano":{
+                    lista_txt_upgrade_descrizione["random_spell"].SetText("Hai sbloccato tutte le abilità o non hai spazio per una nuova.");
+                    lista_txt_upgrade_costi["random_spell"].SetText("Costo: /");
+                    break;
+                }
+                default:{
+                    lista_txt_upgrade_descrizione["random_spell"].SetText("You have unlocked all abilities or don't have space for new one.");
+                    lista_txt_upgrade_costi["random_spell"].SetText("Cost: /");
+                    break;
+                }
+            }
         }
     }
 
@@ -592,12 +648,29 @@ public class upgrade : MonoBehaviour
             cont_upgrade_random_race.SetActive(false);
             lista_B_upgrade_bottoni["random_race"].interactable=false;
             lista_B_upgrade_bottoni["random_race"].gameObject.SetActive(false);
-            string testo="You have unlocked all races of level";
-            switch (tier_unity_sbloccato){
-                case 1:{testo+=" 1";break;}
-                case 2:{testo+="s 1 and 2";break;}
-                case 3:{testo+="s 1, 2 and 3";break;}
+            string testo="";
+
+            switch (PlayerPrefs.GetString("lingua")){
+                case "italiano":{
+                    testo="Hai sbloccatto tutte le razze di livello";
+                    switch (tier_unity_sbloccato){
+                        case 1:{testo+=" 1";break;}
+                        case 2:{testo+=" 1 e 2";break;}
+                        case 3:{testo+=" 1, 2 e 3";break;}
+                    }
+                    break;
+                }
+                default:{
+                    testo="You have unlocked all races of level";
+                    switch (tier_unity_sbloccato){
+                        case 1:{testo+=" 1";break;}
+                        case 2:{testo+="s 1 and 2";break;}
+                        case 3:{testo+="s 1, 2 and 3";break;}
+                    }
+                    break;
+                }
             }
+
             lista_txt_upgrade_descrizione["random_race"].SetText(testo);
         }
         else {cont_upgrade_random_race.SetActive(true);}
@@ -638,8 +711,27 @@ public class upgrade : MonoBehaviour
                     lista_premi_settati_num_pupi.Add(num_cont_premio,num_pupi);
                     lista_premi_settati_monete.Add(num_cont_premio,monete);
 
-                    titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" lvl "+livello_pupo;
-                    descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+                    titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[PlayerPrefs.GetString("lingua")][classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[PlayerPrefs.GetString("lingua")][razza_pupo]+" lvl "+livello_pupo;
+
+                    switch (PlayerPrefs.GetString("lingua")){
+                        case "italiano":{
+                            titolo="+"+num_pupi+" "+info_comuni.lista_razza_pupi_nome_singolare[PlayerPrefs.GetString("lingua")][razza_pupo]+" "+info_comuni.lista_classi_nome[PlayerPrefs.GetString("lingua")][classe_pupo]+" lvl "+livello_pupo;
+                            break;
+                        }
+                        default:{
+                            titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[PlayerPrefs.GetString("lingua")][classe_pupo]+" "+info_comuni.lista_razza_pupi_nome_singolare[PlayerPrefs.GetString("lingua")][razza_pupo]+" lvl "+livello_pupo;
+                            /*
+                            if (num_pupi==1){
+                                titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[PlayerPrefs.GetString("lingua")][classe_pupo]+" "+info_comuni.lista_razza_pupi_nome_singolare[PlayerPrefs.GetString("lingua")][razza_pupo]+" lvl "+livello_pupo;
+                            } else {
+                                titolo="+"+num_pupi+" "+info_comuni.lista_classi_nome[PlayerPrefs.GetString("lingua")][classe_pupo]+" "+info_comuni.lista_razza_pupi_nome[PlayerPrefs.GetString("lingua")][razza_pupo]+" lvl "+livello_pupo;
+                            }
+                            */
+                            break;
+                        }
+                    }
+
+                    descrizione=info_comuni.lista_pupi_descrizione[PlayerPrefs.GetString("lingua")][razza_pupo];
 
                     string string_temp_img="reward_pupi_2/skeleton-Lv"+livello_pupo+"_";
                     switch (classe_pupo){
@@ -656,8 +748,19 @@ public class upgrade : MonoBehaviour
                 case "nrazza":{
                     int livello_razza = int.Parse(splitArray[2]);
                     string razza_pupo = splitArray[1];
-                    titolo="Unlock "+info_comuni.lista_razza_pupi_nome[razza_pupo]+" (Level "+livello_razza+")";
-                    descrizione=info_comuni.lista_pupi_descrizione[razza_pupo];
+
+                    switch (PlayerPrefs.GetString("lingua")){
+                        case "italiano":{
+                            titolo="Sblocca "+info_comuni.lista_razza_pupi_nome[PlayerPrefs.GetString("lingua")][razza_pupo]+" (Livello "+livello_razza+")";
+                            break;
+                        }
+                        default:{
+                            titolo="Unlock "+info_comuni.lista_razza_pupi_nome[PlayerPrefs.GetString("lingua")][razza_pupo]+" (Level "+livello_razza+")";
+                            break;
+                        }
+                    }
+
+                    descrizione=info_comuni.lista_pupi_descrizione[PlayerPrefs.GetString("lingua")][razza_pupo];
 
                     riempi_img_premio(num_cont_premio,"upgrade_nrazza/"+info_comuni.lista_razze_totale[razza_pupo]+"_"+livello_razza);
                     break;
@@ -665,12 +768,27 @@ public class upgrade : MonoBehaviour
                 case "abilita":{
                     string abilita=splitArray[1];
                     int livello_abilita = int.Parse(splitArray[2]);
-                    if (livello_abilita==1){
-                        titolo="New ability: "+info_comuni.lista_abilita_nome[abilita];
-                    } else {
-                        titolo=info_comuni.lista_abilita_nome[abilita]+" level "+livello_abilita;
+
+                    switch (PlayerPrefs.GetString("lingua")){
+                        case "italiano":{
+                            if (livello_abilita==1){
+                                titolo="Nuova abilità: "+info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][abilita];
+                            } else {
+                                titolo=info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][abilita]+" livello "+livello_abilita;
+                            }
+                            break;
+                        }
+                        default:{
+                            if (livello_abilita==1){
+                                titolo="New ability: "+info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][abilita];
+                            } else {
+                                titolo=info_comuni.lista_abilita_nome[PlayerPrefs.GetString("lingua")][abilita]+" level "+livello_abilita;
+                            }
+                            break;
+                        }
                     }
-                    descrizione=info_comuni.lista_abilita_descrizione[abilita];
+
+                    descrizione=info_comuni.lista_abilita_descrizione[PlayerPrefs.GetString("lingua")][abilita];
 
                     riempi_img_premio(num_cont_premio,"reward_abilita/"+abilita+"_"+livello_abilita);
                     
@@ -682,10 +800,24 @@ public class upgrade : MonoBehaviour
                     switch (livello){
                         default:{monete=valore_monete_premio;break;}
                     }
-                    txt_monete="+ "+monete+" gold";
-                    txt_monete="+"+monete;
-                    titolo="Gold!";
-                    descrizione="Makes happy your army!";
+
+                    switch (PlayerPrefs.GetString("lingua")){
+                        case "italiano":{
+                            txt_monete="+ "+monete+" monete";
+                            txt_monete="+"+monete;
+                            titolo="Denaro!";
+                            descrizione="Fai felice il tuo esercito!";
+                            break;
+                        }
+                        default:{
+                            txt_monete="+ "+monete+" gold";
+                            txt_monete="+"+monete;
+                            titolo="Gold!";
+                            descrizione="Makes happy your army!";
+                            break;
+                        }
+                    }
+
                     riempi_img_premio(num_cont_premio,"reward_gold");
                     break;
                 }
@@ -745,30 +877,63 @@ public class upgrade : MonoBehaviour
         int livello=livelli_attuali_upgrade[abilita];
         string testo="";
         int costo=ritorna_costo_abilita(abilita);   //perchè è stato aggiornato al nuovo costo
-        switch (abilita){
-            case "melee_damage":{testo="Your units hit +"+(livello+1)+" on melee attacks";break;}
-            case "distance_damage":{testo="Your units hit +"+(livello+1)+" on distance attacks";break;}
-            case "spell_damage":{testo="Your units hit +"+(livello+1)+" on spell attacks";break;}
-            case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
-            case "hero_damage":{testo="The abilities of your hero that deal damage, do so by +"+((livello+1)*10)+"%";break;}
-            case "hero_cooldown":{testo="The cooldown of your abilities is reduced by -"+((livello+1)*10)+"%";break;}
-            case "hero_time":{testo="Increases the time of your hero fury by +"+((livello+1)*10)+"%";break;}
-            case "hero_charge":{testo="The cooldown of your hero is reduced by -"+((livello+1)*10)+"%";break;}
-            case "random_unity_1":{testo="Choose one of three randomly selected level 1 units from the unlocked races";break;}
-            case "random_spell":{testo="Choose between three new abilities or an existing one at a higher level";break;}
-            case "random_race":{testo="Choose from three new races to unlock";break;}
-            case "random_unity_2":{testo="Choose one of three randomly selected level 2 units from the unlocked races";break;}
-            case "random_unity_3":{testo="Choose one of three randomly selected level 3 units from the unlocked races";break;}
-            case "unlock_next_unity_tier":{
-                if (tier_unity_sbloccato<2){testo="Unlock the ability to produce level 2 units";}
-                else if (tier_unity_sbloccato<3){testo="Unlock the ability to produce level 3 units";}
-                else {cont_upgrade_unlock_unity_tier.SetActive(false);}
+
+        switch (PlayerPrefs.GetString("lingua")){
+            case "italiano":{
+                 switch (abilita){
+                    case "melee_damage":{testo="Le tue unità danneggiano +"+(livello+1)+" negli attacchi corpo a corpo";break;}
+                    case "distance_damage":{testo="Le tue unità danneggiano +"+(livello+1)+" negli attacchi a distanza";break;}
+                    case "spell_damage":{testo="Le tue unità danneggiano +"+(livello+1)+" con le magie";break;}
+                    case "health":{testo="Le tue unità hanno +"+((livello+1)*10)+"% di salute";break;}
+                    case "hero_damage":{testo="Le abilità del tuo eroe danneggiano di +"+((livello+1)*10)+"%";break;}
+                    case "hero_cooldown":{testo="Il cooldown delle tue abilità è ridotto di -"+((livello+1)*10)+"%";break;}
+                    case "hero_time":{testo="Aumenta il tempo di furia del tuo eroe di +"+((livello+1)*10)+"%";break;}
+                    case "hero_charge":{testo="Il cooldown del tuo eroe è ridotto di -"+((livello+1)*10)+"%";break;}
+                    case "random_unity_1":{testo="Scegli tra tre unità di livello 1 tra le razze sbloccate";break;}
+                    case "random_spell":{testo="Scegli tra tre nuove abilità o una esistente da migliorare";break;}
+                    case "random_race":{testo="Scegli tra tre nuove razze da sbloccare";break;}
+                    case "random_unity_2":{testo="Scegli tra tre unità di livello 2 tra le razze sbloccate";break;}
+                    case "random_unity_3":{testo="Scegli tra tre unità di livello 3 tra le razze sbloccate";break;}
+                    case "unlock_next_unity_tier":{
+                        if (tier_unity_sbloccato<2){testo="Sblocca la possibilità di produrre unità di livello 2";}
+                        else if (tier_unity_sbloccato<3){testo="Sblocca la possibilità di produrre unità di livello 3";}
+                        else {cont_upgrade_unlock_unity_tier.SetActive(false);}
+                        break;
+                    }
+                    case "food":{testo="Add +20 space units";break;}
+                }
+                lista_txt_upgrade_costi[abilita].SetText("Costo: "+costo.ToString());
                 break;
             }
-            case "food":{testo="Add +20 space units";break;}
+            default:{
+                 switch (abilita){
+                    case "melee_damage":{testo="Your units hit +"+(livello+1)+" on melee attacks";break;}
+                    case "distance_damage":{testo="Your units hit +"+(livello+1)+" on distance attacks";break;}
+                    case "spell_damage":{testo="Your units hit +"+(livello+1)+" on spell attacks";break;}
+                    case "health":{testo="Your units have +"+((livello+1)*10)+"% of health more";break;}
+                    case "hero_damage":{testo="The abilities of your hero that deal damage, do so by +"+((livello+1)*10)+"%";break;}
+                    case "hero_cooldown":{testo="The cooldown of your abilities is reduced by -"+((livello+1)*10)+"%";break;}
+                    case "hero_time":{testo="Increases the time of your hero fury by +"+((livello+1)*10)+"%";break;}
+                    case "hero_charge":{testo="The cooldown of your hero is reduced by -"+((livello+1)*10)+"%";break;}
+                    case "random_unity_1":{testo="Choose one of three randomly selected level 1 units from the unlocked races";break;}
+                    case "random_spell":{testo="Choose between three new abilities or an existing one at a higher level";break;}
+                    case "random_race":{testo="Choose from three new races to unlock";break;}
+                    case "random_unity_2":{testo="Choose one of three randomly selected level 2 units from the unlocked races";break;}
+                    case "random_unity_3":{testo="Choose one of three randomly selected level 3 units from the unlocked races";break;}
+                    case "unlock_next_unity_tier":{
+                        if (tier_unity_sbloccato<2){testo="Unlock the ability to produce level 2 units";}
+                        else if (tier_unity_sbloccato<3){testo="Unlock the ability to produce level 3 units";}
+                        else {cont_upgrade_unlock_unity_tier.SetActive(false);}
+                        break;
+                    }
+                    case "food":{testo="Add +20 space units";break;}
+                }
+                lista_txt_upgrade_costi[abilita].SetText("Cost: "+costo.ToString());
+                break;
+            }
         }
+
         lista_txt_upgrade_descrizione[abilita].SetText(testo);
-        lista_txt_upgrade_costi[abilita].SetText("Cost: "+costo.ToString());
 
         switch (abilita){
             case "melee_damage":
@@ -778,8 +943,18 @@ public class upgrade : MonoBehaviour
                 if (livello>=10){
                     lista_B_upgrade_bottoni[abilita].interactable=false;
                     lista_B_upgrade_bottoni[abilita].gameObject.SetActive(false);
-                    lista_txt_upgrade_descrizione[abilita].SetText("You have reach the max level for this upgrade!");
-                    lista_txt_upgrade_costi[abilita].SetText("Cost: /");
+                    switch (PlayerPrefs.GetString("lingua")){
+                        case "italiano":{
+                            lista_txt_upgrade_descrizione[abilita].SetText("Hai raggiunto il livello massimo per questo potenziamento!");
+                            lista_txt_upgrade_costi[abilita].SetText("Costo: /");
+                            break;
+                        }
+                        default:{
+                            lista_txt_upgrade_descrizione[abilita].SetText("You have reach the max level for this upgrade!");
+                            lista_txt_upgrade_costi[abilita].SetText("Cost: /");
+                            break;
+                        }
+                    }
                 }
                 break;
             }
@@ -790,8 +965,18 @@ public class upgrade : MonoBehaviour
                 if (livello>=5){
                     lista_B_upgrade_bottoni[abilita].interactable=false;
                     lista_B_upgrade_bottoni[abilita].gameObject.SetActive(false);
-                    lista_txt_upgrade_descrizione[abilita].SetText("You have reach the max level for this upgrade!");
-                    lista_txt_upgrade_costi[abilita].SetText("Cost: /");
+                    switch (PlayerPrefs.GetString("lingua")){
+                        case "italiano":{
+                            lista_txt_upgrade_descrizione[abilita].SetText("Hai raggiunto il livello massimo per questo potenziamento!");
+                            lista_txt_upgrade_costi[abilita].SetText("Costo: /");
+                            break;
+                        }
+                        default:{
+                            lista_txt_upgrade_descrizione[abilita].SetText("You have reach the max level for this upgrade!");
+                            lista_txt_upgrade_costi[abilita].SetText("Cost: /");
+                            break;
+                        }
+                    }
                 }
                 break;
             }
@@ -881,7 +1066,7 @@ public class upgrade : MonoBehaviour
                     string premio="";
                     lista_random.Clear();
                     lista_premi_settati.Clear();
-                    foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+                    foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_id){
                         if (!lista_abilita.ContainsKey(attachStat.Key)){
                             if (!info_comuni.lista_bool_abilita_classe[attachStat.Key]){
                                 if (lista_abilita.Count<num_max_abilita){lista_random.Add("abilita-"+attachStat.Key+"-1",1);}
@@ -1147,7 +1332,7 @@ public class upgrade : MonoBehaviour
     }
 
     private void carica_info_partite(){
-        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_nome){
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_upgrade_perenni_id){
             lista_upgrade_perenni_liv.Add(attachStat.Key,0);
         }
 
