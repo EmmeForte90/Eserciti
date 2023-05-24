@@ -116,22 +116,38 @@ public class info_comuni : MonoBehaviour
         lista_descrizione_eroe_mainmenu["italiano"].Add("re_cavalletta","Saltellano e si muovono in maniera rapido, veloce e confusionaria.");
         lista_descrizione_eroe_mainmenu["italiano"].Add("re_scarabeo","Pensi siano solo nobili insetti? Prova a mettere qualcosa tra le loro chele.");
 
+        lista_descrizione_eroe_mainmenu.Add("spagnolo",new Dictionary<string, string>());
+        lista_descrizione_eroe_mainmenu["spagnolo"].Add("regina_formica_nera","Siempre parecen pequeñas e inocentes, pero en realidad...");
+        lista_descrizione_eroe_mainmenu["spagnolo"].Add("re_mosca","Una docena son un problema. Una docena de docenas se vuelve incontrolable.");
+        lista_descrizione_eroe_mainmenu["spagnolo"].Add("regina_ape","Sacrificar poco es salvar poco. Sacrificarlo todo es salvar a la reina.");
+        lista_descrizione_eroe_mainmenu["spagnolo"].Add("regina_ragno","¿No quieres relajarte? Deja que sus telarañas hagan el trabajo.");
+        lista_descrizione_eroe_mainmenu["spagnolo"].Add("re_cavalletta","Saltan rápidamente y a veces de manera incontrolable");
+        lista_descrizione_eroe_mainmenu["spagnolo"].Add("re_scarabeo","No son simplemente simples e nobles insectos. Intenta poner un dedo entre sus pinzas.");
+
 
         lista_powerhero_descrizione.Add("inglese",new Dictionary<string, string>());
-        lista_powerhero_descrizione["inglese"].Add("regina_formica_nera","Invoke the Queen Ant to detroy the enemy puppets");
+        lista_powerhero_descrizione["inglese"].Add("regina_formica_nera","Invoke the Queen Ant to destroy the enemy puppets");
         lista_powerhero_descrizione["inglese"].Add("re_mosca","Invoke the King Mos, he going around and damage all enemies puppets in the arena");
         lista_powerhero_descrizione["inglese"].Add("regina_ape","Invoke the Queen Abe, she going around and heal all your puppets in the arena");
         lista_powerhero_descrizione["inglese"].Add("regina_ragno","Invoke the Spider Queen Weeb, she throws webs balls that reduce the speed of enemy puppets");
-        lista_powerhero_descrizione["inglese"].Add("re_cavalletta","Invoke the King Grass, he throws balls of earth to damage enemy puppets.");
-        lista_powerhero_descrizione["inglese"].Add("re_scarabeo","Invoke the King Big to detroy the enemy puppets");
+        lista_powerhero_descrizione["inglese"].Add("re_cavalletta","Invoke the King Grass, he throws balls of earth to damage enemy puppets");
+        lista_powerhero_descrizione["inglese"].Add("re_scarabeo","Invoke the King Big to destroy the enemy puppets");
 
         lista_powerhero_descrizione.Add("italiano",new Dictionary<string, string>());
         lista_powerhero_descrizione["italiano"].Add("regina_formica_nera","Invoca la Regina formica per distruggere i pupetti nemici");
         lista_powerhero_descrizione["italiano"].Add("re_mosca","Invoca il Re Mosca che, volando, infliggerà danni a tutti i pupetti nemici");
         lista_powerhero_descrizione["italiano"].Add("regina_ape","Invoca l'Ape Regina che, volando, curera tutti i tuoi pupetti");
         lista_powerhero_descrizione["italiano"].Add("regina_ragno","Invoca la Regina Ragno che lancerà palle di ragnatele che bloccheranno tutti i pupetti colpiti");
-        lista_powerhero_descrizione["italiano"].Add("re_cavalletta","Invoca il Re Cavalletta che lancerà palle esplosive che danneggeranno i pupetti nemici colpiti.");
+        lista_powerhero_descrizione["italiano"].Add("re_cavalletta","Invoca il Re Cavalletta che lancerà palle esplosive che danneggeranno i pupetti nemici colpiti");
         lista_powerhero_descrizione["italiano"].Add("re_scarabeo","Invoca il Re scarabeo per distruggere i pupetti nemici");
+
+        lista_powerhero_descrizione.Add("spagnolo",new Dictionary<string, string>());
+        lista_powerhero_descrizione["spagnolo"].Add("regina_formica_nera","Invoca a la Reina Hormiga para destruir las unidades enemigas");
+        lista_powerhero_descrizione["spagnolo"].Add("re_mosca","Invoca al Rey Mos que él se mueve alrededor y daña a todas las unidades enemigas en la arena");
+        lista_powerhero_descrizione["spagnolo"].Add("regina_ape","Invoca a la Reina Abeja que se mueve alrededor y cura a todas tus unidades en la arena");
+        lista_powerhero_descrizione["spagnolo"].Add("regina_ragno","Invoca a la Reina Araña Weeb que lanza bolas de telaraña que reducen la velocidad de las unidades enemigas");
+        lista_powerhero_descrizione["spagnolo"].Add("re_cavalletta","Invoca al Rey Hierba que lanza bolas de tierra para dañar las unidades enemigas");
+        lista_powerhero_descrizione["spagnolo"].Add("re_scarabeo","Invoca al Rey Big para destruir las unidades enemigas");
 
         lista_upgrade_perenni_nome.Add("inglese",new Dictionary<string, string>());
         lista_upgrade_perenni_nome["inglese"]["costi_pupi"]="Cost Army";
@@ -161,6 +177,20 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_nome["italiano"]["magia_veleno"]="Magie velenose";
         lista_upgrade_perenni_nome["italiano"]["magia_blocco"]="Magie bloccanti";
 
+        lista_upgrade_perenni_nome.Add("spagnolo",new Dictionary<string, string>());
+        lista_upgrade_perenni_nome["spagnolo"]["costi_pupi"]="Costo del ejército";
+        lista_upgrade_perenni_nome["spagnolo"]["costi_guadagno"]="Mejorar las ganancias";
+        lista_upgrade_perenni_nome["spagnolo"]["costi_abilita"]="Costo de habilidades";
+        lista_upgrade_perenni_nome["spagnolo"]["melee_velocita_attacco"]="Velocidad cuerpo a cuerpo";
+        lista_upgrade_perenni_nome["spagnolo"]["melee_colpiti"]="Más golpes cuerpo a cuerpo";
+        lista_upgrade_perenni_nome["spagnolo"]["melee_ignora_attacco"]="Ignorar ataques cuerpo a cuerpo";
+        lista_upgrade_perenni_nome["spagnolo"]["melee_dono_zanzare"]="Regalo de los mosquitos";
+        lista_upgrade_perenni_nome["spagnolo"]["proiettili_ignora_armatura"]="Ignorar armadura";
+        lista_upgrade_perenni_nome["spagnolo"]["proiettili_head_shot"]="Head Shot";
+        lista_upgrade_perenni_nome["spagnolo"]["proiettili_distanza"]="Distancia máxima";
+        lista_upgrade_perenni_nome["spagnolo"]["magia_veleno"]="Hechizos venenosos";
+        lista_upgrade_perenni_nome["spagnolo"]["magia_blocco"]="Hechizos de bloqueo";
+
         lista_abilita_id.Add("evoca_formiche","");
         lista_abilita_id.Add("mosche_fastidiose","");
         lista_abilita_id.Add("miele","");
@@ -176,15 +206,15 @@ public class info_comuni : MonoBehaviour
 
         lista_abilita_nome.Add("inglese",new Dictionary<string, string>());
         lista_abilita_nome["inglese"].Add("evoca_formiche","Summon Warrior Ants");
-        lista_abilita_nome["inglese"].Add("mosche_fastidiose","Swarm of flies");
+        lista_abilita_nome["inglese"].Add("mosche_fastidiose","Swarm of Flies");
         lista_abilita_nome["inglese"].Add("miele","Honey");
         lista_abilita_nome["inglese"].Add("ragnatele","Spiderweb");
         lista_abilita_nome["inglese"].Add("velocita","Speed");
         lista_abilita_nome["inglese"].Add("armatura","Armour");
         lista_abilita_nome["inglese"].Add("zombie","Zombie");
         lista_abilita_nome["inglese"].Add("resurrezione","Resurrection");
-        lista_abilita_nome["inglese"].Add("insetto_esplosivo","Explosive bug");
-        lista_abilita_nome["inglese"].Add("insetto_esplosivo_velenoso","Explosive poison bug");
+        lista_abilita_nome["inglese"].Add("insetto_esplosivo","Explosive Bug");
+        lista_abilita_nome["inglese"].Add("insetto_esplosivo_velenoso","Explosive Poison Bug");
         lista_abilita_nome["inglese"].Add("bombo","Bombo catapult");
         lista_abilita_nome["inglese"].Add("balestra","Balistic spikes");
 
@@ -201,6 +231,20 @@ public class info_comuni : MonoBehaviour
         lista_abilita_nome["italiano"].Add("insetto_esplosivo_velenoso","Insetto tossico");
         lista_abilita_nome["italiano"].Add("bombo","Catapulta di Bombo");
         lista_abilita_nome["italiano"].Add("balestra","Balestra di Aculei");
+
+        lista_abilita_nome.Add("spagnolo",new Dictionary<string, string>());
+        lista_abilita_nome["spagnolo"].Add("evoca_formiche","Invocar Hormigas Guerreras");
+        lista_abilita_nome["spagnolo"].Add("mosche_fastidiose","Enjambre de Moscas");
+        lista_abilita_nome["spagnolo"].Add("miele","Miel");
+        lista_abilita_nome["spagnolo"].Add("ragnatele","Telaraña");
+        lista_abilita_nome["spagnolo"].Add("velocita","Velocidad");
+        lista_abilita_nome["spagnolo"].Add("armatura","Armadura");
+        lista_abilita_nome["spagnolo"].Add("zombie","Zombi");
+        lista_abilita_nome["spagnolo"].Add("resurrezione","Resurrección");
+        lista_abilita_nome["spagnolo"].Add("insetto_esplosivo","Bicho Explosivo");
+        lista_abilita_nome["spagnolo"].Add("insetto_esplosivo_velenoso","Bicho Venenoso Explosivo");
+        lista_abilita_nome["spagnolo"].Add("bombo","Catapulta de Bombos");
+        lista_abilita_nome["spagnolo"].Add("balestra","Púas balísticas");
 
         lista_abilita_descrizione.Add("inglese",new Dictionary<string, string>());
         lista_abilita_descrizione["inglese"].Add("evoca_formiche","Summon 2 warrior ants for each level. Cooldown is really long and you can use only few times every match.");
@@ -229,6 +273,20 @@ public class info_comuni : MonoBehaviour
         lista_abilita_descrizione["italiano"].Add("bombo","Attiva una catapulta che lancia 5 bombe per livello che esploderanno all'impatto, danneggiando tutti i pupetti nell'area colpita.");
         lista_abilita_descrizione["italiano"].Add("balestra","Lancia 5 aculei per livello uno di seguito all'altro che esploderanno all'impatto, danneggiando tutti i pupetti nell'area colpita.");
         lista_abilita_descrizione["italiano"].Add("miele","Rigenera tutti i pupetti alleati colpiti nell'area.");
+
+        lista_abilita_descrizione.Add("spagnolo",new Dictionary<string, string>());
+        lista_abilita_descrizione["spagnolo"].Add("evoca_formiche","Invoca 2 hormigas guerreras por cada nivel. El tiempo de reutilización es muy largo y solo puedes usarlas algunas veces en cada partida.");
+        lista_abilita_descrizione["spagnolo"].Add("mosche_fastidiose","Crea un enjambre que se mueve al azar y daña todo lo que encuentra. Las moscas y los mosquitos son inmunes.");
+        lista_abilita_descrizione["spagnolo"].Add("ragnatele","Crea una telaraña en el área. Todos los enemigos golpeados no pueden moverse o realizar ataques hasta que la telaraña termine. Las arañas son inmunes.");
+        lista_abilita_descrizione["spagnolo"].Add("velocita","Aumenta la velocidad de todas las unidades aliadas golpeadas en el área durante 3 segundos + 1 por cada nivel. No funciona en objetivos enredados en telarañas.");
+        lista_abilita_descrizione["spagnolo"].Add("armatura","Aumenta la armadura de todas las unidades aliadas golpeadas en el área durante 3 segundos + 1 por cada nivel.");
+        lista_abilita_descrizione["spagnolo"].Add("zombie","Invoca insectos zombis al azar. En el primer nivel, invoca 5. En el segundo nivel, invoca 8. En el tercer nivel, invoca 10.");
+        lista_abilita_descrizione["spagnolo"].Add("resurrezione","Revive una unidad aliada caída. El nivel de la unidad invocada es igual al nivel de la habilidad. No tiene efecto si no hay unidades caídas.");
+        lista_abilita_descrizione["spagnolo"].Add("insetto_esplosivo","Invoca un insecto explosivo por nivel que correrá al azar por el mapa y luego explotará, dañando a todos los insectos cercanos.");
+        lista_abilita_descrizione["spagnolo"].Add("insetto_esplosivo_velenoso","Invoca un insecto explosivo venenoso por nivel que correrá al azar por el mapa y luego explotará, dañando a todos los insectos cercanos.");
+        lista_abilita_descrizione["spagnolo"].Add("bombo","Catapulta de racimo que lanza 5 bombas por nivel las cuales explotan al impactar, dañando a cualquier insecto en un área amplia alcanzada.");
+        lista_abilita_descrizione["spagnolo"].Add("balestra","Lanza 5 púas por nivel una tras otra que explotan al impactar, dañando a cualquier insecto en el área amplia alcanzada.");
+        lista_abilita_descrizione["spagnolo"].Add("miele","Regenera todas las unidades aliadas golpeadas en el área.");
 
         lista_premio_nome.Add("end_hero_regina_formica_nera","Black Ant");
         lista_premio_nome.Add("end_hero_re_mosca","King Moss");
@@ -319,16 +377,19 @@ public class info_comuni : MonoBehaviour
 
         lista_upgrade_perenni_descrizione.Add("inglese",new Dictionary<string, Dictionary<int, string>>());
         lista_upgrade_perenni_descrizione.Add("italiano",new Dictionary<string, Dictionary<int, string>>());
+        lista_upgrade_perenni_descrizione.Add("spagnolo",new Dictionary<string, Dictionary<int, string>>());
 
         //settiamo genericamente che ogni upgrade perenne ha un costo di 10 per livello che si vuole ottenere
         foreach(KeyValuePair<string,string> attachStat in lista_upgrade_perenni_id){
             lista_upgrade_perenni_costi.Add(attachStat.Key,new Dictionary<int, int>());
             lista_upgrade_perenni_descrizione["inglese"].Add(attachStat.Key,new Dictionary<int, string>());
             lista_upgrade_perenni_descrizione["italiano"].Add(attachStat.Key,new Dictionary<int, string>());
+            lista_upgrade_perenni_descrizione["spagnolo"].Add(attachStat.Key,new Dictionary<int, string>());
             for (int i=1;i<=lista_upgrade_perenni_max_level[attachStat.Key];i++){
                 lista_upgrade_perenni_costi[attachStat.Key].Add(i,(10*i));
                 lista_upgrade_perenni_descrizione["inglese"][attachStat.Key].Add(i,"Descrizione "+i);
                 lista_upgrade_perenni_descrizione["italiano"][attachStat.Key].Add(i,"Descrizione "+i);
+                lista_upgrade_perenni_descrizione["spagnolo"][attachStat.Key].Add(i,"Descrizione "+i);
             }
         }
         
@@ -364,10 +425,10 @@ public class info_comuni : MonoBehaviour
         lista_upgrade_perenni_descrizione["inglese"]["melee_dono_zanzare"][2]="Melee puppets gain 8% of their health as vitality when hit enemies";
         lista_upgrade_perenni_descrizione["inglese"]["melee_dono_zanzare"][3]="Melee puppets gain 10% of their health as vitality when hit enemies";
 
-        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor 25%";
-        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor 50%";
-        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor 75%";
-        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor 100%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][1]="The arrows ignore the target's armor by 25%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][2]="The arrows ignore the target's armor by 50%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][3]="The arrows ignore the target's armor by 75%";
+        lista_upgrade_perenni_descrizione["inglese"]["proiettili_ignora_armatura"][4]="The arrows ignore the target's armor by 100%";
 
         lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][1]="The arrows have a 1% chance of killing the enemy with one shot";
         lista_upgrade_perenni_descrizione["inglese"]["proiettili_head_shot"][2]="The arrows have a 2% chance of killing the enemy with one shot";
@@ -444,6 +505,61 @@ public class info_comuni : MonoBehaviour
 
 
 
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_pupi"][1]="Las unidades cuestan 5 menos";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_pupi"][2]="Las unidades cuestan 10 menos";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_pupi"][3]="Las unidades cuestan 15 menos";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_guadagno"][1]="Obtienes +10 monedas al finalizar el nivel";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_guadagno"][2]="Obtienes +20 monedas al finalizar el nivel";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_guadagno"][3]="Obtienes +30 monedas al finalizar el nivel";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_guadagno"][4]="Obtienes +40 monedas al finalizar el nivel";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_guadagno"][5]="Obtienes +50 monedas al finalizar el nivel";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_abilita"][1]="Reduce el costo de las habilidades en 5";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_abilita"][2]="Reduce el costo de las habilidades en 10";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_abilita"][3]="Reduce el costo de las habilidades en 15";
+        lista_upgrade_perenni_descrizione["spagnolo"]["costi_abilita"][4]="Reduce el costo de las habilidades en 20";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_velocita_attacco"][1]="Aumenta la velocidad de ataque cuerpo a cuerpo en un 5%";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_velocita_attacco"][2]="Aumenta la velocidad de ataque cuerpo a cuerpo en un 10%";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_velocita_attacco"][3]="Aumenta la velocidad de ataque cuerpo a cuerpo en un 15%";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_velocita_attacco"][4]="Aumenta la velocidad de ataque cuerpo a cuerpo en un 20%";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_colpiti"][1]="Los ataques cuerpo a cuerpo pueden golpear a 2 unidades adicionales al mismo tiempo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_colpiti"][2]="Los ataques cuerpo a cuerpo pueden golpear a 3 unidades adicionales al mismo tiempo";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_ignora_attacco"][1]="Las unidades cuerpo a cuerpo ignorarán el primer golpe que reciben";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_ignora_attacco"][2]="Las unidades cuerpo a cuerpo ignorarán el primer y el segundo golpe que reciben";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_ignora_attacco"][3]="Las unidades cuerpo a cuerpo ignorarán el primer, il segundo y el tercero golpe que reciben";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_dono_zanzare"][1]="Las unidades cuerpo a cuerpo ganan un 5% de su salud como vitalidad cuando golpean enemigos";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_dono_zanzare"][2]="Las unidades cuerpo a cuerpo ganan un 8% de su salud como vitalidad cuando golpean enemigos";
+        lista_upgrade_perenni_descrizione["spagnolo"]["melee_dono_zanzare"][3]="Las unidades cuerpo a cuerpo ganan un 10% de su salud como vitalidad cuando golpean enemigos";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_ignora_armatura"][1]="Las flechas ignoran un 25% de la armadura del objetivo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_ignora_armatura"][2]="Las flechas ignoran un 50% de la armadura del objetivo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_ignora_armatura"][3]="Las flechas ignoran un 75% de la armadura del objetivo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_ignora_armatura"][4]="Las flechas ignoran un 100% de la armadura del objetivo";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_head_shot"][1]="Las flechas tienen un 1% de probabilidad de matar al enemigo con un solo lanzo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_head_shot"][2]="Las flechas tienen un 2% de probabilidad de matar al enemigo con un solo lanzo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_head_shot"][3]="Las flechas tienen un 3% de probabilidad de matar al enemigo con un solo lanzo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_head_shot"][4]="Las flechas tienen un 4% de probabilidad de matar al enemigo con un solo lanzo";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_head_shot"][5]="Las flechas tienen un 5% de probabilidad de matar al enemigo con un solo lanzo";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_distanza"][1]="Aumenta el rango máximo de ataque a distancia de +1";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_distanza"][2]="Aumenta el rango máximo de ataque a distancia de +2";
+        lista_upgrade_perenni_descrizione["spagnolo"]["proiettili_distanza"][3]="Aumenta el rango máximo de ataque a distancia de +3";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["magia_veleno"][1]="Los hechizos lanzados envenenan al objetivo. A mayor nivel, mayor es el veneno";
+        lista_upgrade_perenni_descrizione["spagnolo"]["magia_veleno"][2]="Los hechizos lanzados envenenan al objetivo. A mayor nivel, mayor es el veneno";
+        lista_upgrade_perenni_descrizione["spagnolo"]["magia_veleno"][3]="Los hechizos lanzados envenenan al objetivo. A mayor nivel, mayor es el veneno";
+
+        lista_upgrade_perenni_descrizione["spagnolo"]["magia_blocco"][1]="Los hechizos lanzados ralentizan al objetivo. A mayor nivel, mayor es el tiempo de ralentización";
+        lista_upgrade_perenni_descrizione["spagnolo"]["magia_blocco"][2]="Los hechizos lanzados ralentizan al objetivo. A mayor nivel, mayor es el tiempo de ralentización";
+        lista_upgrade_perenni_descrizione["spagnolo"]["magia_blocco"][3]="Los hechizos lanzados ralentizan al objetivo. A mayor nivel, mayor es el tiempo de ralentización";
+
         lista_upgrade_perenni_costi["costi_pupi"][1]=30;
         lista_upgrade_perenni_costi["costi_pupi"][2]=70;
         lista_upgrade_perenni_costi["costi_pupi"][3]=150;
@@ -501,17 +617,25 @@ public class info_comuni : MonoBehaviour
         lista_classi_nome["italiano"].Add("warrior","Guerriero");
         lista_classi_nome["italiano"].Add("arcer","Arciere");
         lista_classi_nome["italiano"].Add("wizard","Mago");
+
+        lista_classi_nome.Add("spagnolo",new Dictionary<string, string>());
+        lista_classi_nome["spagnolo"].Add("warrior","Guerrero");
+        lista_classi_nome["spagnolo"].Add("arcer","Arquero");
+        lista_classi_nome["spagnolo"].Add("wizard","Mago");
         
         //praticamente essendo di tre livelli diversi, tanto vale fare direttamente così; Come fossero tre razze diverse a seconda del livello.
         //Domani faremo la stessa cosa per le cavalcature
         lista_pupi_descrizione.Add("inglese",new Dictionary<string, string>());
         lista_pupi_descrizione.Add("italiano",new Dictionary<string, string>());
+        lista_pupi_descrizione.Add("spagnolo",new Dictionary<string, string>());
 
         lista_razza_pupi_nome.Add("inglese",new Dictionary<string, string>());
         lista_razza_pupi_nome.Add("italiano",new Dictionary<string, string>());
+        lista_razza_pupi_nome.Add("spagnolo",new Dictionary<string, string>());
 
         lista_razza_pupi_nome_singolare.Add("inglese",new Dictionary<string, string>());
         lista_razza_pupi_nome_singolare.Add("italiano",new Dictionary<string, string>());
+        lista_razza_pupi_nome_singolare.Add("spagnolo",new Dictionary<string, string>());
 
         for (int i=1;i<=3;i++){
             //NB: Il singolare a destra è importante per definire la tipologia del pupo negli upgrade
@@ -544,6 +668,13 @@ public class info_comuni : MonoBehaviour
             lista_pupi_descrizione["italiano"].Add("cavallette_"+i,"Unità veloci ed inoltre hanno il 10% di possibilità di schivare un attacco corpo a corpo o a distanza");
             lista_pupi_descrizione["italiano"].Add("scarabei_"+i,"Gli scarabei sono le unità più resistenti ai danni");
 
+            lista_pupi_descrizione["spagnolo"].Add("formiche_"+i,"Soldados más comunes");
+            lista_pupi_descrizione["spagnolo"].Add("mosche_"+i,"Bajo costo pero frágile");
+            lista_pupi_descrizione["spagnolo"].Add("api_"+i,"Cuando mueren, lanzan su aguijón hacia algún enemigo");
+            lista_pupi_descrizione["spagnolo"].Add("ragnetti_"+i,"Cada vez que golpean, ralentizan al objetivo. Las arañas son inmunes");
+            lista_pupi_descrizione["spagnolo"].Add("cavallette_"+i,"Los saltamontes son rápidos. Tienen un 10% de probabilidad de fallar un ataque cuerpo a cuerpo o a distancia");
+            lista_pupi_descrizione["spagnolo"].Add("scarabei_"+i,"Los escarabajos son la raza más resistente a la que puedes aspirar");
+
             //NB: I Nomi e le descrizioni, saranno sempre al plurale
             lista_razza_pupi_nome["inglese"].Add("formiche_"+i,"Ants");     
             lista_razza_pupi_nome["inglese"].Add("mosche_"+i,"Flies");      
@@ -560,6 +691,14 @@ public class info_comuni : MonoBehaviour
             lista_razza_pupi_nome["italiano"].Add("cavallette_"+i,"Cavallette");  
             lista_razza_pupi_nome["italiano"].Add("scarabei_"+i,"Scarabei");  
 
+            //NB: I Nomi e le descrizioni, saranno sempre al plurale
+            lista_razza_pupi_nome["spagnolo"].Add("formiche_"+i,"Hormigas");     
+            lista_razza_pupi_nome["spagnolo"].Add("mosche_"+i,"Moscas");      
+            lista_razza_pupi_nome["spagnolo"].Add("api_"+i,"Abejas");          
+            lista_razza_pupi_nome["spagnolo"].Add("ragnetti_"+i,"Arañas");  
+            lista_razza_pupi_nome["spagnolo"].Add("cavallette_"+i,"Saltamontes");  
+            lista_razza_pupi_nome["spagnolo"].Add("scarabei_"+i,"Escarabajos");  
+
             lista_razza_pupi_nome_singolare["inglese"].Add("formiche_"+i,"Ant");     
             lista_razza_pupi_nome_singolare["inglese"].Add("mosche_"+i,"Fly");      
             lista_razza_pupi_nome_singolare["inglese"].Add("api_"+i,"Bee");          
@@ -573,6 +712,13 @@ public class info_comuni : MonoBehaviour
             lista_razza_pupi_nome_singolare["italiano"].Add("ragnetti_"+i,"Ragno");  
             lista_razza_pupi_nome_singolare["italiano"].Add("cavallette_"+i,"Cavalletta");  
             lista_razza_pupi_nome_singolare["italiano"].Add("scarabei_"+i,"Scarabeo");  
+
+            lista_razza_pupi_nome_singolare["spagnolo"].Add("formiche_"+i,"Hormiga");     
+            lista_razza_pupi_nome_singolare["spagnolo"].Add("mosche_"+i,"Mosca");      
+            lista_razza_pupi_nome_singolare["spagnolo"].Add("api_"+i,"Abeja");          
+            lista_razza_pupi_nome_singolare["spagnolo"].Add("ragnetti_"+i,"Araña");  
+            lista_razza_pupi_nome_singolare["spagnolo"].Add("cavallette_"+i,"Saltamonte");  
+            lista_razza_pupi_nome_singolare["spagnolo"].Add("scarabei_"+i,"Escarabajo");  
         }
 
         //traduci nei blocchi le frasi lunghe (sempre a destra)
@@ -738,6 +884,80 @@ public class info_comuni : MonoBehaviour
                         testo_game_opz_principale.SetText("I tuoi progressi sono stati salvati.\n\nVuoi tornare al menu principale?");
                         bottone_trad_yes.SetText("Si");
                         bottone_trad_no.SetText("No");
+                        break;
+                    }
+                }
+                break;
+            }
+            case "spagnolo":{
+                switch (SceneManager.GetActiveScene().name){
+                    case "mainmenu":{
+                        testo_mm_footer_diritti.SetText("Todos los derechos reservados. Creado por Eros Cappello y Mauro \"Emme\" Forte");
+                        bottone_mm_continue_game.SetText("Continuar partida");
+                        bottone_mm_new_game.SetText("Nueva partida");
+                        bottone_mm_quit.SetText("Salir");
+                        testo_mm_choose.SetText("Elige tu conquistador");
+                        titolo_upgrade_perenni.SetText("Recompensas infinitas");
+                        break;
+                    }
+                    case "game":{
+                        testo_stage.SetText("Nivel");
+                        testo_game_pause.SetText("Pausa");
+                        bottone_game_continue.SetText("Continuar");
+                        bottone_game_mainmenu.SetText("Menú principal");
+                        bottone_game_opzioni.SetText("Opciones");
+
+                        testo_game_opz_principale.SetText("Tu progreso se guardará automáticamente DESPUÉS de la batalla.\n\nSi regresas al menú principal durante la batalla, podrías perder tus mejoras.\n\n¿Estás seguro?");
+                        bottone_trad_yes.SetText("Si");
+                        bottone_trad_no.SetText("No");
+                        testo_game_youwin.SetText("Has ganado");
+                        bottone_game_nextstage.SetText("Siguiente Nivel");
+
+                        testo_game_youlose.SetText("Has perdido");
+                        bottone_game_restart.SetText("Reiniciar");
+                        break;
+                    }
+                    case "upgrade":{
+                        testo_upgrade_army.SetText("EJÉRCITO");
+                        testo_upgrade_gold.SetText("Dinero");
+                        testo_upgrade_improveyourarmy.SetText("Mejora tu ejército.");
+                        testo_upgrade_lev1.SetText("Niv 1");
+                        testo_upgrade_lev2.SetText("Niv 2");
+                        testo_upgrade_lev3.SetText("Niv 3");
+                        testo_upgrade_upgrades.SetText("POTENCIAMIENTOS");
+                        testo_upgrade_reward.SetText("Elige tu recompensa");
+                        testo_upgrade_choose1.SetText("ELIGE");
+                        testo_upgrade_choose2.SetText("ELIGE");
+                        testo_upgrade_choose3.SetText("ELIGE");
+                        testo_upgrade_puppetsupgrades.SetText("Potenciamiento Unidades");
+                        testo_upgrade_armyupgrades.SetText("Potenciamiento Ejército");
+                        testo_upgrade_tyrantupgrades.SetText("Potenciamiento Tirano");
+
+                        testo_upgrade_d_nome_abilita_distancedamage.SetText("Daño a distancia");
+                        testo_upgrade_d_nome_abilita_food.SetText("Alimento");
+                        testo_upgrade_d_nome_abilita_health.SetText("Salud");
+                        testo_upgrade_d_nome_abilita_herocooldown.SetText("Cooldown del héroe");
+                        testo_upgrade_d_nome_abilita_herodamage.SetText("Daño del héroe");
+                        testo_upgrade_d_nome_abilita_herofury.SetText("Furia del héroe");
+                        testo_upgrade_d_nome_abilita_meleedamage.SetText("Daño cuerpo a cuerpo");
+                        testo_upgrade_d_nome_abilita_randomrace.SetText("Raza aleatoria");
+                        testo_upgrade_d_nome_abilita_rndheroability.SetText("Habilidad aleatoria del héroe");
+                        testo_upgrade_d_nome_abilita_rndul1.SetText("Unidad Aleatoria de Nivel 1");
+                        testo_upgrade_d_nome_abilita_rndul2.SetText("Unidad Aleatoria de Nivel 2");
+                        testo_upgrade_d_nome_abilita_rndul3.SetText("Unidad Aleatoria de Nivel 3");
+                        testo_upgrade_d_nome_abilita_skillscooldown.SetText("Cooldown de habilidades");
+                        testo_upgrade_d_nome_abilita_spelldamage.SetText("Daño de hechizos");
+                        testo_upgrade_d_nome_abilita_upgnut.SetText("Mejorar el siguiente nivel de unidad.");
+
+
+                        testo_game_pause.SetText("Pausa");
+                        bottone_game_continue.SetText("Continuar");
+                        bottone_game_mainmenu.SetText("Menú principal");
+                        bottone_game_opzioni.SetText("Opciones");
+
+                        bottone_trad_yes.SetText("Si");
+                        bottone_trad_no.SetText("No");
+                        testo_game_opz_principale.SetText("Tu progreso se guardará automáticamente después de la batalla.\n\nSi regresas al menú principal durante la batalla, es posible que pierdas tus mejoras.\n\n¿Estás seguro?");
                         break;
                     }
                 }

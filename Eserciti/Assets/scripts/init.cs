@@ -583,6 +583,11 @@ public class init : MonoBehaviour
                     txt_denaro_guadagnato.SetText("Hai guadagnato "+denaro_guadagnato+" monete!");
                     break;
                 }
+                case "spagnolo":{
+                    txt_ondata_vittoria.SetText("¡Nivel "+num_ondata+" completado!");
+                    txt_denaro_guadagnato.SetText("¡Has ganado "+denaro_guadagnato+" monedas!");
+                    break;
+                }
                 default:{
                     txt_ondata_vittoria.SetText("Stage "+num_ondata+" clear!");
                     txt_denaro_guadagnato.SetText("You have earned "+denaro_guadagnato+" gold!");
@@ -654,6 +659,10 @@ public class init : MonoBehaviour
             switch (PlayerPrefs.GetString("lingua")){
                 case "italiano":{
                     testo_gemme_guadagnate.SetText("Hai guadagnato "+num_gemme_guadagnate+" gemme");
+                    break;
+                }
+                case "spagnolo":{
+                    testo_gemme_guadagnate.SetText("Has ganado "+num_gemme_guadagnate+" gemas");
                     break;
                 }
                 default:{

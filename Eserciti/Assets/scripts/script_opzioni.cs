@@ -28,6 +28,13 @@ public class script_opzioni : MonoBehaviour
                 testo_opzioni_lingue.SetText("Lingua");
                 break;
             }
+            case "spagnolo":{
+                Titolo_Setting.SetText("Configuración");
+                testo_opzioni_volume_musica.SetText("Música");
+                testo_opzioni_volume_sfx.SetText("Sonido");
+                testo_opzioni_lingue.SetText("Idioma");
+                break;
+            }
             default:{
                 Titolo_Setting.SetText("Settings");
                 testo_opzioni_volume_musica.SetText("Music Volume");
