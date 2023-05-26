@@ -1,3 +1,60 @@
+Decidendo sull'idea della burnia grande C
+
+PREMESSA:
+Direi intanto di inserire quasi tutte le burnie semplici:
+Ostacoli, cambiamenti climatici, cavalcature.
+Ci aggiungiamo qualche abilità in più.
+La premessa serve a noi ad indicare un mese in più già solo per queste cose.
+
+Il gioco si divide in mondi (che sono casuali come saltano fuori).
+Ogni mondo ha diverse sezioni da esplorare (pensavo di farlo diviso in esagoni).
+Il giocatore sceglie un luogo che è inesplorato, cioè nero.
+Quando ci clicca, lui semplicemente scopre un LUOGO che può contenere.
+- Unità amiche: Unità casuali che semplicemente si uniscono all'esercito che già possiede il giocatore. Queste si aggiungono all'esercito ed il giocatore prosegue scegliendo un nuovo luogo.
+- Unità nemiche: Dovrà combattere, usando il sistema di combattimento che già c'è. Dopo, prosegue con le unità che avrà in meno; Oppure con solo una parte di essa.
+- Città amiche: Città diverse dove potrà scegliere di spendere il suo denaro per migliorare le sue unità, il suo eroe, il suo campione. Ogni città ha diverse tipologie e diversi costi a seconda della razza predominante della città.
+- Oro: Trova dell'oro che potrà utilizzare nelle città per migliorare.
+- Eventi speciali: c'è ne potrebbero essere di diversi tipi per dare possibilità al giocatore di fare scelte diverse dal solito. Non sono obbligatorie.
+Es: "Trovi un vecchio affamato che ti chiede del denaro. Se decidi di dargli il denaro, farò rivivere una tua unità oppure ti darà un abilità nuova".
+Es: "Un gruppo di esploratori è in perciolo, circondato da nemici. Se combatti in cambio ti daranno dell'oro, altrimenti puoi andare via".
+Es: "Trappola: Una delle tue unità cade in una trappola e non c'è modo di poterla fare risalire...perdi un unità".
+Es: "Teletrasporto: Scegli una casella qualsiasi della mappa".
+E via via mettendo quello che vogliamo.
+- Città nemiche: Non c'è una differenza reale con "Unità nemiche" ma magari potrebbe interessare la parte finale della mappa:
+In pratica sarebbe da espugnare una città, dove gli arcieri lanciando da dietro le mura (e quindi sarebbe necessario prima distruggere ad esempio le mura).
+E/O mettere dei cannoni tower che attaccano l'esercito del giocatore.
+Questa parte delle città nemiche non è effettivamente obbligatoria e possiamo concentrarci solo sui nemici e buonanotte.
+- Nulla: Semplicemente non c'è niente e si prosegue scegliendo un altro luogo.
+- Muro: In pratica ogni volta che si esplora, alcuni luoghi potrebbero essere dei veri e proprio muri neri ad indicare il fatto che non si può proseguire oltre e magari bisogna cliccare da qualceh altra parte.
+
+Come ha finito il luogo, il giocatore riprendere a scegliere altri luoghi adiacenti al luogo che già ha trovato.
+
+Una volta scelto e completato (non si può tornare nei luoghi che già ha visitato), completerà quel mondo e si sposterà al mondo successivo.
+
+Ogni mondo ha le posizioni e luoghi casuali.
+
+Magari i vari mondi sarebbe interessante farli a tema: In un mondo magari c'è più acqua, in altri più rocce ecc.
+
+Inoltre, a me piacerebbe, che i vari mondi non siano altro che luoghi reali visti sfocati dall'alto. Una volta completati, si vedrebbe il mondo nitido.
+Ad esempio una cucina vista dall'altro, una parte di orto, una parte di giardino, un mondo sotterraneo di formiche, l'interno di un vano motore vecchio ecc.
+Per questo potremmo fare una serie di foto o comprarne alcune da istock.
+
+COSA FARE IN PIU' GRAFICAMENTE:
+Sarebbe interessante se possibile fare delle unità differenti.
+In poche parole hai creato delle unità che sono tutte similari tra loro; Ma se si riuscisse a differenziarle per rendere diverse 
+
+TEMPISTICHE LATO PROGRAMMAZIONE:
+Io solo per programmare queste cose, necessito di 2 mesi + l'eventuale tempo per fare dei test per vedere se è tutto più o meno equilibrato.
+Non ti saprei dire: Si potrebbe pensare ad un mese aggiuntivo, per essere sicuri che tutto vada bene; Soprattutto se mi aiuti.
+
+Dunque in totale lato mio sono 4 mesi di lavoro (1 mese le migliorie iniziali quali ostacoli, cambiamenti climatici, cavalcature + 2 mesi il gioco + 1 mese di testing).
+
+
+
+-------------------
+-------------------
+-------------------
+
 Il tempo di sviluppo e da riferirsi alla programmazione, poi lato tuo mi diresti quanto tempo ci perderesti nel lato grafica.
 Inoltre, in tutti quelli che vedi, non è da contare invece il tempo dei TEST necessari per vedere se vanno bene e sono ben bilanciati.
 Infine per ogni nuova miglioria, probabilmente ci potrebbero essere delle abilità e infinity rewards nuove.
