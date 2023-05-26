@@ -1,0 +1,131 @@
+Il tempo di sviluppo e da riferirsi alla programmazione, poi lato tuo mi diresti quanto tempo ci perderesti nel lato grafica.
+Inoltre, in tutti quelli che vedi, non è da contare invece il tempo dei TEST necessari per vedere se vanno bene e sono ben bilanciati.
+Infine per ogni nuova miglioria, probabilmente ci potrebbero essere delle abilità e infinity rewards nuove.
+
+
+
+
+
+BURNIE SEMPLICI: Ovvero quelle che richiedono "poco" tempo e non stravolgerebbero la tipologia di gioco; Inoltre tutte queste possono essere fatte insieme, cioè farne una, non intaccherebbe l'altra.
+
+A) OSTACOLI - da 1 a 2 settimane
+Si intendono quelli che avevamo pensato all'epoca, delle pozze d'acqua (o crepacci), delle rocce più alte e delle piante alte.
+Ogni razza può andare magari dove altre non possono.
+Nelle rocce solo i ragni.
+Nelle piante alte, solo le cavallette.
+Chi vola può andare ovunque.
+Una volta raggiunto il nemico però possono combattere tra loro.
+
+Gli ostacoli dovrebbero funzionare randomicamente andando avanti nelle varie mappe, cioè potresti trovare una mappa piene di pozze d'acqua o una piena di rocce.
+
+B) CAMBIAMENTI CLIMATICI - 1 settimana.
+In pratica creare un sistema di cui andando avanti, si scopra che il tempo può variare, mettendo una possibile leggera pioggia; che danneggia basicamente tutti come fossero tutti quanti avvelenati; Oppure potrebbero (visto il fango), rallentare fortemente una qualche tipo di unità (ad esempio quelle che volano).
+
+C) EROE IN MOVIMENTO - Dipende; da 1 a 2 settimane
+Il fatto, che avrebbe senso fare muovere l'eroe quale formica e scarabeo, che vanno in battaglia.
+Forse, potremmo fare anche muovere regina e mosca (così che non siano così randomici e magari scegli un pò dove muoverli).
+Ma come dovremmo fare con gli altri due eroi che semplicemente vengono messi a bordo mappa e lanciano cose?
+
+D) MOSTRI CASUALI - 1 settimana.
+Alcuni mostri che attaccano chiunque incontrino quali scorpioni giganti o altro che tra l'altro dovremmo avere già pronti.
+
+E) CAVALCATURE - 1 settimana.
+Le cavalcature che avevamo pensato e che sono tra l'altro già pronte, mettendole come "premio" particolare, oppure proprio come classe (quali arcieri, maghi ecc visto che mi sembra che già avevamo pronte per ciascuna)
+
+
+
+
+
+BURNIE COMPLESSE: Ovvero quelle che potrebbero stravolgere il gioco.
+
+A) CIVILIZATION - 2 mesi
+RIF: https://store.steampowered.com/app/1656780/Heros_Hour/
+Mettere da parte il sistema di combattimento per ora e creare un gioco in cui il giocatore deve gestire un vero e proprio impero che si muove in una mappa gigante, portandosi il suo esercito dietro, colonizzando man mano le varie "città" o LUOGHI.
+Ad ogni turno, il giocatore (che poi sarà l'eroe) decide cosa fare, inizialmente potrà solo muoversi.
+Se arriva in un LUOGO, può decidere di colonizzarlo.
+Se lo colonizza, ad ogni turno, quel luogo èpotrebbe fare diverse azioni:
+- Produrre unità: Che siano da guerra, da difesa, da esplorazione ecc.
+- Migliorare (per produrre unità migliori).
+- Produrre delle risorse.
+
+Inoltre il giocatore potrebbe anche scegliere di spostare un esercito da un punto ad un altro nella mappa (per esplorare, per difendere ecc).
+
+Dopodicchè, quando si combatte o perchè vuoi conquistare o perchè attaccano le tue città, il combattimento verra rappresentato appunto dall'algoritmo che abbiamo attualmente del gioco che è già pronto...diventerebbe qualcosa di simbolico per "spezzare" dal semplice gestire (non ci sarebbero forse anche le abilità).
+
+E' chiaro che il gioco diventa un gestionale e non più un gioco casual. In quel caso, molta gente potrebbe giocarci e ci allontaniamo molto dal classico bimbo minchia; Tuttavia il gioco già si potrebbe vendere a molto di più in quanto c'è una fetta grossa di giocatori a cui piacciono i giochi gestionali a turni.
+
+VANTAGGI:
+Il gioco verrebbe più figo e magari con più voglia di giocare allontanandoci dal concetto "casual"
+Se non lo vogliamo fare ora, possiamo anche fare da 0 un nuovo gioco, chiamarlo "little army empire" e sfruttare quello che già abbiamo.
+
+SVANTAGGI:
+Sarebbe fare qualcosa di praticamente nuovo, come stile, come meccaniche, come pubblico ecc.
+
+
+
+B) VAMPIRE SURVIVOR ovvero l'EROE PRIMA DI TUTTO! - 1 mese
+L'eroe vaga per la mappa e da solo, evoca dei pupetti che lo aiutano a resistere contro tutti gli altri nemici.
+In nemici cercheranno di andare contro l'eroe il quale comunque può provare a difendersi o attaccare a chi vuole.
+La nuova differenza starà nel fatto che le abilità dell'eroe saranno di fatto i suoi pupetti che lo difendono e lo seguono dappertutto.
+
+I nemici inoltre verrebbero da qualsiasi direzione ed attaccherebbero tutti.
+
+Le abilità come detto, potrebbero essere basate molto sull'evocazione.
+Ad esempio "evoca 2 formiche ogni 10 secondi" con i successivi upgrade.
+Oppure "evoca 2 api ogni 10 secondi". I costi sarebbero diversi a seconda dell'eroe che si stà utilizzando.
+
+Il gioco si trasformerebbe in un "hero survivor".
+
+VANTAGGI:
+Avendo già l'algoritmo pronto per i combattimenti, non dovrebbe essere difficile fare il resto.
+Potrebbe anche essere semplicemente una nuova modalità di gioco.
+Ci si manterrebbe sempre nella sfera "casual".
+Anche in questo caso, si potrebbe creare un nuovo gioco sempre della linea little army e chiamaro ad esempio "little hero survivor"
+
+SVANTAGGI:
+Sarebbe fare qualcosa di praticamente nuovo, come stile, come meccaniche e non credo potremmo venderlo ad un prezzo più grasso.
+
+
+
+C) STRATEGY LITTLE ARMY - da 1 a 2 mesi
+Sarebbe un migliorare quello che abbiamo fin'ora, cercando di mischiare il CIVILIZATION spiegato nel punto A ma molto più semplice e dilatato con il little army che già abbiamo fatto ora.
+
+In pratica anzicchè mantenere un intero impero, il giocatore và avanti scegliendo tra diversi percorsi e non si torna mai indietro.
+Ogni percorso può incontrare:
+RISORSE: Cioè dell'oro da poter usare per migliorare le truppe.
+UNITA AMICHE: Unità che si uniscono alla tu allegra compagnia, per la causa.
+CITTA AMICHE: Dove poter reclutare nuove unità; Rappresenterebbe in pratica la scena "upgrade" che già abbiamo. Solo che a seconda della tipologia della città, ci sarebbero diversi tipi di abilità e di unità. Se ad esempio trovano una città alveare, ci saranno un sacco di api mercenarie scontate; Inoltre quì potresti rigenerare la tua energia (magari quella dell'eroe) a poco prezzo.
+UNITA NEMICHE: Si combatterebbe semplicemente come abbiamo sempre fatto. Tuttavia, le unità che perdi, non le recuperi.
+CITTA NEMICHE: Sarebbe la stessa cosa delle UNITA NEMICHE; La unica differenza, che si tratterebbe di espugnare intere città.
+
+Per il resto rimarebbe uguale. Sarebbe però interessante, creare diverse mappe/città, cioè mappe diverse per migliorare il movimento e le meccaniche del gioco.
+
+VANTAGGI:
+Non sono modifiche troppo complicate; In verità renderebbero anche il gioco più accattivante e per certi versi ancora più semplice anche se sembrerebbe più complicato
+Ci sarebbero più varietà di gioco.
+Si potrebbe renderla una modalità.
+
+SVANTAGGI:
+Le differenziazioni potrebbero essere minime e magari si farebbe un lavoro inutile per darlo ad un pubblico che già il gioco piace così comè; Rischiando sì di fare più contento il pubblico che già abbiamo, ma senza acquisirne di nuovi.
+
+
+
+D) TOWER DEFENCE / CAPTURE THE CITY - da 1 a 2 mesi; O più a seconda di quanto lo possiamo fare difficile.
+In pratica fare delle mappe molto più grandi (con annessa minimappa a lato) dove l'obiettivo è distruggere il "centro di potere" (che ancora non sò cosè) che si trova protetto dall'altro lato della mappa.
+
+In pratica il giocatore produce in automatico da qualche parte, dei pupetti che salteranno fuori ogni X tempo e faranno qualcosa che praticamente si divide in attacco (cioè andare verso i nemici ed in particolar modo verso la base nemico) e difesa (cioè proteggere il fortino).
+
+Il giocatore in pratica dovrà vedere cosa far produrre ad ogni cosa ed avrà la possibilità di mettere costruire questi posti (cioè questi centri di produzione pupetti) sempre più avanti nella mappa. Ovviamente non li può mettere direttamente nella città nemica; Dovrebbe avere un minimo di distanza.
+
+Non ci saranno solo centri di produzione, ma anche centri di risorsa, torrette difensive, mura ecc.
+
+In pratica sarebbe una sorta di AGE OF EMPIRE estremamente depotenziato.
+
+In verità potrebbe anche essere una possibile evoluzione del punto C.
+
+VANTAGGI:
+Questa tipologia permetterebbe di poter scegliere di essere molto modulare; Cioè se vogliamo avvicinarci a qualcosa di semplice, facciamo qualcosa di semplice.
+Se vogliamo fare il nuovo age of empire, potremmo migliorarlo senza problemi.
+
+SVANTAGGI:
+Rischiamo di farlo diventare un vero e proprio gioco di strategia mentre sarebbe opportuno rimanere sul "casual" o "tower defence".
