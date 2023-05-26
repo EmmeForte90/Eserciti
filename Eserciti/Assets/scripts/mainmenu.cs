@@ -465,7 +465,13 @@ public class mainmenu : MonoBehaviour
         int livello=lista_upgrade_perenni_liv[upgrade];
         if (livello<info_comuni.lista_upgrade_perenni_max_level[upgrade]){
             lista_txt_descrizione_upgrade_perenne[upgrade].SetText(info_comuni.lista_upgrade_perenni_descrizione[PlayerPrefs.GetString("lingua")][upgrade][livello+1]);
-            lista_txt_costo_upgrade_perenne[upgrade].SetText("Cost:\n"+info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1].ToString());
+            string string_temp_costo_lingua="";
+            switch (PlayerPrefs.GetString("lingua")){
+                case "spagnolo":
+                case "italiano":{string_temp_costo_lingua="Costo";break;}
+                default:{string_temp_costo_lingua="Cost";break;}
+            }
+            lista_txt_costo_upgrade_perenne[upgrade].SetText(string_temp_costo_lingua+":\n"+info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1].ToString());
             if (info_comuni.lista_upgrade_perenni_costi[upgrade][livello+1]>num_gemme){
                 //lista_btn_bottone_upgrade_perenne[upgrade].interactable=false;
                 lista_obj_bottone_upgrade_perenne[upgrade].SetActive(false);
