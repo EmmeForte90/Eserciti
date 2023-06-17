@@ -15084,6 +15084,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4113131119102124812, guid: e19df2a8ca6653143b9747c444afa056, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2054175674}
+    - target: {fileID: 4113131119432617447, guid: e19df2a8ca6653143b9747c444afa056, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2054175674}
+    - target: {fileID: 4113131119432617447, guid: e19df2a8ca6653143b9747c444afa056, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cambia_slider_volume
+      objectReference: {fileID: 0}
     - target: {fileID: 6589045051609613000, guid: e19df2a8ca6653143b9747c444afa056, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
