@@ -610,7 +610,7 @@ public class info_comuni : MonoBehaviour
 
         lista_classi_nome.Add("inglese",new Dictionary<string, string>());
         lista_classi_nome["inglese"].Add("warrior","Warrior");
-        lista_classi_nome["inglese"].Add("arcer","Arcer");
+        lista_classi_nome["inglese"].Add("arcer","Archer");
         lista_classi_nome["inglese"].Add("wizard","Wizard");
 
         lista_classi_nome.Add("italiano",new Dictionary<string, string>());
